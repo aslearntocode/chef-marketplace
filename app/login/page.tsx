@@ -17,7 +17,7 @@ export default function Login() {
         try {
             await login(email, password);
             router.push('/');
-        } catch (err) {
+        } catch (error) {
             setError('Failed to login. Please check your credentials.');
         }
     }
@@ -26,7 +26,7 @@ export default function Login() {
         try {
             await loginWithGoogle();
             router.push('/');
-        } catch (err) {
+        } catch (error) {
             setError('Failed to sign in with Google.');
         }
     }
