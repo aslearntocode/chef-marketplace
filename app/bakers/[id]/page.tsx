@@ -6,16 +6,12 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 
-// Define only the types we're using
+// Define only the type we're directly using
 interface MenuItem {
   id: string;
   name: string;
   price: number;
   description: string;
-}
-
-interface BakerMenu {
-  [category: string]: MenuItem[];
 }
 
 export default function BakerPage() {
