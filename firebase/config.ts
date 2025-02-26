@@ -17,14 +17,6 @@ if (!process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
     console.error('Firebase API key is missing. Please check your .env.local file');
 }
 
-let auth;
-
-try {
-    const app = initializeApp(firebaseConfig);
-    auth = getAuth(app);
-} catch (error) {
-    console.error('Error initializing Firebase:', error);
-    throw error;
-}
-
-export { auth }; 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app); 
