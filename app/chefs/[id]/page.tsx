@@ -131,7 +131,7 @@ export default function ChefPage() {
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {items.map(item => (
+                {items && items.map(item => (
                   <div
                     key={item.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
@@ -157,10 +157,10 @@ export default function ChefPage() {
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link
-          href="/home-made-food"
+          href="/chefs"
           className="text-gray-600 hover:text-black flex items-center gap-2"
         >
-          ← Back to Home Made Food
+          ← Back to Chefs
         </Link>
       </div>
     </main>
