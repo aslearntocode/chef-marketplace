@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
+import { FirebaseError } from 'firebase/app';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -16,9 +17,13 @@ export default function Login() {
         try {
             await login(email, password);
             router.push('/');
-        } catch (error: any) {
+        } catch (error) {
             console.error('Login error:', error);
-            setError(error?.message || 'Failed to login. Please check your credentials.');
+            if (error instanceof FirebaseError) {
+                setError(error.message);
+            } else {
+                setError('Failed to login. Please check your credentials.');
+            }
         }
     }
 
@@ -26,9 +31,13 @@ export default function Login() {
         try {
             await loginWithGoogle();
             router.push('/');
-        } catch (error: any) {
+        } catch (error) {
             console.error('Google sign-in error:', error);
-            setError(error?.message || 'Failed to sign in with Google.');
+            if (error instanceof FirebaseError) {
+                setError(error.message);
+            } else {
+                setError('Failed to sign in with Google.');
+            }
         }
     }
 
