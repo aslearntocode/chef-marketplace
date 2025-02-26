@@ -9,8 +9,8 @@ import type { Baker } from '@/types/baker';
 
 export default function BakerPage() {
   const params = useParams();
-  const bakerId = Number(params.id);
-  const baker = bakers.find(b => b.id === bakerId) as Baker | undefined;
+  const bakerId = params?.id ? Number(params.id) : null;
+  const baker = bakerId ? bakers.find(b => b.id === bakerId) as Baker | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   if (!baker) {
