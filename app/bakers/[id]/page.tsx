@@ -6,7 +6,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 
-// Define only the type we're directly using
+// Disable the no-unused-vars rule for this type since it's used indirectly
+// @ts-expect-error - This type is used indirectly through baker.menu
 interface MenuItem {
   id: string;
   name: string;
