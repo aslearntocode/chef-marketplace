@@ -1,38 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import ChefCard from '@/components/ChefCard';
-import './styles.css';
-import Image from 'next/image';
 import Link from 'next/link';
-
-interface Chef {
-  id: string;
-  name: string;
-  description: string;
-  image_url: string;
-  specialty: string;
-  location: string;
-}
+import './styles.css';
 
 export default function Home() {
-  const [chefs, setChefs] = useState<Chef[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchChefs = async () => {
-      try {
-        setChefs([]);
-      } catch (error) {
-        console.error('Error fetching chefs:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchChefs();
-  }, []);
-
   return (
     <main className="min-h-screen bg-[#FFD700]">
       {/* Header */}
