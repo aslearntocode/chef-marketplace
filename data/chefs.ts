@@ -57,7 +57,33 @@ export const chefs = [
     specialty: "South Indian Cuisine",
     location: "Andheri East, Mumbai",
     rating: 4.8,
-    image: "/chefs/chef_payal.png",
+    image: "/chefs/Chef Payal Agarwal.png",
+    description: "Specializing in authentic South Indian dishes and home-style South Indian meals",
+    topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
+    deliveryAreas: ["Andheri", "Juhu", "Bandra"],
+    menu: {
+      "Main Course": [
+        { id: "ab1", name: "Butter Chicken", price: 350, description: "Tender chicken in rich tomato-butter gravy" },
+        { id: "ab2", name: "Dal Makhani", price: 250, description: "Creamy black lentils cooked overnight" },
+        { id: "ab3", name: "Paneer Tikka Masala", price: 280, description: "Grilled cottage cheese in spiced gravy" }
+      ],
+      "Breads": [
+        { id: "ab4", name: "Butter Naan", price: 40, description: "Tandoor-baked flatbread" },
+        { id: "ab5", name: "Laccha Paratha", price: 45, description: "Layered whole wheat bread" }
+      ],
+      "Rice": [
+        { id: "ab6", name: "Jeera Rice", price: 150, description: "Cumin-flavored basmati rice" }
+      ]
+    }
+  },
+
+  {
+    id: 4,
+    name: "Manmeet Kaur",
+    specialty: "South Indian Cuisine",
+    location: "Andheri East, Mumbai",
+    rating: 4.8,
+    image: "/chefs/Chef Manmeet Kaur.png",
     description: "Specializing in authentic South Indian dishes and home-style South Indian meals",
     topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
     deliveryAreas: ["Andheri", "Juhu", "Bandra"],
