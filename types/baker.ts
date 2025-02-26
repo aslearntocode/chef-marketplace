@@ -9,7 +9,7 @@ export interface Baker {
   deliveryAreas: string[];
   menu: {
     [category: string]: {
-      id: string;
+      id: number;
       name: string;
       price: number;
       description: string;
