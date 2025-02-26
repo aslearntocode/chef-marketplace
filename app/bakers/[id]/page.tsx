@@ -55,10 +55,17 @@ export default function BakerPage() {
     );
   }
 
-  const getMenuItems = (selectedCategory: MenuCategory) => {
+  // Function to get menu items based on selected category
+  const getMenuItems = () => {
+    if (selectedCategory === 'all') {
+      return Object.entries(baker.menu).map(([category, items]) => ({
+        category,
+        items: items || []
+      }));
+    }
     return [{
       category: selectedCategory,
-      items: baker.menu[selectedCategory]
+      items: baker.menu[selectedCategory] || []
     }];
   };
 
@@ -126,7 +133,7 @@ export default function BakerPage() {
           {Object.keys(baker.menu).map(category => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category as MenuCategory)}
+              onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${
                 selectedCategory === category
                   ? 'bg-black text-white'
@@ -140,13 +147,13 @@ export default function BakerPage() {
 
         {/* Menu Items */}
         <div className="space-y-8">
-          {getMenuItems(selectedCategory as MenuCategory).map(({ category, items }) => (
+          {getMenuItems().map(({ category, items }) => (
             <div key={category}>
               {selectedCategory === 'all' && (
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {items.map(item => (
+                {items && items.map(item => (
                   <div
                     key={item.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
@@ -172,10 +179,10 @@ export default function BakerPage() {
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link
-          href="/home-made-desserts"
+          href="/bakers"
           className="text-gray-600 hover:text-black flex items-center gap-2"
         >
-          ← Back to Home Made Desserts
+          ← Back to Bakers
         </Link>
       </div>
     </main>
