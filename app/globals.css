@@ -3,19 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --mustard: #FFC72C;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  @apply bg-[#FFC72C];
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make all main content areas have mustard background */
+main {
+  @apply bg-[#FFC72C] min-h-screen;
+}
+
+.nav-link {
+  @apply text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium;
+}
+
+.mobile-nav-link {
+  @apply block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50;
+}
+
+/* Content sections with white background */
+.content-section {
+  @apply bg-white py-12;
+}
+
+/* Grid sections with transparent background */
+.grid-section {
+  @apply py-12;
 }
