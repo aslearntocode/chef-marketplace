@@ -158,7 +158,7 @@ export default function Home() {
             
             <p className="text-center text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
               Do you have a passion for cooking or baking? We want YOU to join our marketplace! 
-              We're looking for talented home chefs and bakers who pour their love for food into every dish they create.
+              We&apos;re looking for talented home chefs and bakers who pour their love for food into every dish they create.
             </p>
 
             <div className="bg-white rounded-lg p-8 mb-12">
