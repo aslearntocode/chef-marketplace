@@ -6,7 +6,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 
-// First, let's define the menu item type
+// Define types
 interface MenuItem {
   id: string;
   name: string;
@@ -26,12 +26,19 @@ type MenuCategory =
   // Add any other categories you have
 
 interface BakerMenu {
-  [key in MenuCategory]: MenuItem[];
+  [category: string]: MenuItem[];
 }
 
 interface Baker {
+  id: number;
+  name: string;
+  image: string;
+  specialty: string;
+  location: string;
+  description: string;
+  rating: number;
+  deliveryAreas: string[];
   menu: BakerMenu;
-  // ... other baker properties
 }
 
 export default function BakerPage() {
