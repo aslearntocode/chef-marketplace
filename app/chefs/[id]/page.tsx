@@ -7,18 +7,6 @@ import Link from 'next/link';
 import { chefs } from '@/data/chefs';
 import type { Chef } from '@/types/chef';
 
-// Define types
-interface MenuItem {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-}
-
-interface ChefMenu {
-  [category: string]: MenuItem[];
-}
-
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id ? Number(params.id) : null;
