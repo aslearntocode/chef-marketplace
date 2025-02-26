@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { firestoreDb } from '@/lib/firebase';
 import ChefCard from '@/components/ChefCard';
 import './styles.css';
 import Image from 'next/image';
@@ -24,13 +22,7 @@ export default function Home() {
   useEffect(() => {
     const fetchChefs = async () => {
       try {
-        const chefsCollection = collection(firestoreDb, 'chefs');
-        const chefsSnapshot = await getDocs(chefsCollection);
-        const chefsList = chefsSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        })) as Chef[];
-        setChefs(chefsList);
+        setChefs([]);
       } catch (error) {
         console.error('Error fetching chefs:', error);
       } finally {
