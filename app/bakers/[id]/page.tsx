@@ -7,15 +7,6 @@ import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 import type { Baker } from '@/types/baker';
 
-// Disable the no-unused-vars rule for this type since it's used indirectly
-// @ts-expect-error - This type is used indirectly through baker.menu
-interface MenuItem {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-}
-
 export default function BakerPage() {
   const params = useParams();
   const bakerId = Number(params.id);
@@ -30,7 +21,6 @@ export default function BakerPage() {
     );
   }
 
-  // Function to get menu items based on selected category
   const getMenuItems = () => {
     if (selectedCategory === 'all') {
       return Object.entries(baker.menu).map(([category, items]) => ({
