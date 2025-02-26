@@ -6,7 +6,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 
-// Define types
+// Define only the types we're using
 interface MenuItem {
   id: string;
   name: string;
@@ -14,31 +14,8 @@ interface MenuItem {
   description: string;
 }
 
-// Define all possible menu categories
-type MenuCategory = 
-  | 'Cakes'
-  | 'Cupcakes'
-  | 'French Pastries'
-  | 'Cookies'
-  | 'Brownies'
-  | 'Bread'
-  | 'Healthy Snack Boxes'
-  // Add any other categories you have
-
 interface BakerMenu {
   [category: string]: MenuItem[];
-}
-
-interface Baker {
-  id: number;
-  name: string;
-  image: string;
-  specialty: string;
-  location: string;
-  description: string;
-  rating: number;
-  deliveryAreas: string[];
-  menu: BakerMenu;
 }
 
 export default function BakerPage() {
