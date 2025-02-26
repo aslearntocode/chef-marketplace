@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -17,8 +16,9 @@ export default function Login() {
         try {
             await login(email, password);
             router.push('/');
-        } catch (error) {
-            setError('Failed to login. Please check your credentials.');
+        } catch (error: any) {
+            console.error('Login error:', error);
+            setError(error?.message || 'Failed to login. Please check your credentials.');
         }
     }
 
@@ -26,8 +26,9 @@ export default function Login() {
         try {
             await loginWithGoogle();
             router.push('/');
-        } catch (error) {
-            setError('Failed to sign in with Google.');
+        } catch (error: any) {
+            console.error('Google sign-in error:', error);
+            setError(error?.message || 'Failed to sign in with Google.');
         }
     }
 
