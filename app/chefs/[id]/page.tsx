@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { chefs } from '@/data/chefs';
+import type { Chef } from '@/types/chef';
 
 // Define types
 interface MenuItem {
@@ -18,22 +19,10 @@ interface ChefMenu {
   [category: string]: MenuItem[];
 }
 
-interface Chef {
-  id: number;
-  name: string;
-  image: string;
-  specialty: string;
-  location: string;
-  description: string;
-  rating: number;
-  deliveryAreas: string[];
-  menu: ChefMenu;
-}
-
 export default function ChefPage() {
   const params = useParams();
-  const chefId = Number(params.id);
-  const chef = chefs.find(c => c.id === chefId) as Chef | undefined;
+  const chefId = params?.id ? Number(params.id) : null;
+  const chef = chefId ? chefs.find(c => c.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   if (!chef) {
@@ -49,7 +38,7 @@ export default function ChefPage() {
     if (selectedCategory === 'all') {
       return Object.entries(chef.menu).map(([category, items]) => ({
         category,
-        items
+        items: items || []
       }));
     }
     return [{
