@@ -6,10 +6,34 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { chefs } from '@/data/chefs';
 
+// Define types
+interface MenuItem {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+}
+
+interface ChefMenu {
+  [category: string]: MenuItem[];
+}
+
+interface Chef {
+  id: number;
+  name: string;
+  image: string;
+  specialty: string;
+  location: string;
+  description: string;
+  rating: number;
+  deliveryAreas: string[];
+  menu: ChefMenu;
+}
+
 export default function ChefPage() {
   const params = useParams();
   const chefId = Number(params.id);
-  const chef = chefs.find(c => c.id === chefId);
+  const chef = chefs.find(c => c.id === chefId) as Chef | undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   if (!chef) {
@@ -30,7 +54,7 @@ export default function ChefPage() {
     }
     return [{
       category: selectedCategory,
-      items: chef.menu[selectedCategory]
+      items: chef.menu[selectedCategory] || []
     }];
   };
 

@@ -6,6 +6,34 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 
+// First, let's define the menu item type
+interface MenuItem {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+}
+
+// Define all possible menu categories
+type MenuCategory = 
+  | 'Cakes'
+  | 'Cupcakes'
+  | 'French Pastries'
+  | 'Cookies'
+  | 'Brownies'
+  | 'Bread'
+  | 'Healthy Snack Boxes'
+  // Add any other categories you have
+
+interface BakerMenu {
+  [key in MenuCategory]: MenuItem[];
+}
+
+interface Baker {
+  menu: BakerMenu;
+  // ... other baker properties
+}
+
 export default function BakerPage() {
   const params = useParams();
   const bakerId = Number(params.id);
@@ -20,13 +48,7 @@ export default function BakerPage() {
     );
   }
 
-  const getMenuItems = () => {
-    if (selectedCategory === 'all') {
-      return Object.entries(baker.menu).map(([category, items]) => ({
-        category,
-        items
-      }));
-    }
+  const getMenuItems = (selectedCategory: MenuCategory) => {
     return [{
       category: selectedCategory,
       items: baker.menu[selectedCategory]
@@ -97,7 +119,7 @@ export default function BakerPage() {
           {Object.keys(baker.menu).map(category => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => setSelectedCategory(category as MenuCategory)}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${
                 selectedCategory === category
                   ? 'bg-black text-white'
@@ -111,7 +133,7 @@ export default function BakerPage() {
 
         {/* Menu Items */}
         <div className="space-y-8">
-          {getMenuItems().map(({ category, items }) => (
+          {getMenuItems(selectedCategory as MenuCategory).map(({ category, items }) => (
             <div key={category}>
               {selectedCategory === 'all' && (
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
