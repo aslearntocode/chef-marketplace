@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Akansha Food Supply",
+  title: "The Divine Hands",
   description: "Home-cooked meals delivered to your doorstep",
 };
 
