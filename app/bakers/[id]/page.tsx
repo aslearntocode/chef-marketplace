@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
+import type { Baker } from '@/types/baker';
 
 // Disable the no-unused-vars rule for this type since it's used indirectly
 // @ts-expect-error - This type is used indirectly through baker.menu
@@ -18,7 +19,7 @@ interface MenuItem {
 export default function BakerPage() {
   const params = useParams();
   const bakerId = Number(params.id);
-  const baker = bakers.find(b => b.id === bakerId);
+  const baker = bakers.find(b => b.id === bakerId) as Baker | undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   if (!baker) {
