@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useRouter } from 'next/navigation';
 import { auth } from '../firebase/config';
 import { 
     signInWithEmailAndPassword, 
@@ -33,6 +34,7 @@ interface AuthProviderProps {
 export function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
 
     function signup(email: string, password: string) {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -50,8 +52,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
         return signInWithPopup(auth, provider);
     }
 
-    function logout() {
-        return signOut(auth);
+    async function logout() {
+        try {
+            await signOut(auth);
+            router.push('/'); // Redirect to homepage after logout
+        } catch (error) {
+            console.error('Error logging out:', error);
+        }
     }
 
     useEffect(() => {
