@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { chefs } from '@/data/chefs';
 import type { Chef } from '@/types/chef';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
+import { getAuth } from 'firebase/auth';
 
 export default function ChefPage() {
   const params = useParams();
@@ -16,6 +17,8 @@ export default function ChefPage() {
   const chef = chefId ? chefs.find(c => c.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
+  const router = useRouter();
+  const auth = getAuth();
 
   if (!chef) {
     return (
@@ -40,6 +43,13 @@ export default function ChefPage() {
   };
 
   const handleAddToCart = (item: MenuItem) => {
+    // Check if user is logged in
+    if (!auth.currentUser) {
+      toast.error('Please log in to add items to cart');
+      router.push('/login');
+      return;
+    }
+
     const itemPrice = typeof item.price === 'string' 
       ? Number(item.price.replace(/[^\d.]/g, '')) // Remove any non-digit characters except decimal
       : item.price;

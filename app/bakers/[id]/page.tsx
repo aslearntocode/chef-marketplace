@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 import type { Baker } from '@/types/baker';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
+import { getAuth } from 'firebase/auth';
+import { toast } from 'react-hot-toast';
 
 export default function BakerPage() {
   const params = useParams();
@@ -15,6 +17,8 @@ export default function BakerPage() {
   const baker = bakerId ? bakers.find(b => b.id === bakerId) as Baker | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
+  const router = useRouter();
+  const auth = getAuth();
 
   if (!baker) {
     return (
@@ -38,6 +42,13 @@ export default function BakerPage() {
   };
 
   const handleAddToCart = (item: MenuItem) => {
+    // Check if user is logged in
+    if (!auth.currentUser) {
+      toast.error('Please log in to add items to cart');
+      router.push('/login');
+      return;
+    }
+
     const itemPrice = typeof item.price === 'string' 
       ? Number(item.price.replace(/[^\d.]/g, ''))
       : item.price;
@@ -51,6 +62,8 @@ export default function BakerPage() {
       description: item.description,
       category: item.category
     });
+
+    toast.success(`${item.name} added to cart`);
   };
 
   return (
