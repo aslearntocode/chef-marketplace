@@ -5,6 +5,9 @@ import Link from 'next/link';
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, totalAmount } = useCart();
+  const DELIVERY_FEE = 100;
+  const FREE_DELIVERY_THRESHOLD = 1000;
+  const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
 
   if (items.length === 0) {
     return (
@@ -73,14 +76,23 @@ export default function CartPage() {
                 <span>Subtotal</span>
                 <span>₹{totalAmount}</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <span>Delivery Fee</span>
-                <span>₹50</span>
+                <div className="text-right">
+                  {isDeliveryFree ? (
+                    <>
+                      <span className="line-through text-gray-400 mr-2">₹{DELIVERY_FEE}</span>
+                      <span className="text-green-600">Free</span>
+                    </>
+                  ) : (
+                    <span>₹{DELIVERY_FEE}</span>
+                  )}
+                </div>
               </div>
               <div className="border-t pt-2 mt-2">
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>₹{totalAmount + 50}</span>
+                  <span>₹{totalAmount + (isDeliveryFree ? 0 : DELIVERY_FEE)}</span>
                 </div>
               </div>
             </div>
