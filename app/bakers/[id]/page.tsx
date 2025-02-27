@@ -6,12 +6,14 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 import type { Baker } from '@/types/baker';
+import { useCart } from '@/context/CartContext';
 
 export default function BakerPage() {
   const params = useParams();
   const bakerId = params?.id ? Number(params.id) : null;
   const baker = bakerId ? bakers.find(b => b.id === bakerId) as Baker | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const { addToCart } = useCart();
 
   if (!baker) {
     return (
@@ -32,6 +34,16 @@ export default function BakerPage() {
       category: selectedCategory,
       items: baker.menu[selectedCategory] || []
     }];
+  };
+
+  const handleAddToCart = (item: any) => {
+    addToCart({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      bakerId: baker.id,
+      bakerName: baker.name,
+    });
   };
 
   return (
@@ -129,7 +141,10 @@ export default function BakerPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
-                      <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">
+                      <button 
+                        onClick={() => handleAddToCart(item)}
+                        className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                      >
                         Add to Cart
                       </button>
                     </div>

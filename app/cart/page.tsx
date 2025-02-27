@@ -1,0 +1,95 @@
+'use client';
+
+import { useCart } from '@/context/CartContext';
+import Link from 'next/link';
+
+export default function CartPage() {
+  const { items, removeFromCart, updateQuantity, totalAmount } = useCart();
+
+  if (items.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+        <p className="text-xl text-gray-600">Your cart is empty</p>
+        <Link
+          href="/"
+          className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors"
+        >
+          Browse Menu
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <main className="max-w-7xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2">
+          {items.map(item => (
+            <div key={item.id} className="bg-white rounded-lg shadow-md p-6 mb-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-semibold">{item.name}</h3>
+                  <p className="text-gray-600">
+                    {item.bakerName || item.chefName}
+                  </p>
+                </div>
+                <p className="text-lg font-semibold">₹{item.price}</p>
+              </div>
+              
+              <div className="flex justify-between items-center mt-4">
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}
+                    className="px-3 py-1 border rounded-md"
+                  >
+                    -
+                  </button>
+                  <span className="w-8 text-center">{item.quantity}</span>
+                  <button
+                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    className="px-3 py-1 border rounded-md"
+                  >
+                    +
+                  </button>
+                </div>
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="text-red-600 hover:text-red-800"
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="lg:col-span-1">
+          <div className="bg-white rounded-lg shadow-md p-6 sticky top-24">
+            <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+            <div className="space-y-2 mb-4">
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>₹{totalAmount}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Delivery Fee</span>
+                <span>₹50</span>
+              </div>
+              <div className="border-t pt-2 mt-2">
+                <div className="flex justify-between font-semibold">
+                  <span>Total</span>
+                  <span>₹{totalAmount + 50}</span>
+                </div>
+              </div>
+            </div>
+            <button className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors">
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
