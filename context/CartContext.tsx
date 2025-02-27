@@ -11,6 +11,8 @@ interface CartItem {
   bakerId?: number;
   chefName?: string;
   bakerName?: string;
+  description?: string;
+  category?: string;
 }
 
 interface CartContextType {

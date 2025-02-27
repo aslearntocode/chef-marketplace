@@ -38,15 +38,19 @@ export default function BakerPage() {
   };
 
   const handleAddToCart = (item: MenuItem) => {
+    const itemPrice = typeof item.price === 'string' 
+      ? Number(item.price.replace(/[^\d.]/g, ''))
+      : item.price;
+
     addToCart({
       id: `${baker.id}-${item.id}`,
       name: item.name,
-      price: item.price,
+      price: itemPrice,
       bakerId: baker.id,
       bakerName: baker.name,
       description: item.description,
       category: item.category
-    } as CartMenuItem);
+    });
   };
 
   return (
