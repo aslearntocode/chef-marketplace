@@ -35,6 +35,16 @@ export default function ChefPage() {
     }];
   };
 
+  const handleAddToCart = (item: any) => {
+    addToCart({
+      id: `${chef.id}-${item.id}`, // Create unique ID combining chef and item IDs
+      name: item.name,
+      price: item.price,
+      chefId: chef.id,
+      chefName: chef.name,
+    });
+  };
+
   return (
     <main>
       {/* Spacer for navbar */}
@@ -130,7 +140,7 @@ export default function ChefPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
-                      <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">
+                      <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors" onClick={() => handleAddToCart(item)}>
                         Add to Cart
                       </button>
                     </div>

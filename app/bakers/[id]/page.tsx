@@ -38,7 +38,7 @@ export default function BakerPage() {
 
   const handleAddToCart = (item: any) => {
     addToCart({
-      id: item.id,
+      id: `${baker.id}-${item.id}`,
       name: item.name,
       price: item.price,
       bakerId: baker.id,
