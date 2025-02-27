@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 import type { Baker } from '@/types/baker';
 import { useCart } from '@/context/CartContext';
+import type { MenuItem, CartMenuItem } from '@/types/menu';
 
 export default function BakerPage() {
   const params = useParams();
@@ -36,14 +37,16 @@ export default function BakerPage() {
     }];
   };
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: MenuItem) => {
     addToCart({
       id: `${baker.id}-${item.id}`,
       name: item.name,
       price: item.price,
       bakerId: baker.id,
       bakerName: baker.name,
-    });
+      description: item.description,
+      category: item.category
+    } as CartMenuItem);
   };
 
   return (

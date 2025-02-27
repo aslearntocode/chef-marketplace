@@ -8,6 +8,7 @@ import { chefs } from '@/data/chefs';
 import type { Chef } from '@/types/chef';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
+import type { MenuItem, CartMenuItem } from '@/types/menu';
 
 export default function ChefPage() {
   const params = useParams();
@@ -38,16 +39,16 @@ export default function ChefPage() {
     }];
   };
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: MenuItem) => {
     addToCart({
-      id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`, // Create unique ID using chef ID and item name
+      id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
-      price: Number(item.price.toString().replace('₹', '')), // Convert price string to number, removing ₹ symbol
+      price: typeof item.price === 'string' ? Number(item.price.replace('₹', '')) : item.price,
       chefId: chef.id,
       chefName: chef.name,
       description: item.description,
       category: item.category
-    });
+    } as CartMenuItem);
 
     // Optional: Add a visual feedback when item is added
     toast.success(`${item.name} added to cart`);
@@ -149,12 +150,7 @@ export default function ChefPage() {
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
                       <button 
-                        onClick={() => handleAddToCart({
-                          name: item.name,
-                          price: item.price,
-                          description: item.description,
-                          category: selectedCategory
-                        })}
+                        onClick={() => handleAddToCart(item)}
                         className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
                       >
                         Add to Cart
