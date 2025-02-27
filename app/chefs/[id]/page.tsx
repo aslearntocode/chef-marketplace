@@ -8,7 +8,7 @@ import { chefs } from '@/data/chefs';
 import type { Chef } from '@/types/chef';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
-import type { MenuItem, CartMenuItem } from '@/types/menu';
+import type { MenuItem } from '@/types/menu';
 
 export default function ChefPage() {
   const params = useParams();
@@ -52,7 +52,7 @@ export default function ChefPage() {
       chefName: chef.name,
       description: item.description,
       category: item.category
-    } as CartMenuItem);
+    });
 
     // Optional: Add a visual feedback when item is added
     toast.success(`${item.name} added to cart`);
