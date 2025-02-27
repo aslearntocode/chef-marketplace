@@ -5,12 +5,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useCart } from '@/context/CartContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { user, logout } = useAuth();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { totalItems } = useCart();
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -88,9 +90,11 @@ export default function Navbar() {
                     className="text-gray-700 hover:text-gray-900 relative"
                   >
                     <FaShoppingCart className="w-6 h-6" />
-                    <span className="absolute -top-2 -right-2 bg-[#FFD700] text-black text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                      0
-                    </span>
+                    {totalItems > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                        {totalItems}
+                      </span>
+                    )}
                   </Link>
                   
                   <div className="relative" ref={dropdownRef}>

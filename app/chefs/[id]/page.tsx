@@ -6,12 +6,15 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { chefs } from '@/data/chefs';
 import type { Chef } from '@/types/chef';
+import { toast } from 'react-hot-toast';
+import { useCart } from '@/context/CartContext';
 
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id ? Number(params.id) : null;
   const chef = chefId ? chefs.find(c => c.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const { addToCart } = useCart();
 
   if (!chef) {
     return (
@@ -37,12 +40,17 @@ export default function ChefPage() {
 
   const handleAddToCart = (item: any) => {
     addToCart({
-      id: `${chef.id}-${item.id}`, // Create unique ID combining chef and item IDs
+      id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`, // Create unique ID using chef ID and item name
       name: item.name,
-      price: item.price,
+      price: Number(item.price.toString().replace('₹', '')), // Convert price string to number, removing ₹ symbol
       chefId: chef.id,
       chefName: chef.name,
+      description: item.description,
+      category: item.category
     });
+
+    // Optional: Add a visual feedback when item is added
+    toast.success(`${item.name} added to cart`);
   };
 
   return (
@@ -140,7 +148,15 @@ export default function ChefPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
-                      <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors" onClick={() => handleAddToCart(item)}>
+                      <button 
+                        onClick={() => handleAddToCart({
+                          name: item.name,
+                          price: item.price,
+                          description: item.description,
+                          category: selectedCategory
+                        })}
+                        className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                      >
                         Add to Cart
                       </button>
                     </div>
