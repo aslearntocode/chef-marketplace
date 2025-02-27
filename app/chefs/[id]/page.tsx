@@ -40,10 +40,14 @@ export default function ChefPage() {
   };
 
   const handleAddToCart = (item: MenuItem) => {
+    const itemPrice = typeof item.price === 'string' 
+      ? Number(item.price.replace(/[^\d.]/g, '')) // Remove any non-digit characters except decimal
+      : item.price;
+
     addToCart({
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
-      price: typeof item.price === 'string' ? Number(item.price.replace('₹', '')) : item.price,
+      price: itemPrice,
       chefId: chef.id,
       chefName: chef.name,
       description: item.description,
