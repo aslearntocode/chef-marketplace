@@ -1,11 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
 import { QRCodeCanvas } from 'qrcode.react';
+import { useRouter } from 'next/navigation';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useAuth } from '@/context/AuthContext';
 
 export default function CheckoutPage() {
-  const { totalAmount } = useCart();
+  const router = useRouter();
+  const supabase = createClientComponentClient();
+  const { items, totalAmount, clearCart } = useCart();
+  const { user } = useAuth();
   const DELIVERY_FEE = 100;
   const FREE_DELIVERY_THRESHOLD = 1000;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
@@ -16,6 +22,23 @@ export default function CheckoutPage() {
   const [state, setState] = useState('');
   const [street, setStreet] = useState('');
   const [apartment, setApartment] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        if (user?.uid) {
+          await supabase.auth.signInWithPassword({
+            email: user.email || '',
+            password: user.uid
+          });
+        }
+      }
+    };
+
+    checkAuth();
+  }, [user, supabase.auth]);
 
   // Function to fetch city and state from PIN code
   const handlePinCodeChange = async (pin: string) => {
@@ -36,6 +59,76 @@ export default function CheckoutPage() {
 
   // Update QR code value with final amount
   const qrValue = `upi://pay?pa=your-upi-id@upi&pn=Your-Name&am=${finalAmount}&cu=INR`;
+
+  const handlePlaceOrder = async () => {
+    setIsLoading(true);
+    try {
+      if (!user?.uid) {
+        throw new Error('Please login to place order');
+      }
+
+      // Validate required fields first
+      if (!mobileNumber || !pinCode || !street || !apartment) {
+        alert('Please fill all required fields');
+        return;
+      }
+
+      // Check if items exist
+      if (!items || items.length === 0) {
+        throw new Error('Your cart is empty');
+      }
+
+      const orderData = {
+        user_id: user.uid,
+        items: items.map(item => ({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+          chefName: item.chefName || null
+        })),
+        total_amount: totalAmount,
+        status: 'success',
+        delivery_address: {
+          mobile: mobileNumber,
+          pin_code: pinCode,
+          city,
+          state,
+          street,
+          apartment
+        }
+      };
+
+      console.log('Creating order with data:', orderData);
+
+      // Create a single order with all items
+      const { data, error: orderError } = await supabase
+        .from('orders')
+        .insert(orderData)
+        .select()
+        .single();
+
+      if (orderError) {
+        console.error('Supabase error details:', orderError);
+        throw new Error(`Failed to create order: ${orderError.message}`);
+      }
+
+      console.log('Order created successfully:', data);
+      
+      // Clear cart and redirect to success page
+      clearCart();
+      router.push('/checkout/success');
+    } catch (error) {
+      console.error('Error placing order:', error);
+      if (error instanceof Error) {
+        alert(`Failed to place order: ${error.message}`);
+      } else {
+        alert('Failed to place order. Please try again.');
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8">
@@ -173,6 +266,17 @@ export default function CheckoutPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Add Place Order button */}
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={handlePlaceOrder}
+          disabled={isLoading}
+          className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+        >
+          {isLoading ? 'Placing Order...' : 'Place Order'}
+        </button>
       </div>
     </main>
   );
