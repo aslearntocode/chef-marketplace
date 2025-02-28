@@ -57,8 +57,8 @@ export default function CheckoutPage() {
     }
   };
 
-  // Update QR code value with final amount
-  const qrValue = `upi://pay?pa=your-upi-id@upi&pn=Your-Name&am=${finalAmount}&cu=INR`;
+  // Update QR code value with final amount and your UPI ID
+  const qrValue = `upi://pay?pa=8354833779-7@axl&pn=Homechef&am=${finalAmount}&cu=INR`;
 
   const handlePlaceOrder = async () => {
     setIsLoading(true);
