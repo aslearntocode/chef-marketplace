@@ -15,11 +15,11 @@ export default function SnackChefPage() {
   const { addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Convert params.id to string if it's an array
-  const chefId = Array.isArray(params.id) ? params.id[0] : params.id;
+  // Safely handle params.id
+  const chefId = params?.id ? (Array.isArray(params.id) ? params.id[0] : params.id) : null;
   
   // Use the converted chefId to find the chef and add type annotation
-  const chef: SnackChef | undefined = snacksChefs.find(chef => chef.id === chefId);
+  const chef: SnackChef | undefined = chefId ? snacksChefs.find(chef => chef.id === chefId) : undefined;
 
   // Add console.log for debugging
   console.log('Params:', params);
