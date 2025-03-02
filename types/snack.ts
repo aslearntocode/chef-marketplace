@@ -1,10 +1,11 @@
 export interface SnackMenuItem {
-  id: string;
+  id: number;
   name: string;
   description: string;
   price: number;
   unit?: string;
   image?: string;
+  category?: string;
 }
 
 export interface SnackCategory {
@@ -13,7 +14,7 @@ export interface SnackCategory {
 }
 
 export interface SnackChef {
-  id: string;
+  id: number;
   name: string;
   image: string;
   rating: number;
