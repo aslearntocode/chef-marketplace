@@ -36,19 +36,25 @@ export default function Home() {
               href="/home-made-food"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Chefs
+              Find Meals
             </Link>
             <Link 
               href="/home-made-desserts"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Bakers
+              Find Bakery Items
             </Link>
             <Link 
               href="/tiffin-service"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
               Find Tiffin Service
+            </Link>
+            <Link 
+              href="/home-made-food/snacks"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
+            >
+              Find Packaged Snacks
             </Link>
             
           </div>
