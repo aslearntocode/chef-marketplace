@@ -39,14 +39,17 @@ export default function Navbar() {
     }
   };
 
-  // Close dropdown when clicking outside
+  // Modify the useEffect to only handle mobile clicks
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        (userDropdownRef.current && !userDropdownRef.current.contains(event.target as Node)) &&
-        (navDropdownRef.current && !navDropdownRef.current.contains(event.target as Node))
-      ) {
-        setActiveDropdown(null);
+      // Only handle click-outside for mobile view
+      if (window.innerWidth < 768) {
+        if (
+          (userDropdownRef.current && !userDropdownRef.current.contains(event.target as Node)) &&
+          (navDropdownRef.current && !navDropdownRef.current.contains(event.target as Node))
+        ) {
+          setActiveDropdown(null);
+        }
       }
     }
 
@@ -59,7 +62,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full z-50 max-w-[100vw] overflow-x-hidden">
+    <header className="fixed w-full z-50">
       {/* Top Banner */}
       <div className="bg-black py-2 px-4 text-center">
         <p className="text-[#FFD700] text-sm">
@@ -69,8 +72,8 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 relative w-full">
-          <div className="flex justify-between items-center h-20 w-full overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative">
+          <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0 min-w-0">
               <Link href="/" className="flex items-center">
@@ -110,7 +113,7 @@ export default function Navbar() {
                       </button>
                       {activeDropdown === link.id && (
                         <div 
-                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-[999]"
                         >
                           {link.dropdown.map((item) => (
                             <Link
@@ -150,9 +153,9 @@ export default function Navbar() {
                     )}
                   </Link>
                   
-                  <div className="relative" ref={userDropdownRef}>
+                  <div className="hidden md:block relative">
                     <button
-                      onClick={() => setActiveDropdown('user')}
+                      onClick={() => toggleDropdown('user')}
                       className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
                     >
                       <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center">
@@ -169,34 +172,31 @@ export default function Navbar() {
                       </svg>
                     </button>
 
-                    {/* Dropdown Menu */}
                     {activeDropdown === 'user' && (
-                      <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div className="py-1" role="menu">
-                          <Link
-                            href="/profile"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            role="menuitem"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Your Profile
-                          </Link>
-                          <Link
-                            href="/orders"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            role="menuitem"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Previous Orders
-                          </Link>
-                          <button
-                            onClick={handleLogout}
-                            className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
-                            role="menuitem"
-                          >
-                            Logout
-                          </button>
-                        </div>
+                      <div 
+                        className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                        style={{ zIndex: 9999 }}
+                      >
+                        <Link
+                          href="/profile"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          Your Profile
+                        </Link>
+                        <Link
+                          href="/orders"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          Previous Orders
+                        </Link>
+                        <button
+                          onClick={handleLogout}
+                          className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
+                        >
+                          Logout
+                        </button>
                       </div>
                     )}
                   </div>
