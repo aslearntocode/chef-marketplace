@@ -23,6 +23,7 @@ export default function CheckoutPage() {
   const [street, setStreet] = useState('');
   const [apartment, setApartment] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [deliverySlot, setDeliverySlot] = useState('');
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -96,7 +97,8 @@ export default function CheckoutPage() {
           state,
           street,
           apartment
-        }
+        },
+        delivery_slot: deliverySlot
       };
 
       console.log('Creating order with data:', orderData);
@@ -228,6 +230,24 @@ export default function CheckoutPage() {
                   rows={2}
                   required
                 />
+              </div>
+
+              <div>
+                <label htmlFor="deliverySlot" className="block text-sm font-medium text-gray-700 mb-1">
+                  Delivery Time Slot
+                </label>
+                <select
+                  id="deliverySlot"
+                  value={deliverySlot}
+                  onChange={(e) => setDeliverySlot(e.target.value)}
+                  className="w-full px-4 py-2 border rounded-md focus:ring-black focus:border-black"
+                  required
+                >
+                  <option value="">Select a delivery time slot</option>
+                  <option value="8-10">8:00 AM - 10:00 AM</option>
+                  <option value="12-14">12:00 PM - 2:00 PM</option>
+                  <option value="18-20">6:00 PM - 8:00 PM</option>
+                </select>
               </div>
             </div>
           </div>
