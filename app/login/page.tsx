@@ -6,26 +6,9 @@ import { useRouter } from 'next/navigation';
 import { FirebaseError } from 'firebase/app';
 
 export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const { login, loginWithGoogle } = useAuth();
+    const { loginWithGoogle } = useAuth();
     const router = useRouter();
-
-    async function handleSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        try {
-            await login(email, password);
-            router.push('/');
-        } catch (error) {
-            console.error('Login error:', error);
-            if (error instanceof FirebaseError) {
-                setError(error.message);
-            } else {
-                setError('Failed to login. Please check your credentials.');
-            }
-        }
-    }
 
     async function handleGoogleSignIn() {
         try {
@@ -82,61 +65,6 @@ export default function Login() {
                         Sign in with Google
                     </button>
                 </div>
-
-                <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t border-gray-300"></div>
-                    </div>
-                    <div className="relative flex justify-center text-sm">
-                        <span className="px-2 bg-gray-50 text-gray-500">Or continue with email</span>
-                    </div>
-                </div>
-
-                <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-                    <div className="rounded-md shadow-sm -space-y-px">
-                        <div>
-                            <label htmlFor="email-address" className="sr-only">
-                                Email address
-                            </label>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-[#FFD700] focus:border-[#FFD700] focus:z-10 sm:text-sm"
-                                placeholder="Email address"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="password" className="sr-only">
-                                Password
-                            </label>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                autoComplete="current-password"
-                                required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-[#FFD700] focus:border-[#FFD700] focus:z-10 sm:text-sm"
-                                placeholder="Password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                    </div>
-
-                    <div>
-                        <button
-                            type="submit"
-                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-[#FFD700] hover:bg-[#F7C948] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FFD700]"
-                        >
-                            Sign in with Email
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     );
