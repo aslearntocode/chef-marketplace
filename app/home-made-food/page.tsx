@@ -52,12 +52,12 @@ export default function HomeMadeFood() {
         </div>
       </section>
 
-      {/* Filters Section - Redesigned */}
+      {/* Filters Section */}
       <section className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-row gap-4 items-center">
-            {/* Search Input - Now more compact */}
-            <div className="w-64">
+          <div className="flex flex-wrap gap-4 items-center">
+            {/* Search Input */}
+            <div className="w-full sm:w-64">
               <input
                 type="text"
                 placeholder="Search chefs..."
@@ -68,11 +68,11 @@ export default function HomeMadeFood() {
             </div>
 
             {/* Area Filter */}
-            <div className="flex items-center gap-2">
+            <div className="w-full sm:w-auto">
               <select 
                 value={filters.area}
                 onChange={(e) => setFilters(prev => ({ ...prev, area: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
                 <option value="all">All Areas</option>
                 {areas.sort().map(area => (
@@ -82,11 +82,11 @@ export default function HomeMadeFood() {
             </div>
 
             {/* Specialty Filter */}
-            <div className="flex items-center gap-2">
+            <div className="w-full sm:w-auto">
               <select 
                 value={filters.specialty}
                 onChange={(e) => setFilters(prev => ({ ...prev, specialty: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
                 <option value="all">All Specialties</option>
                 {specialties.sort().map(specialty => (
@@ -96,7 +96,7 @@ export default function HomeMadeFood() {
             </div>
 
             {/* Results Count */}
-            <div className="text-sm text-gray-600 ml-auto">
+            <div className="w-full sm:w-auto text-sm text-gray-600 sm:ml-auto">
               {filteredChefs.length} {filteredChefs.length === 1 ? 'chef' : 'chefs'} found
             </div>
           </div>

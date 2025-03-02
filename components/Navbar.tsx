@@ -59,7 +59,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full z-50">
+    <header className="fixed w-full z-50 max-w-[100vw] overflow-x-hidden">
       {/* Top Banner */}
       <div className="bg-black py-2 px-4 text-center">
         <p className="text-[#FFD700] text-sm">
@@ -69,10 +69,10 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-4 relative w-full">
+          <div className="flex justify-between items-center h-20 w-full overflow-x-hidden">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/images/TDH Logo.png"
@@ -82,7 +82,7 @@ export default function Navbar() {
                   priority
                   className="h-10 w-auto"
                 />
-                <span className="ml-2 text-xl font-bold">The Divine Hands</span>
+                <span className="ml-2 text-xl font-bold truncate">The Divine Hands</span>
               </Link>
             </div>
 
@@ -212,7 +212,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Cart and Menu Button */}
-            <div className="flex items-center space-x-4 md:hidden">
+            <div className="flex items-center space-x-4 md:hidden flex-shrink-0">
               {user && (
                 <Link
                   href="/cart"
@@ -252,25 +252,35 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu */}
-          <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+          <div className={`${isOpen ? 'block' : 'hidden'} md:hidden w-full`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
-                <div key={link.id || link.href}>
+                <div key={link.id || link.href} ref={link.dropdown ? navDropdownRef : null}>
                   {link.dropdown ? (
                     <>
                       <button
                         onClick={() => toggleDropdown(link.id)}
-                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50 flex justify-between items-center"
                       >
                         {link.label}
+                        <svg
+                          className={`w-4 h-4 transition-transform ${
+                            activeDropdown === link.id ? 'rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
                       </button>
                       {activeDropdown === link.id && (
-                        <div className="pl-6">
+                        <div className="pl-6 bg-gray-50">
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50"
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100"
                               onClick={() => {
                                 setIsOpen(false);
                                 setActiveDropdown(null);
@@ -296,26 +306,28 @@ export default function Navbar() {
               
               {user ? (
                 <>
-                  <Link
-                    href="/profile"
-                    className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Your Profile
-                  </Link>
-                  <Link
-                    href="/orders"
-                    className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Previous Orders
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="w-full text-left px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 rounded-md"
-                  >
-                    Logout
-                  </button>
+                  <div className="relative" ref={userDropdownRef}>
+                    <Link
+                      href="/profile"
+                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Your Profile
+                    </Link>
+                    <Link
+                      href="/orders"
+                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Previous Orders
+                    </Link>
+                    <button
+                      onClick={handleLogout}
+                      className="w-full text-left px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 rounded-md"
+                    >
+                      Logout
+                    </button>
+                  </div>
                 </>
               ) : (
                 <Link
