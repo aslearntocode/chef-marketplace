@@ -36,25 +36,25 @@ export default function Home() {
               href="/home-made-food"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Meals
+              Meals
             </Link>
             <Link 
               href="/home-made-desserts"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Bakery Items
+              Bakery Items
             </Link>
             <Link 
               href="/tiffin-service"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Tiffin Service
+              Tiffin Service
             </Link>
             <Link 
               href="/home-made-food/snacks"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Find Packaged Snacks
+              Packaged Snacks
             </Link>
             
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
                   2
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Place Your Order for Lunch before 9 AM and for Dinner before 2 PM</h3>
+                <h3 className="text-2xl font-bold mb-4">Place Your Order for Your Favorite Dish</h3>
                 <p className="text-gray-600">
                   Select your favorite dishes and place your order
                 </p>
