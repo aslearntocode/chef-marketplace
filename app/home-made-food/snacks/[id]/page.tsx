@@ -8,13 +8,12 @@ import { snacksChefs } from '@/data/snacks';
 import type { SnackChef } from '@/types/snack';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
-import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 
 export default function SnackChefPage() {
   const params = useParams();
   const chefId = params?.id ? Number(params.id) : null;
-  const chef = chefId ? snacksChefs.find(c => c.id === chefId) as SnackChef | undefined : undefined;
+  const chef = chefId ? snacksChefs.find(c => c.id === chefId) : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
@@ -28,15 +27,13 @@ export default function SnackChefPage() {
     );
   }
 
-  // Function to get menu items based on selected category
-  const getFilteredMenu = () => {
-    if (selectedCategory === 'all') {
-      return chef.menu;
-    }
-    return chef.menu.filter(category => category.category === selectedCategory);
-  };
+  const categories = ['all', ...Object.keys(chef.menu)];
 
-  const handleAddToCart = (item: MenuItem) => {
+  const filteredMenu = selectedCategory === 'all'
+    ? Object.entries(chef.menu).map(([category, items]) => ({ category, items }))
+    : [{ category: selectedCategory, items: chef.menu[selectedCategory] || [] }];
+
+  const handleAddToCart = (item: { id: number; name: string; price: number; description: string }) => {
     if (!auth.currentUser) {
       toast.error('Please log in to add items to cart');
       router.push('/login');
@@ -49,24 +46,20 @@ export default function SnackChefPage() {
       price: item.price,
       chefId: chef.id,
       chefName: chef.name,
-      description: item.description,
       category: selectedCategory
     });
 
     toast.success(`${item.name} added to cart`);
   };
 
-  const filteredMenu = getFilteredMenu();
-
   return (
     <main>
       <div className="h-[72px]" />
 
-      {/* Chef Header */}
-      <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
+      {/* Chef Info Section */}
+      <section className="bg-white border-b w-full">
+        <div className="max-w-7xl mx-auto px-8 py-6">
           <div className="flex items-center gap-6">
-            {/* Chef Image */}
             <div className="relative w-32 h-32">
               <Image
                 src={chef.image}
@@ -77,8 +70,6 @@ export default function SnackChefPage() {
                 priority
               />
             </div>
-
-            {/* Chef Info */}
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
                 <h1 className="text-2xl font-bold">{chef.name}</h1>
@@ -96,62 +87,38 @@ export default function SnackChefPage() {
               </p>
             </div>
           </div>
-
-          {/* Notes Section - if needed */}
-          {chef.notes && chef.notes.length > 0 && (
-            <div className="mt-6">
-              <div className="flex flex-wrap gap-2">
-                {chef.notes.map((note, index) => (
-                  <span 
-                    key={index}
-                    className="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm border border-amber-100"
-                  >
-                    {note.replace('*', '•')}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
       {/* Category Filter */}
       <div className="px-8 py-4">
         <div className="flex gap-2 overflow-x-auto">
-          <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-full ${
-              selectedCategory === 'all' 
-                ? 'bg-black text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            View All
-          </button>
-          {chef.menu.map(category => (
+          {categories.map(category => (
             <button
-              key={category.category}
-              onClick={() => setSelectedCategory(category.category)}
+              key={category}
+              onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${
-                selectedCategory === category.category
+                selectedCategory === category
                   ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category.category}
+              {category === 'all' ? 'View All' : category}
             </button>
           ))}
         </div>
       </div>
 
       {/* Menu Items */}
-      {filteredMenu.map(category => (
-        <div key={category.category} className="px-8 py-6">
-          <h2 className="text-2xl font-bold mb-4">{category.category}</h2>
+      {filteredMenu.map(({ category, items }) => (
+        <div key={category} className="px-8 py-6">
+          {selectedCategory === 'all' && (
+            <h2 className="text-2xl font-bold mb-4">{category}</h2>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {category.items.map(item => (
-              <div 
-                key={item.id} 
+            {items.map(item => (
+              <div
+                key={item.id}
                 className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
               >
                 <div>
@@ -159,10 +126,7 @@ export default function SnackChefPage() {
                   <p className="text-gray-600 mb-4">{item.description}</p>
                 </div>
                 <div className="flex justify-between items-center">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-semibold">₹{item.price}</span>
-                    {item.unit && <span className="text-gray-500">/ {item.unit}</span>}
-                  </div>
+                  <span className="text-lg font-semibold">₹{item.price}</span>
                   <button
                     onClick={() => handleAddToCart(item)}
                     className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"

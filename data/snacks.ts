@@ -1,96 +1,72 @@
-import type { SnackChef } from '@/types/snack';
+import type { Chef } from '@/types/chef';
 
-export const snacksChefs: SnackChef[] = [
+export const snacksChefs: Chef[] = [
   {
     id: 1,
-    name: 'Ahilya Jaiswal',
-    image: '/images/snacks/ahilya.jpg',
+    name: "Ahilya Jaiswal",
+    specialty: "Traditional Indian Snacks",
+    location: "Worli, Mumbai",
     rating: 4.8,
-    specialty: 'Traditional Indian Snacks',
-    location: 'Worli, Mumbai',
-    // deliveryAreas: ['Andheri', 'Juhu', 'Bandra'],
-    description: 'Specializing in authentic Maharashtra snacks made with traditional recipes.',
-    menu: [
-      {
-        category: 'Savory Snacks',
-        items: [
-          {
-            id: 101,
-            name: 'Chakli',
-            description: 'Crispy spiral-shaped snack made from rice flour and spices',
-            price: 250,
-            image: '/images/snacks/chakli.jpg',
-            unit: '500g'
-          },
-          {
-            id: 102,
-            name: 'Mixture',
-            description: 'Crunchy mix of various fried ingredients and spices',
-            price: 200,
-            image: '/images/snacks/mixture.jpg',
-            unit: '500g'
-          }
-        ]
-      },
-      {
-        category: 'Sweet Snacks',
-        items: [
-          {
-            id: 'chivda-1',
-            name: 'Sweet Chivda',
-            description: 'Sweet and crunchy flattened rice mixture',
-            price: 300,
-            image: '/images/snacks/chivda.jpg',
-            unit: '500g'
-          }
-        ]
-      }
-    ]
+    image: "/images/snacks/ahilya.jpg",
+    description: "Specializing in authentic Maharashtra snacks made with traditional recipes.",
+    deliveryAreas: ["Worli", "Lower Parel", "Prabhadevi"],
+    menu: {
+      "Savory Snacks": [
+        { 
+          id: "aj1", 
+          name: "Chakli", 
+          price: 250, 
+          description: "Crispy spiral-shaped snack made from rice flour and spices" 
+        },
+        { 
+          id: "aj2", 
+          name: "Mixture", 
+          price: 200, 
+          description: "Crunchy mix of various fried ingredients and spices" 
+        }
+      ],
+      "Sweet Snacks": [
+        { 
+          id: "aj3", 
+          name: "Sweet Chivda", 
+          price: 300, 
+          description: "Sweet and crunchy flattened rice mixture" 
+        }
+      ]
+    }
   },
   {
-    id: 'snacks-2',
-    name: 'Rajesh Patel',
-    image: '/images/chef2.jpg',
+    id: 2,
+    name: "Rajesh Patel",
+    specialty: "Gujarati Snacks",
+    location: "Vile Parle, Mumbai",
     rating: 4.7,
-    specialty: 'Gujarati Snacks',
-    location: 'Vile Parle, Mumbai',
-    deliveryAreas: ['Vile Parle', 'Santacruz', 'Khar'],
-    description: 'Creating delicious and healthy Gujarati snacks for over 15 years.',
-    menu: [
-      {
-        category: 'Traditional Snacks',
-        items: [
-          {
-            id: 'khakhra-1',
-            name: 'Khakhra',
-            description: 'Crispy thin crackers made from whole wheat flour',
-            price: 150,
-            image: '/images/snacks/khakhra.jpg',
-            unit: '200g'
-          },
-          {
-            id: 'gathiya-1',
-            name: 'Gathiya',
-            description: 'Crunchy gram flour snack',
-            price: 200,
-            image: '/images/snacks/gathiya.jpg',
-            unit: '500g'
-          }
-        ]
-      },
-      {
-        category: 'Special Items',
-        items: [
-          {
-            id: 'fafda-1',
-            name: 'Fafda',
-            description: 'Crispy gram flour snack strips',
-            price: 180,
-            image: '/images/snacks/fafda.jpg',
-            unit: '500g'
-          }
-        ]
-      }
-    ]
+    image: "/images/chef2.jpg",
+    description: "Creating delicious and healthy Gujarati snacks for over 15 years.",
+    deliveryAreas: ["Vile Parle", "Santacruz", "Khar"],
+    menu: {
+      "Traditional Snacks": [
+        { 
+          id: "rp1", 
+          name: "Khakhra", 
+          price: 150, 
+          description: "Crispy thin crackers made from whole wheat flour" 
+        },
+        { 
+          id: "rp2", 
+          name: "Gathiya", 
+          price: 200, 
+          description: "Crunchy gram flour snack" 
+        }
+      ],
+      "Special Items": [
+        { 
+          id: "rp3", 
+          name: "Fafda", 
+          price: 180, 
+          description: "Crispy gram flour snack strips" 
+        }
+      ]
+    }
   }
 ]; 

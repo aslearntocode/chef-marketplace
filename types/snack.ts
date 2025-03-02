@@ -1,3 +1,6 @@
+import type { MenuItem } from './menu';
+import type { Chef } from './chef';
+
 export interface SnackMenuItem {
   id: number;
   name: string;
@@ -13,13 +16,4 @@ export interface SnackCategory {
   items: SnackMenuItem[];
 }
 
-export interface SnackChef {
-  id: number;
-  name: string;
-  image: string;
-  rating: number;
-  specialty: string;
-  location: string;
-  notes?: string[];
-  menu: SnackCategory[];
-} 
+export type SnackChef = Chef; 
