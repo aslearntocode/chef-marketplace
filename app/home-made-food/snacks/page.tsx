@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { snacksChefs } from '@/data/snacks';
 
-export default function PackagedSnacks() {
+export default function SnacksPage() {
   const [filters, setFilters] = useState({
     area: 'all',
     specialty: 'all',
@@ -45,62 +45,60 @@ export default function PackagedSnacks() {
       {/* Header Section */}
       <section className="content-section">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-6">Packaged Snacks</h1>
+          <h1 className="text-4xl font-bold text-center mb-6">Snacks</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            Discover delicious homemade snacks from local chefs. Perfect for parties, gatherings, or everyday munching!
+            Discover delicious homemade snacks from talented home chefs
           </p>
         </div>
       </section>
 
-      {/* Filters Section */}
+      {/* Filters Section - Redesigned */}
       <section className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            {/* Search Input */}
-            <div className="flex-1">
+          <div className="flex flex-row gap-4 items-center">
+            {/* Search Input - Now more compact */}
+            <div className="w-64">
               <input
                 type="text"
-                placeholder="Search by chef name or specialty..."
+                placeholder="Search snacks..."
                 value={filters.searchQuery}
                 onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
-                className="w-full border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               />
             </div>
 
             {/* Area Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Area:</span>
               <select 
                 value={filters.area}
                 onChange={(e) => setFilters(prev => ({ ...prev, area: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
-                <option key="all-areas" value="all">All Areas</option>
+                <option value="all">All Areas</option>
                 {areas.sort().map(area => (
-                  <option key={`area-${area}`} value={area}>{area}</option>
+                  <option key={area} value={area}>{area}</option>
                 ))}
               </select>
             </div>
 
             {/* Specialty Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Specialty:</span>
               <select 
                 value={filters.specialty}
                 onChange={(e) => setFilters(prev => ({ ...prev, specialty: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
-                <option key="all-specialties" value="all">All Specialties</option>
+                <option value="all">All Specialties</option>
                 {specialties.sort().map(specialty => (
-                  <option key={`specialty-${specialty}`} value={specialty}>{specialty}</option>
+                  <option key={specialty} value={specialty}>{specialty}</option>
                 ))}
               </select>
             </div>
-          </div>
 
-          {/* Results Count */}
-          <div className="mt-4 text-gray-600">
-            {filteredChefs.length} {filteredChefs.length === 1 ? 'chef' : 'chefs'} found
+            {/* Results Count */}
+            <div className="text-sm text-gray-600 ml-auto">
+              {filteredChefs.length} {filteredChefs.length === 1 ? 'chef' : 'chefs'} found
+            </div>
           </div>
         </div>
       </section>
@@ -139,7 +137,6 @@ export default function PackagedSnacks() {
                     </div>
                     <p className="text-gray-600 font-medium mb-2">{chef.specialty}</p>
                     <p className="text-gray-500 text-sm mb-4">{chef.location}</p>
-                    
                     <Link 
                       href={`/home-made-food/snacks/${chef.id}`}
                       className="block w-full text-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors"

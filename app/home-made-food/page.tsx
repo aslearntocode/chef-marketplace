@@ -42,61 +42,37 @@ export default function HomeMadeFood() {
       {/* Spacer for navbar */}
       <div className="h-[72px]" />
 
-      {/* Header Section with Dropdown */}
+      {/* Header Section */}
       <section className="content-section">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-6">Home Made Food</h1>
-          
-          {/* Added Dropdown Menu */}
-          {/* <div className="flex justify-center mb-8">
-            <select 
-              onChange={(e) => {
-                if (e.target.value) {
-                  window.location.href = e.target.value;
-                }
-              }}
-              className="w-full max-w-xs border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              <option value="">Select Category</option>
-              <optgroup label="Meals">
-                <option value="/home-made-food/breakfast">Breakfast</option>
-                <option value="/home-made-food/lunch">Lunch</option>
-                <option value="/home-made-food/dinner">Dinner</option>
-              </optgroup>
-              <option value="/home-made-food/tiffin">Tiffin Service</option>
-              <option value="/home-made-food/bakery">Bakery Items</option>
-              <option value="/home-made-food/snacks">Packaged Snacks</option>
-            </select>
-          </div> */}
-
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
             Discover authentic home-cooked meals from talented home chefs
           </p>
         </div>
       </section>
 
-      {/* Filters Section */}
+      {/* Filters Section - Redesigned */}
       <section className="bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            {/* Search Input */}
-            <div className="flex-1">
+          <div className="flex flex-row gap-4 items-center">
+            {/* Search Input - Now more compact */}
+            <div className="w-64">
               <input
                 type="text"
-                placeholder="Search by chef name or specialty..."
+                placeholder="Search chefs..."
                 value={filters.searchQuery}
                 onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
-                className="w-full border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               />
             </div>
 
             {/* Area Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Area:</span>
               <select 
                 value={filters.area}
                 onChange={(e) => setFilters(prev => ({ ...prev, area: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
                 <option value="all">All Areas</option>
                 {areas.sort().map(area => (
@@ -107,11 +83,10 @@ export default function HomeMadeFood() {
 
             {/* Specialty Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Specialty:</span>
               <select 
                 value={filters.specialty}
                 onChange={(e) => setFilters(prev => ({ ...prev, specialty: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-sm"
               >
                 <option value="all">All Specialties</option>
                 {specialties.sort().map(specialty => (
@@ -119,11 +94,11 @@ export default function HomeMadeFood() {
                 ))}
               </select>
             </div>
-          </div>
 
-          {/* Results Count */}
-          <div className="mt-4 text-gray-600">
-            {filteredChefs.length} {filteredChefs.length === 1 ? 'chef' : 'chefs'} found
+            {/* Results Count */}
+            <div className="text-sm text-gray-600 ml-auto">
+              {filteredChefs.length} {filteredChefs.length === 1 ? 'chef' : 'chefs'} found
+            </div>
           </div>
         </div>
       </section>
