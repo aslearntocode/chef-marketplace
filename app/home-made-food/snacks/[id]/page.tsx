@@ -7,6 +7,7 @@ import { toast } from 'react-hot-toast';
 import { auth } from '@/firebase/config';
 import { snacksChefs } from '@/data/snacks';
 import { useCart } from '@/context/CartContext';
+import type { SnackMenuItem, SnackChef } from '@/types/snack';
 
 export default function SnackChefPage() {
   const params = useParams();
@@ -40,7 +41,7 @@ export default function SnackChefPage() {
     ? chef.menu
     : chef.menu.filter(category => category.category === selectedCategory);
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: SnackMenuItem) => {
     const currentUser = auth.currentUser;
     
     if (!currentUser) {
