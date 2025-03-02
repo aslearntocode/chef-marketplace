@@ -18,8 +18,8 @@ export default function SnackChefPage() {
   // Convert params.id to string if it's an array
   const chefId = Array.isArray(params.id) ? params.id[0] : params.id;
   
-  // Use the converted chefId to find the chef
-  const chef = snacksChefs.find(chef => chef.id === chefId);
+  // Use the converted chefId to find the chef and add type annotation
+  const chef: SnackChef | undefined = snacksChefs.find(chef => chef.id === chefId);
 
   // Add console.log for debugging
   console.log('Params:', params);
