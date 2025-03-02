@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { snacksChefs } from '@/data/snacks';
-import type { SnackChef } from '@/types/snack';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
 import { getAuth } from 'firebase/auth';
