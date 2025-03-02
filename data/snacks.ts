@@ -1,8 +1,10 @@
-export const snacksChefs = [
+import type { SnackChef } from '@/types/snack';
+
+export const snacksChefs: SnackChef[] = [
   {
-    id: 'snacks-1',
+    id: 1,
     name: 'Ahilya Jaiswal',
-    image: '/chefs/Chef Juhi Kastiya.png',
+    image: '/images/snacks/ahilya.jpg',
     rating: 4.8,
     specialty: 'Traditional Indian Snacks',
     location: 'Worli, Mumbai',
@@ -13,7 +15,7 @@ export const snacksChefs = [
         category: 'Savory Snacks',
         items: [
           {
-            id: 'chakli-1',
+            id: 101,
             name: 'Chakli',
             description: 'Crispy spiral-shaped snack made from rice flour and spices',
             price: 250,
@@ -21,7 +23,7 @@ export const snacksChefs = [
             unit: '500g'
           },
           {
-            id: 'mixture-1',
+            id: 102,
             name: 'Mixture',
             description: 'Crunchy mix of various fried ingredients and spices',
             price: 200,
