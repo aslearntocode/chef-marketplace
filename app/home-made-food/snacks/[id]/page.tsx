@@ -8,6 +8,7 @@ import { auth } from '@/firebase/config';
 import { snacksChefs } from '@/data/snacks';
 import { useCart } from '@/context/CartContext';
 import type { SnackMenuItem, SnackChef } from '@/types/snack';
+import type { CartItem } from '@/types/cart';
 
 export default function SnackChefPage() {
   const params = useParams();
@@ -50,16 +51,17 @@ export default function SnackChefPage() {
       return;
     }
 
-    addToCart({
-      id: item.id,
+    const cartItem: Omit<CartItem, "quantity"> = {
+      id: item.id.toString(),
       name: item.name,
       price: item.price,
-      quantity: 1,
       image: item.image,
       chefId: chef.id,
-      chefName: chef.name
-    });
+      chefName: chef.name,
+      category: item.category || 'Snacks'
+    };
 
+    addToCart(cartItem);
     toast.success(`${item.name} added to cart`);
   };
 
