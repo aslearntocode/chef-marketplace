@@ -48,7 +48,7 @@ export default function HomeMadeFood() {
           <h1 className="text-4xl font-bold text-center mb-6">Home Made Food</h1>
           
           {/* Added Dropdown Menu */}
-          <div className="flex justify-center mb-8">
+          {/* <div className="flex justify-center mb-8">
             <select 
               onChange={(e) => {
                 if (e.target.value) {
@@ -67,7 +67,7 @@ export default function HomeMadeFood() {
               <option value="/home-made-food/bakery">Bakery Items</option>
               <option value="/home-made-food/snacks">Packaged Snacks</option>
             </select>
-          </div>
+          </div> */}
 
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
             Discover authentic home-cooked meals from talented home chefs
