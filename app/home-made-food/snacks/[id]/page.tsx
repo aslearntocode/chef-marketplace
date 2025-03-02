@@ -3,29 +3,22 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
-import { toast } from 'react-hot-toast';
-import { auth } from '@/firebase/config';
+import Link from 'next/link';
 import { snacksChefs } from '@/data/snacks';
+import type { SnackChef } from '@/types/snack';
+import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
-import type { SnackMenuItem, SnackChef } from '@/types/snack';
-import type { CartItem } from '@/types/cart';
+import type { MenuItem } from '@/types/menu';
+import { getAuth } from 'firebase/auth';
 
 export default function SnackChefPage() {
   const params = useParams();
-  const router = useRouter();
+  const chefId = params?.id ? Number(params.id) : null;
+  const chef = chefId ? snacksChefs.find(c => c.id === chefId) as SnackChef | undefined : undefined;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  // Safely handle params.id and convert to number
-  const chefId = params?.id ? Number(Array.isArray(params.id) ? params.id[0] : params.id) : null;
-  
-  // Use the converted chefId to find the chef and add type annotation
-  const chef: SnackChef | undefined = chefId ? snacksChefs.find(chef => chef.id === chefId) : undefined;
-
-  // Add console.log for debugging
-  console.log('Params:', params);
-  console.log('Chef ID:', chefId);
-  console.log('Found Chef:', chef);
+  const router = useRouter();
+  const auth = getAuth();
 
   if (!chef) {
     return (
@@ -35,44 +28,43 @@ export default function SnackChefPage() {
     );
   }
 
-  const allCategories = chef.menu.map(m => m.category);
-  const categories = ['all', ...new Set(allCategories)];
+  // Function to get menu items based on selected category
+  const getFilteredMenu = () => {
+    if (selectedCategory === 'all') {
+      return chef.menu;
+    }
+    return chef.menu.filter(category => category.category === selectedCategory);
+  };
 
-  const filteredMenu = selectedCategory === 'all'
-    ? chef.menu
-    : chef.menu.filter(category => category.category === selectedCategory);
-
-  const handleAddToCart = (item: SnackMenuItem) => {
-    const currentUser = auth.currentUser;
-    
-    if (!currentUser) {
+  const handleAddToCart = (item: MenuItem) => {
+    if (!auth.currentUser) {
       toast.error('Please log in to add items to cart');
       router.push('/login');
       return;
     }
 
-    const cartItem: Omit<CartItem, "quantity"> = {
-      id: item.id.toString(),
+    addToCart({
+      id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
       price: item.price,
-      image: item.image,
       chefId: chef.id,
       chefName: chef.name,
-      category: item.category || 'Snacks'
-    };
+      description: item.description,
+      category: selectedCategory
+    });
 
-    addToCart(cartItem);
     toast.success(`${item.name} added to cart`);
   };
 
+  const filteredMenu = getFilteredMenu();
+
   return (
-    <main className="max-w-7xl mx-auto">
-      {/* Spacer for navbar */}
+    <main>
       <div className="h-[72px]" />
 
-      {/* Chef Info Section */}
-      <section className="bg-white border-b w-full">
-        <div className="max-w-7xl mx-auto px-8 py-6">
+      {/* Chef Header */}
+      <section className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center gap-6">
             {/* Chef Image */}
             <div className="relative w-32 h-32">
@@ -136,17 +128,17 @@ export default function SnackChefPage() {
           >
             View All
           </button>
-          {categories.filter(cat => cat !== 'all').map(category => (
+          {chef.menu.map(category => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={category.category}
+              onClick={() => setSelectedCategory(category.category)}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${
-                selectedCategory === category 
-                  ? 'bg-black text-white' 
+                selectedCategory === category.category
+                  ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category}
+              {category.category}
             </button>
           ))}
         </div>
@@ -183,6 +175,16 @@ export default function SnackChefPage() {
           </div>
         </div>
       ))}
+
+      {/* Back Button */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <Link
+          href="/home-made-food/snacks"
+          className="text-gray-600 hover:text-black flex items-center gap-2"
+        >
+          ← Back to Snacks
+        </Link>
+      </div>
     </main>
   );
 } 
