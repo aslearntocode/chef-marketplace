@@ -9,23 +9,31 @@ import { useCart } from '@/context/CartContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { user, logout } = useAuth();
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const userDropdownRef = useRef<HTMLDivElement>(null);
+  const navDropdownRef = useRef<HTMLDivElement>(null);
   const { totalItems } = useCart();
 
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
-    { href: '/home-made-food', label: 'Home Made Food' },
-    { href: '/home-made-desserts', label: 'Home Made Desserts' },
-    { href: '/tiffin-service', label: 'Tiffin Service' },
+    {
+      id: 'home-made-food',
+      label: 'Home Made Food',
+      dropdown: [
+        { href: '/home-made-food', label: 'Meals' },
+        { href: '/home-made-food/tiffin', label: 'Tiffin Service' },
+        { href: '/home-made-food/bakery', label: 'Bakery Items' },
+        { href: '/home-made-food/snacks', label: 'Packaged Snacks' },
+      ]
+    },
   ];
 
   const handleLogout = async () => {
     try {
       await logout();
-      setIsDropdownOpen(false);
+      setActiveDropdown(null);
     } catch (error) {
       console.error('Failed to logout:', error);
     }
@@ -34,14 +42,21 @@ export default function Navbar() {
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
+      if (
+        (userDropdownRef.current && !userDropdownRef.current.contains(event.target as Node)) &&
+        (navDropdownRef.current && !navDropdownRef.current.contains(event.target as Node))
+      ) {
+        setActiveDropdown(null);
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  const toggleDropdown = (dropdownId: string) => {
+    setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
+  };
 
   return (
     <header className="fixed w-full z-50">
@@ -74,13 +89,51 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.id || link.href} className="relative" ref={link.dropdown ? navDropdownRef : null}>
+                  {link.dropdown ? (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(link.id)}
+                        className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200 flex items-center"
+                      >
+                        {link.label}
+                        <svg
+                          className={`w-4 h-4 ml-1 transform transition-transform ${
+                            activeDropdown === link.id ? 'rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeDropdown === link.id && (
+                        <div 
+                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+                        >
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
               ))}
               
               {user ? (
@@ -97,9 +150,9 @@ export default function Navbar() {
                     )}
                   </Link>
                   
-                  <div className="relative" ref={dropdownRef}>
+                  <div className="relative" ref={userDropdownRef}>
                     <button
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      onClick={() => setActiveDropdown('user')}
                       className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
                     >
                       <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center">
@@ -107,7 +160,7 @@ export default function Navbar() {
                       </div>
                       <span className="hidden sm:inline">{user.email?.split('@')[0]}</span>
                       <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'user' ? 'rotate-180' : ''}`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -117,14 +170,14 @@ export default function Navbar() {
                     </button>
 
                     {/* Dropdown Menu */}
-                    {isDropdownOpen && (
+                    {activeDropdown === 'user' && (
                       <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div className="py-1" role="menu">
                           <Link
                             href="/profile"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             role="menuitem"
-                            onClick={() => setIsDropdownOpen(false)}
+                            onClick={() => setActiveDropdown(null)}
                           >
                             Your Profile
                           </Link>
@@ -132,7 +185,7 @@ export default function Navbar() {
                             href="/orders"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             role="menuitem"
-                            onClick={() => setIsDropdownOpen(false)}
+                            onClick={() => setActiveDropdown(null)}
                           >
                             Previous Orders
                           </Link>
@@ -202,15 +255,45 @@ export default function Navbar() {
           <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                <div key={link.id || link.href}>
+                  {link.dropdown ? (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(link.id)}
+                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                      >
+                        {link.label}
+                      </button>
+                      {activeDropdown === link.id && (
+                        <div className="pl-6">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50"
+                              onClick={() => {
+                                setIsOpen(false);
+                                setActiveDropdown(null);
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
               ))}
+              
               {user ? (
                 <>
                   <Link

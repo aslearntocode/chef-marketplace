@@ -3,9 +3,9 @@
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { chefs } from '@/data/chefs';
+import { snacksChefs } from '@/data/snacks';
 
-export default function HomeMadeFood() {
+export default function PackagedSnacks() {
   const [filters, setFilters] = useState({
     area: 'all',
     specialty: 'all',
@@ -14,19 +14,19 @@ export default function HomeMadeFood() {
 
   // Get unique specialties from chefs data
   const specialties = useMemo(() => {
-    const uniqueSpecialties = new Set(chefs.map(chef => chef.specialty));
+    const uniqueSpecialties = new Set(snacksChefs.map(chef => chef.specialty));
     return Array.from(uniqueSpecialties);
   }, []);
 
   // Get unique areas from chefs data
   const areas = useMemo(() => {
-    const uniqueAreas = new Set(chefs.flatMap(chef => chef.deliveryAreas));
+    const uniqueAreas = new Set(snacksChefs.flatMap(chef => chef.deliveryAreas));
     return Array.from(uniqueAreas);
   }, []);
 
   // Filter chefs based on all criteria
   const filteredChefs = useMemo(() => {
-    return chefs.filter(chef => {
+    return snacksChefs.filter(chef => {
       const matchesArea = filters.area === 'all' || chef.deliveryAreas.includes(filters.area);
       const matchesSpecialty = filters.specialty === 'all' || chef.specialty === filters.specialty;
       const matchesSearch = filters.searchQuery === '' || 
@@ -42,35 +42,12 @@ export default function HomeMadeFood() {
       {/* Spacer for navbar */}
       <div className="h-[72px]" />
 
-      {/* Header Section with Dropdown */}
+      {/* Header Section */}
       <section className="content-section">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-6">Home Made Food</h1>
-          
-          {/* Added Dropdown Menu */}
-          <div className="flex justify-center mb-8">
-            <select 
-              onChange={(e) => {
-                if (e.target.value) {
-                  window.location.href = e.target.value;
-                }
-              }}
-              className="w-full max-w-xs border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              <option value="">Select Category</option>
-              <optgroup label="Meals">
-                <option value="/home-made-food/breakfast">Breakfast</option>
-                <option value="/home-made-food/lunch">Lunch</option>
-                <option value="/home-made-food/dinner">Dinner</option>
-              </optgroup>
-              <option value="/home-made-food/tiffin">Tiffin Service</option>
-              <option value="/home-made-food/bakery">Bakery Items</option>
-              <option value="/home-made-food/snacks">Packaged Snacks</option>
-            </select>
-          </div>
-
+          <h1 className="text-4xl font-bold text-center mb-6">Packaged Snacks</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            Discover authentic home-cooked meals from talented home chefs
+            Discover delicious homemade snacks from local chefs. Perfect for parties, gatherings, or everyday munching!
           </p>
         </div>
       </section>
@@ -98,9 +75,9 @@ export default function HomeMadeFood() {
                 onChange={(e) => setFilters(prev => ({ ...prev, area: e.target.value }))}
                 className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                <option value="all">All Areas</option>
+                <option key="all-areas" value="all">All Areas</option>
                 {areas.sort().map(area => (
-                  <option key={area} value={area}>{area}</option>
+                  <option key={`area-${area}`} value={area}>{area}</option>
                 ))}
               </select>
             </div>
@@ -113,9 +90,9 @@ export default function HomeMadeFood() {
                 onChange={(e) => setFilters(prev => ({ ...prev, specialty: e.target.value }))}
                 className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               >
-                <option value="all">All Specialties</option>
+                <option key="all-specialties" value="all">All Specialties</option>
                 {specialties.sort().map(specialty => (
-                  <option key={specialty} value={specialty}>{specialty}</option>
+                  <option key={`specialty-${specialty}`} value={specialty}>{specialty}</option>
                 ))}
               </select>
             </div>
@@ -162,32 +139,9 @@ export default function HomeMadeFood() {
                     </div>
                     <p className="text-gray-600 font-medium mb-2">{chef.specialty}</p>
                     <p className="text-gray-500 text-sm mb-4">{chef.location}</p>
-                    {/* <p className="text-gray-600 mb-4">{chef.description}</p> */}
                     
-                    {/* <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Top Dishes:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {chef.topDishes.map(dish => (
-                          <span key={dish} className="bg-gray-100 px-2 py-1 rounded-full text-sm text-gray-600">
-                            {dish}
-                          </span>
-                        ))}
-                      </div>
-                    </div> */}
-
-                    {/* <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Delivery Areas:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {chef.deliveryAreas.map(area => (
-                          <span key={area} className="bg-blue-100 px-2 py-1 rounded-full text-sm text-blue-600">
-                            {area}
-                          </span>
-                        ))}
-                      </div>
-                    </div> */}
-
                     <Link 
-                      href={`/chefs/${chef.id}`}
+                      href={`/home-made-food/snacks/${chef.id}`}
                       className="block w-full text-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors"
                     >
                       View Menu
