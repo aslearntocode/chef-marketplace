@@ -6,6 +6,7 @@ export interface Chef {
   location: string;
   description: string;
   rating: number;
+  notes?: string[];
   deliveryAreas: string[];
   menu: {
     [category: string]: {

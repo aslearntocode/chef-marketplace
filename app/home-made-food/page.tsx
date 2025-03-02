@@ -139,9 +139,9 @@ export default function HomeMadeFood() {
                     </div>
                     <p className="text-gray-600 font-medium mb-2">{chef.specialty}</p>
                     <p className="text-gray-500 text-sm mb-4">{chef.location}</p>
-                    <p className="text-gray-600 mb-4">{chef.description}</p>
+                    {/* <p className="text-gray-600 mb-4">{chef.description}</p> */}
                     
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Top Dishes:</h4>
                       <div className="flex flex-wrap gap-2">
                         {chef.topDishes.map(dish => (
@@ -150,9 +150,9 @@ export default function HomeMadeFood() {
                           </span>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
 
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Delivery Areas:</h4>
                       <div className="flex flex-wrap gap-2">
                         {chef.deliveryAreas.map(area => (
@@ -161,7 +161,7 @@ export default function HomeMadeFood() {
                           </span>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
 
                     <Link 
                       href={`/chefs/${chef.id}`}

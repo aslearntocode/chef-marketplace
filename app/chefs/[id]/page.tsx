@@ -70,48 +70,58 @@ export default function ChefPage() {
 
   return (
     <main>
-      {/* Spacer for navbar */}
       <div className="h-[72px]" />
 
-      {/* Chef Header */}
+      {/* Chef Header - More compact and stylish */}
       <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row gap-8">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center gap-6">
             {/* Chef Image */}
-            <div className="relative w-full md:w-1/3 h-[300px]">
+            <div className="relative w-32 h-32">
               <Image
                 src={chef.image}
                 alt={chef.name}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-full border-2 border-gray-100 shadow-md"
+                sizes="(max-width: 768px) 128px, 128px"
+                priority
               />
             </div>
 
             {/* Chef Info */}
-            <div className="md:w-2/3">
-              <div className="flex justify-between items-start mb-4">
-                <h1 className="text-3xl font-bold">{chef.name}</h1>
-                <span className="flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <h1 className="text-2xl font-bold">{chef.name}</h1>
+                <span className="flex items-center bg-green-50 text-green-800 px-2 py-1 rounded-full text-sm">
                   ⭐ {chef.rating}
                 </span>
               </div>
-              <p className="text-xl text-gray-600 mb-2">{chef.specialty}</p>
-              <p className="text-gray-500 mb-4">{chef.location}</p>
-              <p className="text-gray-700 mb-6">{chef.description}</p>
-
-              {/* Delivery Areas */}
-              <div className="mb-4">
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">Delivery Areas:</h3>
-                <div className="flex flex-wrap gap-2">
-                  {chef.deliveryAreas.map(area => (
-                    <span key={area} className="bg-blue-100 px-3 py-1 rounded-full text-sm text-blue-600">
-                      {area}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <p className="text-gray-600 mb-1">{chef.specialty}</p>
+              <p className="text-gray-500 text-sm flex items-center">
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                {chef.location}
+              </p>
             </div>
           </div>
+
+          {/* Notes Section - Styled as pills */}
+          {chef.notes && chef.notes.length > 0 && (
+            <div className="mt-6">
+              <div className="flex flex-wrap gap-2">
+                {chef.notes.map((note, index) => (
+                  <span 
+                    key={index}
+                    className="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm border border-amber-100"
+                  >
+                    {note.replace('*', '•')}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
