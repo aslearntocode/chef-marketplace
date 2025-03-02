@@ -13,13 +13,13 @@ export const snacksChefs: Chef[] = [
     menu: {
       "Savory Snacks": [
         { 
-          id: "aj1", 
+          id: 101, 
           name: "Chakli", 
           price: 250, 
           description: "Crispy spiral-shaped snack made from rice flour and spices" 
         },
         { 
-          id: "aj2", 
+          id: 102, 
           name: "Mixture", 
           price: 200, 
           description: "Crunchy mix of various fried ingredients and spices" 
@@ -27,7 +27,7 @@ export const snacksChefs: Chef[] = [
       ],
       "Sweet Snacks": [
         { 
-          id: "aj3", 
+          id: 103, 
           name: "Sweet Chivda", 
           price: 300, 
           description: "Sweet and crunchy flattened rice mixture" 
@@ -47,13 +47,13 @@ export const snacksChefs: Chef[] = [
     menu: {
       "Traditional Snacks": [
         { 
-          id: "rp1", 
+          id: 201, 
           name: "Khakhra", 
           price: 150, 
           description: "Crispy thin crackers made from whole wheat flour" 
         },
         { 
-          id: "rp2", 
+          id: 202, 
           name: "Gathiya", 
           price: 200, 
           description: "Crunchy gram flour snack" 
@@ -61,7 +61,7 @@ export const snacksChefs: Chef[] = [
       ],
       "Special Items": [
         { 
-          id: "rp3", 
+          id: 203, 
           name: "Fafda", 
           price: 180, 
           description: "Crispy gram flour snack strips" 
