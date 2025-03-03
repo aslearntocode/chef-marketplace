@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Food Showcase Conveyor Belt */}
         <div className="bg-white rounded-lg p-8 mt-16 mb-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Popular Items</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Most Popular Items</h2>
           <div className="flex items-center gap-4">
             {/* Left Arrow */}
             <button 
@@ -82,10 +82,10 @@ export default function Home() {
               <div className="chef-marketplace">
                 <div className="slider">
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav', price: '₹120' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf', price: '₹180' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza', price: '₹250' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani', price: '₹200' },
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200' },
                     // Duplicate first 3 items to create seamless loop
                     { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav', price: '₹120' },
                     { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf', price: '₹180' },
