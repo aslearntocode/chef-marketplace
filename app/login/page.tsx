@@ -14,8 +14,7 @@ export default function Login() {
     async function handleGoogleSignIn() {
         try {
             await loginWithGoogle();
-            const returnUrl = searchParams.get('returnUrl') || '/';
-            console.log('Return URL:', returnUrl);
+            const returnUrl = searchParams?.get('returnUrl') ?? '/';
             router.push(returnUrl);
         } catch (error) {
             console.error('Google sign-in error:', error);
