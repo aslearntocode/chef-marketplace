@@ -114,39 +114,39 @@ export const snacksChefs: Chef[] = [
         }
       ]
     }
-  },
-  {
-    id: 2,
-    name: "Rajesh Patel",
-    specialty: "Gujarati Snacks",
-    location: "Vile Parle, Mumbai",
-    rating: 4.7,
-    image: "/images/chef2.jpg",
-    description: "Creating delicious and healthy Gujarati snacks for over 15 years.",
-    deliveryAreas: ["Vile Parle", "Santacruz", "Khar"],
-    menu: {
-      "Traditional Snacks": [
-        { 
-          id: 201, 
-          name: "Khakhra", 
-          price: 150, 
-          description: "Crispy thin crackers made from whole wheat flour" 
-        },
-        { 
-          id: 202, 
-          name: "Gathiya", 
-          price: 200, 
-          description: "Crunchy gram flour snack" 
-        }
-      ],
-      "Special Items": [
-        { 
-          id: 203, 
-          name: "Fafda", 
-          price: 180, 
-          description: "Crispy gram flour snack strips" 
-        }
-      ]
-    }
   }
+  // {
+  //   id: 2,
+  //   name: "Rajesh Patel",
+  //   specialty: "Gujarati Snacks",
+  //   location: "Vile Parle, Mumbai",
+  //   rating: 4.7,
+  //   image: "/images/chef2.jpg",
+  //   description: "Creating delicious and healthy Gujarati snacks for over 15 years.",
+  //   deliveryAreas: ["Vile Parle", "Santacruz", "Khar"],
+  //   menu: {
+  //     "Traditional Snacks": [
+  //       { 
+  //         id: 201, 
+  //         name: "Khakhra", 
+  //         price: 150, 
+  //         description: "Crispy thin crackers made from whole wheat flour" 
+  //       },
+  //       { 
+  //         id: 202, 
+  //         name: "Gathiya", 
+  //         price: 200, 
+  //         description: "Crunchy gram flour snack" 
+  //       }
+  //     ],
+  //     "Special Items": [
+  //       { 
+  //         id: 203, 
+  //         name: "Fafda", 
+  //         price: 180, 
+  //         description: "Crispy gram flour snack strips" 
+  //       }
+  //     ]
+  //   }
+  // }
 ]; 

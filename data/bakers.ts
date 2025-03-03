@@ -53,33 +53,33 @@ export const bakers = [
         { id: "rs7", name: "Dry Fruit Barfi Box", price: 1200, description: "Assorted dry fruit barfis (500g)" }
       ]
     }
-  },
-  {
-    id: 3,
-    name: "Aisha Khan",
-    specialty: "Healthy Desserts",
-    location: "Powai, Mumbai",
-    rating: 4.7,
-    image: "/bakers/aisha.jpg",
-    description: "Specializing in sugar-free, gluten-free, and vegan dessert options.",
-    topDishes: ["Sugar-free Brownies", "Keto Cheesecake", "Vegan Cookie Box"],
-    deliveryAreas: ["Powai", "Chandivali", "Hiranandani"],
-    menu: {
-      "Sugar-Free Desserts": [
-        { id: "ak1", name: "Sugar-free Brownies", price: 450, description: "Rich chocolate brownies sweetened with stevia (box of 6)" },
-        { id: "ak2", name: "Keto Cheesecake", price: 800, description: "Low-carb cheesecake with berry compote (8 inch)" }
-      ],
-      "Vegan Options": [
-        { id: "ak3", name: "Vegan Cookie Box", price: 400, description: "Assorted vegan cookies (box of 12)" },
-        { id: "ak4", name: "Vegan Chocolate Cake", price: 700, description: "Eggless and dairy-free chocolate cake (1kg)" }
-      ],
-      "Gluten-Free": [
-        { id: "ak5", name: "Almond Flour Cake", price: 900, description: "Gluten-free almond cake with berries (1kg)" },
-        { id: "ak6", name: "Quinoa Chocolate Cupcakes", price: 600, description: "Gluten-free cupcakes (box of 6)" }
-      ],
-      "Healthy Snack Boxes": [
-        { id: "ak7", name: "Energy Balls Box", price: 500, description: "Mixed nuts and dates energy balls (box of 12)" }
-      ]
-    }
   }
+  // {
+  //   id: 3,
+  //   name: "Aisha Khan",
+  //   specialty: "Healthy Desserts",
+  //   location: "Powai, Mumbai",
+  //   rating: 4.7,
+  //   image: "/bakers/aisha.jpg",
+  //   description: "Specializing in sugar-free, gluten-free, and vegan dessert options.",
+  //   topDishes: ["Sugar-free Brownies", "Keto Cheesecake", "Vegan Cookie Box"],
+  //   deliveryAreas: ["Powai", "Chandivali", "Hiranandani"],
+  //   menu: {
+  //     "Sugar-Free Desserts": [
+  //       { id: "ak1", name: "Sugar-free Brownies", price: 450, description: "Rich chocolate brownies sweetened with stevia (box of 6)" },
+  //       { id: "ak2", name: "Keto Cheesecake", price: 800, description: "Low-carb cheesecake with berry compote (8 inch)" }
+  //     ],
+  //     "Vegan Options": [
+  //       { id: "ak3", name: "Vegan Cookie Box", price: 400, description: "Assorted vegan cookies (box of 12)" },
+  //       { id: "ak4", name: "Vegan Chocolate Cake", price: 700, description: "Eggless and dairy-free chocolate cake (1kg)" }
+  //     ],
+  //     "Gluten-Free": [
+  //       { id: "ak5", name: "Almond Flour Cake", price: 900, description: "Gluten-free almond cake with berries (1kg)" },
+  //       { id: "ak6", name: "Quinoa Chocolate Cupcakes", price: 600, description: "Gluten-free cupcakes (box of 6)" }
+  //     ],
+  //     "Healthy Snack Boxes": [
+  //       { id: "ak7", name: "Energy Balls Box", price: 500, description: "Mixed nuts and dates energy balls (box of 12)" }
+  //     ]
+  //   }
+  // }
 ]; 
