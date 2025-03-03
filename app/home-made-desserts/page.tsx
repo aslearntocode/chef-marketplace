@@ -139,29 +139,6 @@ export default function HomeMadeDesserts() {
                     </div>
                     <p className="text-gray-600 font-medium mb-2">{baker.specialty}</p>
                     <p className="text-gray-500 text-sm mb-4">{baker.location}</p>
-                    <p className="text-gray-600 mb-4">{baker.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Popular Desserts:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {baker.topDishes.map(dish => (
-                          <span key={dish} className="bg-pink-100 px-2 py-1 rounded-full text-sm text-pink-600">
-                            {dish}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Delivery Areas:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {baker.deliveryAreas.map(area => (
-                          <span key={area} className="bg-blue-100 px-2 py-1 rounded-full text-sm text-blue-600">
-                            {area}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
 
                     <Link 
                       href={`/bakers/${baker.id}`}
