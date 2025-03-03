@@ -60,6 +60,70 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Food Showcase Conveyor Belt */}
+        <div className="bg-white rounded-lg p-8 mt-16 mb-8">
+          <h2 className="text-3xl font-bold text-center mb-8">Popular Items</h2>
+          <div className="flex items-center gap-4">
+            {/* Left Arrow */}
+            <button 
+              className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-lg transition-all"
+              onClick={() => {
+                const slider = document.querySelector('.slider');
+                if (slider) {
+                  slider.scrollLeft -= 350;
+                }
+              }}
+            >
+              ←
+            </button>
+
+            {/* Main Content */}
+            <div className="max-w-6xl mx-auto">
+              <div className="chef-marketplace">
+                <div className="slider">
+                  {[
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav', price: '₹120' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf', price: '₹180' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza', price: '₹250' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani', price: '₹200' },
+                    // Duplicate first 3 items to create seamless loop
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav', price: '₹120' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf', price: '₹180' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza', price: '₹250' }
+                  ].map((item, index) => (
+                    <div key={index} className="slide">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={item.src} 
+                          alt={item.name} 
+                          className="w-full h-48 object-cover"
+                        />
+                        <div className="p-4">
+                          <h3 className="text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold">{item.price}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Arrow */}
+            <button 
+              className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-lg transition-all"
+              onClick={() => {
+                const slider = document.querySelector('.slider');
+                if (slider) {
+                  slider.scrollLeft += 350;
+                }
+              }}
+            >
+              →
+            </button>
+          </div>
+        </div>
+
         {/* Marketing Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {/* Chefs Metric */}

@@ -31,7 +31,7 @@ export const bakers = [
   {
     id: 2,
     name: "Baker Ruchita Shah",
-    specialty: "Indian Sweets",
+    specialty: "Healthy Treats",
     location: "Lower Parel, Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Ruchita Shah.png",

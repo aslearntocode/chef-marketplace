@@ -36,4 +36,52 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.chef-marketplace {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+
+  .slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide {
+    flex: 0 0 calc((100% - 4rem) / 3); /* Exactly one-third of container minus gaps */
+    max-width: 350px;
+    transition: transform 0.3s ease;
+  }
+
+  .slide:hover {
+    transform: translateY(-10px);
+  }
+}
+
+/* Container for chef-marketplace */
+.max-w-6xl {
+  width: 1080px; /* Fixed width to show exactly 3 items */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .max-w-6xl {
+    width: 90%;
+  }
+  
+  .chef-marketplace .slide {
+    flex: 0 0 calc((100% - 4rem) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .chef-marketplace .slide {
+    flex: 0 0 calc((100% - 2rem) / 2);
+  }
 } 
