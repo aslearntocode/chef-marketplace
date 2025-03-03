@@ -5,7 +5,7 @@ export const chefs = [
     specialty: "North Indian Cuisine",
     location: "Parel East, Mumbai",
     rating: 4.8,
-    image: "/chefs/Anjali_Broor.jpeg",
+    image: "/chefs/Chef Anjali Broor.png",
     description: "Specializing in authentic Punjabi dishes and home-style North Indian meals",
     topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
     deliveryAreas: ["Andheri", "Juhu", "Bandra"],
