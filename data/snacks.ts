@@ -11,28 +11,28 @@ export const snacksChefs: Chef[] = [
     description: "Specializing in authentic Maharashtra snacks made with traditional recipes.",
     deliveryAreas: ["Worli", "Lower Parel", "Prabhadevi"],
     menu: {
-      "Savory Snacks": [
-        { 
-          id: 101, 
-          name: "Chakli", 
-          price: 250, 
-          description: "Crispy spiral-shaped snack made from rice flour and spices" 
-        },
-        { 
-          id: 102, 
-          name: "Mixture", 
-          price: 200, 
-          description: "Crunchy mix of various fried ingredients and spices" 
-        }
-      ],
-      "Sweet Snacks": [
-        { 
-          id: 103, 
-          name: "Sweet Chivda", 
-          price: 300, 
-          description: "Sweet and crunchy flattened rice mixture" 
-        }
-      ],
+      // "Savory Snacks": [
+      //   { 
+      //     id: 101, 
+      //     name: "Chakli", 
+      //     price: 250, 
+      //     description: "Crispy spiral-shaped snack made from rice flour and spices" 
+      //   },
+      //   { 
+      //     id: 102, 
+      //     name: "Mixture", 
+      //     price: 200, 
+      //     description: "Crunchy mix of various fried ingredients and spices" 
+      //   }
+      // ],
+      // "Sweet Snacks": [
+      //   { 
+      //     id: 103, 
+      //     name: "Sweet Chivda", 
+      //     price: 300, 
+      //     description: "Sweet and crunchy flattened rice mixture" 
+      //   }
+      // ],
       "Tea Time Snacks": [
         {
           id: 104,
