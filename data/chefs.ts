@@ -6,7 +6,7 @@ export const chefs = [
     location: "Parel East, Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Anjali Broor.png",
-    description: "Specializing in authentic Punjabi dishes and home-style North Indian meals",
+    description: "Anjali, an Ex-Banker, decided to follow her heart and eventually became a seasoned home chef. She believes in preparing food which is healthy and yummy. Each dish prepared by her brings in a tasty twist to conventional food items and recipes.                                                                Anjali believes in using the best ingredients and she never compromises with the quality and the taste of the raw materials. She is a staunch believer of 'FARM TO FORK'.                                                                                   Anjali started with weekend menus only but she now also caters for parties and corporate get togethers.",
     topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
     deliveryAreas: ["Andheri", "Juhu", "Bandra"],
     menu: {
