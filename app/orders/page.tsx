@@ -32,15 +32,26 @@ export default function OrdersPage() {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      if (!user) return;
+      if (!user?.uid) {
+        console.log('Waiting for Firebase user UID...');
+        return;
+      }
+      
+      console.log('Fetching orders for Firebase user:', user.uid);
       
       try {
         const { data, error } = await supabase
           .from('orders')
           .select('*')
+          .eq('user_id', user.uid)
           .order('created_at', { ascending: false });
 
-        if (error) throw error;
+        if (error) {
+          console.error('Supabase error:', error);
+          throw error;
+        }
+        
+        console.log('Fetched orders:', data);
         setOrders(data || []);
       } catch (error) {
         console.error('Error fetching orders:', error);
@@ -50,7 +61,7 @@ export default function OrdersPage() {
     };
 
     fetchOrders();
-  }, [user, supabase]);
+  }, [user?.uid, supabase]);
 
   if (isLoading) {
     return (
