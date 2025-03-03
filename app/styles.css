@@ -48,12 +48,18 @@
     display: flex;
     gap: 2rem;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
   }
 
   .slide {
-    flex: 0 0 calc((100% - 4rem) / 3); /* Exactly one-third of container minus gaps */
+    flex: 0 0 calc((100% - 4rem) / 3);
     max-width: 350px;
     transition: transform 0.3s ease;
   }
@@ -63,25 +69,72 @@
   }
 }
 
+/* Arrow Animation */
+@keyframes bounceX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+button {
+  animation: bounceX 1.5s infinite;
+}
+
+/* Left arrow specific animation */
+button:first-of-type {
+  animation: bounceX 1.5s infinite reverse;
+}
+
 /* Container for chef-marketplace */
 .max-w-6xl {
-  width: 1080px; /* Fixed width to show exactly 3 items */
+  width: 1080px;
   margin: 0 auto;
   overflow: hidden;
 }
 
+/* Tablet screens */
 @media (max-width: 1024px) {
   .max-w-6xl {
     width: 90%;
   }
   
   .chef-marketplace .slide {
-    flex: 0 0 calc((100% - 4rem) / 3);
+    flex: 0 0 calc((100% - 2rem) / 2);
   }
 }
 
-@media (max-width: 768px) {
-  .chef-marketplace .slide {
-    flex: 0 0 calc((100% - 2rem) / 2);
+/* Mobile screens */
+@media (max-width: 640px) {
+  .max-w-6xl {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .chef-marketplace {
+    .slider {
+      gap: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .slide {
+      flex: 0 0 calc(100% - 2rem);
+      max-width: none;
+      scroll-snap-align: center;
+    }
+  }
+
+  .flex.items-center.gap-4 {
+    gap: 0.5rem;
+  }
+
+  .flex.items-center.gap-4 > div {
+    flex: 1;
+  }
+
+  .flex.items-center.gap-4 button {
+    padding: 0.75rem;
   }
 } 

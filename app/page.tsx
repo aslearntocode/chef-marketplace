@@ -70,7 +70,11 @@ export default function Home() {
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
-                  slider.scrollLeft -= 350;
+                  const slideWidth = window.innerWidth > 640 ? 350 : slider.clientWidth;
+                  if (slider.scrollLeft === 0) {
+                    slider.scrollLeft = slider.scrollWidth / 2;
+                  }
+                  slider.scrollLeft -= slideWidth + 32; // width + gap
                 }
               }}
             >
@@ -81,17 +85,35 @@ export default function Home() {
             <div className="max-w-6xl mx-auto">
               <div className="chef-marketplace">
                 <div className="slider">
+                  {/* First set of items */}
                   {[
                     { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120' },
                     { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180' },
                     { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250' },
                     { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200' },
-                    // Duplicate first 3 items to create seamless loop
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav', price: '₹120' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf', price: '₹180' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza', price: '₹250' }
                   ].map((item, index) => (
-                    <div key={index} className="slide">
+                    <div key={`first-${index}`} className="slide">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={item.src} 
+                          alt={item.name} 
+                          className="w-full h-48 object-cover"
+                        />
+                        <div className="p-4">
+                          <h3 className="text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold">{item.price}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  {/* Duplicate set for infinite scroll */}
+                  {[
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200' },
+                  ].map((item, index) => (
+                    <div key={`second-${index}`} className="slide">
                       <div className="bg-white rounded-xl overflow-hidden shadow-lg">
                         <img 
                           src={item.src} 
@@ -115,7 +137,11 @@ export default function Home() {
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
-                  slider.scrollLeft += 350;
+                  const slideWidth = window.innerWidth > 640 ? 350 : slider.clientWidth;
+                  if (slider.scrollLeft >= (slider.scrollWidth / 2) - slider.clientWidth) {
+                    slider.scrollLeft = 0;
+                  }
+                  slider.scrollLeft += slideWidth + 32; // width + gap
                 }
               }}
             >
