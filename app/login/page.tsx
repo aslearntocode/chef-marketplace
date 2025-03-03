@@ -1,19 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { FirebaseError } from 'firebase/app';
 
 export default function Login() {
     const [error, setError] = useState('');
     const { loginWithGoogle } = useAuth();
     const router = useRouter();
+    const searchParams = useSearchParams();
 
     async function handleGoogleSignIn() {
         try {
             await loginWithGoogle();
-            router.push('/');
+            const returnUrl = searchParams.get('returnUrl') || '/';
+            console.log('Return URL:', returnUrl);
+            router.push(returnUrl);
         } catch (error) {
             console.error('Google sign-in error:', error);
             if (error instanceof FirebaseError) {

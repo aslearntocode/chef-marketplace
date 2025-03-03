@@ -34,8 +34,8 @@ export default function SnackChefPage() {
 
   const handleAddToCart = (item: { id: number; name: string; price: number; description: string }) => {
     if (!auth.currentUser) {
-      toast.error('Please log in to add items to cart');
-      router.push('/login');
+      const currentPath = window.location.pathname;
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
       return;
     }
 

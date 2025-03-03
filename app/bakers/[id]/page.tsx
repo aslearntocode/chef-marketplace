@@ -44,8 +44,8 @@ export default function BakerPage() {
   const handleAddToCart = (item: MenuItem) => {
     // Check if user is logged in
     if (!auth.currentUser) {
-      toast.error('Please log in to add items to cart');
-      router.push('/login');
+      const currentPath = window.location.pathname;
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
       return;
     }
 
