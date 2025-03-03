@@ -8,7 +8,7 @@ export const snacksChefs: Chef[] = [
     location: "Worli, Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Ahilya Jaiswal.png",
-    description: "Specializing in authentic Maharashtra snacks made with traditional recipes.",
+    description: "Welcome to Chef Ahilya Jaiswal's kitchen! As a homemaker and passionate cook, she delights in serving up delicious, homemade dishes infused with love, care, and timeless traditional flair. Every bite is a taste of warmth and hospitality, just like the surreal mom-made food!",
     deliveryAreas: ["Worli", "Lower Parel", "Prabhadevi"],
     menu: {
       // "Savory Snacks": [

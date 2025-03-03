@@ -74,36 +74,46 @@ export default function BakerPage() {
       {/* Baker Header */}
       <section className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex items-center gap-6">
-            {/* Baker Image */}
-            <div className="relative w-32 h-32">
-              <Image
-                src={baker.image}
-                alt={baker.name}
-                fill
-                className="object-cover rounded-full border-2 border-gray-100 shadow-md"
-                sizes="(max-width: 768px) 128px, 128px"
-                priority
-              />
+          <div className="flex gap-6">
+            {/* Left section with image and basic info */}
+            <div className="flex items-center gap-6">
+              {/* Baker Image */}
+              <div className="relative w-32 h-32">
+                <Image
+                  src={baker.image}
+                  alt={baker.name}
+                  fill
+                  className="object-cover rounded-full border-2 border-gray-100 shadow-md"
+                  sizes="(max-width: 768px) 128px, 128px"
+                  priority
+                />
+              </div>
+
+              {/* Basic Info */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <h1 className="text-2xl font-bold">{baker.name}</h1>
+                  <span className="flex items-center bg-green-50 text-green-800 px-2 py-1 rounded-full text-sm">
+                    ⭐ {baker.rating}
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-1">{baker.specialty}</p>
+                <p className="text-gray-500 text-sm flex items-center">
+                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {baker.location}
+                </p>
+              </div>
             </div>
 
-            {/* Baker Info */}
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <h1 className="text-2xl font-bold">{baker.name}</h1>
-                <span className="flex items-center bg-green-50 text-green-800 px-2 py-1 rounded-full text-sm">
-                  ⭐ {baker.rating}
-                </span>
+            {/* Description on the right */}
+            {baker.description && (
+              <div className="flex-1 border-l border-gray-100 pl-6 flex items-center">
+                <p className="text-gray-600 text-sm leading-relaxed italic">{baker.description}</p>
               </div>
-              <p className="text-gray-600 mb-1">{baker.specialty}</p>
-              <p className="text-gray-500 text-sm flex items-center">
-                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                {baker.location}
-              </p>
-            </div>
+            )}
           </div>
 
           {/* Notes Section - Styled as pills */}
