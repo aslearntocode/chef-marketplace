@@ -1,7 +1,7 @@
 export const bakers = [
   {
     id: 1,
-    name: "Juhi Kastiya",
+    name: "Baker Juhi Kastiya",
     specialty: "Cakes & Pastries",
     location: "Bandra West, Mumbai",
     rating: 4.9,
@@ -30,7 +30,7 @@ export const bakers = [
   },
   {
     id: 2,
-    name: "Ruchita Shah",
+    name: "Baker Ruchita Shah",
     specialty: "Indian Sweets",
     location: "Juhu, Mumbai",
     rating: 4.8,

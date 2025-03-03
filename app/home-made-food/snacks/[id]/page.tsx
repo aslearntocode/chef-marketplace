@@ -90,7 +90,7 @@ export default function SnackChefPage() {
       </section>
 
       {/* Category Filter */}
-      <div className="px-8 py-4">
+      <div className="max-w-7xl mx-auto px-8 py-4">
         <div className="flex gap-2 overflow-x-auto">
           {categories.map(category => (
             <button
@@ -109,38 +109,40 @@ export default function SnackChefPage() {
       </div>
 
       {/* Menu Items */}
-      {filteredMenu.map(({ category, items }) => (
-        <div key={category} className="px-8 py-6">
-          {selectedCategory === 'all' && (
-            <h2 className="text-2xl font-bold mb-4">{category}</h2>
-          )}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {items.map(item => (
-              <div
-                key={item.id}
-                className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
-              >
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
+      <section className="max-w-7xl mx-auto px-8">
+        {filteredMenu.map(({ category, items }) => (
+          <div key={category} className="py-6">
+            {selectedCategory === 'all' && (
+              <h2 className="text-2xl font-bold mb-4">{category}</h2>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {items.map(item => (
+                <div
+                  key={item.id}
+                  className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
+                >
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                    <p className="text-gray-600 mb-4">{item.description}</p>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-semibold">₹{item.price}</span>
+                    <button
+                      onClick={() => handleAddToCart(item)}
+                      className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold">₹{item.price}</span>
-                  <button
-                    onClick={() => handleAddToCart(item)}
-                    className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </section>
 
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-8 py-8">
         <Link
           href="/home-made-food/snacks"
           className="text-gray-600 hover:text-black flex items-center gap-2"
