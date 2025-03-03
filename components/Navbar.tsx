@@ -24,7 +24,7 @@ export default function Navbar() {
       dropdown: [
         { href: '/home-made-food', label: 'Meals' },
         { href: '/home-made-food/tiffin', label: 'Tiffin Service' },
-        { href: '/home-made-food/bakery', label: 'Bakery Items' },
+        { href: '/home-made-desserts', label: 'Bakery Items' },
         { href: '/home-made-food/snacks', label: 'Packaged Snacks' },
       ]
     },

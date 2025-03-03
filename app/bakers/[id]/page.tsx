@@ -179,7 +179,7 @@ export default function BakerPage() {
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link
-          href="/bakers"
+          href="/home-made-desserts"
           className="text-gray-600 hover:text-black flex items-center gap-2"
         >
           ← Back to Bakers
