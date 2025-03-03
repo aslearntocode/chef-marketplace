@@ -15,4 +15,5 @@ export interface Baker {
       description: string;
     }[];
   };
+  notes?: string[];
 } 
