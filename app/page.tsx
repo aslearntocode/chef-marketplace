@@ -63,10 +63,10 @@ export default function Home() {
         {/* Food Showcase Conveyor Belt */}
         <div className="bg-white rounded-lg p-8 mt-16 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">Most Popular Items</h2>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1 sm:gap-4 relative">
             {/* Left Arrow */}
             <button 
-              className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-lg transition-all"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
@@ -82,7 +82,7 @@ export default function Home() {
             </button>
 
             {/* Main Content */}
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto w-full sm:w-auto px-7 sm:px-0">
               <div className="chef-marketplace">
                 <div className="slider">
                   {/* First set of items */}
@@ -97,11 +97,11 @@ export default function Home() {
                         <img 
                           src={item.src} 
                           alt={item.name} 
-                          className="w-full h-48 object-cover"
+                          className="w-full h-56 sm:h-48 object-cover"
                         />
-                        <div className="p-4">
-                          <h3 className="text-lg font-bold mb-1">{item.name}</h3>
-                          <p className="text-yellow-600 font-semibold">{item.price}</p>
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
                       </div>
                     </div>
@@ -118,11 +118,11 @@ export default function Home() {
                         <img 
                           src={item.src} 
                           alt={item.name} 
-                          className="w-full h-48 object-cover"
+                          className="w-full h-56 sm:h-48 object-cover"
                         />
-                        <div className="p-4">
-                          <h3 className="text-lg font-bold mb-1">{item.name}</h3>
-                          <p className="text-yellow-600 font-semibold">{item.price}</p>
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
                       </div>
                     </div>
@@ -133,7 +133,7 @@ export default function Home() {
 
             {/* Right Arrow */}
             <button 
-              className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-4 rounded-lg transition-all"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* How It Works Section */}
+      {/* How It Works Section - Commented Out
       <section className="py-12 bg-[#FFD700]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-[#FFFBEB] rounded-lg p-12">
@@ -212,6 +212,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Chef Application Section */}
       <section className="py-12 bg-[#FFD700]">
