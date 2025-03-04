@@ -170,6 +170,104 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Areas Currently Being Served</p>
           </div>
         </div>
+
+        {/* Two Column Layout for Chefs Sections */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+          {/* Recently Joined Chefs Section */}
+          <section className="bg-white rounded-lg p-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Meet Our Newest Chefs</h2>
+              <p className="text-gray-600 text-sm">Discover the latest talented additions to our culinary family</p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                {
+                  id: 'anjali-broor',
+                  name: 'Chef Anjali Broor',
+                  specialty: 'North Indian Cuisine',
+                  image: '/chefs/Chef Anjali Broor.png',
+                  rating: '4.8',
+                  path: '/chefs/1'
+                },
+                {
+                  id: 'juhi-kastiya',
+                  name: 'Baker Juhi Kastiya',
+                  specialty: 'Artisanal Breads & Pastries',
+                  image: '/chefs/Chef Juhi Kastiya.png',
+                  rating: '4.9',
+                  path: '/bakers/1'
+                }
+              ].map((chef) => (
+                <Link 
+                  href={chef.path}
+                  key={chef.id}
+                  className="group"
+                >
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <div className="relative h-36">
+                      <img
+                        src={chef.image}
+                        alt={chef.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                        <h3 className="text-white font-bold text-base">{chef.name}</h3>
+                        <p className="text-white/90 text-xs">{chef.specialty}</p>
+                      </div>
+                    </div>
+                    <div className="p-3">
+                      <div className="flex items-center">
+                        <span className="text-yellow-400">★</span>
+                        <span className="ml-1 text-sm font-medium">{chef.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Chef Application Section */}
+          <section className="bg-[#FFFBEB] rounded-lg p-8 border-2 border-[#FFD700]">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <span className="text-3xl">🍽️</span>
+              <h2 className="text-3xl font-bold">Calling All Home Chefs & Bakers!</h2>
+              <span className="text-3xl">🍰</span>
+            </div>
+            
+            <p className="text-center text-lg text-gray-700 mb-8">
+              Do you have a passion for cooking or baking? We want YOU to join our marketplace! 
+              We&apos;re looking for talented home chefs and bakers who pour their love for food into every dish they create.
+            </p>
+
+            <div className="bg-white rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-bold text-center mb-6">
+                ⭐ Why Join Us?
+              </h3>
+              <ul className="space-y-4">
+                <li className="text-base text-gray-700">
+                  • Showcase your culinary skills to a broader audience
+                </li>
+                <li className="text-base text-gray-700">
+                  • Connect with food lovers who appreciate homemade goodness
+                </li>
+                <li className="text-base text-gray-700">
+                  • Earn from your passion, while working from your own kitchen
+                </li>
+              </ul>
+            </div>
+
+            <div className="text-center">
+              <Link 
+                href="/chef-application"
+                className="bg-[#FFD700] text-black px-8 py-3 rounded-full text-lg font-bold hover:bg-[#F7C948] transition-colors inline-block"
+              >
+                Apply Now
+              </Link>
+            </div>
+          </section>
+        </div>
       </div>
 
       {/* How It Works Section - Commented Out
@@ -213,50 +311,6 @@ export default function Home() {
         </div>
       </section>
       */}
-
-      {/* Chef Application Section */}
-      <section className="py-12 bg-[#FFD700]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-[#FFFBEB] rounded-lg p-12 border-2 border-[#FFD700]">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <span className="text-4xl">🍽️</span>
-              <h2 className="text-4xl font-bold">Calling All Home Chefs & Bakers!</h2>
-              <span className="text-4xl">🍰</span>
-            </div>
-            
-            <p className="text-center text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
-              Do you have a passion for cooking or baking? We want YOU to join our marketplace! 
-              We&apos;re looking for talented home chefs and bakers who pour their love for food into every dish they create.
-            </p>
-
-            <div className="bg-white rounded-lg p-8 mb-12">
-              <h3 className="text-2xl font-bold text-center mb-8">
-                ⭐ Why Join Us?
-              </h3>
-              <ul className="space-y-4 max-w-2xl mx-auto">
-                <li className="text-lg text-gray-700">
-                  • Showcase your culinary skills to a broader audience
-                </li>
-                <li className="text-lg text-gray-700">
-                  • Connect with food lovers who appreciate homemade goodness
-                </li>
-                <li className="text-lg text-gray-700">
-                  • Earn from your passion, while working from your own kitchen
-                </li>
-              </ul>
-            </div>
-
-            <div className="text-center">
-              <Link 
-                href="/chef-application"
-                className="bg-[#FFD700] text-black px-12 py-4 rounded-full text-xl font-bold hover:bg-[#F7C948] transition-colors inline-block"
-              >
-                Apply Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer would go here */}
     </main>
