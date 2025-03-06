@@ -45,7 +45,7 @@ export default function Home() {
               Bakery Items
             </Link>
             <Link 
-              href="/tiffin-service"
+              href="/home-made-food/tiffin"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
               Tiffin Service
@@ -176,7 +176,7 @@ export default function Home() {
           {/* Recently Joined Chefs Section */}
           <section className="bg-white rounded-lg p-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Meet Our Newest Chefs</h2>
+              <h2 className="text-2xl font-bold mb-2">Meet Our Newest Chefs & Bakers</h2>
               <p className="text-gray-600 text-sm">Discover the latest talented additions to our culinary family</p>
             </div>
 
