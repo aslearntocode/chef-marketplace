@@ -33,7 +33,7 @@ export default function SnackChefPage() {
     ? Object.entries(chef.menu).map(([category, items]) => ({ category, items }))
     : [{ category: selectedCategory, items: chef.menu[selectedCategory] || [] }];
 
-  const handleAddToCart = (item: { id: number; name: string; price: number; description: string }) => {
+  const handleAddToCart = (item: MenuItem) => {
     if (!auth.currentUser) {
       const currentPath = window.location.pathname;
       router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
@@ -92,7 +92,7 @@ export default function SnackChefPage() {
               <h2 className="text-2xl font-bold mb-4">{category}</h2>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {items.map(item => (
+              {items.map((item: MenuItem) => (
                 <div
                   key={item.id}
                   className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
