@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { tiffinServices } from '@/data/tiffin-services';
-import { toast } from 'react-hot-toast';
+import type { Chef } from '@/types/chef';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
@@ -12,32 +12,28 @@ import ChefHeader from '@/components/ChefHeader';
 
 export default function TiffinServicePage() {
   const params = useParams();
-  const tiffinId = params?.id ? Number(params.id) : null;
-  const tiffin = tiffinId ? tiffinServices.find(t => t.id === tiffinId) : undefined;
+  const chefId = params?.id ? Number(params.id) : null;
+  const chef = chefId ? tiffinServices.find(b => b.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
   const auth = getAuth();
 
-  if (!tiffin) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-xl text-gray-600">Tiffin service not found</p>
-      </div>
-    );
+  if (!chef) {
+    return <div>Chef not found</div>;
   }
 
   // Function to get menu items based on selected category
   const getMenuItems = () => {
     if (selectedCategory === 'all') {
-      return Object.entries(tiffin.menu).map(([category, items]) => ({
+      return Object.entries(chef.menu).map(([category, items]) => ({
         category,
         items: items || []
       }));
     }
     return [{
       category: selectedCategory,
-      items: tiffin.menu[selectedCategory] || []
+      items: chef.menu[selectedCategory] || []
     }];
   };
 
@@ -53,11 +49,11 @@ export default function TiffinServicePage() {
       : item.price;
 
     addToCart({
-      id: `${tiffin.id}-${item.name.replace(/\s+/g, '-')}`,
+      id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
       price: itemPrice,
-      chefId: tiffin.id,
-      chefName: tiffin.name,
+      chefId: chef.id,
+      chefName: chef.name,
       description: item.description,
       category: item.category
     });
@@ -69,13 +65,13 @@ export default function TiffinServicePage() {
     <main>
       <div className="h-[72px]" />
       <ChefHeader
-        image={tiffin.image}
-        name={tiffin.name}
-        rating={tiffin.rating}
-        specialty={tiffin.specialty}
-        location={tiffin.location}
-        description={tiffin.description}
-        notes={tiffin.notes}
+        image={chef.image}
+        name={chef.name}
+        rating={chef.rating}
+        specialty={chef.specialty}
+        location={chef.location}
+        description={chef.description}
+        notes={chef.notes}
       />
 
       {/* Menu Section */}
@@ -92,7 +88,7 @@ export default function TiffinServicePage() {
           >
             View All
           </button>
-          {Object.keys(tiffin.menu).map(category => (
+          {Object.keys(chef.menu).map(category => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}

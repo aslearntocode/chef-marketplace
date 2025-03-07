@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { chefs } from '@/data/chefs';
+import type { Chef } from '@/types/chef';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
@@ -13,7 +14,7 @@ import ChefHeader from '@/components/ChefHeader';
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id ? Number(params.id) : null;
-  const chef = chefId ? chefs.find(c => c.id === chefId) : undefined;
+  const chef = chefId ? chefs.find(b => b.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();

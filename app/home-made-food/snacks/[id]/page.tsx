@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { snacksChefs } from '@/data/snacks';
-import { toast } from 'react-hot-toast';
+import type { Chef } from '@/types/chef';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
@@ -13,7 +13,7 @@ import ChefHeader from '@/components/ChefHeader';
 export default function SnackChefPage() {
   const params = useParams();
   const chefId = params?.id ? Number(params.id) : null;
-  const chef = chefId ? snacksChefs.find(c => c.id === chefId) : undefined;
+  const chef = chefId ? snacksChefs.find(b => b.id === chefId) as Chef | undefined : undefined;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
