@@ -34,29 +34,32 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <Link 
               href="/home-made-food"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
             >
-              Meals
+              <div className="text-base font-medium">Meals</div>
+              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
             </Link>
             <Link 
               href="/home-made-desserts"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
             >
-              Desserts
+              <div className="text-base font-medium">Desserts</div>
+              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
             </Link>
             <Link 
               href="/home-made-food/tiffin"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
             >
-              Tiffin Service
+              <div className="text-base font-medium">Tiffin Service</div>
+              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
             </Link>
             <Link 
               href="/home-made-food/snacks"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
             >
-              Packaged Snacks
+              <div className="text-base font-medium">Packaged Snacks</div>
+              <div className="text-[11px] mt-0.5">Same Day Delivery</div>
             </Link>
-            
           </div>
         </div>
 

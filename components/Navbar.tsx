@@ -22,10 +22,10 @@ export default function Navbar() {
       id: 'home-made-food',
       label: 'Home Made Food',
       dropdown: [
-        { href: '/home-made-food', label: 'Meals' },
-        { href: '/home-made-food/tiffin', label: 'Tiffin Service' },
-        { href: '/home-made-desserts', label: 'Bakery Items' },
-        { href: '/home-made-food/snacks', label: 'Packaged Snacks' },
+        { href: '/home-made-food', label: 'Meals', delivery: 'Next Day Delivery' },
+        { href: '/home-made-food/tiffin', label: 'Tiffin Service', delivery: 'Next Day Delivery' },
+        { href: '/home-made-desserts', label: 'Desserts', delivery: 'Next Day Delivery' },
+        { href: '/home-made-food/snacks', label: 'Packaged Snacks', delivery: 'Same Day Delivery' },
       ]
     },
   ];
@@ -113,16 +113,21 @@ export default function Navbar() {
                       </button>
                       {activeDropdown === link.id && (
                         <div 
-                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-[999]"
+                          className="absolute left-0 mt-2 w-[300px] bg-white rounded-md shadow-lg z-[999] py-2"
                         >
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              className="block px-6 py-3 hover:bg-gray-50 transition-colors group"
                               onClick={() => setActiveDropdown(null)}
                             >
-                              {item.label}
+                              <div className="text-gray-800 font-medium text-base group-hover:text-black">
+                                {item.label}
+                              </div>
+                              <div className="text-[11px] text-gray-500 group-hover:text-gray-600 mt-0.5">
+                                {item.delivery}
+                              </div>
                             </Link>
                           ))}
                         </div>
@@ -280,13 +285,18 @@ export default function Navbar() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                              className="block px-3 py-2 hover:bg-gray-100"
                               onClick={() => {
                                 setIsOpen(false);
                                 setActiveDropdown(null);
                               }}
                             >
-                              {item.label}
+                              <div className="text-gray-900 text-base">
+                                {item.label}
+                              </div>
+                              <div className="text-[11px] text-gray-500 mt-0.5">
+                                {item.delivery}
+                              </div>
                             </Link>
                           ))}
                         </div>
