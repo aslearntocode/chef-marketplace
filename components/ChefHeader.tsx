@@ -1,5 +1,15 @@
 import Image from 'next/image';
 
+interface ChefHeaderProps {
+  image: string;
+  name: string;
+  rating: number;
+  specialty: string;
+  location: string;
+  description?: string;
+  notes?: string[];
+}
+
 export default function ChefHeader({ 
   image, 
   name, 
@@ -8,7 +18,7 @@ export default function ChefHeader({
   location, 
   description, 
   notes 
-}) {
+}: ChefHeaderProps) {
   return (
     <section className="bg-white border-b">
       <div className="max-w-7xl mx-auto px-4 py-6">
