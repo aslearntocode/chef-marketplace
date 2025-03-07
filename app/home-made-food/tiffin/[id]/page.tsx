@@ -1,13 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { tiffinServices } from '@/data/tiffin-services';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
-import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
 

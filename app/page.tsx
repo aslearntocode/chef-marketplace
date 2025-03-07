@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import './styles.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -103,9 +104,11 @@ export default function Home() {
                       className="slide cursor-pointer"
                     >
                       <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img 
+                        <Image 
                           src={item.src} 
                           alt={item.name} 
+                          width={500}
+                          height={300}
                           className="w-full h-56 sm:h-48 object-cover"
                         />
                         <div className="p-3 sm:p-4">
@@ -131,9 +134,11 @@ export default function Home() {
                       className="slide cursor-pointer"
                     >
                       <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img 
+                        <Image 
                           src={item.src} 
                           alt={item.name} 
+                          width={500}
+                          height={300}
                           className="w-full h-56 sm:h-48 object-cover"
                         />
                         <div className="p-3 sm:p-4">
@@ -222,9 +227,11 @@ export default function Home() {
                 >
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
                     <div className="relative h-36">
-                      <img
+                      <Image
                         src={chef.image}
                         alt={chef.name}
+                        width={500}
+                        height={300}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
