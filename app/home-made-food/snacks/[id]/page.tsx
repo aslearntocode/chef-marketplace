@@ -43,7 +43,7 @@ export default function SnackChefPage() {
     addToCart({
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
-      price: item.price,
+      price: typeof item.price === 'string' ? Number(item.price) : item.price,
       chefId: chef.id,
       chefName: chef.name,
       category: selectedCategory
