@@ -2,25 +2,82 @@ export const chefs = [
   {
     id: 1,
     name: "Chef Anjali Broor",
-    specialty: "North Indian Cuisine",
-    location: "Parel East, Mumbai",
+    specialty: "Home-style Indian & International Cuisine",
+    location: "Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Anjali Broor.png",
-    description: "Anjali, an Ex-Banker, decided to follow her heart and eventually became a seasoned home chef. She believes in preparing food which is healthy and yummy. Each dish prepared by her brings in a tasty twist to conventional food items and recipes.                                                                Anjali believes in using the best ingredients and she never compromises with the quality and the taste of the raw materials. She is a staunch believer of 'FARM TO FORK'.                                                                                   Anjali started with weekend menus only but she now also caters for parties and corporate get togethers.",
+    description: "Bringing you a delightful mix of Indian and International dishes, prepared with love and premium ingredients.",
     topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
     deliveryAreas: ["Andheri", "Juhu", "Bandra"],
     menu: {
-      "Main Course": [
-        { id: "ab1", name: "Butter Chicken", price: 350, description: "Tender chicken in rich tomato-butter gravy" },
-        { id: "ab2", name: "Dal Makhani", price: 250, description: "Creamy black lentils cooked overnight" },
-        { id: "ab3", name: "Paneer Tikka Masala", price: 280, description: "Grilled cottage cheese in spiced gravy" }
+      "March 17 - Monday": [
+        {
+          id: "khao-suey",
+          name: "KHAO SUEY",
+          description: "A delicious noodle dish with a fragrant and creamy coconut milk curry infused with lemongrass, topped with diced Asian vegetables and an array of toppings that give it texture and flavor.",
+          price: 390,
+          variants: [
+            { name: "Chicken", price: 390 },
+            { name: "Veg", price: 390 }
+          ],
+          servingSize: "450 ml",
+          notes: ["Noodles, Curry, and Condiments all served separately"]
+        }
       ],
-      "Breads": [
-        { id: "ab4", name: "Butter Naan", price: 40, description: "Tandoor-baked flatbread" },
-        { id: "ab5", name: "Laccha Paratha", price: 45, description: "Layered whole wheat bread" }
+      "March 18 - Tuesday": [
+        {
+          id: "strawberry-feta-salad",
+          name: "STRAWBERRIES AND FETA SALAD",
+          description: "Fresh strawberries, mulberries, and blueberries nestled among a mix of greens, feta cheese, crunchy nuts, fresh herbs, and more. But the real star is the balsamic reduction!",
+          price: 570,
+          servingSize: "500ml"
+        }
       ],
-      "Rice": [
-        { id: "ab6", name: "Jeera Rice", price: 150, description: "Cumin-flavored basmati rice" }
+      "March 19 - Wednesday": [
+        {
+          id: "butter-chicken",
+          name: "BUTTER CHICKEN",
+          description: "A velvety tomato-based sauce enriched with butter and cream that wraps around tender chicken pieces, creating a harmonious blend of flavors. We use a secret blend of traditional Indian spices to give our Butter Chicken that unmistakable and irresistible taste.",
+          price: 480,
+          servingSize: "250 ml",
+          notes: ["4 Pieces of Boneless Chicken and 1 Naan"],
+          extras: [
+            { name: "Extra Naan", price: 75 }
+          ]
+        }
+      ],
+      "March 20 - Thursday": [
+        {
+          id: "chicken-kebabs",
+          name: "CHICKEN KEBABS WITH TZATZIKI",
+          description: "Chicken mince combined with mild spices, onion, and cilantro. Shallow fried in a skillet and served with homemade Tzatziki.",
+          price: 390,
+          notes: ["3 Kebabs and 50 ml Tzatziki"]
+        },
+        {
+          id: "dal-makhani",
+          name: "Slow Cooked Dal Makhani with Naan",
+          description: "Prepared with black urad dal and kidney beans. The secret ingredient is our 'masala' that goes in along with special tempering, making it really flavorful!",
+          price: 390,
+          servingSize: "250 ml",
+          notes: ["Dal served with 1 Naan"],
+          extras: [
+            { name: "Extra Naan", price: 75 }
+          ]
+        }
+      ],
+      "March 21 - Friday": [
+        {
+          id: "chicken-ghee-roast",
+          name: "Chicken Ghee Roast and Parantha",
+          description: "Chicken Ghee Roast is a mildly spicy and tangy dish with freshly ground masala slow-roasted in ghee to create a magical flavour.",
+          price: 480,
+          servingSize: "250 ml",
+          notes: ["4 pieces of boneless chicken and 1 Parantha"],
+          extras: [
+            { name: "Extra Parantha", price: 75 }
+          ]
+        }
       ]
     }
   },
