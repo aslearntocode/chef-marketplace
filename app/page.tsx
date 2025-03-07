@@ -90,13 +90,19 @@ export default function Home() {
                 <div className="slider">
                   {/* First set of items */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200' },
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/1' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/1' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/bakers/1' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/1' },
+                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
+                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
                   ].map((item, index) => (
-                    <div key={`first-${index}`} className="slide">
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <Link 
+                      key={`first-${index}`} 
+                      href={item.path}
+                      className="slide cursor-pointer"
+                    >
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                         <img 
                           src={item.src} 
                           alt={item.name} 
@@ -107,17 +113,24 @@ export default function Home() {
                           <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
-                  {/* Duplicate set for infinite scroll */}
+
+                  {/* Duplicate set - use the same structure */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200' },
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/1' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/1' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/bakers/1' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/1' },
+                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
+                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
                   ].map((item, index) => (
-                    <div key={`second-${index}`} className="slide">
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <Link 
+                      key={`second-${index}`} 
+                      href={item.path}
+                      className="slide cursor-pointer"
+                    >
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                         <img 
                           src={item.src} 
                           alt={item.name} 
@@ -128,7 +141,7 @@ export default function Home() {
                           <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
