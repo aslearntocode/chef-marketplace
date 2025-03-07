@@ -51,13 +51,13 @@ export const tiffinServices: TiffinService[] = [
         {
           id: "dt6",
           name: "Punjabi Thali",
-          price: 300,
+          price: 340,
           description: "Dal/Kadhi, 2 Premium Sabzis, Rotis(3), Rice, Papad"
         },
         {
           id: "dt7",
           name: "Rajasthani Thali",
-          price: 300,
+          price: 340,
           description: "Aloodum or Masala Gatta, Sangri, Sweet Lunji or Garlic Chatni, Namkeen Puran Puri/Belma Paratha (4), Papad"
         }
       ],
