@@ -42,7 +42,7 @@ export default function Home() {
               href="/home-made-desserts"
               className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block"
             >
-              Bakery Items
+              Desserts
             </Link>
             <Link 
               href="/home-made-food/tiffin"

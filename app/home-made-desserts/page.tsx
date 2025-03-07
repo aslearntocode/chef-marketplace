@@ -1,156 +1,99 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
+import SearchFilters from '@/components/SearchFilters';
 
-export default function HomeMadeDesserts() {
-  const [filters, setFilters] = useState({
-    area: 'all',
-    specialty: 'all',
-    searchQuery: ''
+export default function DessertsPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedArea, setSelectedArea] = useState('All Areas');
+  const [selectedSpecialty, setSelectedSpecialty] = useState('All Specialties');
+
+  // Get unique areas and specialties for filters
+  const areas = ['All Areas', ...new Set(bakers.map(baker => baker.location.split(',')[0]))];
+  const specialties = ['All Specialties', ...new Set(bakers.map(baker => baker.specialty))];
+
+  // Filter bakers based on search and filters
+  const filteredBakers = bakers.filter(baker => {
+    const matchesSearch = baker.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         baker.specialty.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesArea = selectedArea === 'All Areas' || baker.location.includes(selectedArea);
+    const matchesSpecialty = selectedSpecialty === 'All Specialties' || baker.specialty === selectedSpecialty;
+
+    return matchesSearch && matchesArea && matchesSpecialty;
   });
 
-  // Get unique specialties from bakers data
-  const specialties = useMemo(() => {
-    const uniqueSpecialties = new Set(bakers.map(baker => baker.specialty));
-    return Array.from(uniqueSpecialties);
-  }, []);
-
-  // Get unique areas from bakers data
-  const areas = useMemo(() => {
-    const uniqueAreas = new Set(bakers.flatMap(baker => baker.deliveryAreas));
-    return Array.from(uniqueAreas);
-  }, []);
-
-  // Filter bakers based on all criteria
-  const filteredBakers = useMemo(() => {
-    return bakers.filter(baker => {
-      const matchesArea = filters.area === 'all' || baker.deliveryAreas.includes(filters.area);
-      const matchesSpecialty = filters.specialty === 'all' || baker.specialty === filters.specialty;
-      const matchesSearch = filters.searchQuery === '' || 
-        baker.name.toLowerCase().includes(filters.searchQuery.toLowerCase()) ||
-        baker.specialty.toLowerCase().includes(filters.searchQuery.toLowerCase());
-      
-      return matchesArea && matchesSpecialty && matchesSearch;
-    });
-  }, [filters]);
-
   return (
-    <main>
-      {/* Spacer for navbar */}
+    <main className="min-h-screen">
       <div className="h-[72px]" />
 
-      {/* Header Section */}
-      <section className="content-section">
+      {/* Hero Section */}
+      <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-6">Home Made Desserts</h1>
+          <h1 className="text-4xl font-bold text-center mb-4">Desserts</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            Discover delicious homemade desserts and sweets from talented home bakers
+            Discover delicious homemade desserts from talented home bakers
           </p>
         </div>
       </section>
 
-      {/* Filters Section */}
-      <section className="bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row gap-4 md:items-center">
-            {/* Search Input */}
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Search by baker name or specialty..."
-                value={filters.searchQuery}
-                onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
-                className="w-full border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
-
-            {/* Area Filter */}
-            <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Area:</span>
-              <select 
-                value={filters.area}
-                onChange={(e) => setFilters(prev => ({ ...prev, area: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
-              >
-                <option value="all">All Areas</option>
-                {areas.sort().map(area => (
-                  <option key={area} value={area}>{area}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Specialty Filter */}
-            <div className="flex items-center gap-2">
-              <span className="text-gray-700 whitespace-nowrap">Specialty:</span>
-              <select 
-                value={filters.specialty}
-                onChange={(e) => setFilters(prev => ({ ...prev, specialty: e.target.value }))}
-                className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
-              >
-                <option value="all">All Specialties</option>
-                {specialties.sort().map(specialty => (
-                  <option key={specialty} value={specialty}>{specialty}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Results Count */}
-          <div className="mt-4 text-gray-600">
-            {filteredBakers.length} {filteredBakers.length === 1 ? 'baker' : 'bakers'} found
-          </div>
-        </div>
-      </section>
+      {/* Search Filters */}
+      <SearchFilters
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedArea={selectedArea}
+        setSelectedArea={setSelectedArea}
+        selectedSpecialty={selectedSpecialty}
+        setSelectedSpecialty={setSelectedSpecialty}
+        areas={areas}
+        specialties={specialties}
+        totalResults={filteredBakers.length}
+        itemType="bakers"
+      />
 
       {/* Bakers Grid */}
-      <section className="grid-section">
-        <div className="max-w-7xl mx-auto px-4">
-          {filteredBakers.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">No bakers found matching your criteria.</p>
-              <button 
-                onClick={() => setFilters({ area: 'all', specialty: 'all', searchQuery: '' })}
-                className="mt-4 text-black underline"
-              >
-                Clear all filters
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredBakers.map(baker => (
-                <div key={baker.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="relative h-48">
-                    <Image
-                      src={baker.image}
-                      alt={baker.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-semibold">{baker.name}</h3>
-                      <span className="flex items-center bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">
-                        ⭐ {baker.rating}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 font-medium mb-2">{baker.specialty}</p>
-                    <p className="text-gray-500 text-sm mb-4">{baker.location}</p>
-
-                    <Link 
-                      href={`/bakers/${baker.id}`}
-                      className="block w-full text-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors"
-                    >
-                      View Menu
-                    </Link>
-                  </div>
+      <section className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredBakers.map((baker) => (
+            <div
+              key={baker.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-48">
+                <Image
+                  src={baker.image}
+                  alt={baker.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-2">
+                  <h2 className="text-xl font-semibold">{baker.name}</h2>
+                  <span className="bg-green-50 text-green-800 px-2 py-1 rounded-full text-sm">
+                    ⭐ {baker.rating}
+                  </span>
                 </div>
-              ))}
+                <p className="text-gray-600 mb-2">{baker.specialty}</p>
+                <p className="text-gray-500 text-sm flex items-center mb-4">
+                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {baker.location}
+                </p>
+                <Link
+                  href={`/bakers/${baker.id}`}
+                  className="block w-full text-center bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                >
+                  View Menu
+                </Link>
+              </div>
             </div>
-          )}
+          ))}
         </div>
       </section>
     </main>

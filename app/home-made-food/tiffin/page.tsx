@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { tiffinServices } from '@/data/tiffin-services';
+import SearchFilters from '@/components/SearchFilters';
 
 export default function TiffinServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -31,59 +32,26 @@ export default function TiffinServicesPage() {
       {/* Hero Section */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-4">Home Made Food</h1>
+          <h1 className="text-4xl font-bold text-center mb-4">Tiffin Services</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            Discover authentic home-cooked meals from talented home chefs
+            Discover home-cooked tiffin services from talented home chefs
           </p>
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-wrap gap-4 items-center">
-          {/* Search Input */}
-          <div className="flex-1 min-w-[200px]">
-            <input
-              type="text"
-              placeholder="Search chefs..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-            />
-          </div>
-
-          {/* Area Filter */}
-          <div className="min-w-[150px]">
-            <select
-              value={selectedArea}
-              onChange={(e) => setSelectedArea(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              {areas.map(area => (
-                <option key={area} value={area}>{area}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Specialty Filter */}
-          <div className="min-w-[200px]">
-            <select
-              value={selectedSpecialty}
-              onChange={(e) => setSelectedSpecialty(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              {specialties.map(specialty => (
-                <option key={specialty} value={specialty}>{specialty}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Results Count */}
-          <div className="text-gray-600">
-            {filteredServices.length} {filteredServices.length === 1 ? 'chef' : 'chefs'} found
-          </div>
-        </div>
-      </section>
+      {/* Search Filters */}
+      <SearchFilters
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedArea={selectedArea}
+        setSelectedArea={setSelectedArea}
+        selectedSpecialty={selectedSpecialty}
+        setSelectedSpecialty={setSelectedSpecialty}
+        areas={areas}
+        specialties={specialties}
+        totalResults={filteredServices.length}
+        itemType="tiffin services"
+      />
 
       {/* Tiffin Services Grid */}
       <section className="max-w-7xl mx-auto px-4 py-8">
