@@ -27,18 +27,11 @@ export default function ChefPage() {
     );
   }
 
-  const getMenuItems = () => {
-    if (selectedCategory === 'all') {
-      return Object.entries(chef.menu).map(([category, items]) => ({
-        category,
-        items: items || []
-      }));
-    }
-    return [{
-      category: selectedCategory,
-      items: chef.menu[selectedCategory] || []
-    }];
-  };
+  const categories = ['all', ...Object.keys(chef.menu)];
+
+  const filteredMenu = selectedCategory === 'all'
+    ? Object.entries(chef.menu).map(([category, items]) => ({ category, items }))
+    : [{ category: selectedCategory, items: chef.menu[selectedCategory as keyof typeof chef.menu] || [] }];
 
   const handleAddToCart = (item: MenuItem) => {
     if (!auth.currentUser) {
@@ -47,18 +40,13 @@ export default function ChefPage() {
       return;
     }
 
-    const itemPrice = typeof item.price === 'string' 
-      ? Number(item.price.replace(/[^\d.]/g, ''))
-      : item.price;
-
     addToCart({
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
-      price: itemPrice,
+      price: typeof item.price === 'string' ? Number(item.price) : item.price,
       chefId: chef.id,
       chefName: chef.name,
-      description: item.description,
-      category: item.category
+      category: selectedCategory
     });
 
     toast.success(`${item.name} added to cart`);
@@ -82,17 +70,7 @@ export default function ChefPage() {
       <section className="max-w-7xl mx-auto px-4 py-8">
         {/* Category Tabs */}
         <div className="flex overflow-x-auto gap-4 mb-8 pb-2">
-          <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-full whitespace-nowrap ${
-              selectedCategory === 'all'
-                ? 'bg-black text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            View All
-          </button>
-          {Object.keys(chef.menu).map(category => (
+          {categories.map(category => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -102,20 +80,20 @@ export default function ChefPage() {
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category}
+              {category === 'all' ? 'View All' : category}
             </button>
           ))}
         </div>
 
         {/* Menu Items */}
         <div className="space-y-8">
-          {getMenuItems().map(({ category, items }) => (
+          {filteredMenu.map(({ category, items }) => (
             <div key={category}>
               {selectedCategory === 'all' && (
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {items && items.map(item => (
+                {items.map(item => (
                   <div
                     key={item.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
