@@ -9,6 +9,7 @@ import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
+import ChefHeader from '@/components/ChefHeader';
 
 export default function TiffinServicePage() {
   const params = useParams();
@@ -68,65 +69,15 @@ export default function TiffinServicePage() {
   return (
     <main>
       <div className="h-[72px]" />
-
-      {/* Tiffin Service Header */}
-      <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex gap-6">
-            <div className="flex items-center gap-6">
-              <div className="relative w-32 h-32">
-                <Image
-                  src={tiffin.image}
-                  alt={tiffin.name}
-                  fill
-                  className="object-cover rounded-full border-2 border-gray-100 shadow-md"
-                  sizes="(max-width: 768px) 128px, 128px"
-                  priority
-                />
-              </div>
-
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h1 className="text-2xl font-bold">{tiffin.name}</h1>
-                  <span className="flex items-center bg-green-50 text-green-800 px-2 py-1 rounded-full text-sm">
-                    ⭐ {tiffin.rating}
-                  </span>
-                </div>
-                <p className="text-gray-600 mb-1">{tiffin.specialty}</p>
-                <p className="text-gray-500 text-sm flex items-center">
-                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  {tiffin.location}
-                </p>
-              </div>
-            </div>
-
-            {tiffin.description && (
-              <div className="flex-1 border-l border-gray-100 pl-6 flex items-center">
-                <p className="text-gray-600 text-sm leading-relaxed italic">{tiffin.description}</p>
-              </div>
-            )}
-          </div>
-
-          {/* Notes Section */}
-          {tiffin.notes && tiffin.notes.length > 0 && (
-            <div className="mt-6">
-              <div className="flex flex-wrap gap-2">
-                {tiffin.notes.map((note, index) => (
-                  <span 
-                    key={index}
-                    className="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm border border-amber-100"
-                  >
-                    {note.replace('*', '•')}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+      <ChefHeader
+        image={tiffin.image}
+        name={tiffin.name}
+        rating={tiffin.rating}
+        specialty={tiffin.specialty}
+        location={tiffin.location}
+        description={tiffin.description}
+        notes={tiffin.notes}
+      />
 
       {/* Menu Section */}
       <section className="max-w-7xl mx-auto px-4 py-8">

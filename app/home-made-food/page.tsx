@@ -32,7 +32,7 @@ export default function HomeMadeFoodPage() {
       {/* Hero Section */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-4">Meals</h1>
+          <h1 className="text-4xl font-bold text-center mb-4">Home Made Food</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
             Discover authentic home-cooked meals from talented home chefs
           </p>
