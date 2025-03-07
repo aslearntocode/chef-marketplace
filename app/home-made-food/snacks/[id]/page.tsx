@@ -9,6 +9,7 @@ import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
+import { toast } from 'react-hot-toast';
 
 export default function SnackChefPage() {
   const params = useParams();
