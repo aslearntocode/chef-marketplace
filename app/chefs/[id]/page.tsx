@@ -93,7 +93,7 @@ export default function ChefPage() {
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {items.map(item => (
+                {items.map((item: MenuItem) => (
                   <div
                     key={item.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
