@@ -32,14 +32,14 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   // Get current vendor from cart items
   const getCurrentVendor = () => {
-    if (items.length === 0) return null;
-    return items[0].bakerName || items[0].chefName;
+    if (items.length === 0) return '';
+    return items[0].bakerName || items[0].chefName || '';
   };
 
   // Check if item is from same vendor
-  const isFromSameVendor = (itemVendor: string) => {
+  const isFromSameVendor = (itemVendor: string | undefined) => {
     const currentVendor = getCurrentVendor();
-    return !currentVendor || currentVendor === itemVendor;
+    return !currentVendor || currentVendor === (itemVendor || '');
   };
 
   // Load cart from localStorage on mount
@@ -56,7 +56,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   }, [items]);
 
   const addToCart = (item: CartItem) => {
-    const itemVendor = item.bakerName || item.chefName;
+    const itemVendor = item.bakerName || item.chefName || '';
     
     if (!isFromSameVendor(itemVendor)) {
       const confirmed = window.confirm(
