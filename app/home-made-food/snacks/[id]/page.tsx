@@ -10,6 +10,18 @@ import ChefHeader from '@/components/ChefHeader';
 import { toast } from 'react-hot-toast';
 import { useCart } from '@/context/CartContext';
 
+interface ChefMenu {
+  [key: string]: MenuItem[];
+}
+
+interface Chef {
+  id: string;
+  name: string;
+  specialty: string;
+  menu: ChefMenu;
+  // ... other properties
+}
+
 export default function SnackChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
@@ -30,8 +42,11 @@ export default function SnackChefPage() {
   const categories = ['all', ...Object.keys(chef.menu)];
 
   const filteredMenu = selectedCategory === 'all'
-    ? Object.entries(chef.menu).map(([category, items]) => ({ category, items }))
-    : [{ category: selectedCategory, items: chef.menu[selectedCategory] || [] }];
+    ? Object.entries(chef.menu as ChefMenu).map(([category, items]) => ({ category, items }))
+    : [{
+      category: selectedCategory,
+      items: (chef.menu as ChefMenu)[selectedCategory] || []
+    }];
 
   const handleAddToCart = (item: MenuItem) => {
     if (!auth.currentUser) {
