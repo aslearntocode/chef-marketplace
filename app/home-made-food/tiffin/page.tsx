@@ -17,7 +17,7 @@ export default function TiffinServicesPage() {
           {tiffinServices.map((service) => (
             <VendorCard
               key={service.id}
-              id={service.id}
+              id={service.id.toString()}
               image={service.image}
               name={service.name}
               specialty={service.specialty}
