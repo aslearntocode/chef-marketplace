@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { bakers } from '@/data/bakers';
-import type { Baker } from '@/types/baker';
 import { useCart } from '@/context/CartContext';
 import { getAuth } from 'firebase/auth';
 import { toast } from 'react-hot-toast';

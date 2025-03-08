@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { calculateAverageRating } from '@/utils/ratings';
 import { FaStar } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface VendorCardProps {
   id: string;
@@ -44,15 +45,16 @@ export default function VendorCard({ id, image, name, specialty, location, href 
     };
 
     fetchRatings();
-  }, [id]);
+  }, [id, supabase]);
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
       <div className="relative h-48">
-        <img
+        <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </div>
       <div className="p-4">

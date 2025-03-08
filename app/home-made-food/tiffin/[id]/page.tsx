@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { tiffinServices } from '@/data/tiffin-services';
-import type { Chef } from '@/types/chef';
 import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
@@ -14,7 +13,7 @@ import { toast } from 'react-hot-toast';
 export default function TiffinServicePage() {
   const params = useParams();
   const chefId = params?.id as string;
-  const chef = tiffinServices.find(b => b.id === chefId);
+  const chef = tiffinServices.find(b => b.id.toString() === chefId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();

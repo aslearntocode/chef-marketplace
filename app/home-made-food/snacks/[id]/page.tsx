@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { snacksChefs } from '@/data/snacks';
-import type { Chef } from '@/types/chef';
-import { useCart } from '@/context/CartContext';
 import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';

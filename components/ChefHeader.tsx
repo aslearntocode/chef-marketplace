@@ -44,7 +44,7 @@ export default function ChefHeader({
     };
 
     fetchRatings();
-  }, [vendorId]);
+  }, [vendorId, supabase]);
 
   return (
     <section className="bg-white border-b">
