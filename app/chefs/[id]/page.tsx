@@ -13,8 +13,8 @@ import ChefHeader from '@/components/ChefHeader';
 
 export default function ChefPage() {
   const params = useParams();
-  const chefId = params?.id ? Number(params.id) : null;
-  const chef = chefId ? chefs.find(b => b.id === chefId) as Chef | undefined : undefined;
+  const chefId = params?.id as string;
+  const chef = chefs.find(b => b.id === chefId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
@@ -48,7 +48,8 @@ export default function ChefPage() {
       chefId: chef.id,
       chefName: chef.name,
       category: selectedCategory,
-      quantity: 1
+      quantity: 1,
+      vendor_id: chef.id.toString()
     });
 
     toast.success(`${item.name} added to cart`);
@@ -61,11 +62,11 @@ export default function ChefPage() {
       <ChefHeader
         image={chef.image}
         name={chef.name}
-        rating={chef.rating}
         specialty={chef.specialty}
         location={chef.location}
         description={chef.description}
         notes={chef.notes}
+        vendorId={chef.id.toString()}
       />
 
       {/* Menu Section */}

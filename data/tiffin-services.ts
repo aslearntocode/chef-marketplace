@@ -2,7 +2,7 @@ import type { TiffinService } from '@/types/tiffin';
 
 export const tiffinServices: TiffinService[] = [
   {
-    id: 1,
+    id: 'tiffin_1',
     name: "Payal Agarwal Tiffin Service",
     specialty: "Home-style North Indian Meals",
     location: "Sewri, Mumbai",

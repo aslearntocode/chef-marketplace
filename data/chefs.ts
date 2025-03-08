@@ -1,6 +1,6 @@
 export const chefs = [
   {
-    id: 1,
+    id: 'chef_1',
     name: "Anjali Broor",
     image: "/chefs/Chef Anjali Broor.png",
     rating: 4.8,
@@ -114,7 +114,7 @@ export const chefs = [
   // },
 
   {
-    id: 3,
+    id: 'chef_3',
     name: "Chef Payal Agarwal",
     specialty: "South Indian Cuisine",
     location: "Andheri East, Mumbai",
@@ -165,7 +165,7 @@ export const chefs = [
   //   }
   // },
   {
-    id: 5,
+    id: 'chef_5',
     name: "Chef Juhi Kastiya",
     specialty: "Indian, Continental, Mediterranean",
     location: "Worli, Mumbai",

@@ -13,8 +13,8 @@ import { toast } from 'react-hot-toast';
 
 export default function SnackChefPage() {
   const params = useParams();
-  const chefId = params?.id ? Number(params.id) : null;
-  const chef = chefId ? snacksChefs.find(b => b.id === chefId) as Chef | undefined : undefined;
+  const chefId = params?.id as string;
+  const chef = snacksChefs.find(b => b.id === chefId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
@@ -48,7 +48,8 @@ export default function SnackChefPage() {
       chefId: chef.id,
       chefName: chef.name,
       category: selectedCategory,
-      quantity: 1
+      quantity: 1,
+      vendor_id: chef.id.toString()
     });
 
     toast.success(`${item.name} added to cart`);
@@ -65,6 +66,7 @@ export default function SnackChefPage() {
         location={chef.location}
         description={chef.description}
         notes={chef.notes}
+        vendorId={chef.id.toString()}
       />
 
       {/* Category Filter */}

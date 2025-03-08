@@ -79,6 +79,11 @@ export default function CheckoutPage() {
         throw new Error('Your cart is empty');
       }
 
+      // Get the first item's vendor_id since all items in an order are from the same vendor
+      const vendor_id = items[0]?.vendor_id;
+      
+      console.log('Creating order with vendor_id:', vendor_id);
+
       const orderData = {
         user_id: user.uid,
         items: items.map(item => ({
@@ -86,7 +91,8 @@ export default function CheckoutPage() {
           name: item.name,
           price: item.price,
           quantity: item.quantity,
-          chefName: item.chefName || null
+          chefName: item.chefName || null,
+          vendor_id: vendor_id
         })),
         total_amount: totalAmount,
         status: 'success',
@@ -98,7 +104,9 @@ export default function CheckoutPage() {
           street,
           apartment
         },
-        delivery_slot: deliverySlot
+        delivery_slot: deliverySlot,
+        vendor_id: vendor_id,
+        created_at: new Date().toISOString(),
       };
 
       console.log('Creating order with data:', orderData);

@@ -1,6 +1,6 @@
 export const bakers = [
   {
-    id: 1,
+    id: 'baker_1',
     name: "Baker Juhi Kastiya",
     specialty: "Cakes & Pastries",
     location: "Bandra West, Mumbai",
@@ -29,7 +29,7 @@ export const bakers = [
     }
   },
   {
-    id: 2,
+    id: 'baker_2',
     name: "Baker Ruchita Shah",
     specialty: "Healthy Treats",
     location: "Lower Parel, Mumbai",

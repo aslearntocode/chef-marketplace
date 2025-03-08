@@ -22,8 +22,8 @@ interface MenuItem {
 
 export default function BakerPage() {
   const params = useParams();
-  const bakerId = params?.id ? Number(params.id) : null;
-  const baker = bakerId ? bakers.find(b => b.id === bakerId) as Baker | undefined : undefined;
+  const bakerId = params?.id as string;
+  const baker = bakers.find(b => b.id === bakerId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
@@ -70,7 +70,8 @@ export default function BakerPage() {
       bakerName: baker.name,
       description: item.description,
       category: item.category,
-      quantity: 1
+      quantity: 1,
+      vendor_id: baker.id.toString()
     });
 
     toast.success(`${item.name} added to cart`);
@@ -87,6 +88,7 @@ export default function BakerPage() {
         location={baker.location}
         description={baker.description}
         notes={baker.notes}
+        vendorId={baker.id.toString()}
       />
 
       {/* Menu Section */}

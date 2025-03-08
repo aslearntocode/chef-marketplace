@@ -2,7 +2,7 @@ import type { Chef } from '@/types/chef';
 
 export const snacksChefs: Chef[] = [
   {
-    id: 1,
+    id: 'snack_1',
     name: "Chef Ahilya Jaiswal",
     specialty: "Traditional Indian Snacks",
     location: "Worli, Mumbai",

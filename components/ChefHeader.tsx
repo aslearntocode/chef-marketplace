@@ -1,24 +1,51 @@
 import Image from 'next/image';
+import { calculateAverageRating } from '@/utils/ratings';
+import { useEffect, useState } from 'react';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 interface ChefHeaderProps {
   image: string;
   name: string;
-  rating: number;
   specialty: string;
   location: string;
-  description?: string;
+  description: string;
   notes?: string[];
+  vendorId: string;
+  rating?: number;
 }
 
-export default function ChefHeader({ 
-  image, 
-  name, 
-  rating, 
-  specialty, 
-  location, 
-  description, 
-  notes 
+export default function ChefHeader({
+  image,
+  name,
+  specialty,
+  location,
+  description,
+  notes,
+  vendorId
 }: ChefHeaderProps) {
+  const [rating, setRating] = useState<string>('New');
+  const supabase = createClientComponentClient();
+
+  useEffect(() => {
+    const fetchRatings = async () => {
+      const { data, error } = await supabase
+        .from('orders')
+        .select('rating')
+        .eq('vendor_id', vendorId)
+        .not('rating', 'is', null);
+
+      if (error) {
+        console.error('Error fetching ratings:', error);
+        return;
+      }
+
+      const ratings = data.map(order => order.rating);
+      setRating(calculateAverageRating(ratings));
+    };
+
+    fetchRatings();
+  }, [vendorId]);
+
   return (
     <section className="bg-white border-b">
       <div className="max-w-7xl mx-auto px-4 py-6">

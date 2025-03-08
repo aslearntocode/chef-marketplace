@@ -33,37 +33,35 @@ export default function OrdersPage() {
 
   const handleRating = async (orderId: string, rating: number) => {
     try {
-      console.log('Attempting to update rating:', { 
-        orderId, 
-        rating, 
-        userId: user?.uid
-      });
+      console.log('Attempting to update rating:', { orderId, rating, userId: user?.uid });
 
       // First verify we can fetch the order
       const { data: orderCheck, error: checkError } = await supabase
         .from('orders')
         .select('*')
         .eq('id', orderId)
-        .eq('user_id', user?.uid)
         .single();
 
       if (checkError) {
-        console.error('Error checking order:', {
-          message: checkError.message,
-          details: checkError.details,
-          code: checkError.code
-        });
+        console.error('Error checking order:', checkError);
         throw checkError;
       }
 
       console.log('Found order:', orderCheck);
 
-      // Update the rating
+      // Get the vendor_id from the order items
+      const vendorId = orderCheck.items?.[0]?.chefId || 
+                      orderCheck.items?.[0]?.bakerId || 
+                      orderCheck.items?.[0]?.vendorId;
+
+      // Update with rating and vendor_id
       const { data, error } = await supabase
         .from('orders')
-        .update({ rating })
+        .update({ 
+          rating,
+          vendor_id: vendorId?.toString()
+        })
         .eq('id', orderId)
-        .eq('user_id', user?.uid)
         .select()
         .single();
 
@@ -83,8 +81,6 @@ export default function OrdersPage() {
         setOrders(orders.map(order => 
           order.id === orderId ? { ...order, rating } : order
         ));
-      } else {
-        console.error('No data returned from update');
       }
     } catch (error) {
       console.error('Error updating rating:', {
