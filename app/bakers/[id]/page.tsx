@@ -16,6 +16,7 @@ interface MenuItem {
   price: number;
   description: string;
   parentItem?: string;
+  discountedPrice?: number;
 }
 
 interface BakerMenu {
@@ -43,7 +44,7 @@ export default function BakerPage() {
     ? Object.entries(baker.menu).map(([category, items]) => ({ category, items }))
     : [{
       category: selectedCategory,
-      items: (baker.menu as BakerMenu)[selectedCategory] || []
+      items: (baker.menu as unknown as Record<string, MenuItem[]>)[selectedCategory] || []
     }];
 
   const handleAddToCart = (item: MenuItem) => {
