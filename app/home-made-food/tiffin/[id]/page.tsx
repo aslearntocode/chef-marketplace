@@ -52,7 +52,7 @@ export default function TiffinServicePage() {
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
       price: itemPrice,
-      chefId: chef.id,
+      chefId: chef.id.toString(),
       chefName: chef.name,
       description: item.description,
       category: item.category,
