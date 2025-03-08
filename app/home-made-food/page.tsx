@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { chefs } from '@/data/chefs';
 import SearchFilters from '@/components/SearchFilters';
 import VendorCard from '@/components/VendorCard';
+import PageHeader from '@/components/PageHeader';
 
 export default function HomeMadeFoodPage() {
   const [searchQuery, setSearchQuery] = useState('');
