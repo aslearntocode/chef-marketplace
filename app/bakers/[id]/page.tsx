@@ -11,13 +11,13 @@ import { toast } from 'react-hot-toast';
 import ChefHeader from '@/components/ChefHeader';
 
 // Add interface for menu item
-interface BakerMenuItem {
-  id: string;
+interface MenuItem {
+  id: number;
   name: string;
   price: number;
-  discountedPrice?: number;
   description: string;
   category?: string;
+  discountedPrice?: number;
 }
 
 export default function BakerPage() {
@@ -50,7 +50,7 @@ export default function BakerPage() {
     }];
   };
 
-  const handleAddToCart = (item: BakerMenuItem) => {
+  const handleAddToCart = (item: MenuItem) => {
     // Check if user is logged in
     if (!auth.currentUser) {
       const currentPath = window.location.pathname;
@@ -138,7 +138,7 @@ export default function BakerPage() {
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
                       <button 
-                        onClick={() => handleAddToCart(item as BakerMenuItem)}
+                        onClick={() => handleAddToCart(item as MenuItem)}
                         className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
                       >
                         Add to Cart
