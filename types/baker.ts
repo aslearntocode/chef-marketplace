@@ -1,21 +1,18 @@
-import type { BaseChef } from './chef';
+import type { MenuItem } from './menu';
 
-export interface Baker extends BaseChef {
-  id: number;
+export interface BaseBaker {
+  id: string;
   name: string;
-  image: string;
   specialty: string;
   location: string;
-  description: string;
   rating: number;
+  image: string;
+  description: string;
+  notes?: string[];
   deliveryAreas: string[];
   menu: {
-    [category: string]: {
-      id: number;
-      name: string;
-      price: number;
-      description: string;
-    }[];
+    [key: string]: MenuItem[];
   };
-  notes?: string[];
-} 
+}
+
+export type Baker = BaseBaker; 

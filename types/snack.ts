@@ -1,5 +1,21 @@
 import type { MenuItem } from './menu';
-import type { BaseChef } from './chef';
+
+export interface BaseSnackChef {
+  id: string;
+  name: string;
+  specialty: string;
+  location: string;
+  rating: number;
+  image: string;
+  description: string;
+  notes?: string[];
+  deliveryAreas: string[];
+  menu: {
+    [key: string]: MenuItem[];
+  };
+}
+
+export type SnackChef = BaseSnackChef;
 
 export interface SnackMenuItem {
   id: number;
@@ -14,8 +30,4 @@ export interface SnackMenuItem {
 export interface SnackCategory {
   category: string;
   items: SnackMenuItem[];
-}
-
-export interface SnackChef extends BaseChef {
-  // Add any snack-specific properties here
 } 
