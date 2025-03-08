@@ -2,7 +2,6 @@
 
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, totalAmount, clearCart } = useCart();
