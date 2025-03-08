@@ -7,12 +7,12 @@ export interface CartItem {
   name: string;
   price: number;
   quantity: number;
-  chefId?: number;
-  bakerId?: number;
+  chefId?: string;
   chefName?: string;
+  bakerId?: string;
   bakerName?: string;
-  description?: string;
   category?: string;
+  description?: string;
   vendor_id: string;
 }
 
