@@ -9,7 +9,6 @@ import { getAuth } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 import ChefHeader from '@/components/ChefHeader';
 
-// Add interface for menu item
 interface MenuItem {
   id: string;
   name: string;
@@ -17,10 +16,6 @@ interface MenuItem {
   description: string;
   parentItem?: string;
   discountedPrice?: number;
-}
-
-interface BakerMenu {
-  [key: string]: MenuItem[];  // Simplify to just use index signature
 }
 
 export default function BakerPage() {
