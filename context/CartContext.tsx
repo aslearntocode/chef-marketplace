@@ -17,9 +17,9 @@ interface CartItem {
 
 interface CartContextType {
   items: CartItem[];
-  addToCart: (item: Omit<CartItem, 'quantity'>) => void;
+  addToCart: (item: CartItem) => void;
   removeFromCart: (itemId: string | number) => void;
-  updateQuantity: (itemId: string | number, quantity: number) => void;
+  updateQuantity: (itemId: string, newQuantity: number) => void;
   clearCart: () => void;
   totalItems: number;
   totalAmount: number;
@@ -27,8 +27,20 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function CartProvider({ children }: { children: ReactNode }) {
+export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [items, setItems] = useState<CartItem[]>([]);
+
+  // Get current vendor from cart items
+  const getCurrentVendor = () => {
+    if (items.length === 0) return null;
+    return items[0].bakerName || items[0].chefName;
+  };
+
+  // Check if item is from same vendor
+  const isFromSameVendor = (itemVendor: string) => {
+    const currentVendor = getCurrentVendor();
+    return !currentVendor || currentVendor === itemVendor;
+  };
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -43,17 +55,28 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('cart', JSON.stringify(items));
   }, [items]);
 
-  const addToCart = (newItem: Omit<CartItem, 'quantity'>) => {
+  const addToCart = (item: CartItem) => {
+    const itemVendor = item.bakerName || item.chefName;
+    
+    if (!isFromSameVendor(itemVendor)) {
+      const confirmed = window.confirm(
+        'Each order can only contain items from one chef/baker. Would you like to clear your current cart and start a new order?'
+      );
+      
+      if (confirmed) {
+        setItems([{ ...item, quantity: 1 }]);
+      }
+      return;
+    }
+
     setItems(currentItems => {
-      const existingItem = currentItems.find(item => item.id === newItem.id);
+      const existingItem = currentItems.find(i => i.id === item.id);
       if (existingItem) {
-        return currentItems.map(item =>
-          item.id === newItem.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+        return currentItems.map(i =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         );
       }
-      return [...currentItems, { ...newItem, quantity: 1 }];
+      return [...currentItems, { ...item, quantity: 1 }];
     });
   };
 
@@ -61,16 +84,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems(currentItems => currentItems.filter(item => item.id !== itemId));
   };
 
-  const updateQuantity = (itemId: string | number, quantity: number) => {
-    setItems(currentItems =>
-      currentItems.map(item =>
-        item.id === itemId ? { ...item, quantity } : item
-      )
-    );
+  const updateQuantity = (itemId: string, newQuantity: number) => {
+    setItems(currentItems => {
+      if (newQuantity <= 0) {
+        return currentItems.filter(item => item.id !== itemId);
+      }
+      return currentItems.map(item =>
+        item.id === itemId ? { ...item, quantity: newQuantity } : item
+      );
+    });
   };
 
   const clearCart = () => {
     setItems([]);
+    localStorage.setItem('cartItems', JSON.stringify([]));
   };
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -89,7 +116,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       {children}
     </CartContext.Provider>
   );
-}
+};
 
 export function useCart() {
   const context = useContext(CartContext);

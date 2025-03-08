@@ -2,12 +2,38 @@
 
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function CartPage() {
-  const { items, removeFromCart, updateQuantity, totalAmount } = useCart();
+  const { items, removeFromCart, updateQuantity, totalAmount, clearCart } = useCart();
   const DELIVERY_FEE = 100;
   const FREE_DELIVERY_THRESHOLD = 1000;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
+
+  // Get the chef/baker name of the first item in cart (if any)
+  const currentVendor = items.length > 0 ? (items[0].bakerName || items[0].chefName) : null;
+
+  // Function to check if item is from same vendor
+  const isFromSameVendor = (itemVendor: string) => {
+    return !currentVendor || currentVendor === itemVendor;
+  };
+
+  // Modified updateQuantity to check vendor
+  const handleUpdateQuantity = (itemId: string, newQuantity: number, itemVendor: string) => {
+    if (!isFromSameVendor(itemVendor)) {
+      if (confirm(
+        'Each order can only contain items from one chef/baker. Would you like to clear your current cart and start a new order?'
+      )) {
+        clearCart();
+        // If user confirms, update with new item
+        if (newQuantity > 0) {
+          updateQuantity(itemId, newQuantity);
+        }
+      }
+      return;
+    }
+    updateQuantity(itemId, newQuantity);
+  };
 
   if (items.length === 0) {
     return (
@@ -44,14 +70,22 @@ export default function CartPage() {
               <div className="flex justify-between items-center mt-4">
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}
+                    onClick={() => handleUpdateQuantity(
+                      item.id, 
+                      Math.max(0, item.quantity - 1),
+                      item.bakerName || item.chefName
+                    )}
                     className="px-3 py-1 border rounded-md"
                   >
                     -
                   </button>
                   <span className="w-8 text-center">{item.quantity}</span>
                   <button
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    onClick={() => handleUpdateQuantity(
+                      item.id, 
+                      item.quantity + 1,
+                      item.bakerName || item.chefName
+                    )}
                     className="px-3 py-1 border rounded-md"
                   >
                     +
