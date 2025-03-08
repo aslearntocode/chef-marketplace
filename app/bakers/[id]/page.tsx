@@ -19,6 +19,15 @@ interface MenuItem {
   discountedPrice?: number;
 }
 
+interface BakerMenu {
+  Cakes: MenuItem[];
+  Cupcakes: MenuItem[];
+  "French Pastries": MenuItem[];
+  "Dessert Boxes": MenuItem[];
+  "Healthy Treats"?: MenuItem[];
+  [key: string]: MenuItem[] | undefined;  // Add index signature
+}
+
 export default function BakerPage() {
   const params = useParams();
   const bakerId = params?.id as string;
@@ -36,18 +45,12 @@ export default function BakerPage() {
     );
   }
 
-  const getMenuItems = () => {
-    if (selectedCategory === 'all') {
-      return Object.entries(baker.menu).map(([category, items]) => ({
-        category,
-        items: items || []
-      }));
-    }
-    return [{
+  const filteredMenu = selectedCategory === 'all'
+    ? Object.entries(baker.menu).map(([category, items]) => ({ category, items }))
+    : [{
       category: selectedCategory,
-      items: baker.menu[selectedCategory] || []
+      items: (baker.menu as BakerMenu)[selectedCategory] || []
     }];
-  };
 
   const handleAddToCart = (item: MenuItem) => {
     // Check if user is logged in
@@ -121,7 +124,7 @@ export default function BakerPage() {
 
         {/* Menu Items */}
         <div className="space-y-8">
-          {getMenuItems().map(({ category, items }) => (
+          {filteredMenu.map(({ category, items }) => (
             <div key={category}>
               {selectedCategory === 'all' && (
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
