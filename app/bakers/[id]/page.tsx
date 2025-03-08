@@ -41,7 +41,7 @@ export default function BakerPage() {
     }];
   };
 
-  const handleAddToCart = (item: MenuItem) => {
+  const handleAddToCart = (item: any) => {
     // Check if user is logged in
     if (!auth.currentUser) {
       const currentPath = window.location.pathname;
@@ -49,8 +49,8 @@ export default function BakerPage() {
       return;
     }
 
-    const itemPrice = typeof item.price === 'string' 
-      ? Number(item.price.replace(/[^\d.]/g, ''))
+    const itemPrice = item.discountedPrice !== undefined && item.discountedPrice !== null
+      ? item.discountedPrice
       : item.price;
 
     addToCart({
@@ -60,7 +60,8 @@ export default function BakerPage() {
       bakerId: baker.id,
       bakerName: baker.name,
       description: item.description,
-      category: item.category
+      category: item.category,
+      quantity: 1
     });
 
     toast.success(`${item.name} added to cart`);
