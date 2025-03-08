@@ -6,10 +6,19 @@ import Link from 'next/link';
 import { bakers } from '@/data/bakers';
 import type { Baker } from '@/types/baker';
 import { useCart } from '@/context/CartContext';
-import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 import ChefHeader from '@/components/ChefHeader';
+
+// Add interface for menu item
+interface BakerMenuItem {
+  id: string;
+  name: string;
+  price: number;
+  discountedPrice?: number;
+  description: string;
+  category?: string;
+}
 
 export default function BakerPage() {
   const params = useParams();
@@ -41,7 +50,7 @@ export default function BakerPage() {
     }];
   };
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: BakerMenuItem) => {
     // Check if user is logged in
     if (!auth.currentUser) {
       const currentPath = window.location.pathname;
@@ -129,7 +138,7 @@ export default function BakerPage() {
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
                       <button 
-                        onClick={() => handleAddToCart(item)}
+                        onClick={() => handleAddToCart(item as BakerMenuItem)}
                         className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
                       >
                         Add to Cart
