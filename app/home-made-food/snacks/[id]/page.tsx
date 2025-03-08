@@ -44,7 +44,7 @@ export default function SnackChefPage() {
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
       name: item.name,
       price: typeof item.price === 'string' ? Number(item.price) : item.price,
-      chefId: chef.id,
+      chefId: chef.id.toString(),
       chefName: chef.name,
       category: selectedCategory,
       quantity: 1,
