@@ -11,21 +11,15 @@ import ChefHeader from '@/components/ChefHeader';
 
 // Add interface for menu item
 interface MenuItem {
-  id: number;
+  id: string;
   name: string;
   price: number;
   description: string;
-  category?: string;
-  discountedPrice?: number;
+  parentItem?: string;
 }
 
 interface BakerMenu {
-  Cakes: MenuItem[];
-  Cupcakes: MenuItem[];
-  "French Pastries": MenuItem[];
-  "Dessert Boxes": MenuItem[];
-  "Healthy Treats"?: MenuItem[];
-  [key: string]: MenuItem[] | undefined;  // Add index signature
+  [key: string]: MenuItem[];  // Simplify to just use index signature
 }
 
 export default function BakerPage() {
