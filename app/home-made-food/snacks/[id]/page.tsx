@@ -14,14 +14,6 @@ interface ChefMenu {
   [key: string]: MenuItem[];
 }
 
-interface Chef {
-  id: string;
-  name: string;
-  specialty: string;
-  menu: ChefMenu;
-  // ... other properties
-}
-
 export default function SnackChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
