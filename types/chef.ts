@@ -1,19 +1,18 @@
-export interface Chef {
-  id: number;
+import type { MenuItem } from './menu';
+
+export interface BaseChef {
+  id: string;
   name: string;
-  image: string;
   specialty: string;
   location: string;
-  description: string;
   rating: number;
+  image: string;
+  description: string;
   notes?: string[];
   deliveryAreas: string[];
   menu: {
-    [category: string]: {
-      id: number;
-      name: string;
-      price: number;
-      description: string;
-    }[];
+    [key: string]: MenuItem[];
   };
-} 
+}
+
+export type Chef = BaseChef; 

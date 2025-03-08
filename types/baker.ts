@@ -1,4 +1,6 @@
-export interface Baker {
+import type { BaseChef } from './chef';
+
+export interface Baker extends BaseChef {
   id: number;
   name: string;
   image: string;
