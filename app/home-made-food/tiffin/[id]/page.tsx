@@ -45,7 +45,7 @@ export default function TiffinServicePage() {
     }
 
     const itemPrice = typeof item.price === 'string' 
-      ? Number(item.price.replace(/[^\d.]/g, ''))
+      ? Number(item.price) 
       : item.price;
 
     addToCart({
