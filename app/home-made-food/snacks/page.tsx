@@ -17,7 +17,7 @@ export default function SnacksPage() {
           {snacksChefs.map((chef) => (
             <VendorCard
               key={chef.id}
-              id={chef.id}
+              id={chef.id.toString()}
               image={chef.image}
               name={chef.name}
               specialty={chef.specialty}
