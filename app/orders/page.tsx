@@ -33,11 +33,10 @@ export default function OrdersPage() {
 
   const handleRating = async (orderId: string, rating: number) => {
     try {
-      // Since we're using Firebase auth, we'll skip the Supabase session check
       console.log('Attempting to update rating:', { 
         orderId, 
         rating, 
-        userId: user?.uid  // Using Firebase user ID directly
+        userId: user?.uid
       });
 
       // First verify we can fetch the order
@@ -45,7 +44,7 @@ export default function OrdersPage() {
         .from('orders')
         .select('*')
         .eq('id', orderId)
-        .eq('user_id', user?.uid) // Add this to ensure we're checking the correct user's order
+        .eq('user_id', user?.uid)
         .single();
 
       if (checkError) {
@@ -64,7 +63,7 @@ export default function OrdersPage() {
         .from('orders')
         .update({ rating })
         .eq('id', orderId)
-        .eq('user_id', user?.uid) // Add this to ensure we're updating the correct user's order
+        .eq('user_id', user?.uid)
         .select()
         .single();
 
@@ -87,13 +86,11 @@ export default function OrdersPage() {
       } else {
         console.error('No data returned from update');
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error updating rating:', {
-        message: error?.message,
-        details: error?.details,
-        code: error?.code,
-        name: error?.name,
-        stack: error?.stack
+        message: error instanceof Error ? error.message : 'Unknown error',
+        name: error instanceof Error ? error.name : undefined,
+        stack: error instanceof Error ? error.stack : undefined
       });
     }
   };
