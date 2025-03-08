@@ -47,7 +47,8 @@ export default function SnackChefPage() {
       price: typeof item.price === 'string' ? Number(item.price) : item.price,
       chefId: chef.id,
       chefName: chef.name,
-      category: selectedCategory
+      category: selectedCategory,
+      quantity: 1
     });
 
     toast.success(`${item.name} added to cart`);
