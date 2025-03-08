@@ -56,7 +56,8 @@ export default function TiffinServicePage() {
       chefId: chef.id,
       chefName: chef.name,
       description: item.description,
-      category: item.category
+      category: item.category,
+      quantity: 1
     });
 
     toast.success(`${item.name} added to cart`);
