@@ -14,6 +14,7 @@ interface Order {
   }>;
   total_amount: number;
   status: string;
+  rating?: number;
   delivery_address: {
     mobile: string;
     pin_code: string;
@@ -30,6 +31,73 @@ export default function OrdersPage() {
   const supabase = createClientComponentClient();
   const { user } = useAuth();
 
+  const handleRating = async (orderId: string, rating: number) => {
+    try {
+      // Since we're using Firebase auth, we'll skip the Supabase session check
+      console.log('Attempting to update rating:', { 
+        orderId, 
+        rating, 
+        userId: user?.uid  // Using Firebase user ID directly
+      });
+
+      // First verify we can fetch the order
+      const { data: orderCheck, error: checkError } = await supabase
+        .from('orders')
+        .select('*')
+        .eq('id', orderId)
+        .eq('user_id', user?.uid) // Add this to ensure we're checking the correct user's order
+        .single();
+
+      if (checkError) {
+        console.error('Error checking order:', {
+          message: checkError.message,
+          details: checkError.details,
+          code: checkError.code
+        });
+        throw checkError;
+      }
+
+      console.log('Found order:', orderCheck);
+
+      // Update the rating
+      const { data, error } = await supabase
+        .from('orders')
+        .update({ rating })
+        .eq('id', orderId)
+        .eq('user_id', user?.uid) // Add this to ensure we're updating the correct user's order
+        .select()
+        .single();
+
+      if (error) {
+        console.error('Supabase update error:', {
+          message: error.message,
+          details: error.details,
+          hint: error.hint,
+          code: error.code
+        });
+        throw error;
+      }
+      
+      console.log('Successfully updated rating:', data);
+
+      if (data) {
+        setOrders(orders.map(order => 
+          order.id === orderId ? { ...order, rating } : order
+        ));
+      } else {
+        console.error('No data returned from update');
+      }
+    } catch (error: any) {
+      console.error('Error updating rating:', {
+        message: error?.message,
+        details: error?.details,
+        code: error?.code,
+        name: error?.name,
+        stack: error?.stack
+      });
+    }
+  };
+
   useEffect(() => {
     const fetchOrders = async () => {
       if (!user?.uid) {
@@ -37,7 +105,7 @@ export default function OrdersPage() {
         return;
       }
       
-      console.log('Fetching orders for Firebase user:', user.uid);
+      console.log('Fetching orders for user:', user.uid);
       
       try {
         const { data, error } = await supabase
@@ -128,6 +196,30 @@ export default function OrdersPage() {
                 PIN: {order.delivery_address.pin_code}<br />
                 Mobile: {order.delivery_address.mobile}
               </p>
+            </div>
+
+            <div className="border-t mt-4 pt-4">
+              <h3 className="font-semibold mb-2">Rate Your Order</h3>
+              <div className="flex items-center gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    onClick={() => handleRating(order.id, star)}
+                    className={`text-2xl ${
+                      order.rating && star <= order.rating
+                        ? 'text-yellow-400'
+                        : 'text-gray-300'
+                    }`}
+                  >
+                    ★
+                  </button>
+                ))}
+                {order.rating && (
+                  <span className="text-sm text-gray-600 ml-2">
+                    ({order.rating} stars)
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         ))}
