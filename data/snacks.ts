@@ -1,20 +1,5 @@
 import type { Chef } from '@/types/chef';
 
-interface Chef {
-  id: string;  // Change from number to string
-  name: string;
-  specialty: string;
-  location: string;
-  rating: number;
-  image: string;
-  description: string;
-  notes?: string[];  // Add optional notes
-  deliveryAreas: string[];
-  menu: {
-    [key: string]: MenuItem[];
-  }
-}
-
 export const snacksChefs: Chef[] = [
   {
     id: 'snack_1',
