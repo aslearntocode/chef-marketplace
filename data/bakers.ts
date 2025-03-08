@@ -1,4 +1,28 @@
-export const bakers = [
+interface MenuItem {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  parentItem?: string;
+  discountedPrice?: number;
+  category?: string;
+}
+
+interface Baker {
+  id: string;
+  name: string;
+  specialty: string;
+  location: string;
+  rating: number;
+  image: string;
+  description: string;
+  topDishes: string[];
+  deliveryAreas: string[];
+  menu: Record<string, MenuItem[]>;
+  notes?: string[];
+}
+
+export const bakers: Baker[] = [
   {
     id: 'baker_1',
     name: "Baker Juhi Kastiya",
