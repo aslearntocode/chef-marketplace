@@ -16,6 +16,7 @@ interface MenuItem {
   description: string;
   parentItem?: string;
   discountedPrice?: number;
+  category?: string;
 }
 
 export default function BakerPage() {
