@@ -10,7 +10,7 @@ export default function CartPage() {
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
 
   // Get the chef/baker name of the first item in cart (if any)
-  const currentVendor = items.length > 0 ? (items[0].bakerName || items[0].chefName) : null;
+  const currentVendor = items.length > 0 ? (items[0].bakerName || items[0].chefName || '') : '';
 
   // Function to check if item is from same vendor
   const isFromSameVendor = (itemVendor: string) => {
@@ -18,7 +18,10 @@ export default function CartPage() {
   };
 
   // Modified updateQuantity to check vendor
-  const handleUpdateQuantity = (itemId: string, newQuantity: number, itemVendor: string) => {
+  const handleUpdateQuantity = (itemId: string, newQuantity: number, itemVendor: string | undefined) => {
+    // If no vendor is provided, skip the check
+    if (!itemVendor) return;
+
     if (!isFromSameVendor(itemVendor)) {
       if (confirm(
         'Each order can only contain items from one chef/baker. Would you like to clear your current cart and start a new order?'
@@ -72,7 +75,7 @@ export default function CartPage() {
                     onClick={() => handleUpdateQuantity(
                       item.id, 
                       Math.max(0, item.quantity - 1),
-                      item.bakerName || item.chefName
+                      item.bakerName || item.chefName || ''  // Provide empty string as fallback
                     )}
                     className="px-3 py-1 border rounded-md"
                   >
@@ -83,7 +86,7 @@ export default function CartPage() {
                     onClick={() => handleUpdateQuantity(
                       item.id, 
                       item.quantity + 1,
-                      item.bakerName || item.chefName
+                      item.bakerName || item.chefName || ''  // Provide empty string as fallback
                     )}
                     className="px-3 py-1 border rounded-md"
                   >
