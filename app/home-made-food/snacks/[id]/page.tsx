@@ -8,11 +8,12 @@ import type { MenuItem } from '@/types/menu';
 import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
 import { toast } from 'react-hot-toast';
+import { useCart } from '@/context/CartContext';
 
 export default function SnackChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
-  const chef = snacksChefs.find(b => b.id === chefId);
+  const chef = snacksChefs.find(b => b.id.toString() === chefId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { addToCart } = useCart();
   const router = useRouter();
