@@ -91,19 +91,19 @@ export default function Home() {
                 <div className="slider">
                   {/* First set of items */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/1' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/1' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/bakers/1' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/1' },
-                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
-                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Chef Juhi Kastiya', price: '₹120', path: '/chefs/chef_5' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Chef Juhi Kastiya', price: '₹180', path: '/bakers/baker_1' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Chef Juhi Kastiya', price: '₹250', path: '/chefs/chef_5' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Chef  Juhi Kastiya', price: '₹200', path: '/chefs/chef_5' },
+                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
+                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
                       href={item.path}
-                      className="slide cursor-pointer"
+                      className="slide cursor-pointer block"
                     >
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
                         <Image 
                           src={item.src} 
                           alt={item.name} 
@@ -119,21 +119,21 @@ export default function Home() {
                     </Link>
                   ))}
 
-                  {/* Duplicate set - use the same structure */}
+                  {/* Second set - Update with the same paths */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/1' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/1' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/bakers/1' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/1' },
-                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
-                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/1' },
+                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/baker_1' },
+                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/baker_1' },
+                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/home-made-desserts/baker_1' },
+                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/baker_1' },
+                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
+                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
                   ].map((item, index) => (
                     <Link 
                       key={`second-${index}`} 
                       href={item.path}
-                      className="slide cursor-pointer"
+                      className="slide cursor-pointer block"
                     >
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
                         <Image 
                           src={item.src} 
                           alt={item.name} 
@@ -204,28 +204,28 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-4">
               {[
                 {
-                  id: 'anjali-broor',
+                  id: 'chef_1',
                   name: 'Chef Anjali Broor',
                   specialty: 'North Indian Cuisine',
                   image: '/chefs/Chef Anjali Broor.png',
                   rating: '4.8',
-                  path: '/chefs/1'
+                  path: '/chefs/chef_1'
                 },
                 {
-                  id: 'juhi-kastiya',
+                  id: 'baker_1',
                   name: 'Baker Juhi Kastiya',
                   specialty: 'Artisanal Breads & Pastries',
                   image: '/chefs/Chef Juhi Kastiya.png',
                   rating: '4.9',
-                  path: '/bakers/1'
+                  path: '/bakers/baker_1'
                 }
               ].map((chef) => (
                 <Link 
                   href={chef.path}
                   key={chef.id}
-                  className="group"
+                  className="block group"
                 >
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 h-full">
                     <div className="relative h-36">
                       <Image
                         src={chef.image}
