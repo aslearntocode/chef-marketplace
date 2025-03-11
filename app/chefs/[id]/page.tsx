@@ -199,7 +199,7 @@ export default function ChefPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">
-                        ₹{(item.variants?.find(v => v.name === selectedVariants[item.id])?.price || item.price) +
+                        ₹{Number(item.variants?.find(v => v.name === selectedVariants[item.id])?.price || item.price) +
                           (Object.entries(selectedExtras[item.id] || {})
                             .filter(([_name, quantity]) => quantity > 0)
                             .reduce((sum, [name, quantity]) => sum + (item.extras?.find(e => e.name === name)?.price || 0) * quantity, 0) || 0)}
