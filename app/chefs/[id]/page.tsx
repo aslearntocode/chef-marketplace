@@ -44,7 +44,7 @@ export default function ChefPage() {
 
     const selectedVariant = item.variants?.find(v => v.name === selectedVariants[item.id]);
     const extras = Object.entries(selectedExtras[item.id] || {})
-      .filter(([_, quantity]) => quantity > 0)
+      .filter(([_name, quantity]) => quantity > 0)
       .map(([name, quantity]) => ({
         name,
         quantity,
@@ -201,7 +201,7 @@ export default function ChefPage() {
                       <span className="text-lg font-semibold">
                         ₹{(item.variants?.find(v => v.name === selectedVariants[item.id])?.price || item.price) +
                           (Object.entries(selectedExtras[item.id] || {})
-                            .filter(([_, quantity]) => quantity > 0)
+                            .filter(([_name, quantity]) => quantity > 0)
                             .reduce((sum, [name, quantity]) => sum + (item.extras?.find(e => e.name === name)?.price || 0) * quantity, 0) || 0)}
                       </span>
                       <button 
