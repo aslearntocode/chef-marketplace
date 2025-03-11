@@ -102,7 +102,20 @@ export default function ChefPage() {
                   >
                     <div>
                       <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
-                      <p className="text-gray-600 mb-4">{item.description}</p>
+                      <p className="text-gray-600 mb-2">{item.description}</p>
+                      {item.servingSize && (
+                        <p className="text-sm text-gray-500 mb-4">{item.servingSize}</p>
+                      )}
+                      {item.variants && (
+                        <div className="text-sm text-gray-500 mb-4">
+                          Available in: {item.variants.map(v => `${v.name} (₹${v.price})`).join(', ')}
+                        </div>
+                      )}
+                      {item.extras && (
+                        <div className="text-sm text-gray-500 mb-4">
+                          Add-ons: {item.extras.map(e => `${e.name} (₹${e.price})`).join(', ')}
+                        </div>
+                      )}
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>

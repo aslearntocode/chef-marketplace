@@ -18,69 +18,65 @@ export const chefs = [
       "March 17 - Monday": [
         {
           id: "khao-suey",
-          name: "KHAO SUEY",
-          description: "A delicious noodle dish with a fragrant and creamy coconut milk curry infused with lemongrass, topped with diced Asian vegetables and an array of toppings that give it texture and flavor.",
-          price: 390,
+          name: "Khao Suey",
+          description: "If something could be called a bowl of happiness, this could well be it. A delicious noodle dish with a fragrant and creamy coconut milk curry infused with lemongrass, topped with diced Asian vegetables and an array of toppings that give it texture and flavor.",
+          servingSize: "Noodles, Curry and Condiments all served separately",
+          price: 470,
           variants: [
-            { name: "Chicken", price: 390 },
-            { name: "Veg", price: 390 }
-          ],
-          servingSize: "450 ml",
-          notes: ["Noodles, Curry, and Condiments all served separately"]
+            { name: "Chicken", price: 490 },
+            { name: "Vegetable", price: 470 }
+          ]
         }
       ],
       "March 18 - Tuesday": [
         {
           id: "strawberry-feta-salad",
-          name: "STRAWBERRIES AND FETA SALAD",
+          name: "Strawberries and Feta Salad",
           description: "Fresh strawberries, mulberries, and blueberries nestled among a mix of greens, feta cheese, crunchy nuts, fresh herbs, and more. But the real star is the balsamic reduction!",
-          price: 570,
-          servingSize: "500ml"
+          servingSize: "Service Size: 500ml",
+          price: 685
         }
       ],
       "March 19 - Wednesday": [
         {
           id: "butter-chicken",
-          name: "BUTTER CHICKEN",
+          name: "Butter Chicken",
           description: "A velvety tomato-based sauce enriched with butter and cream that wraps around tender chicken pieces, creating a harmonious blend of flavors. We use a secret blend of traditional Indian spices to give our Butter Chicken that unmistakable and irresistible taste.",
-          price: 480,
-          servingSize: "250 ml",
-          notes: ["4 Pieces of Boneless Chicken and 1 Naan"],
+          servingSize: "(4 pieces of boneless chicken + 1 naan)",
+          price: 580,
           extras: [
-            { name: "Extra Naan", price: 75 }
+            { name: "Extra Naan", price: 85 }
           ]
         }
       ],
       "March 20 - Thursday": [
         {
           id: "chicken-kebabs",
-          name: "CHICKEN KEBABS WITH TZATZIKI",
+          name: "Chicken Kebabs with Tzatziki",
           description: "Chicken mince combined with mild spices, onion, and cilantro. Shallow fried in a skillet and served with homemade Tzatziki.",
-          price: 390,
-          notes: ["3 Kebabs and 50 ml Tzatziki"]
+          servingSize: "3 Kebabs and 50ml Tzatziki",
+          price: 470
         },
         {
           id: "dal-makhani",
-          name: "Slow Cooked Dal Makhani with Naan",
+          name: "Slow Cooked Dal Makhni with Naan",
           description: "Prepared with black urad dal and kidney beans. The secret ingredient is our 'masala' that goes in along with special tempering, making it really flavorful!",
-          price: 390,
-          servingSize: "250 ml",
-          notes: ["Dal served with 1 Naan"],
+          servingSize: "250ml Dal served with 1 naan",
+          price: 470,
           extras: [
-            { name: "Extra Naan", price: 75 }
+            { name: "Extra naan", price: 85 }
           ]
         }
       ],
       "March 21 - Friday": [
         {
           id: "chicken-ghee-roast",
-          name: "Chicken Ghee Roast and Parantha",
+          name: "Chicken Ghee Roast and parantha",
           description: "Chicken Ghee Roast is a mildly spicy and tangy dish with freshly ground masala slow-roasted in ghee to create a magical flavour.",
-          price: 480,
-          servingSize: "250 ml",
-          notes: ["4 pieces of boneless chicken and 1 Parantha"],
+          servingSize: "4 pieces of boneless chicken + 1 paratha",
+          price: 580,
           extras: [
-            { name: "Extra Parantha", price: 75 }
+            { name: "Extra parantha", price: 85 }
           ]
         }
       ]
