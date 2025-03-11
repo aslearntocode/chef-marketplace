@@ -51,7 +51,7 @@ export default function ChefPage() {
         price: item.extras?.find(e => e.name === name)?.price || 0
       }));
 
-    const totalPrice = (selectedVariant?.price || item.price) + 
+    const totalPrice = (Number(selectedVariant?.price || item.price)) + 
       extras.reduce((sum, extra) => sum + (extra.price * extra.quantity), 0);
 
     addToCart({
