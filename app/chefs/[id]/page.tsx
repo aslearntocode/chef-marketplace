@@ -18,6 +18,8 @@ export default function ChefPage() {
   const { addToCart } = useCart();
   const router = useRouter();
   const auth = getAuth();
+  const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
+  const [selectedExtras, setSelectedExtras] = useState<Record<string, Record<string, number>>>({});
 
   if (!chef) {
     return (
@@ -40,10 +42,24 @@ export default function ChefPage() {
       return;
     }
 
+    const selectedVariant = item.variants?.find(v => v.name === selectedVariants[item.id]);
+    const extras = Object.entries(selectedExtras[item.id] || {})
+      .filter(([_, quantity]) => quantity > 0)
+      .map(([name, quantity]) => ({
+        name,
+        quantity,
+        price: item.extras?.find(e => e.name === name)?.price || 0
+      }));
+
+    const totalPrice = (selectedVariant?.price || item.price) + 
+      extras.reduce((sum, extra) => sum + (extra.price * extra.quantity), 0);
+
     addToCart({
       id: `${chef.id}-${item.name.replace(/\s+/g, '-')}`,
-      name: item.name,
-      price: typeof item.price === 'string' ? Number(item.price) : item.price,
+      name: item.name + 
+        (selectedVariant ? ` (${selectedVariant.name})` : '') +
+        (extras.length ? ` + ${extras.map(e => `${e.quantity}x ${e.name}`).join(', ')}` : ''),
+      price: totalPrice,
       chefId: chef.id,
       chefName: chef.name,
       category: selectedCategory,
@@ -106,19 +122,88 @@ export default function ChefPage() {
                       {item.servingSize && (
                         <p className="text-sm text-gray-500 mb-4">{item.servingSize}</p>
                       )}
+                      
                       {item.variants && (
-                        <div className="text-sm text-gray-500 mb-4">
-                          Available in: {item.variants.map(v => `${v.name} (₹${v.price})`).join(', ')}
+                        <div className="mb-4">
+                          <p className="text-sm font-medium mb-2">Select Option:</p>
+                          <div className="flex gap-2">
+                            {item.variants.map(variant => (
+                              <button
+                                key={variant.name}
+                                onClick={() => setSelectedVariants({
+                                  ...selectedVariants,
+                                  [item.id]: variant.name
+                                })}
+                                className={`px-3 py-1 rounded-full text-sm ${
+                                  selectedVariants[item.id] === variant.name
+                                    ? 'bg-black text-white'
+                                    : 'bg-gray-100 text-gray-700'
+                                }`}
+                              >
+                                {variant.name} (₹{variant.price})
+                              </button>
+                            ))}
+                          </div>
                         </div>
                       )}
+
                       {item.extras && (
-                        <div className="text-sm text-gray-500 mb-4">
-                          Add-ons: {item.extras.map(e => `${e.name} (₹${e.price})`).join(', ')}
+                        <div className="mb-4">
+                          <p className="text-sm font-medium mb-2">Add-ons:</p>
+                          <div className="space-y-2">
+                            {item.extras.map(extra => {
+                              const quantity = selectedExtras[item.id]?.[extra.name] || 0;
+                              return (
+                                <div key={extra.name} className="flex items-center justify-between">
+                                  <span className="text-sm text-gray-700">{extra.name} (+₹{extra.price})</span>
+                                  <div className="flex items-center gap-2">
+                                    <button
+                                      onClick={() => {
+                                        const currentExtras = selectedExtras[item.id] || {};
+                                        const newQuantity = Math.max(0, (currentExtras[extra.name] || 0) - 1);
+                                        setSelectedExtras({
+                                          ...selectedExtras,
+                                          [item.id]: {
+                                            ...currentExtras,
+                                            [extra.name]: newQuantity
+                                          }
+                                        });
+                                      }}
+                                      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
+                                    >
+                                      -
+                                    </button>
+                                    <span className="w-8 text-center">{quantity}</span>
+                                    <button
+                                      onClick={() => {
+                                        const currentExtras = selectedExtras[item.id] || {};
+                                        setSelectedExtras({
+                                          ...selectedExtras,
+                                          [item.id]: {
+                                            ...currentExtras,
+                                            [extra.name]: (currentExtras[extra.name] || 0) + 1
+                                          }
+                                        });
+                                      }}
+                                      className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
+                                    >
+                                      +
+                                    </button>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
                       )}
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold">₹{item.price}</span>
+                      <span className="text-lg font-semibold">
+                        ₹{(item.variants?.find(v => v.name === selectedVariants[item.id])?.price || item.price) +
+                          (Object.entries(selectedExtras[item.id] || {})
+                            .filter(([_, quantity]) => quantity > 0)
+                            .reduce((sum, [name, quantity]) => sum + (item.extras?.find(e => e.name === name)?.price || 0) * quantity, 0) || 0)}
+                      </span>
                       <button 
                         onClick={() => handleAddToCart(item)}
                         className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
