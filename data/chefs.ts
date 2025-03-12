@@ -109,31 +109,31 @@ export const chefs = [
   //   }
   // },
 
-  {
-    id: 'chef_3',
-    name: "Chef Payal Agarwal",
-    specialty: "Simple Everyday North Indian meals/tiffins",
-    location: "Andheri East, Mumbai",
-    rating: 4.8,
-    image: "/chefs/Chef Payal Agarwal.png",
-    description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking is in rock salt.",
-    topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
-    deliveryAreas: ["Andheri", "Juhu", "Bandra"],
-    menu: {
-      "Main Course": [
-        { id: "ab1", name: "Butter Chicken", price: 350, description: "Tender chicken in rich tomato-butter gravy" },
-        { id: "ab2", name: "Dal Makhani", price: 250, description: "Creamy black lentils cooked overnight" },
-        { id: "ab3", name: "Paneer Tikka Masala", price: 280, description: "Grilled cottage cheese in spiced gravy" }
-      ],
-      "Breads": [
-        { id: "ab4", name: "Butter Naan", price: 40, description: "Tandoor-baked flatbread" },
-        { id: "ab5", name: "Laccha Paratha", price: 45, description: "Layered whole wheat bread" }
-      ],
-      "Rice": [
-        { id: "ab6", name: "Jeera Rice", price: 150, description: "Cumin-flavored basmati rice" }
-      ]
-    }
-  },
+  // {
+  //   id: 'chef_3',
+  //   name: "Chef Payal Agarwal",
+  //   specialty: "Simple Everyday North Indian meals/tiffins",
+  //   location: "Andheri East, Mumbai",
+  //   rating: 4.8,
+  //   image: "/chefs/Chef Payal Agarwal.png",
+  //   description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking is in rock salt.",
+  //   topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
+  //   deliveryAreas: ["Andheri", "Juhu", "Bandra"],
+  //   menu: {
+  //     "Main Course": [
+  //       { id: "ab1", name: "Butter Chicken", price: 350, description: "Tender chicken in rich tomato-butter gravy" },
+  //       { id: "ab2", name: "Dal Makhani", price: 250, description: "Creamy black lentils cooked overnight" },
+  //       { id: "ab3", name: "Paneer Tikka Masala", price: 280, description: "Grilled cottage cheese in spiced gravy" }
+  //     ],
+  //     "Breads": [
+  //       { id: "ab4", name: "Butter Naan", price: 40, description: "Tandoor-baked flatbread" },
+  //       { id: "ab5", name: "Laccha Paratha", price: 45, description: "Layered whole wheat bread" }
+  //     ],
+  //     "Rice": [
+  //       { id: "ab6", name: "Jeera Rice", price: 150, description: "Cumin-flavored basmati rice" }
+  //     ]
+  //   }
+  // },
 
   // {
   //   id: 4,
