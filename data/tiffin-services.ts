@@ -38,7 +38,7 @@ export const tiffinServices: TiffinService[] = [
         },
         {
           id: "dt4",
-          name: "Feel Like Home Thali",
+          name: "Home Like Thali",
           price: 240,
           description: "Dal/Kadhi, 2 Sabzis, Rotis(3), Rice, Papad"
         },
