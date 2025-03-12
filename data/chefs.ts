@@ -112,11 +112,11 @@ export const chefs = [
   {
     id: 'chef_3',
     name: "Chef Payal Agarwal",
-    specialty: "South Indian Cuisine",
+    specialty: "Simple Everyday North Indian meals/tiffins",
     location: "Andheri East, Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Payal Agarwal.png",
-    description: "Specializing in authentic South Indian dishes and home-style South Indian meals",
+    description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking is in rock salt.",
     topDishes: ["Butter Chicken", "Dal Makhani", "Paneer Tikka"],
     deliveryAreas: ["Andheri", "Juhu", "Bandra"],
     menu: {

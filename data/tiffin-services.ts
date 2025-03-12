@@ -4,11 +4,11 @@ export const tiffinServices: TiffinService[] = [
   {
     id: 'tiffin_1',
     name: "Payal Agarwal Tiffin Service",
-    specialty: "Home-style North Indian Meals",
+    specialty: "Simple Everyday North Indian meals/tiffins",
     location: "Sewri, Mumbai",
     rating: 4.7,
     image: "/chefs/Chef Payal Agarwal.png",
-    description: "With over 15 years of experience in providing wholesome home-cooked meals, we ensure that working professionals and students get nutritious food that reminds them of home. Our meals are prepared with pure ghee and high-quality ingredients.",
+    description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking is in rock salt.",
     notes: [
       "* Monthly and weekly subscription available",
       "* Order before 8 PM for next day delivery",
@@ -97,6 +97,462 @@ export const tiffinServices: TiffinService[] = [
           name: "Jain Rice Bowl",
           price: 220,
           description: "Specially prepared rice bowl following Jain dietary restrictions"
+        }
+      ],
+      "Premium Sabzis": [
+        {
+          id: "ps1",
+          name: "Panner Do Pyaaza",
+          price: 360,
+          description: "Paneer cooked with extra onions in rich gravy"
+        },
+        {
+          id: "ps2",
+          name: "Palak Paneer",
+          price: 360,
+          description: "Cottage cheese cooked in spinach gravy"
+        },
+        {
+          id: "ps3",
+          name: "Matar Paneer",
+          price: 360,
+          description: "Cottage cheese and peas curry"
+        },
+        {
+          id: "ps4",
+          name: "Kadai Paneer",
+          price: 360,
+          description: "Paneer cooked in kadai masala"
+        },
+        {
+          id: "ps5",
+          name: "Butter Paneer Masala",
+          price: 360,
+          description: "Rich and creamy paneer curry"
+        },
+        {
+          id: "ps6",
+          name: "Chena Shimamirchi Tamatar",
+          price: 360,
+          description: "Fresh cottage cheese with peppers and tomatoes"
+        },
+        {
+          id: "ps7",
+          name: "Mixed Veg with Paneer",
+          price: 360,
+          description: "Assorted vegetables cooked with paneer"
+        }
+      ],
+      "Special Sabzi": [
+        {
+          id: "ss1",
+          name: "Mix Veg Dry",
+          price: 275,
+          description: "Assorted vegetables in dry preparation"
+        },
+        {
+          id: "ss2",
+          name: "Lal Chana",
+          price: 275,
+          description: "Red chickpeas curry"
+        },
+        {
+          id: "ss3",
+          name: "Lauki Mangori",
+          price: 275,
+          description: "Bottle gourd with dried lentil dumplings"
+        },
+        {
+          id: "ss4",
+          name: "Pata Gobi Matar",
+          price: 275,
+          description: "Cabbage and peas preparation"
+        },
+        {
+          id: "ss5",
+          name: "Phool Gobi Matar",
+          price: 275,
+          description: "Cauliflower and peas curry"
+        },
+        {
+          id: "ss6",
+          name: "Aloo Matar",
+          price: 275,
+          description: "Potatoes and peas curry"
+        },
+        {
+          id: "ss7",
+          name: "Mix Veg Gravy",
+          price: 275,
+          description: "Mixed vegetables in gravy"
+        },
+        {
+          id: "ss8",
+          name: "Besan Shimla Mirchi",
+          price: 275,
+          description: "Bell peppers in gram flour preparation"
+        },
+        {
+          id: "ss9",
+          name: "Chole",
+          price: 275,
+          description: "Chickpea curry"
+        },
+        {
+          id: "ss10",
+          name: "Rajma",
+          price: 275,
+          description: "Kidney beans curry"
+        }
+      ],
+      "Dals": [
+        {
+          id: "d1",
+          name: "Yellow Dal",
+          price: 240,
+          description: "Classic yellow lentils"
+        },
+        {
+          id: "d2",
+          name: "Palak Dal",
+          price: 240,
+          description: "Lentils with spinach"
+        },
+        {
+          id: "d3",
+          name: "Dal Tadka",
+          price: 240,
+          description: "Tempered yellow lentils"
+        },
+        {
+          id: "d4",
+          name: "Chana Dal",
+          price: 300,
+          description: "Split chickpea lentils"
+        },
+        {
+          id: "d5",
+          name: "Haara Moong Dal",
+          price: 300,
+          description: "Green gram lentils"
+        },
+        {
+          id: "d6",
+          name: "Panchmela Dal",
+          price: 300,
+          description: "Five lentils combination"
+        },
+        {
+          id: "d7",
+          name: "Dal Makhani",
+          price: 360,
+          description: "Creamy black lentils"
+        }
+      ],
+      "Kadhis": [
+        {
+          id: "k1",
+          name: "Plain Kadhi",
+          price: 240,
+          description: "Simple yogurt-based curry"
+        },
+        {
+          id: "k2",
+          name: "Pakodi Kadhi",
+          price: 240,
+          description: "Kadhi with gram flour dumplings"
+        },
+        {
+          id: "k3",
+          name: "Palak Kadhi",
+          price: 240,
+          description: "Spinach kadhi"
+        },
+        {
+          id: "k4",
+          name: "Chilla Kadhi",
+          price: 240,
+          description: "Kadhi with gram flour pancakes"
+        },
+        {
+          id: "k5",
+          name: "Chanadal Kadhi",
+          price: 240,
+          description: "Kadhi with split chickpeas"
+        },
+        {
+          id: "k6",
+          name: "Gatta Kadhi",
+          price: 275,
+          description: "Kadhi with gram flour dumplings"
+        },
+        {
+          id: "k7",
+          name: "Mangodi Kadhi",
+          price: 275,
+          description: "Kadhi with moong dal dumplings"
+        },
+        {
+          id: "k8",
+          name: "Papad Kadhi",
+          price: 275,
+          description: "Kadhi with papad"
+        }
+      ],
+      "Add Ons": [
+        {
+          id: "ao1",
+          name: "Chaunkha Mircha",
+          price: 155,
+          description: "Tempered chilies"
+        },
+        {
+          id: "ao2",
+          name: "Tamatar Lungi",
+          price: 155,
+          description: "Tomato preparation"
+        },
+        {
+          id: "ao3",
+          name: "Imli Chatni",
+          price: 155,
+          description: "Tamarind chutney"
+        },
+        {
+          id: "ao4",
+          name: "Papad Churi",
+          price: 155,
+          description: "Crushed papad"
+        },
+        {
+          id: "ao5",
+          name: "Garlic Chatni",
+          price: 180,
+          description: "Garlic chutney"
+        }
+      ],
+      "Breads": [
+        {
+          id: "b1",
+          name: "Tawa Paratha",
+          price: 18,
+          description: "Plain flatbread"
+        },
+        {
+          id: "b2",
+          name: "Phulka",
+          price: 18,
+          description: "Whole wheat flatbread"
+        },
+        {
+          id: "b3",
+          name: "Makke Di Roti",
+          price: 36,
+          description: "Corn flour flatbread (Seasonal)"
+        },
+        {
+          id: "b4",
+          name: "Missi Roti",
+          price: 36,
+          description: "Mixed flour flatbread"
+        },
+        {
+          id: "b5",
+          name: "Namkeen Chanadal Puran Puri/Belma Paratha",
+          price: 36,
+          description: "Salty & spicy thin Parathas"
+        },
+        {
+          id: "b6",
+          name: "Gluten Free Roti",
+          price: 36,
+          description: "Gluten-free flatbread"
+        },
+        {
+          id: "b7",
+          name: "Ajwain Kadhai Puri (5)",
+          price: 120,
+          description: "Carom seeds flavored deep-fried bread"
+        },
+        {
+          id: "b8",
+          name: "Thepla (5)",
+          price: 120,
+          description: "Gujarati style flatbread"
+        }
+      ],
+      "Stuffed Parathas": [
+        {
+          id: "sp1",
+          name: "Chanadal",
+          price: 120,
+          description: "Split chickpea stuffed flatbread"
+        },
+        {
+          id: "sp2",
+          name: "Aloo",
+          price: 120,
+          description: "Potato stuffed flatbread"
+        },
+        {
+          id: "sp3",
+          name: "Pyaaz",
+          price: 120,
+          description: "Onion stuffed flatbread"
+        },
+        {
+          id: "sp4",
+          name: "Sattu",
+          price: 120,
+          description: "Roasted gram flour stuffed flatbread"
+        },
+        {
+          id: "sp5",
+          name: "Paneer",
+          price: 155,
+          description: "Cottage cheese stuffed flatbread"
+        },
+        {
+          id: "sp6",
+          name: "Besan",
+          price: 120,
+          description: "Gram flour stuffed flatbread"
+        },
+        {
+          id: "sp7",
+          name: "Cheese",
+          price: 155,
+          description: "Cheese stuffed flatbread"
+        }
+      ],
+      "Rice & Accompaniments": [
+        {
+          id: "r1",
+          name: "Plain Curd",
+          price: 155,
+          description: "Fresh yogurt"
+        },
+        {
+          id: "r2",
+          name: "Raita",
+          price: 155,
+          description: "Seasoned yogurt with vegetables"
+        },
+        {
+          id: "r3",
+          name: "Plain Rice",
+          price: 165,
+          description: "Steamed rice"
+        },
+        {
+          id: "r4",
+          name: "Jeera Rice",
+          price: 275,
+          description: "Cumin flavored rice"
+        },
+        {
+          id: "r5",
+          name: "Peas Pulao",
+          price: 360,
+          description: "Rice with green peas"
+        },
+        {
+          id: "r6",
+          name: "Mix Veg Pulao",
+          price: 360,
+          description: "Rice with mixed vegetables"
+        },
+        {
+          id: "r7",
+          name: "Gatta Pulao",
+          price: 360,
+          description: "Rice with gram flour dumplings"
+        }
+      ],
+      "Regional Specialties - Rajasthani": [
+        {
+          id: "rs1",
+          name: "Masala Gatta",
+          price: 300,
+          description: "Spiced gram flour dumplings"
+        },
+        {
+          id: "rs2",
+          name: "Papad Mangori",
+          price: 300,
+          description: "Papad with lentil dumplings"
+        },
+        {
+          id: "rs3",
+          name: "Panchmela Dal",
+          price: 300,
+          description: "Five lentils mix"
+        },
+        {
+          id: "rs4",
+          name: "Ker Sangri",
+          price: 300,
+          description: "Traditional Rajasthani preparation"
+        }
+      ],
+      "Regional Specialties - Bengali": [
+        {
+          id: "bg1",
+          name: "Luchi (5)",
+          price: 120,
+          description: "Deep fried bread"
+        },
+        {
+          id: "bg2",
+          name: "Bengali Aloo Dum",
+          price: 300,
+          description: "Bengali style potato curry"
+        },
+        {
+          id: "bg3",
+          name: "Bengali Style Channa Dal",
+          price: 360,
+          description: "Bengali preparation of split chickpeas"
+        }
+      ],
+      "Regional Specialties - Bihari": [
+        {
+          id: "bh1",
+          name: "Aloo Chokha",
+          price: 240,
+          description: "Mashed potato preparation"
+        },
+        {
+          id: "bh2",
+          name: "Tamatar Chatni",
+          price: 240,
+          description: "Tomato chutney"
+        }
+      ],
+      "Chaats": [
+        {
+          id: "ch1",
+          name: "Kolkata Ghughni Chaat",
+          price: 275,
+          description: "Ragda with spices"
+        },
+        {
+          id: "ch2",
+          name: "Churmur",
+          price: 300,
+          description: "Crushed ragda, pakodi, aloo, lalchana & crunchy puris with spices n imli chatni (15 puris come separately)"
+        },
+        {
+          id: "ch3",
+          name: "Puchka 25",
+          price: 300,
+          description: "With aloochana, imli pudina paani and imli chatni"
+        },
+        {
+          id: "ch4",
+          name: "Puchka 50",
+          price: 540,
+          description: "With aloochana, imli pudina paani and imli chatni"
         }
       ]
     }
