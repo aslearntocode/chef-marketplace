@@ -10,16 +10,6 @@ import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
 import { toast } from 'react-hot-toast';
 
-interface MenuItem {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  servingSize?: string;
-  variants?: Array<{ name: string; price: number }>;
-  extras?: Array<{ name: string; price: number }>;
-}
-
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
