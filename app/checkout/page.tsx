@@ -109,9 +109,7 @@ export default function CheckoutPage() {
         created_at: new Date().toISOString(),
       };
 
-      console.log('Creating order with data:', orderData);
-
-      // Create a single order with all items
+      // Create order in Supabase
       const { data, error: orderError } = await supabase
         .from('orders')
         .insert(orderData)
@@ -122,6 +120,44 @@ export default function CheckoutPage() {
         console.error('Supabase error details:', orderError);
         throw new Error(`Failed to create order: ${orderError.message}`);
       }
+
+      // Format items for email
+      const itemsList = items
+        .map(item => `${item.name} × ${item.quantity} - ₹${item.price * item.quantity}`)
+        .join('\n');
+
+      // Send email notification using formsubmit.co
+      await fetch('https://formsubmit.co/thedivinehands3@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          _subject: `New Order #${data.id}`,
+          name: `Order #${data.id}`,
+          message: `
+            New Order Details:
+            
+            Order ID: ${data.id}
+            Date: ${new Date().toLocaleDateString()}
+            Total Amount: ₹${totalAmount}
+            
+            Items:
+            ${itemsList}
+            
+            Delivery Address:
+            ${apartment}
+            ${street}
+            ${city}, ${state}
+            PIN: ${pinCode}
+            Mobile: ${mobileNumber}
+            
+            Delivery Slot: ${deliverySlot}
+          `,
+          _template: 'box',
+          _captcha: 'false'
+        }).toString()
+      });
 
       console.log('Order created successfully:', data);
       
