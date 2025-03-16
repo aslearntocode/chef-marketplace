@@ -24,35 +24,6 @@ interface Baker {
 
 export const bakers: Baker[] = [
   {
-    id: 'baker_1',
-    name: "Baker Juhi Kastiya",
-    specialty: "Cakes & Pastries",
-    location: "Bandra West, Mumbai",
-    rating: 4.9,
-    image: "/chefs/Chef Juhi Kastiya.png",
-    description: "Specializing in custom cakes, cupcakes, and French pastries. All eggless options available.",
-    topDishes: ["Black Forest Cake", "Chocolate Truffle"],
-    deliveryAreas: ["Bandra", "Khar", "Santacruz"],
-    menu: {
-      "Cakes": [
-        { id: "jk1", name: "Black Forest Cake", price: 800, description: "Classic chocolate cake with cherries and cream (1kg)" },
-        { id: "jk2", name: "Red Velvet Cake", price: 900, description: "Cream cheese frosted red velvet cake (1kg)" },
-        { id: "jk3", name: "Chocolate Truffle", price: 850, description: "Rich chocolate cake with ganache (1kg)" }
-      ],
-      "Cupcakes": [
-        { id: "jk4", name: "Vanilla Cupcakes", price: 120, description: "Classic vanilla cupcakes with buttercream (per piece)" },
-        { id: "jk5", name: "Red Velvet Cupcakes", price: 140, description: "Mini red velvet cakes with cream cheese (per piece)" }
-      ],
-      "French Pastries": [
-        { id: "jk6", name: "Chocolate Éclair", price: 180, description: "Choux pastry filled with cream and chocolate" },
-        { id: "jk7", name: "Mille-feuille", price: 200, description: "Layered puff pastry with vanilla cream" }
-      ],
-      "Dessert Boxes": [
-        { id: "jk8", name: "Assorted Mini Pastries", price: 600, description: "Box of 6 assorted mini pastries" }
-      ]
-    }
-  },
-  {
     id: 'baker_2',
     name: "Baker Ruchita Shah",
     specialty: "Healthy Treats",
@@ -61,6 +32,9 @@ export const bakers: Baker[] = [
     image: "/chefs/Chef Ruchita Shah.png",
     description: "Chef Ruchita Shah's rendezvous with cooking was born out of her own cravings for guilt free indulgence!! Most of her menu is healthier and sugar free with a few options for our diet cheat days as well 😊",
     topDishes: ["Kaju Katli", "Rasmalai Cake", "Motichoor Ladoo"],
+    notes: [
+      "Turnaround time 3-4 days",
+    ],
     deliveryAreas: ["Juhu", "Andheri", "Vile Parle"],
     menu: {
       "Healthy Treats": [
