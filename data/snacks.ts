@@ -13,79 +13,79 @@ export const snacksChefs: Chef[] = [
     menu: {
       "Tea Time Snacks": [
         {
-          id: 104,
+          id: "snack_104",
           name: "Moongdal Chakli",
           price: 180,
           description: "Crispy spiral snack made from moong dal (250gms)"
         },
         {
-          id: 105,
+          id: "snack_105",
           name: "Shakarpara",
           price: 180,
           description: "Sweet diamond-shaped crispy snack (250gms)"
         },
         {
-          id: 106,
+          id: "snack_106",
           name: "Methi Puri",
           price: 180,
           description: "Crispy puri flavored with fenugreek (250gms)"
         },
         {
-          id: 107,
+          id: "snack_107",
           name: "Chaat Puri",
           price: 180,
           description: "Spicy and tangy crispy puri (250gms)"
         },
         {
-          id: 108,
+          id: "snack_108",
           name: "Corn Poha",
           price: 180,
           description: "Flattened rice snack with corn (250gms)"
         },
         {
-          id: 109,
+          id: "snack_109",
           name: "Roasted Poha Makhana",
           price: 180,
           description: "Roasted fox nuts with flattened rice (250gms)"
         },
         {
-          id: 110,
+          id: "snack_110",
           name: "Nachni Khakra",
           price: 240,
           description: "Crispy flatbread made with finger millet (250gms)"
         },
         {
-          id: 111,
+          id: "snack_111",
           name: "Jowar Khakra",
           price: 240,
           description: "Crispy flatbread made with sorghum (250gms)"
         },
         {
-          id: 112,
+          id: "snack_112",
           name: "Mix Dal Khakra",
           price: 240,
           description: "Crispy flatbread made with mixed lentils (250gms)"
         },
         {
-          id: 113,
+          id: "snack_113",
           name: "Chorafali Khakra",
           price: 240,
           description: "Special Gujarati style crispy khakra (250gms)"
         },
         {
-          id: 114,
+          id: "snack_114",
           name: "Methi Sambariya Khakra",
           price: 240,
           description: "Fenugreek flavored special khakra (250gms)"
         },
         {
-          id: 115,
+          id: "snack_115",
           name: "Methi Khakra",
           price: 240,
           description: "Fenugreek flavored crispy flatbread (250gms)"
         },
         {
-          id: 116,
+          id: "snack_116",
           name: "Methi Mogra Khakra",
           price: 240,
           description: "Special fenugreek and mogra flavored khakra (250gms)"
