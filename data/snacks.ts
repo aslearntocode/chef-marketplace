@@ -9,6 +9,9 @@ export const snacksChefs: Chef[] = [
     rating: 4.8,
     image: "/chefs/Chef Ahilya Jaiswal.png",
     description: "Welcome to Chef Ahilya Jaiswal's kitchen! As a homemaker and passionate cook, she delights in serving up delicious, homemade dishes infused with love, care, and timeless traditional flair. Every bite is a taste of warmth and hospitality, just like the surreal mom-made food!",
+    notes: [
+      "Order before 8 PM for next day delivery"
+    ],
     deliveryAreas: ["Worli", "Lower Parel", "Prabhadevi"],
     menu: {
       "Tea Time Snacks": [

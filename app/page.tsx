@@ -255,7 +255,7 @@ export default function Home() {
           <section className="bg-[#FFFBEB] rounded-lg p-8 border-2 border-[#FFD700]">
             <div className="flex items-center justify-center gap-2 mb-6">
               <span className="text-3xl">🍽️</span>
-              <h2 className="text-3xl font-bold">Calling All Home Chefs & Bakers!</h2>
+              <h2 className="text-2xl font-bold">Calling All Home Chefs & Bakers!</h2>
               <span className="text-3xl">🍰</span>
             </div>
             
