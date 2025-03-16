@@ -3,14 +3,13 @@ export const chefs = [
     id: 'chef_5',
     name: "Chef Juhi Kastiya",
     specialty: "Indian, Continental, Mediterranean",
-    location: "Bandra, Mumbai",
+    location: "Lower Parel, Mumbai",
     rating: 4.8,
     image: "/chefs/Chef Juhi Kastiya.png",
     description: "Chef Juhi Kastiya is a culinary artist who specializes in Indian, Continental, and Mediterranean cuisines. Her passion for cooking and attention to detail ensures every dish is a masterpiece.",
     notes: [
-      "Pre-order required",
-      "Customization available",
-      "Party orders accepted"
+      "Order 2 days in advance for individual orders",
+      "Order 4-5 days in advance for bulk orders"
     ],
     topDishes: ["Butter Chicken", "Biryani", "Mediterranean Platter"],
     deliveryAreas: ["Bandra", "Khar", "Santacruz"],
