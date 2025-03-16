@@ -10,17 +10,6 @@ import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
 import { toast } from 'react-hot-toast';
 
-interface ChefHeaderProps {
-  name: string;
-  image: string;
-  specialty: string;
-  location: string;
-  rating: number;
-  description: string;
-  deliveryAreas: string[];
-  notes?: string[];
-}
-
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
@@ -35,17 +24,6 @@ export default function ChefPage() {
   if (!chef) {
     return <div>Chef not found</div>;
   }
-
-  const headerProps: ChefHeaderProps = {
-    name: chef.name,
-    image: chef.image,
-    specialty: chef.specialty,
-    location: chef.location,
-    rating: chef.rating,
-    description: chef.description,
-    deliveryAreas: chef.deliveryAreas,
-    notes: chef.notes
-  };
 
   const categories = Object.keys(chef.menu);
   const items = selectedCategory === 'all'
@@ -86,7 +64,16 @@ export default function ChefPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8 mt-24">
-      <ChefHeader {...headerProps} />
+      <ChefHeader
+        image={chef.image}
+        name={chef.name}
+        rating={chef.rating}
+        specialty={chef.specialty}
+        location={chef.location}
+        description={chef.description}
+        notes={chef.notes}
+        vendorId={chef.id.toString()}
+      />
 
       <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Menu</h2>
