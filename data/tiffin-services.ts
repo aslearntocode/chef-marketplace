@@ -556,5 +556,88 @@ export const tiffinServices: TiffinService[] = [
         }
       ]
     }
+  },
+  {
+    id: 'tiffin_2',
+    name: "Chef Anjali Broor",
+    specialty: "Home-style Indian & International Cuisine",
+    location: "Parel, Mumbai",
+    rating: 4.8,
+    image: "/chefs/Chef Anjali Broor.png",
+    description: "Anjali, a seasoned ex banker, decided to follow her heart and eventually became a seasoned home chef. She believes in preparing food which is healthy and yummy. Each dish prepared by her brings in a tasty twist to conventional food items and recipes. Anjali believes in using the best ingredients and she never compromises with the quality and the taste of the raw materials. She is a staunch believer of 'FARM TO FORK'. Anjali started with weekend menus only but she now also caters for parties and corporate get togethers.",
+    notes: [
+      "Farm to Fork Philosophy",
+      "Weekend Special Menus",
+      "Party & Corporate Catering",
+      "Order before 8 PM for next day delivery",
+    ],
+    deliveryAreas: ["Andheri", "Juhu", "Bandra"],
+    menu: {
+      "March 17 - Monday": [
+        {
+          id: "khao-suey",
+          name: "Khao Suey",
+          description: "If something could be called a bowl of happiness, this could well be it. A delicious noodle dish with a fragrant and creamy coconut milk curry infused with lemongrass, topped with diced Asian vegetables and an array of toppings that give it texture and flavor.",
+          servingSize: "Noodles, Curry and Condiments all served separately",
+          price: 470,
+          variants: [
+            { name: "Chicken", price: 490 },
+            { name: "Vegetable", price: 470 }
+          ]
+        }
+      ],
+      "March 18 - Tuesday": [
+        {
+          id: "strawberry-feta-salad",
+          name: "Strawberries and Feta Salad",
+          description: "Fresh strawberries, mulberries, and blueberries nestled among a mix of greens, feta cheese, crunchy nuts, fresh herbs, and more. But the real star is the balsamic reduction!",
+          servingSize: "Service Size: 500ml",
+          price: 685
+        }
+      ],
+      "March 19 - Wednesday": [
+        {
+          id: "butter-chicken",
+          name: "Butter Chicken",
+          description: "A velvety tomato-based sauce enriched with butter and cream that wraps around tender chicken pieces, creating a harmonious blend of flavors. We use a secret blend of traditional Indian spices to give our Butter Chicken that unmistakable and irresistible taste.",
+          servingSize: "(4 pieces of boneless chicken + 1 naan)",
+          price: 580,
+          extras: [
+            { name: "Extra Naan", price: 85 }
+          ]
+        }
+      ],
+      "March 20 - Thursday": [
+        {
+          id: "chicken-kebabs",
+          name: "Chicken Kebabs with Tzatziki",
+          description: "Chicken mince combined with mild spices, onion, and cilantro. Shallow fried in a skillet and served with homemade Tzatziki.",
+          servingSize: "3 Kebabs and 50ml Tzatziki",
+          price: 470
+        },
+        {
+          id: "dal-makhani",
+          name: "Slow Cooked Dal Makhni with Naan",
+          description: "Prepared with black urad dal and kidney beans. The secret ingredient is our 'masala' that goes in along with special tempering, making it really flavorful!",
+          servingSize: "250ml Dal served with 1 naan",
+          price: 470,
+          extras: [
+            { name: "Extra naan", price: 85 }
+          ]
+        }
+      ],
+      "March 21 - Friday": [
+        {
+          id: "chicken-ghee-roast",
+          name: "Chicken Ghee Roast and parantha",
+          description: "Chicken Ghee Roast is a mildly spicy and tangy dish with freshly ground masala slow-roasted in ghee to create a magical flavour.",
+          servingSize: "4 pieces of boneless chicken + 1 paratha",
+          price: 580,
+          extras: [
+            { name: "Extra parantha", price: 85 }
+          ]
+        }
+      ]
+    }
   }
 ]; 
