@@ -15,6 +15,8 @@ interface Order {
   total_amount: number;
   status: string;
   rating?: number;
+  vendor_id?: string;
+  vendor_name: string;
   delivery_address: {
     mobile: string;
     pin_code: string;
@@ -98,8 +100,6 @@ export default function OrdersPage() {
         return;
       }
       
-      console.log('Fetching orders for user:', user.uid);
-      
       try {
         const { data, error } = await supabase
           .from('orders')
@@ -107,12 +107,8 @@ export default function OrdersPage() {
           .eq('user_id', user.uid)
           .order('created_at', { ascending: false });
 
-        if (error) {
-          console.error('Supabase error:', error);
-          throw error;
-        }
+        if (error) throw error;
         
-        console.log('Fetched orders:', data);
         setOrders(data || []);
       } catch (error) {
         console.error('Error fetching orders:', error);
@@ -154,6 +150,9 @@ export default function OrdersPage() {
                 </p>
                 <p className="text-sm text-gray-500">
                   Date: {new Date(order.created_at).toLocaleDateString()}
+                </p>
+                <p className="text-sm font-medium text-gray-700">
+                  Vendor: {order.vendor_name}
                 </p>
               </div>
               <div className="text-right">

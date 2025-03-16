@@ -84,6 +84,9 @@ export default function CheckoutPage() {
       
       console.log('Creating order with vendor_id:', vendor_id);
 
+      // Get vendor name from the first item
+      const vendorName = items[0]?.chefName || items[0]?.bakerName || 'Unknown Vendor';
+
       const orderData = {
         user_id: user.uid,
         items: items.map(item => ({
@@ -106,8 +109,11 @@ export default function CheckoutPage() {
         },
         delivery_slot: deliverySlot,
         vendor_id: vendor_id,
+        vendor_name: vendorName,
         created_at: new Date().toISOString(),
       };
+
+      console.log('Creating order with data:', orderData);
 
       // Create order in Supabase
       const { data, error: orderError } = await supabase
@@ -126,41 +132,47 @@ export default function CheckoutPage() {
         .map(item => `${item.name} × ${item.quantity} - ₹${item.price * item.quantity}`)
         .join('\n');
 
-      // Send email notification using formsubmit.co
-      await fetch('https://formsubmit.co/thedivinehands3@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          _subject: `New Order #${data.id}`,
-          name: `Order #${data.id}`,
-          message: `
-            New Order Details:
-            
-            Order ID: ${data.id}
-            Date: ${new Date().toLocaleDateString()}
-            Total Amount: ₹${totalAmount}
-            
-            Items:
-            ${itemsList}
-            
-            Delivery Address:
-            ${apartment}
-            ${street}
-            ${city}, ${state}
-            PIN: ${pinCode}
-            Mobile: ${mobileNumber}
-            
-            Delivery Slot: ${deliverySlot}
-          `,
-          _template: 'box',
-          _captcha: 'false'
-        }).toString()
-      });
+      // Send email notification using formsubmit.co with x-www-form-urlencoded
+      try {
+        await fetch('https://formsubmit.co/thedivinehands3@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            _subject: `New Order #${data.id}`,
+            name: `Order #${data.id}`,
+            message: `
+              New Order Details:
+              
+              Order ID: ${data.id}
+              Vendor: ${vendorName}
+              Date: ${new Date().toLocaleDateString()}
+              Total Amount: ₹${totalAmount}
+              
+              Items:
+              ${itemsList}
+              
+              Delivery Address:
+              ${apartment}
+              ${street}
+              ${city}, ${state}
+              PIN: ${pinCode}
+              Mobile: ${mobileNumber}
+              
+              Delivery Slot: ${deliverySlot}
+            `,
+            _template: 'box',
+            _captcha: 'false',
+            _next: window.location.origin + '/checkout/success'
+          }).toString()
+        });
+        console.log('Email notification sent');
+      } catch (emailError) {
+        // Log the error but don't throw it since the order was successful
+        console.log('Email notification failed to send:', emailError);
+      }
 
-      console.log('Order created successfully:', data);
-      
       // Clear cart and redirect to success page
       clearCart();
       router.push('/checkout/success');
