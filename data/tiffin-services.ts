@@ -3,12 +3,12 @@ import type { TiffinService } from '@/types/tiffin';
 export const tiffinServices: TiffinService[] = [
   {
     id: 'tiffin_1',
-    name: "Payal Agarwal Tiffin Service",
+    name: "Chef Payal Agarwal",
     specialty: "Simple Everyday North Indian meals/tiffins",
     location: "Sewri, Mumbai",
     rating: 4.7,
     image: "/chefs/Chef Payal Agarwal.png",
-    description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking is in rock salt.",
+    description: "Chef Payal runs a cloud kitchen but the concept is 'GHAR JAISA KHANA' and not typical restaurant food. Payal's USP is pure veg Marwari, Bengali and North Indian food + lip-smacking chaats! Last but not the least, Payal does her entire cooking in rock salt.",
     notes: [
       "* Monthly and weekly subscription available",
       "* Order before 8 PM for next day delivery",
@@ -143,7 +143,7 @@ export const tiffinServices: TiffinService[] = [
           description: "Assorted vegetables cooked with paneer"
         }
       ],
-      "Special Sabzi": [
+      "Special Sabzis": [
         {
           id: "ss1",
           name: "Mix Veg Dry",
@@ -469,7 +469,7 @@ export const tiffinServices: TiffinService[] = [
           description: "Rice with gram flour dumplings"
         }
       ],
-      "Regional Specialties - Rajasthani": [
+      "Rajasthani Cuisine": [
         {
           id: "rs1",
           name: "Masala Gatta",
@@ -495,7 +495,7 @@ export const tiffinServices: TiffinService[] = [
           description: "Traditional Rajasthani preparation"
         }
       ],
-      "Regional Specialties - Bengali": [
+      "Bengali Cuisine": [
         {
           id: "bg1",
           name: "Luchi (5)",
@@ -515,7 +515,7 @@ export const tiffinServices: TiffinService[] = [
           description: "Bengali preparation of split chickpeas"
         }
       ],
-      "Regional Specialties - Bihari": [
+      "Bihari Cuisine": [
         {
           id: "bh1",
           name: "Aloo Chokha",
@@ -524,7 +524,7 @@ export const tiffinServices: TiffinService[] = [
         },
         {
           id: "bh2",
-          name: "Tamatar Chatni",
+          name: "Tamatar Chutney",
           price: 240,
           description: "Tomato chutney"
         }

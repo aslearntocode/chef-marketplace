@@ -1,7 +1,7 @@
 export const chefs = [
   {
     id: 'chef_1',
-    name: "Anjali Broor",
+    name: "Chef Anjali Broor",
     image: "/chefs/Chef Anjali Broor.png",
     rating: 4.8,
     specialty: "Home-style Indian & International Cuisine",
