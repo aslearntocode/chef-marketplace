@@ -3,17 +3,17 @@ export const chefs = [
     id: 'chef_5',
     name: "Chef Juhi Kastiya",
     specialty: "Indian, Continental, Mediterranean",
-    location: "Worli, Mumbai",
+    location: "Bandra, Mumbai",
+    rating: 4.8,
     image: "/chefs/Chef Juhi Kastiya.png",
-    description: "Chef Juhi Kastiya started her journey as a baker/chef 4 years back and has been baking artisinal breads ever since. It's been a wonderful journey for her- thanks to all the love and trust of her lovely clients. She is on this platform to bedazzle people with her baked culinary delights.",
+    description: "Chef Juhi Kastiya is a culinary artist who specializes in Indian, Continental, and Mediterranean cuisines. Her passion for cooking and attention to detail ensures every dish is a masterpiece.",
     notes: [
-      "* All items are eggless",
-      "* We accommodate requests for Jain variations also",
-      "* All orders to be placed one day in advance",
-      "* All bulk orders should be placed at least 4 to 5 days in advance"
+      "Pre-order required",
+      "Customization available",
+      "Party orders accepted"
     ],
-    topDishes: ["Vol-Au-Vents", "Potli Biryani", "Pesto Arabiata Twisty"],
-    deliveryAreas: ["Powai", "Vikhroli", "Kanjurmarg", "Bhandup"],
+    topDishes: ["Butter Chicken", "Biryani", "Mediterranean Platter"],
+    deliveryAreas: ["Bandra", "Khar", "Santacruz"],
     menu: {
       "Starters": [
         { id: "jk1", name: "Vol-Au-Vents", price: 720, description: "A small round case of puff pastry filled with a savoury mixture! Creamy spinach and corn filling mixture (20pcs)" },
