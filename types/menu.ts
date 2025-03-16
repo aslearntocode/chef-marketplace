@@ -1,12 +1,9 @@
 export interface MenuItem {
-  id: string | number;
+  id: string;
   name: string;
-  description: string;
-  price: number | string;
+  price: number;
+  description?: string;
   servingSize?: string;
-  parentItem?: string;
-  discountedPrice?: number;
-  category?: string;
   variants?: Array<{
     name: string;
     price: number;
@@ -15,6 +12,9 @@ export interface MenuItem {
     name: string;
     price: number;
   }>;
+  parentItem?: string;
+  discountedPrice?: number;
+  category?: string;
 }
 
 // Remove CartMenuItem if it's not being used 
