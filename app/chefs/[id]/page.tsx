@@ -10,6 +10,16 @@ import { getAuth } from 'firebase/auth';
 import ChefHeader from '@/components/ChefHeader';
 import { toast } from 'react-hot-toast';
 
+interface MenuItem {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  servingSize?: string;
+  variants?: Array<{ name: string; price: number }>;
+  extras?: Array<{ name: string; price: number }>;
+}
+
 export default function ChefPage() {
   const params = useParams();
   const chefId = params?.id as string;
@@ -111,16 +121,18 @@ export default function ChefPage() {
                 <h2 className="text-2xl font-bold mb-4">{category}</h2>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {items.map((item: MenuItem) => (
+                {items.map((item) => (
                   <div
                     key={item.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
                   >
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
-                      <p className="text-gray-600 mb-2">{item.description}</p>
+                      <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
+                      <p className="text-gray-600 mb-4">{item.description}</p>
                       {item.servingSize && (
-                        <p className="text-sm text-gray-500 mb-4">{item.servingSize}</p>
+                        <p className="text-sm text-gray-500 mb-2">
+                          {item.servingSize}
+                        </p>
                       )}
                       
                       {item.variants && (
