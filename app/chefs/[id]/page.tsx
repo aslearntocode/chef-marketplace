@@ -53,6 +53,7 @@ export default function ChefPage() {
       quantity: 1,
       chefId: chef.id,
       chefName: chef.name,
+      vendor_id: chef.id,
       extras: extras,
       variant: variant ? variant.name : undefined
     };
