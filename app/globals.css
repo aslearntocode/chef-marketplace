@@ -23,12 +23,24 @@ main {
   @apply bg-[#FFC72C] min-h-screen;
 }
 
+/* Prevent text wobbling */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure headings and text elements are stable */
+h1, h2, h3, h4, h5, h6, p, span {
+  @apply transform-none;
+}
+
 .nav-link {
-  @apply text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium;
+  @apply text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium transform-none;
 }
 
 .mobile-nav-link {
-  @apply block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50;
+  @apply block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 transform-none;
 }
 
 /* Content sections with white background */
@@ -39,4 +51,10 @@ main {
 /* Grid sections with transparent background */
 .grid-section {
   @apply py-12;
+}
+
+/* Ensure buttons and interactive elements don't wobble */
+button, a {
+  @apply transform-none;
+  -webkit-tap-highlight-color: transparent;
 }

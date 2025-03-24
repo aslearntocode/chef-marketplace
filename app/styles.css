@@ -41,32 +41,42 @@
 .chef-marketplace {
   width: 100%;
   overflow: hidden;
-  padding: 20px 0;
-  background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+  position: relative;
+}
 
-  .slider {
-    display: flex;
-    gap: 2rem;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+.slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1rem;
+}
 
-  .slider::-webkit-scrollbar {
-    display: none;
-  }
+.slider::-webkit-scrollbar {
+  display: none;
+}
 
+.slide {
+  flex: 0 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 640px) {
   .slide {
-    flex: 0 0 calc((100% - 4rem) / 3);
-    max-width: 350px;
-    transition: transform 0.3s ease;
+    width: 350px;
   }
+}
 
-  .slide:hover {
-    transform: translateY(-10px);
-  }
+/* Ensure text elements have stable positioning */
+h1, h2, h3, h4, h5, h6, p, span {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Arrow Animation */
@@ -79,13 +89,19 @@
   }
 }
 
-button {
+/* Only apply animation to slider navigation buttons */
+.slider-nav-button {
   animation: bounceX 1.5s infinite;
 }
 
 /* Left arrow specific animation */
-button:first-of-type {
+.slider-nav-button.left {
   animation: bounceX 1.5s infinite reverse;
+}
+
+/* Remove general button animation */
+button {
+  animation: none;
 }
 
 /* Container for chef-marketplace */

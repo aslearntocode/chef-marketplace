@@ -24,7 +24,7 @@ export default function BakerPage() {
   const bakerId = params?.id as string;
   const baker = bakers.find(b => b.id === bakerId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const { addToCart } = useCart();
+  const { addToCart, items, updateQuantity, removeFromCart } = useCart();
   const router = useRouter();
   const auth = getAuth();
 
@@ -35,6 +35,11 @@ export default function BakerPage() {
       </div>
     );
   }
+
+  const getItemQuantity = (itemId: string) => {
+    const item = items.find(item => item.id === `${baker.id}-${itemId}`);
+    return item ? item.quantity : 0;
+  };
 
   const filteredMenu = selectedCategory === 'all'
     ? Object.entries(baker.menu).map(([category, items]) => ({ category, items }))
@@ -68,6 +73,17 @@ export default function BakerPage() {
     });
 
     toast.success(`${item.name} added to cart`);
+  };
+
+  const handleRemoveFromCart = (itemId: string) => {
+    if (!auth.currentUser) return;
+    const fullItemId = `${baker.id}-${itemId}`;
+    const item = items.find(item => item.id === fullItemId);
+    if (item && item.quantity > 1) {
+      updateQuantity(fullItemId, item.quantity - 1);
+    } else {
+      removeFromCart(fullItemId);
+    }
   };
 
   return (
@@ -132,12 +148,32 @@ export default function BakerPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold">₹{item.price}</span>
-                      <button 
-                        onClick={() => handleAddToCart(item as MenuItem)}
-                        className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
-                      >
-                        Add to Cart
-                      </button>
+                      <div className="flex items-center space-x-2">
+                        {getItemQuantity(item.id) > 0 ? (
+                          <>
+                            <button
+                              onClick={() => handleRemoveFromCart(item.id)}
+                              className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                            >
+                              -
+                            </button>
+                            <span className="mx-2">{getItemQuantity(item.id)}</span>
+                            <button
+                              onClick={() => handleAddToCart(item)}
+                              className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                            >
+                              +
+                            </button>
+                          </>
+                        ) : (
+                          <button 
+                            onClick={() => handleAddToCart(item)}
+                            className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                          >
+                            Add to Cart
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}

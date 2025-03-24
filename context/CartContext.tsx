@@ -33,14 +33,26 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   // Get current vendor from cart items
   const getCurrentVendor = () => {
-    if (items.length === 0) return '';
-    return items[0].bakerName || items[0].chefName || '';
+    if (items.length === 0) return null;
+    const firstItem = items[0];
+    if (firstItem.vendor_id === 'whole-foods') return 'whole-foods';
+    return firstItem.chefName || firstItem.bakerName || null;
   };
 
   // Check if item is from same vendor
-  const isFromSameVendor = (itemVendor: string | undefined) => {
+  const isFromSameVendor = (newItem: CartItem) => {
     const currentVendor = getCurrentVendor();
-    return !currentVendor || currentVendor === (itemVendor || '');
+    if (!currentVendor) return true;
+    
+    if (currentVendor === 'whole-foods') {
+      return newItem.vendor_id === 'whole-foods';
+    }
+    
+    if (newItem.vendor_id === 'whole-foods') {
+      return false;
+    }
+    
+    return currentVendor === (newItem.chefName || newItem.bakerName);
   };
 
   // Load cart from localStorage on mount
@@ -57,11 +69,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   }, [items]);
 
   const addToCart = (item: CartItem) => {
-    const itemVendor = item.bakerName || item.chefName || '';
-    
-    if (!isFromSameVendor(itemVendor)) {
+    if (!isFromSameVendor(item)) {
       const confirmed = window.confirm(
-        'Each order can only contain items from one chef/baker. Would you like to clear your current cart and start a new order?'
+        'Each order can only contain items from one vendor. Would you like to clear your current cart and start a new order?'
       );
       
       if (confirmed) {

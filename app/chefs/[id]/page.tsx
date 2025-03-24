@@ -15,7 +15,7 @@ export default function ChefPage() {
   const chefId = params?.id as string;
   const chef = chefs.find(b => b.id === chefId);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const { addToCart } = useCart();
+  const { addToCart, items: cartItems, updateQuantity, removeFromCart } = useCart();
   const router = useRouter();
   const auth = getAuth();
   const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
@@ -26,9 +26,14 @@ export default function ChefPage() {
   }
 
   const categories = Object.keys(chef.menu);
-  const items = selectedCategory === 'all'
+  const menuItems = selectedCategory === 'all'
     ? Object.values(chef.menu).flat()
     : chef.menu[selectedCategory as keyof typeof chef.menu] || [];
+
+  const getItemQuantity = (itemId: string) => {
+    const item = cartItems.find(item => item.id === `${chef.id}-${itemId}`);
+    return item ? item.quantity : 0;
+  };
 
   const handleAddToCart = (item: MenuItem) => {
     if (!auth.currentUser) {
@@ -47,7 +52,7 @@ export default function ChefPage() {
       : [];
 
     const cartItem = {
-      id: item.id,
+      id: `${chef.id}-${item.id}`,
       name: item.name,
       price: variant ? variant.price : item.price,
       quantity: 1,
@@ -62,8 +67,20 @@ export default function ChefPage() {
     toast.success('Added to cart!');
   };
 
+  const handleRemoveFromCart = (itemId: string) => {
+    if (!auth.currentUser) return;
+    const fullItemId = `${chef.id}-${itemId}`;
+    const item = cartItems.find(item => item.id === fullItemId);
+    if (item && item.quantity > 1) {
+      updateQuantity(fullItemId, item.quantity - 1);
+    } else {
+      removeFromCart(fullItemId);
+    }
+  };
+
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8 mt-24">
+    <main>
+      <div className="h-[72px]" />
       <ChefHeader
         image={chef.image}
         name={chef.name}
@@ -75,96 +92,218 @@ export default function ChefPage() {
         vendorId={chef.id.toString()}
       />
 
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Menu</h2>
-        <div className="flex flex-wrap gap-2">
+      {/* Menu Section */}
+      <section className="max-w-7xl mx-auto px-4 py-8">
+        {/* Category Tabs */}
+        <div className="flex overflow-x-auto gap-4 mb-8 pb-2">
           <button
             onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-full ${
+            className={`px-4 py-2 rounded-full whitespace-nowrap ${
               selectedCategory === 'all'
-                ? 'bg-primary text-white'
-                : 'bg-gray-100'
+                ? 'bg-black text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            All
+            View All
           </button>
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full ${
+              className={`px-4 py-2 rounded-full whitespace-nowrap ${
                 selectedCategory === category
-                  ? 'bg-primary text-white'
-                  : 'bg-gray-100'
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               {category}
             </button>
           ))}
         </div>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {items.map((item: MenuItem) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
-          >
-            <div>
-              <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
-              {item.description && (
-                <p className="text-gray-600 mb-4">{item.description}</p>
-              )}
-              {item.servingSize && (
-                <p className="text-sm text-gray-500 mb-2">
-                  {item.servingSize}
-                </p>
-              )}
-            </div>
-            <div>
-              {item.variants ? (
-                <div className="space-y-2">
-                  {item.variants.map((variant, idx) => (
+        {/* Menu Items */}
+        <div className="space-y-8">
+          {selectedCategory === 'all' ? (
+            Object.entries(chef.menu).map(([category, items]) => (
+              <div key={category}>
+                <h2 className="text-2xl font-bold mb-4">{category}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {items.map((item: MenuItem) => (
                     <div
-                      key={idx}
-                      className="flex justify-between items-center"
+                      key={item.id}
+                      className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
                     >
-                      <span>{variant.name}</span>
-                      <span className="font-semibold">
-                        ₹{variant.price}
-                      </span>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                        {item.description && (
+                          <p className="text-gray-600 mb-4">{item.description}</p>
+                        )}
+                        {item.servingSize && (
+                          <p className="text-sm text-gray-500 mb-2">
+                            {item.servingSize}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        {item.variants ? (
+                          <div className="space-y-2">
+                            {item.variants.map((variant, idx) => (
+                              <div
+                                key={idx}
+                                className="flex justify-between items-center"
+                              >
+                                <span>{variant.name}</span>
+                                <span className="font-semibold">
+                                  ₹{variant.price}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="flex justify-between items-center">
+                            <span className="text-lg font-semibold">₹{item.price}</span>
+                            <div className="flex items-center space-x-2">
+                              {getItemQuantity(item.id) > 0 ? (
+                                <>
+                                  <button
+                                    onClick={() => handleRemoveFromCart(item.id)}
+                                    className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                                  >
+                                    -
+                                  </button>
+                                  <span className="mx-2">{getItemQuantity(item.id)}</span>
+                                  <button
+                                    onClick={() => handleAddToCart(item)}
+                                    className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                                  >
+                                    +
+                                  </button>
+                                </>
+                              ) : (
+                                <button
+                                  onClick={() => handleAddToCart(item)}
+                                  className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                                >
+                                  Add to Cart
+                                </button>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        {item.extras && (
+                          <div className="mt-2 pt-2 border-t">
+                            <p className="text-sm font-medium mb-1">Extras:</p>
+                            {item.extras.map((extra, idx) => (
+                              <div
+                                key={idx}
+                                className="flex justify-between items-center text-sm text-gray-600"
+                              >
+                                <span>{extra.name}</span>
+                                <span>₹{extra.price}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <div className="flex justify-between items-center">
-                  <span>Price</span>
-                  <span className="font-semibold">₹{item.price}</span>
+              </div>
+            ))
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {menuItems.map((item: MenuItem) => (
+                <div
+                  key={item.id}
+                  className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
+                >
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                    {item.description && (
+                      <p className="text-gray-600 mb-4">{item.description}</p>
+                    )}
+                    {item.servingSize && (
+                      <p className="text-sm text-gray-500 mb-2">
+                        {item.servingSize}
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    {item.variants ? (
+                      <div className="space-y-2">
+                        {item.variants.map((variant, idx) => (
+                          <div
+                            key={idx}
+                            className="flex justify-between items-center"
+                          >
+                            <span>{variant.name}</span>
+                            <span className="font-semibold">
+                              ₹{variant.price}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-semibold">₹{item.price}</span>
+                        <div className="flex items-center space-x-2">
+                          {getItemQuantity(item.id) > 0 ? (
+                            <>
+                              <button
+                                onClick={() => handleRemoveFromCart(item.id)}
+                                className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                              >
+                                -
+                              </button>
+                              <span className="mx-2">{getItemQuantity(item.id)}</span>
+                              <button
+                                onClick={() => handleAddToCart(item)}
+                                className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                              >
+                                +
+                              </button>
+                            </>
+                          ) : (
+                            <button
+                              onClick={() => handleAddToCart(item)}
+                              className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                            >
+                              Add to Cart
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    {item.extras && (
+                      <div className="mt-2 pt-2 border-t">
+                        <p className="text-sm font-medium mb-1">Extras:</p>
+                        {item.extras.map((extra, idx) => (
+                          <div
+                            key={idx}
+                            className="flex justify-between items-center text-sm text-gray-600"
+                          >
+                            <span>{extra.name}</span>
+                            <span>₹{extra.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              )}
-              {item.extras && (
-                <div className="mt-2 pt-2 border-t">
-                  <p className="text-sm font-medium mb-1">Extras:</p>
-                  {item.extras.map((extra, idx) => (
-                    <div
-                      key={idx}
-                      className="flex justify-between items-center text-sm text-gray-600"
-                    >
-                      <span>{extra.name}</span>
-                      <span>₹{extra.price}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <button
-                onClick={() => handleAddToCart(item)}
-                className="mt-4 w-full bg-primary text-white py-2 rounded-md hover:bg-primary-dark transition-colors"
-              >
-                Add to Cart
-              </button>
+              ))}
             </div>
-          </div>
-        ))}
+          )}
+        </div>
+      </section>
+
+      {/* Back Button */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <Link
+          href="/home-made-food"
+          className="text-gray-600 hover:text-black flex items-center gap-2"
+        >
+          ← Back to Home Made Food
+        </Link>
       </div>
     </main>
   );

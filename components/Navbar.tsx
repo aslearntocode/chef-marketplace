@@ -28,6 +28,7 @@ export default function Navbar() {
         { href: '/home-made-food/snacks', label: 'Packaged Snacks', delivery: 'Same Day Delivery' },
       ]
     },
+    { href: '/whole-foods', label: 'Whole Foods' },
   ];
 
   const handleLogout = async () => {
@@ -90,14 +91,14 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
               {navLinks.map((link) => (
-                <div key={link.id || link.href} className="relative" ref={link.dropdown ? navDropdownRef : null}>
+                <div key={link.id || link.href} className="relative flex-shrink-0" ref={link.dropdown ? navDropdownRef : null}>
                   {link.dropdown ? (
                     <>
                       <button
                         onClick={() => toggleDropdown(link.id)}
-                        className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200 flex items-center"
+                        className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200 flex items-center whitespace-nowrap flex-shrink-0 w-[150px] justify-between"
                       >
                         {link.label}
                         <svg
@@ -158,17 +159,17 @@ export default function Navbar() {
                     )}
                   </Link>
                   
-                  <div className="hidden md:block relative">
+                  <div className="hidden md:block relative flex-shrink-0">
                     <button
                       onClick={() => toggleDropdown('user')}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
+                      className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 whitespace-nowrap w-[120px] justify-between"
                     >
-                      <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center flex-shrink-0">
                         {user.email ? user.email[0].toUpperCase() : 'U'}
                       </div>
                       <span className="hidden sm:inline">{user.email?.split('@')[0]}</span>
                       <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'user' ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transition-transform duration-200 flex-shrink-0 ${activeDropdown === 'user' ? 'rotate-180' : ''}`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

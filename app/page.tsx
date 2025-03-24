@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FFD700]">
-      {/* Header */}
+      {/* Header
       <nav className="bg-white py-4">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
 
@@ -19,8 +19,17 @@ export default function Home() {
             <Link href="/home-made-desserts" className="nav-link">Home Made Desserts</Link>
             <Link href="/tiffin-service" className="nav-link">Tiffin Service</Link>
           </div> */}
-        </div>
-      </nav>
+
+          {/* <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="nav-link">Home</Link>
+            <Link href="/about" className="nav-link">About Us</Link>
+            <Link href="/home-made-food" className="nav-link">Home Made Food</Link>
+            <Link href="/home-made-desserts" className="nav-link">Home Made Desserts</Link>
+            <Link href="/tiffin-service" className="nav-link">Tiffin Service</Link>
+            <Link href="/whole-foods" className="nav-link">Whole Foods</Link>
+          </div> */}
+        {/* </div>
+      </nav> */}
 
 
       {/* Main Content */}
@@ -61,6 +70,13 @@ export default function Home() {
               <div className="text-base font-medium">Packaged Snacks</div>
               <div className="text-[11px] mt-0.5">Same Day Delivery</div>
             </Link>
+            <Link 
+              href="/whole-foods"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
+            >
+              <div className="text-base font-medium">Whole Foods</div>
+              <div className="text-[11px] mt-0.5">Same Day Delivery</div>
+            </Link>
           </div>
         </div>
 
@@ -70,7 +86,7 @@ export default function Home() {
           <div className="flex items-center gap-1 sm:gap-4 relative">
             {/* Left Arrow */}
             <button 
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
+              className="slider-nav-button left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
@@ -154,7 +170,7 @@ export default function Home() {
 
             {/* Right Arrow */}
             <button 
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
+              className="slider-nav-button absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-1 sm:p-4 rounded-lg transition-all text-xs sm:text-base w-6 sm:w-auto"
               onClick={() => {
                 const slider = document.querySelector('.slider');
                 if (slider) {
