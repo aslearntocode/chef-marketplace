@@ -25,15 +25,15 @@ const products: Product[] = [
     description: 'Premium organic quinoa, high in protein and fiber. Perfect for healthy meals.',
     price: 299,
     image: '/images/Coconut Barfi With Jaggery.jpeg',
-    category: 'Grains'
+    category: 'Sweet'
   },
   {
     id: '2',
     name: 'Coconut Barfi with Sugar',
     description: 'Nutrient-rich chia seeds packed with omega-3 fatty acids and antioxidants.',
     price: 199,
-    image: '/images/Coconut Barfi With Sugar.jpeg',
-    category: 'Seeds'
+    image: '/images/Coconut Barfi with Sugar.jpeg',
+    category: 'Sweet'
   },
   {
     id: '3',
@@ -45,11 +45,11 @@ const products: Product[] = [
   },
   {
     id: '4',
-    name: 'Sugar Free Drryfruits Ladoo',
+    name: 'Sugar Free Dryfruits Ladoo',
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Sweeteners'
+    category: 'Sweet'
   }
 ];
 
@@ -91,7 +91,13 @@ export default function WholeFoods() {
   };
 
   const handleRemoveFromCart = (productId: string) => {
-    if (!user) return;
+    if (!user) {
+      const currentPath = window.location.pathname;
+      toast.error('Please login to manage cart items');
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
+      return;
+    }
+    
     const item = items.find(item => item.id === productId);
     if (item && item.quantity > 1) {
       updateQuantity(productId, item.quantity - 1);
@@ -101,6 +107,7 @@ export default function WholeFoods() {
   };
 
   const getItemQuantity = (productId: string) => {
+    if (!user) return 0;
     const item = items.find(item => item.id === productId);
     return item ? item.quantity : 0;
   };
@@ -135,7 +142,7 @@ export default function WholeFoods() {
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
                 <div className="relative w-full pt-[100%] bg-[#f8f8f8]">
                   <Image
                     src={product.image}
@@ -145,17 +152,17 @@ export default function WholeFoods() {
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
-                <div className="p-4">
-                  <div className="flex flex-col mb-3">
-                    <div className="flex justify-between items-start gap-2 mb-1">
-                      <h3 className="text-base font-semibold text-gray-800 flex-1">{product.name}</h3>
-                      <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium">
+                <div className="p-4 flex flex-col flex-1">
+                  <div className="flex flex-col flex-1">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
+                      <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
                         {product.category}
                       </span>
                     </div>
-                    <p className="text-gray-600 text-xs line-clamp-2">{product.description}</p>
+                    <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
                   </div>
-                  <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+                  <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
                     <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
                     <div className="flex items-center space-x-1">
                       {getItemQuantity(product.id) > 0 ? (
