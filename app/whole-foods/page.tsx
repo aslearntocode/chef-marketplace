@@ -21,34 +21,34 @@ interface Product {
 const products: Product[] = [
   {
     id: '1',
-    name: 'Organic Quinoa',
+    name: 'Coconut Barfi with Jaggery',
     description: 'Premium organic quinoa, high in protein and fiber. Perfect for healthy meals.',
     price: 299,
-    image: '/whole-foods/quinoa.jpg',
+    image: '/images/Coconut Barfi With Jaggery.jpeg',
     category: 'Grains'
   },
   {
     id: '2',
-    name: 'Chia Seeds',
+    name: 'Coconut Barfi with Sugar',
     description: 'Nutrient-rich chia seeds packed with omega-3 fatty acids and antioxidants.',
     price: 199,
-    image: '/whole-foods/chia-seeds.jpg',
+    image: '/images/Coconut Barfi With Sugar.jpeg',
     category: 'Seeds'
   },
   {
     id: '3',
-    name: 'Raw Almonds',
+    name: 'Sugar Free Dates and Peanut Ladoo',
     description: 'Fresh, raw almonds. Rich in healthy fats, protein, and vitamin E.',
     price: 399,
-    image: '/whole-foods/almonds.jpg',
+    image: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg',
     category: 'Nuts'
   },
   {
     id: '4',
-    name: 'Organic Honey',
+    name: 'Sugar Free Drryfruits Ladoo',
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
-    image: '/whole-foods/honey.jpg',
+    image: '/images/Sugar Free Dryfruits laddoo.jpeg',
     category: 'Sweeteners'
   }
 ];
@@ -70,8 +70,9 @@ export default function WholeFoods() {
 
   const handleAddToCart = (item: Product) => {
     if (!user) {
+      const currentPath = window.location.pathname;
       toast.error('Please login to add items to cart');
-      router.push('/login');
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
       return;
     }
 
@@ -120,7 +121,7 @@ export default function WholeFoods() {
             placeholder="Search products by name, description, or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white"
           />
           <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
         </div>
@@ -132,48 +133,51 @@ export default function WholeFoods() {
             <p className="text-gray-600 text-lg">No products found matching your search.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="relative h-48">
+              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div className="relative w-full pt-[100%] bg-[#f8f8f8]">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    className="object-contain p-4"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                 </div>
                 <div className="p-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold">{product.name}</h3>
-                    <span className="text-sm bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
-                      {product.category}
-                    </span>
+                  <div className="flex flex-col mb-3">
+                    <div className="flex justify-between items-start gap-2 mb-1">
+                      <h3 className="text-base font-semibold text-gray-800 flex-1">{product.name}</h3>
+                      <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium">
+                        {product.category}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 text-xs line-clamp-2">{product.description}</p>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{product.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold">₹{product.price}</span>
-                    <div className="flex items-center space-x-2">
+                  <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+                    <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
+                    <div className="flex items-center space-x-1">
                       {getItemQuantity(product.id) > 0 ? (
-                        <>
+                        <div className="flex items-center bg-gray-100 rounded-lg p-1">
                           <button
                             onClick={() => handleRemoveFromCart(product.id)}
-                            className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                            className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
                           >
                             -
                           </button>
-                          <span className="mx-2">{getItemQuantity(product.id)}</span>
+                          <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
                           <button
                             onClick={() => handleAddToCart(product)}
-                            className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                            className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
                           >
                             +
                           </button>
-                        </>
+                        </div>
                       ) : (
                         <button
                           onClick={() => handleAddToCart(product)}
-                          className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors"
+                          className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
                         >
                           Add to Cart
                         </button>
