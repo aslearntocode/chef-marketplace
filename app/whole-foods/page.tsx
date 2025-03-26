@@ -7,7 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/context/CartContext';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiX } from 'react-icons/fi';
 
 interface Product {
   id: string;
@@ -15,7 +15,9 @@ interface Product {
   description: string;
   price: number;
   image: string;
+  images?: string[];  // Optional array of additional images
   category: string;
+  tags: string[];  // Add tags array to the interface
 }
 
 const products: Product[] = [
@@ -25,7 +27,8 @@ const products: Product[] = [
     description: 'Premium organic quinoa, high in protein and fiber. Perfect for healthy meals.',
     price: 299,
     image: '/images/Coconut Barfi With Jaggery.jpeg',
-    category: 'Sweet'
+    category: 'Sweet',
+    tags: ['sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet']
   },
   {
     id: '2',
@@ -33,7 +36,8 @@ const products: Product[] = [
     description: 'Nutrient-rich chia seeds packed with omega-3 fatty acids and antioxidants.',
     price: 199,
     image: '/images/Coconut Barfi with Sugar.jpeg',
-    category: 'Sweet'
+    category: 'Sweet',
+    tags: ['sweet', 'dessert', 'coconut', 'sugar', 'barfi', 'indian sweet']
   },
   {
     id: '3',
@@ -41,7 +45,8 @@ const products: Product[] = [
     description: 'Fresh, raw almonds. Rich in healthy fats, protein, and vitamin E.',
     price: 399,
     image: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg',
-    category: 'Nuts'
+    category: 'Nuts',
+    tags: ['sugar free', 'healthy', 'dates', 'peanut', 'ladoo', 'indian sweet', 'nuts']
   },
   {
     id: '4',
@@ -49,7 +54,65 @@ const products: Product[] = [
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Sweet'
+    category: 'Sweet',
+    tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
+  },
+  {
+    id: '5',
+    name: 'Sugar Free Dryfruits Ladoo',
+    description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
+    price: 349,
+    image: '/images/Sugar Free Dryfruits laddoo.jpeg',
+    category: 'Sweet',
+    tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
+  },
+  {
+    id: '6',
+    name: 'Paan-e-bahar',
+    description: 'Refreshing yogurt-based drink made with fresh mangoes, perfect blend of sweet and tangy flavors.',
+    price: 149,
+    image: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg',
+    images: [
+      '/images/images-drinks/Paan-e-bahar/amazon-06.jpg',
+      '/images/images-drinks/Paan-e-bahar/amazon-07.jpg',
+      '/images/images-drinks/Paan-e-bahar/amazon-09.jpg',
+      '/images/images-drinks/Paan-e-bahar/amazon-10.jpg',
+      '/images/images-drinks/Paan-e-bahar/amazon-21.jpg',
+    ],
+    category: 'Drinks',
+    tags: ['drink', 'cold drink', 'refreshing', 'paan', 'summer drink', 'cooling', 'beverage','healthy drink']
+  },
+  {
+    id: '7',
+    name: 'Soothing Saffron',
+    description: 'Aromatic and cooling yogurt drink infused with rose essence, garnished with rose petals.',
+    price: 149,
+    image: '/images/images-drinks/Soothing Sauf/amazon-11.jpg',
+    images: [
+      '/images/images-drinks/Soothing Sauf/amazon-11.jpg',
+      '/images/images-drinks/Soothing Sauf/amazon-12.jpg',
+      '/images/images-drinks/Soothing Sauf/amazon-14.jpg',
+      '/images/images-drinks/Soothing Sauf/amazon-15.jpg',
+      '/images/images-drinks/Soothing Sauf/amazon-21.jpg',
+    ],
+    category: 'Drinks',
+    tags: ['drink', 'cold drink', 'refreshing', 'saffron', 'summer drink', 'cooling', 'beverage', 'kesar','healthy drink']
+  },
+  {
+    id: '8',
+    name: 'Thrilling Thandai',
+    description: 'Luxurious yogurt drink flavored with premium saffron strands, rich and creamy texture.',
+    price: 169,
+    image: '/images/images-drinks/Thrilling Thandai/amazon-01.jpg',
+    images: [
+      '/images/images-drinks/Thrilling Thandai/amazon-01.jpg',
+      '/images/images-drinks/Thrilling Thandai/amazon-02.jpg',
+      '/images/images-drinks/Thrilling Thandai/amazon-04.jpg',
+      '/images/images-drinks/Thrilling Thandai/amazon-05.jpg',
+      '/images/images-drinks/Thrilling Thandai/amazon-21.jpg',
+    ],
+    category: 'Drinks',
+    tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional','healthy drink']
   }
 ];
 
@@ -58,13 +121,16 @@ export default function WholeFoods() {
   const { addToCart, removeFromCart, items, updateQuantity, clearCart } = useCart();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({});
+  const [modalImage, setModalImage] = useState<{ src: string; productName: string } | null>(null);
 
   const filteredProducts = products.filter(product => {
     const searchLower = searchQuery.toLowerCase();
     return (
       product.name.toLowerCase().includes(searchLower) ||
       product.description.toLowerCase().includes(searchLower) ||
-      product.category.toLowerCase().includes(searchLower)
+      product.category.toLowerCase().includes(searchLower) ||
+      product.tags.some(tag => tag.toLowerCase().includes(searchLower))
     );
   });
 
@@ -112,8 +178,44 @@ export default function WholeFoods() {
     return item ? item.quantity : 0;
   };
 
+  const handleImageNav = (productId: string, direction: 'prev' | 'next', totalImages: number) => {
+    setCurrentImageIndex(prev => {
+      const current = prev[productId] || 0;
+      if (direction === 'next') {
+        return { ...prev, [productId]: (current + 1) % totalImages };
+      } else {
+        return { ...prev, [productId]: (current - 1 + totalImages) % totalImages };
+      }
+    });
+  };
+
   return (
-    <main>
+    <main className="relative">
+      {/* Image Modal/Lightbox */}
+      {modalImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setModalImage(null)}
+        >
+          <button
+            onClick={() => setModalImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+          >
+            <FiX size={24} />
+          </button>
+          <div className="relative w-full max-w-4xl h-[80vh] bg-white rounded-lg overflow-hidden">
+            <Image
+              src={modalImage.src}
+              alt={modalImage.productName}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1536px) 100vw, 1536px"
+              priority
+            />
+          </div>
+        </div>
+      )}
+
       <div className="h-[72px]" />
       <PageHeader
         title="Whole Foods"
@@ -143,14 +245,69 @@ export default function WholeFoods() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-                <div className="relative w-full pt-[100%] bg-[#f8f8f8]">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-4"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                  />
+                <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
+                  {product.images ? (
+                    <>
+                      <Image
+                        src={product.images[currentImageIndex[product.id] || 0]}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4 cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setModalImage({
+                            src: product.images![currentImageIndex[product.id] || 0],
+                            productName: product.name
+                          });
+                        }}
+                      />
+                      {product.images.length > 1 && (
+                        <>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleImageNav(product.id, 'prev', product.images!.length);
+                            }}
+                            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            ←
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleImageNav(product.id, 'next', product.images!.length);
+                            }}
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            →
+                          </button>
+                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                            {product.images.map((_, index) => (
+                              <div
+                                key={index}
+                                className={`w-2 h-2 rounded-full ${
+                                  (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </>
+                  ) : (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-4 cursor-pointer"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                      onClick={() => setModalImage({
+                        src: product.image,
+                        productName: product.name
+                      })}
+                    />
+                  )}
                 </div>
                 <div className="p-4 flex flex-col flex-1">
                   <div className="flex flex-col flex-1">
