@@ -27,8 +27,8 @@ const products: Product[] = [
     description: 'Premium organic quinoa, high in protein and fiber. Perfect for healthy meals.',
     price: 299,
     image: '/images/Coconut Barfi With Jaggery.jpeg',
-    category: 'Sweet',
-    tags: ['sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet']
+    category: 'Healthy Sweet',
+    tags: ['healthy', 'sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet']
   },
   {
     id: '2',
@@ -45,7 +45,7 @@ const products: Product[] = [
     description: 'Fresh, raw almonds. Rich in healthy fats, protein, and vitamin E.',
     price: 399,
     image: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg',
-    category: 'Nuts',
+    category: 'Healthy Sweet',
     tags: ['sugar free', 'healthy', 'dates', 'peanut', 'ladoo', 'indian sweet', 'nuts']
   },
   {
@@ -54,7 +54,7 @@ const products: Product[] = [
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Sweet',
+    category: 'Healthy Sweet',
     tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
   },
   {
@@ -63,7 +63,7 @@ const products: Product[] = [
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Sweet',
+    category: 'Healthy Sweet',
     tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
   },
   {
@@ -113,6 +113,78 @@ const products: Product[] = [
     ],
     category: 'Drinks',
     tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional','healthy drink']
+  },
+  {
+    id: '9',
+    name: 'Date & Nut Bites',
+    description: 'Luxurious yogurt drink flavored with premium saffron strands, rich and creamy texture.',
+    price: 169,
+    image: '/images/dateandnutbites/MZ8_0754.jpg',
+    images: [
+      '/images/dateandnutbites/MZ8_0754.jpg',
+      '/images/dateandnutbites/MZ8_0755.jpg',
+      '/images/dateandnutbites/NNs_79.jpg',
+      '/images/dateandnutbites/NNs_80.jpg'
+      // '/images/dateandnutbites/NNs_81.jpg',
+    ],
+    category: 'Healthy Treats',
+    tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites']
+  },
+  {
+    id: '10',
+    name: 'Ghee Roasted Makhana',
+    description: 'Luxurious yogurt drink flavored with premium saffron strands, rich and creamy texture.',
+    price: 169,
+    image: '/images/gheeroastedmakhana/MZ8_0746.jpg',
+    images: [
+      '/images/gheeroastedmakhana/MZ8_0746.jpg',
+      '/images/gheeroastedmakhana/MZ8_0747.jpg',
+      '/images/gheeroastedmakhana/NNs_38.jpg',
+      '/images/gheeroastedmakhana/NNs_39.jpg',
+      '/images/gheeroastedmakhana/NNs_40.jpg',
+      '/images/gheeroastedmakhana/NNs_41.jpg'
+    ],
+    category: 'Healthy Bites',
+    tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites']
+  },
+  {
+    id: '11',
+    name: 'Jaggery Mango Pickle',
+    description: 'Healthy Pickle made of jaggery and mango.',
+    price: 169,
+    image: '/images/jaggerymangopickle/MZ8_0632.jpg',
+    images: [
+      '/images/jaggerymangopickle/MZ8_0632.jpg',
+      '/images/jaggerymangopickle/MZ8_0633.jpg',
+      // '/images/jaggerymangopickle/MZ8_0634.jpg',
+      '/images/jaggerymangopickle/MZ8_0635.jpg',
+      '/images/jaggerymangopickle/MZ8_0640.jpg',
+      '/images/jaggerymangopickle/MZ8_0705.jpg',
+      '/images/jaggerymangopickle/MZ8_0706.jpg',
+      '/images/jaggerymangopickle/MZ8_0708.jpg'
+      
+    ],
+    category: 'Pickles',
+    tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
+  },
+  {
+    id: '12',
+    name: 'Roasted Red Rice Chiwda',
+    description: 'Healthy Chivda made of roasted red rice.',
+    price: 169,
+    image: '/images/roastedredricechivda/MZ8_0758.jpg',
+    images: [
+      '/images/roastedredricechivda/MZ8_0758.jpg',
+      '/images/roastedredricechivda/MZ8_0759.jpg',
+      // '/images/jaggerymangopickle/MZ8_0634.jpg',
+      '/images/roastedredricechivda/NNs_10.jpg',
+      '/images/roastedredricechivda/NNs_12.jpg',
+      '/images/roastedredricechivda/NNs_13.jpg',
+      '/images/roastedredricechivda/NNs_14.jpg',
+      '/images/roastedredricechivda/NNs_15.jpg'
+    ],
+    category: 'Healthy Bites',
+    tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites']
   }
 ];
 
@@ -121,17 +193,32 @@ export default function WholeFoods() {
   const { addToCart, removeFromCart, items, updateQuantity, clearCart } = useCart();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({});
   const [modalImage, setModalImage] = useState<{ src: string; productName: string } | null>(null);
 
+  // Define categories based on the products
+  const categories = [
+    { id: 'all', name: 'All Products' },
+    { id: 'healthy-sweet', name: 'Healthy Sweets' },
+    { id: 'sweet', name: 'Traditional Sweets' },
+    { id: 'drinks', name: 'Healthy Drinks' },
+    { id: 'healthy-bites', name: 'Healthy Bites' },
+    { id: 'pickles', name: 'Pickles' }
+  ];
+
   const filteredProducts = products.filter(product => {
     const searchLower = searchQuery.toLowerCase();
-    return (
+    const matchesSearch = 
       product.name.toLowerCase().includes(searchLower) ||
       product.description.toLowerCase().includes(searchLower) ||
       product.category.toLowerCase().includes(searchLower) ||
-      product.tags.some(tag => tag.toLowerCase().includes(searchLower))
-    );
+      product.tags.some(tag => tag.toLowerCase().includes(searchLower));
+
+    const matchesCategory = selectedCategory === 'all' || 
+      product.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
+
+    return matchesSearch && matchesCategory;
   });
 
   const handleAddToCart = (item: Product) => {
@@ -222,17 +309,37 @@ export default function WholeFoods() {
         description="Discover our selection of organic and natural whole foods for a healthier lifestyle"
       />
       
-      {/* Search Bar */}
       <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search products by name, description, or category..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white"
-          />
-          <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+        {/* Search and Category Filter Section */}
+        <div className="space-y-4">
+          {/* Search Bar */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search products by name, description, or category..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white"
+            />
+            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          </div>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                  ${selectedCategory === category.id
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

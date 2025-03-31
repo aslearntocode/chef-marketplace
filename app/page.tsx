@@ -107,12 +107,12 @@ export default function Home() {
                 <div className="slider">
                   {/* First set of items */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Chef Juhi Kastiya', price: '₹120', path: '/chefs/chef_5' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Chef Juhi Kastiya', price: '₹180', path: '/bakers/baker_1' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Chef Juhi Kastiya', price: '₹250', path: '/chefs/chef_5' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Chef  Juhi Kastiya', price: '₹200', path: '/chefs/chef_5' },
-                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
-                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods' },
+                    // { src: '/images/dateandnutbites/NNs_81.jpg', name: 'Date and Nut Bites', price: '₹199', path: '/whole-foods' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
@@ -137,12 +137,12 @@ export default function Home() {
 
                   {/* Second set - Update with the same paths */}
                   {[
-                    { src: '/chefs/Baked Vada Pav.PNG', name: 'Baked Vada Pav by Baker Juhi Kastiya', price: '₹120', path: '/bakers/baker_1' },
-                    { src: '/chefs/Cinnamon Loaf.PNG', name: 'Cinnamon Loaf by Baker Juhi Kastiya', price: '₹180', path: '/bakers/baker_1' },
-                    { src: '/chefs/Paneer Tikka Star Pizza.PNG', name: 'Paneer Tikka Star Pizza by Baker Juhi Kastiya', price: '₹250', path: '/home-made-desserts/baker_1' },
-                    { src: '/chefs/Potli Biryani.PNG', name: 'Potli Biryani by Baker Juhi Kastiya', price: '₹200', path: '/bakers/baker_1' },
-                    { src: '/chefs/Rajasthani Thali.jpeg', name: 'Rajasthani Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
-                    { src: '/chefs/Home Like Thali.jpeg', name: 'Home Like Thali by Chef Payal Agarwal', price: '₹340', path: '/home-made-food/tiffin/tiffin_1' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods' },
+                    // { src: '/images/dateandnutbites/NNs_81.jpg', name: 'Date and Nut Bites', price: '₹199', path: '/whole-foods' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods' },
                   ].map((item, index) => (
                     <Link 
                       key={`second-${index}`} 
@@ -164,6 +164,7 @@ export default function Home() {
                       </div>
                     </Link>
                   ))}
+
                 </div>
               </div>
             </div>
