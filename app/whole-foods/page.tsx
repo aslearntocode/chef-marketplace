@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PageHeader from '@/components/PageHeader';
 import { useAuth } from '@/context/AuthContext';
@@ -8,6 +8,7 @@ import { useCart } from '@/context/CartContext';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { FiSearch, FiX } from 'react-icons/fi';
+import Link from 'next/link';
 
 interface Product {
   id: string;
@@ -185,6 +186,58 @@ const products: Product[] = [
     ],
     category: 'Healthy Bites',
     tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites']
+  },
+  {
+    id: '13',
+    name: 'Traditional Lemon Pickle',
+    description: 'Traditional Lemon Pickle made of lemons.',
+    price: 169,
+    image: '/images/traditionallemonpickle/MZ8_0691.jpg',
+    images: [
+      '/images/traditionallemonpickle/DSC_8886.jpg',
+      '/images/traditionallemonpickle/DSC_8885-Edit.jpg',
+      '/images/traditionallemonpickle/MZ8_0691.jpg',
+      '/images/traditionallemonpickle/MZ8_0693.jpg',
+      '/images/traditionallemonpickle/MZ8_0694.jpg'
+    ],
+    category: 'Pickles',
+    tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
+  },
+  {
+    id: '14',
+    name: 'Whole Wheat Ajwain Mathri',
+    description: 'Traditional Ajwain Mathri made of whole wheat.',
+    price: 169,
+    image: '/images/wholewheatajwainmathri/MZ8_0752.jpg',
+    images: [
+      '/images/wholewheatajwainmathri/MZ8_0752.jpg',
+      '/images/wholewheatajwainmathri/MZ8_0753.jpg',
+      '/images/wholewheatajwainmathri/NNs_17.jpg',
+      '/images/wholewheatajwainmathri/NNs_18.jpg',
+      '/images/wholewheatajwainmathri/NNs_19.jpg',
+      '/images/wholewheatajwainmathri/NNs_20.jpg',
+      '/images/wholewheatajwainmathri/NNs_21.jpg'
+    ],
+    category: 'Healthy Bites',
+    tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'healthy snack', 'healthy bites']
+  },
+  {
+    id: '15',
+    name: 'Whole Wheat Jaggery Fingers - Gur Paara',
+    description: 'Traditional Gur Paara made of whole wheat.',
+    price: 169,
+    image: '/images/wholewheatjaggery-gurpaara/MZ8_0762.jpg',
+    images: [
+      '/images/wholewheatjaggery-gurpaara/MZ8_0762.jpg',
+      '/images/wholewheatjaggery-gurpaara/MZ8_0763.jpg',
+      '/images/wholewheatjaggery-gurpaara/NNs_42.jpg',
+      '/images/wholewheatjaggery-gurpaara/NNs_44.jpg',
+      '/images/wholewheatjaggery-gurpaara/NNs_45.jpg',
+      '/images/wholewheatjaggery-gurpaara/NNs_47.jpg',
+      '/images/wholewheatjaggery-gurpaara/NNs_48.jpg'
+    ],
+    category: 'Healthy Sweet',
+    tags: ['healthy', 'treats', 'nut', 'bites', 'healthy treats', 'healthy sweets', 'gur', 'gur paara']
   }
 ];
 
@@ -220,6 +273,16 @@ export default function WholeFoods() {
 
     return matchesSearch && matchesCategory;
   });
+
+  // Group products by category
+  const productsByCategory = products.reduce((acc, product) => {
+    const category = product.category;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(product);
+    return acc;
+  }, {} as Record<string, Product[]>);
 
   const handleAddToCart = (item: Product) => {
     if (!user) {
@@ -276,8 +339,20 @@ export default function WholeFoods() {
     });
   };
 
+  // Update the useEffect to reset state on mount
+  useEffect(() => {
+    // Reset to category view when the component mounts
+    setSelectedCategory('all');
+    setSearchQuery('');
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Update the category selection handler to not modify the URL
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <main className="relative">
+    <main className="relative mt-[72px]">
       {/* Image Modal/Lightbox */}
       {modalImage && (
         <div 
@@ -303,161 +378,330 @@ export default function WholeFoods() {
         </div>
       )}
 
-      <div className="h-[72px]" />
-      <PageHeader
-        title="Whole Foods"
-        description="Discover our selection of organic and natural whole foods for a healthier lifestyle"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* Search and Category Filter Section */}
-        <div className="space-y-4">
-          {/* Search Bar */}
+      {/* Main Content with Search Bar */}
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        {/* Centered Search Bar with reduced width */}
+        <div className="max-w-2xl mx-auto mb-4">
           <div className="relative">
             <input
               type="text"
               placeholder="Search products by name, description, or category..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white"
+              className="w-full px-4 py-2 pl-9 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-white text-sm"
             />
-            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-                  ${selectedCategory === category.id
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-              >
-                {category.name}
-              </button>
-            ))}
+            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
           </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {filteredProducts.length === 0 ? (
-          <div className="text-center py-8">
-            <p className="text-gray-600 text-lg">No products found matching your search.</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-                <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
-                  {product.images ? (
-                    <>
+        {/* Conditional rendering based on search query */}
+        {searchQuery ? (
+          // Show search results
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold">Search Results</h2>
+              <p className="text-gray-600">
+                {filteredProducts.length} products found for "{searchQuery}"
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+              {filteredProducts.map((product) => (
+                <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+                  <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
+                    {product.images ? (
+                      <>
+                        <Image
+                          src={product.images[currentImageIndex[product.id] || 0]}
+                          alt={product.name}
+                          fill
+                          className="object-contain p-4 cursor-pointer"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setModalImage({
+                              src: product.images![currentImageIndex[product.id] || 0],
+                              productName: product.name
+                            });
+                          }}
+                        />
+                        {product.images.length > 1 && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleImageNav(product.id, 'prev', product.images!.length);
+                              }}
+                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              ←
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleImageNav(product.id, 'next', product.images!.length);
+                              }}
+                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              →
+                            </button>
+                            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                              {product.images.map((_, index) => (
+                                <div
+                                  key={index}
+                                  className={`w-2 h-2 rounded-full ${
+                                    (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </>
+                    ) : (
                       <Image
-                        src={product.images[currentImageIndex[product.id] || 0]}
+                        src={product.image}
                         alt={product.name}
                         fill
                         className="object-contain p-4 cursor-pointer"
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setModalImage({
-                            src: product.images![currentImageIndex[product.id] || 0],
-                            productName: product.name
-                          });
-                        }}
+                        onClick={() => setModalImage({
+                          src: product.image,
+                          productName: product.name
+                        })}
                       />
-                      {product.images.length > 1 && (
-                        <>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleImageNav(product.id, 'prev', product.images!.length);
-                            }}
-                            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                          >
-                            ←
-                          </button>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleImageNav(product.id, 'next', product.images!.length);
-                            }}
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                          >
-                            →
-                          </button>
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                            {product.images.map((_, index) => (
-                              <div
-                                key={index}
-                                className={`w-2 h-2 rounded-full ${
-                                  (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
-                                }`}
-                              />
-                            ))}
-                          </div>
-                        </>
-                      )}
-                    </>
-                  ) : (
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-4 cursor-pointer"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                      onClick={() => setModalImage({
-                        src: product.image,
-                        productName: product.name
-                      })}
-                    />
-                  )}
-                </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <div className="flex flex-col flex-1">
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
-                      <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
-                        {product.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
+                    )}
                   </div>
-                  <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
-                    <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
-                    <div className="flex items-center space-x-1">
-                      {getItemQuantity(product.id) > 0 ? (
-                        <div className="flex items-center bg-gray-100 rounded-lg p-1">
-                          <button
-                            onClick={() => handleRemoveFromCart(product.id)}
-                            className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
-                          >
-                            -
-                          </button>
-                          <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
+                        <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                          {product.category}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
+                    </div>
+                    <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
+                      <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
+                      <div className="flex items-center space-x-1">
+                        {getItemQuantity(product.id) > 0 ? (
+                          <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                            <button
+                              onClick={() => handleRemoveFromCart(product.id)}
+                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                            >
+                              -
+                            </button>
+                            <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                            <button
+                              onClick={() => handleAddToCart(product)}
+                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                            >
+                              +
+                            </button>
+                          </div>
+                        ) : (
                           <button
                             onClick={() => handleAddToCart(product)}
-                            className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                            className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
                           >
-                            +
+                            Add to Cart
                           </button>
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() => handleAddToCart(product)}
-                          className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
-                        >
-                          Add to Cart
-                        </button>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+        ) : selectedCategory !== 'all' ? (
+          // Show selected category products
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold">
+                {categories.find(cat => cat.id === selectedCategory)?.name}
+              </h2>
+              <button
+                onClick={() => handleCategorySelect('all')}
+                className="px-4 py-2 text-base font-medium text-gray-600 hover:text-black bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-2"
+              >
+                ← Back to categories
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+              {filteredProducts.map((product) => (
+                <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
+                  <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
+                    {product.images ? (
+                      <>
+                        <Image
+                          src={product.images[currentImageIndex[product.id] || 0]}
+                          alt={product.name}
+                          fill
+                          className="object-contain p-4 cursor-pointer"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setModalImage({
+                              src: product.images![currentImageIndex[product.id] || 0],
+                              productName: product.name
+                            });
+                          }}
+                        />
+                        {product.images.length > 1 && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleImageNav(product.id, 'prev', product.images!.length);
+                              }}
+                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              ←
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleImageNav(product.id, 'next', product.images!.length);
+                              }}
+                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              →
+                            </button>
+                            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                              {product.images.map((_, index) => (
+                                <div
+                                  key={index}
+                                  className={`w-2 h-2 rounded-full ${
+                                    (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </>
+                    ) : (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4 cursor-pointer"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                        onClick={() => setModalImage({
+                          src: product.image,
+                          productName: product.name
+                        })}
+                      />
+                    )}
+                  </div>
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
+                        <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                          {product.category}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
+                    </div>
+                    <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
+                      <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
+                      <div className="flex items-center space-x-1">
+                        {getItemQuantity(product.id) > 0 ? (
+                          <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                            <button
+                              onClick={() => handleRemoveFromCart(product.id)}
+                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                            >
+                              -
+                            </button>
+                            <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                            <button
+                              onClick={() => handleAddToCart(product)}
+                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                            >
+                              +
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            onClick={() => handleAddToCart(product)}
+                            className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
+                          >
+                            Add to Cart
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          // Show category cards
+          <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {Object.entries(productsByCategory).map(([category, categoryProducts]) => (
+                <div 
+                  key={category}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  {/* Category Header */}
+                  <div className="p-3 border-b">
+                    <div className="flex justify-between items-center">
+                      <h2 className="text-lg font-bold">{category}</h2>
+                      <Link 
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleCategorySelect(category.toLowerCase().replace(/\s+/g, '-'));
+                          setSearchQuery('');
+                        }}
+                        className="text-xs text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        See all
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Preview Grid - 4 Products */}
+                  <div className="grid grid-cols-2 gap-3 p-3">
+                    {categoryProducts.slice(0, 4).map((product) => (
+                      <div 
+                        key={product.id} 
+                        className="relative group cursor-pointer"
+                        onClick={() => {
+                          handleCategorySelect(category.toLowerCase().replace(/\s+/g, '-'));
+                          setTimeout(() => {
+                            document.getElementById(`product-${product.id}`)?.scrollIntoView({ behavior: 'smooth' });
+                          }, 100);
+                        }}
+                      >
+                        <div className="aspect-square relative overflow-hidden rounded-md">
+                          <Image
+                            src={product.images?.[0] || product.image}
+                            alt={product.name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-200"
+                            sizes="(max-width: 768px) 40vw, 25vw"
+                          />
+                          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-200" />
+                        </div>
+                        <div className="mt-1.5">
+                          <h3 className="text-xs font-medium line-clamp-2 group-hover:text-blue-600 transition-colors">{product.name}</h3>
+                          <p className="text-xs font-bold text-gray-900 mt-0.5">₹{product.price}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
