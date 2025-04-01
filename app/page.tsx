@@ -3,10 +3,103 @@
 import Link from 'next/link';
 import './styles.css';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [isPicklesPopupVisible, setIsPicklesPopupVisible] = useState(false);
+  const [isHealthyBitesPopupVisible, setIsHealthyBitesPopupVisible] = useState(false);
+
+  useEffect(() => {
+    // Show pickles popup after 1.5s
+    const picklesTimer = setTimeout(() => {
+      setIsPicklesPopupVisible(true);
+    }, 1500);
+
+    // Show healthy bites popup after 2.5s
+    const healthyBitesTimer = setTimeout(() => {
+      setIsHealthyBitesPopupVisible(true);
+    }, 2500);
+
+    return () => {
+      clearTimeout(picklesTimer);
+      clearTimeout(healthyBitesTimer);
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#FFD700]">
+      {/* Pickles Popup (bottom position) */}
+      <div className={`fixed right-0 bottom-24 transition-transform duration-300 ease-in-out transform ${isPicklesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}>
+        <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
+          <button 
+            onClick={() => setIsPicklesPopupVisible(false)}
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+          >
+            →
+          </button>
+          
+          <div className="mt-4">
+            <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">New Arrivals! 🌶️</h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Check out our newly added spicy, tangy yet healthy pickles and chutneys!
+            </p>
+            <Link 
+              href="/whole-foods" 
+              className="block bg-[#FFD700] text-black text-center py-2 px-4 rounded-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
+            >
+              Order Now
+            </Link>
+          </div>
+
+          {/* Vertical text for minimized state */}
+          <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
+               style={{ writingMode: 'vertical-rl' }}>
+            <button
+              onClick={() => setIsPicklesPopupVisible(true)}
+              className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
+            >
+              Pickles & Chutneys! 🌶️
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Healthy Bites Popup (modified position) */}
+      <div className={`fixed right-0 bottom-[calc(24rem)] transition-transform duration-300 ease-in-out transform ${isHealthyBitesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}>
+        <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
+          <button 
+            onClick={() => setIsHealthyBitesPopupVisible(false)}
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold"
+          >
+            →
+          </button>
+          
+          <div className="mt-4">
+            <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">Healthy Bites! 🌿</h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Discover our nutritious range of healthy bites - perfect for guilt-free snacking!
+            </p>
+            <Link 
+              href="/whole-foods" 
+              className="block bg-[#FFD700] text-black text-center py-2 px-4 rounded-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
+            >
+              Explore Now
+            </Link>
+          </div>
+
+          {/* Vertical text for minimized state */}
+          <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
+               style={{ writingMode: 'vertical-rl' }}>
+            <button
+              onClick={() => setIsHealthyBitesPopupVisible(true)}
+              className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
+            >
+              Healthy Bites! 🌿
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Header
       <nav className="bg-white py-4">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
