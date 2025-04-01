@@ -28,7 +28,7 @@ const products: Product[] = [
     description: 'Premium organic quinoa, high in protein and fiber. Perfect for healthy meals.',
     price: 299,
     image: '/images/Coconut Barfi With Jaggery.jpeg',
-    category: 'Healthy Sweet',
+    category: 'Healthy Treats',
     tags: ['healthy', 'sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet']
   },
   {
@@ -37,7 +37,7 @@ const products: Product[] = [
     description: 'Nutrient-rich chia seeds packed with omega-3 fatty acids and antioxidants.',
     price: 199,
     image: '/images/Coconut Barfi with Sugar.jpeg',
-    category: 'Sweet',
+    category: 'Healthy Treats',
     tags: ['sweet', 'dessert', 'coconut', 'sugar', 'barfi', 'indian sweet']
   },
   {
@@ -46,7 +46,7 @@ const products: Product[] = [
     description: 'Fresh, raw almonds. Rich in healthy fats, protein, and vitamin E.',
     price: 399,
     image: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg',
-    category: 'Healthy Sweet',
+    category: 'Healthy Treats',
     tags: ['sugar free', 'healthy', 'dates', 'peanut', 'ladoo', 'indian sweet', 'nuts']
   },
   {
@@ -55,7 +55,7 @@ const products: Product[] = [
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Healthy Sweet',
+    category: 'Healthy Treats',
     tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
   },
   {
@@ -64,7 +64,7 @@ const products: Product[] = [
     description: 'Pure, unprocessed organic honey. Natural sweetener with antibacterial properties.',
     price: 349,
     image: '/images/Sugar Free Dryfruits laddoo.jpeg',
-    category: 'Healthy Sweet',
+    category: 'Healthy Treats',
     tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
   },
   {
@@ -165,7 +165,7 @@ const products: Product[] = [
       '/images/jaggerymangopickle/MZ8_0708.jpg'
       
     ],
-    category: 'Pickles',
+    category: 'Pickles & Chutneys',
     tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
   },
   {
@@ -200,7 +200,7 @@ const products: Product[] = [
       '/images/traditionallemonpickle/MZ8_0693.jpg',
       '/images/traditionallemonpickle/MZ8_0694.jpg'
     ],
-    category: 'Pickles',
+    category: 'Pickles & Chutneys',
     tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
   },
   {
@@ -236,8 +236,84 @@ const products: Product[] = [
       '/images/wholewheatjaggery-gurpaara/NNs_47.jpg',
       '/images/wholewheatjaggery-gurpaara/NNs_48.jpg'
     ],
-    category: 'Healthy Sweet',
+    category: 'Healthy Treats',
     tags: ['healthy', 'treats', 'nut', 'bites', 'healthy treats', 'healthy sweets', 'gur', 'gur paara']
+  },
+  {
+    id: '16',
+    name: 'Gond Ladoo',
+    description: 'Traditional Gur Paara made of whole wheat.',
+    price: 169,
+    image: '/images/gondladdoo/IMG_6.jpg',
+    images: [
+      '/images/gondladdoo/IMG_1.jpg',
+      '/images/gondladdoo/IMG_2.jpg',
+      '/images/gondladdoo/IMG_3.jpg',
+      '/images/gondladdoo/IMG_4.jpg',
+      '/images/gondladdoo/IMG_5.jpg',
+      '/images/gondladdoo/IMG_6.jpg',
+      '/images/gondladdoo/IMG_7.jpg'
+    ],
+    category: 'Healthy Treats',
+    tags: ['healthy', 'treats', 'nut', 'bites', 'healthy treats', 'healthy sweets', 'gur', 'gur paara']
+  },
+  {
+    id: '17',
+    name: 'Sweet and Spicy Mango Chutney',
+    description: 'Traditional Gur Paara made of whole wheat.',
+    price: 169,
+    image: '/images/sweetandspicymangochutney/IMG_1.jpg',
+    images: [
+      '/images/sweetandspicymangochutney/IMG_1.jpg',
+      '/images/sweetandspicymangochutney/IMG_2.jpg',
+      '/images/sweetandspicymangochutney/IMG_3.jpg',
+      '/images/sweetandspicymangochutney/IMG_4.jpg',
+      '/images/sweetandspicymangochutney/IMG_5.jpg',
+      '/images/sweetandspicymangochutney/IMG_6.jpg',
+      '/images/sweetandspicymangochutney/IMG_7.jpg'
+    ],
+    category: 'Pickles & Chutneys',
+    tags: ['healthy', 'treats', 'chutney', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
+  },
+  {
+    id: '18',
+    name: 'Red Chilli Pickle',
+    description: 'Traditional Gur Paara made of whole wheat.',
+    price: 169,
+    image: '/images/redchillipickle/IMG_1.jpg',
+    images: [
+      '/images/redchillipickle/IMG_1.jpg',
+      '/images/redchillipickle/IMG_2.jpg',
+      '/images/redchillipickle/IMG_3.jpg',
+      '/images/redchillipickle/IMG_4.jpg',
+      '/images/redchillipickle/IMG_5.jpg',
+      '/images/redchillipickle/IMG_6.jpg',
+      '/images/redchillipickle/IMG_7.jpg'
+    ],
+    category: 'Pickles & Chutneys',
+    tags: ['healthy', 'treats', 'chutney', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
+  },
+  {
+    id: '19',
+    name: 'Green Chilli Pickle',
+    description: 'Green Chilli Pickle made of green chilli.',
+    price: 169,
+    image: '/images/greenchillipickle/IMG_1.jpg',
+    images: [
+      '/images/greenchillipickle/IMG_1.jpg',
+      '/images/greenchillipickle/IMG_2.jpg',
+      '/images/greenchillipickle/IMG_3.jpg',
+      '/images/greenchillipickle/IMG_4.jpg',
+      '/images/greenchillipickle/IMG_5.jpg',
+      '/images/greenchillipickle/IMG_6.jpg',
+      '/images/greenchillipickle/IMG_7.jpg',
+      '/images/greenchillipickle/IMG_8.jpg',
+      '/images/greenchillipickle/IMG_9.jpg',
+      '/images/greenchillipickle/IMG_10.jpg',
+      '/images/greenchillipickle/IMG_11.jpg'
+    ],
+    category: 'Pickles & Chutneys',
+    tags: ['green chilli', 'treats', 'chutney', 'chilli', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
   }
 ];
 
@@ -684,7 +760,7 @@ export default function WholeFoods() {
                       >
                         <div className="aspect-square relative overflow-hidden rounded-md">
                           <Image
-                            src={product.images?.[0] || product.image}
+                            src={product.image}
                             alt={product.name}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-200"
