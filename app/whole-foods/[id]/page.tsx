@@ -6,12 +6,12 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/context/CartContext';
 import { toast } from 'react-hot-toast';
-import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiX, FiZoomIn } from 'react-icons/fi';
 import Link from 'next/link';
 
 // Import products from data file and Product type from types file
-import { products } from '@/data/whole-foods';
-import type { Product } from '@/types/whole-foods';
+import { products } from '../../../data/whole-foods';
+import type { Product } from '../../../types/whole-foods';
 
 interface ProductPageProps {
   params: Promise<{
@@ -25,6 +25,9 @@ export default function ProductPage({ params }: ProductPageProps) {
   const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isZoomModalOpen, setIsZoomModalOpen] = useState(false);
+  const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
+  const [isZoomed, setIsZoomed] = useState(false);
 
   // Find the product by ID
   const product = products.find((p: Product) => p.id === id);
@@ -101,6 +104,20 @@ export default function ProductPage({ params }: ProductPageProps) {
     }
   };
 
+  const handleImageClick = () => {
+    setIsZoomModalOpen(true);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isZoomed) return;
+    
+    const bounds = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - bounds.left) / bounds.width) * 100;
+    const y = ((e.clientY - bounds.top) / bounds.height) * 100;
+    
+    setZoomPosition({ x, y });
+  };
+
   return (
     <main className="relative mt-[72px]">
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -117,23 +134,36 @@ export default function ProductPage({ params }: ProductPageProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
             {/* Image Gallery */}
             <div className="relative">
-              <div className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden w-1/2 mx-auto">
+              <div 
+                className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden w-1/2 mx-auto cursor-zoom-in group"
+                onClick={handleImageClick}
+              >
                 {product.images ? (
-                  <Image
-                    src={product.images[currentImageIndex]}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-4"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
+                  <>
+                    <Image
+                      src={product.images[currentImageIndex]}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
+                      <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
+                    </div>
+                  </>
                 ) : (
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-4"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
+                  <>
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
+                      <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
+                    </div>
+                  </>
                 )}
               </div>
               
@@ -225,6 +255,69 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Zoom Modal */}
+      {isZoomModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative w-full h-full flex items-center justify-center p-4">
+            <button
+              onClick={() => {
+                setIsZoomModalOpen(false);
+                setIsZoomed(false);
+              }}
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+            >
+              <FiX size={24} />
+            </button>
+            
+            <div 
+              className={`relative ${isZoomed ? 'cursor-move' : 'cursor-zoom-in'} w-full max-w-3xl mx-auto`}
+              onClick={() => setIsZoomed(!isZoomed)}
+              onMouseMove={handleMouseMove}
+            >
+              <div className="relative aspect-square bg-white rounded-lg">
+                <Image
+                  src={product.images ? product.images[currentImageIndex] : product.image}
+                  alt={product.name}
+                  fill
+                  className={`
+                    object-contain p-4 transition-transform duration-200
+                    ${isZoomed ? 'scale-150' : 'scale-100'}
+                  `}
+                  style={isZoomed ? {
+                    transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`
+                  } : undefined}
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
+                />
+              </div>
+            </div>
+
+            {product.images && product.images.length > 1 && (
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleImageNav('prev');
+                  }}
+                  className="p-2 rounded-full bg-white text-black hover:bg-gray-200"
+                >
+                  <FiChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleImageNav('next');
+                  }}
+                  className="p-2 rounded-full bg-white text-black hover:bg-gray-200"
+                >
+                  <FiChevronRight size={20} />
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </main>
   );
 } 

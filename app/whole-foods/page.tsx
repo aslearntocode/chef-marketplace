@@ -9,8 +9,8 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { FiSearch, FiX } from 'react-icons/fi';
 import Link from 'next/link';
-import { products } from '@/data/whole-foods';
-import type { Product } from '@/types/whole-foods';
+import { products } from '../../data/whole-foods';
+import type { Product } from '../../types/whole-foods';
 
 export default function WholeFoods() {
   const { user } = useAuth();
@@ -19,7 +19,6 @@ export default function WholeFoods() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({});
-  const [modalImage, setModalImage] = useState<{ src: string; productName: string } | null>(null);
 
   // Define categories based on the products
   const categories = [
@@ -31,13 +30,13 @@ export default function WholeFoods() {
     { id: 'pickles', name: 'Pickles' }
   ];
 
-  const filteredProducts = products.filter(product => {
+  const filteredProducts = products.filter((product: Product) => {
     const searchLower = searchQuery.toLowerCase();
     const matchesSearch = 
       product.name.toLowerCase().includes(searchLower) ||
       product.description.toLowerCase().includes(searchLower) ||
       product.category.toLowerCase().includes(searchLower) ||
-      product.tags.some(tag => tag.toLowerCase().includes(searchLower));
+      product.tags.some((tag: string) => tag.toLowerCase().includes(searchLower));
 
     const matchesCategory = selectedCategory === 'all' || 
       product.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
@@ -46,14 +45,14 @@ export default function WholeFoods() {
   });
 
   // Group products by category
-  const productsByCategory = products.reduce((acc, product) => {
+  const productsByCategory: Record<string, Product[]> = products.reduce((acc: Record<string, Product[]>, product: Product) => {
     const category = product.category;
     if (!acc[category]) {
       acc[category] = [];
     }
     acc[category].push(product);
     return acc;
-  }, {} as Record<string, Product[]>);
+  }, {});
 
   const handleAddToCart = (item: Product) => {
     if (!user) {
@@ -110,39 +109,12 @@ export default function WholeFoods() {
     });
   };
 
-  // Remove the useEffect that was causing auto-scrolling
-  // Update the category selection handler to not modify the URL
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
   };
 
   return (
     <main className="relative mt-[72px]">
-      {/* Image Modal/Lightbox */}
-      {modalImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setModalImage(null)}
-        >
-          <button
-            onClick={() => setModalImage(null)}
-            className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
-          >
-            <FiX size={24} />
-          </button>
-          <div className="relative w-full max-w-4xl h-[80vh] bg-white rounded-lg overflow-hidden">
-            <Image
-              src={modalImage.src}
-              alt={modalImage.productName}
-              fill
-              className="object-contain"
-              sizes="(max-width: 1536px) 100vw, 1536px"
-              priority
-            />
-          </div>
-        </div>
-      )}
-
       {/* Main Content with Search Bar */}
       <div className="max-w-7xl mx-auto px-4 py-4">
         {/* Centered Search Bar with reduced width */}
@@ -171,7 +143,7 @@ export default function WholeFoods() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {filteredProducts.map((product) => (
+              {filteredProducts.map((product: Product) => (
                 <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
                   <Link href={`/whole-foods/${product.id}`} className="block">
                     <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
@@ -181,15 +153,8 @@ export default function WholeFoods() {
                             src={product.images[currentImageIndex[product.id] || 0]}
                             alt={product.name}
                             fill
-                            className="object-contain p-4 cursor-pointer"
+                            className="object-contain p-4"
                             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setModalImage({
-                                src: product.images![currentImageIndex[product.id] || 0],
-                                productName: product.name
-                              });
-                            }}
                           />
                           {product.images.length > 1 && (
                             <>
@@ -212,7 +177,7 @@ export default function WholeFoods() {
                                 →
                               </button>
                               <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                                {product.images.map((_, index) => (
+                                {product.images.map((_: string, index: number) => (
                                   <div
                                     key={index}
                                     className={`w-2 h-2 rounded-full ${
@@ -229,12 +194,8 @@ export default function WholeFoods() {
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-contain p-4 cursor-pointer"
+                          className="object-contain p-4"
                           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                          onClick={() => setModalImage({
-                            src: product.image,
-                            productName: product.name
-                          })}
                         />
                       )}
                     </div>
@@ -308,7 +269,7 @@ export default function WholeFoods() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {filteredProducts.map((product) => (
+              {filteredProducts.map((product: Product) => (
                 <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
                   <Link href={`/whole-foods/${product.id}`} className="block">
                     <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
@@ -318,15 +279,8 @@ export default function WholeFoods() {
                             src={product.images[currentImageIndex[product.id] || 0]}
                             alt={product.name}
                             fill
-                            className="object-contain p-4 cursor-pointer"
+                            className="object-contain p-4"
                             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setModalImage({
-                                src: product.images![currentImageIndex[product.id] || 0],
-                                productName: product.name
-                              });
-                            }}
                           />
                           {product.images.length > 1 && (
                             <>
@@ -349,7 +303,7 @@ export default function WholeFoods() {
                                 →
                               </button>
                               <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                                {product.images.map((_, index) => (
+                                {product.images.map((_: string, index: number) => (
                                   <div
                                     key={index}
                                     className={`w-2 h-2 rounded-full ${
@@ -366,12 +320,8 @@ export default function WholeFoods() {
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-contain p-4 cursor-pointer"
+                          className="object-contain p-4"
                           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                          onClick={() => setModalImage({
-                            src: product.image,
-                            productName: product.name
-                          })}
                         />
                       )}
                     </div>
@@ -458,7 +408,7 @@ export default function WholeFoods() {
 
                   {/* Preview Grid - 4 Products */}
                   <div className="grid grid-cols-2 gap-3 p-3">
-                    {categoryProducts.slice(0, 4).map((product) => (
+                    {categoryProducts.slice(0, 4).map((product: Product) => (
                       <div 
                         key={product.id} 
                         className="relative group cursor-pointer"
