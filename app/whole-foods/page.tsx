@@ -10,7 +10,8 @@ import { toast } from 'react-hot-toast';
 import { FiSearch, FiX } from 'react-icons/fi';
 import Link from 'next/link';
 
-interface Product {
+// Export the Product interface
+export interface Product {
   id: string;
   name: string;
   description: string;
@@ -21,7 +22,8 @@ interface Product {
   tags: string[];  // Add tags array to the interface
 }
 
-const products: Product[] = [
+// Export the products array
+export const products: Product[] = [
   {
     id: '1',
     name: 'Coconut Barfi with Jaggery',
@@ -415,13 +417,7 @@ export default function WholeFoods() {
     });
   };
 
-  // Update the useEffect to reset state on mount
-  useEffect(() => {
-    // Reset to category view when the component mounts
-    setSelectedCategory('all');
-    setSearchQuery('');
-  }, []); // Empty dependency array means this runs once on mount
-
+  // Remove the useEffect that was causing auto-scrolling
   // Update the category selection handler to not modify the URL
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
@@ -484,110 +480,121 @@ export default function WholeFoods() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {filteredProducts.map((product) => (
                 <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-                  <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
-                    {product.images ? (
-                      <>
+                  <Link href={`/whole-foods/${product.id}`} className="block">
+                    <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
+                      {product.images ? (
+                        <>
+                          <Image
+                            src={product.images[currentImageIndex[product.id] || 0]}
+                            alt={product.name}
+                            fill
+                            className="object-contain p-4 cursor-pointer"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setModalImage({
+                                src: product.images![currentImageIndex[product.id] || 0],
+                                productName: product.name
+                              });
+                            }}
+                          />
+                          {product.images.length > 1 && (
+                            <>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleImageNav(product.id, 'prev', product.images!.length);
+                                }}
+                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                              >
+                                ←
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleImageNav(product.id, 'next', product.images!.length);
+                                }}
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                              >
+                                →
+                              </button>
+                              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                                {product.images.map((_, index) => (
+                                  <div
+                                    key={index}
+                                    className={`w-2 h-2 rounded-full ${
+                                      (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                            </>
+                          )}
+                        </>
+                      ) : (
                         <Image
-                          src={product.images[currentImageIndex[product.id] || 0]}
+                          src={product.image}
                           alt={product.name}
                           fill
                           className="object-contain p-4 cursor-pointer"
                           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setModalImage({
-                              src: product.images![currentImageIndex[product.id] || 0],
-                              productName: product.name
-                            });
-                          }}
+                          onClick={() => setModalImage({
+                            src: product.image,
+                            productName: product.name
+                          })}
                         />
-                        {product.images.length > 1 && (
-                          <>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleImageNav(product.id, 'prev', product.images!.length);
-                              }}
-                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                            >
-                              ←
-                            </button>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleImageNav(product.id, 'next', product.images!.length);
-                              }}
-                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                            >
-                              →
-                            </button>
-                            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                              {product.images.map((_, index) => (
-                                <div
-                                  key={index}
-                                  className={`w-2 h-2 rounded-full ${
-                                    (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
-                                  }`}
-                                />
-                              ))}
+                      )}
+                    </div>
+                    <div className="p-4 flex flex-col flex-1">
+                      <div className="flex flex-col flex-1">
+                        <div className="flex items-start justify-between gap-2 mb-1">
+                          <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
+                          <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                            {product.category}
+                          </span>
+                        </div>
+                        <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
+                      </div>
+                      <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
+                        <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
+                        <div className="flex items-center space-x-1">
+                          {getItemQuantity(product.id) > 0 ? (
+                            <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleRemoveFromCart(product.id);
+                                }}
+                                className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              >
+                                -
+                              </button>
+                              <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleAddToCart(product);
+                                }}
+                                className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              >
+                                +
+                              </button>
                             </div>
-                          </>
-                        )}
-                      </>
-                    ) : (
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain p-4 cursor-pointer"
-                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                        onClick={() => setModalImage({
-                          src: product.image,
-                          productName: product.name
-                        })}
-                      />
-                    )}
-                  </div>
-                  <div className="p-4 flex flex-col flex-1">
-                    <div className="flex flex-col flex-1">
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
-                        <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
-                          {product.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
-                    </div>
-                    <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
-                      <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
-                      <div className="flex items-center space-x-1">
-                        {getItemQuantity(product.id) > 0 ? (
-                          <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                          ) : (
                             <button
-                              onClick={() => handleRemoveFromCart(product.id)}
-                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                handleAddToCart(product);
+                              }}
+                              className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
                             >
-                              -
+                              Add to Cart
                             </button>
-                            <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
-                            <button
-                              onClick={() => handleAddToCart(product)}
-                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
-                            >
-                              +
-                            </button>
-                          </div>
-                        ) : (
-                          <button
-                            onClick={() => handleAddToCart(product)}
-                            className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
-                          >
-                            Add to Cart
-                          </button>
-                        )}
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -610,110 +617,121 @@ export default function WholeFoods() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {filteredProducts.map((product) => (
                 <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-                  <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
-                    {product.images ? (
-                      <>
+                  <Link href={`/whole-foods/${product.id}`} className="block">
+                    <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
+                      {product.images ? (
+                        <>
+                          <Image
+                            src={product.images[currentImageIndex[product.id] || 0]}
+                            alt={product.name}
+                            fill
+                            className="object-contain p-4 cursor-pointer"
+                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setModalImage({
+                                src: product.images![currentImageIndex[product.id] || 0],
+                                productName: product.name
+                              });
+                            }}
+                          />
+                          {product.images.length > 1 && (
+                            <>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleImageNav(product.id, 'prev', product.images!.length);
+                                }}
+                                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                              >
+                                ←
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleImageNav(product.id, 'next', product.images!.length);
+                                }}
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                              >
+                                →
+                              </button>
+                              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                                {product.images.map((_, index) => (
+                                  <div
+                                    key={index}
+                                    className={`w-2 h-2 rounded-full ${
+                                      (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                            </>
+                          )}
+                        </>
+                      ) : (
                         <Image
-                          src={product.images[currentImageIndex[product.id] || 0]}
+                          src={product.image}
                           alt={product.name}
                           fill
                           className="object-contain p-4 cursor-pointer"
                           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setModalImage({
-                              src: product.images![currentImageIndex[product.id] || 0],
-                              productName: product.name
-                            });
-                          }}
+                          onClick={() => setModalImage({
+                            src: product.image,
+                            productName: product.name
+                          })}
                         />
-                        {product.images.length > 1 && (
-                          <>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleImageNav(product.id, 'prev', product.images!.length);
-                              }}
-                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                            >
-                              ←
-                            </button>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleImageNav(product.id, 'next', product.images!.length);
-                              }}
-                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                            >
-                              →
-                            </button>
-                            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                              {product.images.map((_, index) => (
-                                <div
-                                  key={index}
-                                  className={`w-2 h-2 rounded-full ${
-                                    (currentImageIndex[product.id] || 0) === index ? 'bg-black' : 'bg-gray-300'
-                                  }`}
-                                />
-                              ))}
+                      )}
+                    </div>
+                    <div className="p-4 flex flex-col flex-1">
+                      <div className="flex flex-col flex-1">
+                        <div className="flex items-start justify-between gap-2 mb-1">
+                          <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
+                          <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                            {product.category}
+                          </span>
+                        </div>
+                        <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
+                      </div>
+                      <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
+                        <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
+                        <div className="flex items-center space-x-1">
+                          {getItemQuantity(product.id) > 0 ? (
+                            <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleRemoveFromCart(product.id);
+                                }}
+                                className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              >
+                                -
+                              </button>
+                              <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleAddToCart(product);
+                                }}
+                                className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              >
+                                +
+                              </button>
                             </div>
-                          </>
-                        )}
-                      </>
-                    ) : (
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain p-4 cursor-pointer"
-                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                        onClick={() => setModalImage({
-                          src: product.image,
-                          productName: product.name
-                        })}
-                      />
-                    )}
-                  </div>
-                  <div className="p-4 flex flex-col flex-1">
-                    <div className="flex flex-col flex-1">
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
-                        <span className="text-xs bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
-                          {product.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description}</p>
-                    </div>
-                    <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
-                      <span className="text-lg font-bold text-gray-800">₹{product.price}</span>
-                      <div className="flex items-center space-x-1">
-                        {getItemQuantity(product.id) > 0 ? (
-                          <div className="flex items-center bg-gray-100 rounded-lg p-1">
+                          ) : (
                             <button
-                              onClick={() => handleRemoveFromCart(product.id)}
-                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                handleAddToCart(product);
+                              }}
+                              className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
                             >
-                              -
+                              Add to Cart
                             </button>
-                            <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
-                            <button
-                              onClick={() => handleAddToCart(product)}
-                              className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
-                            >
-                              +
-                            </button>
-                          </div>
-                        ) : (
-                          <button
-                            onClick={() => handleAddToCart(product)}
-                            className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
-                          >
-                            Add to Cart
-                          </button>
-                        )}
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -753,9 +771,6 @@ export default function WholeFoods() {
                         className="relative group cursor-pointer"
                         onClick={() => {
                           handleCategorySelect(category.toLowerCase().replace(/\s+/g, '-'));
-                          setTimeout(() => {
-                            document.getElementById(`product-${product.id}`)?.scrollIntoView({ behavior: 'smooth' });
-                          }, 100);
                         }}
                       >
                         <div className="aspect-square relative overflow-hidden rounded-md">

@@ -29,15 +29,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#FFD700]">
       {/* Pickles Popup (bottom position) */}
-      <div className={`fixed right-0 bottom-24 transition-transform duration-300 ease-in-out transform ${isPicklesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}>
+      <div 
+        className={`fixed right-0 bottom-24 transition-transform duration-300 ease-in-out transform ${isPicklesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}
+        onClick={() => setIsPicklesPopupVisible(!isPicklesPopupVisible)}
+      >
         <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
-          <button 
-            onClick={() => setIsPicklesPopupVisible(false)}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold"
-          >
-            →
-          </button>
-          
           <div className="mt-4">
             <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">New Arrivals! 🌶️</h3>
             <p className="text-sm text-gray-600 mb-3">
@@ -54,26 +50,19 @@ export default function Home() {
           {/* Vertical text for minimized state */}
           <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
                style={{ writingMode: 'vertical-rl' }}>
-            <button
-              onClick={() => setIsPicklesPopupVisible(true)}
-              className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
-            >
+            <span className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md text-sm font-semibold">
               Pickles & Chutneys! 🌶️
-            </button>
+            </span>
           </div>
         </div>
       </div>
 
       {/* Healthy Bites Popup (modified position) */}
-      <div className={`fixed right-0 bottom-[calc(24rem)] transition-transform duration-300 ease-in-out transform ${isHealthyBitesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}>
+      <div 
+        className={`fixed right-0 bottom-[calc(24rem)] transition-transform duration-300 ease-in-out transform ${isHealthyBitesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}
+        onClick={() => setIsHealthyBitesPopupVisible(!isHealthyBitesPopupVisible)}
+      >
         <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
-          <button 
-            onClick={() => setIsHealthyBitesPopupVisible(false)}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold"
-          >
-            →
-          </button>
-          
           <div className="mt-4">
             <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">Healthy Bites! 🌿</h3>
             <p className="text-sm text-gray-600 mb-3">
@@ -90,12 +79,9 @@ export default function Home() {
           {/* Vertical text for minimized state */}
           <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
                style={{ writingMode: 'vertical-rl' }}>
-            <button
-              onClick={() => setIsHealthyBitesPopupVisible(true)}
-              className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
-            >
+            <span className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md text-sm font-semibold">
               Healthy Bites! 🌿
-            </button>
+            </span>
           </div>
         </div>
       </div>
@@ -200,12 +186,11 @@ export default function Home() {
                 <div className="slider">
                   {/* First set of items */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods' },
-                    // { src: '/images/dateandnutbites/NNs_81.jpg', name: 'Date and Nut Bites', price: '₹199', path: '/whole-foods' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods' },
-                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/9' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/6' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods/7' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
@@ -230,12 +215,11 @@ export default function Home() {
 
                   {/* Second set - Update with the same paths */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods' },
-                    // { src: '/images/dateandnutbites/NNs_81.jpg', name: 'Date and Nut Bites', price: '₹199', path: '/whole-foods' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods' },
-                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/9' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/6' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods/7' },
                   ].map((item, index) => (
                     <Link 
                       key={`second-${index}`} 
