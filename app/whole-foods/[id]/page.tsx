@@ -1,17 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { use } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/context/CartContext';
-import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import { FiArrowLeft, FiShoppingCart } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 import Link from 'next/link';
 
-// Import the products data and Product type from the data file
-import { products, Product } from '@/data/whole-foods';
+// Import products from data file and Product type from types file
+import { products } from '@/data/whole-foods';
+import type { Product } from '@/types/whole-foods';
 
 interface ProductPageProps {
   params: Promise<{
@@ -109,7 +109,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           onClick={handleBack}
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6"
         >
-          <FiArrowLeft className="mr-2" />
+          <FiChevronLeft className="mr-2" />
           Back to Whole Foods
         </button>
 
@@ -216,7 +216,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     onClick={handleAddToCart}
                     className="w-full bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
                   >
-                    <FiShoppingCart />
+                    <FiX />
                     Add to Cart
                   </button>
                 )}
