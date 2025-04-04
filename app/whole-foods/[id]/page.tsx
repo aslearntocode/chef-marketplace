@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, use } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
@@ -14,13 +14,13 @@ import { products } from '@/data/whole-foods';
 import type { Product } from '@/types/whole-foods';
 
 interface ProductPageProps {
-  params: Promise<{
+  params: {
     id: string;
-  }>;
+  };
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const { id } = use(params);
+  const { id } = params;
   const { user } = useAuth();
   const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
