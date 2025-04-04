@@ -14,13 +14,13 @@ import { products } from '@/data/whole-foods';
 import type { Product } from '@/types/whole-foods';
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const { id } = params;
+  const { id } = use(params);
   const { user } = useAuth();
   const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
