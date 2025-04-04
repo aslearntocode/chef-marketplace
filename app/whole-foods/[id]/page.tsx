@@ -10,8 +10,8 @@ import { toast } from 'react-hot-toast';
 import { FiArrowLeft, FiShoppingCart } from 'react-icons/fi';
 import Link from 'next/link';
 
-// Import the products data and Product type from the main page
-import { products, Product } from '../page';
+// Import the products data and Product type from the data file
+import { products, Product } from '@/data/whole-foods';
 
 interface ProductPageProps {
   params: Promise<{
