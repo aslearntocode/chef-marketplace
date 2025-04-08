@@ -10,7 +10,6 @@ export interface Product {
   size?: string;  // Optional size information
   ingredients?: string[];  // Optional list of ingredients
   benefits?: string[];  // Optional list of benefits
-  storage_info?: string;  // Optional storage and shelf-life information
 }
 
 export interface ProductCategory {

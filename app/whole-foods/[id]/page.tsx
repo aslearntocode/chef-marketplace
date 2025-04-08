@@ -200,8 +200,35 @@ export default function ProductPage({ params }: ProductPageProps) {
                     {openSection === 'description' ? <FiChevronUp /> : <FiChevronDown />}
                   </button>
                   {openSection === 'description' && (
-                    <div className="px-4 pb-4 text-gray-600">
-                      {product.description}
+                    <div className="px-4 pb-4 space-y-4">
+                      {/* Main Description */}
+                      <div>
+                        <h4 className="font-medium mb-2 text-gray-800">Description:</h4>
+                        <p className="text-gray-600">
+                          {product.description.split('•')[0].trim()}
+                        </p>
+                      </div>
+
+                      {/* Additional Sections */}
+                      {product.description.includes('•') && (
+                        <div className="space-y-3 border-t pt-4">
+                          {product.description
+                            .split('•')
+                            .slice(1)
+                            .map((section, index) => {
+                              if (section.trim()) {
+                                const [title, content] = section.split(':');
+                                return (
+                                  <div key={index}>
+                                    <h4 className="font-medium text-gray-800">{title.trim()}:</h4>
+                                    <p className="text-gray-600">{content.trim()}</p>
+                                  </div>
+                                );
+                              }
+                              return null;
+                            })}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -243,22 +270,6 @@ export default function ProductPage({ params }: ProductPageProps) {
                       ) : (
                         <p className="text-gray-600">Ingredients and benefits information not available</p>
                       )}
-                    </div>
-                  )}
-                </div>
-
-                {/* Storage/Shelf-life Section */}
-                <div className="border rounded-lg">
-                  <button
-                    onClick={() => toggleSection('storage')}
-                    className="flex items-center justify-between w-full p-4 text-left"
-                  >
-                    <span className="font-medium">Storage/Shelf-life</span>
-                    {openSection === 'storage' ? <FiChevronUp /> : <FiChevronDown />}
-                  </button>
-                  {openSection === 'storage' && (
-                    <div className="px-4 pb-4 text-gray-600">
-                      {product.storage_info || 'Storage information not available'}
                     </div>
                   )}
                 </div>
