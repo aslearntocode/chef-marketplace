@@ -100,7 +100,24 @@ export const products: Product[] = [
           '/images/images-drinks/Thrilling Thandai/amazon-21.jpg',
         ],
         category: 'Drinks',
-        tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional', 'healthy drink', 'festive drink']
+        tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional', 'healthy drink', 'festive drink'],
+        size: '750ml',
+        ingredients: [
+          'Premium Saffron',
+          'Wholesome Nuts',
+          'Aromatic Spices',
+          'Natural Sweeteners',
+          'Rose Petals'
+        ],
+        benefits: [
+          'Natural Cooling Properties',
+          'Rich in Antioxidants',
+          'Traditional Recipe',
+          'No Artificial Colors',
+          'No Preservatives',
+          'Made with Pure Ingredients'
+        ],
+        storage_info: 'Store in a cool, dry place. After opening, refrigerate and consume within 7 days. Shelf life: 6 months when unopened.'
       },
       {
         id: '8',

@@ -246,6 +246,22 @@ export default function ProductPage({ params }: ProductPageProps) {
                     </div>
                   )}
                 </div>
+
+                {/* Storage/Shelf-life Section */}
+                <div className="border rounded-lg">
+                  <button
+                    onClick={() => toggleSection('storage')}
+                    className="flex items-center justify-between w-full p-4 text-left"
+                  >
+                    <span className="font-medium">Storage/Shelf-life</span>
+                    {openSection === 'storage' ? <FiChevronUp /> : <FiChevronDown />}
+                  </button>
+                  {openSection === 'storage' && (
+                    <div className="px-4 pb-4 text-gray-600">
+                      {product.storage_info || 'Storage information not available'}
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Add to Cart Button */}
