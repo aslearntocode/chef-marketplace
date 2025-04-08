@@ -260,12 +260,6 @@ export default function WholeFoods() {
               <h2 className="text-2xl font-bold">
                 {categories.find(cat => cat.id === selectedCategory)?.name}
               </h2>
-              <button
-                onClick={() => handleCategorySelect('all')}
-                className="px-4 py-2 text-base font-medium text-gray-600 hover:text-black bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-2"
-              >
-                ← Back to categories
-              </button>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">

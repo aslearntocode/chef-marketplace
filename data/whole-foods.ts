@@ -40,8 +40,8 @@ export const products: Product[] = [
       {
         id: '5',
         name: 'Paan-E-Bahar',
-        description: 'Paan-e-bahar is a refreshing and aromatic drink inspired by the traditional flavours of paan, a popular South-Asian betel leaf preparation. This vibrant drink combines the essence of crushed betel leaves with a blend of spices, herbs and sweeteners creating a unique and tantalizing taste experience. This drink features the freshest of ingredients with no artificial flavours and preservatives.',
-        price:420 ,
+        description: 'A delightful, traditional betel leaf-based drink with refreshing flavors.',
+        price: 420,
         image: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg',
         images: [
           '/images/images-drinks/Paan-e-bahar/amazon-06.jpg',
@@ -51,7 +51,24 @@ export const products: Product[] = [
           '/images/images-drinks/Paan-e-bahar/amazon-21.jpg',
         ],
         category: 'Drinks',
-        tags: ['drink', 'cold drink', 'refreshing', 'paan', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'pure', 'wholesome']
+        tags: ['drink', 'cold drink', 'refreshing', 'paan', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'pure', 'wholesome'],
+        size: '750ml',
+        ingredients: [
+          'Fresh Betel Leaves',
+          'Natural Sweeteners',
+          'Aromatic Spices',
+          'Rose Petals',
+          'Cardamom',
+          'Fennel Seeds'
+        ],
+        benefits: [
+          'Natural Cooling Properties',
+          'Aids Digestion',
+          'Rich in Antioxidants',
+          'No Artificial Colors',
+          'No Preservatives',
+          'Made with Pure Ingredients'
+        ]
       },
       {
         id: '6',
