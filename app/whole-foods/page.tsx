@@ -380,12 +380,12 @@ export default function WholeFoods() {
               {Object.entries(productsByCategory).map(([category, categoryProducts]) => (
                 <div 
                   key={category}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
                   {/* Category Header */}
-                  <div className="p-3 border-b">
+                  <div className="p-6 border-b">
                     <div className="flex justify-between items-center">
-                      <h2 className="text-lg font-bold">{category}</h2>
+                      <h2 className="text-2xl font-bold tracking-tight text-gray-900">{category}</h2>
                       <Link 
                         href="#"
                         onClick={(e) => {
@@ -393,7 +393,7 @@ export default function WholeFoods() {
                           handleCategorySelect(category.toLowerCase().replace(/\s+/g, '-'));
                           setSearchQuery('');
                         }}
-                        className="text-xs text-blue-600 hover:text-blue-800 hover:underline"
+                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
                       >
                         See all
                       </Link>

@@ -10,7 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Divine Hands",
-  description: "Home-cooked meals delivered to your doorstep",
+  description: "Handcrafted food products made with love",
+  icons: {
+    icon: [
+      { rel: 'icon', url: '/TDH Logo.png' },
+      { rel: 'shortcut icon', url: '/favicon.ico' }
+    ]
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/TDH Logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body className={inter.className}>
         <AuthProvider>
           <CartProvider>
