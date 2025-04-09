@@ -18,6 +18,7 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
+    /*
     {
       id: 'home-made-food',
       label: 'Home Made Food',
@@ -28,6 +29,7 @@ export default function Navbar() {
         { href: '/home-made-food/snacks', label: 'Packaged Snacks', delivery: 'Same Day Delivery' },
       ]
     },
+    */
     { href: '/whole-foods', label: 'Whole Foods' },
   ];
 

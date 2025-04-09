@@ -6,161 +6,94 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [isPicklesPopupVisible, setIsPicklesPopupVisible] = useState(false);
-  const [isHealthyBitesPopupVisible, setIsHealthyBitesPopupVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      title: "Discover Refreshing Healthy Drinks",
+      description: "Experience the taste of homemade goodness delivered to your doorstep",
+      image: "/images/hero-food.jpg",
+      buttonText: "Explore Now",
+      link: "/whole-foods/categories/drinks"
+    },
+    {
+      title: "Healthy Bites! 🌿",
+      description: "Discover our nutritious range of healthy bites - perfect for guilt-free snacking!",
+      image: "/images/healthy-bites.jpg",
+      buttonText: "Explore Now",
+      link: "/whole-foods/categories/healthy-bites"
+    },
+    {
+      title: "New Arrivals! 🌶️",
+      description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
+      image: "/images/pickles.jpg",
+      buttonText: "Explore Now",
+      link: "/whole-foods/categories/pickles"
+    }
+  ];
 
   useEffect(() => {
-    // Show pickles popup after 1.5s
-    const picklesTimer = setTimeout(() => {
-      setIsPicklesPopupVisible(true);
-    }, 1500);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
 
-    // Show healthy bites popup after 2.5s
-    const healthyBitesTimer = setTimeout(() => {
-      setIsHealthyBitesPopupVisible(true);
-    }, 2500);
-
-    return () => {
-      clearTimeout(picklesTimer);
-      clearTimeout(healthyBitesTimer);
-    };
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <main className="min-h-screen bg-[#FFD700]">
-      {/* Pickles Popup (bottom position) */}
-      <div 
-        className={`fixed right-0 bottom-24 transition-transform duration-300 ease-in-out transform ${isPicklesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}
-        onClick={() => setIsPicklesPopupVisible(!isPicklesPopupVisible)}
-      >
-        <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
-          <div className="mt-4">
-            <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">New Arrivals! 🌶️</h3>
-            <p className="text-sm text-gray-600 mb-3">
-              Check out our newly added spicy, tangy yet healthy pickles and chutneys!
-            </p>
-            <Link 
-              href="/whole-foods" 
-              className="block bg-[#FFD700] text-black text-center py-2 px-4 rounded-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
-            >
-              Order Now
-            </Link>
+      {/* Hero Carousel */}
+      <div className="relative h-[350px] overflow-hidden">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute w-full h-full transition-opacity duration-500 ${
+              currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <div className="relative h-full">
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/80 via-[#FFD700]/80 to-[#FFD700]/80 flex items-center justify-center">
+                <div className="text-center text-black max-w-4xl px-4">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 whitespace-nowrap">{slide.title}</h2>
+                  <p className="text-xl mb-8">{slide.description}</p>
+                  <Link
+                    href={slide.link}
+                    className="bg-[#F7C948] text-black px-8 py-3 rounded-full hover:bg-[#FFD700] transition-colors inline-block text-lg font-semibold shadow-lg"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    {slide.buttonText}
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {/* Vertical text for minimized state */}
-          <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
-               style={{ writingMode: 'vertical-rl' }}>
-            <span className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md text-sm font-semibold">
-              Pickles & Chutneys! 🌶️
-            </span>
-          </div>
+        ))}
+        
+        {/* Carousel Navigation Dots */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                currentSlide === index ? 'bg-[#F7C948]' : 'bg-white/70'
+              }`}
+            />
+          ))}
         </div>
       </div>
-
-      {/* Healthy Bites Popup (modified position) */}
-      <div 
-        className={`fixed right-0 bottom-[calc(24rem)] transition-transform duration-300 ease-in-out transform ${isHealthyBitesPopupVisible ? 'translate-x-0' : 'translate-x-[calc(100%-40px)]'} z-50`}
-        onClick={() => setIsHealthyBitesPopupVisible(!isHealthyBitesPopupVisible)}
-      >
-        <div className="bg-white rounded-l-lg shadow-lg p-4 w-64 relative border-l-4 border-[#FFD700]">
-          <div className="mt-4">
-            <h3 className="text-lg font-bold mb-2 bg-[#FFD700] p-2 rounded-md text-black">Healthy Bites! 🌿</h3>
-            <p className="text-sm text-gray-600 mb-3">
-              Discover our nutritious range of healthy bites - perfect for guilt-free snacking!
-            </p>
-            <Link 
-              href="/whole-foods" 
-              className="block bg-[#FFD700] text-black text-center py-2 px-4 rounded-md hover:bg-[#F7C948] transition-colors text-sm font-semibold"
-            >
-              Explore Now
-            </Link>
-          </div>
-
-          {/* Vertical text for minimized state */}
-          <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 rotate-180 whitespace-nowrap text-center" 
-               style={{ writingMode: 'vertical-rl' }}>
-            <span className="bg-[#FFD700] text-black py-2 px-1 rounded-b-md text-sm font-semibold">
-              Healthy Bites! 🌿
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Header
-      <nav className="bg-white py-4">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-
-          
-          {/* <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="nav-link">Home</Link>
-            <Link href="/about" className="nav-link">About Us</Link>
-            <Link href="/home-made-food" className="nav-link">Home Made Food</Link>
-            <Link href="/home-made-desserts" className="nav-link">Home Made Desserts</Link>
-            <Link href="/tiffin-service" className="nav-link">Tiffin Service</Link>
-          </div> */}
-
-          {/* <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="nav-link">Home</Link>
-            <Link href="/about" className="nav-link">About Us</Link>
-            <Link href="/home-made-food" className="nav-link">Home Made Food</Link>
-            <Link href="/home-made-desserts" className="nav-link">Home Made Desserts</Link>
-            <Link href="/tiffin-service" className="nav-link">Tiffin Service</Link>
-            <Link href="/whole-foods" className="nav-link">Whole Foods</Link>
-          </div> */}
-        {/* </div>
-      </nav> */}
-
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* White Container */}
-        <div className="bg-white rounded-lg p-12 text-center">
-          <h2 className="text-4xl font-bold mb-12">
-            Discover Authentic Home-Cooked Food
-          </h2>
-
-          {/* Buttons Container */}
-          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
-            <Link 
-              href="/home-made-food"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
-            >
-              <div className="text-base font-medium">Meals</div>
-              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
-            </Link>
-            <Link 
-              href="/home-made-desserts"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
-            >
-              <div className="text-base font-medium">Desserts</div>
-              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
-            </Link>
-            <Link 
-              href="/home-made-food/tiffin"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
-            >
-              <div className="text-base font-medium">Tiffin Service</div>
-              <div className="text-[11px] mt-0.5">Next Day Delivery</div>
-            </Link>
-            <Link 
-              href="/home-made-food/snacks"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
-            >
-              <div className="text-base font-medium">Packaged Snacks</div>
-              <div className="text-[11px] mt-0.5">Same Day Delivery</div>
-            </Link>
-            <Link 
-              href="/whole-foods"
-              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
-            >
-              <div className="text-base font-medium">Whole Foods</div>
-              <div className="text-[11px] mt-0.5">Same Day Delivery</div>
-            </Link>
-          </div>
-        </div>
-
         {/* Food Showcase Conveyor Belt */}
-        <div className="bg-white rounded-lg p-8 mt-16 mb-8">
+        <div className="bg-white rounded-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center mb-8">Most Popular Items</h2>
           <div className="flex items-center gap-1 sm:gap-4 relative">
             {/* Left Arrow */}
@@ -186,24 +119,24 @@ export default function Home() {
                 <div className="slider">
                   {/* First set of items */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/9' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
                     { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
                     { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Saffron', price: '₹149', path: '/whole-foods/7' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
                       href={item.path}
-                      className="slide cursor-pointer block"
+                      className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105"
                     >
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full mx-2">
                         <Image 
                           src={item.src} 
                           alt={item.name} 
                           width={500}
                           height={300}
-                          className="w-full h-56 sm:h-48 object-cover"
+                          className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
                         />
                         <div className="p-3 sm:p-4">
                           <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
@@ -224,15 +157,15 @@ export default function Home() {
                     <Link 
                       key={`second-${index}`} 
                       href={item.path}
-                      className="slide cursor-pointer block"
+                      className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105"
                     >
-                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full mx-2">
                         <Image 
                           src={item.src} 
                           alt={item.name} 
                           width={500}
                           height={300}
-                          className="w-full h-56 sm:h-48 object-cover"
+                          className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
                         />
                         <div className="p-3 sm:p-4">
                           <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
