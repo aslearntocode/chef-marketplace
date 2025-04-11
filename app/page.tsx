@@ -16,14 +16,14 @@ export default function Home() {
       link: "/whole-foods/categories/drinks"
     },
     {
-      title: "Healthy Bites! 🌿",
+      title: "Healthy Bites!",
       description: "Discover our nutritious range of healthy bites - perfect for guilt-free snacking!",
       image: "/images/healthy-bites.jpg",
       buttonText: "Explore Now",
       link: "/whole-foods/categories/healthy-bites"
     },
     {
-      title: "New Arrivals! 🌶️",
+      title: "New Arrivals!",
       description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
       image: "/images/pickles.jpg",
       buttonText: "Explore Now",
