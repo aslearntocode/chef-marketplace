@@ -66,17 +66,16 @@ export default function ProductDetails({ description, size, ingredients_benefits
         </button>
         {openSection === 'ingredients' && (
           <div className="px-4 pb-4">
-            {(ingredients_benefits && ingredients_benefits.length > 0) || (benefits && benefits.length > 0) ? (
+            {(ingredients_benefits && Object.keys(ingredients_benefits).length > 0) || (benefits && benefits.length > 0) ? (
               <div className="space-y-4">
                 {ingredients_benefits && Object.keys(ingredients_benefits).length > 0 && (
                   <div>
-                    {/* <h4 className="font-medium mb-2">Ingredients:</h4> */}
-                    <ol className="list-decimal list-inside text-gray-600 space-y-1">
+                    <ol className="list-decimal list-inside text-gray-600 space-y-1 font-bold">
                       {Object.entries(ingredients_benefits).map(([ingredient, benefits], index) => (
                         <li key={index}>
-                          {ingredient}
+                          <span className="font-bold">{ingredient}</span>
                           {benefits && benefits.length > 0 && (
-                            <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                            <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4 font-normal">
                               {benefits.map((benefit, bIndex) => (
                                 <li key={bIndex}>{benefit}</li>
                               ))}
