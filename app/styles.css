@@ -161,4 +161,34 @@ button {
   .flex.items-center.gap-4 button {
     padding: 0.75rem;
   }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.ingredients-list {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.ingredients-list > li {
+    counter-increment: item;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+ol.ingredients-list > li::before {
+    content: counter(item) ". ";
+}
+
+ol.ingredients-list > li > ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ol.ingredients-list > li > ul > li::before {
+    content: "• ";
 } 

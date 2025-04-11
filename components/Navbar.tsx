@@ -95,55 +95,13 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
               {navLinks.map((link) => (
-                <div key={link.id || link.href} className="relative flex-shrink-0" ref={link.dropdown ? navDropdownRef : null}>
-                  {link.dropdown ? (
-                    <>
-                      <button
-                        onClick={() => toggleDropdown(link.id)}
-                        className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200 flex items-center whitespace-nowrap flex-shrink-0 w-[150px] justify-between"
-                      >
-                        {link.label}
-                        <svg
-                          className={`w-4 h-4 ml-1 transform transition-transform ${
-                            activeDropdown === link.id ? 'rotate-180' : ''
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      {activeDropdown === link.id && (
-                        <div 
-                          className="absolute left-0 mt-2 w-[300px] bg-white rounded-md shadow-lg z-[999] py-2"
-                        >
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="block px-6 py-3 hover:bg-gray-50 transition-colors group"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              <div className="text-gray-800 font-medium text-base group-hover:text-black">
-                                {item.label}
-                              </div>
-                              <div className="text-[11px] text-gray-500 group-hover:text-gray-600 mt-0.5">
-                                {item.delivery}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  )}
+                <div key={link.href} className="relative flex-shrink-0">
+                  <Link
+                    href={link.href}
+                    className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
                 </div>
               ))}
               
@@ -263,57 +221,14 @@ export default function Navbar() {
           <div className={`${isOpen ? 'block' : 'hidden'} md:hidden w-full`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
-                <div key={link.id || link.href} ref={link.dropdown ? navDropdownRef : null}>
-                  {link.dropdown ? (
-                    <>
-                      <button
-                        onClick={() => toggleDropdown(link.id)}
-                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50 flex justify-between items-center"
-                      >
-                        {link.label}
-                        <svg
-                          className={`w-4 h-4 transition-transform ${
-                            activeDropdown === link.id ? 'rotate-180' : ''
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      {activeDropdown === link.id && (
-                        <div className="pl-6 bg-gray-50">
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="block px-3 py-2 hover:bg-gray-100"
-                              onClick={() => {
-                                setIsOpen(false);
-                                setActiveDropdown(null);
-                              }}
-                            >
-                              <div className="text-gray-900 text-base">
-                                {item.label}
-                              </div>
-                              <div className="text-[11px] text-gray-500 mt-0.5">
-                                {item.delivery}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  )}
+                <div key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
                 </div>
               ))}
               

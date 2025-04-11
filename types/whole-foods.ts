@@ -8,8 +8,7 @@ export interface Product {
   category: string;
   tags: string[];  // Add tags array to the interface
   size?: string;  // Optional size information
-  ingredients?: string[];  // Optional list of ingredients
-  benefits?: string[];  // Optional list of benefits
+  ingredients_benefits?: Record<string, string[]>;  // Optional list of benefits, each corresponding to an ingredient
 }
 
 export interface ProductCategory {

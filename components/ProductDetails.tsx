@@ -6,11 +6,11 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 interface ProductDetailsProps {
   description: string;
   size?: string;
-  ingredients?: string[];
+  ingredients_benefits?: Record<string, string[]>;
   benefits?: string[];
 }
 
-export default function ProductDetails({ description, size, ingredients, benefits }: ProductDetailsProps) {
+export default function ProductDetails({ description, size, ingredients_benefits, benefits }: ProductDetailsProps) {
   const [openSection, setOpenSection] = useState<string | null>(null);
 
   const toggleSection = (section: string) => {
@@ -66,21 +66,30 @@ export default function ProductDetails({ description, size, ingredients, benefit
         </button>
         {openSection === 'ingredients' && (
           <div className="px-4 pb-4">
-            {(ingredients && ingredients.length > 0) || (benefits && benefits.length > 0) ? (
+            {(ingredients_benefits && ingredients_benefits.length > 0) || (benefits && benefits.length > 0) ? (
               <div className="space-y-4">
-                {ingredients && ingredients.length > 0 && (
+                {ingredients_benefits && Object.keys(ingredients_benefits).length > 0 && (
                   <div>
-                    <h4 className="font-medium mb-2">Ingredients:</h4>
-                    <ul className="list-disc list-inside text-gray-600 space-y-1">
-                      {ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
+                    {/* <h4 className="font-medium mb-2">Ingredients:</h4> */}
+                    <ol className="list-decimal list-inside text-gray-600 space-y-1">
+                      {Object.entries(ingredients_benefits).map(([ingredient, benefits], index) => (
+                        <li key={index}>
+                          {ingredient}
+                          {benefits && benefits.length > 0 && (
+                            <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                              {benefits.map((benefit, bIndex) => (
+                                <li key={bIndex}>{benefit}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
                       ))}
-                    </ul>
+                    </ol>
                   </div>
                 )}
                 {benefits && benefits.length > 0 && (
                   <div>
-                    <h4 className="font-medium mb-2">Benefits:</h4>
+                    {/* <h4 className="font-medium mb-2">Benefits:</h4> */}
                     <ul className="list-disc list-inside text-gray-600 space-y-1">
                       {benefits.map((benefit, index) => (
                         <li key={index}>{benefit}</li>

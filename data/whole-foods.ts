@@ -57,12 +57,12 @@ export const products: Product[] = [
         category: 'Drinks',
         tags: ['drink', 'cold drink', 'refreshing', 'paan', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'pure', 'wholesome'],
         size: '500gms',
-        ingredients: [
-          'Betel Leaves (Paan) – Aids digestion and freshens breath',
-          'Gulkand (Rose Petal Preserve) – A natural coolant that helps with acidity and digestion',
-          'Fennel Seeds – Helps in detoxification and improves gut health',
-          'Cardamom – Enhances digestion and provides a pleasant aroma'
-        ]
+        ingredients_benefits: {
+          'Betel Leaves (Paan)': ['Aids digestion and freshens breath'],
+          'Gulkand (Rose Petal Preserve)': ['A natural coolant that helps with acidity and digestion'],
+          'Fennel Seeds': ['Helps in detoxification and improves gut health'],
+          'Cardamom': ['Enhances digestion and provides a pleasant aroma']
+        }
     },
     {
         id: '6',
@@ -84,11 +84,11 @@ export const products: Product[] = [
         category: 'Drinks',
         tags: ['drink', 'cold drink', 'refreshing', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'digestive drink', 'fennel seeds', 'no preservatives'],
         size: '500gms',
-        ingredients: [
-          'Fennel Seeds (Saunf) – Aids digestion, reduces bloating, and cools the body',
-          'Cardamom – Freshens breath and improves gut health',
-          'Mishri (Rock Sugar) – A natural sweetener that balances acidity'
-        ]
+        ingredients_benefits: {
+          'Fennel Seeds (Saunf)': ['Aids digestion, reduces bloating, and cools the body'],
+          'Cardamom': ['Freshens breath and improves gut health'],
+          'Mishri (Rock Sugar)': ['A natural sweetener that balances acidity']
+        }
     },
     {
         id: '7',
@@ -110,15 +110,15 @@ export const products: Product[] = [
         category: 'Drinks',
         tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional', 'healthy drink', 'festive drink'],
         size: '500ml',
-        ingredients: [
-          'Almonds & Cashews – Boost brain health and provide essential healthy fats',
-          'Fennel Seeds (Saunf) – Aids digestion and cools the body',
-          'Poppy Seeds – Helps in relaxation and improves sleep',
-          'Melon seeds: Rich in protein, healthy fats, and antioxidants, promoting heart health, digestion, and glowing skin',
-          'Cardamom – Enhances metabolism and aids digestion',
-          'Saffron – A powerful antioxidant that promotes skin glow and mood upliftment',
-          'Black Pepper – Strengthens immunity and supports respiratory health'
-        ]
+        ingredients_benefits: {
+          'Almonds & Cashews': ['Boost brain health and provide essential healthy fats'],
+          'Fennel Seeds (Saunf)': ['Aids digestion and cools the body'],
+          'Poppy Seeds': ['Helps in relaxation and improves sleep'],
+          'Melon seeds': ['Rich in protein, healthy fats, and antioxidants, promoting heart health, digestion, and glowing skin'],
+          'Cardamom': ['Enhances metabolism and aids digestion'],
+          'Saffron': ['A powerful antioxidant that promotes skin glow and mood upliftment'],
+          'Black Pepper': ['Strengthens immunity and supports respiratory health']
+        }
     },
     {
         id: '8',
@@ -139,7 +139,7 @@ export const products: Product[] = [
       id: '9',
       name: 'Ghee Roasted Makhana',
       description: 'Healthiest snack ever - crunchy and a powerhouse of calcium. Roasted in pure cow ghee and seasoned with himalayan pink salt - just like home. Handroasted to perfection in small batches, this clean label recipe is seasoned with Himalayan Pink Salt. Can be enjoyed as an anytime snack or even as a salad topping or as your pre and post workout pick me up! Replace your unhealthy namkeens with this crunchy and delicious snack at chai time!',
-      price: 120,
+      price:120,
       image: '/images/gheeroastedmakhana/MZ8_0746.jpg',
       images: [
         '/images/gheeroastedmakhana/MZ8_0746.jpg',
@@ -152,24 +152,47 @@ export const products: Product[] = [
       category: 'Healthy Bites',
       tags: ['hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'protein', 'proteinrich', 'seeds', 'superseeds', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'roastedsnack', 'makhana', 'foxnuts', 'roastedmakhana'],
       size: '100gms',
-      ingredients: [
-        'Rich in nutrients: Makhanas are packed with essential nutrients like protein, fiber, and antioxidants. They are also a good source of magnesium, potassium, phosphorus, iron, and calcium, which support overall health.',
-        'Promotes weight loss: Low in calories and high in fiber, makhanas make an excellent snack for those looking to lose or manage weight. The fiber content helps keep you feeling full, preventing overeating.',
-        'Supports heart health: They are rich in antioxidants, especially flavonoids, which help in reducing oxidative stress and inflammation in the body. This can promote heart health by reducing the risk of cardiovascular diseases.',
-        'Regulates blood sugar: Makhanas have a low glycemic index, which makes them ideal for people with diabetes. They help in regulating blood sugar levels and prevent spikes after meals.',
-        'Improves kidney health: Traditional medicine has used makhanas for their benefits in promoting kidney health. They are believed to help detoxify the kidneys and improve their function.',
-        'Anti-aging properties: Due to their high antioxidant content, makhanas help fight free radicals in the body. This can reduce the signs of aging and promote healthier skin and hair.',
-        'Good for bone health: The calcium and magnesium in makhanas are essential for maintaining strong bones and teeth. They also support the body\'s ability to absorb other nutrients necessary for bone health.',
-        'Helps with digestion: The high fiber content in makhanas aids in improving digestion and preventing constipation. It also supports gut health by promoting healthy bowel movements.',
-        'Supports skin health: The antioxidants, along with their anti-inflammatory properties, help protect the skin from damage and improve its texture and appearance.',
-        'Boosts immunity: The vitamins, minerals, and antioxidants in makhanas help strengthen the immune system, making the body more resistant to infections and diseases.'
-      ]
+      // ingredients: [
+      //   'Makhanas (Fox Seeds/Lotus Seeds)',
+      //   'Himalayan Pink Salt',
+      //   'Desi Cow Ghee'
+      // ],
+      ingredients_benefits: {
+        'Makhanas (Fox Seeds/Lotus Seeds)': [
+          'Packed with essential nutrients like protein, fiber, and antioxidants.',
+          'Good source of magnesium, potassium, phosphorus, iron, and calcium.',
+          'Low in calories and high in fiber, making them an excellent snack for weight management.',
+          'Rich in antioxidants, especially flavonoids, which help reduce oxidative stress and inflammation.',
+          'Low glycemic index, ideal for people with diabetes.',
+          'Believed to help detoxify the kidneys and improve their function.',
+          'High antioxidant content helps fight free radicals, reducing signs of aging.',
+          'Calcium and magnesium support strong bones and teeth.',
+          'High fiber content aids in digestion and prevents constipation.',
+          'Antioxidants and anti-inflammatory properties protect the skin and improve its texture.',
+          'Vitamins, minerals, and antioxidants strengthen the immune system.'
+        ],
+        'Himalayan Pink Salt': [
+          'Contains trace amounts of over 80 minerals, including potassium, magnesium, calcium, iron, and zinc.',
+          'Helps maintain electrolyte balance, important for hydration, muscle function, and nerve transmission.',
+          'May have a lower sodium content per teaspoon compared to regular table salt.',
+          'Believed to support digestion and promote healthy acid-alkaline balance in the stomach.',
+          'Said to support detoxification by encouraging the body to expel toxins.'
+        ],
+        'Desi Cow Ghee': [
+          'Contains healthy fats, including medium-chain triglycerides (MCTs) and short-chain fatty acids.',
+          'Believed to stimulate the secretion of digestive enzymes, improving nutrient absorption.',
+          'Contains antioxidants like vitamins A, E, and K, essential for protecting the body from oxidative stress.',
+          'Nourishes the brain and improves cognitive function.',
+          'May help reduce brain inflammation and support mental clarity and focus.'
+        ]
+      }
     },
+
     {
         id: '10',
         name: 'Jaggery Mango Pickle',
         description: 'Kuch teekha, kuch meetha, kuch khatta. Sweet and spicy, this twist to the traditional gujarati golkeri will tickle your taste buds + this is completely OIL FREE! Tartness of handpicked raw mangoes, the spice of hand pounded red chillies, saunf and methi- mildly salted and cooked to perfection with jaggery. This pickle pairs well with pooris, parathas, theplas or even dosas - the mango chunks and whole spices add a lot of texture to this recipe. Serve this pickle as an accompaniment at your parties. Use this in place of imli chutney on your chaats.',
-        price: 325 ,
+        price: 325,
         image: '/images/jaggerymangopickle/MZ8_0632.jpg',
         images: [
           '/images/jaggerymangopickle/MZ8_0632.jpg',
@@ -187,7 +210,7 @@ export const products: Product[] = [
       id: '11',
       name: 'Roasted Red Rice Chiwda',
       description: 'Made using red rice, this crunchy and flavourful snack is bound to hit all the right notes with all you chiwda lovers. Elevate your chai time with this traditional yet healthy snack. Handroasted to perfection, this clean label recipe is seasoned with Himalayan Pink Salt. Can be enjoyed as an anytime snack or even as a salad topping or as your pre and post workout pick me up! Replace your unhealthy namkeens with this crunchy and delicious snack at chai time!',
-      price: 120,
+      price:120 ,
       image: '/images/roastedredricechivda/MZ8_0758.jpg',
       images: [
         '/images/roastedredricechivda/MZ8_0758.jpg',
@@ -201,18 +224,19 @@ export const products: Product[] = [
       category: 'Healthy Bites',
       tags: ['hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'protein', 'proteinrich', 'seeds', 'superseeds', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'roastedsnack'],
       size: '100gms',
-      ingredients: [
-        'Rich in nutrients: Red rice is rich in essential nutrients like fiber, antioxidants, vitamins, and minerals. It contains more nutrients than white rice, including higher levels of iron, zinc, and B-vitamins like thiamine and niacin.',
-        'Promotes digestive health: The fiber content in red rice is high, which helps in improving digestion and preventing constipation. Fiber adds bulk to the stool and aids in regular bowel movements, promoting overall gut health.',
-        'Rich in antioxidants: Red rice is packed with antioxidants, particularly anthocyanins, which are compounds responsible for the reddish hue of the rice. These antioxidants help protect the body from oxidative stress and reduce inflammation.',
-        'Supports heart health: The fiber in red rice helps lower LDL cholesterol (bad cholesterol) levels, reducing the risk of heart disease. Additionally, the antioxidants present in red rice contribute to reducing oxidative stress.',
-        'Good for weight management: Red rice has a low glycemic index, meaning it releases energy slowly, helping to control hunger and prevent blood sugar spikes. When combined with the fiber from roasted red rice chivda, it provides a filling and satisfying snack.',
-        'Regulates blood sugar levels: Red rice is a better option than white rice for individuals with diabetes, as it helps in managing blood sugar levels. Its low glycemic index and high fiber content can assist in preventing sudden spikes in blood sugar.',
-        'Helps with bone health: Red rice contains essential minerals such as calcium, magnesium, and phosphorus, which are important for maintaining strong and healthy bones. These minerals help in bone formation and can aid in the prevention of bone-related conditions.',
-        'Improves skin health: The antioxidants, especially anthocyanins in red rice, help fight free radicals in the body that contribute to aging and skin damage. They promote healthier skin, reduce wrinkles, and may also help combat acne.',
-        'Good for the nervous system: Red rice contains B-vitamins, particularly thiamine (Vitamin B1), which plays a key role in maintaining the health of the nervous system. These vitamins also support brain function and improve focus.',
-        'Better for the environment: Red rice is often grown using more organic and sustainable farming practices compared to refined white rice. Choosing whole grains like red rice is better for the environment and contributes to sustainable agriculture.'
-      ]
+      ingredients_benefits: {
+        'Red Rice': [
+          'Red rice is rich in essential nutrients like fiber, antioxidants, vitamins, and minerals. It contains more nutrients than white rice, including higher levels of iron, zinc, and B-vitamins like thiamine and niacin.',
+          'Promotes Digestive Health: The fiber content in red rice is high, which helps in improving digestion and preventing constipation. Fiber adds bulk to the stool and aids in regular bowel movements, promoting overall gut health.',
+          'Red rice is packed with antioxidants, particularly anthocyanins, which are compounds responsible for the reddish hue of the rice. These antioxidants help protect the body from oxidative stress and reduce inflammation, which is beneficial for fighting chronic diseases and promoting longevity.',
+          'The fiber in red rice helps lower LDL cholesterol (bad cholesterol) levels, reducing the risk of heart disease. Additionally, the antioxidants present in red rice contribute to reducing oxidative stress, which is linked to the development of cardiovascular diseases.',
+          'Red rice has a low glycemic index, meaning it releases energy slowly, helping to control hunger and prevent blood sugar spikes. When combined with the fiber from roasted red rice chivda, it provides a filling and satisfying snack, reducing the tendency to overeat.',
+          'Red rice is a better option than white rice for individuals with diabetes, as it helps in managing blood sugar levels. Its low glycemic index and high fiber content can assist in preventing sudden spikes in blood sugar.',
+          'Red rice contains essential minerals such as calcium, magnesium, and phosphorus, which are important for maintaining strong and healthy bones. These minerals help in bone formation and can aid in the prevention of bone-related conditions like osteoporosis.',
+          'The antioxidants, especially anthocyanins in red rice, help fight free radicals in the body that contribute to aging and skin damage. They promote healthier skin, reduce wrinkles, and may also help combat acne and other skin problems.',
+          'Red rice contains B-vitamins, particularly thiamine (Vitamin B1), which plays a key role in maintaining the health of the nervous system. These vitamins also support brain function, improve focus, and boost overall mental well-being.'
+        ]
+      }
     },
     {
         id: '12',
@@ -234,7 +258,7 @@ export const products: Product[] = [
       id: '13',
       name: 'Whole Wheat Ajwain Mathri',
       description: 'Super crunchy and great with your tea. Share these with your family- pack them for a picnic-pack these for your kid\'s tiffin! These whole wheat crisps are super versatile and perfect for some healthy indulgence. Crafted using high quality whole wheat flour, fragrant methi and handpicked spices, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil-super healthy! Loved by all ages - your kids are bound to enjoy these too!',
-      price: 156,
+      price:156 ,
       image: '/images/wholewheatajwainmathri/MZ8_0752.jpg',
       images: [
         '/images/wholewheatajwainmathri/MZ8_0752.jpg',
@@ -248,20 +272,22 @@ export const products: Product[] = [
       category: 'Healthy Bites',
       tags: ['wholewheat', 'wholewheatsnack', 'zeromaida', 'hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'mathri', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'methimathri', 'mathri', 'matthi', 'suhali', 'healthysnack'],
       size: '100gms',
-      ingredients: [
-        'Rich in dietary fiber: Whole wheat flour is an excellent source of dietary fiber, which is important for maintaining a healthy digestive system. Fiber helps in preventing constipation, improving gut health, and promoting regular bowel movements.',
-        'Good for digestion: Ajwain (carom seeds) has long been known for its digestive benefits. It aids in the secretion of gastric juices, which helps in the digestion of food. Ajwain is also known to relieve indigestion, bloating, and gas.',
-        'Promotes weight loss: Whole wheat flour has a lower glycemic index compared to refined flour, which helps in controlling blood sugar levels. It also keeps you full for longer, reducing the chances of overeating.',
-        'Good source of energy: Whole wheat flour is rich in complex carbohydrates, which provide a steady source of energy throughout the day. This makes ajwain mathri a good snack for individuals who need an energy boost.',
-        'Improves metabolism: Ajwain is known to have thermogenic properties, which can help boost metabolism and promote fat burning. This can be especially beneficial for those trying to manage their weight.',
-        'Heart health: Whole wheat flour is a good source of antioxidants, magnesium, and other nutrients that help improve heart health. The fiber in whole wheat helps lower bad cholesterol levels.',
-        'Rich in nutrients: Whole wheat flour is packed with essential vitamins and minerals, including B vitamins (especially niacin, riboflavin, and thiamine), iron, magnesium, and zinc.',
-        'Anti-inflammatory properties: Ajwain contains compounds that have anti-inflammatory properties. Regular consumption of ajwain mathri may help reduce inflammation in the body.',
-        'Boosts immunity: Ajwain is known for its antimicrobial and antibacterial properties, which can help protect the body from infections. This makes ajwain mathri a good option for supporting the immune system.',
-        'Regulates blood sugar: Whole wheat flour has a low glycemic index, which makes it a suitable option for people with diabetes or those trying to maintain stable blood sugar levels.',
-        'Improves skin health: The antioxidants in whole wheat flour and the anti-inflammatory properties of ajwain can contribute to healthy skin. Ajwain is also known to help reduce acne and other skin conditions.',
-        'Satiates hunger: The combination of fiber and protein in whole wheat flour, along with the spices in ajwain, helps curb hunger and cravings. This makes it a good snack choice for those looking to manage their appetite.'
-      ]
+      ingredients_benefits: {
+        'Whole Wheat Flour': [
+          'Whole wheat flour is an excellent source of dietary fiber, which is important for maintaining a healthy digestive system. Fiber helps in preventing constipation, improving gut health, and promoting regular bowel movements.',
+          'Whole wheat flour is rich in complex carbohydrates, which provide a steady source of energy throughout the day. This makes ajwain mathri a good snack for individuals who need an energy boost, such as those with an active lifestyle.',
+          'Whole Wheat flour is a good source of antioxidants, magnesium, and other nutrients that help improve heart health. The fiber in whole wheat helps lower bad cholesterol levels, which in turn reduces the risk of heart disease. Additionally, ajwain may contribute to improved circulation and overall cardiovascular health.',
+          'Whole wheat flour has a lower glycemic index compared to refined flour, which helps in controlling blood sugar levels. It also keeps you full for longer, reducing the chances of overeating. Additionally, ajwain has been linked to improving metabolism and aiding weight loss.',
+          'Whole wheat flour has a low glycemic index, which makes it a suitable option for people with diabetes or those trying to maintain stable blood sugar levels. Ajwain also helps in controlling blood sugar spikes and insulin resistance.'
+        ],
+        'Ajwain (Carom seeds)': [
+          'Ajwain has long been known for its digestive benefits. It aids in the secretion of gastric juices, which helps in the digestion of food. Ajwain is also known to relieve indigestion, bloating, and gas, making mathri a beneficial snack for those with digestive issues.',
+          'Ajwain is known to have thermogenic properties, which can help boost metabolism and promote fat burning. This can be especially beneficial for those trying to manage their weight or improve their metabolism.',
+          'Ajwain contains compounds that have anti-inflammatory properties. Regular consumption of ajwain mathri may help reduce inflammation in the body, which can benefit conditions such as arthritis and other inflammatory disorders.',
+          'Ajwain is known for its antimicrobial and antibacterial properties, which can help protect the body from infections. This makes ajwain mathri a good option for supporting the immune system and maintaining overall health.',
+          'The combination of fiber and protein in whole wheat flour, along with the spices in ajwain, helps curb hunger and cravings. This makes it a good snack choice for those looking to manage their appetite between meals.'
+        ]
+      }
     },
     {
         id: '14',

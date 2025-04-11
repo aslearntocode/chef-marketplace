@@ -244,28 +244,24 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </button>
                   {openSection === 'ingredients' && (
                     <div className="px-4 pb-4">
-                      {(product.ingredients && product.ingredients.length > 0) || (product.benefits && product.benefits.length > 0) ? (
+                      {product.ingredients_benefits && Object.keys(product.ingredients_benefits).length > 0 ? (
                         <div className="space-y-4">
-                          {product.ingredients && product.ingredients.length > 0 && (
-                            <div>
-                              <h4 className="font-medium mb-2">Ingredients:</h4>
-                              <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                {product.ingredients.map((ingredient, index) => (
-                                  <li key={index}>{ingredient}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                          {product.benefits && product.benefits.length > 0 && (
-                            <div>
-                              <h4 className="font-medium mb-2">Benefits:</h4>
-                              <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                {product.benefits.map((benefit, index) => (
-                                  <li key={index}>{benefit}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
+                          <div>
+                            <ol className="list-decimal list-inside text-gray-600 space-y-1 font-bold">
+                              {Object.entries(product.ingredients_benefits).map(([ingredient, benefits], index) => (
+                                <li key={index}>
+                                  <span className="font-bold">{ingredient}</span>
+                                  {benefits && benefits.length > 0 && (
+                                    <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4 font-normal">
+                                      {benefits.map((benefit, bIndex) => (
+                                        <li key={bIndex}>{benefit}</li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
                         </div>
                       ) : (
                         <p className="text-gray-600">Ingredients and benefits information not available</p>
