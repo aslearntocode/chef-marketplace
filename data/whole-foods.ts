@@ -235,6 +235,13 @@ export const products: Product[] = [
           'Red rice contains essential minerals such as calcium, magnesium, and phosphorus, which are important for maintaining strong and healthy bones. These minerals help in bone formation and can aid in the prevention of bone-related conditions like osteoporosis.',
           'The antioxidants, especially anthocyanins in red rice, help fight free radicals in the body that contribute to aging and skin damage. They promote healthier skin, reduce wrinkles, and may also help combat acne and other skin problems.',
           'Red rice contains B-vitamins, particularly thiamine (Vitamin B1), which plays a key role in maintaining the health of the nervous system. These vitamins also support brain function, improve focus, and boost overall mental well-being.'
+        ],
+        'Himalayan Pink Salt': [
+          'Contains trace amounts of over 80 minerals, including potassium, magnesium, calcium, iron, and zinc.',
+          'Helps maintain electrolyte balance, important for hydration, muscle function, and nerve transmission.',
+          'May have a lower sodium content per teaspoon compared to regular table salt.',
+          'Believed to support digestion and promote healthy acid-alkaline balance in the stomach.',
+          'Said to support detoxification by encouraging the body to expel toxins.'
         ]
       }
     },
