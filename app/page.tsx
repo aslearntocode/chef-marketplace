@@ -93,22 +93,33 @@ export default function Home() {
               {/* Left side - Text */}
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold font-['YWFT_Hannah_Narrow'] text-gray-900">
-                  Why The Divine Hands?
+                  Why Us?
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  At The Divine Hands, we believe in the power of homemade goodness and the joy it brings to every household. Our journey began with a simple mission: to connect talented home chefs with food lovers who appreciate authentic, home-cooked delicacies.
+                  The Divine Hands (TDH) is more than a company—it's a passion to inspire better health and true happiness. 
+                  Our mission is to connect people with pure, wholesome, chemical-free products curated by talented artisans across India. 
+                  These healthful options often go unnoticed—not due to lack of interest, but due to limited access.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Each product in our collection is carefully crafted by skilled home chefs who pour their heart and soul into every creation. From traditional recipes passed down through generations to innovative healthy alternatives, we ensure that every bite tells a story of passion, tradition, and love.
+                  TDH bridges this gap, offering an easy way to discover nutritious, delicious foods that nurture both body and soul. After all, health is true wealth—and we're here to help you cultivate it, one mindful choice at a time. Taste, health, and happiness—delivered.
                 </p>
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                  <div className="text-center">
-                    <h3 className="text-2xl font-bold text-[#FFD700] mb-2">50+</h3>
-                    <p className="text-gray-600">Home Chefs</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-2xl font-bold text-[#FFD700] mb-2">1000+</h3>
-                    <p className="text-gray-600">Happy Customers</p>
+                {/* Features Grid */}
+                <div className="flex justify-center mt-8">
+                  <div className="grid grid-cols-3 gap-12 max-w-3xl">
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">🌿</div>
+                      <h3 className="text-lg font-semibold text-[#8B4513]">No Preservatives</h3>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">
+                        <span>❌🧪</span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-[#8B4513]">No Artificial Chemicals</h3>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">🌾</div>
+                      <h3 className="text-lg font-semibold text-[#8B4513]">Only Natural Ingredients</h3>
+                    </div>
                   </div>
                 </div>
               </div>
