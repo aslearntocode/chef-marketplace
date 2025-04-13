@@ -114,7 +114,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 ) : (
                   <>
                     <Image
-                      src={String(product.image || '/images/placeholder.png')}
+                      src={product.image || '/images/placeholder.png'}
                       alt={product.name}
                       fill
                       className="object-contain p-4"
@@ -306,7 +306,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             >
               <div className="relative aspect-square bg-white rounded-lg">
                 <Image
-                  src={product.images ? product.images[currentImageIndex] : product.image}
+                  src={product.images ? product.images[currentImageIndex] : (product.image || '/images/placeholder.png')}
                   alt={product.name}
                   fill
                   className={`
