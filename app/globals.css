@@ -58,3 +58,15 @@ button, a {
   @apply transform-none;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* Slider styles */
+.slider {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}

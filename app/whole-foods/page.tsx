@@ -134,7 +134,7 @@ export default function WholeFoods() {
   };
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
+    <main className="min-h-screen bg-[#FFD700] pt-[72px] font-nunito">
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Compact Header with Search */}
         <div className="flex flex-col items-center justify-center relative mb-8">

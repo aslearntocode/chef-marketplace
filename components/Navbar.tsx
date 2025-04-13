@@ -67,9 +67,9 @@ export default function Navbar() {
   return (
     <header className="fixed w-full z-50">
       {/* Top Banner */}
-      <div className="bg-black py-2 px-4 text-center">
-        <p className="text-[#FFD700] text-sm">
-          🎉 Now serving Near Parel! Free Delivery for Orders above ₹1,000 🚚
+      <div className="bg-black py-2 px-4 text-center font-bold">
+        <p className="text-[#FFD700] text-lg">
+          🎉 Now serving in Mumbai! Free Delivery for Orders above ₹1,000 🚚
         </p>
       </div>
 
@@ -88,7 +88,7 @@ export default function Navbar() {
                   priority
                   className="h-10 w-auto"
                 />
-                <span className="ml-2 text-xl font-bold truncate">The Divine Hands</span>
+                <span className="ml-2 text-xl font-bold truncate font-itc-souvenir">The Divine Hands</span>
               </Link>
             </div>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
                 <div key={link.href} className="relative flex-shrink-0">
                   <Link
                     href={link.href}
-                    className="text-gray-900 hover:text-gray-600 font-medium text-base transition-colors duration-200"
+                    className="text-gray-900 hover:text-gray-600 text-lg font-bold transition-colors duration-200 font-itc-souvenir"
                   >
                     {link.label}
                   </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                   >
                     <FaShoppingCart className="w-6 h-6" />
                     {totalItems > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                      <span className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-itc-souvenir">
                         {totalItems}
                       </span>
                     )}
@@ -122,7 +122,7 @@ export default function Navbar() {
                   <div className="hidden md:block relative flex-shrink-0">
                     <button
                       onClick={() => toggleDropdown('user')}
-                      className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 whitespace-nowrap w-[120px] justify-between"
+                      className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 whitespace-nowrap w-[120px] justify-between font-itc-souvenir"
                     >
                       <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center flex-shrink-0">
                         {user.email ? user.email[0].toUpperCase() : 'U'}
@@ -140,7 +140,7 @@ export default function Navbar() {
 
                     {activeDropdown === 'user' && (
                       <div 
-                        className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                        className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 font-itc-souvenir"
                         style={{ zIndex: 9999 }}
                       >
                         <Link
@@ -170,7 +170,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/login"
-                  className="bg-[#FFD700] text-black px-4 py-2 rounded-md hover:bg-[#F7C948] transition-colors font-medium"
+                  className="bg-[#FFD700] text-black px-4 py-2 rounded-md hover:bg-[#F7C948] transition-colors font-medium font-itc-souvenir"
                 >
                   Login
                 </Link>
@@ -186,7 +186,7 @@ export default function Navbar() {
                 >
                   <FaShoppingCart className="w-6 h-6" />
                   {totalItems > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                    <span className="absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-itc-souvenir">
                       {totalItems}
                     </span>
                   )}
@@ -219,12 +219,12 @@ export default function Navbar() {
 
           {/* Mobile menu */}
           <div className={`${isOpen ? 'block' : 'hidden'} md:hidden w-full`}>
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 font-itc-souvenir">
               {navLinks.map((link) => (
                 <div key={link.href}>
                   <Link
                     href={link.href}
-                    className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                    className="block px-3 py-2 text-lg font-bold text-gray-900 hover:bg-gray-50"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

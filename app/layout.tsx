@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from '@/components/Footer';
 import { AuthProvider } from '@/context/AuthContext'
 import { CartProvider } from '@/context/CartContext'
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-nunito',
+});
+
+// Add YWFT Hannah Narrow font
+const hannahNarrow = {
+  className: "font-['YWFT_Hannah_Narrow']",
+};
 
 export const metadata: Metadata = {
   title: "The Divine Hands",
@@ -25,12 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={nunito.variable}>
       <head>
         <link rel="icon" href="/TDH Logo.png" type="image/png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <AuthProvider>
           <CartProvider>
             <Navbar />

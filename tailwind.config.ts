@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'nunito': ['var(--font-nunito)'],
+        'YWFT_Hannah_Narrow': ['YWFT Hannah Narrow', 'sans-serif'],
+        'itc-souvenir': ['ITC Souvenir', 'serif'],
+      },
     },
   },
   plugins: [],
