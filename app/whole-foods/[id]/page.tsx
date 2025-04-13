@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, use } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
@@ -114,7 +114,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 ) : (
                   <>
                     <Image
-                      src={product.image}
+                      src={String(product.image || '/images/placeholder.png')}
                       alt={product.name}
                       fill
                       className="object-contain p-4"
