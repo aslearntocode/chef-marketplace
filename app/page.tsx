@@ -11,21 +11,18 @@ export default function Home() {
     {
       title: "Discover Refreshing Healthy Drinks",
       description: "Experience the taste of homemade goodness delivered to your doorstep",
-      image: "/images/hero-food.jpg",
       buttonText: "Explore Now",
       link: "/whole-foods/categories/drinks"
     },
     {
       title: "Healthy Bites!",
       description: "Discover our nutritious range of healthy bites - perfect for guilt-free snacking!",
-      image: "/images/healthy-bites.jpg",
       buttonText: "Explore Now",
       link: "/whole-foods/categories/healthy-bites"
     },
     {
       title: "New Arrivals!",
       description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
-      image: "/images/pickles.jpg",
       buttonText: "Explore Now",
       link: "/whole-foods/categories/pickles"
     }
@@ -40,9 +37,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#FFD700]">
+    <main className="min-h-screen bg-[#FFD700] pt-[72px]">
       {/* Hero Carousel */}
-      <div className="relative h-[350px] overflow-hidden">
+      <div className="relative h-[250px] overflow-hidden z-0">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -51,50 +48,43 @@ export default function Home() {
             }`}
           >
             <div className="relative h-full">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/80 via-[#FFD700]/80 to-[#FFD700]/80 flex items-center justify-center">
-                <div className="text-center text-black max-w-4xl px-4">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 whitespace-nowrap">{slide.title}</h2>
-                  <p className="text-xl mb-8">{slide.description}</p>
+              <div className="absolute inset-0 bg-[#FFD700] flex items-center justify-center">
+                <div className="text-center text-black max-w-4xl px-4 relative pb-8 md:pb-16 mt-4 md:mt-0">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 whitespace-nowrap">{slide.title}</h2>
+                  <p className="text-lg md:text-xl mb-4">{slide.description}</p>
                   <Link
                     href={slide.link}
-                    className="bg-[#F7C948] text-black px-8 py-3 rounded-full hover:bg-[#FFD700] transition-colors inline-block text-lg font-semibold shadow-lg"
+                    className="bg-[#F7C948] text-black px-8 py-3 rounded-full hover:bg-[#FFD700] transition-colors inline-block text-lg font-semibold shadow-lg mb-2 md:mb-6"
                     onClick={(e) => {
                       e.stopPropagation();
                     }}
                   >
                     {slide.buttonText}
                   </Link>
+                  {/* Carousel Navigation Dots */}
+                  <div className="absolute bottom-0 md:bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+                    {slides.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`w-3 h-3 rounded-full transition-colors ${
+                          currentSlide === idx ? 'bg-[#F7C948]' : 'bg-white/70'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         ))}
-        
-        {/* Carousel Navigation Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                currentSlide === index ? 'bg-[#F7C948]' : 'bg-white/70'
-              }`}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Food Showcase Conveyor Belt */}
-        <div className="bg-white rounded-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Most Popular Items</h2>
+        <div className="bg-white rounded-lg p-6 mb-8">
+          <h2 className="text-3xl font-bold text-center mb-6">Most Popular Items</h2>
           <div className="flex items-center gap-1 sm:gap-4 relative">
             {/* Left Arrow */}
             <button 
