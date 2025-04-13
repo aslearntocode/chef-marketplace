@@ -34,7 +34,7 @@ const categories = [
   },
   {
     id: 'pickles',
-    name: 'Pickles & Chutneys',
+    name: 'Pickles & Condiments',
     route: '/whole-foods/categories/pickles',
     description: 'Traditional pickles and chutneys made with authentic recipes'
   }

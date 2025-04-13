@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  image: string;
+  image?: string;  // Make image optional
   images?: string[];  // Optional array of additional images
   category: string;
   tags: string[];  // Add tags array to the interface

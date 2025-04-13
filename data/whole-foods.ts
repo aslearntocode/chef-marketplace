@@ -203,7 +203,7 @@ export const products: Product[] = [
           '/images/jaggerymangopickle/MZ8_0706.jpg',
           '/images/jaggerymangopickle/MZ8_0708.jpg'
         ],
-        category: 'Pickles & Chutneys',
+        category: 'Pickles & Condiments',
         tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'aamkaachaar', 'mangopickle', 'rawmangopickle', 'chundo', 'chunda', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle']
     },
     {
@@ -258,7 +258,7 @@ export const products: Product[] = [
           '/images/traditionallemonpickle/MZ8_0693.jpg',
           '/images/traditionallemonpickle/MZ8_0694.jpg'
         ],
-        category: 'Pickles & Chutneys',
+        category: 'Pickles & Condiments',
         tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
     },
     {
@@ -347,7 +347,7 @@ export const products: Product[] = [
           '/images/sweetandspicymangochutney/IMG_6.jpg',
           '/images/sweetandspicymangochutney/IMG_7.jpg'
         ],
-        category: 'Pickles & Chutneys',
+        category: 'Pickles & Condiments',
         tags: ['naturalchutney', 'traditionalpickle', 'traditionalrecipe', 'aamchutney', 'mangochutney', 'rawmangopickle', 'chundo', 'chunda', 'oilfreechutney', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle']
     },
     {
@@ -365,7 +365,7 @@ export const products: Product[] = [
           '/images/redchillipickle/IMG_6.jpg',
           '/images/redchillipickle/IMG_7.jpg'
         ],
-        category: 'Pickles & Chutneys',
+        category: 'Pickles & Condiments',
         tags: ['naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'chillipickle', 'redchillipickle', 'stuffedchillipickle', 'banarasipickle']
     },
     {
@@ -387,7 +387,165 @@ export const products: Product[] = [
           '/images/greenchillipickle/IMG_10.jpg',
           '/images/greenchillipickle/IMG_11.jpg'
         ],
-        category: 'Pickles & Chutneys',
+        category: 'Pickles & Condiments',
         tags: ['chillipickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'greenchillipickle', 'harimirchachaar', 'mirchiachaar', 'homemadepickle', 'northindianpickle']
-    }    
+    },
+    {
+      id: '19',
+      name: 'Vegetarian Korean Kimchi',
+      description: 'Korean kimchi is a traditional, spicy, fermented vegetable dish that\'s the core of Korean cuisine. It\'s known for its bold flavours — spicy, tangy, salty, and umami-rich — and it\'s usually served as a side dish (called banchan) with almost every Korean meal.',
+      price: 400,
+      image: '/images/kimchi/Authentic Korean Kimchi.jpeg',
+      category: 'Pickles & Condiments',
+      tags: ['fermented', 'kimchi', 'madeinindiakimchi', 'egglesskoreankimchi', 'goodforgut', 'probiotic', 'healthy', 'wholesome', 'nopreservatives', 'nochemicals', 'nocolours'],
+      size: '300gms',
+      ingredients_benefits: {
+        'Chinese Cabbage': [
+          'Low in calories, high in nutrients- packed with Vitamin C, Vitamin K, folate and fiber',
+          'Rich in Antioxidants- Contains compounds like Beta-Carotene, Lutein and Zeaxanthin. Helps fight free radicals and reduce inflammation',
+          'Good for heart health- high in Potassium which helps manage blood pressure',
+          'Supports digestive health- High fiber content promotes regular bowel movements',
+          'Strengthens the immune system- Vitamin C boosts the immune function',
+          'Supports Bone Health- Rich in Vitamin K, which helps with Calcium absorption and bone mineralizaton'
+        ],
+        'Gochugaru': [
+          'Gochugaru is a Korean red chili pepper powder that\'s essential in Korean cooking- Rich in vitamin A & C',
+          'Contains capsaicin – helps boost metabolism and reduce inflammation'
+        ],
+        'Onions': [
+          'Rich in Antioxidants',
+          'Heart Health Hero- Can lower Cholestrol levels',
+          'Anti-Inflammatory and Immune Boosting'
+        ],
+        'Garlic': [
+          'Boosts Immunity',
+          'Supports Heart Health',
+          'Detoxifies the body'
+        ],
+        'Carrots': [
+          'Loaded with Antioxidants',
+          'Boosts Immunity'
+        ],
+        'Ginger': [
+          'Powerful Anti-inflammatory',
+          'Soothes nausea and upset stomach'
+        ],
+        'Soya sauce': [],
+        'Salt': []
+      }
+    },
+    {
+      id: '20',
+      name: 'White Kimchi',
+      description: 'White kimchi is a non-spicy version of traditional Korean kimchi. It\'s made with Napa cabbage and other veggies, but without the red chili pepper flakes (gochugaru) that give regular kimchi its heat and red color.',
+      price: 400,
+      image: '/images/kimchi/White Kimchi.jpeg',
+      category: 'Pickles & Condiments',
+      tags: ['fermented', 'kimchi', 'madeinindiakimchi', 'egglesskoreankimchi', 'goodforgut', 'probiotic', 'healthy', 'wholesome', 'nopreservatives', 'nochemicals', 'nocolours'],
+      size: '300gms',
+      ingredients_benefits: {
+        'Chinese Cabbage': [
+          'Low in calories, high in nutrients- packed with Vitamin C, Vitamin K, folate and fiber',
+          'Rich in Antioxidants- Contains compounds like Beta-Carotene, Lutein and Zeaxanthin. Helps fight free radicals and reduce inflammation',
+          'Good for heart health- high in Potassium which helps manage blood pressure',
+          'Supports digestive health- High fiber content promotes regular bowel movements',
+          'Strengthens the immune system- Vitamin C boosts the immune function',
+          'Supports Bone Health- Rich in Vitamin K, which helps with Calcium absorption and bone mineralizaton'
+        ],
+        'Pear': [
+          'Rich in Fiber- Pears are an excellent source of dietary fiber, particularly in the skin, which helps support digestive health and keeps things moving',
+          'Pears contain vitamin C, an important antioxidant that boosts immunity, supports skin health, and helps fight inflammation',
+          'Pears are rich in flavonoids — antioxidants that can help reduce the risk of heart disease by improving blood flow, reducing inflammation, and lowering cholesterol levels'
+        ],
+        'Onions': [
+          'Rich in Antioxidants',
+          'Heart Health Hero- Can lower Cholestrol levels',
+          'Anti-Inflammatory and Immune Boosting'
+        ],
+        'Garlic': [
+          'Boosts Immunity',
+          'Supports Heart Health',
+          'Detoxifies the body'
+        ],
+        'Carrots': [
+          'Loaded with Antioxidants',
+          'Boosts Immunity'
+        ],
+        'Ginger': [
+          'Powerful Anti-inflammatory',
+          'Soothes nausea and upset stomach'
+        ],
+        'Salt': []
+      }
+    },
+    {
+      id: '21',
+      name: 'Jalapeno Jam',
+      description: 'Jalapeno jam is a sweet, spicy, and slightly tangy preserve made from jalapeno peppers, sugar, and sometimes vinegar or fruit (like apples or cranberries). It\'s basically a jam that gives you both a kick of heat and a touch of sweetness, making it a super unique condiment.',
+      price: 250,
+      image: '/images/kimchi/Jalapeno Jam.jpeg',
+      category: 'Pickles & Condiments',
+      tags: ['jalapenopeppers', 'jalapenojam', 'dip', 'madeinindia', 'nopreservatives', 'nochemicals', 'nocolours', 'noadditives'],
+      size: '200gms',
+      ingredients_benefits: {
+        'Jalapeno': [
+          'Jalapeños aren\'t just about the heat — these little green (or red!) chili peppers are packed with surprising health benefits',
+          'Boosts Metabolism- Jalapenos contain capsaicin, the compound that makes them spicy-Capsaicin helps boost metabolism, potentially helping burn more calories and support weight loss',
+          'Rich in Vitamins & Antioxidants- Loaded with vitamin C, which boosts the immune system and promotes healthy skin',
+          'Contains vitamin A, B6, and E, plus antioxidants that protect your cells from damage',
+          'Antibacterial Properties- Jalapenos have natural compounds that may help fight harmful bacteria, including those that cause foodborne illness'
+        ],
+        'Garlic': [
+          'Boosts Immunity',
+          'Supports Heart Health',
+          'Detoxifies the body'
+        ],
+        'Ginger': [
+          'Powerful Anti-inflammatory',
+          'Soothes nausea and upset stomach'
+        ],
+        'Red pepper': [],
+        'Vinegar': [],
+        'Sugar': []
+      }
+    },
+    {
+      id: '22',
+      name: 'Pickled Cucumbers',
+      description: 'Pickled cucumbers—commonly just called "pickles"—are cucumbers that have been preserved in a brine (salt water), vinegar, or another acidic solution. The pickling process gives them a tangy, sour, and sometimes sweet or spicy flavor, depending on the ingredients used. You can eat them on their own, slice them into sandwiches or burgers, or even dice them into salads.',
+      price: 250,
+      image: '/images/kimchi/Pickled Cucumber.jpeg',
+      category: 'Pickles & Condiments',
+      tags: ['pickledcucumbers', 'cucumbers', 'condiment', 'madeinindia', 'nopreservatives', 'nochemicals', 'nocolours', 'noadditives'],
+      size: '200gms',
+      ingredients_benefits: {
+        'Cucumbers': [
+          'Super Hydrating- Cucumbers are about 95–96% water, making them excellent for staying hydrated and supporting skin, kidney, and digestive health',
+          'Support Skin Health- Thanks to their high water content, vitamin C, and antioxidants, cucumbers help soothe the skin, reduce puffiness, and keep it glowing',
+          'Low in Calories, High in Nutrients- Perfect for weight management. You get fiber, vitamin K, potassium, and a touch of vitamin C—all without the calorie load'
+        ],
+        'Coriander Seeds': [
+          'Good for Digestion- Coriander seeds have compounds that stimulate digestive enzymes, helping with bloating, gas, and indigestion',
+          'Rich in Antioxidants- These little seeds are packed with antioxidants that help fight free radicals and reduce inflammation',
+          'Blood Sugar Control- Some studies suggest coriander seeds can help lower blood sugar levels by promoting insulin activity'
+        ],
+        'Mustard Seeds': [
+          'Rich in Antioxidants- Mustard seeds contain compounds like selenium, flavonoids, and carotenoids that help fight oxidative stress and inflammation',
+          'Good for Digestion- Like coriander seeds, mustard seeds stimulate saliva and gastric juices, which can boost digestion'
+        ],
+        'Black Pepper': [
+          'Boosts Digestion- Black pepper stimulates the production of digestive enzymes and juices, which helps break down food faster and reduces bloating and gas',
+          'Enhances Nutrient Absorption- The active compound piperine increases the bioavailability of nutrients like curcumin (from turmeric), selenium, and B-vitamins, making other healthy foods even more effective',
+          'Rich in Antioxidants- Piperine also acts as a strong antioxidant, helping to fight free radicals and reduce cellular damage'
+        ],
+        'Garlic': [
+          'Boosts Immunity',
+          'Supports Heart Health',
+          'Detoxifies the body'
+        ],
+        'Spring Onion': [],
+        'Vinegar': [],
+        'Sugar': []
+      }
+    }
 ]; 
