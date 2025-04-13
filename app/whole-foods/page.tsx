@@ -186,7 +186,7 @@ export default function WholeFoods() {
                     {previewProducts.map((product) => (
                       <div key={product.id} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
                         <Image
-                          src={product.image}
+                          src={product.image || '/images/placeholder.png'}
                           alt={product.name}
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
