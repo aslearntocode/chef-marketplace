@@ -4,7 +4,7 @@ export default function ChefApplication() {
   return (
     <main className="min-h-screen py-24 px-4 bg-[#F4C430]">
       <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-3xl font-bold mb-8">Chef Application</h1>
+        <h1 className="text-3xl font-bold mb-8">Food Curator Application</h1>
         
         <p className="mb-8 text-lg">Please click the button below to fill out our chef application form.</p>
         
