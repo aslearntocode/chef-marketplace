@@ -92,9 +92,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
               {/* Left side - Text */}
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold font-['YWFT_Hannah_Narrow'] text-gray-900">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
                   Why Us?
-                </h2>
+                </h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   The Divine Hands (TDH) is more than a company—it's a passion to inspire better health and true happiness. 
                   Our mission is to connect people with pure, wholesome, chemical-free products curated by talented artisans across India. 
@@ -184,7 +184,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Food Showcase Conveyor Belt */}
           <div className="bg-white rounded-lg p-6 mb-8">
-            <h2 className="text-3xl font-bold text-center mb-6 font-['YWFT_Hannah_Narrow']">Most Popular Items</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">Most Popular Items</h2>
             <div className="flex items-center gap-1 sm:gap-4 relative overflow-hidden">
               <div className="max-w-6xl mx-auto w-full sm:w-auto px-7 sm:px-0">
                 <div className="chef-marketplace">
@@ -285,20 +285,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {/* Chefs Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2">50+</h3>
-              <p className="text-gray-600 text-lg">Healthy Food Curators</p>
+              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">50+</h3>
+              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Healthier Food Curators</p>
             </div>
 
             {/* Customers Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2">2,000+</h3>
-              <p className="text-gray-600 text-lg">Happy Customers</p>
+              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">2,000+</h3>
+              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Happy Customers</p>
             </div>
 
             {/* Areas Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2">100+</h3>
-              <p className="text-gray-600 text-lg">Areas Currently Being Served</p>
+              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">100+</h3>
+              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
             </div>
           </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
             <section className="bg-[#FFFBEB] rounded-lg p-8 border-2 border-[#FFD700]">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <span className="text-3xl">🌿</span>
-                <h2 className="text-2xl font-bold">Calling all 'HEALTHIER FOOD' curators!</h2>
+                <h2 className="text-4xl text-center font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow']">Calling all 'HEALTHIER FOOD' curators!</h2>
                 <span className="text-3xl">🍃</span>
               </div>
               
@@ -317,7 +317,7 @@ export default function Home() {
               </p>
 
               <div className="bg-white rounded-lg p-6 mb-8 max-w-3xl mx-auto">
-                <h3 className="text-xl font-bold text-center mb-6">
+                <h3 className="text-4xl font-bold text-center mb-6 text-[#8B4513] font-['YWFT_Hannah_Narrow']">
                   ⭐ Why join us?
                 </h3>
                 <ul className="space-y-4">
@@ -339,7 +339,7 @@ export default function Home() {
               <div className="text-center">
                 <Link 
                   href="/chef-application"
-                  className="bg-[#FFD700] text-black px-8 py-3 rounded-full text-lg font-bold hover:bg-[#F7C948] transition-colors inline-block"
+                  className="bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-[#6B3410] transition-colors inline-block"
                 >
                   Apply Now
                 </Link>
