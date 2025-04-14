@@ -286,18 +286,18 @@ export default function Home() {
             {/* Chefs Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
               <h3 className="text-4xl font-bold mb-2">50+</h3>
-              <p className="text-gray-600 text-lg">Home Chefs</p>
+              <p className="text-gray-600 text-lg">Healthy Food Curators</p>
             </div>
 
             {/* Customers Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2">1,000+</h3>
+              <h3 className="text-4xl font-bold mb-2">2,000+</h3>
               <p className="text-gray-600 text-lg">Happy Customers</p>
             </div>
 
             {/* Areas Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2">10+</h3>
+              <h3 className="text-4xl font-bold mb-2">100+</h3>
               <p className="text-gray-600 text-lg">Areas Currently Being Served</p>
             </div>
           </div>
