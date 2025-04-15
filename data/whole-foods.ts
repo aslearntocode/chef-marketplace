@@ -193,15 +193,16 @@ export const products: Product[] = [
         name: 'Jaggery Mango Pickle',
         description: 'Kuch teekha, kuch meetha, kuch khatta. Sweet and spicy, this twist to the traditional gujarati golkeri will tickle your taste buds + this is completely OIL FREE! Tartness of handpicked raw mangoes, the spice of hand pounded red chillies, saunf and methi- mildly salted and cooked to perfection with jaggery. This pickle pairs well with pooris, parathas, theplas or even dosas - the mango chunks and whole spices add a lot of texture to this recipe. Serve this pickle as an accompaniment at your parties. Use this in place of imli chutney on your chaats.',
         price: 325,
-        image: '/images/jaggerymangopickle/MZ8_0632.jpg',
+        image: '/images/jaggerymangopickle/MZ8_0705.jpg',
         images: [
+          '/images/jaggerymangopickle/MZ8_0705.jpg',
+          '/images/jaggerymangopickle/MZ8_0706.jpg',
+          '/images/jaggerymangopickle/MZ8_0708.jpg',
           '/images/jaggerymangopickle/MZ8_0632.jpg',
           '/images/jaggerymangopickle/MZ8_0633.jpg',
           '/images/jaggerymangopickle/MZ8_0635.jpg',
-          '/images/jaggerymangopickle/MZ8_0640.jpg',
-          '/images/jaggerymangopickle/MZ8_0705.jpg',
-          '/images/jaggerymangopickle/MZ8_0706.jpg',
-          '/images/jaggerymangopickle/MZ8_0708.jpg'
+          '/images/jaggerymangopickle/MZ8_0640.jpg'
+
         ],
         category: 'Pickles & Condiments',
         tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'aamkaachaar', 'mangopickle', 'rawmangopickle', 'chundo', 'chunda', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle']
@@ -252,11 +253,11 @@ export const products: Product[] = [
         price: 325,
         image: '/images/traditionallemonpickle/MZ8_0691.jpg',
         images: [
-          '/images/traditionallemonpickle/DSC_8886.jpg',
-          '/images/traditionallemonpickle/DSC_8885-Edit.jpg',
           '/images/traditionallemonpickle/MZ8_0691.jpg',
           '/images/traditionallemonpickle/MZ8_0693.jpg',
-          '/images/traditionallemonpickle/MZ8_0694.jpg'
+          '/images/traditionallemonpickle/MZ8_0694.jpg',
+          '/images/traditionallemonpickle/DSC_8886.jpg',
+          '/images/traditionallemonpickle/DSC_8885-Edit.jpg'
         ],
         category: 'Pickles & Condiments',
         tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
@@ -620,6 +621,66 @@ export const products: Product[] = [
           'Anti-inflammatory properties',
           'Aids in digestion',
           'Natural preservatives'
+        ]
+      }
+    },
+    {
+      id: '25',
+      name: 'Royal Dates Pickle',
+      description: 'Royal Dates Pickle is a unique blend of plump, juicy dates infused with a bold mix of traditional Indian spices, creating a harmonious balance of sweet, tangy, and spicy flavours plus this pickle is absolutely OIL FREE!!!!. This pickle brings together the natural sweetness of dates with the warmth of chili, tang of lemon, and a medley of whole spices like fennel, cumin, and mustard seeds. Often enjoyed with parathas, rotis, or even cheese boards, Royal Dates Pickle adds a touch of royalty to every bite — a gourmet experience rooted in age-old Indian pickling traditions. This unique pickle is perfect as a side dish or a gourmet addition to salads and sandwiches.',
+      price: 325,
+      image: '/images/royaldatespicklepics/IMG_1.jpg',
+      images: [
+        '/images/royaldatespicklepics/IMG_1.jpg',
+        '/images/royaldatespicklepics/IMG_2.jpg',
+        '/images/royaldatespicklepics/IMG_3.jpg',
+        '/images/royaldatespicklepics/IMG_4.jpg',
+        '/images/royaldatespicklepics/IMG_5.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['dates', 'khajoor', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'datespickle', 'achaar', 'chutney'],
+      size: '200gms',
+      ingredients_benefits: {
+        'Dates': [
+          'Rich in Natural Energy: Dates are packed with natural sugars like glucose, fructose, and sucrose, making them a great instant energy booster — perfect as a pre- or post-workout snack',
+          'Great Source of Fiber: Dates aid in digestion, prevent constipation and support gut health',
+          'High in essential nutrients: Iron (fights anemia), Potassium (controls blood pressure), Magnesium (supports muscle & nerve function), Vitamin B6 (brain function & mood regulation)',
+          'Promote Heart Health: Dates lower bad cholesterol, reduce the risk of heart disease, improve blood circulation'
+        ],
+        'Lemon': [
+          'Rich in Vitamin C: Boosts immunity, helps the body fight off colds and infections, supports healthy skin and wound healing',
+          'Aids Digestion: Lemon juice stimulates the production of digestive enzymes and bile, by helping relieve indigestion and bloating, kickstart metabolism, support gut health'
+        ]
+      }
+    },
+    {
+      id: '26',
+      name: 'Traditional Mango Pickle',
+      description: 'Bursting with bold flavors and timeless charm, Traditional Mango Pickle is a beloved Indian classic made from handpicked raw mangoes and a vibrant blend of aromatic spices, all slow-cured in cold-pressed mustard oil. Each bite delivers the perfect balance of tangy, spicy, and savory, with the richness of fenugreek, mustard seeds, fennel, red chili, and turmeric infusing the mango chunks over weeks of natural sun-curing. A staple on Indian thalis, this pickle adds a zesty kick to everything from dal-chawal to parathas, evoking memories of grandma\'s kitchen and summer afternoons. Don\'t miss out on our traditional Mango Pickle to complete your meal as you will love this heirloom recipe.',
+      price: 325,
+      image: '/images/traditionalmangopicklepics/MZ8_0701.jpg',
+      images: [
+        '/images/traditionalmangopicklepics/MZ8_0701.jpg',
+        '/images/traditionalmangopicklepics/MZ8_0702.jpg',
+        '/images/traditionalmangopicklepics/MZ8_0704.jpg',
+        '/images/traditionalmangopicklepics/NNs_5.jpg',
+        '/images/traditionalmangopicklepics/NNs_6.jpg',
+        '/images/traditionalmangopicklepics/NNs_7.jpg',
+        '/images/traditionalmangopicklepics/NNs_8.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['mango', 'mangopickle', 'naturalpickle', 'aamkaachaar', 'rawmangopickle', 'traditionalmangopickle', 'punjabimangopickle', 'traditionalmangopicklerecipe'],
+      size: '200gms',
+      ingredients_benefits: {
+        'Mangoes': [
+          'Rich in Vitamin C, which helps boost immunity, promotes healthy skin, aids in collagen production for strong hair and glowing skin',
+          'Good for eye health: High in vitamin A and beta-carotene; Mangoes support better vision, prevention of dry eyes and night blindness'
+        ],
+        'Hing (Asafoetida)': [
+          'Best known for its digestive properties: reduces bloating and gas, relieves stomach cramps, improves overall gut health'
+        ],
+        'Mustard Oil': [
+          'Extremely heart friendly, boosts immunity, promotes digestion and is good for skin and hair health too'
         ]
       }
     }
