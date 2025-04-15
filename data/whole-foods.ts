@@ -547,5 +547,81 @@ export const products: Product[] = [
         'Vinegar': [],
         'Sugar': []
       }
+    },
+    {
+      id: '23',
+      name: 'Ragi Fingers',
+      description: 'Ragi Fingers are a nutritious and delicious snack made from finger millet (Ragi) flour, known for its rich calcium and iron content. Shaped like crispy sticks or fingers, these snacks offer a perfect balance of health and taste, making them ideal for both kids and adults. They\'re gluten-free, rich in fiber, and help keep you full longer — making them a smart alternative to traditional fried snacks. Whether you\'re looking for a healthy evening munch, a tiffin box treat, or a weaning food for toddlers (in a non-spicy version), Ragi Fingers fit the bill beautifully plus no palm oil or white salt and no reused oil makes it super healthy!',
+      price: 120,
+      image: '/images/ragifingerspictures/MZ8_0738.jpg',
+      images: [
+        '/images/ragifingerspictures/MZ8_0738.jpg',
+        '/images/ragifingerspictures/MZ8_0739.jpg',
+        '/images/ragifingerspictures/NNs_58.jpg',
+        '/images/ragifingerspictures/NNs_59.jpg',
+        '/images/ragifingerspictures/NNs_60.jpg',
+        '/images/ragifingerspictures/NNs_63.jpg',
+        '/images/ragifingerspictures/NNs_64.jpg',
+      ],
+      category: 'Healthy Bites',
+      tags: ['Ragifingers', 'healthiersnack', 'zeromaida', 'hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'natural', 'nochemicals', 'allnatural', 'ragi', 'ragichips'],
+      size: '100gms',
+      ingredients_benefits: {
+        'Ragi Flour': [
+          'Rich in Calcium - one of the best natural sources of calcium, even more than milk!',
+          'Gluten-Free & Easy to Digest - perfect for people with gluten intolerance or celiac disease',
+          'Packed with Iron - helps in improving hemoglobin levels and fighting anemia',
+          'High in Dietary Fiber - promotes digestion and keeps you fuller for longer',
+          'Good for Diabetics - low glycemic index helps in controlling blood sugar levels',
+          'Supports Heart Health - high fiber and antioxidant content help lower cholesterol'
+        ],
+        'Himalayan Pink Salt': [
+          'Contains trace amounts of over 80 minerals including potassium, magnesium, calcium, iron, and zinc',
+          'Helps maintain electrolyte balance in the body',
+          'May have lower sodium content compared to regular table salt',
+          'Supports digestion and promotes healthy acid-alkaline balance',
+          'Supports detoxification by encouraging the body to expel toxins'
+        ]
+      }
+    },
+    {
+      id: '24',
+      name: 'Gajar Gobhi Pickle',
+      description: 'Gajar Gobhi Pickle is a traditional North Indian winter favorite, made with crisp Carrots (Gajar), fresh Cauliflower (gobhi), and sometimes even turnips (Shalgam), all steeped in a vibrant, spiced mustard oil brine. This pickle bursts with bold flavors — the earthiness of mustard seeds, the pungency of asafoetida, and the zing of chili and turmeric come together to create a tangy, spicy, and aromatic experience with every bite. Its sun-cured the old-fashioned way, allowing the vegetables to soak up the spices and develop deep, complex flavors. Often served alongside parathas, dal-chawal, or poori-sabzi, Gajar Gobhi Pickle adds a nostalgic, homestyle punch to any meal — a true tribute to Indian winter kitchens.',
+      price: 325,
+      image: '/images/gajargobhipickles/IMG_1.jpg',
+      images: [
+        '/images/gajargobhipickles/IMG_1.jpg',
+        '/images/gajargobhipickles/IMG_2.jpg',
+        // '/images/gajargobhipickles/IMG_3.jpg',
+        '/images/gajargobhipickles/IMG_4.jpg',
+        '/images/gajargobhipickles/IMG_5.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['pickle', 'traditional', 'winter', 'carrot', 'cauliflower', 'homestyle', 'nopreservatives', 'nochemicals', 'natural', 'condiment'],
+      size: '300gms',
+      ingredients_benefits: {
+        'Carrots': [
+          'Rich in beta carotene and vitamin A for eye health',
+          'High in antioxidants and fiber',
+          'Supports immune system function'
+        ],
+        'Cauliflower': [
+          'Low in calories but high in vitamins and minerals',
+          'Contains powerful antioxidants',
+          'Rich in fiber for digestive health'
+        ],
+        'Mustard Oil': [
+          'Contains omega-3 and omega-6 fatty acids',
+          'Has antimicrobial properties',
+          'Aids in digestion'
+        ],
+        'Spices (Turmeric, Asafoetida, etc.)': [
+          'Anti-inflammatory properties',
+          'Aids in digestion',
+          'Natural preservatives'
+        ]
+      }
     }
-]; 
+];
+export default products; 
