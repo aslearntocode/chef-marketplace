@@ -66,8 +66,12 @@ export default function VendorCard({ id, image, name, specialty, location, href 
           </div>
           <div className="text-right">
             <div className="text-lg font-bold text-gray-800 flex items-center justify-end gap-1">
-              {rating}
-              {rating !== 'New' && <FaStar className="text-yellow-400" />}
+              {rating !== 'New' && (
+                <div className="flex items-center">
+                  <FaStar className="text-[#FDBE28]" />
+                  <span className="ml-1">{rating}</span>
+                </div>
+              )}
             </div>
             <div className="text-xs text-gray-500">
               {rating === 'New' ? 'Rating' : 'Rating'}

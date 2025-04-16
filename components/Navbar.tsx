@@ -68,7 +68,7 @@ export default function Navbar() {
     <header className="fixed w-full z-50">
       {/* Top Banner */}
       <div className="bg-black py-2 px-4 text-center font-bold">
-        <p className="text-[#FFD700] text-lg">
+        <p className="text-[#FDBE28] text-lg">
           🎉 Now serving in Mumbai! Free Delivery for Orders above ₹1,000 🚚
         </p>
       </div>
@@ -124,7 +124,7 @@ export default function Navbar() {
                       onClick={() => toggleDropdown('user')}
                       className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 whitespace-nowrap w-[120px] justify-between font-itc-souvenir"
                     >
-                      <div className="w-8 h-8 rounded-full bg-[#FFD700] flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-[#FDBE28] flex items-center justify-center flex-shrink-0">
                         {user.email ? user.email[0].toUpperCase() : 'U'}
                       </div>
                       <span className="hidden sm:inline">{user.email?.split('@')[0]}</span>
@@ -170,7 +170,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/login"
-                  className="bg-[#FFD700] text-black px-4 py-2 rounded-md hover:bg-[#F7C948] transition-colors font-medium font-itc-souvenir"
+                  className="bg-[#FDBE28] text-black px-4 py-2 rounded-md hover:bg-[#E5AB14] transition-colors font-medium font-itc-souvenir"
                 >
                   Login
                 </Link>
@@ -194,7 +194,7 @@ export default function Navbar() {
               )}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FFD700]"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FDBE28]"
                 aria-expanded={isOpen}
               >
                 <span className="sr-only">Open main menu</span>

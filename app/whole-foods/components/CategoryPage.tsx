@@ -105,9 +105,9 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
               placeholder="Search products in this category..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-sm shadow-sm"
+              className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-[#FDBE28] focus:outline-none focus:ring-2 focus:ring-[#FDBE28] focus:border-transparent bg-white text-sm shadow-sm"
             />
-            <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-yellow-500" size={16} />
+            <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-[#FDBE28]" size={16} />
           </div>
         </div>
       </div>

@@ -134,7 +134,7 @@ export default function WholeFoods() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFD700] pt-[72px] font-nunito">
+    <main className="min-h-screen bg-[#FDBE28] pt-[72px] font-nunito">
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Compact Header with Search */}
         <div className="flex flex-col items-center justify-center relative mb-8">
@@ -148,12 +148,12 @@ export default function WholeFoods() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search categories and products..."
+                placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-sm shadow-sm"
+                className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-[#FDBE28] focus:outline-none focus:ring-2 focus:ring-[#FDBE28] focus:border-transparent bg-white text-sm shadow-sm"
               />
-              <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-yellow-500" size={16} />
+              <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-[#FDBE28]" size={16} />
             </div>
           </div>
         </div>

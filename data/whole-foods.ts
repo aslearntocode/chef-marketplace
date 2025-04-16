@@ -228,14 +228,14 @@ export const products: Product[] = [
       ingredients_benefits: {
         'Red Rice': [
           'Red rice is rich in essential nutrients like fiber, antioxidants, vitamins, and minerals. It contains more nutrients than white rice, including higher levels of iron, zinc, and B-vitamins like thiamine and niacin.',
-          'Promotes Digestive Health: The fiber content in red rice is high, which helps in improving digestion and preventing constipation. Fiber adds bulk to the stool and aids in regular bowel movements, promoting overall gut health.',
-          'Red rice is packed with antioxidants, particularly anthocyanins, which are compounds responsible for the reddish hue of the rice. These antioxidants help protect the body from oxidative stress and reduce inflammation, which is beneficial for fighting chronic diseases and promoting longevity.',
-          'The fiber in red rice helps lower LDL cholesterol (bad cholesterol) levels, reducing the risk of heart disease. Additionally, the antioxidants present in red rice contribute to reducing oxidative stress, which is linked to the development of cardiovascular diseases.',
-          'Red rice has a low glycemic index, meaning it releases energy slowly, helping to control hunger and prevent blood sugar spikes. When combined with the fiber from roasted red rice chivda, it provides a filling and satisfying snack, reducing the tendency to overeat.',
-          'Red rice is a better option than white rice for individuals with diabetes, as it helps in managing blood sugar levels. Its low glycemic index and high fiber content can assist in preventing sudden spikes in blood sugar.',
-          'Red rice contains essential minerals such as calcium, magnesium, and phosphorus, which are important for maintaining strong and healthy bones. These minerals help in bone formation and can aid in the prevention of bone-related conditions like osteoporosis.',
-          'The antioxidants, especially anthocyanins in red rice, help fight free radicals in the body that contribute to aging and skin damage. They promote healthier skin, reduce wrinkles, and may also help combat acne and other skin problems.',
-          'Red rice contains B-vitamins, particularly thiamine (Vitamin B1), which plays a key role in maintaining the health of the nervous system. These vitamins also support brain function, improve focus, and boost overall mental well-being.'
+        'Promotes Digestive Health: The fiber content in red rice is high, which helps in improving digestion and preventing constipation. Fiber adds bulk to the stool and aids in regular bowel movements, promoting overall gut health.',
+        'Red rice is packed with antioxidants, particularly anthocyanins, which are compounds responsible for the reddish hue of the rice. These antioxidants help protect the body from oxidative stress and reduce inflammation, which is beneficial for fighting chronic diseases and promoting longevity.',
+        'The fiber in red rice helps lower LDL cholesterol (bad cholesterol) levels, reducing the risk of heart disease. Additionally, the antioxidants present in red rice contribute to reducing oxidative stress, which is linked to the development of cardiovascular diseases.',
+        'Red rice has a low glycemic index, meaning it releases energy slowly, helping to control hunger and prevent blood sugar spikes. When combined with the fiber from roasted red rice chivda, it provides a filling and satisfying snack, reducing the tendency to overeat.',
+        'Red rice is a better option than white rice for individuals with diabetes, as it helps in managing blood sugar levels. Its low glycemic index and high fiber content can assist in preventing sudden spikes in blood sugar.',
+        'Red rice contains essential minerals such as calcium, magnesium, and phosphorus, which are important for maintaining strong and healthy bones. These minerals help in bone formation and can aid in the prevention of bone-related conditions like osteoporosis.',
+        'The antioxidants, especially anthocyanins in red rice, help fight free radicals in the body that contribute to aging and skin damage. They promote healthier skin, reduce wrinkles, and may also help combat acne and other skin problems.',
+        'Red rice contains B-vitamins, particularly thiamine (Vitamin B1), which plays a key role in maintaining the health of the nervous system. These vitamins also support brain function, improve focus, and boost overall mental well-being.'
         ],
         'Himalayan Pink Salt': [
           'Contains trace amounts of over 80 minerals, including potassium, magnesium, calcium, iron, and zinc.',
@@ -283,18 +283,18 @@ export const products: Product[] = [
       ingredients_benefits: {
         'Whole Wheat Flour': [
           'Whole wheat flour is an excellent source of dietary fiber, which is important for maintaining a healthy digestive system. Fiber helps in preventing constipation, improving gut health, and promoting regular bowel movements.',
-          'Whole wheat flour is rich in complex carbohydrates, which provide a steady source of energy throughout the day. This makes ajwain mathri a good snack for individuals who need an energy boost, such as those with an active lifestyle.',
-          'Whole Wheat flour is a good source of antioxidants, magnesium, and other nutrients that help improve heart health. The fiber in whole wheat helps lower bad cholesterol levels, which in turn reduces the risk of heart disease. Additionally, ajwain may contribute to improved circulation and overall cardiovascular health.',
-          'Whole wheat flour has a lower glycemic index compared to refined flour, which helps in controlling blood sugar levels. It also keeps you full for longer, reducing the chances of overeating. Additionally, ajwain has been linked to improving metabolism and aiding weight loss.',
+        'Whole wheat flour is rich in complex carbohydrates, which provide a steady source of energy throughout the day. This makes ajwain mathri a good snack for individuals who need an energy boost, such as those with an active lifestyle.',
+        'Whole Wheat flour is a good source of antioxidants, magnesium, and other nutrients that help improve heart health. The fiber in whole wheat helps lower bad cholesterol levels, which in turn reduces the risk of heart disease. Additionally, ajwain may contribute to improved circulation and overall cardiovascular health.',
+        'Whole wheat flour has a lower glycemic index compared to refined flour, which helps in controlling blood sugar levels. It also keeps you full for longer, reducing the chances of overeating. Additionally, ajwain has been linked to improving metabolism and aiding weight loss.',
           'Whole wheat flour has a low glycemic index, which makes it a suitable option for people with diabetes or those trying to maintain stable blood sugar levels. Ajwain also helps in controlling blood sugar spikes and insulin resistance.'
         ],
         'Ajwain (Carom seeds)': [
           'Ajwain has long been known for its digestive benefits. It aids in the secretion of gastric juices, which helps in the digestion of food. Ajwain is also known to relieve indigestion, bloating, and gas, making mathri a beneficial snack for those with digestive issues.',
-          'Ajwain is known to have thermogenic properties, which can help boost metabolism and promote fat burning. This can be especially beneficial for those trying to manage their weight or improve their metabolism.',
-          'Ajwain contains compounds that have anti-inflammatory properties. Regular consumption of ajwain mathri may help reduce inflammation in the body, which can benefit conditions such as arthritis and other inflammatory disorders.',
-          'Ajwain is known for its antimicrobial and antibacterial properties, which can help protect the body from infections. This makes ajwain mathri a good option for supporting the immune system and maintaining overall health.',
+        'Ajwain is known to have thermogenic properties, which can help boost metabolism and promote fat burning. This can be especially beneficial for those trying to manage their weight or improve their metabolism.',
+        'Ajwain contains compounds that have anti-inflammatory properties. Regular consumption of ajwain mathri may help reduce inflammation in the body, which can benefit conditions such as arthritis and other inflammatory disorders.',
+        'Ajwain is known for its antimicrobial and antibacterial properties, which can help protect the body from infections. This makes ajwain mathri a good option for supporting the immune system and maintaining overall health.',
           'The combination of fiber and protein in whole wheat flour, along with the spices in ajwain, helps curb hunger and cravings. This makes it a good snack choice for those looking to manage their appetite between meals.'
-        ]
+      ]
       }
     },
     {
@@ -681,6 +681,73 @@ export const products: Product[] = [
         ],
         'Mustard Oil': [
           'Extremely heart friendly, boosts immunity, promotes digestion and is good for skin and hair health too'
+        ]
+      }
+    },
+    {
+      id: '27',
+      name: 'Besan Laddoos',
+      description: 'Besan laddoos are a beloved Indian sweet made from roasted gram flour (besan), ghee, and unrefined sugar, delicately flavored with cardamom and often studded with chopped nuts. These round golden delights are known for their rich, nutty aroma and melt-in-your-mouth texture. Deeply rooted in Indian festivals and celebrations, besan laddoos carry a nostalgic warmth—often reminding one of home kitchens filled with the comforting scent of slow-roasted besan. Whether offered during Diwali, weddings, or simply made as a treat for loved ones, these sweets are a perfect balance of simplicity and indulgence. Each bite offers a burst of flavor—the earthiness of besan, the silkiness of ghee, and the sweet finish of powdered sugar—all rolled into one comforting, fragrant bite-sized sphere. Our laddoos are made in small batches using a clean label recipe.',
+      price: 360,
+      image: '/images/besanladdoopics/IMG_1.jpg',
+      images: [
+        '/images/besanladdoopics/IMG_1.jpg',
+        '/images/besanladdoopics/IMG_2.jpg',
+        '/images/besanladdoopics/IMG_3.jpg',
+        '/images/besanladdoopics/IMG_4.jpg',
+        '/images/besanladdoopics/IMG_5.jpg',
+        '/images/besanladdoopics/IMG_6.jpg',
+        '/images/besanladdoopics/IMG_7.jpg',
+        '/images/besanladdoopics/IMG_8.jpg'
+      ],
+      category: 'Healthy Treats',
+      tags: ['besanladdoo', 'laddoo', 'laddu', 'besanladdu', 'gheeladdoo', 'cowghee', 'gondladdoo', 'gondladdu', 'dryfruitladdoo', 'dryfruitladdu', 'mithai', 'indiansweets', 'homemadesweets'],
+      size: '225gms',
+      ingredients_benefits: {
+        'Besan': [
+          'Great plant-based protein source, especially for vegetarians. Helps with muscle repair and satiety',
+          'Aids digestion, promotes gut health and keeps you feeling full longer- great for weight management',
+          'Naturally gluten-free, perfect for people with celiac disease or gluten sensitivity'
+        ],
+        'Cow Ghee': [
+          'Contains saturated fats that support energy, hormone production, and help in absorbing fat-soluble vitamins (A, D, E, and K)',
+          'Stimulates the secretion of stomach acids, improves gut health, and helps in nutrient absorption',
+          'Contains omega-3 and omega-9 fatty acids, which support cardiovascular health when consumed mindfully'
+        ]
+      }
+    },
+    {
+      id: '28',
+      name: 'Sattu Laddoos',
+      description: 'Sattu laddoos are a simple yet power-packed traditional Indian sweet made from roasted chana flour (sattu), ghee, and jaggery. Earthy, nutty, and naturally sweet, these laddoos are the perfect blend of nutrition and taste. Sattu is loaded with nutrients—making these laddoos not just delicious, but also super energizing. They\'re especially loved in Bihar, Jharkhand, and Uttar Pradesh, where sattu has deep culinary roots. Sattu laddoos offer a clean energy boost, making them ideal for a healthy snack, post-workout bite, or even a light breakfast on the go. With every bite, you get the toasty flavor of roasted gram, the richness of ghee, and the warm sweetness of jaggery—a taste that\'s both comforting and nourishing.',
+      price: 360,
+      image: '/images/sattuladdopics/IMG_1.jpg',
+      images: [
+        '/images/sattuladdoopics/IMG_1.jpg',
+        '/images/sattuladdoopics/IMG_2.jpg',
+        '/images/sattuladdoopics/IMG_3.jpg',
+        '/images/sattuladdoopics/IMG_4.jpg',
+        '/images/sattuladdoopics/IMG_5.jpg'
+      ],
+      category: 'Healthy Treats',
+      tags: ['besanladdoo', 'laddoo', 'laddu', 'besanladdu', 'gheeladdoo', 'cowghee', 'gondladdoo', 'gondladdu', 'dryfruitladdoo', 'dryfruitladdu', 'mithai', 'indiansweets', 'homemadesweets', 'Sattuladdoos', 'Sattu', 'Sattuladus'],
+      size: '225gms',
+      ingredients_benefits: {
+        'Sattu (Roasted Chana Flour)': [
+          'Powerhouse of protein, making it a great muscle-building and energy-boosting food—especially for vegetarians',
+          'High fiber content supports smooth digestion and helps prevent issues like bloating and constipation',
+          'Traditionally consumed in summer (especially in Bihar & UP), Sattu helps maintain body temperature and prevents heat strokes'
+        ],
+        'Cow Ghee': [
+          'Contains saturated fats that support energy, hormone production, and help in absorbing fat-soluble vitamins (A, D, E, and K)',
+          'Stimulates the secretion of stomach acids, improves gut health, and helps in nutrient absorption',
+          'Contains omega-3 and omega-9 fatty acids, which support cardiovascular health when consumed mindfully'
+        ],
+        'Jaggery': [
+          'Being a natural detoxifier, helps cleanse the liver by flushing out toxins',
+          'A great natural source of iron and folate, helps boost hemoglobin and is especially helpful for women',
+          'Stimulates digestive enzymes, reduces acidity, and helps with constipation',
+          'Packed with antioxidants, zinc, and selenium, it helps fight free radicals and supports a strong immune system'
         ]
       }
     }

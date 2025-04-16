@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="bg-[#FFD700] min-h-screen">
+    <main className="bg-[#FDBE28] min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="bg-[#FFFBEB] rounded-lg p-8 md:p-12 shadow-lg">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">

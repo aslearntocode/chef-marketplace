@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Success() {
   return (
-    <div className="min-h-screen bg-[#FFD700] py-12">
+    <div className="min-h-screen bg-[#FDBE28] py-12">
       <div className="max-w-3xl mx-auto px-4">
         <div className="bg-white rounded-lg p-8 text-center">
           <h1 className="text-3xl font-bold mb-4">Application Submitted Successfully!</h1>
@@ -11,7 +11,7 @@ export default function Success() {
           </p>
           <Link 
             href="/"
-            className="bg-[#FFD700] text-black px-8 py-3 rounded-full font-bold hover:bg-[#F7C948] transition-colors inline-block"
+            className="bg-[#FDBE28] text-black px-8 py-3 rounded-full font-bold hover:bg-[#E5AB14] transition-colors inline-block"
           >
             Return to Home
           </Link>

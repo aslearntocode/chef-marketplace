@@ -4,10 +4,54 @@ import Link from 'next/link';
 import './styles.css';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { FiSearch } from 'react-icons/fi';
+import { products } from '@/data/whole-foods';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPopularSlide, setCurrentPopularSlide] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      const searchLower = searchQuery.toLowerCase();
+      
+      // Find products that match the search query in their tags
+      const matchingProducts = products.filter(product => 
+        product.tags?.some(tag => tag.toLowerCase().includes(searchLower)) ||
+        product.name.toLowerCase().includes(searchLower) ||
+        product.description.toLowerCase().includes(searchLower)
+      );
+
+      if (matchingProducts.length > 0) {
+        // Get the category of the first matching product
+        const firstMatchCategory = matchingProducts[0].category.toLowerCase();
+        
+        // Map category to route
+        const categoryRoutes: { [key: string]: string } = {
+          'drinks': '/whole-foods/categories/drinks',
+          'healthy treats': '/whole-foods/categories/healthy-treats',
+          'pickles & condiments': '/whole-foods/categories/pickles',
+          'healthy bites': '/whole-foods/categories/healthy-bites'
+        };
+
+        // If we have a matching category route, go there with the search query
+        if (categoryRoutes[firstMatchCategory]) {
+          router.push(`${categoryRoutes[firstMatchCategory]}?search=${encodeURIComponent(searchQuery.trim())}`);
+        } else {
+          // If no specific category route, go to main whole foods with search query
+          router.push(`/whole-foods?search=${encodeURIComponent(searchQuery.trim())}`);
+        }
+      } else {
+        // If no matches found, go to main whole foods with search query
+        router.push(`/whole-foods?search=${encodeURIComponent(searchQuery.trim())}`);
+      }
+    }
+  };
+
   const slides = [
     {
       title: "Discover Refreshing Healthy Drinks",
@@ -54,8 +98,33 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-[72px]">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-0 bg-[#FDBE28]">
       <div className="w-full font-nunito">
+        {/* Search Section */}
+        <section className="bg-[#FDBE28] py-4 px-4 mt-[72px]">
+          <div className="max-w-4xl mx-auto">
+            <form onSubmit={handleSearch} className="relative flex gap-2">
+              <div className="relative flex-1">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-[#8B4513] focus:outline-none focus:ring-2 focus:ring-[#8B4513] focus:border-transparent text-gray-800 bg-white text-sm shadow-sm"
+                />
+                <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-[#8B4513]" size={16} />
+              </div>
+              <button
+                type="submit"
+                className="bg-[#8B4513] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#6B3410] transition-colors text-sm shadow-sm flex items-center gap-2"
+              >
+                <FiSearch size={16} />
+                Search
+              </button>
+            </form>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative w-full min-h-[600px] bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
@@ -72,8 +141,13 @@ export default function Home() {
               </div>
               {/* Right side - Text */}
               <div className="text-center md:text-right order-1 md:order-2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
-                  CRAVING FOR<br />HEALTHY<br />YET TASTY<br />SNACKS OR DESSERTS?
+                <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
+                  <span className="md:hidden">
+                    CRAVING FOR HEALTHY<br />YET TASTY SNACKS<br />OR DESSERTS?
+                  </span>
+                  <span className="hidden md:inline">
+                    CRAVING FOR<br />HEALTHY<br />YET TASTY<br />SNACKS OR DESSERTS?
+                  </span>
                 </h1>
                 <Link
                   href="/whole-foods/"
@@ -139,7 +213,7 @@ export default function Home() {
         </section>
 
         {/* Hero Carousel */}
-        <div className="relative h-[400px] overflow-hidden bg-[#FFD700]">
+        <div className="relative h-[400px] overflow-hidden bg-[#FDBE28]">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -183,105 +257,109 @@ export default function Home() {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Food Showcase Conveyor Belt */}
-          <div className="bg-white rounded-lg p-6 mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">Most Popular Items</h2>
-            <div className="flex items-center gap-1 sm:gap-4 relative overflow-hidden">
-              <div className="max-w-6xl mx-auto w-full sm:w-auto px-7 sm:px-0">
-                <div className="chef-marketplace">
-                  <div className="slider flex">
-                    {/* First set of items */}
-                    {[
-                      { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                      { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                      { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                      { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
-                      { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    ].map((item, index) => (
-                      <Link 
-                        key={`first-${index}`} 
-                        href={item.path}
-                        className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
-                      >
-                        <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
-                          <Image 
-                            src={item.src} 
-                            alt={item.name} 
-                            width={500}
-                            height={300}
-                            className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
-                          />
-                          <div className="p-3 sm:p-4">
-                            <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
-                            <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
+        </div>
 
-                    {/* Second set - duplicate of first set */}
-                    {[
-                      { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                      { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                      { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                      { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
-                      { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    ].map((item, index) => (
-                      <Link 
-                        key={`second-${index}`} 
-                        href={item.path}
-                        className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
-                      >
-                        <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
-                          <Image 
-                            src={item.src} 
-                            alt={item.name} 
-                            width={500}
-                            height={300}
-                            className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
-                          />
-                          <div className="p-3 sm:p-4">
-                            <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
-                            <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
-                          </div>
+        {/* Most Popular Items Section - Full Width */}
+        <section className="w-full bg-white py-12">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">Most Popular Items</h2>
+          <div className="flex items-center gap-1 sm:gap-4 relative overflow-hidden">
+            <div className="max-w-full w-full px-7 sm:px-0">
+              <div className="chef-marketplace">
+                <div className="slider flex">
+                  {/* First set of items */}
+                  {[
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                  ].map((item, index) => (
+                    <Link 
+                      key={`first-${index}`} 
+                      href={item.path}
+                      className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
+                    >
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
+                        <Image 
+                          src={item.src} 
+                          alt={item.name} 
+                          width={500}
+                          height={300}
+                          className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
+                        />
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
-                      </Link>
-                    ))}
+                      </div>
+                    </Link>
+                  ))}
 
-                    {/* Third set - duplicate of first set for seamless loop */}
-                    {[
-                      { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                      { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                      { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                      { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
-                      { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    ].map((item, index) => (
-                      <Link 
-                        key={`third-${index}`} 
-                        href={item.path}
-                        className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
-                      >
-                        <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
-                          <Image 
-                            src={item.src} 
-                            alt={item.name} 
-                            width={500}
-                            height={300}
-                            className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
-                          />
-                          <div className="p-3 sm:p-4">
-                            <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
-                            <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
-                          </div>
+                  {/* Second set - duplicate of first set */}
+                  {[
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                  ].map((item, index) => (
+                    <Link 
+                      key={`second-${index}`} 
+                      href={item.path}
+                      className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
+                    >
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
+                        <Image 
+                          src={item.src} 
+                          alt={item.name} 
+                          width={500}
+                          height={300}
+                          className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
+                        />
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
                         </div>
-                      </Link>
-                    ))}
-                  </div>
+                      </div>
+                    </Link>
+                  ))}
+
+                  {/* Third set - duplicate of first set for seamless loop */}
+                  {[
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                  ].map((item, index) => (
+                    <Link 
+                      key={`third-${index}`} 
+                      href={item.path}
+                      className="slide cursor-pointer block transform transition-transform duration-300 hover:scale-105 min-w-[300px] mx-4"
+                    >
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full">
+                        <Image 
+                          src={item.src} 
+                          alt={item.name} 
+                          width={500}
+                          height={300}
+                          className="w-full h-56 sm:h-48 object-cover rounded-t-xl"
+                        />
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-xs sm:text-lg font-bold mb-1">{item.name}</h3>
+                          <p className="text-yellow-600 font-semibold text-xs sm:text-base">{item.price}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Marketing Metrics */}
+        {/* Marketing Metrics */}
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {/* Chefs Metric */}
             <div className="bg-white rounded-lg p-8 text-center">
@@ -301,26 +379,29 @@ export default function Home() {
               <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
             </div>
           </div>
+        </div>
 
-          {/* Two Column Layout for Chefs Sections */}
-          <div className="mt-16">
-            {/* Curator Application Section */}
-            <section className="bg-[#FFFBEB] rounded-lg p-8 border-2 border-[#FFD700]">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <span className="text-3xl">🌿</span>
-                <h2 className="text-4xl text-center font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow']">Calling all 'HEALTHIER FOOD' curators!</h2>
-                <span className="text-3xl">🍃</span>
+        {/* Curator Application Section - Full Width */}
+        <section className="w-full bg-white py-16 mt-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="bg-white rounded-lg p-8">
+              <div className="rounded-lg p-8 mb-8">
+                <div className="flex items-center justify-center gap-2 mb-6">
+                  <span className="text-3xl">🌿</span>
+                  <h2 className="text-4xl text-center font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow']">Calling all 'HEALTHIER FOOD' curators!</h2>
+                  <span className="text-3xl">🍃</span>
+                </div>
+                
+                <p className="text-center text-lg text-gray-700 mb-0 max-w-3xl mx-auto">
+                  Do you have a passion for coming up with nutritious yet delicious food products? If yes, then we would love for you and your expertise to be a part of our platform. So, lets celebrate the blend of 'Healthful and Tasteful' together!
+                </p>
               </div>
-              
-              <p className="text-center text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                Do you have a passion for coming up with nutritious yet delicious food products? If yes, then we would love for you and your expertise to be a part of our platform. So, lets celebrate the blend of 'Healthful and Tasteful' together!
-              </p>
 
-              <div className="bg-white rounded-lg p-6 mb-8 max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto">
                 <h3 className="text-4xl font-bold text-center mb-6 text-[#8B4513] font-['YWFT_Hannah_Narrow']">
                   ⭐ Why join us?
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mb-8">
                   <li className="text-base text-gray-700">
                     • Showcase your healthier food curatory skills to a broader audience
                   </li>
@@ -334,63 +415,19 @@ export default function Home() {
                     • Be a part of 'Make in India' and 'Made in India'
                   </li>
                 </ul>
-              </div>
 
-              <div className="text-center">
-                <Link 
-                  href="/chef-application"
-                  className="bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-[#6B3410] transition-colors inline-block"
-                >
-                  Apply Now
-                </Link>
-              </div>
-            </section>
-          </div>
-        </div>
-
-        {/* How It Works Section - Commented Out
-        <section className="py-12 bg-[#FFD700]">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="bg-[#FFFBEB] rounded-lg p-12">
-              <h2 className="text-4xl font-bold text-center mb-16">How It Works</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div className="relative">
-                  <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                    1
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Browse Local Chefs</h3>
-                  <p className="text-gray-600">
-                    Explore menus from talented home chefs in your area
-                  </p>
-                </div>
-
-                <div className="relative">
-                  <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                    2
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Place Your Order for Your Favorite Dish</h3>
-                  <p className="text-gray-600">
-                    Select your favorite dishes and place your order
-                  </p>
-                </div>
-
-                <div className="relative">
-                  <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                    3
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Enjoy Home Cooked Food</h3>
-                  <p className="text-gray-600">
-                    Receive fresh, home-cooked meals delivered to your doorstep
-                  </p>
+                <div className="text-center">
+                  <Link 
+                    href="/chef-application"
+                    className="bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-[#6B3410] transition-colors inline-block"
+                  >
+                    Apply Now
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        */}
-
-        {/* Footer would go here */}
       </div>
     </main>
   );
