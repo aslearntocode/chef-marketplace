@@ -9,6 +9,7 @@ import { products } from '@/data/whole-foods';
 import { FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiX, FiZoomIn } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import Breadcrumb from '@/components/Breadcrumb';
 
 interface ProductPageProps {
   params: Promise<{
@@ -89,6 +90,12 @@ export default function ProductPage({ params }: ProductPageProps) {
   return (
     <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
       <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb customPaths={{ 
+          [id]: product.name,
+          category: product.category.toLowerCase().replace(/\s+/g, '-')
+        }} />
+        
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column - Image Gallery */}
@@ -294,7 +301,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 setIsZoomModalOpen(false);
                 setIsZoomed(false);
               }}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition-all"
             >
               <FiX size={24} />
             </button>
@@ -319,6 +326,11 @@ export default function ProductPage({ params }: ProductPageProps) {
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority
                 />
+                {isZoomed && (
+                  <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                    Click to exit zoom
+                  </div>
+                )}
               </div>
             </div>
 

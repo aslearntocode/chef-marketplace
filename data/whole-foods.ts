@@ -750,6 +750,178 @@ export const products: Product[] = [
           'Packed with antioxidants, zinc, and selenium, it helps fight free radicals and supports a strong immune system'
         ]
       }
+    },
+    {
+      id: '29',
+      name: 'Overnight Oats (Flavour: Banana Cake)',
+      description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
+      price: 250,
+      image: '/images/bananacakeoats/IMG_1.jpg',
+              images: [
+        '/images/bananacakeoats/IMG_1.jpg',
+        '/images/bananacakeoats/IMG_2.jpg',
+        '/images/bananacakeoats/IMG_3.jpg',
+        '/images/bananacakeoats/IMG_4.jpg',
+        '/images/bananacakeoats/IMG_5.jpg',
+        '/images/bananacakeoats/IMG_6.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'bananacake', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Brown Sugar': [
+          'Slightly More Nutrients than White Sugar, Brown sugar contains molasses, which gives it that color and a tiny nutritional boost',
+          'Trace amounts of minerals like calcium, potassium, iron, and magnesium are also present in Brown Sugar'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Banana Powder': [
+          'Nutrient-Rich (Just Like Whole Bananas), Packed with:',
+          'Potassium – supports heart health, muscle function, and blood pressure regulation.',
+          'Magnesium – helps with energy, nerves, and muscle relaxation.',
+          'Vitamin B6 – important for brain health and mood balance.',
+          'Vitamin C – antioxidant + immune support.',
+          'Fiber – for digestion and blood sugar control (more in powders made from whole banana, peel and all).'
+        ],
+        'Chia Seeds': [
+          'Packed with Nutrients (Tiny but Loaded)',
+          'In just 2 tablespoons (~28g), you get:',
+          'Fiber: ~10–11g (that\'s ~40% of daily needs!)',
+          'Omega-3s: Especially ALA, great for heart and brain health.',
+          'Protein: ~4g of complete, plant-based protein.',
+          'Calcium, magnesium, phosphorus: Important for bones, muscles, and energy.'
+        ],
+        'Diced Banana': [],
+        'Date Powder': [],
+        'Flax Seeds': [],
+        'Himalayan Pink Salt': [],
+        'Vanilla Powder': [],
+        'Banana Flavour': [],
+        'Stevia': []
+      }
+    },
+    {
+      id: '30',
+      name: 'Overnight Oats (Flavour: Cinnamon Roll)',
+      description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
+      price: 250,
+      image: '/images/oatscinnamonroll/IMG_1.jpg',
+              images: [
+        '/images/oatscinnamonroll/IMG_1.jpg',
+        '/images/oatscinnamonroll/IMG_2.jpg',
+        '/images/oatscinnamonroll/IMG_3.jpg',
+        '/images/oatscinnamonroll/IMG_4.jpg',
+        '/images/oatscinnamonroll/IMG_5.jpg',
+        '/images/oatscinnamonroll/IMG_6.jpg',
+        '/images/oatscinnamonroll/IMG_7.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'cinnamonroll', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Coconut Sugar': [
+          'Unlike regular white sugar (which is pure sucrose), coconut sugar retains small amounts of:',
+          'Iron – helps with oxygen transport in the blood.',
+          'Zinc – supports immunity and skin.',
+          'Calcium & Potassium – good for bones, nerves, and heart function.',
+          'Inulin (a type of fiber) – supports gut health and slows sugar absorption.',
+          'Coconut Sugar has lower Glycemic Index which means that it causes a slower rise in blood sugar which may help with better energy balance, fewer blood sugar spikes/crashes, improved insulin response overtime.'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Chia Seeds': [
+          'Packed with Nutrients (Tiny but Loaded)',
+          'In just 2 tablespoons (~28g), you get:',
+          'Fiber: ~10–11g (that\'s ~40% of daily needs!)',
+          'Omega-3s: Especially ALA, great for heart and brain health.',
+          'Protein: ~4g of complete, plant-based protein.',
+          'Calcium, magnesium, phosphorus: Important for bones, muscles, and energy.'
+        ],
+        'Quinoa': [],
+        'Date Powder': [],
+        'Flax Seeds': [],
+        'Vanilla Powder': [],
+        'Cinnamon Powder': [],
+        'Himalayan Pink Salt': [],
+        'Stevia': []
+      }
+    },
+    {
+      id: '31',
+      name: 'Overnight Oats (Flavour: Mango Custard)',
+      description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
+      price: 250,
+      image: '/images/mangocustardoats/IMG_1.jpg',
+              images: [
+        '/images/mangocustardoats/IMG_1.jpg',
+        '/images/mangocustardoats/IMG_2.jpg',
+        '/images/mangocustardoats/IMG_3.jpg',
+        '/images/mangocustardoats/IMG_4.jpg',
+        '/images/mangocustardoats/IMG_5.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'mangocustard', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Coconut Sugar': [
+          'Unlike regular white sugar (which is pure sucrose), coconut sugar retains small amounts of:',
+          'Iron – helps with oxygen transport in the blood.',
+          'Zinc – supports immunity and skin.',
+          'Calcium & Potassium – good for bones, nerves, and heart function.',
+          'Inulin (a type of fiber) – supports gut health and slows sugar absorption.',
+          'Coconut Sugar has lower Glycemic Index which means that it causes a slower rise in blood sugar which may help with better energy balance, fewer blood sugar spikes/crashes, improved insulin response overtime.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Mango Powder': [
+          'Rich in Antioxidants',
+          'Contains polyphenols, flavonoids, and vitamin C',
+          'Helps fight free radicals, reduce oxidative stress, and may slow signs of aging.'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Chia Seeds': [
+          'Packed with Nutrients (Tiny but Loaded)',
+          'In just 2 tablespoons (~28g), you get:',
+          'Fiber: ~10–11g (that\'s ~40% of daily needs!)',
+          'Omega-3s: Especially ALA, great for heart and brain health.',
+          'Protein: ~4g of complete, plant-based protein.',
+          'Calcium, magnesium, phosphorus: Important for bones, muscles, and energy.'
+        ],
+        'Dried Mango Dices': [],
+        'Flax Seeds': []
+      }
     }
 ];
 export default products; 
