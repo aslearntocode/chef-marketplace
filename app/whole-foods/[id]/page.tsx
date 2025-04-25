@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import { products } from '@/data/whole-foods';
+import { Product } from '@/types/whole-foods';
 import { FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiX, FiZoomIn } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
@@ -15,6 +16,12 @@ interface ProductPageProps {
   params: Promise<{
     id: string;
   }>;
+}
+
+interface VariantOption {
+  name: string;
+  price?: number;
+  description?: string;
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
@@ -28,9 +35,24 @@ export default function ProductPage({ params }: ProductPageProps) {
   const [isZoomModalOpen, setIsZoomModalOpen] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const [isZoomed, setIsZoomed] = useState(false);
+  const [selectedSize, setSelectedSize] = useState<VariantOption | null>(null);
+  const [selectedFlavor, setSelectedFlavor] = useState<VariantOption | null>(null);
+
+  const getCurrentImages = () => {
+    if (!product) return ['/images/placeholder.png'];
+    if (product.images?.length) return product.images;
+    if (product.image) return [product.image];
+    return ['/images/placeholder.png'];
+  };
+
+  const images = getCurrentImages();
 
   if (!product) {
-    return <div>Product not found</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-xl text-gray-600">Product not found</p>
+      </div>
+    );
   }
 
   const toggleSection = (section: string) => {
@@ -39,6 +61,18 @@ export default function ProductPage({ params }: ProductPageProps) {
     } else {
       setOpenSection(section);
     }
+  };
+
+  const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const size = product.variants?.sizes?.find(s => s.name === e.target.value);
+    setSelectedSize(size || null);
+    setCurrentImageIndex(0);
+  };
+
+  const handleFlavorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const flavor = product.variants?.flavors?.find(f => f.name === e.target.value);
+    setSelectedFlavor(flavor || null);
+    setCurrentImageIndex(0);
   };
 
   const handleAddToCart = () => {
@@ -50,9 +84,9 @@ export default function ProductPage({ params }: ProductPageProps) {
     }
 
     const cartItem = {
-      id: product.id,
-      name: product.name,
-      price: product.price,
+      id: product.id + (selectedSize ? `-${selectedSize.name}` : '') + (selectedFlavor ? `-${selectedFlavor.name}` : ''),
+      name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
+      price: selectedSize?.price || product.price,
       quantity: 1,
       vendor_id: 'whole-foods',
       description: product.description,
@@ -64,12 +98,12 @@ export default function ProductPage({ params }: ProductPageProps) {
   };
 
   const handleImageNav = (direction: 'prev' | 'next') => {
-    if (!product.images) return;
+    if (images.length <= 1) return;
     
     if (direction === 'next') {
-      setCurrentImageIndex((prev) => (prev + 1) % product.images!.length);
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
     } else {
-      setCurrentImageIndex((prev) => (prev - 1 + product.images!.length) % product.images!.length);
+      setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
     }
   };
 
@@ -104,39 +138,21 @@ export default function ProductPage({ params }: ProductPageProps) {
                 className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in group"
                 onClick={handleImageClick}
               >
-                {product.images ? (
-                  <>
-                    <Image
-                      src={product.images[currentImageIndex]}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
-                      <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <Image
-                      src={product.image || '/images/placeholder.png'}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
-                      <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
-                    </div>
-                  </>
-                )}
+                <Image
+                  src={images[currentImageIndex]}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
+                  <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
+                </div>
               </div>
 
               {/* Image Navigation */}
-              {product.images && product.images.length > 1 && (
+              {images.length > 1 && (
                 <div className="mt-4 flex items-center justify-center gap-4">
                   <button
                     onClick={() => handleImageNav('prev')}
@@ -145,7 +161,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     <FiChevronLeft />
                   </button>
                   <div className="flex gap-2">
-                    {product.images.map((_, index) => (
+                    {images.map((_, index: number) => (
                       <div
                         key={index}
                         className={`w-2 h-2 rounded-full ${
@@ -170,33 +186,69 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <p className="text-sm text-gray-500 mb-2">{product.category}</p>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
                 <div className="flex items-baseline gap-4">
-                  <p className="text-2xl font-bold">₹{product.price}</p>
-                  {product.price < 499 && (
+                  <p className="text-2xl font-bold">₹{selectedSize ? selectedSize.price : product.price}</p>
+                  {(!selectedSize && product.price < 499) || (selectedSize?.price && selectedSize.price < 499) ? (
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                       Introductory Offer
                     </span>
-                  )}
+                  ) : null}
                 </div>
               </div>
 
-              {/* Expandable Sections */}
-              <div className="space-y-4 mb-8">
-                {/* Size Section */}
-                <div className="border rounded-lg">
-                  <button
-                    onClick={() => toggleSection('size')}
-                    className="flex items-center justify-between w-full p-4 text-left"
-                  >
-                    <span className="font-medium">Size</span>
-                    {openSection === 'size' ? <FiChevronUp /> : <FiChevronDown />}
-                  </button>
-                  {openSection === 'size' && (
-                    <div className="px-4 pb-4 text-gray-600">
-                      {product.size || 'Size information not available'}
+              {/* Variant Selectors */}
+              {product.variants && (
+                <div className="mb-6 space-y-4">
+                  {/* Size Dropdown */}
+                  {product.variants.sizes && (
+                    <div>
+                      <label htmlFor="size-select" className="block text-sm font-medium text-gray-900 mb-2">
+                        Select Size
+                      </label>
+                      <select
+                        id="size-select"
+                        value={selectedSize?.name || ''}
+                        onChange={handleSizeChange}
+                        className="w-full border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      >
+                        <option value="">Choose a size</option>
+                        {product.variants.sizes.map((size) => (
+                          <option key={size.name} value={size.name}>
+                            {size.name} - ₹{size.price}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  {/* Flavor Dropdown */}
+                  {product.variants.flavors && (
+                    <div>
+                      <label htmlFor="flavor-select" className="block text-sm font-medium text-gray-900 mb-2">
+                        Select Flavor
+                      </label>
+                      <select
+                        id="flavor-select"
+                        value={selectedFlavor?.name || ''}
+                        onChange={handleFlavorChange}
+                        className="w-full border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black"
+                      >
+                        <option value="">Choose a flavor</option>
+                        {product.variants.flavors.map((flavor) => (
+                          <option key={flavor.name} value={flavor.name}>
+                            {flavor.name}
+                          </option>
+                        ))}
+                      </select>
+                      {selectedFlavor?.description && (
+                        <p className="mt-2 text-sm text-gray-600">{selectedFlavor.description}</p>
+                      )}
                     </div>
                   )}
                 </div>
+              )}
 
+              {/* Expandable Sections */}
+              <div className="space-y-4 mb-8">
                 {/* Product Description Section */}
                 <div className="border rounded-lg">
                   <button
@@ -313,7 +365,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             >
               <div className="relative aspect-square bg-white rounded-lg">
                 <Image
-                  src={product.images ? product.images[currentImageIndex] : (product.image || '/images/placeholder.png')}
+                  src={images[currentImageIndex]}
                   alt={product.name}
                   fill
                   className={`
@@ -334,7 +386,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               </div>
             </div>
 
-            {product.images && product.images.length > 1 && (
+            {images.length > 1 && (
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4">
                 <button
                   onClick={(e) => {
