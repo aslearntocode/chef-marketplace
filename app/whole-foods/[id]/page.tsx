@@ -227,8 +227,8 @@ export default function ProductPage({ params }: ProductPageProps) {
                                 const [title, content] = section.split(':');
                                 return (
                                   <div key={index}>
-                                    <h4 className="font-medium text-gray-800">{title.trim()}:</h4>
-                                    <p className="text-gray-600">{content.trim()}</p>
+                                    <h4 className="font-medium text-gray-800">{title?.trim() || ''}:</h4>
+                                    <p className="text-gray-600">{content?.trim() || ''}</p>
                                   </div>
                                 );
                               }
