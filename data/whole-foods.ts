@@ -922,6 +922,168 @@ export const products: Product[] = [
         'Dried Mango Dices': [],
         'Flax Seeds': []
       }
+    },
+    {
+      id: '32',
+      name: 'Overnight Oats (Flavour: Cookie & Creme)',
+      description: `This is a Vegetarian product.
+• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
+• 15grams Protein, NO Artificial flavouring, Real Fruit Bits
+• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.
+• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.
+• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.
+• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
+      price: 250,
+      image: '/images/cookiecreme/IMG_3.jpg',
+      images: [
+        '/images/cookiecreme/IMG_3.jpg',
+        '/images/cookiecreme/IMG_1.jpg',
+        '/images/cookiecreme/IMG_2.jpg',
+        '/images/cookiecreme/IMG_4.jpg',
+        '/images/cookiecreme/IMG_5.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'cookieandcreme', 'cookie&crème', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Cookie Crumb': [],
+        'Corn Starch': [],
+        'Oat Flour': [],
+        'Rice Flour': [],
+        'Brown Sugar': [],
+        'Cocoa Powder': [],
+        'Sunflower Oil': [],
+        'Salt': [],
+        'Vanilla Flavour': [],
+        'Sodium Bicarbonate': [],
+        'Coconut Sugar': [],
+        'Chia Seeds': [],
+        'Date Powder': [],
+        'Flax Seeds': [],
+        'Himalayan Pink Salt': [],
+        'Cookie Flavour': [],
+        'Stevia': []
+      }
+    },
+    {
+      id: '33',
+      name: 'Overnight Oats (Flavour: Mixed Berries Creme)',
+      description: `This is a Vegetarian product.
+• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
+• 15grams Protein, NO Artificial flavouring, Real Fruit Bits
+• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.
+• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.
+• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.
+• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
+      price: 250,
+      image: '/images/mixedberriescreme/IMG_5.jpg',
+      images: [
+        '/images/mixedberriescreme/IMG_5.jpg',
+        '/images/mixedberriescreme/IMG_2.jpg',
+        '/images/mixedberriescreme/IMG_3.jpg',
+        '/images/mixedberriescreme/IMG_4.jpg',
+        '/images/mixedberriescreme/IMG_1.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'mixedberries', 'mixedberriescreme', 'berriesoats', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Coconut Sugar': [
+          'Lower Glycemic Index- Coconut sugar has a lower glycemic index (GI) than regular sugar (around 35 vs. 60–65), meaning it may cause slower spikes in blood sugar. This is mainly due to the presence of inulin, a type of fiber that slows glucose absorption.',
+          'Less Processed- Coconut sugar is typically less refined and doesn\'t contain added chemicals or preservatives. It\'s made through a simple evaporation process, which helps it retain more of its natural properties.',
+          'Contains Trace Nutrients- It retains some nutrients from the sap, such as: Iron, Zinc, Calcium, Potassium, Antioxidants. These are in small amounts, but still more than what you\'d get from white sugar.'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Strawberry Powder': [],
+        'Diced Strawberries': [],
+        'Chia Seeds': [],
+        'Dried Cranberries': [],
+        'Whole Blueberries': [],
+        'Flax Seeds': [],
+        'Strawberry flavour': [],
+        'Himalayan Pink Salt': [],
+        'Cream Flavour': [],
+        'Citric Acid': [],
+        'Stevia': []
+      }
+    },
+    {
+      id: '34',
+      name: 'Overnight Oats (Flavour: Mocha Dream)',
+      description: `This is a Vegetarian product.
+• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
+• 15grams Protein, NO Artificial flavouring, Real Fruit Bits
+• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.
+• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.
+• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.
+• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
+      price: 250,
+      image: '/images/mochadreamoats/IMG_1.jpg',
+      images: [
+        '/images/mochadreamoats/IMG_1.jpg',
+        '/images/mochadreamoats/IMG_2.jpg',
+        '/images/mochadreamoats/IMG_3.jpg',
+        '/images/mochadreamoats/IMG_4.jpg'
+      ],
+      category: 'Healthy Breakfast',
+      tags: ['oats', 'overnightoats', 'mocha', 'mochadream', 'mochaoats', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      size: '84gms',
+      ingredients_benefits: {
+        'Oats': [
+          'Helps lower cholesterol (especially LDL/"bad" cholesterol)',
+          'Keeps you full longer (great for appetite control), Supports healthy blood sugar levels by slowing digestion.'
+        ],
+        'Milk Protein': [
+          'Complete Protein, contains all 9 essential amino acids your body can\'t make on its own',
+          'Great for muscle repair, growth, and overall health.'
+        ],
+        'Coconut Sugar': [
+          'Lower Glycemic Index- Coconut sugar has a lower glycemic index (GI) than regular sugar (around 35 vs. 60–65), meaning it may cause slower spikes in blood sugar. This is mainly due to the presence of inulin, a type of fiber that slows glucose absorption.',
+          'Less Processed- Coconut sugar is typically less refined and doesn\'t contain added chemicals or preservatives. It\'s made through a simple evaporation process, which helps it retain more of its natural properties.',
+          'Contains Trace Nutrients- It retains some nutrients from the sap, such as: Iron, Zinc, Calcium, Potassium, Antioxidants. These are in small amounts, but still more than what you\'d get from white sugar.'
+        ],
+        'Whey Protein': [
+          'Complete protein with all 9 essential amino acids.',
+          'High in leucine, a key amino acid for triggering muscle protein synthesis.',
+          'Perfect post-workout to help your muscles recover and grow.'
+        ],
+        'Date Powder': [],
+        'Chia Seeds': [],
+        'Coffee': [],
+        'Flax Seeds': [],
+        'Cocoa Powder': [],
+        'Oats Flour': [],
+        'Cacao Nibs': [],
+        'Himalayan Pink Salt': [],
+        'Mocha Flavour': [],
+        'Chocolate Flavour': [],
+        'Vanilla': []
+      }
     }
 ];
 export default products; 
