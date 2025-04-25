@@ -11,7 +11,6 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import Link from 'next/link';
 import { products } from '@/data/whole-foods';
 import { Product } from '@/types/whole-foods';
-import Breadcrumb from '@/components/Breadcrumb';
 
 // Define categories with their routes and images
 const categories = [
@@ -143,9 +142,6 @@ export default function WholeFoods() {
   return (
     <main className="min-h-screen bg-[#FDBE28] pt-[72px] font-nunito">
       <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* Breadcrumb Navigation */}
-        <Breadcrumb />
-        
         {/* Compact Header with Search */}
         <div className="flex flex-col items-center justify-center relative mb-8">
           <div className="text-center mb-4">

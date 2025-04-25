@@ -7,10 +7,9 @@ import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import { products } from '@/data/whole-foods';
 import { Product } from '@/types/whole-foods';
-import { FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiX, FiZoomIn } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiX, FiZoomIn, FiArrowLeft } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
-import Breadcrumb from '@/components/Breadcrumb';
 
 interface ProductPageProps {
   params: Promise<{
@@ -123,13 +122,18 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Breadcrumb Navigation */}
-        <Breadcrumb customPaths={{ 
-          [id]: product.name,
-          category: product.category.toLowerCase().replace(/\s+/g, '-')
-        }} />
-        
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Mobile Back Button */}
+        <div className="md:hidden py-4">
+          <button
+            onClick={() => router.back()}
+            className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 bg-white rounded-full px-4 py-2 shadow-sm transition-colors"
+          >
+            <FiArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back</span>
+          </button>
+        </div>
+
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column - Image Gallery */}

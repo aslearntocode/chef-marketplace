@@ -73,13 +73,13 @@ export default function Breadcrumb({ customPaths = {} }: BreadcrumbProps) {
   }
 
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-600 py-4 px-4 md:px-6 overflow-x-auto whitespace-nowrap">
+    <nav className="flex items-center space-x-2 text-base text-gray-600 py-2 px-4 md:px-6 overflow-x-auto whitespace-nowrap">
       <Link href="/" className="hover:text-gray-900">
         Home
       </Link>
       {breadcrumbItems.map((item, index) => (
         <div key={item.key} className="flex items-center">
-          <FiChevronRight className="mx-2 text-gray-400" size={16} />
+          <FiChevronRight className="mx-2 text-gray-400" size={18} />
           {index === breadcrumbItems.length - 1 ? (
             <span className="text-gray-900 font-medium">{item.displayName}</span>
           ) : (
