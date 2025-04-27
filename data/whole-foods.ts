@@ -1043,12 +1043,12 @@ export const products: Product[] = [
 • Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.
 • Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
       price: 250,
-      image: '/images/mochadreamoats/IMG_1.jpg',
-      images: [
-        '/images/mochadreamoats/IMG_1.jpg',
-        '/images/mochadreamoats/IMG_2.jpg',
-        '/images/mochadreamoats/IMG_3.jpg',
-        '/images/mochadreamoats/IMG_4.jpg'
+        image: '/images/mochadreamoats/IMG_1.JPG',
+        images: [
+        '/images/mochadreamoats/IMG_1.JPG',
+        '/images/mochadreamoats/IMG_2.JPG',
+        '/images/mochadreamoats/IMG_3.JPG',
+        '/images/mochadreamoats/IMG_4.JPG'
       ],
       category: 'Healthy Breakfast',
       tags: ['oats', 'overnightoats', 'mocha', 'mochadream', 'mochaoats', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
