@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, use } from 'react';
+import { useState, use, useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
@@ -27,8 +27,8 @@ export default function ProductPage({ params }: ProductPageProps) {
   const { id } = use(params);
   const product = products.find(p => p.id === id);
   const { user } = useAuth();
-  const { addToCart } = useCart();
   const router = useRouter();
+  const { addToCart, updateQuantity, removeFromCart, items } = useCart();
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isZoomModalOpen, setIsZoomModalOpen] = useState(false);
@@ -36,6 +36,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [selectedSize, setSelectedSize] = useState<VariantOption | null>(null);
   const [selectedFlavor, setSelectedFlavor] = useState<VariantOption | null>(null);
+  const [quantity, setQuantity] = useState(0);
 
   const getCurrentImages = () => {
     if (!product) return ['/images/placeholder.png'];
@@ -74,6 +75,19 @@ export default function ProductPage({ params }: ProductPageProps) {
     setCurrentImageIndex(0);
   };
 
+  const getCartItemId = () =>
+    product.id + (selectedSize ? `-${selectedSize.name}` : '') + (selectedFlavor ? `-${selectedFlavor.name}` : '');
+
+  const getCartQuantity = () => {
+    const cartItemId = getCartItemId();
+    const item = (items || []).find((item) => item.id === cartItemId);
+    return item ? item.quantity : 0;
+  };
+
+  useEffect(() => {
+    setQuantity(getCartQuantity());
+  }, [selectedSize, selectedFlavor, items]);
+
   const handleAddToCart = () => {
     if (!user) {
       const currentPath = window.location.pathname;
@@ -81,19 +95,46 @@ export default function ProductPage({ params }: ProductPageProps) {
       router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
       return;
     }
-
     const cartItem = {
-      id: product.id + (selectedSize ? `-${selectedSize.name}` : '') + (selectedFlavor ? `-${selectedFlavor.name}` : ''),
+      id: getCartItemId(),
       name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
       price: selectedSize?.price || product.price,
       quantity: 1,
       vendor_id: 'whole-foods',
       description: product.description,
-      category: 'Whole Foods'
+      category: 'Whole Foods',
     };
-
     addToCart(cartItem);
     toast.success(`${product.name} added to cart!`);
+    setQuantity(1);
+  };
+
+  const handleIncrement = () => {
+    const cartItemId = getCartItemId();
+    const item = (items || []).find((item) => item.id === cartItemId);
+    const newQuantity = (item ? item.quantity : 0) + 1;
+    addToCart({
+      id: cartItemId,
+      name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
+      price: selectedSize?.price || product.price,
+      quantity: newQuantity,
+      vendor_id: 'whole-foods',
+      description: product.description,
+      category: 'Whole Foods',
+    });
+    setQuantity(newQuantity);
+  };
+
+  const handleDecrement = () => {
+    const cartItemId = getCartItemId();
+    const item = (items || []).find((item) => item.id === cartItemId);
+    if (item && item.quantity > 1) {
+      updateQuantity(cartItemId, item.quantity - 1);
+      setQuantity(item.quantity - 1);
+    } else if (item && item.quantity === 1) {
+      removeFromCart(cartItemId);
+      setQuantity(0);
+    }
   };
 
   const handleImageNav = (direction: 'prev' | 'next') => {
@@ -334,14 +375,32 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </div>
               </div>
 
-              {/* Add to Cart Button */}
+              {/* Add to Cart Button or Quantity Selector */}
               <div className="mt-auto">
-                <button
-                  onClick={handleAddToCart}
-                  className="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition-colors"
-                >
-                  Add to cart
-                </button>
+                {quantity > 0 ? (
+                  <div className="flex items-center justify-between w-full bg-gray-100 rounded-lg p-2">
+                    <button
+                      onClick={handleDecrement}
+                      className="px-4 py-2 bg-gray-200 rounded-l-lg text-lg font-bold hover:bg-gray-300"
+                    >
+                      −
+                    </button>
+                    <span className="px-4 text-lg font-semibold">{quantity}</span>
+                    <button
+                      onClick={handleIncrement}
+                      className="px-4 py-2 bg-gray-200 rounded-r-lg text-lg font-bold hover:bg-gray-300"
+                    >
+                      +
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={handleAddToCart}
+                    className="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition-colors"
+                  >
+                    Add to cart
+                  </button>
+                )}
               </div>
             </div>
           </div>
