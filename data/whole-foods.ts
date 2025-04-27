@@ -1125,6 +1125,11 @@ export const products: Product[] = [
             name: 'Coconut Crunch',
             value: 'coconut-crunch',
             description: 'Fresh coconut flakes for a tropical twist'
+          },
+          {
+            name: 'Ajwain-Nutrition',
+            value: 'ajwain-nutrition',
+            description: 'Traditional ajwain flavor with digestive benefits'
           }
         ]
       },
@@ -1143,57 +1148,6 @@ export const products: Product[] = [
         'Milk': [],
         'Leavening Agents': [],
         'Additional Ingredients': ['Based on flavor variant selected'],
-        'Salt & Permitted Flavours': []
-      }
-    },
-    {
-      id: '36',
-      name: 'Millet Cookies - Ajwain',
-      description: 'Wholesome meets indulgence in every bite! These millet-based cookies are crafted with ancient grains like ragi, jowar, and bajra—packed with natural fiber and nutrients. We\'ve added rich chocolate chips for that irresistible crunch, blending health and delight perfectly. Whether it\'s a guilt-free snack or a sweet treat after meals, these cookies are your go-to for a crunchy, chocolaty experience with the goodness of millet. No refined flour. No preservatives. Just deliciously healthy goodness.',
-      price: 399,
-      image: '/images/milletcookies/can/DSC03949.jpg',
-      images: ['/images/milletcookies/can/DSC03949.jpg',
-        '/images/milletcookies/box/Millet_Cookies.jpg',
-        '/images/milletcookies/can/DSC09454.jpg'
-      ],
-      category: 'Healthy Bites',
-      tags: ['healthiercookies', 'milletcookies', 'millets', 'madeinindia', 'makeinindia', 'natural', 'nopreservatives', 'cookies', 'healthierbites'],
-      variants: {
-        sizes: [
-          {
-            name: 'Box',
-            value: '300g',
-            price: 399
-          },
-          {
-            name: 'Can',
-            value: '500g',
-            price: 599
-          }
-        ],
-        flavors: [
-          {
-            name: 'Ajwain Nutrition',
-            value: 'ajwain-nutrition',
-            description: 'Traditional ajwain flavor with digestive benefits'
-          }
-        ]
-      },
-      ingredients_benefits: {
-        'Millets': [
-          'Rich in Nutrients- Packed with iron, calcium, magnesium, and B vitamins—great for energy, bones, and overall wellness.',
-          'High in Fiber- Aids digestion, supports gut health, and keeps you feeling full longer—perfect for weight management.',
-          'Low Glycemic Index- Helps regulate blood sugar levels, making them diabetic-friendly.',
-          'Gluten-Free- Naturally gluten-free, ideal for people with gluten intolerance or those choosing a gluten-free lifestyle.',
-          'Supports Heart Health- The fiber, antioxidants, and healthy fats in millets help lower cholesterol and maintain healthy blood pressure.',
-          'Good for Skin & Hair- Rich in amino acids and antioxidants that support healthy skin and hair.'
-        ],
-        'Ajwain': [],
-        'Flour': [],
-        'Desi Ghee': [],
-        'Sugar': [],
-        'Milk': [],
-        'Leavening Agents': [],
         'Salt & Permitted Flavours': []
       }
     }
