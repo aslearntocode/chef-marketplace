@@ -273,6 +273,8 @@ export default function Home() {
                     { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
                     { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
@@ -302,6 +304,8 @@ export default function Home() {
                     { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
                     { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
                   ].map((item, index) => (
                     <Link 
                       key={`second-${index}`} 
@@ -331,6 +335,8 @@ export default function Home() {
                     { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
                     { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
                   ].map((item, index) => (
                     <Link 
                       key={`third-${index}`} 
