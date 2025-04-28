@@ -19,7 +19,7 @@ const hannahNarrow = {
 
 export const metadata: Metadata = {
   title: "The Divine Hands",
-  description: "Handcrafted food products made with love",
+  description: "Wholesome food products crafted with passion and purity!",
   icons: {
     icon: [
       { rel: 'icon', url: '/TDH Logo.png' },
