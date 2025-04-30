@@ -43,6 +43,12 @@ const categories = [
     name: 'Healthy Breakfast',
     route: '/whole-foods/categories/healthy-breakfast',
     description: 'Nutritious and convenient breakfast options to start your day right'
+  },
+  {
+    id: 'spice-blends',
+    name: 'Spice Blends',
+    route: '/whole-foods/categories/spice-blends',
+    description: 'Artisanal spice blends crafted with premium ingredients for authentic flavors'
   }
 ];
 

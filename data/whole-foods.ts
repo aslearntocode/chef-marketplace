@@ -152,11 +152,6 @@ export const products: Product[] = [
       category: 'Healthy Bites',
       tags: ['hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'protein', 'proteinrich', 'seeds', 'superseeds', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'roastedsnack', 'makhana', 'foxnuts', 'roastedmakhana'],
       size: '100gms',
-      // ingredients: [
-      //   'Makhanas (Fox Seeds/Lotus Seeds)',
-      //   'Himalayan Pink Salt',
-      //   'Desi Cow Ghee'
-      // ],
       ingredients_benefits: {
         'Makhanas (Fox Seeds/Lotus Seeds)': [
           'Packed with essential nutrients like protein, fiber, and antioxidants.',
@@ -935,7 +930,7 @@ export const products: Product[] = [
 • Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
       price: 250,
       image: '/images/cookiecreme/IMG_3.jpg',
-      images: [
+              images: [
         '/images/cookiecreme/IMG_3.jpg',
         '/images/cookiecreme/IMG_1.jpg',
         '/images/cookiecreme/IMG_2.jpg',
@@ -990,7 +985,7 @@ export const products: Product[] = [
 • Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
       price: 250,
       image: '/images/mixedberriescreme/IMG_5.jpg',
-      images: [
+              images: [
         '/images/mixedberriescreme/IMG_5.jpg',
         '/images/mixedberriescreme/IMG_2.jpg',
         '/images/mixedberriescreme/IMG_3.jpg',
@@ -1044,7 +1039,7 @@ export const products: Product[] = [
 • Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.`,
       price: 250,
         image: '/images/mochadreamoats/IMG_1.JPG',
-        images: [
+              images: [
         '/images/mochadreamoats/IMG_1.JPG',
         '/images/mochadreamoats/IMG_2.JPG',
         '/images/mochadreamoats/IMG_3.JPG',
@@ -1150,6 +1145,85 @@ export const products: Product[] = [
         'Additional Ingredients': ['Based on flavor variant selected'],
         'Salt & Permitted Flavours': []
       }
-    }
+    },
+    {
+      id: '36',
+      name: 'Zesty Munagaku Podi',
+      description: 'A nutritious powerhouse packed with flavour, our Munagaku Podi is made from sun-dried moringa leaves and a unique blend of traditional spices. Crafted using age-old methods and roasted to perfection, this aromatic podi pairs beautifully with hot rice and ghee, dosa, or idly. Made in small batches with 100% natural ingredients, it\'s rich in iron, calcium, and antioxidants—perfect for those seeking both taste and health. Add it to soups or sprinkle over salads and roasted veggies for a delicious, wholesome twist.',
+      price: 135,
+      image: '/images/munagakupodi/IMG_1.jpg',
+      images: [
+        '/images/munagakupodi/IMG_1.jpg',
+        '/images/munagakupodi/IMG_2.jpg',
+        '/images/munagakupodi/IMG_3.jpg',
+        '/images/munagakupodi/IMG_4.jpg',
+        '/images/munagakupodi/IMG_5.jpg',
+        '/images/munagakupodi/IMG_6.jpg',
+        '/images/munagakupodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'munagaku', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Chana Dal': [
+          'Rich in Protein: Great plant-based protein source, especially for vegetarians and vegans. Supports muscle growth and repair.',
+          'High in Fiber: Promotes digestive health and regular bowel movements. Helps manage blood sugar levels by slowing down sugar absorption.'
+        ],
+        'Urad Dal': [
+          'Excellent Source of Protein: Supports muscle development, tissue repair, and overall strength—especially valuable in vegetarian diets.',
+          'Bone Health Booster: Rich in calcium, magnesium, and phosphorus, which are essential for maintaining strong bones and preventing conditions like osteoporosis.'
+        ],
+        'Coriander Seeds': [
+          'Aid Digestion: Stimulate the production of digestive enzymes and juices. Help relieve bloating, gas, and indigestion.',
+          'Regulate Blood Sugar: May help lower blood sugar levels by enhancing insulin function (supported by some studies). Often used in traditional remedies for diabetes management.'
+        ],
+        'Dried Red Chilli': [],
+        'Drumstick Leaves (Dried)': [],
+        'Curry Leaves': [],
+        'Tamarind': [],
+        'Cumin Seeds': [],
+        'Garlic': [],
+        'Salt': [],
+        'Ghee': []
+      }
+    },
+    {
+      id: '37',
+      name: 'Zingy Gongura Podi',
+      description: 'Bold, tangy, and deeply rooted in tradition—our Zingy Gongura Podi captures the unmistakable flavour of sorrel leaves (gongura) blended with perfectly roasted spices. This guilt-free twist on the beloved gongura pachadi offers the same vibrant punch, minus the oil and preservatives. Enjoy it with hot rice and a spoon of ghee, or pair it with dosa and idly for an authentic touch. Handcrafted in small batches using heirloom recipes, this podi brings the soul of a traditional Andhra kitchen right to your plate.',
+      price: 135,
+      image: '/images/gongurapodi/IMG_1.jpg',
+      images: [
+        '/images/gongurapodi/IMG_1.jpg',
+        '/images/gongurapodi/IMG_2.jpg',
+        '/images/gongurapodi/IMG_3.jpg',
+        '/images/gongurapodi/IMG_4.jpg',
+        '/images/gongurapodi/IMG_5.jpg',
+        '/images/gongurapodi/IMG_6.jpg',
+        '/images/gongurapodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'gongura', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend'],
+      size: '75 gms',
+      ingredients_benefits: {
+        'Gongura (Sorreal Leaves-Dried)': [
+          'Rich in Iron: Excellent for combating anemia and improving red blood cell count, especially beneficial for women and vegetarians.',
+          'High in Antioxidants: Contains polyphenols, flavonoids, and anthocyanins that help reduce oxidative stress and inflammation.'
+        ],
+        'Fenugreek Seeds': [
+          'Help Regulate Blood Sugar: Rich in soluble fiber (galactomannan), which slows carbohydrate absorption.',
+          'Shown to improve insulin sensitivity—beneficial for type 2 diabetics.'
+        ],
+        'Mustard Seeds': [
+          'Rich in Antioxidants: Contain compounds like glucosinolates and selenium, which help fight oxidative stress and reduce inflammation.',
+          'Promote Heart Health: Contain omega-3 fatty acids and magnesium, which support heart rhythm and reduce blood pressure.'
+        ],
+        'Dried Red Chilli': [],
+        'Asafoetida (Hing)': [],
+        'Red Chillie Powder': [],
+        'Salt': [],
+        'Garlic': []
+      }
+    } 
 ];
 export default products; 

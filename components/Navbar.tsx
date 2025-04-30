@@ -7,6 +7,16 @@ import { useAuth } from '@/context/AuthContext';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCart } from '@/context/CartContext';
 
+interface NavLink {
+  href?: string;
+  id?: string;
+  label: string;
+  dropdown?: {
+    href: string;
+    label: string;
+  }[];
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -15,22 +25,21 @@ export default function Navbar() {
   const navDropdownRef = useRef<HTMLDivElement>(null);
   const { totalItems } = useCart();
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
-    /*
     {
-      id: 'home-made-food',
-      label: 'Home Made Food',
+      id: 'shop-now',
+      label: 'Shop Now',
       dropdown: [
-        { href: '/home-made-food', label: 'Meals', delivery: 'Next Day Delivery' },
-        { href: '/home-made-food/tiffin', label: 'Tiffin Service', delivery: 'Next Day Delivery' },
-        { href: '/home-made-desserts', label: 'Desserts', delivery: 'Next Day Delivery' },
-        { href: '/home-made-food/snacks', label: 'Packaged Snacks', delivery: 'Same Day Delivery' },
+        { href: '/whole-foods/categories/healthy-treats', label: 'Healthy Treats' },
+        { href: '/whole-foods/categories/drinks', label: 'Drinks' },
+        { href: '/whole-foods/categories/healthy-bites', label: 'Healthy Bites' },
+        { href: '/whole-foods/categories/pickles', label: 'Pickles & Condiments' },
+        { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthy Breakfast' },
+        { href: '/whole-foods/categories/spice-blends', label: 'Spice Blends' },
       ]
     },
-    */
-    { href: '/whole-foods', label: 'Whole Foods' },
   ];
 
   const handleLogout = async () => {
@@ -95,13 +104,46 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
               {navLinks.map((link) => (
-                <div key={link.href} className="relative flex-shrink-0">
-                  <Link
-                    href={link.href}
-                    className="text-gray-900 hover:text-gray-600 text-lg font-bold transition-colors duration-200 font-itc-souvenir"
-                  >
-                    {link.label}
-                  </Link>
+                <div key={link.id || link.href} className="relative flex-shrink-0">
+                  {link.dropdown ? (
+                    <div className="relative">
+                      <button
+                        onClick={() => link.id && toggleDropdown(link.id)}
+                        className="text-gray-900 hover:text-gray-600 text-xl font-bold transition-colors duration-200 font-itc-souvenir flex items-center"
+                      >
+                        {link.label}
+                        <svg
+                          className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === link.id ? 'rotate-180' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeDropdown === link.id && (
+                        <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href || '#'}
+                      className="text-gray-900 hover:text-gray-600 text-xl font-bold transition-colors duration-200 font-itc-souvenir"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </div>
               ))}
               
@@ -221,40 +263,108 @@ export default function Navbar() {
           <div className={`${isOpen ? 'block' : 'hidden'} md:hidden w-full`}>
             <div className="px-2 pt-2 pb-3 space-y-1 font-itc-souvenir">
               {navLinks.map((link) => (
-                <div key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="block px-3 py-2 text-lg font-bold text-gray-900 hover:bg-gray-50"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
+                <div key={link.id || link.href}>
+                  {link.dropdown ? (
+                    <div className="relative" ref={navDropdownRef}>
+                      <button
+                        onClick={() => link.id && toggleDropdown(link.id)}
+                        className="w-full text-left px-3 py-2 text-xl font-bold text-gray-900 hover:bg-gray-50 flex items-center justify-between"
+                      >
+                        {link.label}
+                        <svg
+                          className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === link.id ? 'rotate-180' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeDropdown === link.id && (
+                        <div className="pl-4">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block px-3 py-2 text-base font-bold text-gray-700 hover:bg-gray-50"
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                setIsOpen(false);
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.href || '#'}
+                      className="block px-3 py-2 text-xl font-bold text-gray-900 hover:bg-gray-50"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </div>
               ))}
               
               {user ? (
                 <>
                   <div className="relative" ref={userDropdownRef}>
-                    <Link
-                      href="/profile"
-                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Your Profile
-                    </Link>
-                    <Link
-                      href="/orders"
-                      className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Previous Orders
-                    </Link>
                     <button
-                      onClick={handleLogout}
-                      className="w-full text-left px-3 py-2 text-base font-medium text-red-600 hover:text-red-700 hover:bg-gray-50 rounded-md"
+                      onClick={() => toggleDropdown('user-mobile')}
+                      className="w-full text-left px-3 py-2 text-xl font-bold text-gray-900 hover:bg-gray-50 flex items-center justify-between"
                     >
-                      Logout
+                      <div className="flex items-center space-x-2">
+                        <div className="w-8 h-8 rounded-full bg-[#FDBE28] flex items-center justify-center flex-shrink-0">
+                          {user.email ? user.email[0].toUpperCase() : 'U'}
+                        </div>
+                        <span>{user.email?.split('@')[0]}</span>
+                      </div>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'user-mobile' ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
                     </button>
+                    {activeDropdown === 'user-mobile' && (
+                      <div className="pl-4">
+                        <Link
+                          href="/profile"
+                          className="block px-3 py-2 text-base font-bold text-gray-700 hover:bg-gray-50"
+                          onClick={() => {
+                            setActiveDropdown(null);
+                            setIsOpen(false);
+                          }}
+                        >
+                          Your Profile
+                        </Link>
+                        <Link
+                          href="/orders"
+                          className="block px-3 py-2 text-base font-bold text-gray-700 hover:bg-gray-50"
+                          onClick={() => {
+                            setActiveDropdown(null);
+                            setIsOpen(false);
+                          }}
+                        >
+                          Previous Orders
+                        </Link>
+                        <button
+                          onClick={() => {
+                            handleLogout();
+                            setIsOpen(false);
+                          }}
+                          className="w-full text-left px-3 py-2 text-base font-bold text-red-600 hover:bg-gray-50"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </>
               ) : (
