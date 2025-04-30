@@ -142,11 +142,11 @@ export default function Home() {
               {/* Right side - Text */}
               <div className="text-center md:text-right order-1 md:order-2">
                 <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
-                  <span className="md:hidden">
-                    CRAVING FOR HEALTHY<br />YET TASTY SNACKS<br />OR DESSERTS?
+                  <span className="md:hidden block pt-8">
+                    CRAVING FOR HEALTHY<br />YET TASTY FOOD?
                   </span>
                   <span className="hidden md:inline">
-                    CRAVING FOR<br />HEALTHY<br />YET TASTY<br />SNACKS OR DESSERTS?
+                    CRAVING FOR HEALTHY<br />YET TASTY FOOD?
                   </span>
                 </h1>
                 <Link
