@@ -70,6 +70,12 @@ export default function Home() {
       description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
       buttonText: "Explore Now",
       link: "/whole-foods/categories/pickles"
+    },
+    {
+      title: "All Natural Spice Blends",
+      description: "Discover our premium collection of handcrafted spice blends - perfect for elevating your culinary creations!",
+      buttonText: "Explore Now",
+      link: "/whole-foods/categories/spice-blends"
     }
   ];
 
@@ -160,6 +166,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Hero Carousel */}
+        <div className="relative h-[400px] overflow-hidden bg-[#FDBE28]">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-opacity duration-500 ${
+                currentSlide === index ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <div className="relative h-full">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center max-w-4xl px-4 relative pb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['YWFT_Hannah_Narrow'] text-[#8B4513]">{slide.title}</h2>
+                    <p className="text-xl md:text-2xl mb-8 text-[#8B4513]">{slide.description}</p>
+                    <Link
+                      href={slide.link}
+                      className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                    >
+                      {slide.buttonText}
+                    </Link>
+                    {/* Carousel Navigation Dots */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
+                      {slides.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentSlide(idx)}
+                          className={`w-4 h-4 rounded-full transition-colors ${
+                            currentSlide === idx ? 'bg-[#8B4513]' : 'bg-[#8B4513]/30'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Why The Divine Hands Section */}
         <section className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -212,55 +260,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Hero Carousel */}
-        <div className="relative h-[400px] overflow-hidden bg-[#FDBE28]">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute w-full h-full transition-opacity duration-500 ${
-                currentSlide === index ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <div className="relative h-full">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center max-w-4xl px-4 relative pb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['YWFT_Hannah_Narrow'] text-[#8B4513]">{slide.title}</h2>
-                    <p className="text-xl md:text-2xl mb-8 text-[#8B4513]">{slide.description}</p>
-                    <Link
-                      href={slide.link}
-                      className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                      }}
-                    >
-                      {slide.buttonText}
-                    </Link>
-                    {/* Carousel Navigation Dots */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
-                      {slides.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setCurrentSlide(idx)}
-                          className={`w-4 h-4 rounded-full transition-colors ${
-                            currentSlide === idx ? 'bg-[#8B4513]' : 'bg-[#8B4513]/30'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Food Showcase Conveyor Belt */}
         </div>
 
         {/* Most Popular Items Section - Full Width */}
-        <section className="w-full bg-white py-12">
+        <section className="w-full bg-[#FDBE28] py-12">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">Most Popular Items</h2>
           <div className="flex items-center gap-1 sm:gap-4 relative overflow-hidden">
             <div className="max-w-full w-full px-7 sm:px-0">
@@ -365,32 +371,34 @@ export default function Home() {
         </section>
 
         {/* Marketing Metrics */}
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {/* Chefs Metric */}
-            <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">50+</h3>
-              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Healthier Food Curators</p>
-            </div>
+        <section className="w-full bg-white py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Chefs Metric */}
+              <div className="bg-white rounded-lg p-8 text-center">
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">50+</h3>
+                <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Healthier Food Curators</p>
+              </div>
 
-            {/* Customers Metric */}
-            <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">2,000+</h3>
-              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Happy Customers</p>
-            </div>
+              {/* Customers Metric */}
+              <div className="bg-white rounded-lg p-8 text-center">
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">2,000+</h3>
+                <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Happy Customers</p>
+              </div>
 
-            {/* Areas Metric */}
-            <div className="bg-white rounded-lg p-8 text-center">
-              <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">100+</h3>
-              <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
+              {/* Areas Metric */}
+              <div className="bg-white rounded-lg p-8 text-center">
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">100+</h3>
+                <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Curator Application Section - Full Width */}
-        <section className="w-full bg-white py-16 mt-16">
+        <section className="w-full bg-[#FDBE28] py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="bg-white rounded-lg p-8">
+            <div className="bg-[#FDBE28] rounded-lg p-8">
               <div className="rounded-lg p-8 mb-8">
                 <div className="flex items-center justify-center gap-2 mb-6">
                   <span className="text-3xl">🌿</span>

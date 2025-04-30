@@ -2,25 +2,25 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FDBE28] text-[#8B4513]">
+    <footer className="bg-[#8B4513] text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Section */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-[#8B4513] text-xl font-bold mb-4">Company</h3>
+            <h3 className="text-white text-xl font-bold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="hover:text-gray-300 transition-colors">
+                <Link href="/about" className="hover:text-[#FDBE28] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="hover:text-gray-300 transition-colors">
+                <Link href="/careers" className="hover:text-[#FDBE28] transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-gray-300 transition-colors">
+                <Link href="/terms" className="hover:text-[#FDBE28] transition-colors">
                   Terms & Conditions
                 </Link>
               </li>
@@ -29,13 +29,13 @@ export default function Footer() {
 
           {/* Connect With Us Section */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-[#8B4513] text-xl font-bold mb-4">Connect With Us</h3>
+            <h3 className="text-white text-xl font-bold mb-4">Connect With Us</h3>
             <div className="space-y-2">
               <a 
                 href="https://instagram.com/the.divine.hands" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center hover:text-gray-300 transition-colors"
+                className="flex items-center hover:text-[#FDBE28] transition-colors"
               >
                 <svg 
                   className="w-5 h-5 mr-2" 
@@ -56,13 +56,13 @@ export default function Footer() {
 
           {/* Contact Us Section */}
           <div>
-            <h3 className="text-[#8B4513] text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-white text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-2">
               <p className="flex items-center">
                 <svg 
                   className="w-5 h-5 mr-2" 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke="white" 
                   viewBox="0 0 24 24"
                 >
                   <path 
@@ -78,7 +78,7 @@ export default function Footer() {
                 <svg 
                   className="w-5 h-5 mr-2" 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke="white" 
                   viewBox="0 0 24 24"
                 >
                   <path 
@@ -94,7 +94,7 @@ export default function Footer() {
                 <svg 
                   className="w-5 h-5 mr-2" 
                   fill="none" 
-                  stroke="currentColor" 
+                  stroke="white" 
                   viewBox="0 0 24 24"
                 >
                   <path 
@@ -118,9 +118,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-[#8B4513]">
+      <div className="border-t border-white">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <p className="text-center text-bold text-[#8B4513]">
+          <p className="text-center text-bold text-white">
             © 2025 The Divine Hands. All rights reserved.
           </p>
         </div>
