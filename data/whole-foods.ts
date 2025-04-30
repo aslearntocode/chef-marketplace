@@ -1151,11 +1151,11 @@ export const products: Product[] = [
       name: 'Zesty Munagaku Podi',
       description: 'A nutritious powerhouse packed with flavour, our Munagaku Podi is made from sun-dried moringa leaves and a unique blend of traditional spices. Crafted using age-old methods and roasted to perfection, this aromatic podi pairs beautifully with hot rice and ghee, dosa, or idly. Made in small batches with 100% natural ingredients, it\'s rich in iron, calcium, and antioxidants—perfect for those seeking both taste and health. Add it to soups or sprinkle over salads and roasted veggies for a delicious, wholesome twist.',
       price: 135,
-      image: '/images/munagakupodi/IMG_1.jpg',
+      image: '/images/munagakupodi/IMG_3.jpg',
       images: [
+        '/images/munagakupodi/IMG_3.jpg',
         '/images/munagakupodi/IMG_1.jpg',
         '/images/munagakupodi/IMG_2.jpg',
-        '/images/munagakupodi/IMG_3.jpg',
         '/images/munagakupodi/IMG_4.jpg',
         '/images/munagakupodi/IMG_5.jpg',
         '/images/munagakupodi/IMG_6.jpg',
@@ -1192,13 +1192,13 @@ export const products: Product[] = [
       name: 'Zingy Gongura Podi',
       description: 'Bold, tangy, and deeply rooted in tradition—our Zingy Gongura Podi captures the unmistakable flavour of sorrel leaves (gongura) blended with perfectly roasted spices. This guilt-free twist on the beloved gongura pachadi offers the same vibrant punch, minus the oil and preservatives. Enjoy it with hot rice and a spoon of ghee, or pair it with dosa and idly for an authentic touch. Handcrafted in small batches using heirloom recipes, this podi brings the soul of a traditional Andhra kitchen right to your plate.',
       price: 135,
-      image: '/images/gongurapodi/IMG_1.jpg',
+      image: '/images/gongurapodi/IMG_5.jpg',
       images: [
+        '/images/gongurapodi/IMG_5.jpg',
         '/images/gongurapodi/IMG_1.jpg',
         '/images/gongurapodi/IMG_2.jpg',
         '/images/gongurapodi/IMG_3.jpg',
         '/images/gongurapodi/IMG_4.jpg',
-        '/images/gongurapodi/IMG_5.jpg',
         '/images/gongurapodi/IMG_6.jpg',
         '/images/gongurapodi/IMG_7.jpg'
       ],
@@ -1224,6 +1224,249 @@ export const products: Product[] = [
         'Salt': [],
         'Garlic': []
       }
-    } 
+    },
+    {
+      id: '38',
+      name: 'Earthy Beetroot Podi',
+      description: 'This vibrant beetroot podi is one of our best sellers and for good reason. Made using dehydrated beets to retain their rich colour and nutrients, it\'s blended with traditional spices to bring out a naturally earthy, slightly sweet, and savoury flavour. Packed with iron and fiber, this podi isn\'t just a hit with kids but also a wholesome option for adults looking to add a healthy twist to everyday meals. Enjoy it with rice and ghee, mix it into curd, or sprinkle over dosas, idlis, and even roti rolls for a flavourful boost. Handcrafted in small batches using heirloom methods and clean ingredients—no shortcuts, just authentic taste from our kitchen to yours.',
+      price: 135,
+      image: '/images/earthybeetrootpodi/IMG_1.jpg',
+      images: [
+        '/images/earthybeetrootpodi/IMG_1.jpg',
+        '/images/earthybeetrootpodi/IMG_2.jpg',
+        '/images/earthybeetrootpodi/IMG_3.jpg',
+        '/images/earthybeetrootpodi/IMG_4.jpg',
+        '/images/earthybeetrootpodi/IMG_5.jpg',
+        '/images/earthybeetrootpodi/IMG_6.jpg',
+        '/images/earthybeetrootpodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'beetrootpodi', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Beetroot (dehydrated)': ['Supports Heart Health', 'Nitrates in beetroot help widen blood vessels, improving blood flow and lowering blood pressure, this can reduce the risk of heart disease and stroke.', 'Boosts Brain Function', 'Improved blood flow also benefits the brain—may enhance cognitive function and delay age-related decline.'],
+        'Chana Dal': ['Rich in Protein: Great plant-based protein source, especially for vegetarians and vegans. Supports muscle growth and repair.', 'High in Fiber: Promotes digestive health and regular bowel movements. Helps manage blood sugar levels by slowing down sugar absorption.'],
+        'Urad Dal': ['Excellent Source of Protein: Supports muscle development, tissue repair, and overall strength—especially valuable in vegetarian diets.', 'Bone Health Booster: Rich in calcium, magnesium, and phosphorus, which are essential for maintaining strong bones and preventing conditions like osteoporosis.'],
+        'Peanuts': ['Improve heart health—rich in monounsaturated and polyunsaturated fats, which can help reduce bad (LDL) cholesterol.', 'Contain resveratrol and other antioxidants that support cardiovascular health.', 'Excellent plant-based protein source (about 25g of protein per 100g)—helps with muscle repair, growth, and satiety.'],
+        'Coconut': [],
+        'Garlic': [],
+        'Salt': [],
+        'Green Chilli': [],
+        'Dried Red Chilli': [],
+        'Curry Leaves': [],
+        'Ginger': [],
+        'Fenugreek Seeds': []
+      }
+    },
+    {
+      id: '39',
+      name: 'Tarty Kakarkaya Podi',
+      description: 'Bittersweet and bold, our Tarty Kakarakaya Podi transforms Bitter Gourd (Kakarakaya) into a surprisingly delicious, flavour-packed experience. Roasted to perfection and blended with traditional spices, this podi captures the essence of Andhra-style home cooking—balancing the natural bitterness with a hint of tang for that signature bittersweet goodness. A great companion to hot rice and ghee, it also pairs beautifully with dosas or a side of curd. Handcrafted with care, this is comfort food done the old-fashioned way—wholesome, nostalgic, and undeniably tasty.',
+      price: 135,
+      image: '/images/tartypodi/IMG_1.jpg',
+      images: [
+        '/images/tartypodi/IMG_1.jpg',
+        '/images/tartypodi/IMG_2.jpg',
+        '/images/tartypodi/IMG_3.jpg',
+        '/images/tartypodi/IMG_4.jpg',
+        '/images/tartypodi/IMG_5.jpg',
+        '/images/tartypodi/IMG_6.jpg',
+        '/images/tartypodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'Andhrastyle', 'bittergourdpodi', 'Kakarkaya Podi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Bitter gourd': ['Helps Regulate Blood Sugar—contains charantin and polypeptide-p, compounds known to lower blood glucose levels. Used in traditional medicine to manage type 2 diabetes.', 'Supports Heart Health—helps lower bad cholesterol (LDL) and triglyceride levels. Its antioxidant content supports blood vessel health and reduces inflammation.'],
+        'Tamarind': ['Rich in Antioxidants—contains polyphenols, flavonoids, and vitamin C that help neutralize free radicals. Reduces oxidative stress, which is linked to aging and chronic diseases.', 'Natural Laxative—high in tartaric acid and dietary fiber, which stimulate bowel movements. Traditionally used to relieve constipation naturally.'],
+        'Jaggery': ['More Nutritious Than Refined Sugar—contains small amounts of iron, magnesium, potassium, calcium, and B vitamins.', 'Helps Prevent Anemia—a natural source of iron, which can help boost hemoglobin levels and prevent iron-deficiency anemia, especially beneficial for women and children.'],
+        'Chana Dal': [],
+        'Urad Dal': [],
+        'Dried Red Chilli': [],
+        'Peanuts': [],
+        'Salt': [],
+        'Cumin seeds': [],
+        'Coriander Seeds': [],
+        'Garlic': []
+      }
+    },
+    {
+      id: '40',
+      name: 'Dreamy Carrot Podi',
+      description: 'Mild, naturally sweet, and full of homemade goodness—our Dreamy Carrot Podi is specially crafted for little tastebuds. Made with dehydrated carrots and gently roasted spices, it\'s the perfect blend of flavour and nutrition. Ideal for mixing with hot rice and ghee, spreading in soft rotis, or pairing with idlis and dosas. Handcrafted with care, this kid-approved podi makes mealtimes easier and tastier, with zero additives and 100% traditional care in every spoonful.',
+      price: 135,
+      image: '/images/dreamycarrotpodi/IMG_1.jpg',
+      images: [
+        '/images/dreamycarrotpodi/IMG_1.jpg',
+        '/images/dreamycarrotpodi/IMG_2.jpg',
+        '/images/dreamycarrotpodi/IMG_3.jpg',
+        '/images/dreamycarrotpodi/IMG_4.jpg',
+        '/images/dreamycarrotpodi/IMG_5.jpg',
+        '/images/dreamycarrotpodi/IMG_6.jpg',
+        '/images/dreamycarrotpodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'Carrotpodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Carrot (dehydrated)': ['Supports Eye Health—rich in beta-carotene, which converts to vitamin A—essential for good vision and preventing night blindness. Also contains lutein, which may help protect against age-related macular degeneration.', 'High in Antioxidants—beta-carotene, lutein, and vitamin C help combat oxidative stress and support the immune system. May reduce the risk of chronic diseases like cancer and heart disease.'],
+        'Chana Dal': ['Rich in Protein: Great plant-based protein source, especially for vegetarians and vegans. Supports muscle growth and repair.', 'High in Fiber: Promotes digestive health and regular bowel movements. Helps manage blood sugar levels by slowing down sugar absorption.'],
+        'Urad Dal': ['Excellent Source of Protein: Supports muscle development, tissue repair, and overall strength—especially valuable in vegetarian diets.', 'Bone Health Booster: Rich in calcium, magnesium, and phosphorus, which are essential for maintaining strong bones and preventing conditions like osteoporosis.'],
+        'Peanuts': ['Improve heart health—rich in monounsaturated and polyunsaturated fats, which can help reduce bad (LDL) cholesterol.', 'Contain resveratrol and other antioxidants that support cardiovascular health.', 'Excellent plant-based protein source (about 25g of protein per 100g)—helps with muscle repair, growth, and satiety.'],
+        'Coconut': [],
+        'Dried Red Chilli': [],
+        'Green Chillie': [],
+        'Curry Leaves': [],
+        'Salt': [],
+        'Garlic': [],
+        'Fenugreek Seeds': []
+      }
+    },
+    {
+      id: '41',
+      name: 'Toasty Flaxseed Podi',
+      description: 'Slow-roasted to bring out its rich, nutty flavor, our Toasty Flaxseed Podi is a wholesome blend of goodness and tradition. Packed with the natural benefits of flaxseeds—rich in Omega-3s and fiber—this podi adds a healthy twist to your everyday meals. Mix it with hot rice and ghee, pair it with idlis and dosas, or use it as a tasty, nutrient-dense sprinkle on soft rotis or sandwiches. Handcrafted with care, this is a pantry essential for those who want both taste and wellness in every bite.',
+      price: 135,
+      image: '/images/toastyflaxseedpodi/IMG_1.jpg',
+      images: [
+        '/images/toastyflaxseedpodi/IMG_1.jpg',
+        '/images/toastyflaxseedpodi/IMG_2.jpg',
+        '/images/toastyflaxseedpodi/IMG_3.jpg',
+        '/images/toastyflaxseedpodi/IMG_4.jpg',
+        '/images/toastyflaxseedpodi/IMG_5.jpg',
+        '/images/toastyflaxseedpodi/IMG_6.jpg',
+        '/images/toastyflaxseedpodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'seedpodi', 'Flaxseedpodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Flax seeds': ['Heart Health Support—rich in alpha-linolenic acid (ALA), a plant-based omega-3 fatty acid that helps reduce inflammation and lower the risk of heart disease. Helps reduce blood pressure, cholesterol, and triglyceride levels.'],
+        'Sesame seeds': ['Supports Bone Health—exceptionally rich in calcium, magnesium, zinc, and phosphorus—key minerals for maintaining strong bones. Especially valuable for people at risk of osteoporosis.', 'Heart-Healthy Fats—high in unsaturated fats, including omega-6 fatty acids. Contain sesamin and sesamolin, lignans that help lower blood pressure and cholesterol levels.'],
+        'Dried Red chilli': [],
+        'Salt': []
+      }
+    },
+    {
+      id: '42',
+      name: 'Tangy Karivepaku Podi',
+      description: 'Made using age-old techniques and sun-dried curry leaves, our Tangy Karivepaku Podi is a fragrant, flavourful blend that celebrates the essence of South Indian kitchens. With a perfect balance of tang and spice, this podi pairs beautifully with hot rice and ghee, crispy dosas, or soft idlis. Handcrafted with care in small batches, it carries the wholesome taste of roasted lentils and curry leaves—bringing home that comforting, nostalgic flavour every time. A timeless, aromatic addition to your daily meals.',
+      price: 135,
+      image: '/images/tangypodi/IMG_1.jpg',
+      images: [
+        '/images/tangypodi/IMG_1.jpg',
+        '/images/tangypodi/IMG_2.jpg',
+        '/images/tangypodi/IMG_3.jpg',
+        '/images/tangypodi/IMG_4.jpg',
+        '/images/tangypodi/IMG_5.jpg',
+        '/images/tangypodi/IMG_6.jpg',
+        '/images/tangypodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'curryleavespodi', 'karivepakukodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Dried curry leaves': ['Rich in Antioxidants—contain powerful antioxidants like linalool, caryophyllene, and carbazole alkaloids. Help protect the body from oxidative stress and reduce the risk of chronic diseases.', 'Promotes Hair Health—traditionally used to prevent hair fall, reduce dandruff, and even delay premature graying. Often applied as an oil or paste to nourish the scalp and strengthen hair roots.'],
+        'Urad dal': ['Excellent Source of Protein: Supports muscle development, tissue repair, and overall strength—especially valuable in vegetarian diets.', 'Bone Health Booster: Rich in calcium, magnesium, and phosphorus, which are essential for maintaining strong bones and preventing conditions like osteoporosis.'],
+        'Tamarind': ['Rich in Antioxidants—contains polyphenols, flavonoids, and vitamin C that help neutralize free radicals. Reduces oxidative stress, which is linked to aging and chronic diseases.', 'Natural Laxative—high in tartaric acid and dietary fiber, which stimulate bowel movements. Traditionally used to relieve constipation naturally.'],
+        'Coriander seeds': [],
+        'Salt': [],
+        'Cumin seeds': [],
+        'Dried Red Chilli': [],
+        'Garlic': []
+      }
+    },
+    {
+      id: '43',
+      name: 'Minty Pudina Podi',
+      description: 'Infused with the natural goodness of sundried mint leaves and carefully roasted spices, our Minty Pudina Podi offers a fresh, minty burst in every spoonful. Perfect with hot rice and ghee, delicious alongside dosa or idly, and great as a flavour kick in sandwiches or snacks. Handcrafted with care in small batches and ground using heirloom recipes and traditional techniques, this aromatic blend brings a refreshing twist to classic South Indian flavours—a thoughtful, flavourful addition to your everyday meals.',
+      price: 135,
+      image: '/images/mintypudinapodi/IMG_1.jpg',
+      images: [
+        '/images/mintypudinapodi/IMG_1.jpg',
+        '/images/mintypudinapodi/IMG_2.jpg',
+        '/images/mintypudinapodi/IMG_3.jpg',
+        '/images/mintypudinapodi/IMG_4.jpg',
+        '/images/mintypudinapodi/IMG_5.jpg',
+        '/images/mintypudinapodi/IMG_6.jpg',
+        '/images/mintypudinapodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'mintypudina', 'mintypudinapodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Mint leaves (Dried)': [],
+        'Tamarind': ['Rich in Antioxidants—contains polyphenols, flavonoids, and vitamin C that help neutralize free radicals. Reduces oxidative stress, which is linked to aging and chronic diseases.', 'Natural Laxative—high in tartaric acid and dietary fiber, which stimulate bowel movements. Traditionally used to relieve constipation naturally.'],
+        'Urad Dal': ['Excellent Source of Protein: Supports muscle development, tissue repair, and overall strength—especially valuable in vegetarian diets.', 'Bone Health Booster: Rich in calcium, magnesium, and phosphorus, which are essential for maintaining strong bones and preventing conditions like osteoporosis.'],
+        'Sesame Powder': ['Supports Bone Health—exceptionally rich in calcium, magnesium, zinc, and phosphorus—key minerals for maintaining strong bones. Especially valuable for people at risk of osteoporosis.', 'Heart-Healthy Fats—high in unsaturated fats, including omega-6 fatty acids. Contain sesamin and sesamolin, lignans that help lower blood pressure and cholesterol levels.'],
+        'Salt': [],
+        'Coriander Seeds': [],
+        'Cumin seeds': [],
+        'Mustard Seeds': [],
+        'Fenugreek seeds': [],
+        'Dried Red Chilli': [],
+        'Turmeric': [],
+        'Asafoetida (Hing)': []
+      }
+    },
+    {
+      id: '44',
+      name: 'Kothimeera Tomato Podi',
+      description: 'A vibrant blend that brings together the fresh aroma of coriander leaves and the natural tanginess of tomatoes—our Kothimeera Tomato Podi is a burst of flavor in every bite. Pair it with hot rice and ghee, enjoy it with dosa or idly, or use it to uplift your favourite snacks. Handcrafted with care using traditional methods and roasted spices, this podi adds a refreshing, mildly tangy twist to your everyday meals. Made in small batches to preserve taste and quality, it\'s a delicious tribute to home-style flavours and age-old recipes.',
+      price: 135,
+      image: '/images/kothipodi/Image_1.jpg',
+      images: [
+        '/images/kothipodi/Image_1.jpg',
+        '/images/kothipodi/Image_2.jpg',
+        '/images/kothipodi/Image_3.jpg',
+        '/images/kothipodi/Image_4.jpg',
+        '/images/kothipodi/Image_5.jpg',
+        '/images/kothipodi/Image_6.jpg',
+        '/images/kothipodi/Image_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'tomatopodi', 'coriandertomatopodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Coriander Leaves': ['Packed with Antioxidants—rich in quercetin, terpinene, and tocopherols, which help neutralize free radicals. Protects the body from oxidative stress and slows down aging.', 'Supports Digestion—traditionally used to treat indigestion, bloating, and gas. Promotes the secretion of digestive enzymes and juices for smoother digestion.'],
+        'Tomato (dehydrated)': ['Rich in Antioxidants (Especially Lycopene)—tomatoes are one of the best sources of lycopene, a powerful antioxidant that protects against cell damage, may reduce the risk of certain cancers (especially prostate, lung, and stomach), supports heart health and skin protection from UV damage.'],
+        'Tamarind': ['Rich in Antioxidants—contains polyphenols, flavonoids, and vitamin C that help neutralize free radicals. Reduces oxidative stress, which is linked to aging and chronic diseases.', 'Natural Laxative—high in tartaric acid and dietary fiber, which stimulate bowel movements. Traditionally used to relieve constipation naturally.'],
+        'Urad dal': [],
+        'Dried Red Chilli': [],
+        'Green Chilli': [],
+        'Mustard Seeds': [],
+        'Salt': [],
+        'Fenugreek seeds': [],
+        'Asafoetida (Hing)': []
+      }
+    },
+    {
+      id: '45',
+      name: 'Herby Spice Podi',
+      description: 'Crafted with aromatic oregano leaves, basil, black pepper, red chilli, and more, our Herby Spice Blend is a versatile, freshly ground seasoning that brings a burst of bold, herby flavour to any dish. Perfect for sprinkling over cheese toast, pasta, pizzas, or even soups and grilled veggies, this blend adds that perfect finishing touch to elevate your everyday meals. Handcrafted with care, made in small batches without any preservatives or additives—just pure herbs and spices, blended the traditional way. A pantry must-have for those who love flavour with a hint of flair.',
+      price: 135,
+      image: '/images/herbyspicepodi/IMG_1.jpg',
+      images: [
+        '/images/herbyspicepodi/IMG_1.jpg',
+        '/images/herbyspicepodi/IMG_2.jpg',
+        '/images/herbyspicepodi/IMG_3.jpg',
+        '/images/herbyspicepodi/IMG_4.jpg',
+        '/images/herbyspicepodi/IMG_5.jpg',
+        '/images/herbyspicepodi/IMG_6.jpg',
+        '/images/herbyspicepodi/IMG_7.jpg'
+      ],
+      category: 'Spice Blends',
+      tags: ['spice', 'traditional', 'southindian', 'flavourful', 'seasoning', 'madeinindia', 'makeinindia', 'preservativefree', 'chemicalfree', 'podi', 'spiceblend', 'Herbyspicepodi', 'herbpodi'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Basil leaves (Dried)': ['Rich in Antioxidants—contain powerful compounds like eugenol, rosmarinic acid, and apigenin. Help combat oxidative stress, reducing the risk of chronic diseases and aging.'],
+        'Pepper': ['Enhances Nutrient Absorption—piperine significantly boosts the bioavailability of nutrients like Curcumin (from turmeric), Vitamins A, C, B6, and selenium. Helps your body absorb and use nutrients more effectively.'],
+        'Oregano leaves': ['Powerful Antioxidant Properties—rich in rosmarinic acid, thymol, and carvacrol, which neutralize free radicals. Help protect cells from oxidative damage, supporting overall health and aging defense.'],
+        'Coriander seeds': [],
+        'Red Chilli': [],
+        'Salt': [],
+        'Garlic': []
+      }
+    }
 ];
 export default products; 
