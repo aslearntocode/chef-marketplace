@@ -79,6 +79,11 @@ export default function Home() {
     }
   ];
 
+  const handleCarouselClick = (link: string) => {
+    console.log('Navigating to:', link);
+    router.push(link);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -180,21 +185,29 @@ export default function Home() {
                   <div className="text-center max-w-4xl px-4 relative pb-12">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['YWFT_Hannah_Narrow'] text-[#8B4513]">{slide.title}</h2>
                     <p className="text-xl md:text-2xl mb-8 text-[#8B4513]">{slide.description}</p>
-                    <Link
-                      href={slide.link}
-                      className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                      }}
-                    >
-                      {slide.buttonText}
-                    </Link>
+                    <div className="relative z-10">
+                      <a
+                        href={slide.link}
+                        className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg cursor-pointer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.location.href = slide.link;
+                        }}
+                      >
+                        {slide.buttonText}
+                      </a>
+                    </div>
                     {/* Carousel Navigation Dots */}
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
                       {slides.map((_, idx) => (
                         <button
                           key={idx}
-                          onClick={() => setCurrentSlide(idx)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setCurrentSlide(idx);
+                          }}
                           className={`w-4 h-4 rounded-full transition-colors ${
                             currentSlide === idx ? 'bg-[#8B4513]' : 'bg-[#8B4513]/30'
                           }`}
