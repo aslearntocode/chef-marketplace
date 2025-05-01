@@ -373,24 +373,32 @@ export default function Home() {
         {/* Marketing Metrics */}
         <section className="w-full bg-white py-12">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Chefs Metric */}
               <div className="bg-white rounded-lg p-8 text-center">
                 <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">50+</h3>
                 <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Healthier Food Curators</p>
               </div>
 
+              {/* Products Metric */}
+              <div className="bg-white rounded-lg p-8 text-center">
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">100+</h3>
+                <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Products Listed</p>
+              </div>
+
               {/* Customers Metric */}
               <div className="bg-white rounded-lg p-8 text-center">
-                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">2,000+</h3>
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">3,000+</h3>
                 <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Happy Customers</p>
               </div>
 
               {/* Areas Metric */}
               <div className="bg-white rounded-lg p-8 text-center">
-                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">100+</h3>
+                <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">200+</h3>
                 <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
               </div>
+
+
             </div>
           </div>
         </section>

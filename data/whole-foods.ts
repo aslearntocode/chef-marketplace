@@ -1467,6 +1467,139 @@ export const products: Product[] = [
         'Salt': [],
         'Garlic': []
       }
+    },
+    {
+      id: '46',
+      name: 'Apple Chips',
+      description: 'Looking for a guilt-free snack option? Apple Chips by Healthy Grabz are here to satisfy your cravings while supporting your health. Made from 100% real apples, these chips are air-cooked to retain essential nutrients, making them a perfect choice for health-conscious individuals. Whether you\'re aiming for weight loss, heart health, or boosting immunity, our Apple Chips are packed with fiber and natural goodness to help you stay on track. With no added sugar or artificial preservatives, you can enjoy a pure, wholesome snack any time of the day. At Healthy Grabz, we combine ancient dehydration techniques with modern cooking methods to bring you snacks that are as tasty as they are nutritious. Perfect for office munching, school lunches, or post-workout refuels, Apple Chips are your go-to snack. Order your Apple Chips now and experience the delightful crunch of healthy living. Healthy Grabz – making snacking smarter and healthier every day!',
+      price: 100,
+      image: '/images/applechips/IMG_1.jpeg',
+      images: [
+        '/images/applechips/IMG_1.jpeg',
+        '/images/applechips/IMG_2.png',
+        '/images/applechips/IMG_3.jpg',
+        '/images/applechips/IMG_4.jpg',
+        '/images/applechips/IMG_5.png',
+        '/images/applechips/IMG_6.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['applechips', 'airfried', 'applechipswitholiveoil', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20 gms',
+      ingredients_benefits: {
+        'Apples': [
+          'Rich in Nutrients',
+          'High in vitamin C, an antioxidant that supports immune health',
+          'Contains potassium, which supports heart health',
+          'Provides dietary fiber, especially in the skin, aiding digestion'
+        ],
+        'Olive Oil': [
+          'Good for Heart Health',
+          'Monounsaturated fats (mainly oleic acid) help reduce bad LDL cholesterol and raise good HDL cholesterol',
+          'Rich in antioxidants like polyphenols, which reduce inflammation and oxidative stress in the arteries',
+          'May help lower blood pressure and improve blood vessel function'
+        ]
+      }
+    },
+    {
+      id: '47',
+      name: 'Beetroot Chips',
+      description: 'Indulge in the natural goodness of HealthyGrabz Beetroot Chips in our convenient Big Pouch! Perfect for families or sharing, these crunchy, air-cooked delights are packed with heart-healthy nutrients, high in fiber, and low in calories. Made from 100% real beetroot, they\'re an excellent snack for weight management and boosting immunity. Ideal for health-conscious snackers, our big pouch ensures you never run out of this guilt-free indulgence. Grab your healthy snack today!',
+      price: 100,
+      image: '/images/beetrootchips/IMG_1.png',
+      images: [
+        '/images/beetrootchips/IMG_1.png',
+        '/images/beetrootchips/IMG_2.jpg',
+        '/images/beetrootchips/IMG_3.jpg',
+        '/images/beetrootchips/IMG_4.png',
+        '/images/beetrootchips/IMG_5.jpg',
+        '/images/beetrootchips/IMG_6.png',
+        '/images/beetrootchips/IMG_7.png',
+        
+      ],
+      category: 'Healthy Bites',
+      tags: ['beetrootchips', 'airfried', 'beetrootchipswitholiveoil', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20 gms',
+      ingredients_benefits: {
+        'Beetroot': [
+          'Rich in Nutrients',
+          'High in fiber, folate (vitamin B9), manganese, potassium, iron, and vitamin C',
+          'Low in calories but nutrient-dense',
+          'Supports Heart Health',
+          'Contains nitrates, which convert to nitric oxide and help relax blood vessels, lowering blood pressure',
+          'May reduce the risk of heart disease and stroke'
+        ],
+        'Dry Ginger Powder': [
+          'Aids Digestion',
+          'Stimulates digestive enzymes and bile production',
+          'Relieves bloating, gas, and indigestion',
+          'Anti-Inflammatory and Pain Relief',
+          'Contains potent anti-inflammatory compounds',
+          'Effective in reducing joint pain, arthritis symptoms, and muscle soreness'
+        ],
+        'Dry Mango Powder': [],
+        'Black Salt': [],
+        'Pepper Powder': [],
+        'Rock Salt': [],
+        'Mint': [],
+        'Cumin': []
+      }
+    },
+    {
+      id: '48',
+      name: 'Bitter Gourd Chips',
+      description: 'Bittergourd chips (also called bitter melon chips or karela chips) are a crunchy, savory snack made from thinly sliced bittergourd that\'s air-fried or baked. Despite their bitter taste, they\'re popular for their health benefits and unique flavor.',
+      price: 100,
+      image: '/images/bittergourd.jpg',
+      images: [
+        '/images/bittergourd.jpg'
+      ],
+      category: 'Healthy Bites',
+      tags: ['bittergourdchips', 'airfried', 'bittergourdchipswitholiveoil', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Bitter Gourd': [
+          'Helps Manage Diabetes',
+          'Contains charantin, polypeptide-p, and vicine, which help lower blood sugar naturally',
+          'Improves insulin sensitivity and glucose metabolism',
+          'Often used as a natural remedy for type 2 diabetes'
+        ]
+      }
+    },
+    {
+      id: '49',
+      name: 'Bottle Gourd Chips',
+      description: '100% Real Vegetable chips, seasoned with delicious seasonings and made using the Air Fried Process. These chips are prepared with Finger Licking Twangy Masala because, as we all know, enjoying the advantages of bottle gourd can be boring. These chips combine the health benefits of bottle gourd with deliciousness. They do not contain any artificial flavors or colors. These chips are absolutely oil free!',
+      price: 100,
+      image: '/images/bottlegourd.jpg',
+      images: [
+        '/images/bottlegourd.jpg',
+      ],
+      category: 'Healthy Bites',
+      tags: ['bottlegourdchips', 'airfried', 'bottlegourdchipswitholiveoil', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '75gms',
+      ingredients_benefits: {
+        'Bottle Gourd': [
+          'Hydrating and Cooling',
+          'Composed of over 90% water, making it great for hydration and cooling the body—especially in summer',
+          'Helps prevent heat strokes and excessive thirst',
+          'Supports Heart Health',
+          'Low in sodium and cholesterol',
+          'Helps maintain healthy blood pressure and supports cardiovascular function'
+        ],
+        'Black Salt': [
+          'Aids Digestion',
+          'Stimulates bile production in the liver',
+          'Helps relieve indigestion, bloating, and gas',
+          'Commonly used in Ayurvedic digestive remedies',
+          'Supports Heart Health',
+          'Lower in sodium compared to regular table salt',
+          'May help reduce water retention and control blood pressure (when used moderately)'
+        ],
+        'Dry Mango Powder': [],
+        'Dry Ginger Powder': [],
+        'Garlic Powder': [],
+        'Olive Oil': []
+      }
     }
 ];
 export default products; 
