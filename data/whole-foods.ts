@@ -1600,6 +1600,231 @@ export const products: Product[] = [
         'Garlic Powder': [],
         'Olive Oil': []
       }
+    },
+    {
+      id: '50',
+      name: 'Carrot Chips',
+      description: 'These crunchy Carrot Chips are baked instead of Deep Fried. These crunchy Vegetable Chips are a much healthier alternative to traditional potato chips and they are the best snacks for those who want to lose weight. They also are the best snacks for Diabetic Patients, aside from a healthy dose of vitamins A and C and fiber. Carrots contain antioxidants that may help reduce the risk of cancer and also improve your immune system and may also help in weight reduction. These chips are packed with flavour and healthy vitamins and have a fantastic crunch',
+      price: 100,
+      image: '/images/carrotchips/IMG_1.png',
+      images: [
+        '/images/carrotchips/IMG_1.png',
+        '/images/carrotchips/IMG_2.jpeg',
+        '/images/carrotchips/IMG_3.png',
+        '/images/carrotchips/IMG_4.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['carrotchips', 'baked', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Carrots': [
+          'Rich in Nutrients- High in beta-carotene, which the body converts to vitamin A — important for eye health, immune function, and skin.',
+          'Provide vitamin K1, potassium, fiber, and antioxidants.',
+          'Low in Calories (When Baked)- A good snack option for those watching calorie intake, especially compared to traditional potato chips.',
+          'Digestive Health- Carrots contain dietary fiber, which helps with digestion and maintaining a healthy gut.'
+        ],
+        'Black Salt': [
+          'Aids Digestion. Black salt is commonly used in Ayurveda to improve digestion and relieve bloating, gas, and heartburn.',
+          'It can stimulate bile production in the liver and help with the breakdown of food.'
+        ],
+        'Dry Mango Powder': [''],
+        'Dry Ginger Powder': [''],
+        'Garlic Powder': [''],
+        'Olive Oil': ['']
+      }
+    },
+    {
+      id: '51',
+      name: 'Cluster Bean Chips',
+      description: 'The dehydrated air-fried Cluster bean chips, lightly sprinkled with olive oil less than 0.1%, are a crunchy and delicious snack. They\'re rich in fiber, protein, and minerals, and a guilt-free alternative to traditional fried snacks. Conveniently ready to eat, they make a perfect on-the-go snack. Enjoy the natural flavours of Cluster beans with a touch of olive oil anytime.',
+      price: 100,
+      image: '/images/clusterbeanchips/IMG_1.png',
+      images: [
+        '/images/clusterbeanchips/IMG_1.png',
+        '/images/clusterbeanchips/IMG_2.jpeg',
+        '/images/clusterbeanchips/IMG_3.png',
+        '/images/clusterbeanchips/IMG_4.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['clusterbeanchips', 'airfried', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Cluster Bean': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and prevents constipation',
+          'Helps regulate blood sugar levels by slowing the absorption of glucose — especially helpful for people with diabetes',
+          'Supports Heart Health',
+          'The fiber in cluster beans helps reduce bad cholesterol (LDL) levels',
+          'Contains potassium, which helps manage blood pressure'
+        ]
+      }
+    },
+    {
+      id: '52',
+      name: 'Okra Chips',
+      description: 'Discover the wholesome goodness of Healthy Grabz Okra (Bhindi) Chips, a perfect blend of nutrition and flavour! Made using ancient solar dehydration techniques and cutting-edge air cooking methods, these chips retain the natural nutrients of okra, ensuring a healthy and delicious snacking experience. Each crunchy bite is seasoned with our signature masala and olive oil, offering a guilt-free indulgence packed with health benefits. Rich in dietary fiber, these chips support digestion, weight management, and heart health. Their low glycemic index makes them an excellent choice for managing blood sugar levels, ideal for those monitoring their diabetes. Plus, the natural antioxidants in okra help boost immunity and combat free radicals. Whether you\'re on the go, at work, or simply craving a tasty treat, Healthy Grabz Okra Chips are the ultimate companion. They are gluten-free, free from artificial preservatives, and perfect for anyone seeking a healthier alternative to traditional fried snacks.',
+      price: 100,
+      image: '/images/okrachips/IMG_1.png',
+      images: [
+        '/images/okrachips/IMG_1.png',
+        '/images/okrachips/IMG_2.jpg',
+        '/images/okrachips/IMG_3.png',
+        '/images/okrachips/IMG_4.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['okrachips', 'airfried', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack', 'glutenfreechips'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Okra': [
+          'Rich in Nutrients',
+          'High in vitamin C, vitamin K, and folate',
+          'Contains essential minerals like magnesium, potassium, and calcium',
+          'Good source of fiber, especially mucilage, which supports digestion',
+          'Supports Digestive Health',
+          'High fiber content helps prevent constipation and promotes regular bowel movements',
+          'Mucilage (a gel-like substance) helps ease gastrointestinal inflammation and can bind toxins'
+        ]
+      }
+    },
+    {
+      id: '53',
+      name: 'Orange Chips',
+      description: 'Are you looking for a healthy snack that doesn\'t compromise on flavor? Meet Orange Healthy Chips – a deliciously nutritious option crafted to perfection! Packed with the goodness of natural ingredients, these chips are made using a unique combination of ancient solar dehydration techniques and modern air cooking methods. This innovative process ensures a crispy, flavourful snack with lower fat content and zero artificial additives. Infused with a zesty orange flavor, Orange Healthy Chips not only satisfy your cravings but also offer health benefits like heart support, weight management, and immune boosting. These chips are perfect for anyone seeking a guilt-free snack that\'s both convenient and wholesome. Whether you\'re a fitness enthusiast or a busy professional, Orange Healthy Chips make for an ideal snack-on-the-go. Add them to your cart today and indulge in a snack that\'s good for your taste buds and your health!',
+      price: 110,
+      image: '/images/orangechips/IMG_1.jpeg',
+      images: [
+        '/images/orangechips/IMG_1.jpeg',
+        '/images/orangechips/IMG_2.webp',
+        '/images/orangechips/IMG_3.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['orangechips', 'airfried', 'sundriedchips', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack', 'glutenfreechips'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Orange': [
+          'High in Vitamin C',
+          'One of the best natural sources of vitamin C, which helps:',
+          'Boost immunity',
+          'Support collagen production for healthy skin',
+          'Improve iron absorption',
+          'Rich in Antioxidants',
+          'Contains flavonoids and carotenoids (like beta-carotene), which help protect cells from damage by free radicals'
+        ],
+        'Olive Oil': [
+          'Heart Health',
+          'Rich in monounsaturated fats, particularly oleic acid, which helps reduce bad LDL cholesterol and may increase good HDL cholesterol',
+          'Contains polyphenols that reduce inflammation and oxidative stress in the arteries',
+          'Regular consumption is linked to a reduced risk of heart disease and stroke'
+        ],
+        'Salt': []
+      }
+    },
+    {
+      id: '54',
+      name: 'Potato Chips',
+      description: 'Made with high-quality ingredients and seasoned with a variety of savoury flavours, our potato chips are perfect for guilt-free snacking. Enjoy the perfect balance of crunch and taste with every bite, ideal for heart health, weight loss, and boosting immunity. Savour the goodness of these Potato Chips with no artificial additives and preservatives. for a healthier lifestyle. Try them today as a tastier snack that aligns with your health-conscious lifestyle!',
+      price: 100,
+      image: '/images/potatochips/IMG_1.jpeg',
+      images: [
+        '/images/potatochips/IMG_1.jpeg',
+        '/images/potatochips/IMG_2.png',
+        '/images/potatochips/IMG_3.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['potatochips', 'airfried', 'sundriedchips', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Potato': [
+          'Rich in Nutrients',
+          'Good source of vitamin C, vitamin B6, potassium, and manganese',
+          'Contain some iron, magnesium, and niacin',
+          'High in Potassium',
+          'More potassium than a banana!',
+          'Helps regulate blood pressure and supports heart and muscle function'
+        ]
+      }
+    },
+    {
+      id: '55',
+      name: 'Sweet Potato Chips',
+      description: 'Delicious sweet potato chips made from 100% real sweet potatoes. These air-cooked chips retain the natural sweetness and nutrients while providing a satisfying crunch. A perfect healthy snack option that\'s free from artificial flavors and preservatives.',
+      price: 100,
+      image: '/images/sweetpotatochips/IMG_1.png',
+      images: [
+        '/images/sweetpotatochips/IMG_1.png',
+        '/images/sweetpotatochips/IMG_2.jpeg',
+        '/images/sweetpotatochips/IMG_3.png',
+        '/images/sweetpotatochips/IMG_4.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['sweetpotatochips', 'airfried', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '30gms',
+      ingredients_benefits: {
+        'Sweet Potato': [
+          'Rich in Nutrients',
+          'Excellent source of vitamin A (as beta-carotene), which supports vision, skin, and immune health',
+          'Good amounts of vitamin C, vitamin B6, potassium, manganese, and fiber'
+        ],
+        'Rock Salt': [
+          'Rich in Trace Minerals',
+          'Contains minerals like magnesium, calcium, potassium, and iron (unlike heavily refined table salt)',
+          'These help support muscle function, bone health, and electrolyte balance'
+        ],
+        'Black Salt': [
+          'Aids Digestion',
+          'Traditionally used to stimulate digestion and relieve issues like:',
+          'Indigestion',
+          'Bloating',
+          'Gas',
+          'In Ayurveda, it\'s considered a digestive enhancer and is often added in digestive churan (powders) and drinks'
+        ],
+        'Red Chilly Powder': [],
+        'Turmeric Powder': [],
+        'Coriander Powder': [],
+        'Cumin Powder': [],
+        'Black Pepper Powder': [],
+        'Cinnamon Powder': [],
+        'Dry Ginger Powder': [],
+        'Garlic Powder': [],
+        'Dry Mango Powder': []
+      }
+    },
+    {
+      id: '56',
+      name: 'Root Vegetable Chips',
+      description: 'This Jar contains root vegetable chips (such as Beetroot, Potato, Sweet Potato, Yam). Vegetables are dehydrated, airfried and sprinkled with Olive Oil in the end. To satisfy crunchy cravings while still staying on track, everybody should consider oil-free options such as this. This is a guilt-free munching option that won\'t derail anybody\'s fitness progress.',
+      price: 100,
+      image: '/images/rootvegetablechips/IMG_1.png',
+      images: [
+        '/images/rootvegetablechips/IMG_1.png',
+        '/images/rootvegetablechips/IMG_2.png'
+      ],
+      category: 'Healthy Bites',
+      tags: ['rootvegetablechips', 'airfried', 'sundriedchips', 'nochemicals', 'nopreservatives', 'noartificialflavours', 'healthiersnack', 'healthierchips', 'gotosnack'],
+      size: '20gms',
+      ingredients_benefits: {
+        'Sweet Potato': [
+          'Rich in Nutrients',
+          'Excellent source of vitamin A (as beta-carotene), which supports vision, skin, and immune health',
+          'Good amounts of vitamin C, vitamin B6, potassium, manganese, and fiber'
+        ],
+        'Potato': [
+          'Rich in Nutrients',
+          'Good source of:',
+          'Vitamin C – supports immunity',
+          'Vitamin B6 – important for brain and metabolism',
+          'Potassium – helps regulate blood pressure',
+          'Iron and magnesium in smaller amounts'
+        ],
+        'Beetroot': [
+          'Boosts Blood Flow and Lowers Blood Pressure',
+          'Rich in nitrates, which the body converts into nitric oxide—a compound that relaxes and widens blood vessels, improving circulation and reducing blood pressure'
+        ],
+        'Black Salt': [],
+        'Dry Mango Powder': [],
+        'Dry Ginger Powder': [],
+        'Olive Oil': []
+      }
     }
 ];
 export default products; 
