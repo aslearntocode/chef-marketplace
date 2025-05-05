@@ -6,7 +6,8 @@ import Link from 'next/link';
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, totalAmount, clearCart } = useCart();
   const DELIVERY_FEE = 100;
-  const FREE_DELIVERY_THRESHOLD = 1000;
+  const HANDLING_FEE = 9;
+  const FREE_DELIVERY_THRESHOLD = 749;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
 
   // Get the chef/baker name of the first item in cart (if any)
@@ -125,10 +126,14 @@ export default function CartPage() {
                   )}
                 </div>
               </div>
+              <div className="flex justify-between">
+                <span>Handling Fee</span>
+                <span>₹{HANDLING_FEE}</span>
+              </div>
               <div className="border-t pt-2 mt-2">
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>₹{totalAmount + (isDeliveryFree ? 0 : DELIVERY_FEE)}</span>
+                  <span>₹{totalAmount + (isDeliveryFree ? 0 : DELIVERY_FEE) + HANDLING_FEE}</span>
                 </div>
               </div>
             </div>
