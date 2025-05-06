@@ -20,7 +20,14 @@ export default function CartPage() {
 
   // Modified updateQuantity to check vendor
   const handleUpdateQuantity = (itemId: string, newQuantity: number, itemVendor: string | undefined) => {
-    // If no vendor is provided, skip the check
+    // If the item is already in cart, just update quantity
+    const existingItem = items.find(item => item.id === itemId);
+    if (existingItem) {
+      updateQuantity(itemId, newQuantity);
+      return;
+    }
+
+    // Only check vendor for new items
     if (!itemVendor) return;
 
     if (!isFromSameVendor(itemVendor)) {
@@ -78,18 +85,18 @@ export default function CartPage() {
                       Math.max(0, item.quantity - 1),
                       item.bakerName || item.chefName || ''  // Provide empty string as fallback
                     )}
-                    className="px-3 py-1 border rounded-md"
+                    className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 active:bg-gray-200 transition-colors duration-150 text-lg font-medium"
                   >
                     -
                   </button>
-                  <span className="w-8 text-center">{item.quantity}</span>
+                  <span className="w-8 text-center font-medium">{item.quantity}</span>
                   <button
                     onClick={() => handleUpdateQuantity(
                       item.id, 
                       item.quantity + 1,
                       item.bakerName || item.chefName || ''  // Provide empty string as fallback
                     )}
-                    className="px-3 py-1 border rounded-md"
+                    className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 active:bg-gray-200 transition-colors duration-150 text-lg font-medium"
                   >
                     +
                   </button>

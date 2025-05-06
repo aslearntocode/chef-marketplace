@@ -32,7 +32,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
     );
   });
 
-  const handleAddToCart = (item: Product) => {
+  const handleAddToCart = async (item: Product) => {
     if (!user) {
       const currentPath = window.location.pathname;
       toast.error('Please login to add items to cart');
@@ -50,8 +50,13 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
       category: 'Whole Foods'
     };
 
-    addToCart(cartItem);
+    await addToCart(cartItem);
     toast.success(`${item.name} added to cart!`);
+    // Always update selectedVariants for this product, even if no variants
+    setSelectedVariants(prev => ({
+      ...prev,
+      [item.id]: { sizeIdx: 0, flavorIdx: 0 }
+    }));
   };
 
   const handleRemoveFromCart = (productId: string) => {
@@ -70,9 +75,22 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
     }
   };
 
-  const getItemQuantity = (productId: string) => {
-    if (!user) return 0;
-    const item = items.find(item => item.id === productId);
+  // Helper to get the cart item id for a product, including variants
+  const getCartItemId = (product: Product, sizeIdx?: number, flavorIdx?: number) => {
+    const hasSizes = product.variants && product.variants.sizes && product.variants.sizes.length > 0;
+    const hasFlavors = product.variants && product.variants.flavors && product.variants.flavors.length > 0;
+    const size = hasSizes ? product.variants!.sizes![sizeIdx ?? 0] : null;
+    const flavor = hasFlavors ? product.variants!.flavors![flavorIdx ?? 0] : null;
+    const idParts = [product.id];
+    if (hasSizes && size) idParts.push(size.value);
+    if (hasFlavors && flavor) idParts.push(flavor.value);
+    return idParts.join('-');
+  };
+
+  // Helper to get the quantity of a product in the cart, including variants
+  const getItemQuantity = (product: Product, sizeIdx?: number, flavorIdx?: number) => {
+    const cartItemId = getCartItemId(product, sizeIdx, flavorIdx);
+    const item = items.find(item => item.id === cartItemId);
     return item ? item.quantity : 0;
   };
 
@@ -126,8 +144,8 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
           const selectedFlavor = hasFlavors ? product.variants!.flavors![selectedFlavorIndex] : null;
           const displayPrice = hasSizes && selectedSize ? selectedSize.price : product.price;
 
-          // Helper for Add to Cart with variant
-          const handleAddToCartVariant = (item: Product, sizeIdx?: number, flavorIdx?: number) => {
+          // Helper for Add to Cart with variant, scoped to this product
+          const handleAddToCartVariant = async (item: Product, sizeIdx?: number, flavorIdx?: number) => {
             if (!user) {
               const currentPath = window.location.pathname;
               toast.error('Please login to add items to cart');
@@ -155,9 +173,21 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
               description: item.description,
               category: 'Whole Foods'
             };
-            addToCart(cartItem);
+            await addToCart(cartItem);
             toast.success(`${cartItem.name} added to cart!`);
+            // Update selectedVariants so UI shows + and - for this variant
+            setSelectedVariants(prev => ({
+              ...prev,
+              [item.id]: { sizeIdx: sizeIdx ?? 0, flavorIdx: flavorIdx ?? 0 }
+            }));
           };
+
+          let variantObj = selectedVariants[product.id];
+          if (typeof variantObj !== 'object' || variantObj === null) {
+            variantObj = { sizeIdx: 0, flavorIdx: 0 };
+          }
+          const { sizeIdx, flavorIdx } = variantObj;
+          const quantity = getItemQuantity(product, sizeIdx, flavorIdx);
 
           return (
             <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
@@ -269,25 +299,25 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                 <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-auto">
                   <span className="text-lg font-bold text-gray-800">₹{displayPrice}</span>
                   <div className="flex items-center space-x-1">
-                    {getItemQuantity(product.id) > 0 ? (
+                    {quantity > 0 ? (
                       <div className="flex items-center bg-gray-100 rounded-lg p-1">
                         <button
                           onClick={(e) => {
                             e.preventDefault();
-                            handleRemoveFromCart(product.id);
+                            handleRemoveFromCart(getCartItemId(product, sizeIdx, flavorIdx));
                           }}
                           className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
                         >
                           -
                         </button>
-                        <span className="mx-2 text-sm font-medium">{getItemQuantity(product.id)}</span>
+                        <span className="mx-2 text-sm font-medium">{quantity}</span>
                         <button
-                          onClick={(e) => {
+                          onClick={async (e) => {
                             e.preventDefault();
                             if (hasSizes || hasFlavors) {
-                              handleAddToCartVariant(product, selectedSizeIndex, selectedFlavorIndex);
+                              await handleAddToCartVariant(product, sizeIdx, flavorIdx);
                             } else {
-                              handleAddToCart(product);
+                              await handleAddToCart(product);
                             }
                           }}
                           className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
@@ -297,12 +327,12 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                       </div>
                     ) : (
                       <button
-                        onClick={(e) => {
+                        onClick={async (e) => {
                           e.preventDefault();
                           if (hasSizes || hasFlavors) {
-                            handleAddToCartVariant(product, selectedSizeIndex, selectedFlavorIndex);
+                            await handleAddToCartVariant(product, sizeIdx, flavorIdx);
                           } else {
-                            handleAddToCart(product);
+                            await handleAddToCart(product);
                           }
                         }}
                         className="bg-black text-white px-3 py-1.5 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"

@@ -88,7 +88,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     setQuantity(getCartQuantity());
   }, [selectedSize, selectedFlavor, items]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     if (!user) {
       const currentPath = window.location.pathname;
       toast.error('Please login to add items to cart');
@@ -104,16 +104,16 @@ export default function ProductPage({ params }: ProductPageProps) {
       description: product.description,
       category: 'Whole Foods',
     };
-    addToCart(cartItem);
+    await addToCart(cartItem);
     toast.success(`${product.name} added to cart!`);
     setQuantity(1);
   };
 
-  const handleIncrement = () => {
+  const handleIncrement = async () => {
     const cartItemId = getCartItemId();
     const item = (items || []).find((item) => item.id === cartItemId);
     const newQuantity = (item ? item.quantity : 0) + 1;
-    addToCart({
+    await addToCart({
       id: cartItemId,
       name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
       price: selectedSize?.price || product.price,

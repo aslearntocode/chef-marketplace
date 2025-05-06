@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Cart.css';
+import { useCart } from '../../../context/CartContext';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
-
-  useEffect(() => {
-    // Fetch cart items from localStorage or your backend
-    const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    setCartItems(savedCartItems);
-  }, []);
+  const { items: cartItems, updateQuantity, removeFromCart, totalAmount } = useCart();
 
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);

@@ -44,7 +44,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     );
   });
 
-  const handleAddToCart = (item: Product) => {
+  const handleAddToCart = async (item: Product) => {
     if (!user) {
       const currentPath = window.location.pathname;
       toast.error('Please login to add items to cart');
@@ -62,7 +62,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       category: 'Whole Foods'
     };
 
-    addToCart(cartItem);
+    await addToCart(cartItem);
     toast.success(`${item.name} added to cart!`);
   };
 
