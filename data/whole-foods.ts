@@ -1825,6 +1825,44 @@ export const products: Product[] = [
         'Dry Ginger Powder': [],
         'Olive Oil': []
       }
-    }
+    },
+    {
+      id: '57',
+      name: 'Organic Fresh Farm Cashews',
+      description: 'Deliciously Nutty Flavour: Enjoy the rich, nutty taste of our whole cashews, known for their firm texture and satisfying crunch. Great Quality: These cashews are organically grown and carefully selected from a family owned farm in Ratnagiri. Freshness Preserved: Packed in food-safe materials, our cashews retain their delightful flavour and crunch. Plus they are hygienically processed in facilities adhering to strict food safety standards. Optimal Storage: To maintain freshness, store cashews in a cool, dry place in an airtight container. For extended shelf life, refrigeration after opening is recommended. Convenient Snack: Whether at home, work, school, or on-the-go, these cashews offer a delicious, quick snack option that fits any occasion. Appealing Flavour: With a flavour that is tasty for both adults and children, these cashews are a great snack for the whole family.',
+      category: 'Nuts and Seeds',
+      tags: ['farmcashews', 'freshcashews', 'nuts', 'bettercashews', 'farmtofork', 'healthier', 'healthiersnack', 'healthiernuts', 'gotosnack'],
+      size: '250 gms',
+      image: '/images/cashewspics/Cashews.jpg',
+      images: [
+        '/images/cashewspics/Cashews.jpg',
+        '/images/cashewspics/Split Cashews.jpg'
+        
+      ],
+      price: 0,
+      variants: {
+        sizes: [
+          { name: 'Broken', value: 'Broken', price: 1000 },
+          { name: 'Split', value: 'Split', price: 1100 },
+          { name: 'Small', value: 'Small', price: 1200 },
+          { name: 'Medium', value: 'Medium', price: 1250 },
+          { name: 'Large', value: 'Large', price: 1400 },
+          { name: 'Jumbo', value: 'Jumbo', price: 1600 },
+        ]
+      },
+      ingredients_benefits: {
+        'Nutrient Dense': [
+          'Rich in healthy fats (especially monounsaturated fats)',
+          'High in plant-based protein',
+          'Good source of essential minerals like magnesium, copper, zinc, and iron',
+          'Contain B vitamins, including B6 and folate'
+        ],
+        'Good for Heart Health': [
+          'The healthy fats in cashews can help lower bad LDL cholesterol and raise good HDL cholesterol, supporting cardiovascular health.',
+          'Magnesium in Cashews supports healthy blood pressure and normal heart rhythms.'
+        ]
+      }
+    },
+
 ];
 export default products; 

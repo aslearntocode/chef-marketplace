@@ -38,6 +38,7 @@ export default function Navbar() {
         { href: '/whole-foods/categories/pickles', label: 'Pickles & Condiments' },
         { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthy Breakfast' },
         { href: '/whole-foods/categories/spice-blends', label: 'Spice Blends' },
+        { href: '/whole-foods/categories/nuts-and-seeds', label: 'Nuts and Seeds' },
       ]
     },
   ];
