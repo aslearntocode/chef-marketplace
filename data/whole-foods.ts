@@ -1839,7 +1839,7 @@ export const products: Product[] = [
         '/images/cashewspics/Split Cashews.jpg'
         
       ],
-      price: 0,
+      price: 1000,
       variants: {
         sizes: [
           { name: 'Broken', value: 'Broken', price: 1000 },
