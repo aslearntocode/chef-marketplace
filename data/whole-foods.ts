@@ -761,7 +761,7 @@ export const products: Product[] = [
         '/images/bananacakeoats/IMG_6.jpg'
       ],
       category: 'Healthy Breakfast',
-      tags: ['oats', 'overnightoats', 'bananacake', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      tags: ['oats', 'overnightoats', 'bananacake', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats', 'bananacakeoats', 'banana oats', 'banana oat'],
       size: '84gms',
       ingredients_benefits: {
         'Oats': [
@@ -877,7 +877,7 @@ export const products: Product[] = [
         '/images/mangocustardoats/IMG_5.jpg'
       ],
       category: 'Healthy Breakfast',
-      tags: ['oats', 'overnightoats', 'mangocustard', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats'],
+      tags: ['oats', 'overnightoats', 'mangocustard', 'healthier', 'madeinindia', 'convenient', 'oatlovers', 'chemicalfree', 'preservativefree', 'colourfree', 'purer', 'breakfast', 'breakfastwithmilk', 'flavouredoats', 'mangooats', 'mango oats'],
       size: '84gms',
       ingredients_benefits: {
         'Oats': [
