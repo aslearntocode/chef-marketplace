@@ -2158,8 +2158,103 @@ export const products: Product[] = [
           'Chilli Powder'
         ]
       }
+    },
+    {
+      id: '68',
+      name: 'Chocolate Khakhra',
+      description: 'Chocolate Khakhra is a fusion snack that combines the traditional crispy Gujarati khakhra (a thin, crunchy flatbread usually made from whole wheat flour) with chocolate for a sweet twist. It\'s a relatively modern innovation in Indian snacks, popular among kids and adventurous food lovers. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras3/IMG_11.png',
+      images: ['/images/khakhras3/IMG_11.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'chocolatekhakhra', 'sweetkhakhra'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Cocoa Beans': [],
+        'Sugar': [],
+        'Cocoa Butter': []
+      }
+    },
+    {
+      id: '69',
+      name: 'Jiralu Khakhra',
+      description: 'Jiralu Khakhra is a classic Gujarati snack that features khakhra seasoned with \'jiralu\', a tangy, spicy, and slightly salty spice mix that\'s very popular in Western India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras3/IMG_12.png',
+      images: ['/images/khakhras3/IMG_12.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'jiralukhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Rock Salt': [],
+        'Spices and condiments': ['Turmeric powder', 'Cumin powder', 'Coriander seeds', 'Aamchur powder']
+      }
+    },
+    {
+      id: '70',
+      name: 'Chat Masala Khakhra',
+      description: 'Chat Masala Khakhra is another delicious Indian fusion snack where traditional khakhra is flavoured with chat masala—a tangy, spicy, and aromatic North Indian spice blend often used on street foods like chaat, fruit salads, or pakoras. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras3/IMG_13.png',
+      images: ['/images/khakhras3/IMG_13.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'chatmasalakhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and condiments': ['chat masala']
+      }
+    },
+    {
+      id: '71',
+      name: 'Panipuri Khakhra',
+      description: 'Panipuri Khakhra is a fun and flavorful twist on traditional khakhra that brings the zesty, tangy, and spicy taste of panipuri (golgappa) into a crispy, portable snack format. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras3/IMG_14.png',
+      images: ['/images/khakhras3/IMG_14.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'panipurikhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Sugar': [],
+        'Spices and condiments': ['Panipuri Masala']
+      }
+    },
+    {
+      id: '72',
+      name: 'Achar Khakhra',
+      description: 'Achar Khakhra (or Achari Khakhra) is a savoury, tangy, and mildly spicy version of khakhra that mimics the flavour of traditional Indian pickle (achar)—especially mango or mixed vegetable pickles. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras3/IMG_15.png',
+      images: ['/images/khakhras3/IMG_15.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'acharkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized salt': [],
+        'Spices and condiments': ['Achar', 'mustard seeds', 'Fenugreek seeds', 'chilli powder']
+      }
     }
-
-
 ];
 export default products; 
