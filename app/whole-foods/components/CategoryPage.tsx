@@ -386,7 +386,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                             await handleAddToCart(product);
                           }
                         }}
-                        className="bg-black text-white w-[110px] min-w-[90px] px-2 py-1 rounded-md hover:bg-gray-800 transition-colors text-xs font-medium flex-shrink-0 sm:w-auto sm:min-w-0 sm:px-3 sm:py-1.5 sm:text-sm"
+                        className="bg-black text-white w-auto min-w-0 px-2 py-1 rounded-md hover:bg-gray-800 transition-colors text-xs font-medium ml-2"
                       >
                         Add to Cart
                       </button>
