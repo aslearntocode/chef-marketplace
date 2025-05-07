@@ -14,6 +14,10 @@ export interface CartItem {
   size?: string;
   flavor?: string;
   image?: string;
+  bakerId?: string;
+  bakerName?: string;
+  chefId?: string;
+  chefName?: string;
 }
 
 interface CartContextType {
