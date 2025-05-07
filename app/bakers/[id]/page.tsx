@@ -168,7 +168,7 @@ export default function BakerPage() {
                         ) : (
                           <button 
                             onClick={() => handleAddToCart(item)}
-                            className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                            className="bg-black text-white w-full max-w-xs mx-auto px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-base sm:w-auto sm:mx-0"
                           >
                             Add to Cart
                           </button>

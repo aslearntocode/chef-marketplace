@@ -415,7 +415,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 ) : (
                   <button
                     onClick={handleAddToCart}
-                    className="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition-colors"
+                    className="w-full max-w-xs mx-auto bg-black text-white px-3 py-3 rounded-lg hover:bg-gray-800 transition-colors text-base sm:w-auto sm:mx-0"
                   >
                     Add to cart
                   </button>

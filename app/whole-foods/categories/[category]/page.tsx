@@ -152,7 +152,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                     ) : (
                       <button
                         onClick={() => handleAddToCart(product)}
-                        className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                        className="bg-black text-white w-full max-w-xs mx-auto px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-base sm:w-auto sm:mx-0"
                       >
                         Add to cart
                       </button>
