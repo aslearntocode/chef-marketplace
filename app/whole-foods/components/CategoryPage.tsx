@@ -15,14 +15,21 @@ interface CategoryPageProps {
   products: Product[];
 }
 
+interface VariantState {
+  sizeIdx: number;
+  flavorIdx: number;
+}
+
+type VariantMap = Record<string, VariantState>;
+
 export default function CategoryPage({ category, products }: CategoryPageProps) {
   const { user } = useAuth();
-  const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
+  const { addToCart, updateQuantity, removeFromCart, items } = useCart();
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams?.get('q') || '');
-  const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({});
-  const [selectedVariants, setSelectedVariants] = useState<{ [productId: string]: { sizeIdx: number; flavorIdx: number } | number }>({});
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string, number>>({});
+  const [selectedVariants, setSelectedVariants] = useState<VariantMap>({});
 
   // Update search query when URL parameter changes
   useEffect(() => {
@@ -69,16 +76,22 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
       quantity: 1,
       vendor_id: 'whole-foods',
       description: item.description,
-      category: 'Whole Foods'
+      category: 'Whole Foods',
+      image: item.images?.[0] || item.image
     };
 
-    await addToCart(cartItem);
-    toast.success(`${item.name} added to cart!`);
-    // Always update selectedVariants for this product, even if no variants
-    setSelectedVariants(prev => ({
-      ...prev,
-      [item.id]: { sizeIdx: 0, flavorIdx: 0 }
-    }));
+    try {
+      addToCart(cartItem);
+      toast.success(`${item.name} added to cart!`);
+      // Initialize variant state for this product
+      setSelectedVariants(prev => ({
+        ...prev,
+        [item.id]: { sizeIdx: 0, flavorIdx: 0 }
+      }));
+    } catch (error) {
+      toast.error('Failed to add item to cart');
+      console.error('Error adding to cart:', error);
+    }
   };
 
   const handleRemoveFromCart = (productId: string) => {
@@ -89,11 +102,32 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
       return;
     }
     
-    const item = items.find(item => item.id === productId);
-    if (item && item.quantity > 1) {
-      updateQuantity(productId, item.quantity - 1);
-    } else {
-      removeFromCart(productId);
+    try {
+      // Get the current variant state for this product
+      const variantState = selectedVariants[productId] || { sizeIdx: 0, flavorIdx: 0 };
+      const { sizeIdx, flavorIdx } = variantState;
+      
+      // Generate the correct cart item ID
+      const cartItemId = getCartItemId(
+        products.find(p => p.id === productId)!,
+        sizeIdx,
+        flavorIdx
+      );
+
+      const item = items.find(item => item.id === cartItemId);
+      if (!item) {
+        console.error('Item not found in cart:', cartItemId);
+        return;
+      }
+
+      if (item.quantity > 1) {
+        updateQuantity(cartItemId, item.quantity - 1);
+      } else {
+        removeFromCart(cartItemId);
+      }
+    } catch (error) {
+      toast.error('Failed to update cart');
+      console.error('Error updating cart:', error);
     }
   };
 
@@ -114,6 +148,47 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
     const cartItemId = getCartItemId(product, sizeIdx, flavorIdx);
     const item = items.find(item => item.id === cartItemId);
     return item ? item.quantity : 0;
+  };
+
+  // Helper for Add to Cart with variant, scoped to this product
+  const handleAddToCartVariant = async (item: Product, sizeIdx?: number, flavorIdx?: number) => {
+    if (!user) {
+      const currentPath = window.location.pathname;
+      toast.error('Please login to add items to cart');
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
+      return;
+    }
+
+    const hasSizes = item.variants && item.variants.sizes && item.variants.sizes.length > 0;
+    const hasFlavors = item.variants && item.variants.flavors && item.variants.flavors.length > 0;
+    const size = hasSizes ? item.variants!.sizes![sizeIdx ?? 0] : null;
+    const flavor = hasFlavors ? item.variants!.flavors![flavorIdx ?? 0] : null;
+
+    const cartItem = {
+      id: item.id,
+      name: `${item.name}${size ? ` - ${size.name}` : ''}${flavor ? ` (${flavor.name})` : ''}`,
+      price: size?.price || item.price,
+      quantity: 1,
+      vendor_id: 'whole-foods',
+      description: item.description,
+      category: 'Whole Foods',
+      size: size?.value,
+      flavor: flavor?.value,
+      image: item.images?.[0] || item.image
+    };
+
+    try {
+      addToCart(cartItem);
+      toast.success(`${cartItem.name} added to cart!`);
+      // Update selectedVariants so UI shows + and - for this variant
+      setSelectedVariants(prev => ({
+        ...prev,
+        [item.id]: { sizeIdx: sizeIdx ?? 0, flavorIdx: flavorIdx ?? 0 }
+      }));
+    } catch (error) {
+      toast.error('Failed to add item to cart');
+      console.error('Error adding to cart:', error);
+    }
   };
 
   const handleImageNav = (productId: string, direction: 'prev' | 'next', totalImages: number) => {
@@ -153,62 +228,14 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
         {filteredProducts.map((product: Product) => {
           const hasSizes = product.variants && product.variants.sizes && product.variants.sizes.length > 0;
           const hasFlavors = product.variants && product.variants.flavors && product.variants.flavors.length > 0;
-          // Support both old and new selectedVariants structure
-          let selectedSizeIndex = 0;
-          let selectedFlavorIndex = 0;
-          if (typeof selectedVariants[product.id] === 'object' && selectedVariants[product.id] !== null) {
-            selectedSizeIndex = (selectedVariants[product.id] as any).sizeIdx ?? 0;
-            selectedFlavorIndex = (selectedVariants[product.id] as any).flavorIdx ?? 0;
-          } else {
-            selectedSizeIndex = (selectedVariants[product.id] as number) ?? 0;
-          }
-          const selectedSize = hasSizes ? product.variants!.sizes![selectedSizeIndex] : null;
-          const selectedFlavor = hasFlavors ? product.variants!.flavors![selectedFlavorIndex] : null;
+          
+          // Get variant state for this product, defaulting to first options
+          const variantState = selectedVariants[product.id] || { sizeIdx: 0, flavorIdx: 0 };
+          const { sizeIdx, flavorIdx } = variantState;
+          
+          const selectedSize = hasSizes ? product.variants!.sizes![sizeIdx] : null;
+          const selectedFlavor = hasFlavors ? product.variants!.flavors![flavorIdx] : null;
           const displayPrice = hasSizes && selectedSize ? selectedSize.price : product.price;
-
-          // Helper for Add to Cart with variant, scoped to this product
-          const handleAddToCartVariant = async (item: Product, sizeIdx?: number, flavorIdx?: number) => {
-            if (!user) {
-              const currentPath = window.location.pathname;
-              toast.error('Please login to add items to cart');
-              router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
-              return;
-            }
-            const size = hasSizes ? product.variants!.sizes![sizeIdx ?? 0] : null;
-            const flavor = hasFlavors ? product.variants!.flavors![flavorIdx ?? 0] : null;
-            const idParts = [item.id];
-            const nameParts = [item.name];
-            if (hasSizes && size) {
-              idParts.push(size.value);
-              nameParts.push(`(${size.name})`);
-            }
-            if (hasFlavors && flavor) {
-              idParts.push(flavor.value);
-              nameParts.push(`[${flavor.name}]`);
-            }
-            const cartItem = {
-              id: idParts.join('-'),
-              name: nameParts.join(' '),
-              price: hasSizes && size ? size.price : item.price,
-              quantity: 1,
-              vendor_id: 'whole-foods',
-              description: item.description,
-              category: 'Whole Foods'
-            };
-            await addToCart(cartItem);
-            toast.success(`${cartItem.name} added to cart!`);
-            // Update selectedVariants so UI shows + and - for this variant
-            setSelectedVariants(prev => ({
-              ...prev,
-              [item.id]: { sizeIdx: sizeIdx ?? 0, flavorIdx: flavorIdx ?? 0 }
-            }));
-          };
-
-          let variantObj = selectedVariants[product.id];
-          if (typeof variantObj !== 'object' || variantObj === null) {
-            variantObj = { sizeIdx: 0, flavorIdx: 0 };
-          }
-          const { sizeIdx, flavorIdx } = variantObj;
           const quantity = getItemQuantity(product, sizeIdx, flavorIdx);
 
           return (
@@ -278,13 +305,14 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                       {hasSizes && (
                         <select
                           className="w-full border rounded px-2 py-1 text-sm"
-                          value={selectedSizeIndex}
+                          value={sizeIdx}
                           onChange={e => {
-                            setSelectedVariants(v => ({
-                              ...v,
-                              [product.id]: hasFlavors
-                                ? { sizeIdx: Number(e.target.value), flavorIdx: selectedFlavorIndex }
-                                : Number(e.target.value)
+                            setSelectedVariants(prev => ({
+                              ...prev,
+                              [product.id]: {
+                                sizeIdx: Number(e.target.value),
+                                flavorIdx: prev[product.id]?.flavorIdx ?? 0
+                              }
                             }));
                           }}
                         >
@@ -298,13 +326,14 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                       {hasFlavors && (
                         <select
                           className="w-full border rounded px-2 py-1 text-sm"
-                          value={selectedFlavorIndex}
+                          value={flavorIdx}
                           onChange={e => {
-                            setSelectedVariants(v => ({
-                              ...v,
-                              [product.id]: hasSizes
-                                ? { sizeIdx: selectedSizeIndex, flavorIdx: Number(e.target.value) }
-                                : Number(e.target.value)
+                            setSelectedVariants(prev => ({
+                              ...prev,
+                              [product.id]: {
+                                sizeIdx: prev[product.id]?.sizeIdx ?? 0,
+                                flavorIdx: Number(e.target.value)
+                              }
                             }));
                           }}
                         >
@@ -326,7 +355,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                         <button
                           onClick={(e) => {
                             e.preventDefault();
-                            handleRemoveFromCart(getCartItemId(product, sizeIdx, flavorIdx));
+                            handleRemoveFromCart(product.id);
                           }}
                           className="bg-white text-gray-800 w-6 h-6 rounded-md flex items-center justify-center shadow-sm hover:bg-gray-50"
                         >

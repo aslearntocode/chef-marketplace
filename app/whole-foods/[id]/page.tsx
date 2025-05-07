@@ -21,6 +21,7 @@ interface VariantOption {
   name: string;
   price?: number;
   description?: string;
+  value: string;
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
@@ -75,12 +76,16 @@ export default function ProductPage({ params }: ProductPageProps) {
     setCurrentImageIndex(0);
   };
 
-  const getCartItemId = () =>
-    product.id + (selectedSize ? `-${selectedSize.name}` : '') + (selectedFlavor ? `-${selectedFlavor.name}` : '');
+  const getCartItemId = () => {
+    const idParts = [product.id];
+    if (selectedSize) idParts.push(selectedSize.value);
+    if (selectedFlavor) idParts.push(selectedFlavor.value);
+    return idParts.join('-');
+  };
 
   const getCartQuantity = () => {
     const cartItemId = getCartItemId();
-    const item = (items || []).find((item) => item.id === cartItemId);
+    const item = items.find(item => item.id === cartItemId);
     return item ? item.quantity : 0;
   };
 
@@ -95,45 +100,59 @@ export default function ProductPage({ params }: ProductPageProps) {
       router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
       return;
     }
+
     const cartItem = {
-      id: getCartItemId(),
+      id: product.id,
       name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
       price: selectedSize?.price || product.price,
       quantity: 1,
       vendor_id: 'whole-foods',
       description: product.description,
       category: 'Whole Foods',
+      size: selectedSize?.value,
+      flavor: selectedFlavor?.value,
+      image: product.images?.[0] || product.image
     };
-    await addToCart(cartItem);
-    toast.success(`${product.name} added to cart!`);
-    setQuantity(1);
+
+    try {
+      await addToCart(cartItem);
+      toast.success(`${product.name} added to cart!`);
+      setQuantity(1);
+    } catch (error) {
+      toast.error('Failed to add item to cart');
+      console.error('Error adding to cart:', error);
+    }
   };
 
   const handleIncrement = async () => {
     const cartItemId = getCartItemId();
-    const item = (items || []).find((item) => item.id === cartItemId);
+    const item = items.find(item => item.id === cartItemId);
     const newQuantity = (item ? item.quantity : 0) + 1;
-    await addToCart({
-      id: cartItemId,
-      name: `${product.name}${selectedSize ? ` - ${selectedSize.name}` : ''}${selectedFlavor ? ` (${selectedFlavor.name})` : ''}`,
-      price: selectedSize?.price || product.price,
-      quantity: newQuantity,
-      vendor_id: 'whole-foods',
-      description: product.description,
-      category: 'Whole Foods',
-    });
-    setQuantity(newQuantity);
+    
+    try {
+      await updateQuantity(cartItemId, newQuantity);
+      setQuantity(newQuantity);
+    } catch (error) {
+      toast.error('Failed to update quantity');
+      console.error('Error updating quantity:', error);
+    }
   };
 
-  const handleDecrement = () => {
+  const handleDecrement = async () => {
     const cartItemId = getCartItemId();
-    const item = (items || []).find((item) => item.id === cartItemId);
-    if (item && item.quantity > 1) {
-      updateQuantity(cartItemId, item.quantity - 1);
-      setQuantity(item.quantity - 1);
-    } else if (item && item.quantity === 1) {
-      removeFromCart(cartItemId);
-      setQuantity(0);
+    const item = items.find(item => item.id === cartItemId);
+    
+    try {
+      if (item && item.quantity > 1) {
+        await updateQuantity(cartItemId, item.quantity - 1);
+        setQuantity(item.quantity - 1);
+      } else if (item && item.quantity === 1) {
+        await removeFromCart(cartItemId);
+        setQuantity(0);
+      }
+    } catch (error) {
+      toast.error('Failed to update quantity');
+      console.error('Error updating quantity:', error);
     }
   };
 
