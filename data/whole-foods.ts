@@ -1863,6 +1863,154 @@ export const products: Product[] = [
         ]
       }
     },
+    {
+      id: '58',
+      name: 'Methi Khakhras',
+      description: 'Methi Khakhra is a traditional Indian snack originating from Gujarat, made by roasting thin, crispy discs of whole wheat dough flavored with fenugreek leaves (Methi) and spices. It\'s a popular choice for health-conscious eaters and is often enjoyed with tea, chutney, or yogurt. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhraspics/IMG_1.png',
+      images: ['/images/khakhraspics/IMG_1.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and Condiments': [
+          'Methi Powder',
+          'Turmeric Powder',
+          'Chilly Powder',
+          'Kasuri Methi'
+        ]
+      }
+    },
+    {
+      id: '59',
+      name: 'Masala Khakhra',
+      description: 'Masala Khakhras are a spicy, savoury variation of the traditional Gujarati khakhra—thin, roasted flatbreads made from whole wheat flour. These are flavoured with a blend of Indian spices, making them a flavourful and crunchy snack that\'s both healthy and tasty. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhraspics/IMG_2.png',
+      images: ['/images/khakhraspics/IMG_2.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'masalakhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Iodized Salt': [],
+        'Ajwain Powder': [],
+        'Chilli Powder': [],
+        'Turmeric Powder': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '60',
+      name: 'Jeera Khakhra',
+      description: 'Jeera Khakhra is a simple yet flavourful Indian snack made with whole wheat flour and cumin seeds (jeera). It\'s thin, crispy, and roasted—not fried—making it a light, healthy option for snacking. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhraspics/IMG_3.png',
+      images: ['/images/khakhraspics/IMG_3.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'jeerakhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and condiments': [
+          'Cumin Powder'
+        ]
+      }
+    },
+    {
+      id: '61',
+      name: 'Ajwain Khakhra',
+      description: 'Ajwain Khakhra is a crisp, roasted Indian flatbread snack infused with Ajwain (Carom seeds), which give it a unique, slightly bitter, aromatic flavor and a range of digestive benefits. Like other khakhras, it\'s made using whole wheat flour, making it a wholesome and light snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhraspics/IMG_4.png',
+      images: ['/images/khakhraspics/IMG_4.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'ajwainkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and condiments': [
+          'Turmeric Powder',
+          'Carom Seeds'
+        ]
+      }
+    },
+    {
+      id: '62',
+      name: 'Plain Khakhra',
+      description: 'Plain Khakhra is the most basic and traditional form of khakhra—a thin, crisp, roasted flatbread made primarily from whole wheat flour, with minimal spices or flavorings. It\'s a staple Gujarati snack known for its simplicity, versatility, and health benefits. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhraspics/IMG_5.png',
+      images: ['/images/khakhraspics/IMG_5.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'plainkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Minimal Spices': [],
+        'Iodized Salt': [],
+        'Rice Bran Oil': []
+      }
+    }
+
 
 ];
 export default products; 

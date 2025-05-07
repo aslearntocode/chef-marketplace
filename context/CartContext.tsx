@@ -252,23 +252,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         throw new Error('Invalid item data: item must be an object');
       }
 
-      // Log the incoming item
-      console.log('Raw incoming item:', JSON.stringify(item, null, 2));
-
-      // Ensure all required fields are present and have correct types
-      if (!item.id || typeof item.id !== 'string') {
-        throw new Error('Invalid item data: id is required and must be a string');
-      }
-      if (!item.name || typeof item.name !== 'string') {
-        throw new Error('Invalid item data: name is required and must be a string');
-      }
-      if (typeof item.price !== 'number' || isNaN(item.price)) {
-        throw new Error('Invalid item data: price is required and must be a number');
-      }
-      if (typeof item.quantity !== 'number' || isNaN(item.quantity)) {
-        throw new Error('Invalid item data: quantity is required and must be a number');
-      }
-
       // Create a properly structured cart item
       const cartItem: CartItem = {
         id: item.id,
@@ -281,9 +264,6 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         size: item.size || undefined,
         flavor: item.flavor || undefined
       };
-
-      // Log the processed cart item
-      console.log('Processed cart item:', JSON.stringify(cartItem, null, 2));
 
       // First, check if the item already exists
       let existingQuery = supabase
@@ -305,13 +285,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
       const { data: existingItem, error: fetchError } = await existingQuery.single();
 
-      if (fetchError && fetchError.code !== 'PGRST116') { // PGRST116 is "no rows returned"
-        console.error('Error checking existing cart item:', {
-          error: fetchError,
-          code: fetchError.code,
-          message: fetchError.message,
-          details: fetchError.details
-        });
+      if (fetchError && fetchError.code !== 'PGRST116') {
+        console.error('Error checking existing cart item:', fetchError);
         throw fetchError;
       }
 
@@ -327,33 +302,28 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           .eq('id', existingItem.id);
 
         if (updateError) {
-          console.error('Error updating existing cart item:', {
-            error: updateError,
-            code: updateError.code,
-            message: updateError.message,
-            details: updateError.details
-          });
+          console.error('Error updating existing cart item:', updateError);
           throw updateError;
         }
 
-        // Optimistically update local state
-        setItems(prevItems => {
-          return prevItems.map(i =>
+        // Update local state
+        setItems(prevItems => 
+          prevItems.map(i =>
             i.id === existingItem.id &&
             (i.size ?? null) === (existingItem.size ?? null) &&
             (i.flavor ?? null) === (existingItem.flavor ?? null)
               ? { ...i, quantity: i.quantity + cartItem.quantity, price: cartItem.price }
               : i
-          );
-        });
+          )
+        );
       } else {
         // If item doesn't exist, insert new item in Supabase
         const cartItemData = {
           user_id: userId,
           product_id: cartItem.id,
           name: cartItem.name,
-          price: Number(cartItem.price), // Send as numeric, not string
-          quantity: Math.floor(cartItem.quantity), // Ensure integer
+          price: Number(cartItem.price),
+          quantity: Math.floor(cartItem.quantity),
           size: cartItem.size || null,
           flavor: cartItem.flavor || null,
           vendor_id: cartItem.vendor_id || 'whole-foods',
@@ -363,83 +333,37 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           updated_at: new Date().toISOString()
         };
 
-        // Log the data being sent to Supabase
-        console.log('Attempting to insert cart item with data:', JSON.stringify(cartItemData, null, 2));
-
-        // First try without select
-        const { error: insertError } = await supabase
+        const { data: insertedItem, error: insertError } = await supabase
           .from('cart_items')
-          .insert([cartItemData]);
+          .insert([cartItemData])
+          .select()
+          .single();
 
         if (insertError) {
-          // Log the full error details
-          console.error('Error inserting new cart item:', {
-            error: insertError,
-            code: insertError.code,
-            message: insertError.message,
-            details: insertError.details,
-            hint: insertError.hint
-          });
-
-          // Log the exact data that failed to insert
-          console.error('Cart item data that failed to insert:', JSON.stringify(cartItemData, null, 2));
-
-          // Check for specific error types
-          if (insertError.code === '23505') { // Unique violation
-            console.error('Duplicate item detected. Attempting to update instead.');
-            // Try to update the existing item
-            const { error: updateError } = await supabase
-              .from('cart_items')
-              .update({ 
-                quantity: Math.floor(cartItemData.quantity),
-                price: Number(cartItemData.price), // Send as numeric, not string
-                updated_at: new Date().toISOString()
-              })
-              .eq('user_id', userId)
-              .eq('product_id', cartItemData.product_id)
-              .eq('size', cartItemData.size)
-              .eq('flavor', cartItemData.flavor);
-
-            if (updateError) {
-              console.error('Error updating existing item:', updateError);
-              throw updateError;
-            }
-            return; // Exit after successful update
-          }
-
-          // For other errors, throw the original error
+          console.error('Error inserting new cart item:', insertError);
           throw insertError;
         }
 
-        // After successful insert, optimistically update local state
-        setItems(prevItems => [
-          ...prevItems,
-          {
-            ...cartItem,
-            user_id: userId,
-            product_id: cartItem.id,
-            vendor_id: cartItem.vendor_id || 'whole-foods',
-            description: cartItem.description || undefined,
-            category: cartItem.category || undefined,
-            size: cartItem.size || undefined,
-            flavor: cartItem.flavor || undefined,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          }
-        ]);
-      }
+        if (!insertedItem) {
+          throw new Error('Failed to insert cart item: No data returned');
+        }
 
-      // Always sync with Supabase after
-      await fetchCartItems();
+        // Update local state with the inserted item
+        setItems(prevItems => [...prevItems, {
+          ...cartItem,
+          user_id: userId,
+          product_id: cartItem.id,
+          vendor_id: cartItem.vendor_id || 'whole-foods',
+          description: cartItem.description || undefined,
+          category: cartItem.category || undefined,
+          size: cartItem.size || undefined,
+          flavor: cartItem.flavor || undefined,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        }]);
+      }
     } catch (error: any) {
-      console.error('Failed to add item to cart:', {
-        error,
-        code: error?.code,
-        message: error?.message,
-        details: error?.details,
-        hint: error?.hint,
-        item: JSON.stringify(item, null, 2)
-      });
+      console.error('Failed to add item to cart:', error);
       throw error;
     }
   };

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, use } from 'react';
+import { useState, use, useEffect } from 'react';
 import Image from 'next/image';
 import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/context/CartContext';
@@ -20,7 +20,7 @@ interface CategoryPageProps {
 export default function CategoryPage({ params }: CategoryPageProps) {
   const { category } = use(params);
   const { user } = useAuth();
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -44,6 +44,12 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     );
   });
 
+  const getItemQuantity = (productId: string) => {
+    if (!user) return 0;
+    const item = items.find(item => item.id === productId);
+    return item ? item.quantity : 0;
+  };
+
   const handleAddToCart = async (item: Product) => {
     if (!user) {
       const currentPath = window.location.pathname;
@@ -64,6 +70,22 @@ export default function CategoryPage({ params }: CategoryPageProps) {
 
     await addToCart(cartItem);
     toast.success(`${item.name} added to cart!`);
+  };
+
+  const handleRemoveFromCart = (productId: string) => {
+    if (!user) {
+      const currentPath = window.location.pathname;
+      toast.error('Please login to manage cart items');
+      router.push(`/login?returnUrl=${encodeURIComponent(currentPath)}`);
+      return;
+    }
+    
+    const item = items.find(item => item.id === productId);
+    if (item && item.quantity > 1) {
+      updateQuantity(productId, item.quantity - 1);
+    } else {
+      removeFromCart(productId);
+    }
   };
 
   return (
@@ -110,12 +132,32 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
                 <div className="flex justify-between items-center">
                   <p className="text-lg font-bold">₹{product.price}</p>
-                  <button
-                    onClick={() => handleAddToCart(product)}
-                    className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
-                  >
-                    Add to cart
-                  </button>
+                  <div className="flex items-center space-x-2">
+                    {getItemQuantity(product.id) > 0 ? (
+                      <>
+                        <button
+                          onClick={() => handleRemoveFromCart(product.id)}
+                          className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                        >
+                          -
+                        </button>
+                        <span className="mx-2">{getItemQuantity(product.id)}</span>
+                        <button
+                          onClick={() => handleAddToCart(product)}
+                          className="bg-gray-200 text-gray-800 px-3 py-1 rounded"
+                        >
+                          +
+                        </button>
+                      </>
+                    ) : (
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                      >
+                        Add to cart
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
