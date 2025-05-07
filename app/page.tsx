@@ -12,7 +12,18 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPopularSlide, setCurrentPopularSlide] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const router = useRouter();
+
+  // Filter products based on search query
+  const filteredProducts = products.filter(product => {
+    const searchLower = searchQuery.toLowerCase();
+    return (
+      product.name.toLowerCase().includes(searchLower) ||
+      product.description.toLowerCase().includes(searchLower) ||
+      product.tags?.some(tag => tag.toLowerCase().includes(searchLower))
+    );
+  });
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,6 +64,26 @@ export default function Home() {
         router.push(`/whole-foods?q=${encodeURIComponent(searchQuery.trim())}`);
       }
     }
+  };
+
+  const handleSuggestionClick = (product: any) => {
+    const categoryRoutes: { [key: string]: string } = {
+      'drinks': '/whole-foods/categories/drinks',
+      'healthy treats': '/whole-foods/categories/healthy-treats',
+      'pickles & condiments': '/whole-foods/categories/pickles',
+      'healthy bites': '/whole-foods/categories/healthy-bites',
+      'spice blends': '/whole-foods/categories/spice-blends',
+      'nuts and seeds': '/whole-foods/categories/nuts-and-seeds',
+      'healthy breakfast': '/whole-foods/categories/healthy-breakfast'
+    };
+
+    const category = product.category.toLowerCase();
+    if (categoryRoutes[category]) {
+      router.push(`${categoryRoutes[category]}?q=${encodeURIComponent(product.name)}`);
+    } else {
+      router.push(`/whole-foods?q=${encodeURIComponent(product.name)}`);
+    }
+    setShowSuggestions(false);
   };
 
   const slides = [
@@ -123,10 +154,44 @@ export default function Home() {
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSuggestions(true);
+                  }}
+                  onFocus={() => setShowSuggestions(true)}
                   className="w-full px-4 py-2 pl-10 pr-4 rounded-full border-2 border-[#8B4513] focus:outline-none focus:ring-2 focus:ring-[#8B4513] focus:border-transparent text-gray-800 bg-white text-sm shadow-sm"
                 />
                 <FiSearch className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-[#8B4513]" size={16} />
+                
+                {/* Search Suggestions Dropdown */}
+                {showSuggestions && searchQuery && (
+                  <div className="absolute z-50 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto">
+                    {filteredProducts.length > 0 ? (
+                      filteredProducts.map((product) => (
+                        <div
+                          key={product.id}
+                          onClick={() => handleSuggestionClick(product)}
+                          className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-3"
+                        >
+                          <div className="relative w-12 h-12">
+                            <Image
+                              src={product.image || '/images/placeholder.png'}
+                              alt={product.name}
+                              fill
+                              className="object-cover rounded"
+                            />
+                          </div>
+                          <div>
+                            <div className="font-medium text-gray-900">{product.name}</div>
+                            <div className="text-sm text-gray-500">{product.category}</div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="px-4 py-2 text-gray-500">No products found</div>
+                    )}
+                  </div>
+                )}
               </div>
               <button
                 type="submit"
