@@ -392,7 +392,7 @@ export default function Home() {
         {/* Marketing Metrics */}
         <section className="w-full bg-white py-12">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {/* Chefs Metric */}
               <div className="bg-white rounded-lg p-8 text-center">
                 <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">50+</h3>
@@ -416,8 +416,6 @@ export default function Home() {
                 <h3 className="text-4xl font-bold mb-2 text-[#8B4513] font-['YWFT_Hannah_Narrow']">200+</h3>
                 <p className="text-gray-600 text-lg text-[#8B4513] font-['YWFT_Hannah_Narrow']">Areas Currently Being Served</p>
               </div>
-
-
             </div>
           </div>
         </section>
@@ -426,45 +424,50 @@ export default function Home() {
         <section className="w-full bg-[#FDBE28] py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="bg-[#FDBE28] rounded-lg p-8">
-              <div className="rounded-lg p-8 mb-8">
-                <div className="flex items-center justify-center gap-2 mb-6">
-                  <span className="text-3xl">🌿</span>
-                  <h2 className="text-4xl text-center font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow']">Calling all 'HEALTHIER FOOD' curators!</h2>
-                  <span className="text-3xl">🍃</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                {/* Left side - Calling all section */}
+                <div className="rounded-lg p-8">
+                  <div className="flex items-center justify-center gap-2 mb-6">
+                    <span className="text-3xl">🌿</span>
+                    <h2 className="text-4xl text-center font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow']">Calling all 'HEALTHIER FOOD' curators!</h2>
+                    <span className="text-3xl">🍃</span>
+                  </div>
+                  
+                  <p className="text-center text-lg text-gray-700">
+                    Do you have a passion for coming up with nutritious yet delicious food products? If yes, then we would love for you and your expertise to be a part of our platform. So, lets celebrate the blend of 'Healthful and Tasteful' together!
+                  </p>
                 </div>
-                
-                <p className="text-center text-lg text-gray-700 mb-0 max-w-3xl mx-auto">
-                  Do you have a passion for coming up with nutritious yet delicious food products? If yes, then we would love for you and your expertise to be a part of our platform. So, lets celebrate the blend of 'Healthful and Tasteful' together!
-                </p>
+
+                {/* Right side - Why join us section */}
+                <div className="rounded-lg p-8">
+                  <h3 className="text-4xl font-bold text-center mb-6 text-[#8B4513] font-['YWFT_Hannah_Narrow']">
+                    ⭐ Why join us?
+                  </h3>
+                  <ul className="space-y-4">
+                    <li className="text-base text-gray-700">
+                      • Showcase your healthier food curatory skills to a broader audience
+                    </li>
+                    <li className="text-base text-gray-700">
+                      • Connect with people who appreciate wholesome food products
+                    </li>
+                    <li className="text-base text-gray-700">
+                      • 'Health being the biggest wealth'- Contribute to the health and happiness of the society
+                    </li>
+                    <li className="text-base text-gray-700">
+                      • Be a part of 'Make in India' and 'Made in India'
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div className="max-w-3xl mx-auto">
-                <h3 className="text-4xl font-bold text-center mb-6 text-[#8B4513] font-['YWFT_Hannah_Narrow']">
-                  ⭐ Why join us?
-                </h3>
-                <ul className="space-y-4 mb-8">
-                  <li className="text-base text-gray-700">
-                    • Showcase your healthier food curatory skills to a broader audience
-                  </li>
-                  <li className="text-base text-gray-700">
-                    • Connect with people who appreciate wholesome food products
-                  </li>
-                  <li className="text-base text-gray-700">
-                    • 'Health being the biggest wealth'- Contribute to the health and happiness of the society
-                  </li>
-                  <li className="text-base text-gray-700">
-                    • Be a part of 'Make in India' and 'Made in India'
-                  </li>
-                </ul>
-
-                <div className="text-center">
-                  <Link 
-                    href="/chef-application"
-                    className="bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-[#6B3410] transition-colors inline-block"
-                  >
-                    Apply Now
-                  </Link>
-                </div>
+              {/* Apply Now button centered below both sections */}
+              <div className="text-center mt-8">
+                <Link 
+                  href="/chef-application"
+                  className="bg-[#8B4513] text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-[#6B3410] transition-colors inline-block"
+                >
+                  Apply Now
+                </Link>
               </div>
             </div>
           </div>
