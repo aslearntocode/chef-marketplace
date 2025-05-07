@@ -2009,6 +2009,155 @@ export const products: Product[] = [
         'Iodized Salt': [],
         'Rice Bran Oil': []
       }
+    },
+    {
+      id: '63',
+      name: 'Ragi Khakhra',
+      description: 'Ragi Khakhras are a healthy, crispy Indian snack made from ragi flour (finger millet flour). They\'re a nutritious twist on the traditional wheat khakhra, offering benefits like being gluten-free, high in calcium, fiber, and iron. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras2/IMG_6.png',
+      images: ['/images/khakhras2/IMG_6.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'Ragikhakhra', 'Glutenfreekhakhra'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Spices': [],
+        'Iodized Salt': [],
+        'Chilli Powder': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '64',
+      name: 'Bajri Khakhra',
+      description: 'Bajri Khakhras (Pearl Millet Khakhras) are another nutritious and crispy Indian snack, especially popular in Gujarati cuisine. Made using Bajra (Pearl Millet) flour, they\'re rich in fiber, iron, and essential minerals, and are great for winter or general digestive health. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras2/IMG_7.png',
+      images: ['/images/khakhras2/IMG_7.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'bajrikhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Sugar': [],
+        'Spices and condiments': [
+          'Chilli Powder',
+          'Turmeric Powder'
+        ]
+      }
+    },
+    {
+      id: '65',
+      name: 'Palak Khakhra',
+      description: 'Palak Khakhra (Spinach Khakhra) is a flavourful, crispy Indian flatbread made with wheat flour and spinach puree, spiced and roasted until crisp. It\'s a healthy snack, especially great for kids or anyone looking to sneak more greens into their diet. NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras2/IMG_8.png',
+      images: ['/images/khakhras2/IMG_8.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'palakkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Spinach Puree': [],
+        'Spices': [],
+        'Iodized Salt': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '66',
+      name: 'Kothmir Marcha Khakhra',
+      description: 'Kothmir Marcha (also known as Dhaniya Marcha) is a spicy and flavourful Gujarati-style green chili and coriander stir-fry. It\'s typically served as a side dish or condiment with theplas, khakhras, or even dal-rice. Kothmir Marcha flavoured Khakhras are spicier and unique in their taste and blend. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras2/IMG_9.png',
+      images: ['/images/khakhras2/IMG_9.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'kothmirmarchakhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and condiments': [
+          'Coriander Leaves',
+          'Green Chilli'
+        ]
+      }
+    },
+    {
+      id: '67',
+      name: 'Mint (Pudina) Khakhra',
+      description: 'Mint Khakhra (Pudina Khakhra) is a crispy, aromatic snack made by infusing fresh or dried mint leaves into traditional khakhra dough. It\'s refreshing, light, and perfect as a guilt-free snack with tea or yogurt. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras2/IMG_10.png',
+      images: ['/images/khakhras2/IMG_10.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'mintkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': [
+          'High in Dietary Fiber',
+          'Promotes healthy digestion and helps prevent constipation',
+          'Helps you feel full longer, which can assist in weight management'
+        ],
+        'Black Chickpea Flour': [
+          'High in Protein',
+          'Excellent plant-based protein source, supporting muscle repair and growth',
+          'Ideal for vegetarians, vegans, and those reducing meat consumption'
+        ],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Sugar': [],
+        'Spices and condiments': [
+          'Mint Powder',
+          'Chaat Masala',
+          'Chilli Powder'
+        ]
+      }
     }
 
 

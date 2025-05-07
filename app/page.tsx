@@ -35,19 +35,22 @@ export default function Home() {
           'drinks': '/whole-foods/categories/drinks',
           'healthy treats': '/whole-foods/categories/healthy-treats',
           'pickles & condiments': '/whole-foods/categories/pickles',
-          'healthy bites': '/whole-foods/categories/healthy-bites'
+          'healthy bites': '/whole-foods/categories/healthy-bites',
+          'spice blends': '/whole-foods/categories/spice-blends',
+          'nuts and seeds': '/whole-foods/categories/nuts-and-seeds',
+          'healthy breakfast': '/whole-foods/categories/healthy-breakfast'
         };
 
         // If we have a matching category route, go there with the search query
         if (categoryRoutes[firstMatchCategory]) {
-          router.push(`${categoryRoutes[firstMatchCategory]}?search=${encodeURIComponent(searchQuery.trim())}`);
+          router.push(`${categoryRoutes[firstMatchCategory]}?q=${encodeURIComponent(searchQuery.trim())}`);
         } else {
           // If no specific category route, go to main whole foods with search query
-          router.push(`/whole-foods?search=${encodeURIComponent(searchQuery.trim())}`);
+          router.push(`/whole-foods?q=${encodeURIComponent(searchQuery.trim())}`);
         }
       } else {
         // If no matches found, go to main whole foods with search query
-        router.push(`/whole-foods?search=${encodeURIComponent(searchQuery.trim())}`);
+        router.push(`/whole-foods?q=${encodeURIComponent(searchQuery.trim())}`);
       }
     }
   };

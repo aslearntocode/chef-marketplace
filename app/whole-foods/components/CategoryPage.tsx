@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import { Product } from '@/types/whole-foods';
 import { toast } from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { FiSearch } from 'react-icons/fi';
 
 interface CategoryPageProps {
@@ -19,9 +19,31 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
   const { user } = useAuth();
   const { addToCart, removeFromCart, items, updateQuantity } = useCart();
   const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
+  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams?.get('q') || '');
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({});
   const [selectedVariants, setSelectedVariants] = useState<{ [productId: string]: { sizeIdx: number; flavorIdx: number } | number }>({});
+
+  // Update search query when URL parameter changes
+  useEffect(() => {
+    const q = searchParams?.get('q');
+    if (q) {
+      setSearchQuery(q);
+    }
+  }, [searchParams]);
+
+  // Update URL when search query changes
+  useEffect(() => {
+    if (searchQuery) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('q', searchQuery);
+      window.history.replaceState({}, '', url.toString());
+    } else {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('q');
+      window.history.replaceState({}, '', url.toString());
+    }
+  }, [searchQuery]);
 
   const filteredProducts = products.filter((product: Product) => {
     const searchLower = searchQuery.toLowerCase();
