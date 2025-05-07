@@ -2255,6 +2255,108 @@ export const products: Product[] = [
         'Iodized salt': [],
         'Spices and condiments': ['Achar', 'mustard seeds', 'Fenugreek seeds', 'chilli powder']
       }
+    },
+    {
+      id: '73',
+      name: 'Maggi Khakhra',
+      description: 'Maggi Khakhra is a fun and modern fusion snack that combines the crispiness of traditional khakhra with the iconic, savory taste of Maggi noodles masala—a nostalgic favorite across India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras4/IMG_16.png',
+      images: ['/images/khakhras4/IMG_16.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'maggikhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Spices and Condiments': ['Maggi Mania', 'Turmeric Powder']
+      }
+    },
+    {
+      id: '74',
+      name: 'Cheese Garlic Khakhra',
+      description: 'Cheese Garlic Khakhra is a deliciously modern and indulgent khakhra flavour that blends the crisp, roasted base of traditional khakhra with the rich taste of cheese and the bold punch of garlic. It\'s perfect for snack lovers who enjoy savoury, cheesy treats with an Indian twist. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras4/IMG_17.png',
+      images: ['/images/khakhras4/IMG_17.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'cheesegarlickhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Sugar': [],
+        'Spices and Condiments': ['Cheese Masala', 'Garlic Powder', 'Chilli Powder']
+      }
+    },
+    {
+      id: '75',
+      name: 'Manchurian Khakhra',
+      description: 'Manchurian Khakhra is a bold Indo-Chinese twist on traditional khakhra, combining the crispy texture of this Gujarati snack with the spicy, tangy, and umami flavors of vegetable or Gobi Manchurian—a street food favorite across India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras4/IMG_18.png',
+      images: ['/images/khakhras4/IMG_18.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'manchuriankhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized Salt': [],
+        'Sugar': [],
+        'Spices and condiments': ['Manchurian Powder', 'Chilli Powder']
+      }
+    },
+    {
+      id: '76',
+      name: 'Peri Peri Khakhra',
+      description: 'Peri Peri Khakhra is a fiery, flavourful fusion snack that combines the crunchy texture of khakhra with the bold, spicy, and slightly tangy Peri Peri (Piri Piri) seasoning—originally inspired by African-Portuguese flavours and popularized by many restaurant brands also. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras4/IMG_19.png',
+      images: ['/images/khakhras4/IMG_19.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'Periperikhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized salt': [],
+        'Sugar': [],
+        'Spices and condiments': ['Peri Peri', 'Cheese Tangy Tomato', 'Chilli Powder', 'Chilli Flakes']
+      }
+    },
+    {
+      id: '77',
+      name: 'Cream and Onion Khakhra',
+      description: 'Cream and Onion Khakhra is a tasty fusion snack inspired by the popular \'sour cream and onion\' flavour found in Western chips and crisps, adapted to the Indian palate through the crisp and wholesome format of khakhra. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras4/IMG_20.png',
+      images: ['/images/khakhras4/IMG_20.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'Creamandonionkhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
+        'Peanut Flour': [],
+        'Rice Bran Oil': [],
+        'Iodized salt': [],
+        'Sugar': [],
+        'Spices and condiments': ['Cream and Onion Masala']
+      }
     }
+
+
+
 ];
 export default products; 
