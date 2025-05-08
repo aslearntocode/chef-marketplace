@@ -2362,9 +2362,140 @@ export const products: Product[] = [
         'Sugar': [],
         'Spices and condiments': ['Cream and Onion Masala']
       }
+    },
+    {
+      id: '78',
+      name: 'Farali Khakhra',
+      description: 'Farali Khakhra is a type of crispy Indian snack made specifically for fasting (or vrat) days. It\'s similar to regular khakhra (a thin, roasted flatbread), but made with ingredients that are allowed during Hindu fasts. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras5/IMG_21.png',
+      images: ['/images/khakhras5/IMG_21.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'faralikhakhras', 'Glutenfreekhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Barnyard Millet Flour (Bhagar Flour)': [
+          'Gluten-Free: Ideal for people with gluten intolerance or celiac disease, as it doesn\'t contain wheat or gluten proteins.',
+          'High in Fiber: Aids in digestion, prevents constipation, and helps regulate bowel movements.'
+        ],
+        'Water Chestnut Flour (Singoda Flour)': [
+          'Gluten-Free: A safe, nutritious alternative for people with gluten intolerance or celiac disease.',
+          'Rich in Fiber: Aids digestion, promotes gut health, and helps relieve constipation.'
+        ],
+        'Amaranth Flour': [
+          'Gluten-Free: Safe for people with gluten intolerance or celiac disease.',
+          'High in Protein: One of the few plant-based flours that contains all nine essential amino acids, especially lysine, which is rare in grains.'
+        ],
+        'Rock Salt': [],
+        'Cumin Powder': [],
+        'Green Chilli': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '79',
+      name: 'Mung Khakhra',
+      description: 'Moong Khakhra (or mung khakhra) is a crispy, savory Indian snack made from moong dal (split green gram) and whole wheat flour, similar in texture to a cracker or thin flatbread. It\'s a healthier, protein-rich variation of traditional khakhra, popular as a tea-time snack or a light meal option. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras5/IMG_22.png',
+      images: ['/images/khakhras5/IMG_22.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'mungkhakhras', 'moongkhakhras', 'Glutenfreekhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Green Gram(Mung)': [
+          'High in Plant-Based Protein: Provides about 24g of protein per 100g, supporting muscle growth and tissue repair.',
+          'Rich in Fiber: Aids digestion, helps regulate bowel movements, and keeps you feeling full—great for weight management.'
+        ],
+        'Gram Flour': [
+          'Rich in Plant-Based Protein: Contains around 20–22g of protein per 100g, supporting muscle repair and keeping you full.',
+          'High in Fiber: Promotes digestion, helps regulate bowel movements, and stabilizes blood sugar levels.'
+        ],
+        'Black Gram Flour (Urad Flour)': [],
+        'Iodized Salt': [],
+        'Green Chilli': [],
+        'Ginger': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '80',
+      name: 'Bajri Khakhra',
+      description: 'Bajri Khakhra is a healthy and crunchy Indian snack made from bajra (pearl millet) flour. It\'s a traditional Gujarati food that\'s especially popular during winters due to its warming properties. Like other khakhras, it\'s roasted, not fried, making it a light yet satisfying snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras5/IMG_23.png',
+      images: ['/images/khakhras5/IMG_23.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'bajrikhakhras', 'glutenfreekhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Bajri (Pearl Millet)': [
+          'Gluten-Free: Bajra is naturally gluten-free, making it a safe and nutritious option for people with celiac disease or gluten intolerance.',
+          'High in Fiber: Bajra is rich in dietary fiber, which aids digestion, helps prevent constipation, and supports overall gut health.'
+        ],
+        'Black Gram (Urad Dal)': [
+          'High in Protein: Black gram is a protein-rich legume, making it an excellent plant-based protein source for vegetarians and vegans.',
+          'Good for Digestion: Rich in fiber, urad dal supports healthy digestion, prevents constipation, and promotes regular bowel movements.'
+        ],
+        'Black Chickpeas': [],
+        'Iodized Salt': [],
+        'Green Chilli': [],
+        'Ginger': [],
+        'Rice Bran Oil': []
+      }
+    },
+    {
+      id: '81',
+      name: 'Khichdi Khakhra',
+      description: 'Khichdi Khakhra is a delicious, healthy fusion snack that combines the comforting flavours of khichdi (a dish made with rice and lentils) with the crisp, crunchy texture of khakhra (a Gujarati roasted flatbread). This variation takes the nutrients of khichdi and transforms it into a crispy, snackable form, perfect for healthy munching. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras5/IMG_24.png',
+      images: ['/images/khakhras5/IMG_24.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'khichdikhakhras', 'glutenfreekhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Rice Flour': [
+          'Gluten-Free: Rice flour is naturally gluten-free, making it an excellent alternative for people with celiac disease or gluten intolerance.',
+          'Easily Digestible: Rice flour is light on the stomach and easily digestible, making it suitable for those with sensitive digestive systems.'
+        ],
+        'Green Gram': [
+          'High in Protein: Green gram provides around 24g of protein per 100g, supporting muscle growth and tissue repair.',
+          'Rich in Fiber: Helps regulate digestion, prevent constipation, and promote gut health.'
+        ],
+        'Pigeon Pea (Tuvar Dal)': [],
+        'Peanut Flour': [],
+        'Iodized Salt': [],
+        'Rice Bran Oil': [],
+        'Chilli Powder': [],
+        'Turmeric Powder': [],
+        'Garam Masala (Cinnamon, Cloves, Cardamom, Bay Leaves, Black Pepper, Nutmeg, Mace)': []
+      }
+    },
+    {
+      id: '82',
+      name: 'Juvar Khakhra',
+      description: 'Juvar Khakhra is a delicious and healthy snack made from juvar (sorghum) flour, a gluten-free grain that is rich in nutrients. This khakhra variant is made in a similar fashion to the traditional bajra khakhra or wheat khakhra but uses juvar flour for a unique taste and nutritional profile. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/khakhras5/IMG_25.png',
+      images: ['/images/khakhras5/IMG_25.png'],
+      category: 'Healthy Bites',
+      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'juvarkhakhras', 'Glutenfreekhakhras'],
+      size: '200 gms',
+      ingredients_benefits: {
+        'Sorghum Flour (Juvar Flour)': [
+          'Gluten-Free: Sorghum flour is naturally gluten-free, making it an excellent choice for those with celiac disease or gluten intolerance.',
+          'High in Fiber: Supports digestive health, helps prevent constipation, and can help manage blood sugar levels.'
+        ],
+        'Gram Flour (Chana Dal)': [
+          'High in Protein: Gram flour is a rich source of plant-based protein, supporting muscle growth and tissue repair.',
+          'Rich in Fiber: Aids in digestion, promotes regular bowel movements, and helps maintain healthy blood sugar levels.'
+        ],
+        'Black Gram Flour (Urad Flour)': [],
+        'Cumin': [],
+        'Iodized Salt': [],
+        'Rice Bran Oil': []
+      }
     }
-
-
-
 ];
 export default products; 
