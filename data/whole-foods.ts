@@ -2496,6 +2496,163 @@ export const products: Product[] = [
         'Iodized Salt': [],
         'Rice Bran Oil': []
       }
+    },
+    {
+      id: '83',
+      name: "Makai Khakhra",
+      description: "Makai Khakhra is a delicious variation of traditional khakhra that incorporates corn flour (makai flour), giving it a unique texture and flavour. It's a perfect gluten-free alternative to the classic wheat-based khakhra, while still maintaining that crispy and crunchy goodness. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_26.png",
+      images: ["/images/khakhras6/IMG_26.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "makaikhakhras", "Glutenfreekhakhras"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Corn Flour (Makai Flour)": [
+          "Gluten-Free: Corn flour is naturally gluten-free, making it an excellent alternative for those with celiac disease or gluten intolerance. It can be used to prepare gluten-free bread, muffins, and other baked goods.",
+          "Rich in Carbohydrates: Corn flour is high in complex carbohydrates, providing a slow-release source of energy. It helps maintain blood sugar levels and can be a good energy booster for active individuals."
+        ],
+        "Gram Flour (Chana Dal Flour)": [
+          "Rich in Protein: Gram flour is an excellent source of plant-based protein, making it a great addition to vegetarian and vegan diets. Protein is essential for muscle growth, repair, and overall body function.",
+          "High in Fiber: It is a good source of dietary fiber, which aids in digestion, prevents constipation, and helps maintain a healthy gut. Fiber also helps in lowering cholesterol levels and supports heart health."
+        ],
+        "Black Gram Flour (Urad Flour)": [],
+        "Chilli Powder": [],
+        "Iodized Salt": [],
+        "Turmeric Powder": [],
+        "Rice Bran Oil": []
+      }
+    },
+    {
+      id: '84',
+      name: "Dosa Khakhra",
+      description: "Dosa Khakhra is an innovative fusion snack that combines the crispy texture of traditional khakhra with the flavors of dosa, a popular South Indian crepe made from fermented rice and urad dal batter. This unique snack brings together the delicious spices of dosa and the satisfying crunch of khakhra. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_27.png",
+      images: ["/images/khakhras6/IMG_27.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "dosakhakhras", "Glutenfreekhakhras"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Rice Flour": [
+          "Gluten-Free: Rice flour is naturally gluten-free, making it an excellent option for individuals with celiac disease or those who follow a gluten-free diet. It can be used as a substitute for wheat flour in many recipes, such as bread, pancakes, cakes, and more.",
+          "Rich in Carbohydrates: Rice flour is a great source of complex carbohydrates, providing the body with a steady release of energy. It is particularly beneficial for individuals who need sustained energy throughout the day."
+        ],
+        "Black Gram (Urad)": [
+          "High in Protein: Black gram is an excellent source of plant-based protein, making it a vital food for vegetarians and vegans. It supports muscle repair, growth, and overall body functions, while being a great alternative to meat for protein intake.",
+          "Rich in Fiber: The high fiber content in black gram promotes digestive health. It helps regulate bowel movements, prevent constipation, and maintain a healthy gut. Fiber also helps in controlling cholesterol levels and promotes heart health."
+        ],
+        "Sooji": [],
+        "Citric Acid": [],
+        "Iodized Salt": [],
+        "Rice Bran Oil": []
+      }
+    },
+    {
+      id: '85',
+      name: "Ratlami Khakhra",
+      description: "Ratlami Khakhra is a flavorful twist on the traditional khakhra, inspired by the spicy and aromatic Ratlami sev from Ratlam, a city in Madhya Pradesh, India. Ratlami sev is known for its bold, tangy, and spicy flavors, often made with carom seeds (ajwain), cumin, and black pepper, which give it a distinct kick. When combined with the crisp texture of khakhra, you get a savory and crunchy snack that's full of flavor. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_28.png",
+      images: ["/images/khakhras6/IMG_28.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "ratlamikhakhras", "glutenfreekhakhras"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Black Chick Peas": [
+          "High in Protein: Black chickpeas are an excellent source of plant-based protein, making them a great choice for vegetarians and vegans. Protein is essential for muscle repair, immune function, and overall body health.",
+          "Rich in Fiber: Black chickpeas are high in dietary fiber, which is beneficial for digestion. It promotes regular bowel movements, prevents constipation, and helps maintain a healthy gut microbiome. Fiber also helps lower bad cholesterol and improves heart health."
+        ],
+        "Carrom Seeds (Ajwain)": [
+          "Aid Digestion: Carrom seeds are well-known for their digestive properties. They stimulate the production of gastric juices, which helps in digesting food efficiently. They are commonly used to relieve issues like bloating, indigestion, gas, and constipation. Ajwain is also believed to improve appetite and reduce discomfort after heavy meals."
+        ],
+        "Iodized Salt": [],
+        "Red Chili Powder": [],
+        "Turmeric Powder": [],
+        "Garam Masala (Cinnamon, Clove, Cardamom, Bay Leaves, Black Pepper, Nutmeg, Mace)": []
+      }
+    },
+    {
+      id: '86',
+      name: "Adad Mari Khakhra",
+      description: "Adad Mari Khakhra is a variation of the traditional khakhra, incorporating Adad Dal (black lentils) and Pepper (Mari) for a spicy, crunchy, and nutritious snack. Adad dal is rich in protein, fiber, and essential nutrients, while the black pepper adds heat and digestive benefits, making this khakhra both delicious and healthy. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_29.png",
+      images: ["/images/khakhras6/IMG_29.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "adadmarikhakhra", "Glutenfreekhakhra"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Black Gram Flour (Urad Flour)": [
+          "Protein: It is an excellent source of plant-based protein, making it a great choice for vegetarians and vegans.",
+          "Fiber: Black gram flour is high in dietary fiber, which is important for digestive health and maintaining stable blood sugar levels."
+        ],
+        "Black Pepper": [
+          "Pepper is known to stimulate the production of digestive enzymes, which can help improve digestion and absorption of nutrients. It also has carminative properties, meaning it helps relieve gas, bloating, and indigestion.",
+          "Black pepper is packed with antioxidants that help fight free radicals in the body. These free radicals are unstable molecules that can cause damage to cells, contributing to aging and various diseases, including heart disease and cancer."
+        ],
+        "Iodized Salt": [],
+        "Asafoetida": [],
+        "Rice Bran Oil": []
+      }
+    },
+    {
+      id: '87',
+      name: "Juvar Khakhra",
+      description: "Super Seeds Khakhra is a nutritious twist on the traditional khakhra, incorporating a variety of super seeds into the recipe. Super seeds are nutrient-dense and rich in healthy fats, fiber, protein, vitamins, and minerals. Adding them to khakhra enhances both its health benefits and its flavour. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_30.png",
+      images: ["/images/khakhras6/IMG_30.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "seedskhakhras", "Glutenfreekhakhras"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Green Gram Flour (Mung)": [
+          "High in Protein: Green gram flour is an excellent source of plant-based protein, which is essential for muscle growth, tissue repair, and immune system support. It's particularly beneficial for vegetarians and vegans.",
+          "Rich in Fiber: Green gram flour is high in dietary fiber, which aids in proper digestion, prevents constipation, and supports gut health. It also helps in regulating blood sugar levels and lowering cholesterol."
+        ],
+        "Sorghum Flour (Juvar Flour)": [
+          "Gluten-Free: Sorghum flour is naturally gluten-free, making it a great choice for people with celiac disease, gluten intolerance, or anyone following a gluten-free diet. It can be used to replace wheat flour in various recipes without affecting taste or texture significantly.",
+          "High in Fiber: Sorghum flour is an excellent source of dietary fiber, which supports digestive health by promoting regular bowel movements and preventing constipation. Fiber also helps lower cholesterol levels, regulates blood sugar, and aids in weight management."
+        ],
+        "Black Chickpeas Flour": [],
+        "Sunflower Seeds Flour": [],
+        "Pumpkin Seeds Flour": [],
+        "Finger Millet Flour (Ragi Flour)": [],
+        "Chia Seeds": [],
+        "Sesame Seeds": [],
+        "Flax Seeds": [],
+        "Quinoa Flour": [],
+        "Iodized Salt": [],
+        "Green Chilli": [],
+        "Ginger": [],
+        "Rice Bran Oil": []
+      }
+    },
+    {
+      id: '88',
+      name: "Moringa Khakhra",
+      description: "Moringa Khakhra is a healthy and nutritious variation of the traditional khakhra, made by incorporating moringa leaves (known as drumstick leaves) into the dough. Moringa is packed with essential nutrients like vitamins A, C, and E, iron, calcium, and protein, making it a superfood that offers numerous health benefits. Adding moringa to khakhra not only enhances its nutritional profile but also adds a unique flavour and a vibrant green colour to the crispy snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 150,
+      image: "/images/khakhras6/IMG_31.png",
+      images: ["/images/khakhras6/IMG_31.png"],
+      category: "Healthy Bites",
+      tags: ["madeinindia", "snacks", "betterkhakhras", "nopalmoil", "healthier", "healthierkhakhra", "healthiersnack", "gotosnack", "moringakhakhras", "Glutenfreekhakhras"],
+      size: "200 gms",
+      ingredients_benefits: {
+        "Moringa Leaves": [
+          "Rich in Nutrients: Moringa leaves are packed with essential vitamins and minerals, including vitamin A, C, E, iron, calcium, and protein. They are considered a superfood due to their high nutritional value.",
+          "Antioxidant Properties: Moringa leaves contain powerful antioxidants that help protect the body against free radicals and oxidative stress, which can lead to various health issues."
+        ],
+        "Gram Flour": [
+          "High in Protein: Gram flour is an excellent source of plant-based protein, making it a great choice for vegetarians and vegans.",
+          "Rich in Fiber: It helps in maintaining digestive health and regulating blood sugar levels."
+        ],
+        "Rice Flour": [],
+        "Iodized Salt": [],
+        "Turmeric Powder": [],
+        "Rice Bran Oil": []
+      }
     }
 ];
 export default products; 
