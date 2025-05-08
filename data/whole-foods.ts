@@ -8,7 +8,8 @@ export const products: Product[] = [
         price: 120,
         image: '/images/Coconut Barfi With Jaggery.jpeg',
         category: 'Healthy Treats',
-        tags: ['healthy', 'sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet', 'homemade', 'handmade', 'pure']
+        tags: ['healthy', 'sweet', 'dessert', 'coconut', 'jaggery', 'barfi', 'indian sweet', 'homemade', 'handmade', 'pure'],
+        size: '200gms',
     },
     {
         id: '2',
@@ -133,7 +134,8 @@ export const products: Product[] = [
           '/images/dateandnutbites/NNs_80.jpg'
         ],
         category: 'Healthy Treats',
-        tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites', 'hearthealthy', 'nopalmoil', 'no maida', 'allnatural', 'nochemicals']
+        tags: ['healthy', 'treats', 'date', 'nut', 'bites', 'healthy treats', 'date and nut bites', 'healthy snack', 'healthy treat', 'healthy bites', 'hearthealthy', 'nopalmoil', 'no maida', 'allnatural', 'nochemicals'],
+        size: '100gms'
     },
     {
       id: '9',
@@ -309,7 +311,8 @@ export const products: Product[] = [
           '/images/wholewheatjaggery-gurpaara/NNs_48.jpg'
         ],
         category: 'Healthy Treats',
-        tags: ['wholewheat', 'wholewheatsnack', 'zeromaida', 'hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'mathri', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'jaggery', 'gurpaare']
+        tags: ['wholewheat', 'wholewheatsnack', 'zeromaida', 'hearthealthy', 'nopalmoil', 'himalayanpinksalt', 'nomaida', 'noreusedoil', 'mathri', 'traditionalrecipe', 'kidsfriendly', 'tiffinsnack', 'tiffinbox', 'antioxidants', 'natural', 'nochemicals', 'allnatural', 'wholegrain', 'jaggery', 'gurpaare'],
+        size: '100gms'
     },
     {
         id: '15',
@@ -327,7 +330,8 @@ export const products: Product[] = [
           '/images/gondladdoo/IMG_7.jpg'
         ],
         category: 'Healthy Treats',
-        tags: ['laddoos', 'laddu', 'gheeladdoo', 'cowghee', 'gondladdoos', 'gondladdu', 'dryfruitladdoo', 'dryfruitladdu', 'mithai', 'indiansweets', 'homemadesweets', 'pregnancyladdoo', 'lactation']
+        tags: ['laddoos', 'laddu', 'gheeladdoo', 'cowghee', 'gondladdoos', 'gondladdu', 'dryfruitladdoo', 'dryfruitladdu', 'mithai', 'indiansweets', 'homemadesweets', 'pregnancyladdoo', 'lactation'],
+        size: '225gms'
     },
     {
         id: '16',
