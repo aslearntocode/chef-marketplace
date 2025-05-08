@@ -257,6 +257,10 @@ export default function ProductPage({ params }: ProductPageProps) {
                     </span>
                   ) : null}
                 </div>
+                {/* Display size information */}
+                <p className="text-sm text-gray-500 mt-2">
+                  {product.size ? `Size: ${product.size}` : ''}
+                </p>
               </div>
 
               {/* Variant Selectors */}
@@ -266,7 +270,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   {product.variants.sizes && (
                     <div>
                       <label htmlFor="size-select" className="block text-sm font-medium text-gray-900 mb-2">
-                        Select Size
+                        {product.name.toLowerCase().includes('cashew') ? 'Select Variety' : 'Select Size'}
                       </label>
                       <select
                         id="size-select"
@@ -274,7 +278,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                         onChange={handleSizeChange}
                         className="w-full border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black"
                       >
-                        <option value="">Choose a size</option>
+                        <option value="">Choose a {product.name.toLowerCase().includes('cashew') ? 'variety' : 'size'}</option>
                         {product.variants.sizes.map((size) => (
                           <option key={size.name} value={size.name}>
                             {size.name} - ₹{size.price}

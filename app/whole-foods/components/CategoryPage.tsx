@@ -299,6 +299,10 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                 <div className="flex flex-col flex-1">
                   <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
                   <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description.split('•')[0]}</p>
+                  {/* Display size information */}
+                  <p className="text-sm text-gray-500 mb-2">
+                    {product.size ? `Size: ${product.size}` : ''}
+                  </p>
                   {/* Variant selectors for sizes and flavors */}
                   {(hasSizes || hasFlavors) && (
                     <div className={`mb-2 flex ${hasSizes && hasFlavors ? 'gap-2' : ''}`}>
@@ -316,6 +320,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                             }));
                           }}
                         >
+                          <option value="">Choose a {product.name.toLowerCase().includes('cashew') ? 'variety' : 'size'}</option>
                           {product.variants!.sizes!.map((size, idx) => (
                             <option key={size.value} value={idx}>
                               {size.name} - ₹{size.price}

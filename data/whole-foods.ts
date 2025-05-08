@@ -197,10 +197,10 @@ export const products: Product[] = [
           '/images/jaggerymangopickle/MZ8_0633.jpg',
           '/images/jaggerymangopickle/MZ8_0635.jpg',
           '/images/jaggerymangopickle/MZ8_0640.jpg'
-
         ],
         category: 'Pickles & Condiments',
-        tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'aamkaachaar', 'mangopickle', 'rawmangopickle', 'chundo', 'chunda', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle']
+        tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'aamkaachaar', 'mangopickle', 'rawmangopickle', 'chundo', 'chunda', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle'],
+        size: '200gms'
     },
     {
       id: '11',
@@ -255,7 +255,8 @@ export const products: Product[] = [
           '/images/traditionallemonpickle/DSC_8885-Edit.jpg'
         ],
         category: 'Pickles & Condiments',
-        tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles']
+        tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles'],
+        size: '200gms'
     },
     {
       id: '13',
@@ -344,7 +345,8 @@ export const products: Product[] = [
           '/images/sweetandspicymangochutney/IMG_7.jpg'
         ],
         category: 'Pickles & Condiments',
-        tags: ['naturalchutney', 'traditionalpickle', 'traditionalrecipe', 'aamchutney', 'mangochutney', 'rawmangopickle', 'chundo', 'chunda', 'oilfreechutney', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle']
+        tags: ['naturalchutney', 'traditionalpickle', 'traditionalrecipe', 'aamchutney', 'mangochutney', 'rawmangopickle', 'chundo', 'chunda', 'oilfreechutney', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle'],
+        size: '200gms'
     },
     {
         id: '17',
@@ -362,7 +364,8 @@ export const products: Product[] = [
           '/images/redchillipickle/IMG_7.jpg'
         ],
         category: 'Pickles & Condiments',
-        tags: ['naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'chillipickle', 'redchillipickle', 'stuffedchillipickle', 'banarasipickle']
+        tags: ['naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'chillipickle', 'redchillipickle', 'stuffedchillipickle', 'banarasipickle'],
+        size: '200gms'
     },
     {
         id: '18',
@@ -384,7 +387,8 @@ export const products: Product[] = [
           '/images/greenchillipickle/IMG_11.jpg'
         ],
         category: 'Pickles & Condiments',
-        tags: ['chillipickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'greenchillipickle', 'harimirchachaar', 'mirchiachaar', 'homemadepickle', 'northindianpickle']
+        tags: ['chillipickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'greenchillipickle', 'harimirchachaar', 'mirchiachaar', 'homemadepickle', 'northindianpickle'],
+        size: '200gms'
     },
     {
       id: '19',
@@ -595,7 +599,7 @@ export const products: Product[] = [
       ],
       category: 'Pickles & Condiments',
       tags: ['pickle', 'traditional', 'winter', 'carrot', 'cauliflower', 'homestyle', 'nopreservatives', 'nochemicals', 'natural', 'condiment'],
-      size: '300gms',
+      size: '200gms',
       ingredients_benefits: {
         'Carrots': [
           'Rich in beta carotene and vitamin A for eye health',
@@ -1839,15 +1843,15 @@ export const products: Product[] = [
         '/images/cashewspics/Split Cashews.jpg'
         
       ],
-      price: 1000,
+      price: 325,
       variants: {
         sizes: [
-          { name: 'Broken', value: 'Broken', price: 1000 },
-          { name: 'Split', value: 'Split', price: 1100 },
-          { name: 'Small', value: 'Small', price: 1200 },
-          { name: 'Medium', value: 'Medium', price: 1250 },
-          { name: 'Large', value: 'Large', price: 1400 },
-          { name: 'Jumbo', value: 'Jumbo', price: 1600 },
+          { name: 'Broken', value: 'Broken', price: 325 },
+          { name: 'Split', value: 'Split', price: 355 },
+          { name: 'Small', value: 'Small', price: 385 },
+          { name: 'Medium', value: 'Medium', price: 405 },
+          { name: 'Large', value: 'Large', price: 455 },
+          { name: 'Jumbo', value: 'Jumbo', price: 510 },
         ]
       },
       ingredients_benefits: {
