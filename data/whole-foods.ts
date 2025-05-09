@@ -2653,6 +2653,201 @@ export const products: Product[] = [
         "Turmeric Powder": [],
         "Rice Bran Oil": []
       }
-    }
+    },
+    {
+      id: '89',
+      name: 'Mango Pickle',
+      description: "Mango pickle in mustard oil is a classic North Indian style, especially popular in regions like Punjab, Uttar Pradesh, and Bihar. It's known for its sharp tangy flavour, spicy kick, and the deep aroma of mustard oil. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 120,
+      image: '/images/mangopickle/IMG_1.jpg',
+      images: ['/images/mangopickle/IMG_1.jpg',
+        '/images/mangopickle/IMG_2.jpg',
+        '/images/mangopickle/IMG_3.jpg',
+        '/images/mangopickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'mangopickle', 'homemadepickles', 'nopalmoil', 'healthier', 'healthierpickle', 'mommadepickles', 'divinepickles', 'nopreservatives', 'mustardoilpickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Unripe Green Mangoes': [
+          'Raw mangoes are packed with vitamin C, more than ripe ones.',
+          'Help boost immunity, improve skin health, and aid in collagen production.'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids.',
+          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol).',
+          'May support heart health when used in moderation.'
+        ],
+        'Mustard Seeds': [],
+        'Fenugreek': [],
+        'Turmeric Powder': [],
+        'Chili Powder': [],
+        'Asafoetida': []
+      }
+    },
+    {
+      id: '90',
+      name: 'Mix Pickle',
+      description: "A mixed pickle (or achaar) is a delicious blend of different vegetables and fruits — commonly mango, carrot, lemon, green chili, and even cauliflower — all preserved in a spiced oil base. It's tangy, spicy, and perfectly suited to Indian meals like dal-chawal, paratha, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 120,
+      image: '/images/mixpickle/IMG_1.jpg',
+      images: ['/images/mixpickle/IMG_1.jpg',
+        '/images/mixpickle/IMG_2.jpg',
+        '/images/mixpickle/IMG_3.jpg',
+        '/images/mixpickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Seasonal Vegetables': [
+          'Seasonal vegetables are harvested at their natural peak, meaning they are fresher and retain more vitamins, minerals, and antioxidants.',
+          'For example, winter Carrots are sweeter and richer in beta-carotene compared to off-season ones.'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated (MUFA) and polyunsaturated fats (PUFA) — particularly omega-3 and omega-6 fatty acids.',
+          'Helps reduce bad cholesterol (LDL) and increase good cholesterol (HDL).',
+          'Contains allyl isothiocyanate, known for its anti-inflammatory properties.'
+        ],
+        'Mustard seeds': [],
+        'Fenugreek': [],
+        'Turmeric Powder': [],
+        'Chili Powder': [],
+        'Fennel Seeds': [],
+        'Asafoetida (Hing)': []
+      }
+    },
+    {
+      id: '91',
+      name: 'Ginger Garlic Pickle',
+      description: "Ginger Garlic Pickle is a flavourful Indian condiment combining the sharp heat of ginger, the pungency of garlic, and a mix of spices in a tangy, oily base—often preserved in mustard oil or sesame oil. It's commonly enjoyed with rice, parathas, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 120,
+      image: '/images/gingergarlicpickle/IMG_1.jpg',
+      images: ['/images/gingergarlicpickle/IMG_1.jpg',
+        '/images/gingergarlicpickle/IMG_2.jpg',
+        '/images/gingergarlicpickle/IMG_3.jpg',
+        '/images/gingergarlicpickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'gingergarlic', 'gingergarlicpickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Ginger': [
+          'Stimulates saliva and bile production, helping with digestion.',
+          'Effective against bloating, gas, and indigestion.'
+        ],
+        'Garlic': [
+          'Enhances immune cell function and helps fight off colds and infections.',
+          'May reduce the severity and duration of common colds.'
+        ],
+        'Mustard Oil': [],
+        'Mustard seeds': [],
+        'Fenugreek': [],
+        'Turmeric Powder': [],
+        'Chilli Powder': [],
+        'Asafoetida (Hing)': []
+      }
+    },
+    {
+      id: '92',
+      name: 'Dry Amla Pickle',
+      description: "Here's a simple and flavorful Dry Amla Pickle (Sookhi Amla Achar) recipe — a traditional Indian way to preserve Indian gooseberries with spices. It's tangy, spicy, and has a long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 120,
+      image: '/images/dryamlapickle/IMG_1.jpg',
+      images: ['/images/dryamlapickle/IMG_1.jpg',
+        '/images/dryamlapickle/IMG_2.jpg',
+        '/images/dryamlapickle/IMG_3.jpg',
+        '/images/dryamlapickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'amlapickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Amla': [
+          'Extremely high in vitamin C (20x more than oranges), Amla helps the body fight infections and improve overall immune function.',
+          'Amla stimulates digestive juices, helping in better breakdown and absorption of food.'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids.',
+          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol).',
+          'May support heart health when used in moderation.'
+        ],
+        'Mustard Seeds': [],
+        'Fenugreek': [],
+        'Turmeric Powder': [],
+        'Red Chili Powder': []
+      }
+    },
+    {
+      id: '93',
+      name: 'Sweet & Sour Amla Pickle',
+      description: "Here's a delicious Sweet and Sour Amla Pickle (Khatta Meetha Amla Achar) — tangy, spicy, and mildly sweet, it's a crowd-pleaser and absolutely irresistible! This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
+      price: 120,
+      image: '/images/amlasweetandsour/IMG_1.jpg',
+      images: ['/images/amlasweetandsour/IMG_1.jpg',
+        '/images/amlasweetandsour/IMG_2.jpg',
+        '/images/amlasweetandsour/IMG_3.jpg',
+        '/images/amlasweetandsour/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'amlapickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Amla': [
+          'Extremely high in vitamin C (20x more than oranges), Amla helps the body fight infections and improve overall immune function.',
+          'Amla stimulates digestive juices, helping in better breakdown and absorption of food.'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids.',
+          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol).',
+          'May support heart health when used in moderation.'
+        ],
+        'Fennel seeds': [],
+        'Nigella seeds (Kalonji)': [],
+        'Mustard seeds': [],
+        'Turmeric Powder': [],
+        'Red Chili Powder': []
+      }
+    },
 ];
 export default products; 
