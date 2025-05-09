@@ -24,6 +24,8 @@ export default function Navbar() {
   const userDropdownRef = useRef<HTMLDivElement>(null);
   const navDropdownRef = useRef<HTMLDivElement>(null);
   const { totalItems } = useCart();
+  const [scrollPx, setScrollPx] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const navLinks: NavLink[] = [
     { href: '/', label: 'Home' },
@@ -42,6 +44,43 @@ export default function Navbar() {
       ]
     },
   ];
+
+  const carouselItems = [
+    { href: '/whole-foods/categories/healthy-breakfast?filter=protein-rich-veg', label: 'Protein Rich Veg Breakfast' },
+    { href: '/whole-foods/categories/healthy-bites?q=khakhra', label: 'Protein Rich Khakhra' },
+    { href: '/whole-foods/categories/spice-blends', label: 'Pure Indian Masalas' },
+    { href: '/whole-foods/35', label: 'Millet Cookies' },
+    { href: '/whole-foods/categories/nuts-and-seeds', label: 'Cashews' },
+    { href: '/whole-foods/categories/healthy-bites?q=chips', label: 'Healthy Chips' },
+  ];
+
+  useEffect(() => {
+    let animationFrameId: number;
+    let lastTimestamp: number;
+    const speed = 20; // pixels per second, very slow
+
+    const animate = (timestamp: number) => {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const deltaTime = timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+
+      setScrollPx((prev) => {
+        const contentWidth = carouselRef.current?.scrollWidth || 0;
+        const containerWidth = carouselRef.current?.parentElement?.offsetWidth || 0;
+        let next = prev - (speed * deltaTime) / 1000;
+        // Reset when all content has scrolled out of view
+        if (Math.abs(next) >= contentWidth / 2) {
+          next = 0;
+        }
+        return next;
+      });
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -381,6 +420,32 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      {/* Sub-header with Continuous Scrolling Carousel */}
+      <div className="bg-[#FDBE28] py-1 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="relative h-7 overflow-hidden">
+            <div
+              ref={carouselRef}
+              className="flex absolute whitespace-nowrap"
+              style={{
+                transform: `translateX(${scrollPx}px)`,
+                willChange: 'transform',
+              }}
+            >
+              {[...carouselItems, ...carouselItems].map((item, index) => (
+                <Link
+                  key={`${item.href}-${index}`}
+                  href={item.href}
+                  className="inline-block px-12 font-itc-souvenir font-bold text-black hover:text-gray-800 text-lg"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
