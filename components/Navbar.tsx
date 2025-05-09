@@ -125,7 +125,7 @@ export default function Navbar() {
       {/* Main Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 relative">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-14">
             {/* Logo */}
             <div className="flex-shrink-0 min-w-0">
               <Link href="/" className="flex items-center">
@@ -135,7 +135,7 @@ export default function Navbar() {
                   width={40}
                   height={40}
                   priority
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
                 <span className="ml-2 text-xl font-bold truncate font-itc-souvenir">The Divine Hands</span>
               </Link>
