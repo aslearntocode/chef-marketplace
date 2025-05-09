@@ -49,7 +49,8 @@ export default function Home() {
           'healthy bites': '/whole-foods/categories/healthy-bites',
           'spice blends': '/whole-foods/categories/spice-blends',
           'nuts and seeds': '/whole-foods/categories/nuts-and-seeds',
-          'healthy breakfast': '/whole-foods/categories/healthy-breakfast'
+          'healthy breakfast': '/whole-foods/categories/healthy-breakfast',
+          'All Natural Pickles': '/whole-foods/categories/pickles'
         };
 
         // If we have a matching category route, go there with the search query
