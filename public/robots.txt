@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /whole-foods/
+Allow: /whole-foods/categories/drinks
+Allow: /whole-foods/categories/healthy-treats
+Allow: /whole-foods/categories/pickles
+Allow: /whole-foods/categories/healthy-bites
+Allow: /whole-foods/categories/spice-blends
+Allow: /whole-foods/categories/nuts-and-seeds
+Allow: /whole-foods/categories/healthy-breakfast
+Allow: /chef-application
+Allow: /images/
 
 # Sitemap location
 Sitemap: https://thedivinehands.com/sitemap.xml
