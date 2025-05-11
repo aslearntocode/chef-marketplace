@@ -229,6 +229,9 @@ export default function Home() {
                     CRAVING FOR HEALTHY<br />YET TASTY FOOD?
                   </span>
                 </h1>
+                <p className="text-lg md:text-xl text-[#8B4513] mb-8">
+                  Our products contain no preservatives, no artificial chemicals and are made of just natural and healthier ingredients
+                </p>
                 <Link
                   href="/whole-foods/"
                   className="inline-block bg-[#8B4513] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#6B3410] transition-colors"
