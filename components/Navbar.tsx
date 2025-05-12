@@ -149,7 +149,7 @@ export default function Navbar() {
                     <div className="relative">
                       <button
                         onClick={() => link.id && toggleDropdown(link.id)}
-                        className="text-gray-900 hover:text-gray-600 text-xl font-bold transition-colors duration-200 font-itc-souvenir flex items-center"
+                        className="text-gray-900 hover:text-gray-600 text-lg font-bold transition-colors duration-200 font-itc-souvenir flex items-center"
                       >
                         {link.label}
                         <svg
@@ -179,7 +179,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href || '#'}
-                      className="text-gray-900 hover:text-gray-600 text-xl font-bold transition-colors duration-200 font-itc-souvenir"
+                      className="text-gray-900 hover:text-gray-600 text-lg font-bold transition-colors duration-200 font-itc-souvenir"
                     >
                       {link.label}
                     </Link>
@@ -252,7 +252,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/login"
-                  className="bg-[#FDBE28] text-black px-4 py-2 rounded-md hover:bg-[#E5AB14] transition-colors font-medium font-itc-souvenir"
+                  className="bg-[#FDBE28] text-black px-3 py-1.5 rounded-md hover:bg-[#E5AB14] transition-colors font-medium text-base font-itc-souvenir"
                 >
                   Login
                 </Link>
