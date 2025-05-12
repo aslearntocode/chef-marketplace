@@ -345,13 +345,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Product Attributes Carousel */}
+        <section className="bg-[#FDBE28] py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-12">Our Commitment to Quality</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* No Artificial Flavors */}
+              <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg">
+                <div className="text-5xl mb-4">🚫</div>
+                <h3 className="text-xl font-bold text-[#8B4513] mb-2">No Artificial Flavors</h3>
+                <p className="text-gray-600">Pure, natural taste in every bite</p>
+              </div>
+
+              {/* No Preservatives */}
+              <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg">
+                <div className="text-5xl mb-4">🌿</div>
+                <h3 className="text-xl font-bold text-[#8B4513] mb-2">No Preservatives</h3>
+                <p className="text-gray-600">Fresh and natural ingredients only</p>
+              </div>
+
+              {/* Made in India */}
+              <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg">
+                <div className="text-5xl mb-4">🇮🇳</div>
+                <h3 className="text-xl font-bold text-[#8B4513] mb-2">Made in India</h3>
+                <p className="text-gray-600">Supporting local artisans and traditions</p>
+              </div>
+
+              {/* FSSAI Certified */}
+              <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg">
+                <div className="text-5xl mb-4">✅</div>
+                <h3 className="text-xl font-bold text-[#8B4513] mb-2">FSSAI Certified</h3>
+                <p className="text-gray-600">Highest standards of food safety</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Food Showcase Conveyor Belt */}
         </div>
 
         {/* Most Popular Items Section - Full Width */}
-        <section className="w-full bg-[#FDBE28] py-12">
+        <section className="w-full bg-white py-12">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">Most Popular Items</h2>
           <div className="flex items-center gap-1 sm:gap-4 relative overflow-hidden">
             <div className="max-w-full w-full px-7 sm:px-0">
@@ -459,7 +495,7 @@ export default function Home() {
         </section>
 
         {/* Marketing Metrics */}
-        <section className="w-full bg-white py-12">
+        <section className="w-full bg-[#FDBE28] py-12">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {/* Chefs Metric */}
@@ -490,9 +526,9 @@ export default function Home() {
         </section>
 
         {/* Curator Application Section - Full Width */}
-        <section className="w-full bg-[#FDBE28] py-16">
+        <section className="w-full bg-white py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="bg-[#FDBE28] rounded-lg p-8">
+            <div className="bg-white rounded-lg p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 {/* Left side - Calling all section */}
                 <div className="rounded-lg p-8">
