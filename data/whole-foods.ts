@@ -2863,6 +2863,14 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['madeinindia', 'amlamurabba', 'homemademurabba', 'nopalmoil', 'healthier', 'healthiermurabba', 'divinemurabba', 'nopreservatives', 'noartificialflavours'],
       size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
       ingredients_benefits: {
         'Amla (Indian Gooseberry)': [
           'Boosts immunity and helps fight infections',
@@ -2892,6 +2900,14 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'greenchillypickles'],
       size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
       ingredients_benefits: {
         'Green Chilli': [
           'Boosts immunity and promotes glowing, healthy skin',
@@ -2929,6 +2945,14 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'gingergarlic', 'redchillipickle'],
       size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
       ingredients_benefits: {
         'Red Chilli': [
           'Boosts Metabolism',
@@ -2968,6 +2992,14 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'kathalpickle'],
       size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
       ingredients_benefits: {
         'Kathal (Jackfruit)': [
           'High in vitamins such as vitamin A, B-complex vitamins (like B6), and vitamin C',
@@ -2999,6 +3031,14 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'karelapickle'],
       size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
       ingredients_benefits: {
         'Karela': [
           'Controls Blood Sugar',
@@ -3015,6 +3055,133 @@ export const products: Product[] = [
         'Mustard seeds': [],
         'Turmeric Powder': [],
         'Red Chili Powder': []
+      }
+    },
+    {
+      id: '99',
+      name: 'Lemon Green Chilli Pickle',
+      description: 'Lemon Green Chilli Pickle (नींबू मिर्च का अचार) is a classic Indian condiment that combines the tang of lemon with the spice of green chillies—perfect as a zesty side dish with parathas, dal-chawal, or khichdi. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/lemongreenchillipickle/IMG_1.jpg',
+      images: ['/images/lemongreenchillipickle/IMG_1.jpg',
+        '/images/lemongreenchillipickle/IMG_2.jpg',
+        '/images/lemongreenchillipickle/IMG_3.jpg',
+        '/images/lemongreenchillipickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'homemadepickle', 'nopalmoil', 'healthier', 'healthierpickle', 'divinepickle', 'nopreservatives', 'noartificialflavours', 'lemonpickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Lemon': [
+          'High in Vitamin C',
+          'Strengthens the immune system',
+          'Helps fight colds, infections, and speeds up wound healing'
+        ],
+        'Green Chillies': [
+          'Contain capsaicin, beta-carotene, and vitamin A, which protects cells from free radical damage and reduce inflammation'
+        ],
+        'Mustard Oil': [],
+        'Mustard Seeds': [],
+        'Cumin Seeds': [],
+        'Turmeric Powder': [],
+        'Black Salt': [],
+        'Red Chilli Powder': [],
+        'Coriander Powder': [],
+        'Carom Seeds (Ajwain)': [],
+        'Fenugreek': [],
+        'Fennel Seeds': [],
+        'Asafoetida': [],
+        'Black Mustard Seeds': [],
+        'Salt': []
+      }
+    },
+    {
+      id: '100',
+      name: 'Lemon Sweet and Sour Pickle',
+      description: 'Sweet and Sour Lemon Pickle (मीठा खट्टा नींबू का अचार) is a delicious Indian pickle that combines the tang of lemons with a perfect balance of sweetness from jaggery or sugar and spice from basic Indian masalas. It\'s especially popular in Gujarati and North Indian households. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/lemonsweetandsourpickle/IMG_1.jpg',
+      images: ['/images/lemonsweetandsourpickle/IMG_1.jpg',
+        '/images/lemonsweetandsourpickle/IMG_2.jpg',
+        '/images/lemonsweetandsourpickle/IMG_3.jpg',
+        '/images/lemonsweetandsourpickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'lemonsweetandsourpickles', 'lemonpickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Lemon': [
+          'High in Vitamin C',
+          'Strengthens the immune system',
+          'Helps fight colds, infections, and speeds up wound healing'
+        ],
+        'Black Salt': [
+          'Improves Digestion',
+          'Stimulates the production of digestive enzymes and bile',
+          'Helps relieve bloating, gas, and indigestion',
+          'Often used in Ayurvedic remedies for acidity and stomach upset'
+        ],
+        'Carom Seeds (Ajwain)': [],
+        'Asafoetida': [],
+        'Mishri': [],
+        'Black Pepper': []
+      }
+    },
+    {
+      id: '101',
+      name: 'Mango Sweet and Sour Pickle',
+      description: 'Mango Sweet and Sour Pickle (मीठा खट्टा आम का अचार) is a traditional Indian condiment that blends the tanginess of raw mangoes with the richness of jaggery or sugar and bold Indian spices. It\'s especially popular in North India and Gujarat, and is loved for its balanced sweet-spicy flavor and long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/mangosweetandsour/IMG_1.jpg',
+      images: ['/images/mangosweetandsour/IMG_1.jpg',
+        '/images/mangosweetandsour/IMG_2.jpg',
+        '/images/mangosweetandsour/IMG_3.jpg',
+        '/images/mangosweetandsour/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'sweetandsour', 'mangopickle'],
+      size: '100, 250, 500, 1000',
+      variants: {
+        sizes: [
+          { name: '100g', value: '100g', price: 120 },
+          { name: '250g', value: '250g', price: 199 },
+          { name: '500g', value: '500g', price: 349 },
+          { name: '1000g', value: '1000g', price: 599 }
+        ]
+      },
+      ingredients_benefits: {
+        'Raw Mango': [
+          'Boosts Immunity',
+          'Rich in vitamin C and antioxidants, raw mango helps strengthen your immune system and fights off infections'
+        ],
+        'Jaggery': [
+          'Natural Body Cleanser',
+          'Acts as a detoxifier, especially for the lungs, liver, and intestines',
+          'Helps flush out toxins and pollutants from the body'
+        ],
+        'Red Chilli Powder': [],
+        'Fenugreek Seeds': [],
+        'Cumin Seeds': [],
+        'Nigella Seeds (Kalonji)': [],
+        'Black Salt': [],
+        'Fennel Seeds (Saunf)': [],
+        'Salt': []
       }
     }
 ];
