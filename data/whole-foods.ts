@@ -2849,5 +2849,173 @@ export const products: Product[] = [
         'Red Chili Powder': []
       }
     },
+    {
+      id: '94',
+      name: 'Amla Murabba',
+      description: 'Amla Murabba is a sweet preserve made from amla (Indian gooseberry), known for its health benefits and tangy flavor. It\'s often consumed for its medicinal properties, particularly in Ayurveda, where it\'s valued for improving digestion, immunity, and skin health. This Murabba has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/amlamurabba/IMG_1.jpg',
+      images: ['/images/amlamurabba/IMG_1.jpg',
+        '/images/amlamurabba/IMG_2.jpg',
+        '/images/amlamurabba/IMG_3.jpg',
+        '/images/amlamurabba/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'amlamurabba', 'homemademurabba', 'nopalmoil', 'healthier', 'healthiermurabba', 'divinemurabba', 'nopreservatives', 'noartificialflavours'],
+      size: '100, 250, 500, 1000',
+      ingredients_benefits: {
+        'Amla (Indian Gooseberry)': [
+          'Boosts immunity and helps fight infections',
+          'Promotes collagen production for healthy skin and tissues'
+        ],
+        'Black Salt': [
+          'Stimulates bile production and helps with bloating, indigestion, and heartburn'
+        ],
+        'Carom Seeds (Ajwain)': [],
+        'Fennel Seeds': [],
+        'Asafoetida': [],
+        'Mishri': [],
+        'Ginger Powder': []
+      }
+    },
+    {
+      id: '95',
+      name: 'Bharwan Green Chilli Pickle',
+      description: 'Bharwan Green Chilli (भरवां हरी मिर्च) is a flavourful Indian dish where green chillies are stuffed with a spiced filling—often made of mustard, fennel, and other aromatic spices. It\'s tangy, mildly spicy, and adds a punch to any Indian meal. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/bharwangreenchilli/IMG_1.jpg',
+      images: ['/images/bharwangreenchilli/IMG_1.jpg',
+        '/images/bharwangreenchilli/IMG_2.jpg',
+        '/images/bharwangreenchilli/IMG_3.jpg',
+        '/images/bharwangreenchilli/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'greenchillypickles'],
+      size: '100, 250, 500, 1000',
+      ingredients_benefits: {
+        'Green Chilli': [
+          'Boosts immunity and promotes glowing, healthy skin',
+          'Helps in healing wounds and improving gum health'
+        ],
+        'Mustard Oil': [
+          'Contains a good balance of omega-3 and omega-6 fatty acids',
+          'Low in saturated fats, making it heart-friendly when used in moderation'
+        ],
+        'Cumin': [],
+        'Turmeric': [],
+        'Black Salt': [],
+        'Red Chilli Powder': [],
+        'Coriander Powder': [],
+        'Carom Seeds (Ajwain)': [],
+        'Amchur': [],
+        'Fennel Seeds': [],
+        'Black Cumin Seeds': [],
+        'Asafoetida': [],
+        'Black Mustard': [],
+        'Salt': []
+      }
+    },
+    {
+      id: '96',
+      name: 'Bharwan Red Chilli Pickle',
+      description: 'Bharwan Lal Mirch ka Achaar (भरवां लाल मिर्च का अचार) is a traditional Indian stuffed red chilli pickle made with thick, mildly spicy red chillies filled with a tangy, spiced masala mix. It\'s especially popular in Uttar Pradesh, Rajasthan, and Punjab. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/bharwanredchilli/IMG_1.jpg',
+      images: ['/images/bharwanredchilli/IMG_1.jpg',
+        '/images/bharwanredchilli/IMG_2.jpg',
+        '/images/bharwanredchilli/IMG_3.jpg',
+        '/images/bharwanredchilli/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'gingergarlic', 'redchillipickle'],
+      size: '100, 250, 500, 1000',
+      ingredients_benefits: {
+        'Red Chilli': [
+          'Boosts Metabolism',
+          'Contains capsaicin, which raises body temperature and increases fat burning and calorie expenditure',
+          'Rich in Antioxidants',
+          'Packed with vitamin C, beta-carotene, and flavonoids that fight free radicals and reduce oxidative stress'
+        ],
+        'Mustard Oil': [
+          'Contains a good balance of omega-3 and omega-6 fatty acids',
+          'Low in saturated fats, making it heart-friendly when used in moderation'
+        ],
+        'Cumin': [],
+        'Turmeric': [],
+        'Black Salt': [],
+        'Red Chilli Powder': [],
+        'Coriander Powder': [],
+        'Carom Seeds (Ajwain)': [],
+        'Amchur': [],
+        'Fennel Seeds': [],
+        'Black Cumin Seeds': [],
+        'Asafoetida': [],
+        'Black Mustard': [],
+        'Salt': []
+      }
+    },
+    {
+      id: '97',
+      name: 'Kathal Pickle',
+      description: 'Kathal ka Achaar (कटहल का अचार) is a delicious and unique jackfruit pickle made from raw (unripe) kathal. It\'s popular in North India, especially in Bihar and Uttar Pradesh, and has a meaty texture with bold, spicy, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/kathalpickle/IMG_1.jpg',
+      images: ['/images/kathalpickle/IMG_1.jpg',
+        '/images/kathalpickle/IMG_2.jpg',
+        '/images/kathalpickle/IMG_3.jpg',
+        '/images/kathalpickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'kathalpickle'],
+      size: '100, 250, 500, 1000',
+      ingredients_benefits: {
+        'Kathal (Jackfruit)': [
+          'High in vitamins such as vitamin A, B-complex vitamins (like B6), and vitamin C',
+          'A good source of minerals like potassium, magnesium, calcium, and iron'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids',
+          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol)',
+          'May support heart health when used in moderation'
+        ],
+        'Mustard Seeds': [],
+        'Fennel Seeds': [],
+        'Fenugreek': [],
+        'Turmeric Powder': [],
+        'Red Chili Powder': []
+      }
+    },
+    {
+      id: '98',
+      name: 'Karela Pickle',
+      description: 'Karela (Bitter Gourd) Pickle is a tangy and spicy Indian pickle made from the bitter vegetable, karela (bitter gourd), which is known for its health benefits. It\'s especially popular in North India and is a great way to balance out the bitterness with a variety of spices, oil, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
+      price: 120,
+      image: '/images/karelapickle/IMG_1.jpg',
+      images: ['/images/karelapickle/IMG_1.jpg',
+        '/images/karelapickle/IMG_2.jpg',
+        '/images/karelapickle/IMG_3.jpg',
+        '/images/karelapickle/IMG_4.jpg'
+      ],
+      category: 'Pickles & Condiments',
+      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'karelapickle'],
+      size: '100, 250, 500, 1000',
+      ingredients_benefits: {
+        'Karela': [
+          'Controls Blood Sugar',
+          'Contains charantin, polypeptide-p, and vicine—compounds known to help reduce blood glucose levels',
+          'Stimulates insulin secretion, making it excellent for type 2 diabetes management'
+        ],
+        'Mustard Oil': [
+          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids',
+          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol)',
+          'May support heart health when used in moderation'
+        ],
+        'Fennel seeds': [],
+        'Nigella seeds (Kalonji)': [],
+        'Mustard seeds': [],
+        'Turmeric Powder': [],
+        'Red Chili Powder': []
+      }
+    }
 ];
 export default products; 
