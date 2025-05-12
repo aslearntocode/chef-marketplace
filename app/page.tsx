@@ -15,6 +15,31 @@ export default function Home() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const router = useRouter();
 
+  // For mobile product attributes carousel
+  const [mobileAttrSlide, setMobileAttrSlide] = useState(0);
+  const attrCards = [
+    {
+      icon: '🚫',
+      title: 'No Artificial Flavors',
+      desc: 'Pure, natural taste in every bite',
+    },
+    {
+      icon: '🌿',
+      title: 'No Preservatives',
+      desc: 'Fresh and natural ingredients only',
+    },
+    {
+      icon: '🇮🇳',
+      title: 'Made in India',
+      desc: 'Supporting local artisans and traditions',
+    },
+    {
+      icon: '✅',
+      title: 'FSSAI Certified',
+      desc: 'Highest standards of food safety',
+    },
+  ];
+
   // Filter products based on search query
   const filteredProducts = products.filter(product => {
     const searchLower = searchQuery.toLowerCase();
@@ -141,6 +166,14 @@ export default function Home() {
     }, 3000);
 
     return () => clearInterval(popularTimer);
+  }, []);
+
+  useEffect(() => {
+    // Auto-advance mobile attribute carousel every 3s
+    const timer = setInterval(() => {
+      setMobileAttrSlide((prev) => (prev + 1) % attrCards.length);
+    }, 3000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -349,7 +382,37 @@ export default function Home() {
         <section className="bg-[#FDBE28] py-12">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-12">Our Commitment to Quality</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* Mobile Carousel */}
+            <div className="md:hidden overflow-x-hidden" style={{ minHeight: 240 }}>
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ width: '100vw', transform: `translateX(-${mobileAttrSlide * 100}vw)` }}
+              >
+                {attrCards.map((card, idx) => (
+                  <div key={card.title} className="flex-shrink-0" style={{ width: '100vw', maxWidth: '100vw', paddingLeft: 8, paddingRight: 8 }}>
+                    <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg flex flex-col items-center justify-center mx-auto" style={{ minHeight: 160, maxWidth: 400 }}>
+                      <div className="text-5xl mb-4 text-[#8B4513]">{card.icon}</div>
+                      <h3 className="text-xl font-bold text-[#8B4513] mb-2">{card.title}</h3>
+                      <p className="text-[#8B4513]">{card.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Carousel Navigation Dots */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {attrCards.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-2 h-2 rounded-full ${mobileAttrSlide === index ? 'bg-[#8B4513]' : 'bg-[#8B4513]/30'}`}
+                    onClick={() => setMobileAttrSlide(index)}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop Grid */}
+            <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8">
               {/* No Artificial Flavors */}
               <div className="bg-white rounded-xl p-6 text-center transform transition-transform duration-300 hover:scale-105 shadow-lg">
                 <div className="text-5xl mb-4">🚫</div>
