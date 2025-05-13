@@ -2,7 +2,7 @@ import { Product } from '@/types/whole-foods';
 
 export const products: Product[] = [
     {
-        id: '1',
+        id: 'coconut-barfi-jaggery',
         name: 'Coconut Barfi with Jaggery',
         description: 'Coconut Barfi with jaggery is a traditional Indian sweet made with grated coconut and jaggery, offering a delightful fusion of flavours. The rich nutty texture of fresh coconut is complemented by the deep, caramel-like sweetness of jaggery, which is a natural unrefined sugar. It\'s a healthier alternative to the usual sugar-based barfis, with the earthy rich taste of jaggery enhancing the overall flavour profile. Perfect for festive occasions or as a wholesome snack!',
         price: 120,
@@ -12,7 +12,7 @@ export const products: Product[] = [
         size: '200gms',
     },
     {
-        id: '2',
+        id: 'coconut-barfi-sugar',
         name: 'Coconut Barfi with Sugar',
         description: 'Coconut Barfi with sugar is a sweet, creamy Indian treat made from grated coconut, sugar and ghee. Often flavoured with cardamom, the barfi has a smooth, soft consistency and fragrant aroma making it a perfect choice for celebrations, festivals, or a satisfying homemade indulgence',
         price: 120 ,
@@ -21,7 +21,7 @@ export const products: Product[] = [
         tags: ['sweet', 'dessert', 'coconut', 'sugar', 'barfi', 'indian sweet', 'homemade', 'handmade', 'pure']
     },
     {
-        id: '3',
+        id: 'sugar-free-dates-peanut-laddoos',
         name: 'Sugar Free Dates and Peanut Laddoos',
         description: 'Sugar free Dates and Peanut laddoo is a healthy, nutrient-packed Indian sweet that combines the natural sweetness of Dates with the rich, earthy flavour of roasted peanuts. This wholesome treat is ideal for those seeking a guilt-free, energy-boosting snack or a healthier alternative for festivals and celebrations.',
         price: 100 ,
@@ -30,7 +30,7 @@ export const products: Product[] = [
         tags: ['sugar free', 'healthy', 'dates', 'peanut', 'ladoo', 'indian sweet', 'nuts']
     },
     {
-        id: '4',
+        id: 'sugar-free-dry-fruits-laddoos',
         name: 'Sugar Free Dry fruits Laddoos',
         description: 'Sugar free dry fruits laddoo is a nutritious and a wholesome sweet treat made with a variety of dried fruits and nuts offering a natural sweet and rich flavour without any added sugar. Packed with vitamins, minerals, healthy fats, and fiber this sugar-free treat is a guilt-free indulgence ideal for anyone looking to enjoy a delicious yet healthy snack during festivals, special occasions or as an everyday pick-me-up.',
         price: 180 ,
@@ -39,7 +39,7 @@ export const products: Product[] = [
         tags: ['sugar free', 'healthy', 'dry fruits', 'ladoo', 'indian sweet']
     },
     {
-        id: '5',
+        id: 'paan-e-bahar',
         name: 'Paan-E-Bahar',
         description: `Paan-e-bahar is a refreshing and aromatic drink inspired by the traditional flavours of paan, a popular South-Asian betel leaf preparation. This vibrant drink combines the essence of crushed betel leaves with a blend of spices, herbs and sweeteners creating a unique and tantalizing taste experience. This drink features the freshest of ingredients with no artificial flavours and preservatives.
 
@@ -66,7 +66,7 @@ export const products: Product[] = [
         }
     },
     {
-        id: '6',
+        id: 'soothing-sauf',
         name: 'Soothing Sauf',
         description: `Experience the natural coolness with Soothing Sauf Squash, a handcrafted blend of premium fennel seeds and natural ingredients. Infused with the refreshing essence of sauf (fennel), this squash delivers a refreshing burst of flavor, combining sweet and aromatic notes to elevate post-meal moments or festive celebrations. This drink is also known for its cooling, digestive, and calming properties. The soothing qualities of fennel help with digestion, reduce bloating, and calm the stomach, making it an ideal post-meal drink.
 
@@ -92,7 +92,7 @@ export const products: Product[] = [
         }
     },
     {
-        id: '7',
+        id: 'thrilling-thandai',
         name: 'Thrilling Thandai',
         description: `Immerse yourself in the richness of Thrilling Thandai, a handcrafted aromatic blend of premium saffron, wholesome nuts, and aromatic spices. Carefully curated to capture the essence of tradition, this indulgent squash offers a luxurious and authentic flavour experience. The drink is typically served chilled, making it an exciting way to cool off during hot days or add a festive touch to celebrations. The flavours are complex and layered, with the right balance of sweet, spicy, and creamy, making it both an indulgent and rejuvenating treat. Every sip is a celebration of heritage, crafted to bring you pure indulgence with a touch of nostalgia. The product has zero preservatives or artificial flavours or essence.
 
@@ -122,7 +122,7 @@ export const products: Product[] = [
         }
     },
     {
-        id: '8',
+        id: 'date-nut-bites',
         name: 'Date & Nut Bites',
         description: 'Healthiest anytime snack - pure nutty goodness. Our star performer is suitable for all ages! These bite sized portions are a deliciously healthy combination of dates, seeds and nuts, with a drizzle of olive oil plus they are totally and truly sugar free- No honey. No Jaggery. No sugar with fancy names! Enjoy these as your power dose of vitamins and minerals, pre and post workout snack, an on-the-go hunger killer. Also, a perfect snack for kids\' tiffin box.',
         price: 290 ,
@@ -138,7 +138,7 @@ export const products: Product[] = [
         size: '100gms'
     },
     {
-      id: '9',
+      id: 'ghee-roasted-makhana',
       name: 'Ghee Roasted Makhana',
       description: 'Healthiest snack ever - crunchy and a powerhouse of calcium. Roasted in pure cow ghee and seasoned with himalayan pink salt - just like home. Handroasted to perfection in small batches, this clean label recipe is seasoned with Himalayan Pink Salt. Can be enjoyed as an anytime snack or even as a salad topping or as your pre and post workout pick me up! Replace your unhealthy namkeens with this crunchy and delicious snack at chai time!',
       price:120,
@@ -186,7 +186,7 @@ export const products: Product[] = [
     },
 
     {
-        id: '10',
+        id: 'jaggery-mango-pickle',
         name: 'Jaggery Mango Pickle',
         description: 'Kuch teekha, kuch meetha, kuch khatta. Sweet and spicy, this twist to the traditional gujarati golkeri will tickle your taste buds + this is completely OIL FREE! Tartness of handpicked raw mangoes, the spice of hand pounded red chillies, saunf and methi- mildly salted and cooked to perfection with jaggery. This pickle pairs well with pooris, parathas, theplas or even dosas - the mango chunks and whole spices add a lot of texture to this recipe. Serve this pickle as an accompaniment at your parties. Use this in place of imli chutney on your chaats.',
         price: 325,
@@ -205,7 +205,7 @@ export const products: Product[] = [
         size: '200gms'
     },
     {
-      id: '11',
+      id: 'roasted-red-rice-chiwda',
       name: 'Roasted Red Rice Chiwda',
       description: 'Made using red rice, this crunchy and flavourful snack is bound to hit all the right notes with all you chiwda lovers. Elevate your chai time with this traditional yet healthy snack. Handroasted to perfection, this clean label recipe is seasoned with Himalayan Pink Salt. Can be enjoyed as an anytime snack or even as a salad topping or as your pre and post workout pick me up! Replace your unhealthy namkeens with this crunchy and delicious snack at chai time!',
       price:120 ,
@@ -244,7 +244,7 @@ export const products: Product[] = [
       }
     },
     {
-        id: '12',
+        id: 'traditional-lemon-pickle',
         name: 'Traditional Lemon Pickle',
         description: 'A traditional Indian pickle made with fresh lemons, spices, and oil. Perfect for adding a tangy kick to your meals.',
         price: 325,
@@ -261,7 +261,7 @@ export const products: Product[] = [
         size: '200gms'
     },
     {
-      id: '13',
+      id: 'whole-wheat-ajwain-mathri',
       name: 'Whole Wheat Ajwain Mathri',
       description: 'Super crunchy and great with your tea. Share these with your family- pack them for a picnic-pack these for your kid\'s tiffin! These whole wheat crisps are super versatile and perfect for some healthy indulgence. Crafted using high quality whole wheat flour, fragrant methi and handpicked spices, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil-super healthy! Loved by all ages - your kids are bound to enjoy these too!',
       price:156 ,
@@ -296,7 +296,7 @@ export const products: Product[] = [
       }
     },
     {
-        id: '14',
+        id: 'whole-wheat-jaggery-fingers',
         name: 'Whole Wheat Jaggery Fingers - Gur Paara',
         description: 'Gur paare - healthier as these contain no maida! Perfect for some healthy indulgence! Crafted using high quality whole wheat flour, fragrant saunf (fennel) and coated with jaggery, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil - super healthy! Loved by all ages - your kids too are bound to enjoy these! Super crunchy and mildly sweet. Share these with your family-pack them for a picnic-pack these for your kids tiffin!',
         price: 120,
@@ -315,7 +315,7 @@ export const products: Product[] = [
         size: '100gms'
     },
     {
-        id: '15',
+        id: 'gond-laddoos',
         name: 'Gond Laddoos',
         description: 'Our best seller - best laddoos ever - grandma\'s recipe. Made using pure cow ghee, top quality atta roasted to perfection, overloaded with nuts and Gond and then hand rolled traditionally, our Gond laddoos offer the rich nuttiness of hand-roasted flour, fortified with Gond with the subtle aroma of pure cow ghee (desi ghee) and crunch of handpicked nuts. Superfood Gond is great for lactating mothers and kids as well. Post partum must have! Whether you crave a traditional Indian sweet for festive celebrations, gifting or a delightful treat to accompany your afternoon tea, these laddoos are the go-to treats.',
         price: 360,
@@ -334,7 +334,7 @@ export const products: Product[] = [
         size: '225gms'
     },
     {
-        id: '16',
+        id: 'sweet-spicy-mango-chutney',
         name: 'Sweet and Spicy Mango Chutney',
         description: 'Kuch teekha, kuch meetha. Sweet and spicy, this twist to the traditional gujarati chundo will tickle your taste buds + it is OIL FREE! Tartness of handpicked raw mangoes, the spice of hand pounded red chillies- mildly salted and cooked to perfection with jaggery. This pickle pairs well with pooris, parathas, theplas or even dosas - this easy to use chutney has a wonderful texture. Serve this chutney as an accompaniment at your parties. Use this in place of imli chutney on your chaats.',
         price: 325,
@@ -353,7 +353,7 @@ export const products: Product[] = [
         size: '200gms'
     },
     {
-        id: '17',
+        id: 'red-chilli-pickle',
         name: 'Red Chilli Pickle',
         description: 'Handpicked red chillies stuffed with hand roasted and pounded spices - dipped in aromatic cold pressed mustard oil, suncured to perfection– pure nostalgia! This is one of the most sought after pickle recipes - a tradition surviving in only a few families. This pickle is tangy and moderately spicy, ensuring an intense burst of natural flavours and nostalgia in every bite. Perfect for enhancing your meals, this pickle pairs wonderfully with dal rice, paratha, phulka, theplas or even mathris and namak paras. Don\'t miss out on our Stuffed Red Chilli Pickle to complete your meal!',
         price: 325,
@@ -372,7 +372,7 @@ export const products: Product[] = [
         size: '200gms'
     },
     {
-        id: '18',
+        id: 'green-chilli-pickle',
         name: 'Green Chilli Pickle',
         description: 'Finest green chillies carefully blended with North Indian handpicked spices and cold pressed mustard oil, suncured to perfection, this pickle offers a spicy yet flavorful balance of taste. Perfect for enhancing your meals, this pickle pairs wonderfully with dal rice, paratha, phulka, theplas or even mathris and namak paras. Don\'t miss out on our traditional Pickle to complete your meal!',
         price: 325,
@@ -395,7 +395,7 @@ export const products: Product[] = [
         size: '200gms'
     },
     {
-      id: '19',
+      id: 'vegetarian-korean-kimchi',
       name: 'Vegetarian Korean Kimchi',
       description: 'Korean kimchi is a traditional, spicy, fermented vegetable dish that\'s the core of Korean cuisine. It\'s known for its bold flavours — spicy, tangy, salty, and umami-rich — and it\'s usually served as a side dish (called banchan) with almost every Korean meal.',
       price: 400,
@@ -439,7 +439,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '20',
+      id: 'white-kimchi',
       name: 'White Kimchi',
       description: 'White kimchi is a non-spicy version of traditional Korean kimchi. It\'s made with Napa cabbage and other veggies, but without the red chili pepper flakes (gochugaru) that give regular kimchi its heat and red color.',
       price: 400,
@@ -483,7 +483,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '21',
+      id: 'jalapeno-jam',
       name: 'Jalapeno Jam',
       description: 'Jalapeno jam is a sweet, spicy, and slightly tangy preserve made from jalapeno peppers, sugar, and sometimes vinegar or fruit (like apples or cranberries). It\'s basically a jam that gives you both a kick of heat and a touch of sweetness, making it a super unique condiment.',
       price: 250,
@@ -514,7 +514,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '22',
+      id: 'pickled-cucumbers',
       name: 'Pickled Cucumbers',
       description: 'Pickled cucumbers—commonly just called "pickles"—are cucumbers that have been preserved in a brine (salt water), vinegar, or another acidic solution. The pickling process gives them a tangy, sour, and sometimes sweet or spicy flavor, depending on the ingredients used. You can eat them on their own, slice them into sandwiches or burgers, or even dice them into salads.',
       price: 250,
@@ -553,7 +553,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '23',
+      id: 'ragi-fingers',
       name: 'Ragi Fingers',
       description: 'Ragi Fingers are a nutritious and delicious snack made from finger millet (Ragi) flour, known for its rich calcium and iron content. Shaped like crispy sticks or fingers, these snacks offer a perfect balance of health and taste, making them ideal for both kids and adults. They\'re gluten-free, rich in fiber, and help keep you full longer — making them a smart alternative to traditional fried snacks. Whether you\'re looking for a healthy evening munch, a tiffin box treat, or a weaning food for toddlers (in a non-spicy version), Ragi Fingers fit the bill beautifully plus no palm oil or white salt and no reused oil makes it super healthy!',
       price: 120,
@@ -589,7 +589,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '24',
+      id: 'gajar-gobhi-pickle',
       name: 'Gajar Gobhi Pickle',
       description: 'Gajar Gobhi Pickle is a traditional North Indian winter favorite, made with crisp Carrots (Gajar), fresh Cauliflower (gobhi), and sometimes even turnips (Shalgam), all steeped in a vibrant, spiced mustard oil brine. This pickle bursts with bold flavors — the earthiness of mustard seeds, the pungency of asafoetida, and the zing of chili and turmeric come together to create a tangy, spicy, and aromatic experience with every bite. Its sun-cured the old-fashioned way, allowing the vegetables to soak up the spices and develop deep, complex flavors. Often served alongside parathas, dal-chawal, or poori-sabzi, Gajar Gobhi Pickle adds a nostalgic, homestyle punch to any meal — a true tribute to Indian winter kitchens.',
       price: 325,
@@ -627,8 +627,9 @@ export const products: Product[] = [
         ]
       }
     },
+
     {
-      id: '25',
+      id: 'royal-dates-pickle',
       name: 'Royal Dates Pickle',
       description: 'Royal Dates Pickle is a unique blend of plump, juicy dates infused with a bold mix of traditional Indian spices, creating a harmonious balance of sweet, tangy, and spicy flavours plus this pickle is absolutely OIL FREE!!!!. This pickle brings together the natural sweetness of dates with the warmth of chili, tang of lemon, and a medley of whole spices like fennel, cumin, and mustard seeds. Often enjoyed with parathas, rotis, or even cheese boards, Royal Dates Pickle adds a touch of royalty to every bite — a gourmet experience rooted in age-old Indian pickling traditions. This unique pickle is perfect as a side dish or a gourmet addition to salads and sandwiches.',
       price: 325,
@@ -657,7 +658,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '26',
+      id: 'traditional-mango-pickle',
       name: 'Traditional Mango Pickle',
       description: 'Bursting with bold flavors and timeless charm, Traditional Mango Pickle is a beloved Indian classic made from handpicked raw mangoes and a vibrant blend of aromatic spices, all slow-cured in cold-pressed mustard oil. Each bite delivers the perfect balance of tangy, spicy, and savory, with the richness of fenugreek, mustard seeds, fennel, red chili, and turmeric infusing the mango chunks over weeks of natural sun-curing. A staple on Indian thalis, this pickle adds a zesty kick to everything from dal-chawal to parathas, evoking memories of grandma\'s kitchen and summer afternoons. Don\'t miss out on our traditional Mango Pickle to complete your meal as you will love this heirloom recipe.',
       price: 325,
@@ -688,7 +689,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '27',
+      id: 'besan-laddoos',
       name: 'Besan Laddoos',
       description: 'Besan laddoos are a beloved Indian sweet made from roasted gram flour (besan), ghee, and unrefined sugar, delicately flavored with cardamom and often studded with chopped nuts. These round golden delights are known for their rich, nutty aroma and melt-in-your-mouth texture. Deeply rooted in Indian festivals and celebrations, besan laddoos carry a nostalgic warmth—often reminding one of home kitchens filled with the comforting scent of slow-roasted besan. Whether offered during Diwali, weddings, or simply made as a treat for loved ones, these sweets are a perfect balance of simplicity and indulgence. Each bite offers a burst of flavor—the earthiness of besan, the silkiness of ghee, and the sweet finish of powdered sugar—all rolled into one comforting, fragrant bite-sized sphere. Our laddoos are made in small batches using a clean label recipe.',
       price: 360,
@@ -720,7 +721,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '28',
+      id: 'sattu-laddoos',
       name: 'Sattu Laddoos',
       description: 'Sattu laddoos are a simple yet power-packed traditional Indian sweet made from roasted chana flour (sattu), ghee, and jaggery. Earthy, nutty, and naturally sweet, these laddoos are the perfect blend of nutrition and taste. Sattu is loaded with nutrients—making these laddoos not just delicious, but also super energizing. They\'re especially loved in Bihar, Jharkhand, and Uttar Pradesh, where sattu has deep culinary roots. Sattu laddoos offer a clean energy boost, making them ideal for a healthy snack, post-workout bite, or even a light breakfast on the go. With every bite, you get the toasty flavor of roasted gram, the richness of ghee, and the warm sweetness of jaggery—a taste that\'s both comforting and nourishing.',
       price: 360,
@@ -755,7 +756,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '29',
+      id: 'overnight-oats-banana-cake',
       name: 'Overnight Oats (Flavour: Banana Cake)',
       description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
       price: 250,
@@ -815,7 +816,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '30',
+      id: 'overnight-oats-cinnamon-roll',
       name: 'Overnight Oats (Flavour: Cinnamon Roll)',
       description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
       price: 250,
@@ -872,7 +873,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '31',
+      id: 'overnight-oats-mango-custard',
       name: 'Overnight Oats (Flavour: Mango Custard)',
       description: 'This is a Vegetarian product.\n• Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.\n• 15grams Protein, NO Artificial flavouring, Real Fruit Bits\n• Customisable: Add your preferred toppings like fruits, nuts, or seeds to create a personalised and delightful meal.\n• Portable: Overnight oats can be easily packed and consumed on-the-go, making them ideal for busy mornings.\n• Versatile: Experiment with different milk varieties, yoghurt, or chia seeds to suit your dietary preferences.\n• Nutritious: These oats are packed with fibre, protein, and essential nutrients for a wholesome start to the day.',
       price: 250,
@@ -927,7 +928,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '32',
+      id: 'overnight-oats-cookie-creme',
       name: 'Overnight Oats (Flavour: Cookie & Creme)',
       description: `This is a Vegetarian product.
 • Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
@@ -982,7 +983,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '33',
+      id: 'overnight-oats-mixed-berries-creme',
       name: 'Overnight Oats (Flavour: Mixed Berries Creme)',
       description: `This is a Vegetarian product.
 • Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
@@ -1036,7 +1037,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '34',
+      id: 'overnight-oats-mocha-dream',
       name: 'Overnight Oats (Flavour: Mocha Dream)',
       description: `This is a Vegetarian product.
 • Convenient: Overnight Oats are a hassle-free breakfast option that can be prepared the night before.
@@ -1089,7 +1090,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '35',
+      id: 'millet-cookies-multiple-flavors',
       name: 'Millet Cookies - Multiple Flavors',
       description: 'Wholesome meets indulgence in every bite! These millet-based cookies are crafted with ancient grains like ragi, jowar, and bajra—packed with natural fiber and nutrients. We\'ve added rich chocolate chips for that irresistible crunch, blending health and delight perfectly. Whether it\'s a guilt-free snack or a sweet treat after meals, these cookies are your go-to for a crunchy, chocolaty experience with the goodness of millet. No refined flour. No preservatives. Just deliciously healthy goodness.',
       price: 399,
@@ -1155,7 +1156,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '36',
+      id: 'zesty-munagaku-podi',
       name: 'Zesty Munagaku Podi',
       description: 'A nutritious powerhouse packed with flavour, our Munagaku Podi is made from sun-dried moringa leaves and a unique blend of traditional spices. Crafted using age-old methods and roasted to perfection, this aromatic podi pairs beautifully with hot rice and ghee, dosa, or idly. Made in small batches with 100% natural ingredients, it\'s rich in iron, calcium, and antioxidants—perfect for those seeking both taste and health. Add it to soups or sprinkle over salads and roasted veggies for a delicious, wholesome twist.',
       price: 135,
@@ -1196,7 +1197,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '37',
+      id: 'zingy-gongura-podi',
       name: 'Zingy Gongura Podi',
       description: 'Bold, tangy, and deeply rooted in tradition—our Zingy Gongura Podi captures the unmistakable flavour of sorrel leaves (gongura) blended with perfectly roasted spices. This guilt-free twist on the beloved gongura pachadi offers the same vibrant punch, minus the oil and preservatives. Enjoy it with hot rice and a spoon of ghee, or pair it with dosa and idly for an authentic touch. Handcrafted in small batches using heirloom recipes, this podi brings the soul of a traditional Andhra kitchen right to your plate.',
       price: 135,
@@ -1234,7 +1235,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '38',
+      id: 'earthy-beetroot-podi',
       name: 'Earthy Beetroot Podi',
       description: 'This vibrant beetroot podi is one of our best sellers and for good reason. Made using dehydrated beets to retain their rich colour and nutrients, it\'s blended with traditional spices to bring out a naturally earthy, slightly sweet, and savoury flavour. Packed with iron and fiber, this podi isn\'t just a hit with kids but also a wholesome option for adults looking to add a healthy twist to everyday meals. Enjoy it with rice and ghee, mix it into curd, or sprinkle over dosas, idlis, and even roti rolls for a flavourful boost. Handcrafted in small batches using heirloom methods and clean ingredients—no shortcuts, just authentic taste from our kitchen to yours.',
       price: 135,
@@ -1267,7 +1268,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '39',
+      id: 'tarty-kakarkaya-podi',
       name: 'Tarty Kakarkaya Podi',
       description: 'Bittersweet and bold, our Tarty Kakarakaya Podi transforms Bitter Gourd (Kakarakaya) into a surprisingly delicious, flavour-packed experience. Roasted to perfection and blended with traditional spices, this podi captures the essence of Andhra-style home cooking—balancing the natural bitterness with a hint of tang for that signature bittersweet goodness. A great companion to hot rice and ghee, it also pairs beautifully with dosas or a side of curd. Handcrafted with care, this is comfort food done the old-fashioned way—wholesome, nostalgic, and undeniably tasty.',
       price: 135,
@@ -1299,7 +1300,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '40',
+      id: 'dreamy-carrot-podi',
       name: 'Dreamy Carrot Podi',
       description: 'Mild, naturally sweet, and full of homemade goodness—our Dreamy Carrot Podi is specially crafted for little tastebuds. Made with dehydrated carrots and gently roasted spices, it\'s the perfect blend of flavour and nutrition. Ideal for mixing with hot rice and ghee, spreading in soft rotis, or pairing with idlis and dosas. Handcrafted with care, this kid-approved podi makes mealtimes easier and tastier, with zero additives and 100% traditional care in every spoonful.',
       price: 135,
@@ -1331,7 +1332,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '41',
+      id: 'toasty-flaxseed-podi',
       name: 'Toasty Flaxseed Podi',
       description: 'Slow-roasted to bring out its rich, nutty flavor, our Toasty Flaxseed Podi is a wholesome blend of goodness and tradition. Packed with the natural benefits of flaxseeds—rich in Omega-3s and fiber—this podi adds a healthy twist to your everyday meals. Mix it with hot rice and ghee, pair it with idlis and dosas, or use it as a tasty, nutrient-dense sprinkle on soft rotis or sandwiches. Handcrafted with care, this is a pantry essential for those who want both taste and wellness in every bite.',
       price: 135,
@@ -1356,7 +1357,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '42',
+      id: 'tangy-karivepaku-podi',
       name: 'Tangy Karivepaku Podi',
       description: 'Made using age-old techniques and sun-dried curry leaves, our Tangy Karivepaku Podi is a fragrant, flavourful blend that celebrates the essence of South Indian kitchens. With a perfect balance of tang and spice, this podi pairs beautifully with hot rice and ghee, crispy dosas, or soft idlis. Handcrafted with care in small batches, it carries the wholesome taste of roasted lentils and curry leaves—bringing home that comforting, nostalgic flavour every time. A timeless, aromatic addition to your daily meals.',
       price: 135,
@@ -1385,7 +1386,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '43',
+      id: 'minty-pudina-podi',
       name: 'Minty Pudina Podi',
       description: 'Infused with the natural goodness of sundried mint leaves and carefully roasted spices, our Minty Pudina Podi offers a fresh, minty burst in every spoonful. Perfect with hot rice and ghee, delicious alongside dosa or idly, and great as a flavour kick in sandwiches or snacks. Handcrafted with care in small batches and ground using heirloom recipes and traditional techniques, this aromatic blend brings a refreshing twist to classic South Indian flavours—a thoughtful, flavourful addition to your everyday meals.',
       price: 135,
@@ -1418,7 +1419,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '44',
+      id: 'kothimeera-tomato-podi',
       name: 'Kothimeera Tomato Podi',
       description: 'A vibrant blend that brings together the fresh aroma of coriander leaves and the natural tanginess of tomatoes—our Kothimeera Tomato Podi is a burst of flavor in every bite. Pair it with hot rice and ghee, enjoy it with dosa or idly, or use it to uplift your favourite snacks. Handcrafted with care using traditional methods and roasted spices, this podi adds a refreshing, mildly tangy twist to your everyday meals. Made in small batches to preserve taste and quality, it\'s a delicious tribute to home-style flavours and age-old recipes.',
       price: 135,
@@ -1449,7 +1450,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '45',
+      id: 'herby-spice-podi',
       name: 'Herby Spice Podi',
       description: 'Crafted with aromatic oregano leaves, basil, black pepper, red chilli, and more, our Herby Spice Blend is a versatile, freshly ground seasoning that brings a burst of bold, herby flavour to any dish. Perfect for sprinkling over cheese toast, pasta, pizzas, or even soups and grilled veggies, this blend adds that perfect finishing touch to elevate your everyday meals. Handcrafted with care, made in small batches without any preservatives or additives—just pure herbs and spices, blended the traditional way. A pantry must-have for those who love flavour with a hint of flair.',
       price: 135,
@@ -1477,7 +1478,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '46',
+      id: 'apple-chips',
       name: 'Apple Chips',
       description: 'Looking for a guilt-free snack option? Apple Chips by Healthy Grabz are here to satisfy your cravings while supporting your health. Made from 100% real apples, these chips are air-cooked to retain essential nutrients, making them a perfect choice for health-conscious individuals. Whether you\'re aiming for weight loss, heart health, or boosting immunity, our Apple Chips are packed with fiber and natural goodness to help you stay on track. With no added sugar or artificial preservatives, you can enjoy a pure, wholesome snack any time of the day. At Healthy Grabz, we combine ancient dehydration techniques with modern cooking methods to bring you snacks that are as tasty as they are nutritious. Perfect for office munching, school lunches, or post-workout refuels, Apple Chips are your go-to snack. Order your Apple Chips now and experience the delightful crunch of healthy living. Healthy Grabz – making snacking smarter and healthier every day!',
       price: 100,
@@ -1509,7 +1510,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '47',
+      id: 'beetroot-chips',
       name: 'Beetroot Chips',
       description: 'Indulge in the natural goodness of HealthyGrabz Beetroot Chips in our convenient Big Pouch! Perfect for families or sharing, these crunchy, air-cooked delights are packed with heart-healthy nutrients, high in fiber, and low in calories. Made from 100% real beetroot, they\'re an excellent snack for weight management and boosting immunity. Ideal for health-conscious snackers, our big pouch ensures you never run out of this guilt-free indulgence. Grab your healthy snack today!',
       price: 100,
@@ -1553,7 +1554,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '48',
+      id: 'bitter-gourd-chips',
       name: 'Bitter Gourd Chips',
       description: 'Bittergourd chips (also called bitter melon chips or karela chips) are a crunchy, savory snack made from thinly sliced bittergourd that\'s air-fried or baked. Despite their bitter taste, they\'re popular for their health benefits and unique flavor.',
       price: 100,
@@ -1574,7 +1575,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '49',
+      id: 'bottle-gourd-chips',
       name: 'Bottle Gourd Chips',
       description: '100% Real Vegetable chips, seasoned with delicious seasonings and made using the Air Fried Process. These chips are prepared with Finger Licking Twangy Masala because, as we all know, enjoying the advantages of bottle gourd can be boring. These chips combine the health benefits of bottle gourd with deliciousness. They do not contain any artificial flavors or colors. These chips are absolutely oil free!',
       price: 100,
@@ -1610,7 +1611,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '50',
+      id: 'carrot-chips',
       name: 'Carrot Chips',
       description: 'These crunchy Carrot Chips are baked instead of Deep Fried. These crunchy Vegetable Chips are a much healthier alternative to traditional potato chips and they are the best snacks for those who want to lose weight. They also are the best snacks for Diabetic Patients, aside from a healthy dose of vitamins A and C and fiber. Carrots contain antioxidants that may help reduce the risk of cancer and also improve your immune system and may also help in weight reduction. These chips are packed with flavour and healthy vitamins and have a fantastic crunch',
       price: 100,
@@ -1642,7 +1643,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '51',
+      id: 'cluster-bean-chips',
       name: 'Cluster Bean Chips',
       description: 'The dehydrated air-fried Cluster bean chips, lightly sprinkled with olive oil less than 0.1%, are a crunchy and delicious snack. They\'re rich in fiber, protein, and minerals, and a guilt-free alternative to traditional fried snacks. Conveniently ready to eat, they make a perfect on-the-go snack. Enjoy the natural flavours of Cluster beans with a touch of olive oil anytime.',
       price: 100,
@@ -1904,7 +1905,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '59',
+      id: 'masala-khakhra',
       name: 'Masala Khakhra',
       description: 'Masala Khakhras are a spicy, savoury variation of the traditional Gujarati khakhra—thin, roasted flatbreads made from whole wheat flour. These are flavoured with a blend of Indian spices, making them a flavourful and crunchy snack that\'s both healthy and tasty. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -1933,7 +1934,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '60',
+      id: 'jeera-khakhra',
       name: 'Jeera Khakhra',
       description: 'Jeera Khakhra is a simple yet flavourful Indian snack made with whole wheat flour and cumin seeds (jeera). It\'s thin, crispy, and roasted—not fried—making it a light, healthy option for snacking. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -1962,7 +1963,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '61',
+      id: 'ajwain-khakhra',
       name: 'Ajwain Khakhra',
       description: 'Ajwain Khakhra is a crisp, roasted Indian flatbread snack infused with Ajwain (Carom seeds), which give it a unique, slightly bitter, aromatic flavor and a range of digestive benefits. Like other khakhras, it\'s made using whole wheat flour, making it a wholesome and light snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -1992,7 +1993,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '62',
+      id: 'plain-khakhra',
       name: 'Plain Khakhra',
       description: 'Plain Khakhra is the most basic and traditional form of khakhra—a thin, crisp, roasted flatbread made primarily from whole wheat flour, with minimal spices or flavorings. It\'s a staple Gujarati snack known for its simplicity, versatility, and health benefits. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2019,7 +2020,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '63',
+      id: 'ragi-khakhra',
       name: 'Ragi Khakhra',
       description: 'Ragi Khakhras are a healthy, crispy Indian snack made from ragi flour (finger millet flour). They\'re a nutritious twist on the traditional wheat khakhra, offering benefits like being gluten-free, high in calcium, fiber, and iron. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2047,7 +2048,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '64',
+      id: 'bajri-khakhra',
       name: 'Bajri Khakhra',
       description: 'Bajri Khakhras (Pearl Millet Khakhras) are another nutritious and crispy Indian snack, especially popular in Gujarati cuisine. Made using Bajra (Pearl Millet) flour, they\'re rich in fiber, iron, and essential minerals, and are great for winter or general digestive health. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2078,7 +2079,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '65',
+      id: 'palak-khakhra',
       name: 'Palak Khakhra',
       description: 'Palak Khakhra (Spinach Khakhra) is a flavourful, crispy Indian flatbread made with wheat flour and spinach puree, spiced and roasted until crisp. It\'s a healthy snack, especially great for kids or anyone looking to sneak more greens into their diet. NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2106,7 +2107,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '66',
+      id: 'kothmir-marcha-khakhra',
       name: 'Kothmir Marcha Khakhra',
       description: 'Kothmir Marcha (also known as Dhaniya Marcha) is a spicy and flavourful Gujarati-style green chili and coriander stir-fry. It\'s typically served as a side dish or condiment with theplas, khakhras, or even dal-rice. Kothmir Marcha flavoured Khakhras are spicier and unique in their taste and blend. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2136,7 +2137,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '67',
+      id: 'mint-khakhra',
       name: 'Mint (Pudina) Khakhra',
       description: 'Mint Khakhra (Pudina Khakhra) is a crispy, aromatic snack made by infusing fresh or dried mint leaves into traditional khakhra dough. It\'s refreshing, light, and perfect as a guilt-free snack with tea or yogurt. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2168,7 +2169,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '68',
+      id: 'chocolate-khakhra',
       name: 'Chocolate Khakhra',
       description: 'Chocolate Khakhra is a fusion snack that combines the traditional crispy Gujarati khakhra (a thin, crunchy flatbread usually made from whole wheat flour) with chocolate for a sweet twist. It\'s a relatively modern innovation in Indian snacks, popular among kids and adventurous food lovers. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2188,7 +2189,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '69',
+      id: 'jiralu-khakhra',
       name: 'Jiralu Khakhra',
       description: 'Jiralu Khakhra is a classic Gujarati snack that features khakhra seasoned with \'jiralu\', a tangy, spicy, and slightly salty spice mix that\'s very popular in Western India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2207,7 +2208,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '70',
+      id: 'chat-masala-khakhra',
       name: 'Chat Masala Khakhra',
       description: 'Chat Masala Khakhra is another delicious Indian fusion snack where traditional khakhra is flavoured with chat masala—a tangy, spicy, and aromatic North Indian spice blend often used on street foods like chaat, fruit salads, or pakoras. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2226,7 +2227,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '71',
+      id: 'panipuri-khakhra',
       name: 'Panipuri Khakhra',
       description: 'Panipuri Khakhra is a fun and flavorful twist on traditional khakhra that brings the zesty, tangy, and spicy taste of panipuri (golgappa) into a crispy, portable snack format. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2246,7 +2247,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '72',
+      id: 'achar-khakhra',
       name: 'Achar Khakhra',
       description: 'Achar Khakhra (or Achari Khakhra) is a savoury, tangy, and mildly spicy version of khakhra that mimics the flavour of traditional Indian pickle (achar)—especially mango or mixed vegetable pickles. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2265,7 +2266,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '73',
+      id: 'maggi-khakhra',
       name: 'Maggi Khakhra',
       description: 'Maggi Khakhra is a fun and modern fusion snack that combines the crispiness of traditional khakhra with the iconic, savory taste of Maggi noodles masala—a nostalgic favorite across India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2284,7 +2285,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '74',
+      id: 'cheese-garlic-khakhra',
       name: 'Cheese Garlic Khakhra',
       description: 'Cheese Garlic Khakhra is a deliciously modern and indulgent khakhra flavour that blends the crisp, roasted base of traditional khakhra with the rich taste of cheese and the bold punch of garlic. It\'s perfect for snack lovers who enjoy savoury, cheesy treats with an Indian twist. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2304,7 +2305,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '75',
+      id: 'manchurian-khakhra',
       name: 'Manchurian Khakhra',
       description: 'Manchurian Khakhra is a bold Indo-Chinese twist on traditional khakhra, combining the crispy texture of this Gujarati snack with the spicy, tangy, and umami flavors of vegetable or Gobi Manchurian—a street food favorite across India. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2324,7 +2325,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '76',
+      id: 'peri-peri-khakhra',
       name: 'Peri Peri Khakhra',
       description: 'Peri Peri Khakhra is a fiery, flavourful fusion snack that combines the crunchy texture of khakhra with the bold, spicy, and slightly tangy Peri Peri (Piri Piri) seasoning—originally inspired by African-Portuguese flavours and popularized by many restaurant brands also. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2344,7 +2345,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '77',
+      id: 'cream-and-onion-khakhra',
       name: 'Cream and Onion Khakhra',
       description: 'Cream and Onion Khakhra is a tasty fusion snack inspired by the popular \'sour cream and onion\' flavour found in Western chips and crisps, adapted to the Indian palate through the crisp and wholesome format of khakhra. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2364,7 +2365,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '78',
+      id: 'farali-khakhra',
       name: 'Farali Khakhra',
       description: 'Farali Khakhra is a type of crispy Indian snack made specifically for fasting (or vrat) days. It\'s similar to regular khakhra (a thin, roasted flatbread), but made with ingredients that are allowed during Hindu fasts. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2389,11 +2390,11 @@ export const products: Product[] = [
         'Rock Salt': [],
         'Cumin Powder': [],
         'Green Chilli': [],
-        'Rice Bran Oil': []
+        "Rice Bran Oil": []
       }
     },
     {
-      id: '79',
+      id: 'mung-khakhra',
       name: 'Mung Khakhra',
       description: 'Moong Khakhra (or mung khakhra) is a crispy, savory Indian snack made from moong dal (split green gram) and whole wheat flour, similar in texture to a cracker or thin flatbread. It\'s a healthier, protein-rich variation of traditional khakhra, popular as a tea-time snack or a light meal option. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2403,102 +2404,16 @@ export const products: Product[] = [
       tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'mungkhakhras', 'moongkhakhras', 'Glutenfreekhakhras'],
       size: '200 gms',
       ingredients_benefits: {
-        'Green Gram(Mung)': [
-          'High in Plant-Based Protein: Provides about 24g of protein per 100g, supporting muscle growth and tissue repair.',
-          'Rich in Fiber: Aids digestion, helps regulate bowel movements, and keeps you feeling full—great for weight management.'
-        ],
-        'Gram Flour': [
-          'Rich in Plant-Based Protein: Contains around 20–22g of protein per 100g, supporting muscle repair and keeping you full.',
-          'High in Fiber: Promotes digestion, helps regulate bowel movements, and stabilizes blood sugar levels.'
-        ],
-        'Black Gram Flour (Urad Flour)': [],
-        'Iodized Salt': [],
-        'Green Chilli': [],
-        'Ginger': [],
-        'Rice Bran Oil': []
-      }
-    },
-    {
-      id: '80',
-      name: 'Bajri Khakhra',
-      description: 'Bajri Khakhra is a healthy and crunchy Indian snack made from bajra (pearl millet) flour. It\'s a traditional Gujarati food that\'s especially popular during winters due to its warming properties. Like other khakhras, it\'s roasted, not fried, making it a light yet satisfying snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-      price: 150,
-      image: '/images/khakhras5/IMG_23.png',
-      images: ['/images/khakhras5/IMG_23.png'],
-      category: 'Healthy Bites',
-      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'bajrikhakhras', 'glutenfreekhakhras'],
-      size: '200 gms',
-      ingredients_benefits: {
-        'Bajri (Pearl Millet)': [
-          'Gluten-Free: Bajra is naturally gluten-free, making it a safe and nutritious option for people with celiac disease or gluten intolerance.',
-          'High in Fiber: Bajra is rich in dietary fiber, which aids digestion, helps prevent constipation, and supports overall gut health.'
-        ],
-        'Black Gram (Urad Dal)': [
-          'High in Protein: Black gram is a protein-rich legume, making it an excellent plant-based protein source for vegetarians and vegans.',
-          'Good for Digestion: Rich in fiber, urad dal supports healthy digestion, prevents constipation, and promotes regular bowel movements.'
-        ],
-        'Black Chickpeas': [],
-        'Iodized Salt': [],
-        'Green Chilli': [],
-        'Ginger': [],
-        'Rice Bran Oil': []
-      }
-    },
-    {
-      id: '81',
-      name: 'Khichdi Khakhra',
-      description: 'Khichdi Khakhra is a delicious, healthy fusion snack that combines the comforting flavours of khichdi (a dish made with rice and lentils) with the crisp, crunchy texture of khakhra (a Gujarati roasted flatbread). This variation takes the nutrients of khichdi and transforms it into a crispy, snackable form, perfect for healthy munching. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-      price: 150,
-      image: '/images/khakhras5/IMG_24.png',
-      images: ['/images/khakhras5/IMG_24.png'],
-      category: 'Healthy Bites',
-      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'khichdikhakhras', 'glutenfreekhakhras'],
-      size: '200 gms',
-      ingredients_benefits: {
-        'Rice Flour': [
-          'Gluten-Free: Rice flour is naturally gluten-free, making it an excellent alternative for people with celiac disease or gluten intolerance.',
-          'Easily Digestible: Rice flour is light on the stomach and easily digestible, making it suitable for those with sensitive digestive systems.'
-        ],
-        'Green Gram': [
-          'High in Protein: Green gram provides around 24g of protein per 100g, supporting muscle growth and tissue repair.',
-          'Rich in Fiber: Helps regulate digestion, prevent constipation, and promote gut health.'
-        ],
-        'Pigeon Pea (Tuvar Dal)': [],
+        'Wheat Flour': ['High in Dietary Fiber', 'Promotes healthy digestion and helps prevent constipation', 'Helps you feel full longer, which can assist in weight management'],
+        'Black Chickpea Flour': ['High in Protein', 'Excellent plant-based protein source, supporting muscle repair and growth', 'Ideal for vegetarians, vegans, and those reducing meat consumption'],
         'Peanut Flour': [],
-        'Iodized Salt': [],
         'Rice Bran Oil': [],
-        'Chilli Powder': [],
-        'Turmeric Powder': [],
-        'Garam Masala (Cinnamon, Cloves, Cardamom, Bay Leaves, Black Pepper, Nutmeg, Mace)': []
-      }
-    },
-    {
-      id: '82',
-      name: 'Juvar Khakhra',
-      description: 'Juvar Khakhra is a delicious and healthy snack made from juvar (sorghum) flour, a gluten-free grain that is rich in nutrients. This khakhra variant is made in a similar fashion to the traditional bajra khakhra or wheat khakhra but uses juvar flour for a unique taste and nutritional profile. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-      price: 150,
-      image: '/images/khakhras5/IMG_25.png',
-      images: ['/images/khakhras5/IMG_25.png'],
-      category: 'Healthy Bites',
-      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'juvarkhakhras', 'Glutenfreekhakhras'],
-      size: '200 gms',
-      ingredients_benefits: {
-        'Sorghum Flour (Juvar Flour)': [
-          'Gluten-Free: Sorghum flour is naturally gluten-free, making it an excellent choice for those with celiac disease or gluten intolerance.',
-          'High in Fiber: Supports digestive health, helps prevent constipation, and can help manage blood sugar levels.'
-        ],
-        'Gram Flour (Chana Dal)': [
-          'High in Protein: Gram flour is a rich source of plant-based protein, supporting muscle growth and tissue repair.',
-          'Rich in Fiber: Aids in digestion, promotes regular bowel movements, and helps maintain healthy blood sugar levels.'
-        ],
-        'Black Gram Flour (Urad Flour)': [],
-        'Cumin': [],
         'Iodized Salt': [],
-        'Rice Bran Oil': []
+        'Spices and condiments': ['Turmeric Powder', 'Chilli Powder']
       }
     },
     {
-      id: '83',
+      id: 'makai-khakhra',
       name: "Makai Khakhra",
       description: "Makai Khakhra is a delicious variation of traditional khakhra that incorporates corn flour (makai flour), giving it a unique texture and flavour. It's a perfect gluten-free alternative to the classic wheat-based khakhra, while still maintaining that crispy and crunchy goodness. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2524,7 +2439,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '84',
+      id: 'dosa-khakhra',
       name: "Dosa Khakhra",
       description: "Dosa Khakhra is an innovative fusion snack that combines the crispy texture of traditional khakhra with the flavors of dosa, a popular South Indian crepe made from fermented rice and urad dal batter. This unique snack brings together the delicious spices of dosa and the satisfying crunch of khakhra. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2549,7 +2464,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '85',
+      id: 'ratlami-khakhra',
       name: "Ratlami Khakhra",
       description: "Ratlami Khakhra is a flavorful twist on the traditional khakhra, inspired by the spicy and aromatic Ratlami sev from Ratlam, a city in Madhya Pradesh, India. Ratlami sev is known for its bold, tangy, and spicy flavors, often made with carom seeds (ajwain), cumin, and black pepper, which give it a distinct kick. When combined with the crisp texture of khakhra, you get a savory and crunchy snack that's full of flavor. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2573,7 +2488,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '86',
+      id: 'adad-mari-khakhra',
       name: "Adad Mari Khakhra",
       description: "Adad Mari Khakhra is a variation of the traditional khakhra, incorporating Adad Dal (black lentils) and Pepper (Mari) for a spicy, crunchy, and nutritious snack. Adad dal is rich in protein, fiber, and essential nutrients, while the black pepper adds heat and digestive benefits, making this khakhra both delicious and healthy. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2597,7 +2512,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '87',
+      id: 'juvar-khakhra',
       name: "Juvar Khakhra",
       description: "Super Seeds Khakhra is a nutritious twist on the traditional khakhra, incorporating a variety of super seeds into the recipe. Super seeds are nutrient-dense and rich in healthy fats, fiber, protein, vitamins, and minerals. Adding them to khakhra enhances both its health benefits and its flavour. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2630,7 +2545,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '88',
+      id: 'moringa-khakhra',
       name: "Moringa Khakhra",
       description: "Moringa Khakhra is a healthy and nutritious variation of the traditional khakhra, made by incorporating moringa leaves (known as drumstick leaves) into the dough. Moringa is packed with essential nutrients like vitamins A, C, and E, iron, calcium, and protein, making it a superfood that offers numerous health benefits. Adding moringa to khakhra not only enhances its nutritional profile but also adds a unique flavour and a vibrant green colour to the crispy snack. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 150,
@@ -2655,7 +2570,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '89',
+      id: 'mango-pickle',
       name: 'Mango Pickle',
       description: "Mango pickle in mustard oil is a classic North Indian style, especially popular in regions like Punjab, Uttar Pradesh, and Bihar. It's known for its sharp tangy flavour, spicy kick, and the deep aroma of mustard oil. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
@@ -2694,7 +2609,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '90',
+      id: 'mix-pickle',
       name: 'Mix Pickle',
       description: "A mixed pickle (or achaar) is a delicious blend of different vegetables and fruits — commonly mango, carrot, lemon, green chili, and even cauliflower — all preserved in a spiced oil base. It's tangy, spicy, and perfectly suited to Indian meals like dal-chawal, paratha, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
@@ -2734,7 +2649,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '91',
+      id: 'ginger-garlic-pickle',
       name: 'Ginger Garlic Pickle',
       description: "Ginger Garlic Pickle is a flavourful Indian condiment combining the sharp heat of ginger, the pungency of garlic, and a mix of spices in a tangy, oily base—often preserved in mustard oil or sesame oil. It's commonly enjoyed with rice, parathas, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
@@ -2773,7 +2688,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '92',
+      id: 'dry-amla-pickle',
       name: 'Dry Amla Pickle',
       description: "Here's a simple and flavorful Dry Amla Pickle (Sookhi Amla Achar) recipe — a traditional Indian way to preserve Indian gooseberries with spices. It's tangy, spicy, and has a long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
@@ -2811,7 +2726,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '93',
+      id: 'sweet-and-sour-amla-pickle',
       name: 'Sweet & Sour Amla Pickle',
       description: "Here's a delicious Sweet and Sour Amla Pickle (Khatta Meetha Amla Achar) — tangy, spicy, and mildly sweet, it's a crowd-pleaser and absolutely irresistible! This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
@@ -2850,7 +2765,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '94',
+      id: 'amla-murabba',
       name: 'Amla Murabba',
       description: 'Amla Murabba is a sweet preserve made from amla (Indian gooseberry), known for its health benefits and tangy flavor. It\'s often consumed for its medicinal properties, particularly in Ayurveda, where it\'s valued for improving digestion, immunity, and skin health. This Murabba has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -2887,7 +2802,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '95',
+      id: 'bharwan-green-chilli-pickle',
       name: 'Bharwan Green Chilli Pickle',
       description: 'Bharwan Green Chilli (भरवां हरी मिर्च) is a flavourful Indian dish where green chillies are stuffed with a spiced filling—often made of mustard, fennel, and other aromatic spices. It\'s tangy, mildly spicy, and adds a punch to any Indian meal. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -2932,7 +2847,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '96',
+      id: 'bharwan-red-chilli-pickle',
       name: 'Bharwan Red Chilli Pickle',
       description: 'Bharwan Lal Mirch ka Achaar (भरवां लाल मिर्च का अचार) is a traditional Indian stuffed red chilli pickle made with thick, mildly spicy red chillies filled with a tangy, spiced masala mix. It\'s especially popular in Uttar Pradesh, Rajasthan, and Punjab. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -2979,7 +2894,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '97',
+      id: 'kathal-pickle',
       name: 'Kathal Pickle',
       description: 'Kathal ka Achaar (कटहल का अचार) is a delicious and unique jackfruit pickle made from raw (unripe) kathal. It\'s popular in North India, especially in Bihar and Uttar Pradesh, and has a meaty texture with bold, spicy, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -3018,7 +2933,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '98',
+      id: 'karela-pickle',
       name: 'Karela Pickle',
       description: 'Karela (Bitter Gourd) Pickle is a tangy and spicy Indian pickle made from the bitter vegetable, karela (bitter gourd), which is known for its health benefits. It\'s especially popular in North India and is a great way to balance out the bitterness with a variety of spices, oil, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -3058,7 +2973,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '99',
+      id: 'lemon-green-chilli-pickle',
       name: 'Lemon Green Chilli Pickle',
       description: 'Lemon Green Chilli Pickle (नींबू मिर्च का अचार) is a classic Indian condiment that combines the tang of lemon with the spice of green chillies—perfect as a zesty side dish with parathas, dal-chawal, or khichdi. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -3104,7 +3019,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '100',
+      id: 'lemon-sweet-and-sour-pickle',
       name: 'Lemon Sweet and Sour Pickle',
       description: 'Sweet and Sour Lemon Pickle (मीठा खट्टा नींबू का अचार) is a delicious Indian pickle that combines the tang of lemons with a perfect balance of sweetness from jaggery or sugar and spice from basic Indian masalas. It\'s especially popular in Gujarati and North Indian households. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
@@ -3144,7 +3059,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '101',
+      id: 'mango-sweet-and-sour-pickle',
       name: 'Mango Sweet and Sour Pickle',
       description: 'Mango Sweet and Sour Pickle (मीठा खट्टा आम का अचार) is a traditional Indian condiment that blends the tanginess of raw mangoes with the richness of jaggery or sugar and bold Indian spices. It\'s especially popular in North India and Gujarat, and is loved for its balanced sweet-spicy flavor and long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
