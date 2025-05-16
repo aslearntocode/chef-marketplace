@@ -3229,7 +3229,108 @@ export const products: Product[] = [
             '• Supports hormone production, brain health, and cell function.'
         ],
         'Mixed Nuts': []
+    },
+  },
+    {
+      id: 'flavour-vibes-methi-laddoos',
+      name: 'Methi Laddoos',
+      description: 'Methi Laddoos are traditional Indian sweets made with Fenugreek Seeds (Methi), whole wheat flour (Atta), jaggery, and ghee. These laddoos are not only delicious but also packed with health benefits, especially for digestion, metabolism, and women\'s health. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 300,
+      image: '/images/laddoopics/methid laddoo.jpg',
+      images: ['/images/laddoopics/methid laddoo.jpg'],
+      category: 'Healthy Treats',
+      tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'methiladdoos'],
+      size: '250, 500, 1000',
+      variants: {
+          sizes: [
+              { name: '250g', value: '250g', price: 300 },
+              { name: '500g', value: '500g', price: 550 },
+              { name: '1000g', value: '1000g', price: 1000 }
+          ]
+      },
+      ingredients_benefits: {
+          'Fenugreek Seeds': [
+              'Blood Sugar Control',
+              '• Fenugreek seeds are rich in soluble fiber, which can slow down carbohydrate digestion and absorption.',
+              '• Shown to improve insulin sensitivity and lower blood glucose levels in people with type 2 diabetes.'
+          ],
+          'Ghee': [
+              'Rich in Healthy Fats',
+              '• Contains saturated fats and medium-chain triglycerides (MCTs), which may help in energy production.',
+              '• Supports fat-soluble vitamin absorption (A, D, E, and K).'
+          ],
+          'Jaggery/Dates': [],
+          'Gond': [],
+          'Dried Fruits': [],
+          'Coconut': []
+      }
+    },
+    {
+        id: 'flavour-vibes-mixed-seeds-laddoos',
+        name: 'Mixed Seeds Laddoos',
+        description: 'Mixed Seeds Laddoos are a nutritious, energy-packed treat made with a variety of seeds, such as flaxseeds, pumpkin seeds, sunflower seeds, and melon seeds. These laddoos are high in healthy fats, protein, and fiber, making them a perfect snack for boosting energy and overall health. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+        price: 350,
+        image: '/images/laddoopics/mix seeds laddoo.jpg',
+        images: ['/images/laddoopics/mix seeds laddoo.jpg'],
+        category: 'Healthy Treats',
+        tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'seedsladdoos', 'mixedseedsladdoos'],
+        size: '250, 500, 1000',
+        variants: {
+            sizes: [
+                { name: '250g', value: '250g', price: 350 },
+                { name: '500g', value: '500g', price: 650 },
+                { name: '1000g', value: '1000g', price: 1100 }
+            ]
+        },
+        ingredients_benefits: {
+            'Pumpkin Seeds': [
+                'Rich in Nutrients',
+                '• Pumpkin seeds are loaded with important vitamins and minerals such as magnesium, iron, zinc, copper, manganese, and vitamin K.',
+                '• They are an excellent source of healthy fats, particularly omega-3 fatty acids, which are beneficial for heart health.'
+            ],
+            'Sunflower Seeds': [
+                'Rich in Nutrients',
+                '• Vitamins: Especially vitamin E (a powerful antioxidant), B vitamins (including B6 and folate), and minerals like magnesium, phosphorus, and copper.',
+                '• Healthy Fats: They are high in polyunsaturated fats, particularly omega-6 fatty acids, which are essential for heart health when consumed in balance with omega-3s.'
+            ],
+            'Chia Seeds': [],
+            'Sesame Seeds': [],
+            'Flax Seeds': [],
+            'Jaggery/Dates': []
+        }
+    },
+    {
+        id: 'flavour-vibes-multigrain-laddoos',
+        name: 'Multigrain Laddoos',
+        description: 'Multigrain Laddoos are a healthy, nutrient-packed Indian sweet made by blending a variety of grains and pulses, along with jaggery or honey for sweetness. These laddoos are a perfect balance of taste and health, making them an ideal snack for those looking for a nutritious alternative to traditional sweets. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+        price: 350,
+        image: '/images/laddoopics/multigrain laddoo.jpg',
+        images: ['/images/laddoopics/multigrain laddoo.jpg'],
+        category: 'Healthy Treats',
+        tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'seedsladdoos', 'multigrainladdoos'],
+        size: '250, 500, 1000',
+        variants: {
+            sizes: [
+                { name: '250g', value: '250g', price: 350 },
+                { name: '500g', value: '500g', price: 650 },
+                { name: '1000g', value: '1000g', price: 1100 }
+            ]
+        },
+        ingredients_benefits: {
+            'Wheat Flour': [
+                'Rich in Nutrients',
+                '• Vitamins: Whole wheat flour is a good source of essential vitamins, particularly B vitamins (like B1, B3, B5, and folate) that support metabolism, brain function, and red blood cell formation.',
+                '• Minerals: Whole wheat flour is rich in minerals such as magnesium, phosphorus, manganese, and iron, which support various bodily functions, including bone health, energy production, and oxygen transport.'
+            ],
+            'Millets (Ragi, Jowar, Bajra) Flour': [
+                'Millets are packed with essential nutrients, making them a great addition to a balanced diet:',
+                '• Vitamins: Millets are rich in B vitamins, such as niacin (B3), riboflavin (B2), and folic acid, which are important for energy metabolism and the proper functioning of the nervous system.',
+                '• Minerals: Millets provide a good amount of magnesium, phosphorus, iron, zinc, and calcium, supporting everything from bone health to immunity and red blood cell formation.'
+            ],
+            'Semolina': [],
+            'Ghee': [],
+            'Jaggery': []
+        }
     }
-},
 ];
 export default products; 
