@@ -3098,6 +3098,138 @@ export const products: Product[] = [
         'Fennel Seeds (Saunf)': [],
         'Salt': []
       }
+    },
+    {
+        id: 'flavour-vibes-besan-laddoos',
+        name: 'Besan Laddoos',
+        description: 'Besan Laddoos are a traditional Indian sweet made from roasted gram flour (besan), ghee (clarified butter), and sugar, often flavoured with cardamom and garnished with nuts. They\'re rich, aromatic, and perfect for festivals or celebrations. These laddoos have NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS',
+      price: 200,
+      image: '/images/laddoopics/besan laddoo.jpg',
+      images: ['/images/laddoopics/besan laddoo.jpg'],
+      category: 'Healthy Treats',
+      tags: ['madeinindia', 'homemadeladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'divineladdoos', 'nopreservatives', 'noartificialflavours', 'besanladdoos'],
+      size: '250, 500, 1000',
+      variants: {
+          sizes: [
+              { name: '250g', value: '250g', price: 200 },
+              { name: '500g', value: '500g', price: 400 },
+              { name: '1000g', value: '1000g', price: 700 }
+          ]
+      },
+      ingredients_benefits: {
+          'Besan (Gram Flour)': [
+              'Rich in Protein',
+              '• Besan is an excellent plant-based protein source, especially important in vegetarian and vegan diets.',
+              '• Protein helps in muscle repair, immune function, and keeping you full longer.'
+          ],
+          'Ghee': [
+              'Good Source of Healthy Fats',
+              '• Ghee contains saturated fats that are easily digestible and used by the body for energy.',
+              '• Supports hormone production, brain health, and cell function.'
+          ],
+          'Sugar': [],
+          'Cardamom Powder': [],
+          'Nuts': []
+      }
+    },
+    {
+    
+     id: 'flavour-vibes-dry-fruits-laddoos',
+      name: 'Dry Fruits Laddoos',
+      description: 'Dry Fruits Laddoos are a delicious, sugar-free, energy-packed treat made from nuts, seeds, and dates or figs — no added sugar or flour needed! They\'re great as a healthy snack, especially for kids, athletes, or during fasting. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 250,
+      image: '/images/laddoopics/dry fruits laddoo.jpg',
+      images: ['/images/laddoopics/dry fruits laddoo.jpg'],
+      category: 'Healthy Treats',
+      tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'Dryfruitsladdoos'],
+      size: '250, 500, 1000',
+      variants: {
+        sizes: [
+            { name: '250g', value: '250g', price: 250 },
+            { name: '500g', value: '500g', price: 500 },
+            { name: '1000g', value: '1000g', price: 1000 }
+        ]
+              },
+    ingredients_benefits: {
+        'Dry Fruits': [
+            'Rich in Nutrients',
+            '• Packed with vitamins (like B-complex, E, K) and minerals (iron, calcium, magnesium, zinc, potassium).',
+            '• A great natural source of plant protein and healthy fats.'
+        ],
+        'Ghee': [
+            'Good Source of Healthy Fats',
+            '• Ghee contains saturated fats that are easily digestible and used by the body for energy.',
+            '• Supports hormone production, brain health, and cell function.'
+        ],
+        'Jaggery/Dates': []
+    },
+  },
+    {
+    id: 'flavour-vibes-moong-laddoos',
+    name: 'Moong Laddoos',
+    description: 'Moong Dal Laddoos are a nutritious and tasty Indian sweet made from roasted whole moong dal (split moong beans), ghee, and jaggery. They\'re light, protein-rich, and perfect for festivals, prasad, or even as a healthy snack. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+    price: 300,
+    image: '/images/laddoopics/moong laddoo.jpg',
+    images: ['/images/laddoopics/moong laddoo.jpg'],
+    category: 'Healthy Treats',
+    tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'moongladdoos'],
+    size: '300, 500, 1000',
+    variants: {
+        sizes: [
+            { name: '250g', value: '250g', price: 300 },
+            { name: '500g', value: '500g', price: 500 },
+            { name: '1000g', value: '1000g', price: 1000 }
+        ]
+    },
+    ingredients_benefits: {
+        'Moong Dal': [
+            'High in Protein',
+            '• Excellent plant protein source (~24g protein per 100g dry dal).',
+            '• Helps in muscle repair, growth, and satiety'
+        ],
+        'Ghee': [
+            'Good Source of Healthy Fats',
+            '• Ghee contains saturated fats that are easily digestible and used by the body for energy.',
+            '• Supports hormone production, brain health, and cell function.'
+        ],
+        'Jaggery/Dates': []
+    },
+  },
+    {
+    id: 'flavour-vibes-makhana-laddoos',
+    name: 'Makhana Laddoos',
+    description: 'Makhana Laddoos are sweet, round energy bites made primarily from makhana (also known as fox nuts or lotus seeds). They\'re often combined with ingredients like ghee, jaggery, and nuts to form a nutritious, naturally sweet treat. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+    price: 350,
+    image: '/images/laddoopics/makhana laddoo.jpg',
+    images: ['/images/laddoopics/makhana laddoo.jpg'],
+    category: 'Healthy Treats',
+    tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'makhanaladdoos'],
+    size: '250, 500, 1000',
+    variants: {
+        sizes: [
+            { name: '250g', value: '250g', price: 350 },
+            { name: '500g', value: '500g', price: 650 },
+            { name: '1000g', value: '1000g', price: 1100 }
+        ]
+    },
+    ingredients_benefits: {
+        'Makhana': [
+            'Rich in Protein',
+            '• Makhana is a great source of plant-based protein, which is essential for muscle repair and growth.',
+            '• It\'s perfect for vegetarians and vegans to help meet their protein requirements.'
+        ],
+        'Jaggery': [
+            'Rich in Nutrients',
+            '• Jaggery is packed with essential minerals like iron, magnesium, potassium, and phosphorus.',
+            '• It also contains small amounts of B vitamins, including vitamin B6 and folate, which support energy production and metabolic processes.'
+        ],
+        'Ghee': [
+            'Good Source of Healthy Fats',
+            '• Ghee contains saturated fats that are easily digestible and used by the body for energy.',
+            '• Supports hormone production, brain health, and cell function.'
+        ],
+        'Mixed Nuts': []
     }
+},
 ];
 export default products; 
