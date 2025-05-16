@@ -3331,6 +3331,69 @@ export const products: Product[] = [
             'Ghee': [],
             'Jaggery': []
         }
+    },
+    {
+      id: 'flavour-vibes-nachni-laddoos',
+      name: 'Nachni Laddoos',
+      description: 'Nachni Laddoos (also known as Ragi Laddoos) are a traditional Indian sweet made primarily from finger millet flour (nachni/ragi), which is known for its numerous health benefits. These laddoos are not only delicious but also packed with essential nutrients, making them a great treat for all ages, especially for growing children and people with dietary needs. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 300,
+      image: '/images/laddoopics/nachani laddoo.jpg',
+      images: ['/images/laddoopics/nachani laddoo.jpg'],
+      category: 'Healthy Treats',
+      tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'milletladdoos', 'nachniladdoos'],
+      size: '250, 500, 1000',
+      variants: {
+        sizes: [
+            { name: '250g', value: '250g', price: 300 },
+            { name: '500g', value: '500g', price: 550 },
+            { name: '1000g', value: '1000g', price: 1000 }
+        ]
+      },
+      ingredients_benefits: {
+        'Nachni/Ragi Flour (Finger Millets)': [
+          'Rich in Calcium',
+          'Bone Health: Nachni is an excellent source of calcium, which is essential for maintaining strong and healthy bones and teeth. Regular consumption of Nachni can help prevent conditions like osteoporosis and bone fractures.',
+          'Promotes Healthy Teeth: The calcium content also supports healthy tooth development and helps in maintaining the strength of teeth.'
+        ],
+        'Jaggery': [
+          'Rich in Nutrients',
+          'Minerals: Jaggery is packed with essential minerals such as iron, magnesium, calcium, potassium, phosphorus, and zinc.',
+          'Vitamins: It contains small amounts of B-vitamins (like B6) and vitamin C, which support overall health.'
+        ],
+        'Ghee': [],
+        'Cardamom': [],
+        'Nuts': []
+      }
+    },
+    {
+      id: 'flavour-vibes-oats-laddoos',
+      name: 'Oats Laddoos',
+      description: 'Oats Laddoos are a healthy, nutrient-packed Indian sweet that combines the goodness of oats, ghee, jaggery, and a mix of spices. These laddoos are not only delicious but also offer a great combination of flavours and textures, making them an excellent choice for a nutritious snack or dessert. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 350,
+      image: '/images/laddoopics/oats laddoo.jpg',
+      images: ['/images/laddoopics/oats laddoo.jpg'],
+      category: 'Healthy Treats',
+      tags: ['madeinindia', 'laddoos', 'betterladdoos', 'nopalmoil', 'healthier', 'healthierladdoos', 'tastierladdoos', 'homemadeladdoos', 'mommadeladdoos', 'nostalgia', 'oatsladdoos'],
+      size: '250, 500, 1000',
+      variants: {
+        sizes: [
+            { name: '250g', value: '250g', price: 350 },
+            { name: '500g', value: '500g', price: 650 },
+            { name: '1000g', value: '1000g', price: 1100 }
+        ]
+      },
+      ingredients_benefits: {
+        'Oats': [
+          'Promotes Heart Health: Oats are a great source of soluble fiber, particularly beta-glucan, which helps to lower bad cholesterol (LDL) levels. This can reduce the risk of heart disease by improving blood lipid profiles and reducing inflammation.',
+          'Improves Digestion: Beta-glucan also helps improve gut health by forming a gel-like substance in the intestines, which promotes regular bowel movements, prevents constipation, and supports a healthy digestive system.'
+        ],
+        'Jaggery': [
+          'Iron: Jaggery is an excellent source of iron, which is crucial for the production of hemoglobin and red blood cells. It helps in preventing iron-deficiency anemia and boosts energy levels by improving oxygen transportation in the body.',
+          'Vitamins and Minerals: Jaggery also contains magnesium, potassium, phosphorus, and zinc, which play essential roles in various bodily functions such as bone health, immune function, and energy production.'
+        ],
+        'Mixed nuts': []
+      }
     }
+
 ];
 export default products; 
