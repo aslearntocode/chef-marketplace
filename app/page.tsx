@@ -180,7 +180,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between pt-0 bg-[#FDBE28]">
       <div className="w-full font-nunito">
         {/* Search Section */}
-        <section className="bg-[#FDBE28] py-4 px-4 mt-[72px]">
+        <section className="bg-[#FDBE28] py-4 px-4 mt-4">
           <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSearch} className="relative flex gap-2">
               <div className="relative flex-1">

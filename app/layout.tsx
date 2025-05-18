@@ -124,7 +124,7 @@ export default function RootLayout({
         <AuthProvider>
           <CartProvider>
             <Navbar />
-            <main className="min-h-screen pt-[72px]">
+            <main className="min-h-screen pt-[124px]">
               {children}
             </main>
             <Footer />
