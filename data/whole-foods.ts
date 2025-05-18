@@ -3393,7 +3393,135 @@ export const products: Product[] = [
         ],
         'Mixed nuts': []
       }
+    },
+    {
+      id: 'mix-magic-ragi-rava-appe',
+      name: 'Ragi Rava Appe',
+      description: 'Ragi Rava Appe is a healthy and tasty South Indian breakfast or snack made using ragi (finger millet) flour, rava (semolina), and usually curd/yogurt. It\'s cooked in a special pan called an appe pan or paniyaram pan. This is a premix which just needs vegetables and some oil to go before being cooked. This premix has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS',
+      price: 200,
+      image: '/images/mixmagic/Ragi Rava Appe.jpeg',
+      images: ['/images/mixmagic/Ragi Rava Appe.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'homemadepremix', 'nopalmoil', 'healthier', 'healthierpremixes', 'divinepremixes', 'nopreservatives', 'noartificialflavours', 'breakfastpremix'],
+      size: '200',
+      ingredients_benefits: {
+        'Ragi': ['Rich in Calcium', '• Ragi contains more calcium than any other cereal grain.', '• Essential for bone health and preventing osteoporosis, especially in children and older adults.'],
+        'Sooji': ['Good Source of Energy', '• Sooji is rich in complex carbohydrates, which provide steady energy without rapid spikes in blood sugar (especially if paired with protein or fiber).'],
+        'Urad Dal': [],
+        'Poha': []
+      }
+    },
+    {
+      id: 'mix-magic-kodo-millet-bondas',
+      name: 'Kodo Millet Bonda',
+      description: 'Kodo millet (botanical name: Paspalum scrobiculatum) is a nutrient-dense, gluten-free ancient grain that has gained popularity as a healthy substitute for rice and wheat, especially in South Indian diets. It\'s one of the "positive millets" recommended for its health-promoting properties. Kodo Millet Bonda is a crispy, tasty, and healthy South Indian-style snack made with kodo millet as the base ingredient instead of regular rice or maida. It\'s perfect for tea-time or as a light evening snack, offering the health benefits of millet in a crunchy and flavourful form. This premix comes in handy for office goers/professionals/kids, infact for people of all ages- It\'s a quick-fix for sudden hunger pangs. It has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 180,
+      image: '/images/mixmagic/Kodo Millet Bonda.jpeg',
+      images: ['/images/mixmagic/Kodo Millet Bonda.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'laddoos', 'betterbondas', 'nopalmoil', 'healthier', 'healthierbondas', 'tastierbondas', 'homemadebondapremixes', 'mommadebondas', 'nostalgia', 'bondas', 'eveningsnack', 'eveningsnackpremix'],
+      size: '200',
+      ingredients_benefits: {
+        'Kodo Millet': ['Diabetic-Friendly', '• Kodo millet has a low glycemic index, meaning it releases glucose slowly into the bloodstream.', '• Helps in controlling blood sugar spikes, making it ideal for people with type 2 diabetes.'],
+        'Urad Dal': ['Excellent Source of Protein', '• One of the best plant-based sources of protein, especially for vegetarians.', '• Supports muscle growth, tissue repair, and overall strength.']
+      }
+    },
+    {
+      id: 'mix-magic-jowar-dosa',
+      name: 'Jowar Dosa',
+      description: 'Jowar Dosa is a nutritious, gluten-free South Indian-style crepe made using jowar flour (sorghum flour). It\'s a healthy alternative to traditional rice dosas and is especially popular among those looking for high-fiber, diabetic-friendly, or weight-loss-friendly foods. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 175,
+      image: '/images/mixmagic/Jowar Dosa.jpeg',
+      images: ['/images/mixmagic/Jowar Dosa.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'jowa', 'jowardosamix', 'nopalmoil', 'healthier', 'healthierdosas', 'tastierdosas', 'homemadedosas', 'mommadedosa', 'nostalgia', 'jowardosa', 'gluenfreedosa', 'diabeticfriendlydosa'],
+      size: '400',
+      ingredients_benefits: {
+        'Jowar Flour': ['Jowar flour (made from jowar, also known as sorghum) is a gluten-free, fiber-rich ancient grain flour that\'s gaining popularity for its impressive health benefits. It\'s especially beneficial for people with gluten intolerance, diabetes, or those aiming for weight loss and better digestion.'],
+        'Urad Flour': ['High in Protein', '• Urad flour is an excellent plant-based protein source, especially valuable for vegetarians and vegans.', '• Supports muscle repair, growth, and overall strength.'],
+        'Rice Flour': [],
+        'Poha': []
+      }
+    },
+    {
+      id: 'mix-magic-jowar-idli',
+      name: 'Jowar Idli',
+      description: 'Jowar Idli is a healthy variation of the traditional South Indian idli, made using jowar flour (sorghum flour) or whole jowar grains in place of or along with rice and urad dal. It\'s light, fluffy, and rich in nutrients—perfect for a wholesome breakfast or snack. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 220,
+      image: '/images/mixmagic/Jowar Idli.jpeg',
+      images: ['/images/mixmagic/Jowar Idli.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'jowaridlis', 'betteridlis', 'nopalmoil', 'healthier', 'healthieridlis', 'tastieridlis', 'homemadeidlipremix', 'mommadeidlis', 'nostalgia', 'jowaridlipremix'],
+      size: '400',
+      ingredients_benefits: {
+        'Jowar': ['Gluten-Free', '• Naturally gluten-free, making it an excellent choice for people with celiac disease or gluten sensitivity.', '• Supports gut health and reduces inflammation caused by gluten in sensitive individuals'],
+        'Sooji': ['Good Source of Energy', '• Rich in complex carbohydrates, which provide sustained energy.', '• Ideal for a hearty breakfast or pre-workout meal.'],
+        'Urad Dal': [],
+        'Poha': []
+      }
+    },
+    {
+      id: 'mix-magic-ragi-rava-idli',
+      name: 'Ragi Rava Idli',
+      description: 'Ragi Rava Idli is a wholesome and nutritious South Indian breakfast dish made from a combination of ragi flour (finger millet) and rava (semolina or sooji). It is a healthy twist on the traditional idli, offering a rich source of calcium, fiber, and iron. Soft and fluffy in texture, ragi rava idlis are mildly spiced and typically made without fermentation, making them quick and easy to prepare. These idlis are often seasoned with mustard seeds, curry leaves, green chilies, and sometimes grated carrots or coriander for added flavor and nutrition. Served hot with coconut chutney or sambar, ragi rava idli is a delicious and filling choice for those looking for a diabetic-friendly or weight-conscious meal. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 160,
+      image: '/images/mixmagic/Ragi Rava Idli.jpeg',
+      images: ['/images/mixmagic/Ragi Rava Idli.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'Idlis', 'betteridli', 'nopalmoil', 'healthier', 'healthieridlis', 'tastieridlis', 'homemadeidlis', 'mommadeidlis', 'nostalgia', 'ragiidlis', 'ravaidlis', 'ragiravaidlis'],
+      size: '400',
+      ingredients_benefits: {
+        'Ragi': ['Rich in Calcium', '• Ragi is one of the best plant-based sources of calcium, essential for maintaining healthy bones and teeth.', '• Especially beneficial for growing children, pregnant women, and the elderly to prevent osteoporosis.'],
+        'Rava': ['Good Source of Energy', '• Rava is rich in carbohydrates, making it an excellent energy booster.', '• Ideal for breakfast to kick-start the day.']
+      }
+    },
+    {
+      id: 'mix-magic-ragi-rava-upma',
+      name: 'Ragi Rava Upma',
+      description: 'Ragi Rava Upma is a wholesome and nutrient-rich South Indian breakfast dish made using ragi flour (finger millet) and rava (semolina). It\'s a healthy twist on the traditional upma, combining the benefits of both ingredients for a fiber-rich, calcium-packed, and filling meal. Light on the stomach and quick to make, it\'s ideal for weight watchers, diabetics, and anyone looking for a nutritious breakfast or evening snack. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 150,
+      image: '/images/mixmagic/Ragi Rava Upma.jpeg',
+      images: ['/images/mixmagic/Ragi Rava Upma.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'upma', 'betterupma', 'nopalmoil', 'healthier', 'healthierupma', 'tastierupma', 'homemadeupma', 'mommadeupma', 'nostalgia', 'ragiupma', 'ragiravaupma'],
+      size: '400',
+      ingredients_benefits: {
+        'Ragi': ['Rich in Calcium', '• Ragi contains 10x more calcium than white rice.', '• Essential for strong bones and teeth, especially for children, pregnant women, and the elderly.'],
+        'Sooji': ['Boosts Energy', '• Sooji is rich in complex carbohydrates, which release energy slowly, keeping you active and fuller for longer.', '• Great for breakfast or pre-workout meals.']
+      }
+    },
+    {
+      id: 'mix-magic-ragi-rava-dosa',
+      name: 'Ragi Rava Dosa',
+      description: 'Ragi Rava Dosa is a crispy, thin, and flavorful South Indian crepe made with a nutritious blend of ragi flour (finger millet), rava (semolina), and rice flour. It\'s a quick, no-fermentation dosa that\'s perfect for a healthy breakfast or light dinner. This dosa has a delicate, lacy texture with crisp edges and a slightly earthy, nutty taste from the ragi. Often spiced with green chilies, ginger, cumin seeds, and curry leaves, it\'s a savory and satisfying dish that pairs beautifully with coconut chutney, tomato chutney, or sambar. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 155,
+      image: '/images/mixmagic/Ragi Rava Dosa.jpeg',
+      images: ['/images/mixmagic/Ragi Rava Dosa.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'dosa', 'betterdosas', 'nopalmoil', 'healthier', 'healthierdosas', 'tastierdosas', 'homemadedosas', 'mommadedosas', 'nostalgia', 'ragiravadosa', 'ragidosa'],
+      size: '400',
+      ingredients_benefits: {
+        'Ragi': ['Excellent Source of Calcium', '• Ragi contains 10x more calcium than white rice.', '• Essential for strong bones and teeth, especially for children, pregnant women, and the elderly.'],
+        'Sooji': ['Boosts Energy', '• Sooji is rich in complex carbohydrates, which release energy slowly, keeping you active and fuller for longer.', '• Great for breakfast or pre-workout meals.'],
+        'Rice Flour': []
+      }
+    },
+    {
+      id: 'mix-magic-ragi-rava-dhokla',
+      name: 'Ragi Rava Dhokla',
+      description: 'Ragi Rava Dhokla is a soft, fluffy, and healthy steamed savoury cake made from a nutritious mix of ragi flour (finger millet) and rava (semolina). It\'s a wholesome twist on the traditional Gujarati dhokla, combining the earthiness of ragi with the lightness of rava to create a protein- and fiber-rich snack or breakfast. Prepared without fermentation and steamed to perfection, this dhokla is mildly spiced, slightly tangy, and topped with a classic tempering of mustard seeds, green chilies, curry leaves, and fresh coriander. It\'s ideal for those looking for a diabetic-friendly or weight-conscious option. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
+      price: 155,
+      image: '/images/mixmagic/Ragi Rava Dhokla.jpeg',
+      images: ['/images/mixmagic/Ragi Rava Dhokla.jpeg'],
+      category: 'Healthier Premixes',
+      tags: ['madeinindia', 'dhoklas', 'betterdhoklas', 'nopalmoil', 'healthier', 'healthierdhoklas', 'tastierdhoklas', 'homemadedhoklas', 'mommadedhoklas', 'nostalgia', 'ragiravadhoklas', 'ragidhoklas'],
+      size: '200',
+      ingredients_benefits: {
+        'Ragi': ['Excellent Source of Calcium', '• Ragi contains 10x more calcium than white rice.', '• Essential for strong bones and teeth, especially for children, pregnant women, and the elderly.'],
+        'Sooji': ['Boosts Energy', '• Sooji is rich in complex carbohydrates, which release energy slowly, keeping you active and fuller for longer.', '• Great for breakfast or pre-workout meals.'],
+        'Gram Flour': []
+      }
     }
-
-];
-export default products; 
+  ];
+  
+  export default products; 

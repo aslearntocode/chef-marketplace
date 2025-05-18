@@ -245,7 +245,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
                   {product.images ? (
                     <>
                       <Image
-                        src={product.images[currentImageIndex[product.id] || 0]}
+                        src={product.images[currentImageIndex[product.id] || 0] || '/images/placeholder.png'}
                         alt={product.name}
                         fill
                         className="object-contain p-4"

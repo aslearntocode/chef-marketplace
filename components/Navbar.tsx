@@ -34,13 +34,14 @@ export default function Navbar() {
       id: 'shop-now',
       label: 'Shop Now',
       dropdown: [
-        { href: '/whole-foods/categories/healthy-treats', label: 'Healthy Treats' },
-        { href: '/whole-foods/categories/drinks', label: 'Drinks' },
-        { href: '/whole-foods/categories/healthy-bites', label: 'Healthy Bites' },
+        { href: '/whole-foods/categories/healthy-treats', label: 'Healthier Treats' },
+        { href: '/whole-foods/categories/drinks', label: 'Healthier Drinks' },
+        { href: '/whole-foods/categories/healthy-bites', label: 'Healthier Bites' },
         { href: '/whole-foods/categories/pickles', label: 'Pickles & Condiments' },
-        { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthy Breakfast' },
+        { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthier Breakfast' },
         { href: '/whole-foods/categories/spice-blends', label: 'Spice Blends' },
-        { href: '/whole-foods/categories/nuts-and-seeds', label: 'Nuts and Seeds' },
+        { href: '/whole-foods/categories/nuts-and-seeds', label: 'Dry Fruits & Seeds' },
+        { href: '/whole-foods/categories/healthier-premixes', label: 'Healthier Premixes' },
       ]
     },
   ];
