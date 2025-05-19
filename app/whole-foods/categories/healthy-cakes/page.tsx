@@ -3,13 +3,13 @@
 import { products } from '@/data/whole-foods';
 import CategoryPage from '../../components/CategoryPage';
 
-export default function HealthierCakesPage() {
+export default function HealthyCakesPage() {
   const categoryProducts = products.filter(product => 
-    product.category.toLowerCase() === 'healthier cakes'
+    product.category.toLowerCase() === 'healthy cakes'
   );
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
+    <main className="min-h-screen bg-[#FDBE28] pt-[1cm]">
       <CategoryPage 
         category="Healthier Cakes" 
         products={categoryProducts} 

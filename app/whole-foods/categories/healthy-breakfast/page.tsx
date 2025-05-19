@@ -9,9 +9,9 @@ export default function HealthyTreatsPage() {
   );
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
+    <main className="min-h-screen bg-[#FDBE28] pt-[1cm]">
       <CategoryPage 
-        category="Healthy Breakfast" 
+        category="Healthier Breakfast" 
         products={categoryProducts} 
       />
     </main>

@@ -3513,7 +3513,7 @@ export const products: Product[] = [
       price: 155,
       image: '/images/mixmagic/Ragi Rava Dhokla.jpeg',
       images: ['/images/mixmagic/Ragi Rava Dhokla.jpeg'],
-      category: 'Healthier Premixes',
+      category: 'Healthy Premixes',
       tags: ['madeinindia', 'dhoklas', 'betterdhoklas', 'nopalmoil', 'healthier', 'healthierdhoklas', 'tastierdhoklas', 'homemadedhoklas', 'mommadedhoklas', 'nostalgia', 'ragiravadhoklas', 'ragidhoklas'],
       size: '200',
       ingredients_benefits: {
@@ -3529,9 +3529,9 @@ export const products: Product[] = [
       price: 750,
       image: '/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg',
       images: ['/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg'],
-      category: 'Healthier Cakes',
+      category: 'Healthy Cakes',
       tags: ['madeinindia', 'glutenfreecakes', 'nopalmoil', 'healthier', 'healthiercakes', 'divinecakes', 'nopreservatives', 'noartificialflavours', 'egglessteacakes', 'egglesscakes', 'glutenfreeteacake', 'sugarfreeteacake'],
-      size: '500, 600',
+      size: '250gms, 500gms',
       variants: {
         sizes: [
           { name: '250g', value: '250g', price: 750 },
@@ -3559,7 +3559,7 @@ export const products: Product[] = [
       price: 500,
       image: '/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg',
       images: ['/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg'],
-      category: 'Healthier Cakes',
+      category: 'Healthy Cakes',
       tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'Jowarcake'],
       size: '250gms',
       ingredients_benefits: {
@@ -3583,7 +3583,7 @@ export const products: Product[] = [
       price: 500,
       image: '/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg',
       images: ['/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg'],
-      category: 'Healthier Cakes',
+      category: 'Healthy Cakes',
       tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'Ragicake'],
       size: '250gms',
       ingredients_benefits: {
@@ -3609,7 +3609,7 @@ export const products: Product[] = [
       price: 800,
       image: '/images/smiles_cakes/Carrot_Millet_Teacake.jpeg',
       images: ['/images/smiles_cakes/Carrot_Millet_Teacake.jpeg'],
-      category: 'Healthier Cakes',
+      category: 'Healthy Cakes',
       tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'carrotcakes'],
       size: '250gms',
       ingredients_benefits: {
@@ -3631,7 +3631,7 @@ export const products: Product[] = [
       price: 700,
       image: '/images/smiles_cakes/Multigrain_Carrots.jpeg',
       images: ['/images/smiles_cakes/Multigrain_Carrots.jpeg'],
-      category: 'Healthier Cakes',
+      category: 'Healthy Cakes',
       tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'carrotcakes', 'multigraincakes'],
       size: '250gms',
       ingredients_benefits: {

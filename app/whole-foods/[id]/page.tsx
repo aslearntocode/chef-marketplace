@@ -181,13 +181,13 @@ export default function ProductPage({ params }: ProductPageProps) {
   };
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
+    <main className="mt-[72px] min-h-screen bg-[#FDBE28]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Mobile Back Button */}
         <div className="md:hidden py-4">
           <button
             onClick={() => router.back()}
-            className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 bg-white rounded-full px-4 py-2 shadow-sm transition-colors"
+            className="inline-flex items-center gap-2 text-[#8B4513] hover:text-[#6B3410] bg-white rounded-full px-4 py-2 shadow-sm transition-colors"
           >
             <FiArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back</span>
@@ -211,7 +211,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   priority
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity">
-                  <FiZoomIn className="text-white opacity-0 group-hover:opacity-100 transform scale-150" />
+                  <FiZoomIn className="text-[#8B4513] opacity-0 group-hover:opacity-100 transform scale-150" />
                 </div>
               </div>
 
@@ -220,7 +220,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <div className="mt-4 flex items-center justify-center gap-4">
                   <button
                     onClick={() => handleImageNav('prev')}
-                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200"
+                    className="p-2 rounded-full bg-[#FDBE28] hover:bg-[#FDBE28]/80 text-[#8B4513]"
                   >
                     <FiChevronLeft />
                   </button>
@@ -229,14 +229,14 @@ export default function ProductPage({ params }: ProductPageProps) {
                       <div
                         key={index}
                         className={`w-2 h-2 rounded-full ${
-                          currentImageIndex === index ? 'bg-black' : 'bg-gray-300'
+                          currentImageIndex === index ? 'bg-[#8B4513]' : 'bg-[#FDBE28]/50'
                         }`}
                       />
                     ))}
                   </div>
                   <button
                     onClick={() => handleImageNav('next')}
-                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200"
+                    className="p-2 rounded-full bg-[#FDBE28] hover:bg-[#FDBE28]/80 text-[#8B4513]"
                   >
                     <FiChevronRight />
                   </button>
@@ -247,10 +247,10 @@ export default function ProductPage({ params }: ProductPageProps) {
             {/* Right Column - Product Details */}
             <div className="flex flex-col">
               <div className="mb-6">
-                <p className="text-sm text-gray-500 mb-2">{product.category}</p>
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+                <p className="text-sm text-[#8B4513] mb-2">{product.category}</p>
+                <h1 className="text-3xl font-bold text-[#8B4513] mb-4">{product.name}</h1>
                 <div className="flex items-baseline gap-4">
-                  <p className="text-2xl font-bold">₹{selectedSize ? selectedSize.price : product.price}</p>
+                  <p className="text-2xl font-bold text-[#8B4513]">₹{selectedSize ? selectedSize.price : product.price}</p>
                   {(!selectedSize && product.price < 499) || (selectedSize?.price && selectedSize.price < 499) ? (
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                       Introductory Offer
@@ -258,7 +258,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   ) : null}
                 </div>
                 {/* Display size information */}
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm text-gray-600 mt-2">
                   {product.size ? `Size: ${product.size}` : ''}
                 </p>
               </div>

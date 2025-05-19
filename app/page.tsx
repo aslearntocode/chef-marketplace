@@ -93,22 +93,7 @@ export default function Home() {
   };
 
   const handleSuggestionClick = (product: any) => {
-    const categoryRoutes: { [key: string]: string } = {
-      'drinks': '/whole-foods/categories/drinks',
-      'healthy treats': '/whole-foods/categories/healthy-treats',
-      'pickles & condiments': '/whole-foods/categories/pickles',
-      'healthy bites': '/whole-foods/categories/healthy-bites',
-      'spice blends': '/whole-foods/categories/spice-blends',
-      'nuts and seeds': '/whole-foods/categories/nuts-and-seeds',
-      'healthy breakfast': '/whole-foods/categories/healthy-breakfast'
-    };
-
-    const category = product.category.toLowerCase();
-    if (categoryRoutes[category]) {
-      router.push(`${categoryRoutes[category]}?q=${encodeURIComponent(product.name)}`);
-    } else {
-      router.push(`/whole-foods?q=${encodeURIComponent(product.name)}`);
-    }
+    router.push(`/whole-foods/${product.id}`);
     setShowSuggestions(false);
   };
 
