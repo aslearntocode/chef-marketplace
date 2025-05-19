@@ -42,6 +42,7 @@ export default function Navbar() {
         { href: '/whole-foods/categories/spice-blends', label: 'Spice Blends' },
         { href: '/whole-foods/categories/nuts-and-seeds', label: 'Dry Fruits & Seeds' },
         { href: '/whole-foods/categories/healthier-premixes', label: 'Healthier Premixes' },
+        { href: '/whole-foods/categories/healthier-cakes', label: 'Healthier Cakes' },
       ]
     },
   ];
@@ -50,8 +51,8 @@ export default function Navbar() {
     { href: '/whole-foods/categories/healthy-breakfast?filter=protein-rich-veg', label: 'Protein Rich Veg Breakfast' },
     { href: '/whole-foods/categories/healthy-bites?q=khakhra', label: 'Protein Rich Khakhra' },
     { href: '/whole-foods/categories/spice-blends', label: 'Pure Indian Masalas' },
-    { href: '/whole-foods/35', label: 'Millet Cookies' },
-    { href: '/whole-foods/categories/nuts-and-seeds', label: 'Cashews' },
+    { href: '/whole-foods/millet-cookies-multiple-flavors', label: 'Millet Cookies' },
+    { href: '/whole-foods/57', label: 'Cashews' },
     { href: '/whole-foods/categories/healthy-bites?q=chips', label: 'Healthy Chips' },
   ];
 

@@ -10,7 +10,7 @@ export default function About() {
           <div className="space-y-6 text-gray-700 leading-relaxed">
             <p>
               A journey of a thousand miles begins with a single step. This is true both literally 
-              and metaphorically for the founder of the company &apos;The Divine Hands&apos;. Akansha 
+              and metaphorically for the founder of the company &apos;The Divine Hands&apos;. Dhrumi 
               started with her travel diaries in the year 2007 and has had the fortune of not just 
               visiting but living and experiencing at length the culture and ethos of various 
               geographies including the US and South East Asia. Experience being the biggest teacher, she learned 

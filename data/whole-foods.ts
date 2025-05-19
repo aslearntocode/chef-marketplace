@@ -3521,7 +3521,138 @@ export const products: Product[] = [
         'Sooji': ['Boosts Energy', '• Sooji is rich in complex carbohydrates, which release energy slowly, keeping you active and fuller for longer.', '• Great for breakfast or pre-workout meals.'],
         'Gram Flour': []
       }
+    },
+    {
+      id: 'chocolate-mango-teacake',
+      name: 'Gluten Free, Sugar Free & Eggless Chocolate Mango Teacake',
+      description: "Here's a gluten-free and sugar-free eggless chocolate mango tea cake that's moist, flavourful, and perfect with a cup of tea. It combines rich chocolate with the tropical sweetness of mango in a tender crumb- A Tropical Twist to your teatime: Gluten-free & Guilt-free Chocolate Mango Tea cake (EGGLESS). This is a clean label product and has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      price: 750,
+      image: '/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg',
+      images: ['/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg'],
+      category: 'Healthier Cakes',
+      tags: ['madeinindia', 'glutenfreecakes', 'nopalmoil', 'healthier', 'healthiercakes', 'divinecakes', 'nopreservatives', 'noartificialflavours', 'egglessteacakes', 'egglesscakes', 'glutenfreeteacake', 'sugarfreeteacake'],
+      size: '500, 600',
+      variants: {
+        sizes: [
+          { name: '250g', value: '250g', price: 750 },
+          { name: '500g', value: '500g', price: 1400 }
+        ]
+      },
+      ingredients_benefits: {
+        'Almond Flour': [
+          'Almond flour is low in carbohydrates and high in monounsaturated fats, making it a great fit for low-carb or keto diets.',
+          'Almond flour also helps maintain steady blood sugar levels.'
+        ],
+        'Jowar Flour': [
+          'Helps manage blood sugar spikes, making it a good option for diabetics.',
+          'Rich in magnesium and potassium, which help regulate blood pressure and support cardiovascular function.'
+        ],
+        'Oats Flour': [],
+        'Fresh Mango Pulp': [],
+        'Stevia Sugar Free Powder': []
+      }
+    },
+    {
+      id: 'jowar-vanilla-jaggery-teacake',
+      name: 'Gluten free, Sugar free & Eggless Jowar Vanilla Jaggery Tea Cake',
+      description: "Here’s a simple and delicious Jowar Vanilla Jaggery Tea Cake — a wholesome, gluten-free option with warm, earthy flavours. It’s soft, mildly sweet, and perfect with tea or coffee. This cake is sugar free hence guilt free + eggless too. This is a clean label product and has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS.\n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      price: 500,
+      image: '/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg',
+      images: ['/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg'],
+      category: 'Healthier Cakes',
+      tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'Jowarcake'],
+      size: '250gms',
+      ingredients_benefits: {
+        'Jowar Flour': [
+          'Helps manage blood sugar spikes, making it a good option for diabetics.',
+          'Rich in magnesium and potassium, which help regulate blood pressure and support cardiovascular function.'
+        ],
+        'Jaggery': [
+          'Unrefined & Natural',
+          'No chemicals or artificial additives.',
+          'Retains iron, magnesium, potassium, and calcium from sugarcane or palm sap.',
+          'A better alternative to white sugar, especially in traditional diets.'
+        ],
+        'Vanilla': []
+      }
+    },
+    {
+      id: 'ragi-chocolate-jaggery-teacake',
+      name: 'Gluten free, Sugar free & Eggless Ragi Chocolate Jaggery Tea Cake',
+      description: "Here’s a wholesome, rich, and naturally sweetened Ragi Chocolate Jaggery Tea Cake — gluten-free, full of calcium and iron from ragi (finger millet), and naturally sweetened with jaggery. It is moist, mildly earthy, and perfect with your afternoon tea. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      price: 500,
+      image: '/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg',
+      images: ['/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg'],
+      category: 'Healthier Cakes',
+      tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'Ragicake'],
+      size: '250gms',
+      ingredients_benefits: {
+        'Ragi Flour': [
+          'Excellent Source of Calcium',
+          'Highest calcium content among all grains.',
+          'Supports strong bones and teeth.',
+          'Helps prevent osteoporosis, especially important for children, post-menopausal women, and the elderly.'
+        ],
+        'Jaggery': [
+          'Unrefined & Natural',
+          'No chemicals or artificial additives.',
+          'Retains iron, magnesium, potassium, and calcium from sugarcane or palm sap.',
+          'A better alternative to white sugar, especially in traditional diets.'
+        ],
+        'Chocolate/Cocoa Powder': []
+      }
+    },
+    {
+      id: 'carrot-millet-teacake',
+      name: 'Gluten-free, Sugar-free and Eggless Carrot Millet Tea Cake',
+      description: "Here’s a wholesome, naturally sweet, and gluten-free Carrot Millet Tea Cake. This cake combines the goodness of millet flour with the sweetness of carrots and the warmth of jaggery, making it a perfect treat for your tea time. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      price: 800,
+      image: '/images/smiles_cakes/Carrot_Millet_Teacake.jpeg',
+      images: ['/images/smiles_cakes/Carrot_Millet_Teacake.jpeg'],
+      category: 'Healthier Cakes',
+      tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'carrotcakes'],
+      size: '250gms',
+      ingredients_benefits: {
+        'Jowar Flour': [
+          'Jowar flour is gluten-free, making it an excellent choice for people with celiac disease or those following a gluten-free diet.'
+        ],
+        'Kodo Flour': [
+          'Kodo millet flour contains a good amount of plant-based protein, essential for tissue repair, muscle building, and overall growth.'
+        ],
+        'Oats Flour': [],
+        'Jaggery': [],
+        'Carrots': []
+      }
+    },
+    {
+      id: 'multigrain-carrots-dates-nuts-teacake',
+      name: 'Gluten-free, Sugar-free and Eggless Multigrain Carrots, Dates and Nuts Tea Cake',
+      description: 'This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.',
+      price: 700,
+      image: '/images/smiles_cakes/Multigrain_Carrots.jpeg',
+      images: ['/images/smiles_cakes/Multigrain_Carrots.jpeg'],
+      category: 'Healthier Cakes',
+      tags: ['madeinindia', 'cakes', 'bettercakes', 'nopalmoil', 'healthier', 'healthiercakes', 'tastiercakes', 'glutenfreecakes', 'sugarfreecakes', 'egglesscakes', 'teatimecakes', 'eveningsnack', 'guiltfreecakes', 'carrotcakes', 'multigraincakes'],
+      size: '250gms',
+      ingredients_benefits: {
+        'Mix of healthier flours (Multigrain Flours)': [
+          'Rich in Nutrients',
+          'Multigrain flours combine the benefits of several grains, making them a great source of essential vitamins and minerals, including:',
+          'B vitamins (for energy metabolism)',
+          'Iron (for healthy blood)',
+          'Magnesium (for muscle and nerve function)',
+          'Calcium (for strong bones)',
+          'Zinc (for immune health)',
+          'Folate (important for cell function)'
+        ],
+        'Carrots': [
+          'Supports Eye Health',
+          'Carrots are rich in beta-carotene, which is a type of vitamin A. Vitamin A plays a crucial role in maintaining good vision, particularly in low-light conditions.'
+        ],
+        'Dates': [],
+        'Nuts': []
+      }
     }
-  ];
+];
   
   export default products; 
