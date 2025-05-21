@@ -3778,6 +3778,135 @@ export const products: Product[] = [
         'Smoked Paprika': []
       }
     },
+    {
+      id: 'roasted_cherry_tomato_sauce',
+      name: 'Roasted Cherry Tomato Sauce',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience the rich, deep flavours of sun-ripened cherry tomatoes slow-roasted to perfection in this vibrant, handcrafted sauce. This Roasted Cherry Tomato Sauce delivers a luscious balance of sweetness and tang, enhanced by slow-cooked garlic, caramelized onions, and aromatic herbs. Its velvety texture and robust taste make it the perfect companion for pastas, pizzas, sandwiches, or as a flavourful dip. Made in small batches with premium ingredients, this sauce brings authentic, homemade goodness to your table, adding a burst of Mediterranean charm to every meal. How to use: Toss with pasta, gnocchi, or ravioli; spread on pizzas, toast, or flatbreads; stir into soups or stews; use as a base for shakshuka or baked eggs; pair with grilled vegetables or proteins. Storage: Shelf Life 15 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      price: 550,
+      image: '/images/saucesset3/Roasted CHerry Tomatoes Sauce.png',
+      images: ['/images/saucesset3/Roasted CHerry Tomatoes Sauce.png'],
+      category: 'Sauces and Dressings',
+      tags: [
+        'madeinindia', 'healthier', 'healthiersauces', 'roastedcherrytomatosauce', 'sauce', 'authentictomatosauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'consciouskitchenproduct'
+      ],
+      size: '150ml',
+      ingredients_benefits: {
+        'Cherry tomatoes': [
+          'Lycopene: Cherry tomatoes are packed with lycopene, a powerful antioxidant linked to reduced risk of heart disease and certain cancers, especially prostate cancer.',
+          'Vitamin C: Supports immune function, skin health, and acts as an antioxidant.'
+        ],
+        'Extra Virgin Olive Oil': [
+          'High in monounsaturated fats (mainly oleic acid) which help:',
+          'Lower LDL (bad) cholesterol',
+          'Increase HDL (good) cholesterol',
+          'Improve arterial function',
+          'Associated with reduced risk of heart disease and stroke'
+        ],
+        'White Onions': [],
+        'Garlic': [],
+        'Basil': [],
+        'Red Chili Powder': [],
+        'Rock Salt': []
+      }
+    },
+    {
+      id: 'aubergine_pesto',
+      name: 'Aubergine Pesto Sauce',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives! This Aubergine Pesto is a rich, smoky, and creamy blend crafted from roasted eggplant, toasted walnuts, garlic, fresh parsley, and a hint of chili flakes. This luscious pesto delivers a vibrant Mediterranean flavour with a smooth texture, perfect for spreading, dipping, or enhancing your favourite dishes. Made fresh in small batches and carefully packed to preserve its bold taste and natural freshness, this pesto is a gourmet must-have. Highly recommended for adding a rich, smoky depth to your meals. How to use: Spread on toast, sandwiches, parathas or wraps; toss with hot pasta or roasted vegetables; use as a dip with crackers or crudités; serve alongside grilled meats or seafood. Storage: Shelf Life 10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      price: 575,
+      image: '/images/Aubergine Pesto.jpg',
+      images: ['/images/Aubergine Pesto.jpg'],
+      category: 'Sauces and Dressings',
+      tags: [
+        'madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'auberginepesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto'
+      ],
+      size: '150ml',
+      ingredients_benefits: {
+        'Eggplant': [
+          'High in Antioxidants',
+          'Nasunin: Found in the purple skin, protects cells from oxidative damage and supports brain health.',
+          'Anthocyanins: These plant compounds have anti-inflammatory and heart-protective properties.'
+        ],
+        'Extra Virgin Olive Oil': [
+          'High in monounsaturated fats (mainly oleic acid) which help:',
+          'Lower LDL (bad) cholesterol',
+          'Increase HDL (good) cholesterol',
+          'Improve arterial function',
+          'Associated with reduced risk of heart disease and stroke'
+        ],
+        'Mozzarella Cheese': [],
+        'Lemon Juice': [],
+        'Garlic': [],
+        'Fresh Parsley': [],
+        'Walnuts': [],
+        'Rock Salt': [],
+        'Fresh Black Pepper': [],
+        'Chili Flakes': []
+      }
+    },
+    {
+      id: 'avocado_pesto',
+      name: 'Avocado Pesto Sauce',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Avocado Pesto boasts a luxuriously creamy and velvety texture that effortlessly blends into a variety of dishes. This vibrant green sauce brings a fresh, buttery richness with a hint of zest, making it a perfect companion to both Indian and Mediterranean cuisines. Its versatility shines as it enhances everything from classic pastas and sandwiches to Indian breads, rice bowls, and grilled vegetables. Packed with wholesome nutrients, this pesto is a heart-healthy choice rich in good fats, antioxidants, and essential vitamins, supporting overall wellness while adding a deliciously satisfying boost to your meals. How to use: Toss with cooked pasta for a creamy, flavourful sauce; spread on sandwiches, wraps, or toast; serve as a dip with vegetables, crackers, or chips; drizzle over grilled meats, fish, or roasted vegetables; thin with lemon juice or water for a vibrant salad dressing. Storage: Shelf Life 7-10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      price: 610,
+      image: '/images/saucesset4/IMG_1.jpg',
+      images: ['/images/saucesset4/IMG_1.jpg',
+        '/images/saucesset4/IMG_2.png'],
+      category: 'Sauces and Dressings',
+      tags: [
+        'madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'avocadopesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto', 'avocado'
+      ],
+      size: '150ml',
+      ingredients_benefits: {
+        'Fresh Basil': [
+          'Rich in Antioxidants',
+          'Contains powerful antioxidants like flavonoids (e.g. orientin and vicenin) and polyphenols.',
+          'These help protect cells from oxidative stress, reducing the risk of chronic diseases'
+        ],
+        'Ripe Avocados': [
+          'High in monounsaturated fats (especially oleic acid) — the same healthy fats found in olive oil. These help lower "bad" LDL cholesterol and raise "good" HDL cholesterol.',
+          'Potassium: More than bananas! Helps regulate blood pressure and reduce the risk of heart disease.'
+        ],
+        'Toasted Walnuts': [],
+        'Lemon Juice': [],
+        'Garlic': [],
+        'Extra Virgin Olive Oil': [],
+        'Sea Salt': [],
+        'Ground Pepper': [],
+        'Chilli Flakes': []
+      }
+    },
+    {
+      id: 'red_cabbage_pesto',
+      name: 'Red Cabbage Pesto Sauce',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Yes, you heard us right — this is a delicious pesto made from roasted red cabbage! Vibrant in colour and bursting with flavour, it’s a fresh twist on traditional pesto that’s as nutritious as it is tasty. Packed with antioxidants, vitamins C and K, and rich in fiber, this pesto supports digestion, boosts immunity, and promotes healthy skin. The subtle tang of sumac and warmth of ginger and cayenne perfectly balance the earthy cabbage, making it a unique and wholesome addition to your meals. Whether tossed with pasta, spread on toast, or used as a dip, this pesto is a flavorful way to boost your health with every bite. How to use: Toss with pasta or grains; spread on toast, sandwiches, or wraps; use as a dip for crackers and fresh veggies; drizzle over roasted or grilled vegetables; mix into salads. Storage: Shelf Life 7-10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      price: 550,
+      image: '/images/saucesset3/Red Cabbage Pesto.png',
+      images: ['/images/saucesset3/Red Cabbage Pesto.png'],
+      category: 'Sauces and Dressings',
+      tags: [
+        'madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'cabbagepesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto', 'redcabbagepesto', 'redcabbage'
+      ],
+      size: '150ml',
+      ingredients_benefits: {
+        'Roasted red cabbage': [
+          'Packed with Antioxidants',
+          'Anthocyanins: These powerful pigments give red cabbage its vibrant color and help fight inflammation, reduce the risk of heart disease, and support brain health.',
+          'Also contains vitamin C and sulforaphane, which help protect cells from damage.'
+        ],
+        'Sundried Tomatoes': [
+          'Rich in Antioxidants',
+          'Lycopene: A powerful antioxidant that may reduce the risk of heart disease and certain cancers (especially prostate and breast cancer).',
+          'Vitamin C and polyphenols: Help combat oxidative stress and inflammation.'
+        ],
+        'Garlic': [],
+        'Extra Virgin Olive Oil': [],
+        'Sumac': [],
+        'Ginger': [],
+        'Cayenne Pepper': [],
+        'Salt': []
+      }
+    }
 ];
   
   export default products; 
