@@ -403,7 +403,7 @@ export const products: Product[] = [
       category: 'Pickles & Condiments',
       tags: ['fermented', 'kimchi', 'madeinindiakimchi', 'egglesskoreankimchi', 'goodforgut', 'probiotic', 'healthy', 'wholesome', 'nopreservatives', 'nochemicals', 'nocolours'],
       size: '300gms',
-      ingredients_benefits: {
+        ingredients_benefits: {
         'Chinese Cabbage': [
           'Low in calories, high in nutrients- packed with Vitamin C, Vitamin K, folate and fiber',
           'Rich in Antioxidants- Contains compounds like Beta-Carotene, Lutein and Zeaxanthin. Helps fight free radicals and reduce inflammation',
@@ -417,7 +417,7 @@ export const products: Product[] = [
           'Contains capsaicin – helps boost metabolism and reduce inflammation'
         ],
         'Onions': [
-          'Rich in Antioxidants',
+                'Rich in Antioxidants',
           'Heart Health Hero- Can lower Cholestrol levels',
           'Anti-Inflammatory and Immune Boosting'
         ],
@@ -1191,7 +1191,7 @@ export const products: Product[] = [
         'Curry Leaves': [],
         'Tamarind': [],
         'Cumin Seeds': [],
-        'Garlic': [],
+            'Garlic': [],
         'Salt': [],
         'Ghee': []
       }
@@ -3679,19 +3679,19 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'basil_pesto',
+      id: 'vegan_basil_pesto',
       name: 'Vegan Basil Pesto Sauce',
       description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Basil Pesto is more than just a sauce—it’s a vibrant celebration of fresh, handpicked basil leaves perfectly blended with toasted walnuts, aromatic garlic, zesty orange and lime, and extra virgin olive oil. Infused with the wholesome goodness of nutritional yeast, this luscious vegan pesto offers a rich, creamy texture and a burst of bright mediterranean flavors that will instantly elevate any meal. Made fresh in small batches and carefully packed to preserve its bold taste and vibrant color, this pesto is a must-have gourmet delight—grab yours today before it’s gone and transform your cooking into a flavorful feast!",
       price: 610,
-      image: '/images/Basil Pesto.jpg',
-      images: ['/images/Basil Pesto.jpg'],
+      image: '/images/saucesset3/Vegan Basil Pesto.jpg',
+      images: ['/images/saucesset3/Vegan Basil Pesto.jpg'],
       category: 'Sauces and Dressings',
       tags: ['madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'basilpesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto'],
       size: '150ml',
       ingredients_benefits: {
         'Fresh basil leaves': [
           'Rich in Antioxidants',
-          'Contains powerful antioxidants like flavonoids (e.g. orientin and vicenin) and polyphenols.',
+                'Contains powerful antioxidants like flavonoids (e.g. orientin and vicenin) and polyphenols.',
           'These help protect cells from oxidative stress, reducing the risk of chronic diseases.'
         ],
         'Extra virgin olive oil': [
@@ -3701,10 +3701,10 @@ export const products: Product[] = [
           'Reduce blood pressure'
         ],
         'Garlic': [],
-        'Walnuts': [],
+            'Walnuts': [],
         'Nutritional Yeast': [],
         'Sea Salt': [],
-        'Black Pepper': [],
+            'Black Pepper': [],
         'Lemon Zest and Juice': []
       }
     },
@@ -3715,10 +3715,10 @@ export const products: Product[] = [
       price: 550,
       image: '/images/saucesset5/IMG_1.jpg',
       images: ['/images/saucesset5/IMG_1.jpg', '/images/saucesset5/IMG_2.jpg'],
-      category: 'Sauces and Dressings',
+        category: 'Sauces and Dressings',
       tags: ['madeinindia', 'healthier', 'healthiersauces', 'smokedpineapplesauce', 'smokedthaisauce', 'thaisauce', 'smokedchillisauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'freshsmokedpineapplesauce'],
-      size: '150ml',
-      ingredients_benefits: {
+        size: '150ml',
+        ingredients_benefits: {
         'Fresh pineapple': [
           'Rich in Immune-Boosting Nutrients',
           'High in Vitamin C, which supports immune defense, helps repair tissues, and acts as a strong antioxidant.',
@@ -3732,11 +3732,11 @@ export const products: Product[] = [
           "Iron",
           "Magnesium"
         ],
-        'Apple Cider Vinegar': [],
+            'Apple Cider Vinegar': [],
         'Fresh Birds Eye Chillies': [],
         'Garlic': [],
         'Tamari sauce': [],
-        'Chilli flakes': [],
+            'Chilli flakes': [],
         'Corn flour': [],
         'Tomato ketchup': [],
         'Salt': [],
@@ -3750,10 +3750,10 @@ export const products: Product[] = [
       price: 440,
       image: '/images/Chimichurri Sauce.jpg',
       images: ['/images/Chimichurri Sauce.jpg'],
-      category: 'Sauces and Dressings',
+        category: 'Sauces and Dressings',
       tags: ['madeinindia', 'healthier', 'healthiersauces', 'chimichurrisauce', 'southamericansauce', 'authenticchimichurri', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'consciouskitchenproduct'],
-      size: '150ml',
-      ingredients_benefits: {
+        size: '150ml',
+        ingredients_benefits: {
         'Extra-virgin olive oil': [
           'High in monounsaturated fats (mainly oleic acid) which help:',
           'Lower LDL (bad) cholesterol',
@@ -3767,14 +3767,14 @@ export const products: Product[] = [
           'Improve digestion by increasing stomach acid production',
           'Enhance the absorption of minerals like calcium and magnesium',
           'Reduce bloating and support gut function'
-        ],
-        'Garlic': [],
+            ],
+            'Garlic': [],
         'Fresh flat-leaf Parsley': [],
         'Lemon zest and juice': [],
         'Sea Salt': [],
         'Dried Oregano': [],
         'Red Pepper Flakes': [],
-        'Cayenne Pepper': [],
+            'Cayenne Pepper': [],
         'Smoked Paprika': []
       }
     },
@@ -3816,27 +3816,27 @@ export const products: Product[] = [
       price: 575,
       image: '/images/Aubergine Pesto.jpg',
       images: ['/images/Aubergine Pesto.jpg'],
-      category: 'Sauces and Dressings',
+        category: 'Sauces and Dressings',
       tags: [
         'madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'auberginepesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto'
       ],
-      size: '150ml',
-      ingredients_benefits: {
+        size: '150ml',
+        ingredients_benefits: {
         'Eggplant': [
           'High in Antioxidants',
           'Nasunin: Found in the purple skin, protects cells from oxidative damage and supports brain health.',
           'Anthocyanins: These plant compounds have anti-inflammatory and heart-protective properties.'
-        ],
-        'Extra Virgin Olive Oil': [
-          'High in monounsaturated fats (mainly oleic acid) which help:',
-          'Lower LDL (bad) cholesterol',
-          'Increase HDL (good) cholesterol',
-          'Improve arterial function',
-          'Associated with reduced risk of heart disease and stroke'
-        ],
+            ],
+            'Extra Virgin Olive Oil': [
+                'High in monounsaturated fats (mainly oleic acid) which help:',
+                'Lower LDL (bad) cholesterol',
+                'Increase HDL (good) cholesterol',
+                'Improve arterial function',
+                'Associated with reduced risk of heart disease and stroke'
+            ],
         'Mozzarella Cheese': [],
         'Lemon Juice': [],
-        'Garlic': [],
+            'Garlic': [],
         'Fresh Parsley': [],
         'Walnuts': [],
         'Rock Salt': [],
@@ -3904,6 +3904,132 @@ export const products: Product[] = [
         'Sumac': [],
         'Ginger': [],
         'Cayenne Pepper': [],
+        'Salt': []
+      }
+    },
+    {
+      id: 'peri_peri_sauce',
+      name: 'Peri Peri Sauce',
+      description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Peri Peri Sauce is a fiery, tangy, and aromatic condiment that brings the bold flavours of Southern Africa and Portugal to your kitchen. Crafted with a blend of African Bird's Eye chilies, roasted red peppers, garlic, and a medley of spices, this sauce delivers a balanced heat with a smoky depth and zesty citrus undertones. Whether you're marinating meats, drizzling over grilled vegetables, or adding a spicy kick to your dishes, this versatile sauce enhances every bite with its vibrant and bold flavour profile.
+    ---
+    
+    How to use:
+    • Marinate: Coat chicken, fish, or tofu and let it marinate for a few hours before grilling or roasting.
+    • Dipping Sauce: Serve alongside fries, grilled meats, or roasted vegetables for an extra kick.
+    • Sandwich Spread: Use as a spicy spread for sandwiches or wraps to elevate your meal.
+    • Salad Dressing: Mix with olive oil to create a zesty dressing for salads.
+    • Pizza Base: Spread over pizza dough before adding toppings for a spicy twist.
+    
+    Storage & Shelf Life:
+    • Shelf Life: 10-15 days, refrigerate to retain freshness
+    • Storage Tips: Keep the sauce in its glass jar to maintain freshness.`,
+      price: 575,
+      image: '/images/Peri Peri Sauce.jpg',
+      images: ['/images/Peri Peri Sauce.jpg'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthiersauce', 'authenticsauce', 'glutenfreesauce', 'noadditivesauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'freshsauce', 'periperi', 'vegansauce', 'glutenfreeperiperisauce', 'periperisauce'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Red peppers': [
+          'Extremely High in Vitamin C',
+          'One medium red pepper provides over 150% of your daily vitamin C needs.',
+          'Vitamin C boosts immune function, helps absorb iron, and supports healthy skin by promoting collagen production.'
+        ],
+        'Red Onions': [
+          'Rich in Antioxidants',
+          'Anthocyanins: These give red onions their deep color and help reduce the risk of heart disease and certain cancers.',
+          'Quercetin: A powerful antioxidant with anti-inflammatory, antiviral, and antihistamine effects.'
+        ],
+        'Garlic': [],
+        'Lemon Zest and Juice': [],
+        'Red Serrano Chillies': [],
+        "African Bird's Eye chillies": [],
+        'Smoked Paprika': [],
+        'Cayenne Pepper': [],
+        'White Pepper': [],
+        'Dried Rosemary': [],
+        'Red Wine Vinegar': [],
+        'Sunflower Oil': []
+      }
+    },
+    {
+      id: 'basil_pesto',
+      name: 'Basil Pesto Sauce',
+      description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives! This is a luxurious, velvety sauce that brings a burst of fresh, green flavour with every spoonful. Swirled into the finest extra virgin olive oil, this small-batch pesto achieves a smooth, creamy consistency that's elevated further by the indulgent richness of mozzarella cheese. The toasted walnuts lend a warm, nutty depth that balances the citrusy brightness from lemon zest and the fresh aroma of handpicked basil leaves. This is not your everyday pesto—each jar is a decadent fusion of bold flavors and silky textures. Whether you're tossing it into warm pasta, layering it on crusty sourdough, or spooning it over roasted veggies, this pesto promises a taste so addictive, you simply won't stop at one bite. Made without artificial preservatives, it's pure, indulgent goodness in every drop.
+    
+    How to use:
+    • Pasta Perfection: Toss generously with spaghetti, penne, or gnocchi for an instant gourmet meal.
+    • Spread the Love: Use as a spread on warm sourdough, bruschetta, or flatbreads.
+    • Dip It Right: Serve as a dip with roasted veggies, crackers, or cheese platters.
+    • Pesto Pizza: Swirl it over pizza bases in place of traditional tomato sauce.
+    • Stuffed & Baked: Spoon into mushrooms or bell peppers before baking for a flavor-packed twist.
+    • Swirl into Soups: Add a dollop to minestrone or tomato soup for a herby upgrade.
+    • Eggs & More: Drizzle over scrambled eggs, frittatas, or even dosa for a fusion punch.
+    
+    Storage & Shelf Life:
+    • Shelf Life: 7 days refrigerated
+    • Storage Tips: Always cover the sauce with a layer of Xtra Virgin Olive Oil`,
+      price: 550,
+      image: '/images/Basil Pesto.jpg',
+      images: ['/images/Basil Pesto.jpg'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'glutenfreepesto', 'noadditivepesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto', 'basilpesto', 'basilleavespesto'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Fresh Basil Leaves': [
+          'Rich in Antioxidants',
+          'Contains powerful antioxidants like flavonoids (e.g. orientin and vicenin) and polyphenols.',
+          'These help protect cells from oxidative stress, reducing the risk of chronic diseases'
+        ],
+        'Extra Virgin Olive Oil': [
+          'High in monounsaturated fats (mainly oleic acid) which help:',
+          'Lower LDL (bad) cholesterol',
+          'Increase HDL (good) cholesterol',
+          'Improve arterial function',
+          'Associated with reduced risk of heart disease and stroke'
+        ],
+        'Garlic': [],
+        'Walnuts': [],
+        'Mozzarella Cheese': [],
+        'Sea salt': [],
+        'Black Pepper': [],
+        'Lemon zest and Juice': []
+      }
+    },
+    {
+      id: 'honey_mango_sauce',
+      name: 'Honey Mango Sauce',
+      description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! A smooth, creamy blend of ripe mangoes, chilies, and lime with a hint of honey and ginger. Rich, velvety texture and a perfect balance of sweet and heat. Made with 100% real fruit and no additives — this is the only sauce your meal needs. No extras. Just this.
+    
+    How to use:
+    • Dip: Perfect as a dipping sauce for spring rolls, samosas, fries, or grilled snacks.
+    • Drizzle: Over tacos, buddha bowls, or salads for a tangy-sweet kick.
+    • Marinade: Use it to marinate chicken, tofu, or seafood before grilling or baking.
+    • Glaze: Brush over grilled veggies or paneer for a vibrant, flavourful finish.
+    • Spread: Add to wraps, sandwiches, or burgers for a spicy-sweet layer of flavour.
+    
+    Storage & Shelf Life:
+    • Shelf Life: 15 days when refrigerated
+    • Storage Tips: Keep the sauce in the glass Jar and use a clean spoon`,
+      price: 640,
+      image: '/images/saucesset2/Honey Mango Sauce.png',
+      images: ['/images/saucesset2/Honey Mango Sauce.png'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthiersauce', 'authentichoneymangosauce', 'glutenfreesauce', 'noadditivesauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'freshmangosauce', 'honeymangosauce', 'mangosauce'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Alphonso mango': [
+          'Rich in Vitamin C',
+          'Boosts immune system, helps in wound healing, and supports skin health by promoting collagen production.',
+          'Excellent Source of Vitamin A',
+          'Alphonso mangoes are high in beta-carotene, which the body converts into vitamin A—vital for eye health, skin health, and a strong immune system.'
+        ],
+        'Honey': [],
+        'Apple Cider Vinegar': [],
+        'Soy Sauce': [],
+        'Chilli flakes': [],
+        'Garlic powder': [],
+        'Lime juice': [],
         'Salt': []
       }
     }
