@@ -43,6 +43,7 @@ export default function Navbar() {
         { href: '/whole-foods/categories/nuts-and-seeds', label: 'Dry Fruits & Seeds' },
         { href: '/whole-foods/categories/healthier-premixes', label: 'Healthier Premixes' },
         { href: '/whole-foods/categories/healthy-cakes', label: 'Healthier Cakes' },
+        { href: '/whole-foods/categories/sauces-and-dressings', label: 'Sauces & Dressings' },
       ]
     },
   ];

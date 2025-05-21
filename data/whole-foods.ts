@@ -3652,7 +3652,132 @@ export const products: Product[] = [
         'Dates': [],
         'Nuts': []
       }
-    }
+    },
+    {
+      id: 'fiery_fusion_burnt_chili_oil',
+      name: 'Fiery Fusion Burnt Chili Oil',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience bold, smoky heat with Fiery Fusion Burnt Chilli Oil — a handcrafted blend of slow-roasted Thai red chilies, crispy garlic, and whole spices, all infused in premium sunflower oil. Cooked in small batches to preserve freshness and flavour, this oil delivers an irresistible crunch, rich umami, and a deep, smoky aroma. Perfect for spice lovers looking to elevate everyday meals with a natural punch of flavour',
+      price: 410,
+      image: '/images/saucesset2/Fiery Fusion Burnt Chilli Oil.png',
+      images: ['/images/saucesset2/Fiery Fusion Burnt Chilli Oil.png'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthierflavouredoils', 'healthierflavouredoildressings', 'oildressing', 'glutenfreeburntchillioil', 'burntchillioil', 'artisanfreshoil', 'makeiindia', 'nopreservatives', 'noadditives'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Thai Red Chillies': [
+          'Rich in Capsaicin',
+          "Capsaicin, the compound responsible for the chili’s heat, has anti-inflammatory, antioxidant, and pain-relieving properties.",
+          "It can boost metabolism by increasing thermogenesis (heat production in the body), which may help with weight management."
+        ],
+        'Garlic': [
+          "Lowers blood pressure: Garlic can help reduce hypertension by dilating blood vessels.",
+          "Reduces cholesterol: Especially LDL (bad cholesterol), which can reduce risk of heart disease.",
+          "Improves blood circulation: Garlic helps prevent the clumping of platelets, reducing the risk of clots."
+        ],
+        'Whole Spices': [],
+        'Premium Sunflower Oil': []
+      }
+    },
+    {
+      id: 'basil_pesto',
+      name: 'Vegan Basil Pesto Sauce',
+      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Basil Pesto is more than just a sauce—it’s a vibrant celebration of fresh, handpicked basil leaves perfectly blended with toasted walnuts, aromatic garlic, zesty orange and lime, and extra virgin olive oil. Infused with the wholesome goodness of nutritional yeast, this luscious vegan pesto offers a rich, creamy texture and a burst of bright mediterranean flavors that will instantly elevate any meal. Made fresh in small batches and carefully packed to preserve its bold taste and vibrant color, this pesto is a must-have gourmet delight—grab yours today before it’s gone and transform your cooking into a flavorful feast!",
+      price: 610,
+      image: '/images/Basil Pesto.jpg',
+      images: ['/images/Basil Pesto.jpg'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'basilpesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Fresh basil leaves': [
+          'Rich in Antioxidants',
+          'Contains powerful antioxidants like flavonoids (e.g. orientin and vicenin) and polyphenols.',
+          'These help protect cells from oxidative stress, reducing the risk of chronic diseases.'
+        ],
+        'Extra virgin olive oil': [
+          'Promotes Heart Health- Rich in monounsaturated fats, especially oleic acid, which helps:',
+          'Lower bad LDL cholesterol',
+          'Increase good HDL cholesterol',
+          'Reduce blood pressure'
+        ],
+        'Garlic': [],
+        'Walnuts': [],
+        'Nutritional Yeast': [],
+        'Sea Salt': [],
+        'Black Pepper': [],
+        'Lemon Zest and Juice': []
+      }
+    },
+    {
+      id: 'smoked_thai_pineapple_chilli_sauce',
+      name: 'Smoked Thai Pineapple Chilli Sauce',
+      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience a vibrant burst of sweet heat with this Pineapple Chili Sauce. This handcrafted sauce blends the tropical sweetness of pineapple juice and chunks with fiery bird’s eye chillies, tangy apple cider vinegar, and a touch of garlic—all slowly simmered to perfection and thickened into a luscious, balanced glaze. With a subtle kick from chili flakes and tamari sauce, this sauce is perfect for adding a tropical zing to your grilled meats, stir-fries, seafood, or as a dipping sauce. Made fresh in small batches, it’s free from artificial flavours and preservatives, delivering pure, natural taste in every spoonful.",
+      price: 550,
+      image: '/images/saucesset5/IMG_1.jpg',
+      images: ['/images/saucesset5/IMG_1.jpg', '/images/saucesset5/IMG_2.jpg'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthiersauces', 'smokedpineapplesauce', 'smokedthaisauce', 'thaisauce', 'smokedchillisauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'freshsmokedpineapplesauce'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Fresh pineapple': [
+          'Rich in Immune-Boosting Nutrients',
+          'High in Vitamin C, which supports immune defense, helps repair tissues, and acts as a strong antioxidant.',
+          'Just one cup of pineapple provides over 100% of your daily vitamin C needs'
+        ],
+        'Brown Sugar': [
+          "Like all sugars, brown sugar provides a quick energy boost because it's rapidly digested and absorbed.",
+          "Brown sugar contains trace amounts of minerals from molasses, such as:",
+          "Calcium",
+          "Potassium",
+          "Iron",
+          "Magnesium"
+        ],
+        'Apple Cider Vinegar': [],
+        'Fresh Birds Eye Chillies': [],
+        'Garlic': [],
+        'Tamari sauce': [],
+        'Chilli flakes': [],
+        'Corn flour': [],
+        'Tomato ketchup': [],
+        'Salt': [],
+        'Black Pepper': []
+      }
+    },
+    {
+      id: 'chimichurri_sauce',
+      name: 'Chimichurri Sauce',
+      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Chimichurri Sauce is a vibrant, herbaceous condiment that bursts with fresh, zesty flavour and a subtle kick of heat. Made in small batches to preserve its authentic taste and handcrafted with care, this sauce adds bold personality to everything from grilled vegetables and meats to sandwiches and wraps. A South American classic, reimagined for your modern, conscious kitchen. Made fresh in small batches and packed carefully to preserve its bold, natural taste, this vegan sauce elevates any meal with authentic South American flair.",
+      price: 440,
+      image: '/images/Chimichurri Sauce.jpg',
+      images: ['/images/Chimichurri Sauce.jpg'],
+      category: 'Sauces and Dressings',
+      tags: ['madeinindia', 'healthier', 'healthiersauces', 'chimichurrisauce', 'southamericansauce', 'authenticchimichurri', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'consciouskitchenproduct'],
+      size: '150ml',
+      ingredients_benefits: {
+        'Extra-virgin olive oil': [
+          'High in monounsaturated fats (mainly oleic acid) which help:',
+          'Lower LDL (bad) cholesterol',
+          'Increase HDL (good) cholesterol',
+          'Improve arterial function',
+          'Associated with reduced risk of heart disease and stroke'
+        ],
+        'White Wine Vinegar': [
+          'Aids Digestion',
+          'The acetic acid in vinegar may help:',
+          'Improve digestion by increasing stomach acid production',
+          'Enhance the absorption of minerals like calcium and magnesium',
+          'Reduce bloating and support gut function'
+        ],
+        'Garlic': [],
+        'Fresh flat-leaf Parsley': [],
+        'Lemon zest and juice': [],
+        'Sea Salt': [],
+        'Dried Oregano': [],
+        'Red Pepper Flakes': [],
+        'Cayenne Pepper': [],
+        'Smoked Paprika': []
+      }
+    },
 ];
   
   export default products; 
