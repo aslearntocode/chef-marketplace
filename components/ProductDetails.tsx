@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import ReactMarkdown from 'react-markdown';
 
 interface ProductDetailsProps {
   description: string;
@@ -50,7 +51,7 @@ export default function ProductDetails({ description, size, ingredients_benefits
         </button>
         {openSection === 'description' && (
           <div className="px-4 pb-4 text-gray-600">
-            {description}
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         )}
       </div>

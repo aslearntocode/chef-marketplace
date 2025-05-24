@@ -205,11 +205,11 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
   return (
     <div className="max-w-7xl mx-auto px-4 py-2 font-nunito">
       {/* Compact Header with Search */}
-      <div className="flex items-center gap-6 mb-4">
-        <h1 className="text-3xl font-bold text-gray-900 whitespace-nowrap">{category}</h1>
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-4">
+        <h1 className="text-xl md:text-3xl font-bold text-gray-900 whitespace-nowrap">{category}</h1>
         
         {/* Search Bar - Floating Design */}
-        <div className="w-full max-w-md">
+        <div className="w-full md:max-w-md">
           <div className="relative">
             <input
               type="text"

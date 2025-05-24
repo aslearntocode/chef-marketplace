@@ -3911,18 +3911,17 @@ export const products: Product[] = [
       id: 'peri_peri_sauce',
       name: 'Peri Peri Sauce',
       description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Peri Peri Sauce is a fiery, tangy, and aromatic condiment that brings the bold flavours of Southern Africa and Portugal to your kitchen. Crafted with a blend of African Bird's Eye chilies, roasted red peppers, garlic, and a medley of spices, this sauce delivers a balanced heat with a smoky depth and zesty citrus undertones. Whether you're marinating meats, drizzling over grilled vegetables, or adding a spicy kick to your dishes, this versatile sauce enhances every bite with its vibrant and bold flavour profile.
-    ---
-    
-    How to use:
-    • Marinate: Coat chicken, fish, or tofu and let it marinate for a few hours before grilling or roasting.
-    • Dipping Sauce: Serve alongside fries, grilled meats, or roasted vegetables for an extra kick.
-    • Sandwich Spread: Use as a spicy spread for sandwiches or wraps to elevate your meal.
-    • Salad Dressing: Mix with olive oil to create a zesty dressing for salads.
-    • Pizza Base: Spread over pizza dough before adding toppings for a spicy twist.
-    
-    Storage & Shelf Life:
-    • Shelf Life: 10-15 days, refrigerate to retain freshness
-    • Storage Tips: Keep the sauce in its glass jar to maintain freshness.`,
+
+• HOW TO USE:
+• Marinate: Coat chicken, fish, or tofu and let it marinate for a few hours before grilling or roasting.
+• Dipping Sauce: Serve alongside fries, grilled meats, or roasted vegetables for an extra kick.
+• Sandwich Spread: Use as a spicy spread for sandwiches or wraps to elevate your meal.
+• Salad Dressing: Mix with olive oil to create a zesty dressing for salads.
+• Pizza Base: Spread over pizza dough before adding toppings for a spicy twist.
+
+• STORAGE & SHELF LIFE:
+• Shelf Life: 10-15 days, refrigerate to retain freshness.
+• Storage Tips: Keep the sauce in its glass jar to maintain freshness.`,
       price: 575,
       image: '/images/Peri Peri Sauce.jpg',
       images: ['/images/Peri Peri Sauce.jpg'],
@@ -3957,7 +3956,7 @@ export const products: Product[] = [
       name: 'Basil Pesto Sauce',
       description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives! This is a luxurious, velvety sauce that brings a burst of fresh, green flavour with every spoonful. Swirled into the finest extra virgin olive oil, this small-batch pesto achieves a smooth, creamy consistency that's elevated further by the indulgent richness of mozzarella cheese. The toasted walnuts lend a warm, nutty depth that balances the citrusy brightness from lemon zest and the fresh aroma of handpicked basil leaves. This is not your everyday pesto—each jar is a decadent fusion of bold flavors and silky textures. Whether you're tossing it into warm pasta, layering it on crusty sourdough, or spooning it over roasted veggies, this pesto promises a taste so addictive, you simply won't stop at one bite. Made without artificial preservatives, it's pure, indulgent goodness in every drop.
     
-    How to use:
+    • HOW TO USE:
     • Pasta Perfection: Toss generously with spaghetti, penne, or gnocchi for an instant gourmet meal.
     • Spread the Love: Use as a spread on warm sourdough, bruschetta, or flatbreads.
     • Dip It Right: Serve as a dip with roasted veggies, crackers, or cheese platters.
@@ -3966,7 +3965,7 @@ export const products: Product[] = [
     • Swirl into Soups: Add a dollop to minestrone or tomato soup for a herby upgrade.
     • Eggs & More: Drizzle over scrambled eggs, frittatas, or even dosa for a fusion punch.
     
-    Storage & Shelf Life:
+    • STORAGE & SHELF LIFE:
     • Shelf Life: 7 days refrigerated
     • Storage Tips: Always cover the sauce with a layer of Xtra Virgin Olive Oil`,
       price: 550,
@@ -4001,14 +4000,14 @@ export const products: Product[] = [
       name: 'Honey Mango Sauce',
       description: `Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! A smooth, creamy blend of ripe mangoes, chilies, and lime with a hint of honey and ginger. Rich, velvety texture and a perfect balance of sweet and heat. Made with 100% real fruit and no additives — this is the only sauce your meal needs. No extras. Just this.
     
-    How to use:
+    • HOW TO USE:
     • Dip: Perfect as a dipping sauce for spring rolls, samosas, fries, or grilled snacks.
     • Drizzle: Over tacos, buddha bowls, or salads for a tangy-sweet kick.
     • Marinade: Use it to marinate chicken, tofu, or seafood before grilling or baking.
     • Glaze: Brush over grilled veggies or paneer for a vibrant, flavourful finish.
     • Spread: Add to wraps, sandwiches, or burgers for a spicy-sweet layer of flavour.
     
-    Storage & Shelf Life:
+    • STORAGE & SHELF LIFE:
     • Shelf Life: 15 days when refrigerated
     • Storage Tips: Keep the sauce in the glass Jar and use a clean spoon`,
       price: 640,

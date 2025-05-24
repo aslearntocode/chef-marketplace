@@ -165,9 +165,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between pt-0 bg-[#FDBE28]">
       <div className="w-full font-nunito">
         {/* Search Section */}
-        <section className="bg-[#FDBE28] py-4 px-4 mt-4">
+        <section className="bg-[#FDBE28] py-4 px-4 mt-8 md:mt-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <form onSubmit={handleSearch} className="relative flex gap-2">
+            <form onSubmit={handleSearch} className="relative flex gap-2 z-20">
               <div className="relative flex-1">
                 <input
                   type="text"
@@ -239,7 +239,7 @@ export default function Home() {
               </div>
               {/* Right side - Text */}
               <div className="text-center md:text-right order-1 md:order-2">
-                <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
+                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
                   <span className="md:hidden block pt-8">
                     CRAVING FOR HEALTHY<br />YET TASTY FOOD?
                   </span>
@@ -350,7 +350,7 @@ export default function Home() {
               </div>
               
               {/* Right side - Image */}
-              <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <div className="relative h-[400px] rounded-lg overflow-hidden hidden md:block">
                 <Image
                   src="/images/wholewheatjaggery-gurpaara/NNs_44.jpg"
                   alt="The Divine Hands Story"
