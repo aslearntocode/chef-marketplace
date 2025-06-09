@@ -413,7 +413,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/login"
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+                  className="block px-3 py-2 text-xl font-bold text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md md:text-base md:font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   Login

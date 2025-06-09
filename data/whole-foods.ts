@@ -4031,7 +4031,46 @@ export const products: Product[] = [
         'Lime juice': [],
         'Salt': []
       }
+    },
+    {
+      id: 'Jackfruit_Chips',
+      name: 'Jackfruit Chips',
+      description: `Jackfruit Chips are a popular snack made from thinly sliced raw Jackfruits. This delicacy combines the unique flavour of Jackfruit with a satisfying crunch.
+      • HOW TO USE:
+      Consumed as a standalone snack
+      Packed with tea or coffee
+      Ideal for travel as it has a long shelf life
+      • STORAGE & SHELF LIFE:
+      • Storage Tips: Try to keep the packet/contents away from humid cupboards etc. And always re-seal the packet after opening!`,
+      price: 250,
+      image: '/images/Jackfruit Chips.jpeg',
+      images: ['/images/Jackfruit Chips.jpeg'],
+      category: 'Healthy Bites',
+      tags: ['chips', 'healthier', 'jackfruit', 'jackfruitchips', 'coconutoilchips', 'farmfreshchips', 'healthiersnack', 'teatimesnack', 'travelsnack', 'bettersnack', 'purer', 'nochemicals', 'nopreservatives'],
+      size: '250gms',
+      ingredients_benefits: {
+        'Jackfruit': [
+          'Rich in Nutrients',
+          'High in vitamin C, vitamin A, potassium, magnesium, and fiber.',
+          'Contains small amounts of B vitamins, iron, and calcium.',
+          'Boosts Immunity',
+          'Vitamin C and antioxidants help strengthen the immune system and fight infections',
+          'Improves Digestion',
+          'High dietary fiber helps regulate bowel movements and prevents constipation.',
+          'Supports Heart Health',
+          'Potassium helps regulate blood pressure.',
+        ],
+        'Coconut Oil': [
+          'Rich in Healthy Fats (MCTs)',
+          'Contains medium-chain triglycerides (MCTs), especially lauric acid.',
+          'MCTs are more easily digested and may provide a quick energy source.',
+          'May support weight management by boosting metabolism slightly.',
+          'Antimicrobial & Antifungal Properties',
+          'Lauric acid in coconut oil has been shown to kill harmful bacteria, viruses, and fungi.',
+      ],
+      }
     }
+      
 ];
   
   export default products; 
