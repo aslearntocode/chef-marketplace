@@ -55,7 +55,7 @@ export const products: Product[] = [
           '/images/images-drinks/Paan-e-bahar/amazon-10.jpg',
           '/images/images-drinks/Paan-e-bahar/amazon-21.jpg'
         ],
-        category: 'Drinks',
+        category: 'Healthier Beverages',
         tags: ['drink', 'cold drink', 'refreshing', 'paan', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'pure', 'wholesome'],
         size: '500gms',
         ingredients_benefits: {
@@ -82,7 +82,7 @@ export const products: Product[] = [
           '/images/images-drinks/Soothing Sauf/amazon-15.jpg',
           '/images/images-drinks/Soothing Sauf/amazon-21.jpg'
         ],
-        category: 'Drinks',
+        category: 'Healthier Beverages',
         tags: ['drink', 'cold drink', 'refreshing', 'summer drink', 'cooling', 'beverage', 'healthy drink', 'digestive drink', 'fennel seeds', 'no preservatives'],
         size: '500gms',
         ingredients_benefits: {
@@ -108,7 +108,7 @@ export const products: Product[] = [
           '/images/images-drinks/Thrilling Thandai/amazon-05.jpg',
           '/images/images-drinks/Thrilling Thandai/amazon-21.jpg'
         ],
-        category: 'Drinks',
+        category: 'Healthier Beverages',
         tags: ['drink', 'cold drink', 'refreshing', 'thandai', 'summer drink', 'cooling', 'beverage', 'traditional', 'healthy drink', 'festive drink'],
         size: '500ml',
         ingredients_benefits: {
@@ -718,7 +718,7 @@ export const products: Product[] = [
           'Stimulates the secretion of stomach acids, improves gut health, and helps in nutrient absorption',
           'Contains omega-3 and omega-9 fatty acids, which support cardiovascular health when consumed mindfully'
         ]
-      }
+    }
     },
     {
       id: 'sattu-laddoos',
@@ -1640,7 +1640,7 @@ export const products: Product[] = [
         'Dry Ginger Powder': [''],
         'Garlic Powder': [''],
         'Olive Oil': ['']
-      }
+    }
     },
     {
       id: 'cluster-bean-chips',
@@ -1902,35 +1902,6 @@ export const products: Product[] = [
           'Chilly Powder',
           'Kasuri Methi'
         ]
-      }
-    },
-    {
-      id: 'masala-khakhra',
-      name: 'Masala Khakhra',
-      description: 'Masala Khakhras are a spicy, savoury variation of the traditional Gujarati khakhra—thin, roasted flatbreads made from whole wheat flour. These are flavoured with a blend of Indian spices, making them a flavourful and crunchy snack that\'s both healthy and tasty. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-      price: 150,
-      image: '/images/khakhraspics/IMG_2.png',
-      images: ['/images/khakhraspics/IMG_2.png'],
-      category: 'Healthy Bites',
-      tags: ['madeinindia', 'snacks', 'betterkhakhras', 'nopalmoil', 'healthier', 'healthierkhakhra', 'healthiersnack', 'gotosnack', 'masalakhakhras'],
-      size: '200 gms',
-      ingredients_benefits: {
-        'Wheat Flour': [
-          'High in Dietary Fiber',
-          'Promotes healthy digestion and helps prevent constipation',
-          'Helps you feel full longer, which can assist in weight management'
-        ],
-        'Black Chickpea Flour': [
-          'High in Protein',
-          'Excellent plant-based protein source, supporting muscle repair and growth',
-          'Ideal for vegetarians, vegans, and those reducing meat consumption'
-        ],
-        'Peanut Flour': [],
-        'Iodized Salt': [],
-        'Ajwain Powder': [],
-        'Chilli Powder': [],
-        'Turmeric Powder': [],
-        'Rice Bran Oil': []
       }
     },
     {
@@ -2455,7 +2426,7 @@ export const products: Product[] = [
         ],
         "Black Gram (Urad)": [
           "High in Protein: Black gram is an excellent source of plant-based protein, making it a vital food for vegetarians and vegans. It supports muscle repair, growth, and overall body functions, while being a great alternative to meat for protein intake.",
-          "Rich in Fiber: The high fiber content in black gram promotes digestive health. It helps regulate bowel movements, prevent constipation, and maintain a healthy gut. Fiber also helps in controlling cholesterol levels and promotes heart health."
+          "Rich in Fiber: The high fiber content in black gram promotes digestive health. It helps regulate bowel movements, prevent constipation, and maintain a healthy gut microbiome. Fiber also helps in controlling cholesterol levels and promotes heart health."
         ],
         "Sooji": [],
         "Citric Acid": [],
@@ -2476,7 +2447,7 @@ export const products: Product[] = [
       ingredients_benefits: {
         "Black Chick Peas": [
           "High in Protein: Black chickpeas are an excellent source of plant-based protein, making them a great choice for vegetarians and vegans. Protein is essential for muscle repair, immune function, and overall body health.",
-          "Rich in Fiber: Black chickpeas are high in dietary fiber, which is beneficial for digestion. It promotes regular bowel movements, prevents constipation, and helps maintain a healthy gut microbiome. Fiber also helps lower bad cholesterol and improves heart health."
+          "Rich in Fiber: Black chickpeas are high in dietary fiber, which is beneficial for digestion. It promotes regular bowel movements, prevents constipation, and maintains a healthy gut microbiome. Fiber also helps lower bad cholesterol and improves heart health."
         ],
         "Carrom Seeds (Ajwain)": [
           "Aid Digestion: Carrom seeds are well-known for their digestive properties. They stimulate the production of gastric juices, which helps in digesting food efficiently. They are commonly used to relieve issues like bloating, indigestion, gas, and constipation. Ajwain is also believed to improve appetite and reduce discomfort after heavy meals."
@@ -2894,45 +2865,6 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'kathal-pickle',
-      name: 'Kathal Pickle',
-      description: 'Kathal ka Achaar (कटहल का अचार) is a delicious and unique jackfruit pickle made from raw (unripe) kathal. It\'s popular in North India, especially in Bihar and Uttar Pradesh, and has a meaty texture with bold, spicy, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
-      price: 120,
-      image: '/images/kathalpickle/IMG_1.jpg',
-      images: ['/images/kathalpickle/IMG_1.jpg',
-        '/images/kathalpickle/IMG_2.jpg',
-        '/images/kathalpickle/IMG_3.jpg',
-        '/images/kathalpickle/IMG_4.jpg'
-      ],
-      category: 'Pickles & Condiments',
-      tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'kathalpickle'],
-      size: '100, 250, 500, 1000',
-      variants: {
-        sizes: [
-          { name: '100g', value: '100g', price: 120 },
-          { name: '250g', value: '250g', price: 199 },
-          { name: '500g', value: '500g', price: 349 },
-          { name: '1000g', value: '1000g', price: 599 }
-        ]
-      },
-      ingredients_benefits: {
-        'Kathal (Jackfruit)': [
-          'High in vitamins such as vitamin A, B-complex vitamins (like B6), and vitamin C',
-          'A good source of minerals like potassium, magnesium, calcium, and iron'
-        ],
-        'Mustard Oil': [
-          'Rich in monounsaturated and polyunsaturated fats, especially omega-3 and omega-6 fatty acids',
-          'Helps reduce LDL (bad cholesterol) and improve HDL (good cholesterol)',
-          'May support heart health when used in moderation'
-        ],
-        'Mustard Seeds': [],
-        'Fennel Seeds': [],
-        'Fenugreek': [],
-        'Turmeric Powder': [],
-        'Red Chili Powder': []
-      }
-    },
-    {
       id: 'karela-pickle',
       name: 'Karela Pickle',
       description: 'Karela (Bitter Gourd) Pickle is a tangy and spicy Indian pickle made from the bitter vegetable, karela (bitter gourd), which is known for its health benefits. It\'s especially popular in North India and is a great way to balance out the bitterness with a variety of spices, oil, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
@@ -3199,7 +3131,7 @@ export const products: Product[] = [
     id: 'flavour-vibes-makhana-laddoos',
     name: 'Makhana Laddoos',
     description: 'Makhana Laddoos are sweet, round energy bites made primarily from makhana (also known as fox nuts or lotus seeds). They\'re often combined with ingredients like ghee, jaggery, and nuts to form a nutritious, naturally sweet treat. These laddoos have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-    price: 350,
+      price: 350,
     image: '/images/laddoopics/makhana laddoo.jpg',
     images: ['/images/laddoopics/makhana laddoo.jpg'],
     category: 'Healthy Treats',
@@ -3212,7 +3144,7 @@ export const products: Product[] = [
             { name: '1000g', value: '1000g', price: 1100 }
         ]
     },
-    ingredients_benefits: {
+      ingredients_benefits: {
         'Makhana': [
             'Rich in Protein',
             '• Makhana is a great source of plant-based protein, which is essential for muscle repair and growth.',
@@ -3423,24 +3355,7 @@ export const products: Product[] = [
       size: '200',
       ingredients_benefits: {
         'Kodo Millet': ['Diabetic-Friendly', '• Kodo millet has a low glycemic index, meaning it releases glucose slowly into the bloodstream.', '• Helps in controlling blood sugar spikes, making it ideal for people with type 2 diabetes.'],
-        'Urad Dal': ['Excellent Source of Protein', '• One of the best plant-based sources of protein, especially for vegetarians.', '• Supports muscle growth, tissue repair, and overall strength.']
-      }
-    },
-    {
-      id: 'mix-magic-jowar-dosa',
-      name: 'Jowar Dosa',
-      description: 'Jowar Dosa is a nutritious, gluten-free South Indian-style crepe made using jowar flour (sorghum flour). It\'s a healthy alternative to traditional rice dosas and is especially popular among those looking for high-fiber, diabetic-friendly, or weight-loss-friendly foods. This premix has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
-      price: 175,
-      image: '/images/mixmagic/Jowar Dosa.jpeg',
-      images: ['/images/mixmagic/Jowar Dosa.jpeg'],
-      category: 'Healthier Premixes',
-      tags: ['madeinindia', 'jowa', 'jowardosamix', 'nopalmoil', 'healthier', 'healthierdosas', 'tastierdosas', 'homemadedosas', 'mommadedosa', 'nostalgia', 'jowardosa', 'gluenfreedosa', 'diabeticfriendlydosa'],
-      size: '400',
-      ingredients_benefits: {
-        'Jowar Flour': ['Jowar flour (made from jowar, also known as sorghum) is a gluten-free, fiber-rich ancient grain flour that\'s gaining popularity for its impressive health benefits. It\'s especially beneficial for people with gluten intolerance, diabetes, or those aiming for weight loss and better digestion.'],
-        'Urad Flour': ['High in Protein', '• Urad flour is an excellent plant-based protein source, especially valuable for vegetarians and vegans.', '• Supports muscle repair, growth, and overall strength.'],
-        'Rice Flour': [],
-        'Poha': []
+        'Urad Dal': ['Excellent Source of Protein', '• One of the best plant-based sources of protein, especially for vegetarians and vegans.', '• Supports muscle growth, tissue repair, and overall strength.']
       }
     },
     {
@@ -3555,7 +3470,7 @@ export const products: Product[] = [
     {
       id: 'jowar-vanilla-jaggery-teacake',
       name: 'Gluten free, Sugar free & Eggless Jowar Vanilla Jaggery Tea Cake',
-      description: "Here’s a simple and delicious Jowar Vanilla Jaggery Tea Cake — a wholesome, gluten-free option with warm, earthy flavours. It’s soft, mildly sweet, and perfect with tea or coffee. This cake is sugar free hence guilt free + eggless too. This is a clean label product and has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS.\n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      description: "Here's a simple and delicious Jowar Vanilla Jaggery Tea Cake — a wholesome, gluten-free option with warm, earthy flavours. It's soft, mildly sweet, and perfect with tea or coffee. This cake is sugar free hence guilt free + eggless too. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.\n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
       price: 500,
       image: '/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg',
       images: ['/images/smiles_cakes/Jowar_Vanilla_Jaggery_Teacake.jpeg'],
@@ -3579,7 +3494,7 @@ export const products: Product[] = [
     {
       id: 'ragi-chocolate-jaggery-teacake',
       name: 'Gluten free, Sugar free & Eggless Ragi Chocolate Jaggery Tea Cake',
-      description: "Here’s a wholesome, rich, and naturally sweetened Ragi Chocolate Jaggery Tea Cake — gluten-free, full of calcium and iron from ragi (finger millet), and naturally sweetened with jaggery. It is moist, mildly earthy, and perfect with your afternoon tea. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      description: "Here's a wholesome, rich, and naturally sweetened Ragi Chocolate Jaggery Tea Cake — gluten-free, full of calcium and iron from ragi (finger millet), and naturally sweetened with jaggery. It is moist, mildly earthy, and perfect with your afternoon tea. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
       price: 500,
       image: '/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg',
       images: ['/images/smiles_cakes/Ragi_Chocolate_Jaggery_Teacake.jpeg'],
@@ -3605,7 +3520,7 @@ export const products: Product[] = [
     {
       id: 'carrot-millet-teacake',
       name: 'Gluten-free, Sugar-free and Eggless Carrot Millet Tea Cake',
-      description: "Here’s a wholesome, naturally sweet, and gluten-free Carrot Millet Tea Cake. This cake combines the goodness of millet flour with the sweetness of carrots and the warmth of jaggery, making it a perfect treat for your tea time. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      description: "Here's a wholesome, naturally sweet, and gluten-free Carrot Millet Tea Cake. This cake combines the goodness of millet flour with the sweetness of carrots and the warmth of jaggery, making it a perfect treat for your tea time. This is a clean label product and has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
       price: 800,
       image: '/images/smiles_cakes/Carrot_Millet_Teacake.jpeg',
       images: ['/images/smiles_cakes/Carrot_Millet_Teacake.jpeg'],
@@ -3666,7 +3581,7 @@ export const products: Product[] = [
       ingredients_benefits: {
         'Thai Red Chillies': [
           'Rich in Capsaicin',
-          "Capsaicin, the compound responsible for the chili’s heat, has anti-inflammatory, antioxidant, and pain-relieving properties.",
+          "Capsaicin, the compound responsible for the chili's heat, has anti-inflammatory, antioxidant, and pain-relieving properties.",
           "It can boost metabolism by increasing thermogenesis (heat production in the body), which may help with weight management."
         ],
         'Garlic': [
@@ -3681,7 +3596,7 @@ export const products: Product[] = [
     {
       id: 'vegan_basil_pesto',
       name: 'Vegan Basil Pesto Sauce',
-      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Basil Pesto is more than just a sauce—it’s a vibrant celebration of fresh, handpicked basil leaves perfectly blended with toasted walnuts, aromatic garlic, zesty orange and lime, and extra virgin olive oil. Infused with the wholesome goodness of nutritional yeast, this luscious vegan pesto offers a rich, creamy texture and a burst of bright mediterranean flavors that will instantly elevate any meal. Made fresh in small batches and carefully packed to preserve its bold taste and vibrant color, this pesto is a must-have gourmet delight—grab yours today before it’s gone and transform your cooking into a flavorful feast!",
+      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! This Basil Pesto is more than just a sauce—it's a vibrant celebration of fresh, handpicked basil leaves perfectly blended with toasted walnuts, aromatic garlic, zesty orange and lime, and extra virgin olive oil. Infused with the wholesome goodness of nutritional yeast, this luscious vegan pesto offers a rich, creamy texture and a burst of bright mediterranean flavors that will instantly elevate any meal. Made fresh in small batches and carefully packed to preserve its bold taste and vibrant color, this pesto is a must-have gourmet delight—grab yours today before it's gone and transform your cooking into a flavorful feast!",
       price: 610,
       image: '/images/saucesset3/Vegan Basil Pesto.jpg',
       images: ['/images/saucesset3/Vegan Basil Pesto.jpg'],
@@ -3711,14 +3626,14 @@ export const products: Product[] = [
     {
       id: 'smoked_thai_pineapple_chilli_sauce',
       name: 'Smoked Thai Pineapple Chilli Sauce',
-      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience a vibrant burst of sweet heat with this Pineapple Chili Sauce. This handcrafted sauce blends the tropical sweetness of pineapple juice and chunks with fiery bird’s eye chillies, tangy apple cider vinegar, and a touch of garlic—all slowly simmered to perfection and thickened into a luscious, balanced glaze. With a subtle kick from chili flakes and tamari sauce, this sauce is perfect for adding a tropical zing to your grilled meats, stir-fries, seafood, or as a dipping sauce. Made fresh in small batches, it’s free from artificial flavours and preservatives, delivering pure, natural taste in every spoonful.",
+      description: "Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience a vibrant burst of sweet heat with this Pineapple Chilli Sauce. This handcrafted sauce blends the tropical sweetness of pineapple juice and chunks with fiery bird's eye chillies, tangy apple cider vinegar, and a touch of garlic—all slowly simmered to perfection and thickened into a luscious, balanced glaze. With a subtle kick from chilli flakes and tamari sauce, this sauce is perfect for adding a tropical zing to your grilled meats, stir-fries, seafood, or as a dipping sauce. Made fresh in small batches, it's free from artificial flavours and preservatives, delivering pure, natural taste in every spoonful.",
       price: 550,
       image: '/images/saucesset5/IMG_1.jpg',
       images: ['/images/saucesset5/IMG_1.jpg', '/images/saucesset5/IMG_2.jpg'],
-        category: 'Sauces and Dressings',
+      category: 'Sauces and Dressings',
       tags: ['madeinindia', 'healthier', 'healthiersauces', 'smokedpineapplesauce', 'smokedthaisauce', 'thaisauce', 'smokedchillisauce', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'freshsmokedpineapplesauce'],
-        size: '150ml',
-        ingredients_benefits: {
+      size: '150ml',
+      ingredients_benefits: {
         'Fresh pineapple': [
           'Rich in Immune-Boosting Nutrients',
           'High in Vitamin C, which supports immune defense, helps repair tissues, and acts as a strong antioxidant.',
@@ -3732,11 +3647,11 @@ export const products: Product[] = [
           "Iron",
           "Magnesium"
         ],
-            'Apple Cider Vinegar': [],
+        'Apple Cider Vinegar': [],
         'Fresh Birds Eye Chillies': [],
         'Garlic': [],
         'Tamari sauce': [],
-            'Chilli flakes': [],
+        'Chilli flakes': [],
         'Corn flour': [],
         'Tomato ketchup': [],
         'Salt': [],
@@ -3750,10 +3665,10 @@ export const products: Product[] = [
       price: 440,
       image: '/images/Chimichurri Sauce.jpg',
       images: ['/images/Chimichurri Sauce.jpg'],
-        category: 'Sauces and Dressings',
+      category: 'Sauces and Dressings',
       tags: ['madeinindia', 'healthier', 'healthiersauces', 'chimichurrisauce', 'southamericansauce', 'authenticchimichurri', 'preservativefreesauce', 'makeinindia', 'nopreservatives', 'noadditives', 'consciouskitchenproduct'],
-        size: '150ml',
-        ingredients_benefits: {
+      size: '150ml',
+      ingredients_benefits: {
         'Extra-virgin olive oil': [
           'High in monounsaturated fats (mainly oleic acid) which help:',
           'Lower LDL (bad) cholesterol',
@@ -3767,14 +3682,14 @@ export const products: Product[] = [
           'Improve digestion by increasing stomach acid production',
           'Enhance the absorption of minerals like calcium and magnesium',
           'Reduce bloating and support gut function'
-            ],
-            'Garlic': [],
+        ],
+        'Garlic': [],
         'Fresh flat-leaf Parsley': [],
         'Lemon zest and juice': [],
         'Sea Salt': [],
         'Dried Oregano': [],
         'Red Pepper Flakes': [],
-            'Cayenne Pepper': [],
+        'Cayenne Pepper': [],
         'Smoked Paprika': []
       }
     },
@@ -3812,36 +3727,36 @@ export const products: Product[] = [
     {
       id: 'aubergine_pesto',
       name: 'Aubergine Pesto Sauce',
-      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives! This Aubergine Pesto is a rich, smoky, and creamy blend crafted from roasted eggplant, toasted walnuts, garlic, fresh parsley, and a hint of chili flakes. This luscious pesto delivers a vibrant Mediterranean flavour with a smooth texture, perfect for spreading, dipping, or enhancing your favourite dishes. Made fresh in small batches and carefully packed to preserve its bold taste and natural freshness, this pesto is a gourmet must-have. Highly recommended for adding a rich, smoky depth to your meals. How to use: Spread on toast, sandwiches, parathas or wraps; toss with hot pasta or roasted vegetables; use as a dip with crackers or crudités; serve alongside grilled meats or seafood. Storage: Shelf Life 10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives! This Aubergine Pesto is a rich, smoky, and creamy blend crafted from roasted eggplant, toasted walnuts, garlic, fresh parsley, and a hint of chilli flakes. This luscious pesto delivers a vibrant Mediterranean flavour with a smooth texture, perfect for spreading, dipping, or enhancing your favourite dishes. Made fresh in small batches and carefully packed to preserve its bold taste and natural freshness, this pesto is a gourmet must-have. Highly recommended for adding a rich, smoky depth to your meals. How to use: Spread on toast, sandwiches, parathas or wraps; toss with hot pasta or roasted vegetables; use as a dip with crackers or crudités; serve alongside grilled meats or seafood. Storage: Shelf Life 10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
       price: 575,
       image: '/images/Aubergine Pesto.jpg',
       images: ['/images/Aubergine Pesto.jpg'],
-        category: 'Sauces and Dressings',
+      category: 'Sauces and Dressings',
       tags: [
         'madeinindia', 'healthier', 'healthierpesto', 'authenticpesto', 'auberginepesto', 'glutenfreepesto', 'noadditivespesto', 'preservativefreepesto', 'makeinindia', 'nopreservatives', 'noadditives', 'freshpesto'
       ],
-        size: '150ml',
-        ingredients_benefits: {
+      size: '150ml',
+      ingredients_benefits: {
         'Eggplant': [
           'High in Antioxidants',
           'Nasunin: Found in the purple skin, protects cells from oxidative damage and supports brain health.',
           'Anthocyanins: These plant compounds have anti-inflammatory and heart-protective properties.'
-            ],
-            'Extra Virgin Olive Oil': [
-                'High in monounsaturated fats (mainly oleic acid) which help:',
-                'Lower LDL (bad) cholesterol',
-                'Increase HDL (good) cholesterol',
-                'Improve arterial function',
-                'Associated with reduced risk of heart disease and stroke'
-            ],
+        ],
+        'Extra Virgin Olive Oil': [
+          'High in monounsaturated fats (mainly oleic acid) which help:',
+          'Lower LDL (bad) cholesterol',
+          'Increase HDL (good) cholesterol',
+          'Improve arterial function',
+          'Associated with reduced risk of heart disease and stroke'
+        ],
         'Mozzarella Cheese': [],
         'Lemon Juice': [],
-            'Garlic': [],
+        'Garlic': [],
         'Fresh Parsley': [],
         'Walnuts': [],
         'Rock Salt': [],
         'Fresh Black Pepper': [],
-        'Chili Flakes': []
+        'Chilli Flakes': []
       }
     },
     {
@@ -3879,7 +3794,7 @@ export const products: Product[] = [
     {
       id: 'red_cabbage_pesto',
       name: 'Red Cabbage Pesto Sauce',
-      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Yes, you heard us right — this is a delicious pesto made from roasted red cabbage! Vibrant in colour and bursting with flavour, it’s a fresh twist on traditional pesto that’s as nutritious as it is tasty. Packed with antioxidants, vitamins C and K, and rich in fiber, this pesto supports digestion, boosts immunity, and promotes healthy skin. The subtle tang of sumac and warmth of ginger and cayenne perfectly balance the earthy cabbage, making it a unique and wholesome addition to your meals. Whether tossed with pasta, spread on toast, or used as a dip, this pesto is a flavorful way to boost your health with every bite. How to use: Toss with pasta or grains; spread on toast, sandwiches, or wraps; use as a dip for crackers and fresh veggies; drizzle over roasted or grilled vegetables; mix into salads. Storage: Shelf Life 7-10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
+      description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Yes, you heard us right — this is a delicious pesto made from roasted red cabbage! Vibrant in colour and bursting with flavour, it\'s a fresh twist on traditional pesto that\'s as nutritious as it is tasty. Packed with antioxidants, vitamins C and K, and rich in fiber, this pesto supports digestion, boosts immunity, and promotes healthy skin. The subtle tang of sumac and warmth of ginger and cayenne perfectly balance the earthy cabbage, making it a unique and wholesome addition to your meals. Whether tossed with pasta, spread on toast, or used as a dip, this pesto is a flavorful way to boost your health with every bite. How to use: Toss with pasta or grains; spread on toast, sandwiches, or wraps; use as a dip for crackers and fresh veggies; drizzle over roasted or grilled vegetables; mix into salads. Storage: Shelf Life 7-10 days, refrigerate to retain freshness. Always cover the sauce with a layer of extra virgin olive oil.',
       price: 550,
       image: '/images/saucesset3/Red Cabbage Pesto.png',
       images: ['/images/saucesset3/Red Cabbage Pesto.png'],
@@ -4066,11 +3981,220 @@ export const products: Product[] = [
           'MCTs are more easily digested and may provide a quick energy source.',
           'May support weight management by boosting metabolism slightly.',
           'Antimicrobial & Antifungal Properties',
-          'Lauric acid in coconut oil has been shown to kill harmful bacteria, viruses, and fungi.',
-      ],
+          'Lauric acid in coconut oil has been shown to kill harmful bacteria, viruses, and fungi.']
       }
-    }
-      
-];
+    },
+    {
+      id: 'Kadak_Bombay_Cutting_Chai',
+      name: 'Kadak Bombay Cutting Chai',
+      description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A Prominent Cardamom, Ginger and mild peppery natural tea! This Chai is Street style- It has a strong kick- punched with mild elaichi, adrak and some spices. Try this street style cutting (half cup) chai and experience the heart of Bombay.' 🥛 ☕
+        Pair it with a Khari or Bun Maska 🤤
+        • HOW TO USE:
+        Brewing style :- Indian street boiling style 
+        Time:- Morning and Afternoon. Indians don't need a time for Chai 😊`,
+      price: 300,
+      image: '/images/tea1/IMG_2.png',
+      images: ['/images/tea1/IMG_2.png',
+        '/images/tea1/IMG_1.png',
+        '/images/tea1/IMG_3.png',
+        '/images/tea1/IMG_4.png'],
+      category: 'Healthier Beverages',
+      tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'farmfreshtea', 'nochemicaltea', 'preservativefreecuttingchai', 'makeinindia', 'nopreservatives', 'kadakchai', 'freshtealeaves', 'cuttingchai', 'elaichitea', 'adraktea', 'bombaytea', 'masalatea', 'cuttingtea'],
+      size: 'Golden Tin: 60gms',
+      variants: {
+        sizes: [
+          { name: 'Golden Tin', value: '250g', price: 250 },
+          { name: 'Paper Pouch', value: '100g', price: 350 }
+        ]
+      },
+      ingredients_benefits: {
+        'Premium CTC strong blend': [
+          'High in Antioxidants',
+          '• Contains theaflavins and thearubigins, which:',
+          'o Help neutralize free radicals',
+          'o Reduce oxidative stress',
+          'o Support anti-aging and skin health',
+          'Energy Boost',
+          '• Strong CTC blends typically have more caffeine than traditional loose-leaf teas.',
+          'o Enhances alertness, focus, and physical stamina',
+          'o Great morning or afternoon pick-me-up'
+        ],
+        'Ginger': [
+          'Digestive Health',
+          '• Reduces bloating and gas: Cardamom helps relieve indigestion and stomach discomfort.',
+          '• Stimulates appetite and may ease nausea.',
+          'Antioxidant and Anti-inflammatory',
+          '• Rich in antioxidants like flavonoids, which help fight oxidative stress.',
+          '• May reduce inflammation, benefiting overall health.'
+        ],
+        'Cardamom': [
+          'Aids Digestion',
+          '• Eases bloating, gas, and indigestion.',
+          '• Stimulates appetite and relieves nausea.',
+          'Rich in Antioxidants',
+          '• Fights free radicals.',
+          '• Reduces inflammation in the body.'
+        ]
+      }
+    },
+    {
+      id: 'Chocoholic_Whole_Leaf_Black_Tea',
+      name: 'Chocoholic- Whole Leaf Black Tea (With Scintillating Chocolate Aroma)',
+      description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and chocolate flavors to transport you to chocolate land. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Chocolate and Hazelnut. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
+        • HOW TO USE:
+        Brewing style :- Hot and cold brews`,
+        price: 600,
+      image: '/images/tea2/IMG_2.png',
+      images: ['/images/tea2/IMG_2.png',
+        '/images/tea2/IMG_1.png',
+        '/images/tea2/IMG_3.png',
+        '/images/tea2/IMG_4.png'],
+        category: 'Healthier Beverages',
+        tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'farmfreshtea', 'nochemicaltea', 'preservativefreechocoholictea', 'makeinindia', 'nopreservatives', 'chocoholicchai', 'freshtealeaves', 'chocolatetea'],
+        size: 'Golden Tin: 100gms',
+        variants: {
+          sizes: [
+            { name: 'Golden Tin', value: '250g', price: 250 },
+            { name: 'Paper Pouch', value: '100g', price: 350 }
+          ]
+        },
+        ingredients_benefits: {
+          'Black Tea Leaves': [
+            'Rich in Antioxidants',
+            'Black tea contains polyphenols like theaflavins, thearubigins, and catechins.',
+            'These combat oxidative stress and may reduce the risk of chronic diseases, such as heart disease and some cancers.',
+            'Supports Heart Health',
+            'Studies have linked regular black tea consumption to:',
+            'o Lower LDL (bad) cholesterol',
+            'o Improved blood vessel function',
+            'o Reduced blood pressure'
+          ],
+          'European Chocolate and Hazelnut Powder': [
+            'Rich in Antioxidants',
+            'Cocoa is high in flavonoids, which can help reduce inflammation and support heart health.',
+            'Mood Booster',
+            'Contains theobromine, phenylethylamine, and serotonin precursors, which can lift mood and reduce stress.'
+          ]
+        }
+    },
+    {
+      id: 'Classic_Detox_Green_Tea',
+      name: 'Classic Detox Green Tea (with Honey and Lemon)',
+      description: `Every weight watchers choice! Small batch blended by a master blender just for your cup! With tangy, sweet, smooth and refreshing tasting notes, this is a great non bitter tea and is extremely appetizing. This tea is a post workout muscle relaxer, aids in weight regulation and is an immunity booster as well. Great for fitness enthusiasts!!
+        HOW TO USE:
+        Brewing style: Hot brews (generally!)`,
+      price: 600,
+      image: '/images/tea3/IMG_2.png',
+      images: ['/images/tea3/IMG_2.png',
+        '/images/tea3/IMG_1.png',
+        '/images/tea3/IMG_3.png',
+        '/images/tea3/IMG_4.png'],
+      category: 'Healthier Beverages',
+      tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'farmfreshtea', 'nochemicaltea', 'preservativefreegreentea', 'makeinindia', 'nopreservatives', 'greentea', 'freshtealeaves', 'greenteawithhoneyandlemon', 'refreshing', 'instantpickmeup', 'middaypickmeup'],
+      size: 'Golden Tin: 100gms',
+      variants: {
+        sizes: [
+          { name: 'Golden Tin', value: '250g', price: 250 },
+          { name: 'Paper Pouch', value: '100g', price: 350 }
+        ]
+      },
+      ingredients_benefits: {
+        'Green Tea Leaves': [
+          'Rich in Antioxidants',
+          'Contains polyphenols like catechins, especially EGCG (epigallocatechin gallate), which reduce cell damage and fight inflammation.',
+          '2. Improves Brain Function',
+          'Contains caffeine (less than coffee) and L-theanine, which together improve alertness, mood, and cognitive performance.'
+        ],
+        'Honey': [
+          'Natural Antioxidant Source',
+          'Rich in polyphenols and flavonoids that help fight oxidative stress and reduce inflammation in the body.',
+          '2. Soothes Coughs & Sore Throats',
+          'Acts as a natural cough suppressant—especially effective in children over 1 year (but never give to infants under 1).',
+          'Warm honey and lemon tea is a traditional and effective remedy.'
+        ],
+        'Lemon Peels': []
+      }
+    },
+    {
+      id: 'Delicate_Thai_Jasmine_and_Kashmiri_Kahwa_Tea',
+      name: 'Delicate Thai Jasmine and Kashmiri Kahwa Tea',
+      description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and spices to transport you to the heart of Thailand. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Jasmine and Kashmiri Kahwa. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
+        • HOW TO USE:
+        Brewing style :- Hot and cold brews`,
+        price: 600,
+        image: '/images/tea4/IMG_2.png',
+        images: ['/images/tea4/IMG_2.png',
+          '/images/tea4/IMG_1.png',
+          '/images/tea4/IMG_3.png',
+          '/images/tea4/IMG_4.png'],
+        category: 'Healthier Beverages',
+        tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'farmfreshtea', 'nochemicaltea', 'preservativefreethaitea', 'makeinindia', 'nopreservatives', 'thaitea', 'freshtealeaves', 'jasminekahwatea'],
+        size: 'Golden Tin: 100gms',
+        variants: {
+        sizes: [
+          { name: 'Golden Tin', value: '250g', price: 250 },
+          { name: 'Paper Pouch', value: '100g', price: 350 }
+        ]
+      },
+        ingredients_benefits: {
+          'Thai Jasmine Tea Leaves': [
+            'Rich in Antioxidants',
+            'Contains polyphenols like catechins, especially EGCG (epigallocatechin gallate), which reduce cell damage and fight inflammation.',
+            '2. Improves Brain Function',
+            'Contains caffeine (less than coffee) and L-theanine, which together improve alertness, mood, and cognitive performance.'
+          ],
+          'Kashmiri Kahwa': [
+            'Natural Antioxidant Source',
+            'Rich in polyphenols and flavonoids that help fight oxidative stress and reduce inflammation in the body.',
+            '2. Soothes Coughs & Sore Throats',
+            'Acts as a natural cough suppressant—especially effective in children over 1 year (but never give to infants under 1).',
+            'Warm honey and lemon tea is a traditional and effective remedy.'
+          ]
+        }
+      },
+      {
+          id: 'Kashmiri_Kahwa_Tea',
+          name: 'Kashmiri Kahwa Tea',
+          description: `Green Tea infused with Kashmiri goodness! Elevate your senses to the Himalayas with this unique blend of Himalayan green tea infused with rich Kashmiri spices. The Himalayan leaves, saffron and spices are healthy for our gut and are diabetic friendly. Prominent tasting notes that are experienced: Sweet and deep aromatic rich flavour
+          HOW TO USE:
+          To drink like the Kashmiris, add sugar and top the beverage with nuts!
+          Brewing style: Hot brews (generally!)`,
+          price: 350,
+          image: '/images/tea5/IMG_2.png',
+          images: ['/images/tea5/IMG_2.png',
+            '/images/tea5/IMG_1.png',
+            '/images/tea5/IMG_3.png',
+            '/images/tea5/IMG_4.png'],
+          category: 'Healthier Beverages',
+          tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'farmfreshtea', 'nochemicaltea', 'preservativefreekahwatea', 'makeinindia', 'nopreservatives', 'kahwatea', 'freshtealeaves', 'kashmirikahwatea', 'refreshing', 'instantpickmeup', 'middaypickmeup', 'kahwa'],
+          size: 'Paper Pouch: 50gms',
+          variants: {
+            sizes: [
+              { name: 'Paper Pouch', value: '50gms', price: 350 },
+              { name: 'Golden Mini Tin', value: '30gms', price: 350 },
+              { name: 'Golden Big Tin', value: '100gms', price: 600 }
+            ]
+          },
+          ingredients_benefits: {
+          'Green Tea Leaves':
+          ['Boosts Brain Function',
+          'Caffeine: Improves alertness and focus without the jitteriness of coffee.',
+          'L-theanine: Promotes calm, focused energy and enhances the effects of caffeine',
+          'Supports Heart Health',
+          'Lowers LDL (bad) cholesterol and increases HDL (good) cholesterol.',
+          'Improves blood flow and reduces blood pressure.'],
+          'Green Cardamom': 
+          [
+          'Aids Digestion',
+          'Stimulates digestion by promoting bile flow and reducing bloating, gas, and heartburn.',
+          'Helps relieve nausea, especially during pregnancy.',
+          'Used traditionally to treat indigestion and loss of appetite.'],
+          'Star Anise': [],
+          'Cinnamon': [],
+          'Kashmiri Saffron': []
+        }
+      }
+
+    ];
   
-  export default products; 
+    export default products; 

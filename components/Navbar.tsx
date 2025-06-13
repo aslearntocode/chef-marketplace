@@ -35,7 +35,7 @@ export default function Navbar() {
       label: 'Shop Now',
       dropdown: [
         { href: '/whole-foods/categories/healthy-treats', label: 'Healthier Treats' },
-        { href: '/whole-foods/categories/drinks', label: 'Healthier Drinks' },
+        { href: '/whole-foods/categories/healthier-beverages', label: 'Healthier Beverages' },
         { href: '/whole-foods/categories/healthy-bites', label: 'Healthier Bites' },
         { href: '/whole-foods/categories/pickles', label: 'Pickles & Condiments' },
         { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthier Breakfast' },
