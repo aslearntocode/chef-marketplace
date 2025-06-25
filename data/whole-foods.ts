@@ -22,7 +22,7 @@ export const products: Product[] = [
     },
     {
         id: 'sugar-free-dates-peanut-laddoos',
-        name: 'Sugar Free Dates and Peanut Laddoos',
+        name: 'Sugar Free Dates and Peanut Laddoo',
         description: 'Sugar free Dates and Peanut laddoo is a healthy, nutrient-packed Indian sweet that combines the natural sweetness of Dates with the rich, earthy flavour of roasted peanuts. This wholesome treat is ideal for those seeking a guilt-free, energy-boosting snack or a healthier alternative for festivals and celebrations.',
         price: 100 ,
         image: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg',
@@ -263,7 +263,7 @@ export const products: Product[] = [
     {
       id: 'whole-wheat-ajwain-mathri',
       name: 'Whole Wheat Ajwain Mathri',
-      description: 'Super crunchy and great with your tea. Share these with your family- pack them for a picnic-pack these for your kid\'s tiffin! These whole wheat crisps are super versatile and perfect for some healthy indulgence. Crafted using high quality whole wheat flour, fragrant methi and handpicked spices, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil-super healthy! Loved by all ages - your kids are bound to enjoy these too!',
+      description: 'Super crunchy and great with your tea. Share these with your family- pack them for a picnic-pack them for your kid\'s tiffin! These whole wheat crisps are super versatile and perfect for some healthy indulgence. Crafted using high quality whole wheat flour, fragrant methi and handpicked spices, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil-super healthy! Loved by all ages - your kids are bound to enjoy these too!',
       price:156 ,
       image: '/images/wholewheatajwainmathri/MZ8_0752.jpg',
       images: [
@@ -298,7 +298,7 @@ export const products: Product[] = [
     {
         id: 'whole-wheat-jaggery-fingers',
         name: 'Whole Wheat Jaggery Fingers - Gur Paara',
-        description: 'Gur paare - healthier as these contain no maida! Perfect for some healthy indulgence! Crafted using high quality whole wheat flour, fragrant saunf (fennel) and coated with jaggery, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil - super healthy! Loved by all ages - your kids too are bound to enjoy these! Super crunchy and mildly sweet. Share these with your family-pack them for a picnic-pack these for your kids tiffin!',
+        description: 'Gur paare - healthier as these contain no maida! Perfect for some healthy indulgence! Crafted using high quality whole wheat flour, fragrant saunf (fennel) and coated with jaggery, this clean label snack is handmade in small batches. No palm oil or white salt-No reused oil - super healthy! Loved by all ages - your kids too are bound to enjoy these! Super crunchy and mildly sweet. Share these with your family-pack them for a picnic-pack them for your kids tiffin!',
         price: 120,
         image: '/images/wholewheatjaggery-gurpaara/MZ8_0762.jpg',
         images: [
@@ -1199,7 +1199,7 @@ export const products: Product[] = [
     {
       id: 'zingy-gongura-podi',
       name: 'Zingy Gongura Podi',
-      description: 'Bold, tangy, and deeply rooted in tradition—our Zingy Gongura Podi captures the unmistakable flavour of sorrel leaves (gongura) blended with perfectly roasted spices. This guilt-free twist on the beloved gongura pachadi offers the same vibrant punch, minus the oil and preservatives. Enjoy it with hot rice and a spoon of ghee, or pair it with dosa and idly for an authentic touch. Handcrafted in small batches using heirloom recipes, this podi brings the soul of a traditional Andhra kitchen right to your plate.',
+      description: 'Bold, tangy, and deeply rooted in tradition—our Zingy Gongura Podi captures the unmistakable flavour of sorrel leaves (gongura) blended with perfectly roasted spices. This guilt-free twist on the beloved gongura pachadi offers the same vibrant punch, minus the oil and preservatives. Enjoy it with hot rice and a spoon of ghee, or pair it with dosas and idly for an authentic touch. Handcrafted in small batches using heirloom recipes, this podi brings the soul of a traditional Andhra kitchen right to your plate.',
       price: 135,
       image: '/images/gongurapodi/IMG_5.jpg',
       images: [
@@ -1669,7 +1669,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '52',
+      id: 'okra-chips',
       name: 'Okra Chips',
       description: 'Discover the wholesome goodness of Healthy Grabz Okra (Bhindi) Chips, a perfect blend of nutrition and flavour! Made using ancient solar dehydration techniques and cutting-edge air cooking methods, these chips retain the natural nutrients of okra, ensuring a healthy and delicious snacking experience. Each crunchy bite is seasoned with our signature masala and olive oil, offering a guilt-free indulgence packed with health benefits. Rich in dietary fiber, these chips support digestion, weight management, and heart health. Their low glycemic index makes them an excellent choice for managing blood sugar levels, ideal for those monitoring their diabetes. Plus, the natural antioxidants in okra help boost immunity and combat free radicals. Whether you\'re on the go, at work, or simply craving a tasty treat, Healthy Grabz Okra Chips are the ultimate companion. They are gluten-free, free from artificial preservatives, and perfect for anyone seeking a healthier alternative to traditional fried snacks.',
       price: 100,
@@ -1696,7 +1696,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '53',
+      id: 'orange-chips',
       name: 'Orange Chips',
       description: 'Are you looking for a healthy snack that doesn\'t compromise on flavor? Meet Orange Healthy Chips – a deliciously nutritious option crafted to perfection! Packed with the goodness of natural ingredients, these chips are made using a unique combination of ancient solar dehydration techniques and modern air cooking methods. This innovative process ensures a crispy, flavourful snack with lower fat content and zero artificial additives. Infused with a zesty orange flavor, Orange Healthy Chips not only satisfy your cravings but also offer health benefits like heart support, weight management, and immune boosting. These chips are perfect for anyone seeking a guilt-free snack that\'s both convenient and wholesome. Whether you\'re a fitness enthusiast or a busy professional, Orange Healthy Chips make for an ideal snack-on-the-go. Add them to your cart today and indulge in a snack that\'s good for your taste buds and your health!',
       price: 110,
@@ -1729,7 +1729,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '54',
+      id: 'potato-chips',
       name: 'Potato Chips',
       description: 'Made with high-quality ingredients and seasoned with a variety of savoury flavours, our potato chips are perfect for guilt-free snacking. Enjoy the perfect balance of crunch and taste with every bite, ideal for heart health, weight loss, and boosting immunity. Savour the goodness of these Potato Chips with no artificial additives and preservatives. for a healthier lifestyle. Try them today as a tastier snack that aligns with your health-conscious lifestyle!',
       price: 100,
@@ -1754,7 +1754,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '55',
+      id: 'sweet-potato-chips',
       name: 'Sweet Potato Chips',
       description: 'Delicious sweet potato chips made from 100% real sweet potatoes. These air-cooked chips retain the natural sweetness and nutrients while providing a satisfying crunch. A perfect healthy snack option that\'s free from artificial flavors and preservatives.',
       price: 100,
@@ -1799,7 +1799,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '56',
+      id: 'root-vegetable-chips',
       name: 'Root Vegetable Chips',
       description: 'This Jar contains root vegetable chips (such as Beetroot, Potato, Sweet Potato, Yam). Vegetables are dehydrated, airfried and sprinkled with Olive Oil in the end. To satisfy crunchy cravings while still staying on track, everybody should consider oil-free options such as this. This is a guilt-free munching option that won\'t derail anybody\'s fitness progress.',
       price: 100,
@@ -1836,7 +1836,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '57',
+      id: 'organic-fresh-farm-cashews',
       name: 'Organic Fresh Farm Cashews',
       description: 'Deliciously Nutty Flavour: Enjoy the rich, nutty taste of our whole cashews, known for their firm texture and satisfying crunch. Great Quality: These cashews are organically grown and carefully selected from a family owned farm in Ratnagiri. Freshness Preserved: Packed in food-safe materials, our cashews retain their delightful flavour and crunch. Plus they are hygienically processed in facilities adhering to strict food safety standards. Optimal Storage: To maintain freshness, store cashews in a cool, dry place in an airtight container. For extended shelf life, refrigeration after opening is recommended. Convenient Snack: Whether at home, work, school, or on-the-go, these cashews offer a delicious, quick snack option that fits any occasion. Appealing Flavour: With a flavour that is tasty for both adults and children, these cashews are a great snack for the whole family.',
       category: 'Nuts and Seeds',
@@ -1873,7 +1873,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: '58',
+      id: 'methi-khakhras',
       name: 'Methi Khakhras',
       description: 'Methi Khakhra is a traditional Indian snack originating from Gujarat, made by roasting thin, crispy discs of whole wheat dough flavored with fenugreek leaves (Methi) and spices. It\'s a popular choice for health-conscious eaters and is often enjoyed with tea, chutney, or yogurt. These khakhras have NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.',
       price: 150,
@@ -2901,7 +2901,7 @@ export const products: Product[] = [
         'Nigella seeds (Kalonji)': [],
         'Mustard seeds': [],
         'Turmeric Powder': [],
-        'Red Chili Powder': []
+        'Red Chilli Powder': []
       }
     },
     {
@@ -3440,7 +3440,7 @@ export const products: Product[] = [
     {
       id: 'chocolate-mango-teacake',
       name: 'Gluten Free, Sugar Free & Eggless Chocolate Mango Teacake',
-      description: "Here's a gluten-free and sugar-free eggless chocolate mango tea cake that's moist, flavourful, and perfect with a cup of tea. It combines rich chocolate with the tropical sweetness of mango in a tender crumb- A Tropical Twist to your teatime: Gluten-free & Guilt-free Chocolate Mango Tea cake (EGGLESS). This is a clean label product and has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
+      description: "Here's a gluten-free and sugar-free eggless chocolate mango tea cake that's moist, flavourful, and perfect with a cup of tea. It combines rich chocolate with the tropical sweetness of mango in a tender crumb - A Tropical Twist to your teatime: Gluten-free & Guilt-free Chocolate Mango Tea cake (EGGLESS). This is a clean label product and has NO PRESERVATIVES, NO PALM Oil AND NO ARTIFICIAL FLAVOURS. \n Please Note - The Baking Powder (BP) used in the product is not gluten free as the quantity of BP is negligible in this product.",
       price: 750,
       image: '/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg',
       images: ['/images/smiles_cakes/Chocolate_Mango_Teacake.jpeg'],
@@ -3570,7 +3570,7 @@ export const products: Product[] = [
     },
     {
       id: 'fiery_fusion_burnt_chili_oil',
-      name: 'Fiery Fusion Burnt Chili Oil',
+      name: 'Fiery Fusion Burnt Chilli Oil',
       description: 'Artisan Fresh, All-natural, Gluten Free, No artificial additives, Vegan! Experience bold, smoky heat with Fiery Fusion Burnt Chilli Oil — a handcrafted blend of slow-roasted Thai red chilies, crispy garlic, and whole spices, all infused in premium sunflower oil. Cooked in small batches to preserve freshness and flavour, this oil delivers an irresistible crunch, rich umami, and a deep, smoky aroma. Perfect for spice lovers looking to elevate everyday meals with a natural punch of flavour',
       price: 410,
       image: '/images/saucesset2/Fiery Fusion Burnt Chilli Oil.png',
@@ -3985,7 +3985,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'Kadak_Bombay_Cutting_Chai',
+      id: 'kadak-bombay-cutting-chai',
       name: 'Kadak Bombay Cutting Chai',
       description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A Prominent Cardamom, Ginger and mild peppery natural tea! This Chai is Street style- It has a strong kick- punched with mild elaichi, adrak and some spices. Try this street style cutting (half cup) chai and experience the heart of Bombay.' 🥛 ☕
         Pair it with a Khari or Bun Maska 🤤
@@ -4038,7 +4038,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'Chocoholic_Whole_Leaf_Black_Tea',
+      id: 'chocoholic-whole-leaf-black-tea',
       name: 'Chocoholic- Whole Leaf Black Tea (With Scintillating Chocolate Aroma)',
       description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and chocolate flavors to transport you to chocolate land. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Chocolate and Hazelnut. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
         • HOW TO USE:
@@ -4078,7 +4078,7 @@ export const products: Product[] = [
         }
     },
     {
-      id: 'Classic_Detox_Green_Tea',
+      id: 'classic-detox-green-tea',
       name: 'Classic Detox Green Tea (with Honey and Lemon)',
       description: `Every weight watchers choice! Small batch blended by a master blender just for your cup! With tangy, sweet, smooth and refreshing tasting notes, this is a great non bitter tea and is extremely appetizing. This tea is a post workout muscle relaxer, aids in weight regulation and is an immunity booster as well. Great for fitness enthusiasts!!
         HOW TO USE:
@@ -4116,7 +4116,7 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'Delicate_Thai_Jasmine_and_Kashmiri_Kahwa_Tea',
+      id: 'delicate-thai-jasmine-and-kashmiri-kahwa-tea',
       name: 'Delicate Thai Jasmine and Kashmiri Kahwa Tea',
       description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and spices to transport you to the heart of Thailand. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Jasmine and Kashmiri Kahwa. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
         • HOW TO USE:
@@ -4153,7 +4153,7 @@ export const products: Product[] = [
         }
       },
       {
-          id: 'Kashmiri_Kahwa_Tea',
+          id: 'kashmiri-kahwa-tea',
           name: 'Kashmiri Kahwa Tea',
           description: `Green Tea infused with Kashmiri goodness! Elevate your senses to the Himalayas with this unique blend of Himalayan green tea infused with rich Kashmiri spices. The Himalayan leaves, saffron and spices are healthy for our gut and are diabetic friendly. Prominent tasting notes that are experienced: Sweet and deep aromatic rich flavour
           HOW TO USE:
@@ -4193,8 +4193,344 @@ export const products: Product[] = [
           'Cinnamon': [],
           'Kashmiri Saffron': []
         }
-      }
-
+      },
+      {
+        id: 'sleep-and-glow-caffeine-free-blend',
+        name: 'Sleep and Glow Caffeine Free Blend',
+        description: `Caffeine Free Blend! A small batch master blended Tea, curated to relax your senses and give you good skin loaded with antioxidants and skin vitamins. Flowers and herbs are a vintage way of life. The ideal time to brew is before bedtime or whenever you want to unwind. The primary tasting notes will be floral and mild sweetness.’
+        • HOW TO USE:
+        •	Brewing style :- Hot brews and cold brews taste good.
+        •	Time:- 30mins before bedtime. It's quite fragrant and calming.
+        •	USP:- This tea is one of our best sellers. It's a herbal concoction designed to keep your gut clean and to give you a good nights sleep.`,
+        price: 370,
+        image: '/images/sleepandglow/IMG_2.png',
+        images: ['/images/sleepandglow/IMG_2.png',
+          '/images/sleepandglow/IMG_1.jpg',
+          '/images/sleepandglow/IMG_3.png',
+          '/images/sleepandglow/IMG_4.png'],
+        category: 'Healthier Beverages',
+        tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'caffeinefreetea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'Sleepandglowtea', 'teawithantioxidants'],
+        size: 'Paper Pouch: 50gms',
+        variants: {
+            sizes: [
+              { name: 'Paper Pouch', value: '50gms', price: 370 },
+              { name: 'Golden Tin', value: '100gms', price: 625 }
+            ]
+          },
+        ingredients_benefits: {
+        'Rosemary': [
+        'Rich in Antioxidants & Anti-inflammatory Compounds,',
+        'Contains carnosic acid, carnosol, and rosmarinic acid,',
+        'Helps neutralize harmful free radicals,',
+        'May reduce inflammation and oxidative stress in the body.',
+        'Supports Brain Health,',
+        'May improve concentration, memory, and mental clarity,',
+        'Some studies show it may help slow cognitive decline and protect against neurodegenerative diseases like Alzheimer\'s,',
+        'The aroma alone has been linked to enhanced memory and alertness.'
+        ],
+        'Basil': [
+        'Powerful Antioxidant Properties,',
+        'Contains flavonoids like orientin and vicenin,',
+        'Helps protect cells from oxidative stress and premature aging,',
+        'Anti-inflammatory Effects,',
+        'Basil essential oils (especially eugenol) reduce inflammation,',
+        'May help manage inflammatory conditions like arthritis or inflammatory bowel disease'
+        ],
+        'Lemon Balm': [],
+        'Lavender': [],
+        'Chamomile': [],
+        'Rose': [],
+        'Fennel': [],
+        'Salt': []
+        }
+        },
+        {
+          id: 'enchanted-persian-rose-tea',
+          name: 'Enchanted Persian Rose Tea',
+          description: `Exotic Limited Edition! Made with Damask roses native to Persia, these buds are unopened. This tea is popular in all south East Asian countries and is known for its good taste and health. The primary tasting notes for this tea are-floral, sweet and refreshing'
+          • HOW TO USE:
+          •	Brewing style:- Hot and cold brew with or without milk.
+          •	Time :- There is no time limit for a good tea mood 🥛 🌹☕
+          •	USP :- Natural damask roses help with skin and hair growth. With hormonal balance support. 
+          •	Makes a great Rose milk tea. Interesting tea for Millennial tea enthusiasts.`,
+          price: 350,
+          image: '/images/enchantedrosetea/IMG_1.png',
+          images: ['/images/enchantedrosetea/IMG_1.png',
+            '/images/enchantedrosetea/IMG_2.png',
+            '/images/enchantedrosetea/IMG_3.png'],
+          category: 'Healthier Beverages',
+          tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'rosetea', 'enchantedpersianrosetea'],
+          size: 'Paper Pouch: 50gms',
+          variants: {
+            sizes: [
+              { name: 'Paper Pouch', value: '50gms', price: 350 },
+              { name: 'Golden Tin', value: '100gms', price: 600 }
+            ]
+          },
+          ingredients_benefits: {
+          'Whole Black Tea Leaves': [
+          'Rich in Antioxidants',
+          'Key compounds: Theaflavins, thearubigins, catechins',
+          'Help combat free radicals and reduce oxidative stress, which supports overall health and slows aging',
+          'Improves Gut Health',
+          'Promotes the growth of beneficial gut bacteria like Lactobacillus and Bifidobacterium',
+          'Boosts Mental Alertness',
+          'Contains moderate caffeine (30–60 mg per cup) for increased focus and energy without the crash',
+          ],
+          'Rose Petals': [
+          'Rich in Antioxidants',
+          'Contain compounds like flavonoids, polyphenols, and anthocyanins',
+          'Help neutralize free radicals, reducing oxidative stress and slowing aging',
+          'Supports Digestive Health',
+          'Traditionally used to soothe stomach discomfort, relieve bloating, and promote healthy digestion',
+          'Mild laxative effects can help with constipation',
+          ],
+          }
+          },
+          {
+          id: 'vintage-home-chai',
+          name: 'Vintage Home Chai',
+          description: `From the hills of Nilgiri a classic family Chai for your kitchen shelf. The tea offers primary tasting notes which are refreshing and nutty!
+          HOW TO USE:
+          •	Brewing style:- Indian home boiling style
+          •	Time :- There is no time limit for a good tea mood 🥛 🌹☕
+          •	USP :- This Chai is a simple kitchen staple for every home. It has a strong kick. Great for everyone at home. Its also a no acidity chai!`,
+          price: 250,
+          image: '/images/vintagehomechai/IMG_1.png',
+          images: ['/images/vintagehomechai/IMG_1.png',
+            '/images/vintagehomechai/IMG_2.png'],
+          category: 'Healthier Beverages',
+          tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'Vintagehomechai', 'traditionaltea'],
+          size: 'Paper Pouch: 50gms',
+          variants: {
+            sizes: [
+              { name: 'Paper Pouch', value: '50gms', price: 250 },
+              { name: 'Golden Tin', value: '100gms', price: 400 }
+            ]
+          },
+          ingredients_benefits: {
+          'Blended CTC': [
+          'Consistent taste and quality',
+          'Strong Flavor and Color'                
+          ]
+          }
+          },
+          {
+            id: 'bombay-royal-chai',
+            name: 'Bombay Royal Chai',
+            description: `A luxury Indian Chai addition to your kitchen shelf- From the hills of Assam to your cup- Garden to cup experience of Royal chai is a highly boiled mixture of milk and water loaded with Tea leaves, Elaichi, Adrak, Jaiphal and many other spices. The prominent tasting notes are that of Cardamom and Ginger’
+            HOW TO USE:
+            •	Brewing style:- Indian home boiling style
+            •	Time :- There is no time limit for a good tea mood 🥛 🌹☕
+            •	USP :- This Chai is South Bombay style with extra Elachi and Adrak making it comforting, and naturally smooth-made for the Royals!`,
+            price: 350,
+            image: '/images/bombayroyalchai/IMG_1.png',
+            images: ['/images/bombayroyalchai/IMG_1.png',
+              '/images/bombayroyalchai/IMG_2.png',
+              '/images/bombayroyalchai/IMG_3.png'
+            ],
+            category: 'Healthier Beverages',
+            tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'masalachai', 'traditionaltea', 'bombaychai'],
+            size: 'Paper Pouch: 50gms',
+            variants: {
+              sizes: [
+                { name: 'Paper Pouch', value: '50gms', price: 350 },
+                { name: 'Golden Tin', value: '100gms', price: 600 }
+              ]
+            },
+            ingredients_benefits: {
+            'Premium Assam CTC': [
+            'Consistent taste and quality',
+            'Strong Flavor and Color',                
+            ],
+            'Cardamom': [
+            'Aids Digestion',
+            'Stimulates the secretion of digestive enzymes',
+            'Helps relieve indigestion, bloating, and gas',
+            'Freshens Breath & Improves Oral Health',
+            'Natural antimicrobial properties fight bacteria in the mouth',
+            ],
+            'Whole Ginger': [
+            'Supports Digestion',
+            'Stimulates saliva and bile production, aiding in smoother digestion',
+            'Helps relieve bloating, gas, and constipation',
+            ],
+            }
+          },
+          {
+            id: 'vintage-green-serenity',
+            name: 'Vintage Green Serenity',
+            description: `Green Tea With Chamomile And Peach! Blended in a small batch by a master blender just for your cup- Green tea with a fun peachy floral twist. The primary tasting notes are peachy with hints of chamomile, so fruity, floral and calming.’
+            HOW TO USE:
+            •	Brewing style :- Hot brew tastes best. This is not your typical supermarket peach tea!
+            •	Time:- Any time of the day. It’s quite fragrant and calming.
+            •	USP:- This tea is one of our best sellers. It’s a natural pain reliever and has a super calming effect due to the sweet smell of peach and calmness of Chamomile.`,
+            price: 350,
+            image: '/images/vintagegreenserenity/IMG_1.png',
+            images: ['/images/vintagegreenserenity/IMG_1.png',
+              '/images/vintagegreenserenity/IMG_2.png',
+              '/images/vintagegreenserenity/IMG_3.png'],
+            category: 'Healthier Beverages',
+            tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'greenpeachtea', 'greentea', 'calmingchai'],
+            size: 'Paper Pouch: 50gms',
+            variants: {
+              sizes: [
+                { name: 'Paper Pouch', value: '50gms', price: 350 },
+                { name: 'Golden Tin', value: '100gms', price: 600 }
+              ]
+            },
+            ingredients_benefits: {
+            'Green Tea Leaves': [
+            'Rich in Antioxidants (Catechins)',
+            'Especially high in EGCG (epigallocatechin gallate) — a powerful antioxidant',
+            'Fights free radicals, reducing oxidative stress and aging',
+            'Boosts Brain Function',
+            'Contains caffeine in moderate amounts — improves alertness and focus without the jitters',
+            'Contains L-theanine, which promotes relaxation and improves cognitive performance',
+            ],
+            'Peach Extract': [
+            'Rich in Antioxidants',
+            'Contains vitamin C, polyphenols, and carotenoids that combat oxidative stress',
+            'Helps reduce cell damage, potentially lowering the risk of chronic diseases',
+            'Supports Skin Health (From Within)',
+            'Promotes collagen production thanks to its vitamin C content',
+            'May improve skin elasticity and reduce signs of aging',
+            ]
+            }
+          },
+          {
+            id: 'divine-moroccan-mint',
+            name: 'Divine Moroccan Mint',
+            description: `Green Tea For A Youthful Shine! Small Batch Master Blended Tea to Refresh your Mind, Body and Soul. Long-term usage is encouraged to prolong skin elasticity. Can be had at any time of the day to excite your senses. The primary tasting notes are minty and refreshing.’
+            HOW TO USE:
+            •	Brewing style- Hot brew tastes best. Cold brews can be experimented.
+            •	Time- After Dinners and a symbol of Moroccan hospitality.
+            •	USP- This tea is quite popular among Indian Tea enthusiasts. Used mainly for digestion and respiratory health`,
+            price: 350,
+            image: '/images/divinemoroccanmint/IMG_1.png',
+            images: ['/images/divinemoroccanmint/IMG_1.png',
+              '/images/divinemoroccanmint/IMG_2.png',
+              '/images/divinemoroccanmint/IMG_3.png'],
+            category: 'Healthier Beverages',
+            tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'divinetea', 'moroccanmint', 'minttea'],
+            size: 'Paper Pouch: 50gms',
+            variants: {
+              sizes: [
+                { name: 'Paper Pouch', value: '50gms', price: 350 },
+                { name: 'Golden Tin', value: '100gms', price: 600 }
+              ]
+            },
+            ingredients_benefits: {
+            'Green Tea Leaves': [
+            'Rich in Antioxidants (Catechins)',
+            'Especially high in EGCG (epigallocatechin gallate) — a powerful antioxidant',
+            'Fights free radicals, reducing oxidative stress and aging',
+            'Boosts Brain Function',
+            'Contains caffeine in moderate amounts — improves alertness and focus without the jitters',
+            'Contains L-theanine, which promotes relaxation and improves cognitive performance',
+            ],
+            'Pure Mint': [
+            'Aids Digestion',
+            'Stimulates digestive enzymes and bile flow',
+            'Freshens Breath',
+            'Natural antibacterial properties reduce bad breath',
+            'Relieves Respiratory Issues',
+            'Acts as a natural decongestant—menthol in mint helps open nasal passages',
+            ]
+            }
+          },
+            {
+            id: 'very-strawberry',
+            name: 'Very Strawberry',
+            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day. Winters, sip it warm! Summers, splash in ice! Also, makes a great cocktail/mocktail base! The primary tasting notes are sweet, tarty and refreshing.’
+            HOW TO USE:
+            •	Brewing style- Hot and cold brews.
+            •	Time- There is no time limit for a good tea mood 😄☕🍹 
+            •	USP- Experimental cocktail base! Great for new tea enthusiasts!`,
+            price: 350,
+            image: '/images/verystrawberry/IMG_1.png',
+            images: ['/images/verystrawberry/IMG_1.png',
+              '/images/verystrawberry/IMG_2.png',
+              '/images/verystrawberry/IMG_3.png'],
+            category: 'Healthier Beverages',
+            tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'verystrawberry', 'strawberrytea'],
+            size: 'Paper Pouch: 50gms',
+            variants: {
+              sizes: [
+                { name: 'Paper Pouch', value: '50gms', price: 350 },
+                { name: 'Golden Tin', value: '100gms', price: 600 }
+              ]
+            },
+            ingredients_benefits: {
+            'Black Tea Leaves': [
+            'Rich in Antioxidants',
+            'Contains theaflavins and thearubigins, unique to black tea',
+            'Helps protect cells from damage caused by free radicals',
+            'Supports Heart Health',
+            'Regular consumption may',
+            'Reduce LDL (bad) cholesterol',
+            'Lower triglyceride levels',
+            ],
+            'Strawberry Bits': [
+            'Rich in Antioxidants',
+            'Contain vitamin C, ellagic acid, and anthocyanins',
+            'Help fight free radicals and reduce oxidative stress, which contributes to aging and disease',
+            'Boosts Immune System',
+            'High vitamin C content supports immune function',
+            'Helps fight off colds, infections, and inflammation',
+            ],
+            'Strawberry Extract': [],
+            'Mandarin Roses': [],
+            }
+          },
+            
+            {
+            id: 'hinty-minty-mango',
+            name: 'Hinty Minty Mango',
+            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day- During winters, sip it warm! During summers, splash in ice!  Also makes a great cocktail base! Try fun twists and thank us later. The prominent tasting notes are mango and minty’
+            HOW TO USE:
+            •	Brewing style- Hot and cold brews.
+            •	Time- There is no time limit for a good tea mood 😄☕🍹 
+            •	USP- Experimental cocktail base! Great for new tea enthusiasts!`,
+            price: 350,
+            image: '/images/hintymintymango/IMG_1.png',
+            images: ['/images/hintymintymango/IMG_1.png',
+              '/images/hintymintymango/IMG_2.png',
+              '/images/hintymintymango/IMG_3.png',
+              '/images/hintymintymango/IMG_4.png'],
+            category: 'Healthier Beverages',
+            tags: ['madeinindia', 'healthier', 'healthiertea', 'authentictea', 'noadditivetea', 'madeinindia', 'makeinindia', 'nopreservatives', 'noadditives', 'hintymintymango', 'mintymango'],
+            size: 'Paper Pouch: 50gms',
+            variants: {
+              sizes: [
+                { name: 'Paper Pouch', value: '50gms', price: 350 },
+                { name: 'Golden Tin', value: '100gms', price: 600 }
+              ]
+            },
+            ingredients_benefits: {
+            'Black Tea Leaves': [
+            'Rich in Antioxidants',
+            'Contains theaflavins and thearubigins, unique to black tea',
+            'Helps protect cells from damage caused by free radicals',
+            'Supports Heart Health',
+            'Regular consumption may',
+            'Reduce LDL (bad) cholesterol',
+            'Lower triglyceride levels',
+            ],
+            'Mango Bits': [
+            'Rich in Vitamins',
+            'Vitamin C: Supports immune health, helps absorb iron, and promotes healthy skin',
+            'Vitamin A: Essential for eye health, skin health, and immune function',
+            'High in Antioxidants',
+            'Mangoes contain beta-carotene, mangiferin, and other polyphenols, which help protect the body from oxidative stress and inflammation',
+            ],
+            'Mango Extract': [],
+            'Marigold': [],
+            'Lemon Grass': [],
+            }
+          }
+            
+            
     ];
   
     export default products; 
