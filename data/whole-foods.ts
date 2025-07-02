@@ -4528,9 +4528,303 @@ export const products: Product[] = [
             'Marigold': [],
             'Lemon Grass': [],
             }
-          }
+          },
+          {
+            id: 'millet-museli',
+            name: 'Millet Muesli',
+            description: `Millet Muesli with Almond & Honey- Preservative-Free & Gluten-Free- High Protein, Fiber-Rich Breakfast- No Refined Sugar- No Palm Oil- Enriched with Ragi, Quinoa, Barnyard & Almonds' 
+            • HOW TO USE:
+            'Versatile & Easy to Enjoy – Enjoy it with cold milk, warm milk, yogurt, or as a crunchy topping on smoothie bowls.`,
+            price: 329,
+            image: '/images/milletmuesli/IMG_1.png',
+            images: ['/images/milletmuesli/IMG_1.png',
+              '/images/milletmuesli/IMG_2.png',
+              '/images/milletmuesli/IMG_3.png',
+              '/images/milletmuesli/IMG_4.png',
+              '/images/milletmuesli/IMG_5.png',
+              '/images/milletmuesli/IMG_6.png',
+              '/images/milletmuesli/IMG_7.png'],
+            category: 'Healthy Breakfast',
+            tags: ['madeinindia', 'healthier', 'healthiermuesli', 'authenticbreakfast', 'grainmuesli', 'nochemicalfood', 'preservativefreemuesli', 'makeinindia', 'nopreservatives', 'healthierbreakfast', 'betterbreakfast', 'milletbreakfast'],
+            size: 'Pack of 1: 350gms',
+            variants: {
+              sizes: [
+                { name: 'Pack of 1', value: '350gms', price: 329 },
+                { name: 'Pack of 2', value: '700gms', price: 549 }
+              ]
+            },
+            ingredients_benefits: {
+            'Millets (Ragi flakes, Barnyard flakes, Quinoa flakes)': [
+            'Rich in Nutrients',
+            'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+            'Gluten-Free',
+            'Safe for people with celiac disease or gluten intolerance.',
+            'Supports Digestive Health',
+            'High fiber content helps in preventing constipation and promoting a healthy gut microbiome'
+            ],
+            'Corn Flakes': [],
+            'Jaggery': [],
+            'Almond': [],
+            'Honey': [],
+            'Rice Bran Oil': []
+            }
+          },
             
+          {
+            id: 'millet-chocos',
+            name: 'Millet Chocos',
+            description: `A wholesome and nutritious breakfast option crafted with the goodness of four millets – jowar, barnyard, little millet, and foxtail millet- Millet Chocos- Made with 4 Super Millets, Multigrain- Healthy Breakfast Cereal- High in Fiber, Calcium & Protein- No Maida, No Palm Oil. 
+            •	A healthier alternative to regular cereals, these chocos are rich in dietary fiber, promoting gut health and better digestion.
+            •	It also provides an excellent source of calcium, protein, vitamins, and minerals essential for a balanced diet.
+            •	Free from artificial colours, preservatives, palm oil, and maida, it is made with natural ingredients like whole wheat, corn, unrefined sugar, and cocoa powder for a delightful chocolate flavor.
+            Ideal for health-conscious families, these chocos are the perfect way to start the day on a nutritious note!
+            • HOW TO USE:
+            Used generally for morning breakfast! Although, its highly subjective!`,
+            price: 250,
+            image: '/images/milletchocos/IMG_1.png',
+            images: ['/images/milletchocos/IMG_1.png',
+              '/images/milletchocos/IMG_2.png',
+              '/images/milletchocos/IMG_3.png',
+              '/images/milletchocos/IMG_4.png',
+              '/images/milletchocos/IMG_5.png',
+              '/images/milletchocos/IMG_6.png',
+              '/images/milletchocos/IMG_7.png',
+              '/images/milletchocos/IMG_8.png',
+              '/images/milletchocos/IMG_9.png'],
+            category: 'Healthy Breakfast',
+            tags: ['madeinindia', 'healthier', 'healthierchocos', 'authenticchocos', 'nochemicalbreakfast', 'preservativefreechocos', 'makeinindia', 'nopreservatives', 'chocoholicchai', 'Chocos', 'breakfastforkids'],
+            size: 'Pack of 1: 300gms', 
+            variants: {
+              sizes: [
+                { name: 'Pack of 1', value: '300gms', price: 250 },
+                { name: 'Pack of 2', value: '700gms', price: 449 }
+              ]
+            },
+            ingredients_benefits: {
+            'Millets (Jowar, Barnyard, Little millet, Foxtail millet)': [
+            'Rich in Nutrients',
+            'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+            'Gluten-Free',
+            'Safe for people with celiac disease or gluten intolerance.',
+            'Supports Digestive Health',
+            'High fiber content helps in preventing constipation and promoting a healthy gut microbiome'
+            ],
+            'Whole wheat atta': [],
+            'Corn': [],
+            'Rice': [],
+            'Unrefined sugar': [],
+            'Coco powder': [],
+            'Rice bran oil': [],
+            'Vanilla powder': [],
+            'Iodised salt': []
+            }
+          },
+          {
+              id: 'milky-mix-chocolate',
+              name: 'Milky Mix (Chocolate)',
+              description: `Milky Mix – Chocolate Flavour- With Ragi, Jowar & Barnyard Millet- High Calcium and Protein- No Corn Flour, No Artificial Colours or Preservatives- Nutri Milk Additive for All Ages ‘
+              HOW TO USE:
+              Brewing style: Hot brews (generally!)`,
+              price: 299,
+              image: '/images/milkpremix/IMG_1.png',
+              images: ['/images/milkpremix/IMG_1.png',
+                '/images/milkpremix/IMG_2.png',
+                '/images/milkpremix/IMG_3.png',
+                '/images/milkpremix/IMG_4.png',
+                '/images/milkpremix/IMG_5.png',
+                '/images/milkpremix/IMG_6.png',
+                '/images/milkpremix/IMG_7.png',
+                '/images/milkpremix/IMG_8.png'
+              ],
+              category: 'Healthier Premixes',
+              tags: ['madeinindia', 'healthier', 'healthiermilk', 'authenticmilkmix', 'milletchocolateflavourmilkymix', 'nochemicalmilkydrink', 'preservativefreemilkmix', 'makeinindia', 'chocolatemilkymix', 'milkymix',  'milkymixforkids'],
+              size: 'Pack of 1: 300gms',
+              variants: {
+                sizes: [
+                  { name: 'Pack of 1', value: '300gms', price: 299 },
+                  { name: 'Pack of 2', value: '600gms', price: 549 }
+                ]
+              },
+              ingredients_benefits: {
+              'Millets (Jowar, Ragi, Barnyard)': [
+              'Rich in Nutrients',
+              'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+              'Gluten-Free',
+              'Safe for people with celiac disease or gluten intolerance.',
+              'Supports Digestive Health',
+              'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+              ],
+              'Unrefined sugar': [],
+              'Jaggery': [],
+              'Dates powder': [],
+              'Coco powder': [],
+              'Milk solids': [],
+              'Iodised Salt': []
+            }
+          },
+            {
+              id: 'millet-noodles',
+              name: 'Millet Noodles',
+              description: `Millet Noodles – Perfect Balance of Flavour, Fiber, and Protein for Nutritious, Low- Calorie Meals, No Maida, No MSG, No Palm Oil.
+              •	Guilt-free food: No maida, Non-fried, No MSG, and No Preservatives
+              •	Nutrient Rich: Packed with the goodness of jowar, foxtail millet, little millet, and whole wheat flour, it is rich in Iron, Calcium, and Protein.  It is also an excellent source of several vitamins and minerals. 
+              •	High in Fiber: Packed with dietary fiber from the millets, these noodles aid in digestion, promote a feeling of fullness, and help maintain healthy blood sugar levels.
+              •	Quick and Easy to Prepare: These noodles cook quickly and can be paired with a variety of vegetables, sauces, and spices, offering versatility for quick, healthy meals.
+              HOW TO USE:
+              Quick and Easy to Prepare: These noodles cook quickly and can be paired with a variety of vegetables, sauces, and spices, offering versatility for quick, healthy meals.`,
+              price: 349,
+              image: '/images/milletnoodles/IMG_1.png',
+              images: ['/images/milletnoodles/IMG_1.png',
+                '/images/milletnoodles/IMG_2.png',
+                '/images/milletnoodles/IMG_3.png',
+                '/images/milletnoodles/IMG_4.png',
+                '/images/milletnoodles/IMG_5.png',
+                '/images/milletnoodles/IMG_6.png',
+                '/images/milletnoodles/IMG_7.png',
+                '/images/milletnoodles/IMG_8.png'],
+              category: 'Healthy Bites',
+              tags: ['madeinindia', 'healthier', 'healthiernoodles', 'authenticnoodles', 'milletnoodles', 'nochemicalnoodles', 'preservativefreenoodles', 'makeinindia', 'nopreservatives', 'nomaidanoodles', 'nonfriednoodles'],
+              size: 'Pack of 3: 480gms', 
+              variants: {
+                sizes: [
+                  { name: 'Pack of 3', value: '480gms', price: 349 },
+                  { name: 'Pack of 6', value: '960gms', price: 649 }
+                ]
+              },
+              ingredients_benefits: {
+              'Multi millet flour (Jowar, Foxtail millet, Little millet)': [
+              'Rich in Nutrients',
+              'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+              'Gluten-Free',
+              'Safe for people with celiac disease or gluten intolerance.',
+              'Supports Digestive Health',
+              'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+              ],
+              'Whole wheat flour': [],
+              'Cluster bean powder': [],
+              'Iodised salt': []
+            }
+          },
+          {
+            id: 'millet-pasta',
+            name: 'Millet Pasta',
+            description: `Millet Pasta – Healthy, Guilt-Free Pasta, High in Protein, Rich in Iron, Calcium, No Maida, No MSG, No Palm Oil, Preservative-Free, Ideal for All Ages, High in Fiber.’
+            HOW TO USE:
+            Enjoy this wholesome pasta with sauces and seasonings of your choice!`,
+            price: 349,
+            image: '/images/milletpasta/IMG_1.png',
+            images: ['/images/milletpasta/IMG_1.png',
+              '/images/milletpasta/IMG_2.png',
+              '/images/milletpasta/IMG_3.png',
+              '/images/milletpasta/IMG_4.png',
+              '/images/milletpasta/IMG_5.png',
+              '/images/milletpasta/IMG_6.png',
+              '/images/milletpasta/IMG_7.png'],
+            category: 'Healthy Bites',
+            tags: ['madeinindia', 'healthier', 'healthierpasta', 'authenticpasta', 'milletpasta', 'nochemicalpasta', 'preservativefreepasta', 'makeinindia', 'nopreservatives', 'pasta', 'betterpasta', 'fibrouspasta'],
+            size: 'Pack of 2: 500gms',
+            variants: {
+              sizes: [
+                { name: 'Pack of 2', value: '500gms', price: 349 },
+                { name: 'Pack of 4', value: '1000gms', price: 649 }
+              ]
+            },
+            ingredients_benefits: {
+            'Foxtail millet flour': [
+            'Rich in Nutrients',
+            'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+            'Gluten-Free',
+            'Safe for people with celiac disease or gluten intolerance.',
+            'Supports Digestive Health',
+            'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+            ],
+            'Whole wheat flour': [],
+            'Cluster bean powder': [],
+            'Iodised salt': []
+            }
+          },  
+          {
+            id: 'millet-idli',
+            name: 'Millet Idli',
+            description: `Low Glycemic Index Food, High Protein, Fiber-Rich, Healthy & Yummy Alternative to Rice or Rava Idli, Easy-to-Cook!
+            •	Millet Idli mix is made with the Power of 3 Super Millets – ragi, jowar, and barnyard millet with black gram split and flattened rice, delivering a high-fiber, protein-rich alternative to traditional idli mixes.
+            •	100% Gluten-Free & Maida-Free – Thoughtfully crafted for those seeking a clean, gut-friendly option, our millet idli mix contains no rava or maida, making it light, easily digestible, and suitable for gluten-sensitive diets.
+            •	No Preservatives or Additives – Made with natural ingredients and free from artificial flavours, preservatives, and MSG, offering a clean and wholesome meal option for both kids and adults.
+            •	No Palm Oil – Unlike many instant Idli mixes, this Millet Idli Mix is completely free from palm oil, helping retain essential nutrients and making it a healthier choice.
+            •	High in Protein & Fiber – Enriched with nutrient-dense millets and black gram, our idli mix promotes healthy digestion, boosts metabolism, and provides long-lasting energy.
+            •	Perfect for Kids & Adults – An ideal, nutritious breakfast or meal option for growing children, busy professionals, and health-conscious individuals alike.`,
+            price: 349,
+            image: '/images/milletidli/IMG_1.png',
+            images: ['/images/milletidli/IMG_1.png',
+              '/images/milletidli/IMG_2.png',
+              '/images/milletidli/IMG_3.png',
+              '/images/milletidli/IMG_4.png',
+              '/images/milletidli/IMG_5.png',
+              '/images/milletidli/IMG_6.png'],
+            category: 'Healthier Premixes',
+            tags: ['madeinindia', 'healthier', 'healthieridlimix', 'authenticidlimix', 'milletidlis', 'nochemicalidlipremix', 'preservativefreeidlipremix', 'makeinindia', 'nopreservatives', 'idlipremix', 'betteridlis', 'idlis', 'milletidlipremix'],
+            size: 'Pack of 2: 800gms',
+            variants: {
+              sizes: [
+                { name: 'Pack of 2', value: '800gms', price: 349 },
+                { name: 'Pack of 4', value: '1600gms', price: 649 }
+              ]
+            },
+            ingredients_benefits: {
+            'Millet flour': [
+            'Rich in Nutrients',
+            'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+            'Gluten-Free',
+            'Safe for people with celiac disease or gluten intolerance.',
+            'Supports Digestive Health',
+            'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+            ],
+            'Sorghum Semolina': [],
+            'Black Gram Split': [],
+            'Flattened Rice': [],
+            'Fenugreek Seeds': []
+            }
+          },
+          {
+            id: 'millet-poha',
+            name: 'Millet Poha',
+            description: `Gluten Free Breakfast, High-Protein, Fiber-Rich & Antioxidant-Packed, Healthy Low-Glycemic Alternative to White Rice Poha, Easy to Cook Millet Poha.
+            •	Multigrain Poha is made with 4 Super Grains – A unique blend of pearl millet flakes, finger millet (ragi) flakes, foxtail millet flakes, and red rice flakes, offering a high-fiber, protein-rich, and nutritious alternative to regular poha.
+            •	Gluten-Free – Specially crafted for those looking for a gluten-free breakfast option, making it a gut-friendly and easily digestible meal option.
+            •	Rich in Protein & Fiber – Packed with the goodness of millets and red rice, our millet poha supports better digestion, improved metabolism, and sustained energy levels throughout the day.
+            •	Light & Easy to Digest – The perfect balance of complex carbs and essential nutrients makes it an ideal choice for kids, adults, and fitness enthusiasts.
+            •	No Preservatives & No Palm Oil – 100% natural, with no artificial flavours, no preservatives, and no palm oil, ensuring a pure and clean breakfast choice.
+            •	Light & Easy to Digest – The perfect balance of complex carbs and essential nutrients makes it an ideal choice for kids, adults, and fitness enthusiasts.
+            •	Versatile & Delicious – Use it to make classic poha, chivda (snack mix), millet upma, or even energy-packed porridge for a wholesome start to the day.`,
+            price: 329,
+            image: '/images/milletpoha/IMG_1.png',
+            images: ['/images/milletpoha/IMG_1.png',
+              '/images/milletpoha/IMG_2.png',
+              '/images/milletpoha/IMG_3.png',
+              '/images/milletpoha/IMG_4.png',
+              '/images/milletpoha/IMG_5.png',
+              '/images/milletpoha/IMG_6.png',
+              '/images/milletpoha/IMG_7.png',
+              '/images/milletpoha/IMG_8.png'],
+            category: 'Healthier Breakfast',
+            tags: ['madeinindia', 'healthier', 'healthierpoha', 'authenticpoha', 'milletpoha', 'nochemicalpoha', 'preservativefreepoha', 'makeinindia', 'nopreservatives', 'Fiberrichpoha', 'betterpoha', 'poha', 'milletpoha'],
+            ingredients_benefits: {
+            'Flakes of Foxtail millet': [
+            'Rich in Protein: Provides a good plant-based protein source, supporting muscle health and repair.',
+            'High in Fiber: Aids digestion, prevents constipation, and promotes a feeling of fullness, which can help with weight management.',
+            ],
+            'Pearl millet': [
+            'Rich in Protein',
+            'Contains 10–12% protein, supporting muscle growth and repair.',
+            'High in Dietary Fiber',
+            'Aids digestion, reduces hunger, and helps manage weight.',
+            ],
+            'Finger Millet': [],
+            'Red rice': []
+            }
+          },
             
+          
     ];
   
     export default products; 
