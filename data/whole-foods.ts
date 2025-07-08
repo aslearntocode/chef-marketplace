@@ -4823,7 +4823,51 @@ export const products: Product[] = [
             'Red rice': []
             }
           },
+          {
+            id: 'premium-kashmiri-saffron',
+            name: 'Premium Kashmiri Saffron',
+            description: `Experience the rich aroma, deep red strands, and unmatched purity of Premium Kashmiri Saffron – handpicked and sun-dried to retain its potent flavor and vibrant color. 
+            100% natural and unadulterated. The Saffron is handpicked from the pristine fields of Pampore, known globally for producing the finest quality saffron.’
+            HOW TO USE:
+            •	Soak 5–7 strands in warm water or milk for 20–30 minutes.
+            •	Add the infusion to desserts, biryanis, teas, or use in skincare.
+            •	For skincare, mix soaked saffron with raw milk or honey and apply as a face pack.`,
+            price: 499,
+            image: '/images/premiumkashmirisaffron/IMG_1.png',
+            images: ['/images/saffron/IMG_1.png',
+              '/images/saffron/IMG_2.jpg',
+              '/images/saffron/IMG_3.jpg',
+              '/images/saffron/IMG_4.jpg',
+              '/images/saffron/Nutrition Facts.png'],
+            category: 'Spice Blends',
+            tags: ['madeinindia', 'healthier', 'premiumsaffron', 'kashmirisaffron', 'saffron', 'purestsaffron', 'preservativefreesaffron', 'makeinindia', 'nopreservativessaffron', 'unadulteratedsaffron', 'pamporesaffron', 'healthiestsaffron', 'longstrandsaffron', 'flavourfulsaffron'],
+            size: '1gm',
+            variants: {
+              sizes: [
+                { name: '1gm', value: '1gm', price: 499 },
+                { name: '2gm', value: '2gm', price: 999 },
+                { name: '3gm', value: '3gm', price: 1299 },
+                { name: '5gm', value: '5gm', price: 1999 },
+                { name: '10gm', value: '10gm', price: 3950 }
+              ]
+            },
+            ingredients_benefits: {
+            'Pure Saffron': [
+            'Powerful Antioxidant Properties',
+            'Saffron is rich in antioxidants such as Crocin, Crocetin, Kaempferol etc. These compounds help:',
+            'Neutralize harmful free radicals',
+            'Reduce oxidative stress',
+            'Support cellular health',
             
+            'Heart Health',
+            'Helps reduce blood pressure and cholesterol',
+            'Improves arterial function and blood circulation',
+            
+            'Anti-Inflammatory and Pain Relief',
+            'Used traditionally to alleviate menstrual pain, PMS symptoms, and inflammation-related conditions',
+            ]
+          }
+        },
           
     ];
   
