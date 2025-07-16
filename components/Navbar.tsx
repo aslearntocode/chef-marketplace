@@ -53,7 +53,7 @@ export default function Navbar() {
     { href: '/whole-foods/categories/healthy-bites?q=khakhra', label: 'Protein Rich Khakhra' },
     { href: '/whole-foods/categories/spice-blends', label: 'Pure Indian Masalas' },
     { href: '/whole-foods/millet-cookies-multiple-flavors', label: 'Millet Cookies' },
-    { href: '/whole-foods/57', label: 'Cashews' },
+    { href: '/whole-foods/organic-fresh-farm-cashews', label: 'Cashews' },
     { href: '/whole-foods/categories/healthy-bites?q=chips', label: 'Healthy Chips' },
   ];
 
