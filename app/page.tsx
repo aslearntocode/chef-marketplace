@@ -102,7 +102,7 @@ export default function Home() {
       title: "Discover Refreshing Healthy Drinks",
       description: "Experience the taste of homemade goodness delivered to your doorstep",
       buttonText: "Explore Now",
-      link: "/whole-foods/categories/drinks"
+      link: "/whole-foods/categories/healthier-beverages"
     },
     {
       title: "Healthy Bites!",
