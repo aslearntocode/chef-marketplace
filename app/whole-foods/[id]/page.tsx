@@ -259,7 +259,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </div>
                 {/* Display size information */}
                 <p className="text-sm text-gray-600 mt-2">
-                  {product.size ? `Size: ${product.size}` : ''}
+                  {selectedSize ? `Size: ${selectedSize.name}` : (product.size ? `Size: ${product.size}` : '')}
                 </p>
               </div>
 
