@@ -250,12 +250,69 @@ export default function Home() {
                 <p className="text-lg md:text-xl text-[#8B4513] mb-8">
                   Our products contain no preservatives, no artificial chemicals and are made of just natural and healthier ingredients
                 </p>
-                <Link
-                  href="/whole-foods/"
-                  className="inline-block bg-[#8B4513] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#6B3410] transition-colors"
-                >
-                  Shop Now
-                </Link>
+                {/* Category Buttons Grid */}
+                <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                  <Link
+                    href="/whole-foods/categories/healthy-treats"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthier Treats
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/drinks"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthier Beverages
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/healthy-bites"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthy Bites
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/pickles"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Pickles & Condiments
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/healthy-breakfast"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthier Breakfast
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/spice-blends"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Spice Blends
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/nuts-and-seeds"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Nuts & Seeds
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/healthy-cakes"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthier Cakes
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/healthier-premixes"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Healthier Premixes
+                  </Link>
+                  <Link
+                    href="/whole-foods/categories/sauces-and-dressings"
+                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                  >
+                    Sauces & Dressings
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
