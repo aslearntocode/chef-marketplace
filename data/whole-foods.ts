@@ -4318,7 +4318,7 @@ export const products: Product[] = [
           {
             id: 'bombay-royal-chai',
             name: 'Bombay Royal Chai',
-            description: `A luxury Indian Chai addition to your kitchen shelf- From the hills of Assam to your cup- Garden to cup experience of Royal chai is a highly boiled mixture of milk and water loaded with Tea leaves, Elaichi, Adrak, Jaiphal and many other spices. The prominent tasting notes are that of Cardamom and Ginger’
+            description: `A luxury Indian Chai addition to your kitchen shelf- From the hills of Assam to your cup- Garden to cup experience of Royal chai is a highly boiled mixture of milk and water loaded with Tea leaves, Elaichi, Adrak, Jaiphal and many other spices. The prominent tasting notes are that of Cardamom and Ginger'
             HOW TO USE:
             •	Brewing style:- Indian home boiling style
             •	Time :- There is no time limit for a good tea mood 🥛 🌹☕
@@ -4360,7 +4360,7 @@ export const products: Product[] = [
           {
             id: 'vintage-green-serenity',
             name: 'Vintage Green Serenity',
-            description: `Green Tea With Chamomile And Peach! Blended in a small batch by a master blender just for your cup- Green tea with a fun peachy floral twist. The primary tasting notes are peachy with hints of chamomile, so fruity, floral and calming.’
+            description: `Green Tea With Chamomile And Peach! Blended in a small batch by a master blender just for your cup- Green tea with a fun peachy floral twist. The primary tasting notes are peachy with hints of chamomile, so fruity, floral and calming.
             HOW TO USE:
             •	Brewing style :- Hot brew tastes best. This is not your typical supermarket peach tea!
             •	Time:- Any time of the day. It’s quite fragrant and calming.
@@ -4401,7 +4401,7 @@ export const products: Product[] = [
           {
             id: 'divine-moroccan-mint',
             name: 'Divine Moroccan Mint',
-            description: `Green Tea For A Youthful Shine! Small Batch Master Blended Tea to Refresh your Mind, Body and Soul. Long-term usage is encouraged to prolong skin elasticity. Can be had at any time of the day to excite your senses. The primary tasting notes are minty and refreshing.’
+            description: `Green Tea For A Youthful Shine! Small Batch Master Blended Tea to Refresh your Mind, Body and Soul. Long-term usage is encouraged to prolong skin elasticity. Can be had at any time of the day to excite your senses. The primary tasting notes are minty and refreshing.
             HOW TO USE:
             •	Brewing style- Hot brew tastes best. Cold brews can be experimented.
             •	Time- After Dinners and a symbol of Moroccan hospitality.
@@ -4442,7 +4442,7 @@ export const products: Product[] = [
             {
             id: 'very-strawberry',
             name: 'Very Strawberry',
-            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day. Winters, sip it warm! Summers, splash in ice! Also, makes a great cocktail/mocktail base! The primary tasting notes are sweet, tarty and refreshing.’
+            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day. Winters, sip it warm! Summers, splash in ice! Also, makes a great cocktail/mocktail base! The primary tasting notes are sweet, tarty and refreshing.
             HOW TO USE:
             •	Brewing style- Hot and cold brews.
             •	Time- There is no time limit for a good tea mood 😄☕🍹 
@@ -4487,7 +4487,7 @@ export const products: Product[] = [
             {
             id: 'hinty-minty-mango',
             name: 'Hinty Minty Mango',
-            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day- During winters, sip it warm! During summers, splash in ice!  Also makes a great cocktail base! Try fun twists and thank us later. The prominent tasting notes are mango and minty’
+            description: `Hot and Cold Brew! A small batch master blended Tea. This batch was blended just for your cup for maximum flavour retention. This Tea is a fun delight and can be had at any time of the day- During winters, sip it warm! During summers, splash in ice!  Also makes a great cocktail base! Try fun twists and thank us later. The prominent tasting notes are mango and minty.
             HOW TO USE:
             •	Brewing style- Hot and cold brews.
             •	Time- There is no time limit for a good tea mood 😄☕🍹 
@@ -4622,7 +4622,7 @@ export const products: Product[] = [
           {
               id: 'milky-mix-chocolate',
               name: 'Milky Mix (Chocolate)',
-              description: `Milky Mix – Chocolate Flavour- With Ragi, Jowar & Barnyard Millet- High Calcium and Protein- No Corn Flour, No Artificial Colours or Preservatives- Nutri Milk Additive for All Ages ‘
+              description: `Milky Mix – Chocolate Flavour- With Ragi, Jowar & Barnyard Millet- High Calcium and Protein- No Corn Flour, No Artificial Colours or Preservatives- Nutri Milk Additive for All Ages '
               HOW TO USE:
               Brewing style: Hot brews (generally!)`,
               price: 299,
@@ -4827,11 +4827,11 @@ export const products: Product[] = [
             id: 'premium-kashmiri-saffron',
             name: 'Premium Kashmiri Saffron',
             description: `Experience the rich aroma, deep red strands, and unmatched purity of Premium Kashmiri Saffron – handpicked and sun-dried to retain its potent flavor and vibrant color. 
-            100% natural and unadulterated. The Saffron is handpicked from the pristine fields of Pampore, known globally for producing the finest quality saffron.’
+            100% natural and unadulterated. The Saffron is handpicked from the pristine fields of Pampore, known globally for producing the finest quality saffron.
             HOW TO USE:
-            •	Soak 5–7 strands in warm water or milk for 20–30 minutes.
-            •	Add the infusion to desserts, biryanis, teas, or use in skincare.
-            •	For skincare, mix soaked saffron with raw milk or honey and apply as a face pack.`,
+            •	Soak 5–7 strands in warm water or milk for 20–30 minutes
+            •	Add the infusion to desserts, biryanis, teas, or use in skincare
+            •	For skincare, mix soaked saffron with raw milk or honey and apply as a face pack`, 
             price: 499,
             image: '/images/premiumkashmirisaffron/IMG_1.png',
             images: ['/images/saffron/IMG_1.png',
@@ -4868,7 +4868,227 @@ export const products: Product[] = [
             ]
           }
         },
-          
+        {
+          id: 'garlic-pickle',
+          name: 'Garlic Pickle',
+          description: `Homemade, sun-dried, traditional, tangy, spicy, chatpata, aromatic, local, genuine, and safe ingredients, no added preservatives, rich taste!
+          Tangy, Spicy & Bursting with Flavour- Bring home the bold, chatpata punch of our homemade Garlic Pickle, crafted using a traditional recipe and genuine, local ingredients. 
+          Each pod is carefully sun-dried and blended with a mix of robust spices to deliver a tangy, spicy flavour and a rich taste that lingers. 
+          This pickle is known for its strong aroma and authentic, fiery flavour that perfectly complements every Indian meal. Made in small batches with safe, clean ingredients and no added preservatives, it’s a wholesome condiment you can trust. Whether paired with hot parathas or a simple dal-chawal, our garlic pickle adds a burst of tradition and spice to every bite.
+          Real flavour. No shortcuts. Just pure, local goodness.`,
+          price: 425,
+          image: '/images/pics16072025/Garlic Pickle.jpeg',
+          images: ['/images/pics16072025/Garlic Pickle.jpeg'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'garlicpickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'chatpatapickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'tangypickle', 'indianpickle'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 425 },
+              { name: '1kg', value: '1kg', price: 849 }
+            ]
+          },
+          ingredients_benefits: {
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Garlic Pods': [
+          'Boosts Immunity- Contains allicin, a compound with powerful antibacterial, antiviral, and antifungal properties. Regular intake can help fight off colds, flu, and infections.',
+          ],
+          'Black, Yellow, Brown Mustard Seeds': [],
+          'Indian Spices (Fennel Seeds, Oregano, Cumin Seeds, Asafoetida)': [],
+          }
+        },
+        {
+          id: 'bharwa-red-chilli-pickle',
+          name: 'Bharwa Red Chilli Pickle',
+          description: `Just Like It’s Made Back Home! This isn’t your everyday pickle; it’s the kind your dadi used to make- slow and steady, 
+          under the sun and with a whole lot of love. Whole red chillies, sun-dried and stuffed with hand-ground spices, soaked in oil just right. The kind of taste that hits you with a kick, then wraps you in a warmth. There’s no rush here, no factory shortcuts. Just real ingredients, time-honoured methods, and that unmistakable homemade touch. It smells like home and tastes like tradition; bold, tangy, and fiery enough to make you crave for more. Pair it with parathas, dal-chawal, or whatever’s on your plate as it’ll take you straight back to the kitchen where stories were told over slow-cooked meals. 
+          Not just a pickle, this is a memory in a jar.`,
+          price: 299,
+          image: '/images/pics16072025/Bharwa Red Chili Pickle.png',
+          images: ['/images/pics16072025/Bharwa Red Chili Pickle.png'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'redchillipickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'bharwapickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'chillipickle', 'indianpickle'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 299 },
+              { name: '1kg', value: '1kg', price: 599 }
+            ]
+          },
+          ingredients_benefits: {
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Whole Red Chillies': [
+          'Rich in Antioxidants- Contains capsaicin, vitamin C, carotenoids, and flavonoids—all of which help combat oxidative stress and inflammation.',
+          'Boosts Metabolism- Capsaicin increases body temperature and fat oxidation, helping in weight loss by slightly increasing calorie burn and reducing appetite.',
+          ],
+          'Yellow Mustard Seeds': [],
+          'Turmeric Powder': [],
+          'Indian Spices (Fennel Seeds, Fenugreek Seeds, Cumin Seeds, Asafoetida)': [],
+          'Iodized Salt': [],
+          'Vinegar': [],
+          }
+        },
+        {
+          id: 'aata-pinni',
+          name: 'Aata Pinni',
+          description: `A Homemade Traditional Treat! Indulge in the rich, comforting flavours of our Atta (Whole Wheat Flour) Pinni, made using an authentic, traditional recipe passed down through generations. Each batch is homemade with care, using only clean, high-quality ingredients and absolutely no palm oil or vegetable oil. Prepared in small batches to ensure freshness and attention to detail, our Pinni is a wholesome blend, which is perfectly roasted and handcrafted for that tasty, melt-in-your-mouth experience. Ideal for festive occasions, gifting, or a nourishing everyday treat- our Pinni offers both taste and goodness in every bite. A taste of tradition made the right way.`,
+          price: 749,
+          image: '/images/pics16072025/Aata Pinni.jpeg',
+          images: ['/images/pics16072025/Aata Pinni.jpeg'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierpinni', 'authenticpinni', 'aatapinni', 'nochemicalpinni', 'preservativefreepinni', 'makeinindia', 'nopreservatives', 'wholewheatflourpinni', 'betterpinni', 'homemadepinni', 'traditionalpinni', 'realpinnis', 'tastypinnis', 'indiantraditionalpinnis', 'aataladdoos', 'wholewheatflourladdoos'],
+          size: '500gms',
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 749 },
+              { name: '1kg', value: '1kg', price: 1499 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Premium Dry Fruits (Walnuts, Cashews, Almonds, Raisins)': [],
+          'Mixed Seeds (Sunflower seeds, Melon seeds, Flaxseeds)': [],
+          'Sugar': [],
+          }
+        },
+        {
+          id: 'aata-sooji-laddoos',
+          name: 'Aata & Sooji Laddoos',
+          description: `Tasty | Homemade | No Preservatives
+          Treat yourself to the authentic taste of tradition with our Aata (Whole Wheat Flour) & Suji Laddoos, handmade in small batches using only shuddh desi ingredients. These delicious laddoos are crafted with clean, homemade goodness with no preservatives, no palm oil, and no artificial flavours. Made from only the best ingredients, each laddoo is packed with nutrition and dher saara ma ka pyaar!😊 Your perfect choice for guilt-free snacking or thoughtful gifting!!`,
+          price: 749,
+          image: '/images/pics16072025/Aata and Sooji Laddoos.png',
+          images: ['/images/pics16072025/Aata and Sooji Laddoos.png'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'aataandsoojiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'wholewheatflourladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'aatasoojiladdoos', 'wholewheatflourladdoos', 'maakehaathkeladdoo', 'maakapyaar'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 749 },
+              { name: '1kg', value: '1kg', price: 1499 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Sooji': [
+          'Good Source of Energy- High in complex carbohydrates, which provide sustained energy and help keep you full longer. Often recommended for breakfast (like upma or halwa) to kickstart the day.',
+          'Rich in Iron- Contains non-heme iron, which supports red blood cell production and helps prevent anemia (especially when paired with vitamin C-rich foods).'],
+          'Premium Dry Fruits (Walnuts, Cashews, Almonds)': [],
+          'White Sesame Seeds': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'sooji-pinni',
+          name: 'Sooji Pinni',
+          description: `A Classic Homemade Treat with Pure Goodness! Relish the comforting taste of tradition with our homemade Sooji Pinni, a timeless delicacy made the way it’s meant to be—slow-roasted, rich, and full of flavour. Crafted in small batches using high-quality ingredients, this Pinni creates a melt-in-the-mouth experience. With no palm oil or preservatives, each bite offers the perfect balance of sweetness, warmth, and wholesome texture—just like the Pinnis made by moms or by grandmoms during winters. Whether you’re looking for a nourishing sweet, a festive offering, or a soulful snack with your chai, our Sooji Pinni delivers authentic taste and homemade comfort in every bite. Simple. Pure. Deliciously traditional!!`,
+          price: 749,
+          image: '/images/pics16072025/Sooji Pinni.png',
+          images: ['/images/pics16072025/Sooji Pinni.png'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'soojipinni', 'authenticpinni', 'soojipinnis', 'nochemicalpinnis', 'preservativefreepinnis', 'makeinindia', 'nopreservativespinnis', 'betterpinnis', 'homemadepinnis', 'traditionalpinnis', 'realpinnis', 'tastypinnis', 'indiantraditionalpinnis', 'maakehaathkipinni', 'maakapyaar', 'pinnis'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 749 },
+              { name: '1kg', value: '1kg', price: 1499 }
+            ]
+          },
+          ingredients_benefits: {
+          'Sooji': [
+          'Good Source of Energy- High in complex carbohydrates, which provide sustained energy and help keep you full longer. Often recommended for breakfast (like upma or halwa) to kickstart the day.',
+          'Rich in Iron- Contains non-heme iron, which supports red blood cell production and helps prevent anemia (especially when paired with vitamin C-rich foods).',
+          ],
+          'Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Premium Dry Fruits (Walnuts, Cashews, Almonds, Raisins)': [],
+          'Sugar': [],
+          }
+        },
+        {
+          id: 'aata-churma',
+          name: 'Aata Churma',
+          description: `Homemade Goodness in Every Bite! Experience the rich, traditional taste of India with our authentic Aata (Whole Wheat Flour) Churma. Prepared using a time-honoured homemade recipe, this sweet delicacy is handcrafted in small batches to ensure premium quality and freshness. Made with clean, high-quality ingredients, our Churma contains no palm oil or vegetable oil, letting the natural goodness of pure ghee and whole wheat shine through. It's the perfect balance of taste and wholesomeness, offering a nostalgic reminder of homemade treats from your childhood. Whether paired with dal baati or enjoyed on its own, our Churma brings an authentic, flavourful experience to your plate.`,
+          price: 699,
+          image: '/images/pics16072025/Aata Churma.jpeg',
+          images: ['/images/pics16072025/Aata Churma.jpeg'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'aatachurma', 'authenticchurma', 'pureaatachurma', 'nochemicalchurma', 'preservativefreechurma', 'makeinindia', 'nopreservativechurma', 'betterchurma', 'homemadechurma', 'traditionalchurma', 'realchurm', 'tastychurma', 'indiantraditionalchurma', 'maakehaathkachurma', 'maakapyaar', 'churma'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 699 },
+              { name: '1kg', value: '1kg', price: 1399 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Premium Dry Fruits (Walnuts, Cashews, Almonds)': [],
+          'Sugar': [],
+          }
+        },
+        {
+          id: 'gond-kamarkas-aata-churma',
+          name: 'Gond Kamarkas Aata Churma',
+          description: `Nourishment Rooted in Tradition! Crafted with care and guided by age-old wisdom, our Gond Kamarkas Aata (Whole Wheat Flour) Churma is a traditional powerhouse of nutrition especially beneficial for pregnant women, new moms, and lactating mothers. Made with a wholesome blend of traditional ingredients, this churma is slow-cooked in small batches for maximum flavour and nourishment. Gond helps strengthen bones and joints, while kamarkas supports postpartum recovery and improves lactation. There are no added preservatives, no palm oil or vegetable oil, just clean, genuine ingredients chosen for their healing and strengthening properties. Every spoonful is rich, warm, and comforting, just like the homemade churma your dadi or nani would lovingly prepare. Whether you're healing, feeding, or simply seeking strength from your food, this churma brings you the goodness your body deserves. A spoonful of tradition, made for your well-being!`,
+          price: 749,
+          image: '/images/pics16072025/Gond Kamarkas Aata Churma.png',
+          images: ['/images/pics16072025/Gond Kamarkas Aata Churma.png'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'aatachurma', 'authenticchurma', 'pureaatachurma', 'nochemicalchurma', 'gondchurma', 'makeinindia', 'nopreservativechurma', 'betterchurma', 'homemadechurma', 'traditionalchurma', 'realchurm', 'tastychurma', 'indiantraditionalchurma', 'maakehaathkachurma', 'maakapyaar', 'churma', 'gondaatachurma'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 749 },
+              { name: '1kg', value: '1kg', price: 1499 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Gond': [
+          'Strengthens Bones & Joints- Rich in calcium, magnesium, and protein- Gond helps improve bone density and supports joint lubrication. Often recommended for postpartum recovery and for the elderly.',
+          'Boosts Energy & Stamina- A great source of natural energy, Gond is often used in winter laddoos to fight fatigue and weakness. Popular among those recovering from illness or surgery.',
+          ],
+          'Kamarkas': [],
+          'Desi Ghee': [],
+          'Sugar': [],
+          'Premium Dry Fruits (Walnuts, Cashews, Almonds)': [],
+          'Mixed Seeds (Sunflower seeds, Melon seeds, Flaxseeds)': [],
+          }
+        },
+        
     ];
   
     export default products; 
