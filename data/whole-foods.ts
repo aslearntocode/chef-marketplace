@@ -2542,8 +2542,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'mango-pickle',
-      name: 'Mango Pickle',
+      id: 'pickle-barrel-mango-pickle',
+      name: 'Pickle Barrel Mango Pickle',
       description: "Mango pickle in mustard oil is a classic North Indian style, especially popular in regions like Punjab, Uttar Pradesh, and Bihar. It's known for its sharp tangy flavour, spicy kick, and the deep aroma of mustard oil. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
       image: '/images/mangopickle/IMG_1.jpg',
@@ -2581,8 +2581,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'mix-pickle',
-      name: 'Mix Pickle',
+      id: 'pickle-barrel-mix-pickle',
+      name: 'Pickle Barrel Mix Pickle',
       description: "A mixed pickle (or achaar) is a delicious blend of different vegetables and fruits — commonly mango, carrot, lemon, green chili, and even cauliflower — all preserved in a spiced oil base. It's tangy, spicy, and perfectly suited to Indian meals like dal-chawal, paratha, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
       image: '/images/mixpickle/IMG_1.jpg',
@@ -2621,8 +2621,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'ginger-garlic-pickle',
-      name: 'Ginger Garlic Pickle',
+      id: 'pickle-barrel-ginger-garlic-pickle',
+      name: 'Pickle Barrel Ginger Garlic Pickle',
       description: "Ginger Garlic Pickle is a flavourful Indian condiment combining the sharp heat of ginger, the pungency of garlic, and a mix of spices in a tangy, oily base—often preserved in mustard oil or sesame oil. It's commonly enjoyed with rice, parathas, or curd rice. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
       image: '/images/gingergarlicpickle/IMG_1.jpg',
@@ -2660,8 +2660,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'dry-amla-pickle',
-      name: 'Dry Amla Pickle',
+      id: 'pickle-barrel-dry-amla-pickle',
+      name: 'Pickle Barrel Dry Amla Pickle',
       description: "Here's a simple and flavorful Dry Amla Pickle (Sookhi Amla Achar) recipe — a traditional Indian way to preserve Indian gooseberries with spices. It's tangy, spicy, and has a long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
       image: '/images/dryamlapickle/IMG_1.jpg',
@@ -2698,8 +2698,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'sweet-and-sour-amla-pickle',
-      name: 'Sweet & Sour Amla Pickle',
+      id: 'pickle-barrel-sweet-and-sour-amla-pickle',
+      name: 'Pickle Barrel Sweet & Sour Amla Pickle',
       description: "Here's a delicious Sweet and Sour Amla Pickle (Khatta Meetha Amla Achar) — tangy, spicy, and mildly sweet, it's a crowd-pleaser and absolutely irresistible! This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS.",
       price: 120,
       image: '/images/amlasweetandsour/IMG_1.jpg',
@@ -2737,8 +2737,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'amla-murabba',
-      name: 'Amla Murabba',
+      id: 'pickle-barrel-amla-murabba',
+      name: 'Pickle Barrel Amla Murabba',
       description: 'Amla Murabba is a sweet preserve made from amla (Indian gooseberry), known for its health benefits and tangy flavor. It\'s often consumed for its medicinal properties, particularly in Ayurveda, where it\'s valued for improving digestion, immunity, and skin health. This Murabba has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/amlamurabba/IMG_1.jpg',
@@ -2774,8 +2774,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'bharwan-green-chilli-pickle',
-      name: 'Bharwan Green Chilli Pickle',
+      id: 'pickle-barrel-bharwan-green-chilli-pickle',
+      name: 'Pickle Barrel Bharwan Green Chilli Pickle',
       description: 'Bharwan Green Chilli (भरवां हरी मिर्च) is a flavourful Indian dish where green chillies are stuffed with a spiced filling—often made of mustard, fennel, and other aromatic spices. It\'s tangy, mildly spicy, and adds a punch to any Indian meal. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/bharwangreenchilli/IMG_1.jpg',
@@ -2819,8 +2819,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'bharwan-red-chilli-pickle',
-      name: 'Bharwan Red Chilli Pickle',
+      id: 'pickle-barrel-bharwan-red-chilli-pickle',
+      name: 'Pickle Barrel Bharwan Red Chilli Pickle',
       description: 'Bharwan Lal Mirch ka Achaar (भरवां लाल मिर्च का अचार) is a traditional Indian stuffed red chilli pickle made with thick, mildly spicy red chillies filled with a tangy, spiced masala mix. It\'s especially popular in Uttar Pradesh, Rajasthan, and Punjab. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/bharwanredchilli/IMG_1.jpg',
@@ -2866,8 +2866,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'karela-pickle',
-      name: 'Karela Pickle',
+      id: 'pickle-barrel-karela-pickle',
+      name: 'Pickle Barrel Karela Pickle',
       description: 'Karela (Bitter Gourd) Pickle is a tangy and spicy Indian pickle made from the bitter vegetable, karela (bitter gourd), which is known for its health benefits. It\'s especially popular in North India and is a great way to balance out the bitterness with a variety of spices, oil, and tangy flavors. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/karelapickle/IMG_1.jpg',
@@ -2906,8 +2906,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'lemon-green-chilli-pickle',
-      name: 'Lemon Green Chilli Pickle',
+      id: 'pickle-barrel-lemon-green-chilli-pickle',
+      name: 'Pickle Barrel Lemon Green Chilli Pickle',
       description: 'Lemon Green Chilli Pickle (नींबू मिर्च का अचार) is a classic Indian condiment that combines the tang of lemon with the spice of green chillies—perfect as a zesty side dish with parathas, dal-chawal, or khichdi. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/lemongreenchillipickle/IMG_1.jpg',
@@ -2952,8 +2952,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'lemon-sweet-and-sour-pickle',
-      name: 'Lemon Sweet and Sour Pickle',
+      id: 'pickle-barrel-lemon-sweet-and-sour-pickle',
+      name: 'Pickle Barrel Lemon Sweet and Sour Pickle',
       description: 'Sweet and Sour Lemon Pickle (मीठा खट्टा नींबू का अचार) is a delicious Indian pickle that combines the tang of lemons with a perfect balance of sweetness from jaggery or sugar and spice from basic Indian masalas. It\'s especially popular in Gujarati and North Indian households. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/lemonsweetandsourpickle/IMG_1.jpg',
@@ -2992,8 +2992,8 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'mango-sweet-and-sour-pickle',
-      name: 'Mango Sweet and Sour Pickle',
+      id: 'pickle-barrel-mango-sweet-and-sour-pickle',
+      name: 'Pickle Barrel Mango Sweet and Sour Pickle',
       description: 'Mango Sweet and Sour Pickle (मीठा खट्टा आम का अचार) is a traditional Indian condiment that blends the tanginess of raw mangoes with the richness of jaggery or sugar and bold Indian spices. It\'s especially popular in North India and Gujarat, and is loved for its balanced sweet-spicy flavor and long shelf life. This pickle has NO PRESERVATIVES, NO PALM OIL AND NO ARTIFICIAL FLAVOURS',
       price: 120,
       image: '/images/mangosweetandsour/IMG_1.jpg',
