@@ -1,4 +1,5 @@
 import { Product } from '@/types/whole-foods';
+import image from 'next/image';
 
 export const products: Product[] = [
     {
@@ -5088,6 +5089,109 @@ export const products: Product[] = [
           'Mixed Seeds (Sunflower seeds, Melon seeds, Flaxseeds)': [],
           }
         },
+        {
+          id: 'achar-veda-green-chilli-pickle',
+          name: 'Achar Veda Green Chilli Pickle',
+          description: `This Green Chilli Pickle hails from Rajasthan! This divine pickle is crafted using the Vedic tradition- the quantity of mustard oil is lesser for a balanced, spicy kick! Free from artificial colors, sugar, and preservatives, it delivers a pure, fiery taste — just like the homemade ones.`,
+          price: 399,
+          image: '/images/acharvedagreenchillipickle/IMG_1.jpg',
+          images: ['/images/acharvedagreenchillipickle/IMG_1.jpg',
+            '/images/acharvedagreenchillipickle/IMG_2.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'chillipickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'greenchillipickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'tangypickle', 'indianpickle', 'rajasthangreenchillipickle', 'mustardoilpickle', 'mirchkaachaar', 'mirchkaachar', 'harimirchkaachaar'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 399 },
+              { name: '500gms', value: '500gms', price: 799 }
+            ]
+          },
+          ingredients_benefits: {
+          'Green Chillies': [
+          'Rich in Nutrients & Minerals- High in Vitamin C, Vitamin A, and Vitamin B6. Contains iron, potassium, and small amounts of calcium and magnesium.',
+          ],
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Black, Yellow, Brown Mustard Seeds': [],
+          'Indian Spices (Fennel Seeds, Turmeric, Cumin Seeds, Asafoetida)': [],
+          'Lemon Juice': [],
+          'Vinegar': [],
+          }
+        },
+        {
+          id: 'achar-veda-garlic-ginger-pickle',
+          name: 'Achar Veda Garlic Ginger Pickle',
+          description: `Experience the bold, earthy flavors of this Garlic & Ginger Pickle, prepared with a Vedic recipe- lesser mustard oil for a balance of flavours! 
+          No colors, sugars, or preservatives — just authentic, home-style pickle made with the wisdom of our ancestors.`,
+          price: 399,
+          image: '/images/acharvedagarlicpickle/IMG_1.jpg',
+          images: ['/images/acharvedagarlicpickle/IMG_1.jpg',
+            '/images/acharvedagarlicpickle/IMG_2.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'garlicpickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'garlicgingerpickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'rajasthanigarlicpickle', 'indianpickle', 'lahsunkaachaar', 'lahsunkaachar', 'adrakkaachaar', 'adrakkaachar'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 399 },
+              { name: '500gms', value: '500gms', price: 799 }
+            ]
+          },
+          ingredients_benefits: {
+          'Garlic & Ginger': [
+          'Garlic: Boosts Immunity and helps prevent and fight common colds, flu, and infections. Stimulates white blood cell activity for better immune response.',
+          'Ginger: Aids Digestion: Stimulates digestive enzymes and bile production. Reduces bloating, gas, and indigestion. Helps food move more smoothly through the digestive tract.',
+          ],
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Yellow Mustard Seeds, Black Mustard Seeds': [],
+          'Turmeric Powder': [],
+          'Indian Spices (Fennel Seeds, Fenugreek Seeds, Carom Seeds, Red Chilli Powder, Asafoetida)': [],
+          'Lemon Juice': [],
+          'Vinegar': [],
+          }
+        },
+        {
+          id: 'achar-veda-mango-pickle',
+          name: 'Achar Veda Mango Pickle',
+          description: `Crafted with a Vedic recipe, this Mango Pickle is made the traditional way using mustard oil but with absolutely minimal oil. 
+          This pickle doesn’t have any added colors, sugars, or preservatives. Every jar carries the authentic taste of India especially Rajasthan — handmade with care, the Vedic way.`,
+          price: 399,
+          image: '/images/acharvedamangopickle/IMG_1.jpg',
+          images: ['/images/acharvedamangopickle/IMG_1.jpg',
+            '/images/acharvedamangopickle/IMG_2.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'mangopickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'mangopickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'rajasthanimangopickle', 'indianpickle', 'aamkaachaar', 'aamkaachar'],
+          size: '250gms', 
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 399 },
+              { name: '500gms', value: '500gms', price: 799 }
+            ]
+          },
+          ingredients_benefits: {
+          'Mango': [
+          'Rich in Vitamin C- Strengthens immunity by boosting white blood cell production. Helps in collagen formation for healthy skin, gums, and blood vessels.',
+          ],
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Yellow Mustard Seeds, Black Mustard Seeds': [],
+          'Turmeric Powder': [],
+          'Indian Spices (Fennel Seeds, Fenugreek Seeds, Carom Seeds, Red Chilli Powder, Asafoetida)': [],
+          'Lemon Juice': [],
+          'Vinegar': [],
+          'Salt': [],
+          }
+        },
+          
         
     ];
   
