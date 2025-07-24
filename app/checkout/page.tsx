@@ -16,6 +16,7 @@ export default function CheckoutPage() {
   const FREE_DELIVERY_THRESHOLD = 1000;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
   const finalAmount = totalAmount + (isDeliveryFree ? 0 : DELIVERY_FEE);
+  const [name, setName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
   const [pinCode, setPinCode] = useState('');
   const [city, setCity] = useState('');
@@ -23,7 +24,6 @@ export default function CheckoutPage() {
   const [street, setStreet] = useState('');
   const [apartment, setApartment] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [deliverySlot, setDeliverySlot] = useState('');
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -69,7 +69,7 @@ export default function CheckoutPage() {
       }
 
       // Validate required fields first
-      if (!mobileNumber || !pinCode || !street || !apartment) {
+      if (!name || !mobileNumber || !pinCode || !street || !apartment) {
         alert('Please fill all required fields');
         return;
       }
@@ -100,6 +100,7 @@ export default function CheckoutPage() {
         total_amount: totalAmount,
         status: 'success',
         delivery_address: {
+          name: name,
           mobile: mobileNumber,
           pin_code: pinCode,
           city,
@@ -107,7 +108,6 @@ export default function CheckoutPage() {
           street,
           apartment
         },
-        delivery_slot: deliverySlot,
         vendor_id: vendor_id,
         vendor_name: vendorName,
         created_at: new Date().toISOString(),
@@ -146,6 +146,7 @@ export default function CheckoutPage() {
               New Order Details:
               
               Order ID: ${data.id}
+              Customer Name: ${name}
               Vendor: ${vendorName}
               Date: ${new Date().toLocaleDateString()}
               Total Amount: ₹${totalAmount}
@@ -154,13 +155,12 @@ export default function CheckoutPage() {
               ${itemsList}
               
               Delivery Address:
+              ${name}
               ${apartment}
               ${street}
               ${city}, ${state}
               PIN: ${pinCode}
               Mobile: ${mobileNumber}
-              
-              Delivery Slot: ${deliverySlot}
             `,
             _template: 'box',
             _captcha: 'false',
@@ -197,6 +197,21 @@ export default function CheckoutPage() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
           <div className="space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-2 border rounded-md focus:ring-black focus:border-black"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
             <div>
               <label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-1">
                 Mobile Number
@@ -286,24 +301,6 @@ export default function CheckoutPage() {
                   rows={2}
                   required
                 />
-              </div>
-
-              <div>
-                <label htmlFor="deliverySlot" className="block text-sm font-medium text-gray-700 mb-1">
-                  Delivery Time Slot
-                </label>
-                <select
-                  id="deliverySlot"
-                  value={deliverySlot}
-                  onChange={(e) => setDeliverySlot(e.target.value)}
-                  className="w-full px-4 py-2 border rounded-md focus:ring-black focus:border-black"
-                  required
-                >
-                  <option value="">Select a delivery time slot</option>
-                  <option value="8-10">8:00 AM - 10:00 AM</option>
-                  <option value="12-14">12:00 PM - 2:00 PM</option>
-                  <option value="18-20">6:00 PM - 8:00 PM</option>
-                </select>
               </div>
             </div>
           </div>

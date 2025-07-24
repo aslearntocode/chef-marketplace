@@ -18,6 +18,7 @@ interface Order {
   vendor_id?: string;
   vendor_name: string;
   delivery_address: {
+    name: string;
     mobile: string;
     pin_code: string;
     city: string;
@@ -182,6 +183,7 @@ export default function OrdersPage() {
             <div className="border-t mt-4 pt-4">
               <h3 className="font-semibold mb-2">Delivery Address</h3>
               <p className="text-gray-600">
+                {order.delivery_address.name}<br />
                 {order.delivery_address.apartment}<br />
                 {order.delivery_address.street}<br />
                 {order.delivery_address.city}, {order.delivery_address.state}<br />
