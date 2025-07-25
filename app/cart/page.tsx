@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, totalAmount, clearCart } = useCart();
-  const DELIVERY_FEE = 100;
+  const DELIVERY_FEE = 49;
   const HANDLING_FEE = 9;
-  const FREE_DELIVERY_THRESHOLD = 749;
+  const FREE_DELIVERY_THRESHOLD = 499;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
 
   // Get the chef/baker name of the first item in cart (if any)

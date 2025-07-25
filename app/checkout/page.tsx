@@ -12,8 +12,8 @@ export default function CheckoutPage() {
   const supabase = createClientComponentClient();
   const { items, totalAmount, clearCart } = useCart();
   const { user } = useAuth();
-  const DELIVERY_FEE = 100;
-  const FREE_DELIVERY_THRESHOLD = 1000;
+  const DELIVERY_FEE = 49;
+  const FREE_DELIVERY_THRESHOLD = 499;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
   const finalAmount = totalAmount + (isDeliveryFree ? 0 : DELIVERY_FEE);
   const [name, setName] = useState('');

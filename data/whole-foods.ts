@@ -5191,6 +5191,192 @@ export const products: Product[] = [
           'Salt': [],
           }
         },
+        {
+          id: 'radhika-vahini-methi-laddoos',
+          name: 'Radhika Vahini Methi Laddoos',
+          description: `Methi Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have a unique slightly bitter-sweet taste, balanced with jaggery(0% sugar) and ghee. 
+          Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
+          price: 130,
+          image: '/images/radhikavahini/Methi Laddoos.png',
+          images: ['/images/radhikavahini/Methi Laddoos.png'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
+          size: '200gms', 
+          variants: {
+            sizes: [
+              { name: '200gms', value: '200gms', price: 130 },
+              { name: '500gms', value: '500gms', price: 320 },
+              { name: '1kg', value: '1kg', price: 600 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Pure Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Fenugreek/Methi': [],
+          'Halim/ Gardencress Seeds': [],
+          'Edible Gum/Gond/Dink': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'radhika-vahini-dink-gond-laddoos',
+          name: 'Radhika Vahini Dink/Gond Laddoos',
+          description: `Tasty | Homemade | No Preservatives
+          Gond Laddoos (made with edible gum, whole wheat flour, ghee, nuts, and jaggery  (0%sugar)) are deeply rooted in Indian Ayurvedic nutrition. They’re nutrient-dense and especially popular for boosting strength, immunity, and warmth in cold weather — often given to postpartum women or as a general tonic food.`,
+          price: 170,
+          image: '/images/radhikavahini/Gond Laddoos.png',
+          images: ['/images/radhikavahini/Gond Laddoos.png'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'gondladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'wholewheatflourladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'dinkladdoos', 'gharjaiseladdoos', 'maakehaathkeladdoo', 'maakapyaar'],
+          size: '200gms', 
+          variants: {
+            sizes: [
+              { name: '200gms', value: '200gms', price: 170 },
+              { name: '500gms', value: '500gms', price: 420 },
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Gond/Edible Gum/Dink': [],
+          'Premium Dry Fruits': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'radhika-vahini-methi-dry-fruits-laddoos',
+          name: 'Radhika Vahini Methi Dry Fruits Laddoos',
+          description: `Methi Dry Fruits Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have 0% sugar and 0% jaggery! They are sweetened using khajoor powder/Dates powder!
+          Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
+          price: 230,
+          image: '/images/radhikavahini/Methi Dry Fruit Laddoos.png',
+          images: ['/images/radhikavahini/Methi Dry Fruit Laddoos.png'],
+          category: 'Healthy Treats',
+          tags: ['Dryfruitsladdoos', 'madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
+          size: '200gms', 
+          variants: {
+            sizes: [
+              { name: '200gms', value: '200gms', price: 230 },
+              { name: '500gms', value: '500gms', price: 570 },
+              { name: '1kg', value: '1kg', price: 1100 }
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Pure Desi Ghee': [
+          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+          ],
+          'Fenugreek/Methi': [],
+          'Halim/ Gardencress Seeds': [],
+          'Edible Gum/Gond/Dink': [],
+          'Mixed Dry Fruits': [],
+          'Khajoor Powder/Dates Powder': []
+          }
+        },
+        {
+          id: 'radhika-vahini-bhajani-chakli',
+          name: 'Radhika Vahini Bhajani Chakli',
+          description: `Bhajani Chakli is a savory, crispy spiral snack made using Bhajani flour, a traditional Maharashtrian spiced multigrain flour. It’s a popular Diwali and tea-time snack — crunchy & flavourful! Our Bhajani Chakli is made up of 3 types of lentil flours.`,
+          price: 80,
+          image: '/images/radhikavahini/Bhajani Chakli.png',
+          images: ['/images/radhikavahini/Bhajani Chakli.png'],
+          category: 'Healthy Bites',
+          tags: ['Chakli', 'Maharashtrianchakli', 'Mumbaichakli', 'flavourfulsnack', 'Bhajanichakli', 'gharjesichakli', 'snacktime', 'snacks', 'traditionalsnacks', 'crispysnacks', 'homemadesnacks', 'proteinsnack', 'bettersnack', 'healthiersnack', 'divinesnack', 'maajaisataste', 'maakehaathkesnacks'],
+          size: '200gms', 
+          variants: {
+            sizes: [
+              { name: '200gms', value: '200gms', price: 80 },
+              { name: '500gms', value: '500gms', price: 180 },
+              { name: '1kg', value: '1kg', price: 360 }
+            ]
+          },
+          ingredients_benefits: {
+          'Mixed Lentils Flour': [
+          'High in plant-based protein, Good for diabetics (low glycemic index), Rich in fiber, iron, and vitamins, easily digestible and gut-friendly.',
+          ],
+          'Sesame Seeds': [
+          'Rich in calcium, magnesium, zinc, and phosphorus — all crucial for bone density. Contain healthy fats (mainly polyunsaturated and monounsaturated). High in Plant Protein- About 5g protein per 3 tablespoons.',
+          ],
+          'Dry Spices': [],
+          'Salt':[],
+          }
+        },
+        {
+          id: 'ukadiche-modak-with-kesar',
+          name: 'Radhika Vahini Ukadiche Modak with Kesar',
+          description: `Ukadiche Modak is a traditional sweet dumpling from Maharashtra, India, especially popular during the Ganesh Chaturthi festival. "Ukadiche" means "steamed" in Marathi, and "Modak" refers to the dumpling filled with a sweet coconut-jaggery mixture.`,
+          price: 240,
+          image: '/images/modakpics/IMG_1.png',
+          images: ['/images/modakpics/IMG_1.png',
+            '/images/modakpics/IMG_2.png',
+            '/images/modakpics/IMG_3.png'
+          ],
+          category: 'Healthy Treats',
+          tags: ['Modak', 'Ukadichemodak', 'sweetdumplings', 'ganeshchaturthispecial', 'authenticmodak', 'realmodak', 'healthiermodak', 'coconutjaggerymodak', 'maharashtrianmodak'],
+          size: '6 pieces',
+          variants: {
+            sizes: [
+              { name: '6 pieces', value: '6 pieces', price: 240 },
+            ]
+          },
+          ingredients_benefits: {
+          'Rice Flour': [
+          'Gluten-Free- Ideal for people with celiac disease or gluten intolerance.',
+          'Easily Digestible- Light on the stomach and easy to digest.',
+          ],
+          'Grated Fresh Coconut': [
+          'Rich in Healthy Fats- Contains medium-chain triglycerides (MCTs), which are quickly used by the body for energy.',
+          'Boosts Immunity- Contains lauric acid, which has antibacterial, antiviral, and antifungal properties.',
+          ],
+          'Grated Jaggery': [],
+          'Kesar/Saffron': [],
+          }
+        },
+        {
+          id: 'radhika-vahini-puran-poli',
+          name: 'Radhika Vahini Puran Poli',
+          description: `Puran Poli is a traditional Indian sweet flatbread filled with a delicious mixture of cooked lentils (usually chana dal) and jaggery, flavored with cardamom and sometimes nutmeg. It’s especially popular in Maharashtra, Gujarat, Karnataka, and Andhra Pradesh, where it is known by different names like Holige, Obbattu, or Bobbatlu.`,
+          price: 85,
+          image: '/images/radhikavahini/Puran Poil.png',
+          images: ['/images/radhikavahini/Puran Poil.png'],
+          category: 'Healthy Treats',
+          tags: ['poli', 'puranoli', 'traditionalpuranpoli', 'ganesh', 'authenticpuranpoli', 'realpuranpoli', 'healthierpuranpoli', 'mopreservativepuranpoli', 'maharashtrianpuranpoli', 'Holige', 'Obbattu', 'Bobbatlu', 'traditionalsweets', 'lovefor traditionalsweets', 'madeinindia', 'indiansweets'],
+          size: '2 pieces',
+          variants: {
+            sizes: [
+              { name: '2 pieces', value: '2 pieces', price: 85 },
+            ]
+          },
+          ingredients_benefits: {
+          'Aata (Whole Wheat Flour)': [
+          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+          ],
+          'Chana Dal': [
+          'Rich in Protein- Excellent plant-based protein source — especially important for vegetarians and vegans. Helps in muscle repair and growth.',
+          'Controls Blood Sugar- Low glycemic index (GI), which means it doesn’t cause a sudden spike in blood sugar.',
+          ],
+          'Maida': [],
+          'Jaggery': [],
+          'Sugar':[],
+          }
+        },
           
         
     ];

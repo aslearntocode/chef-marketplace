@@ -121,7 +121,7 @@ export default function Navbar() {
       {/* Top Banner */}
       <div className="bg-black py-2 px-4 text-center font-bold">
         <p className="text-[#FDBE28] text-lg">
-          🎉 Now serving in Mumbai! Free Delivery for Orders above ₹799 🚚
+          🎉 Now serving in Mumbai! Free Delivery for Orders above ₹499 🚚
         </p>
       </div>
 
