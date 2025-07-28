@@ -25,7 +25,7 @@ export default function OrderSuccessPage() {
           Order Placed Successfully!
         </h1>
         <p className="text-gray-600 mb-8">
-          Thank you for your order. We will start preparing your food soon.
+          Order placed successfully. Congratulations for making healthy choices.
         </p>
         <Link
           href="/"
