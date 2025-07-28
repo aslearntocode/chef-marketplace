@@ -34,27 +34,19 @@ export default function Navbar() {
       id: 'shop-now',
       label: 'Shop Now',
       dropdown: [
-        { href: '/whole-foods/categories/healthy-treats', label: 'Healthier Treats' },
-        { href: '/whole-foods/categories/healthier-beverages', label: 'Healthier Beverages' },
-        { href: '/whole-foods/categories/healthy-bites', label: 'Healthier Bites' },
-        { href: '/whole-foods/categories/pickles', label: 'Pickles & Condiments' },
-        { href: '/whole-foods/categories/healthy-breakfast', label: 'Healthier Breakfast' },
-        { href: '/whole-foods/categories/spice-blends', label: 'Spice Blends' },
-        { href: '/whole-foods/categories/nuts-and-seeds', label: 'Dry Fruits & Seeds' },
-        { href: '/whole-foods/categories/healthier-premixes', label: 'Healthier Premixes' },
-        { href: '/whole-foods/categories/healthy-cakes', label: 'Healthier Cakes' },
-        { href: '/whole-foods/categories/sauces-and-dressings', label: 'Sauces & Dressings' },
+        { href: '/categories', label: 'Food Categories' },
+        { href: '/cooking-accessories', label: 'Cooking Accessories' },
       ]
     },
   ];
 
   const carouselItems = [
-    { href: '/whole-foods/categories/healthy-breakfast?filter=protein-rich-veg', label: 'Protein Rich Veg Breakfast' },
-    { href: '/whole-foods/categories/healthy-bites?q=khakhra', label: 'Protein Rich Khakhra' },
-    { href: '/whole-foods/categories/spice-blends', label: 'Pure Indian Masalas' },
-    { href: '/whole-foods/millet-cookies-multiple-flavors', label: 'Millet Cookies' },
-    { href: '/whole-foods/organic-fresh-farm-cashews', label: 'Cashews' },
-    { href: '/whole-foods/categories/healthy-bites?q=chips', label: 'Healthy Chips' },
+    { href: '/categories?filter=breakfast', label: 'Protein Rich Veg Breakfast' },
+    { href: '/categories?filter=khakhra', label: 'Protein Rich Khakhra' },
+    { href: '/categories?filter=spices', label: 'Pure Indian Masalas' },
+    { href: '/categories?filter=cookies', label: 'Millet Cookies' },
+    { href: '/categories?filter=nuts', label: 'Cashews' },
+    { href: '/categories?filter=chips', label: 'Healthy Chips' },
   ];
 
   useEffect(() => {
@@ -170,7 +162,7 @@ export default function Navbar() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="block px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-base font-bold text-gray-700 hover:bg-gray-100"
                               onClick={() => setActiveDropdown(null)}
                             >
                               {item.label}

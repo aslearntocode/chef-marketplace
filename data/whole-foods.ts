@@ -5321,7 +5321,7 @@ export const products: Product[] = [
           id: 'ukadiche-modak-with-kesar',
           name: 'Radhika Vahini Ukadiche Modak with Kesar',
           description: `Ukadiche Modak is a traditional sweet dumpling from Maharashtra, India, especially popular during the Ganesh Chaturthi festival. "Ukadiche" means "steamed" in Marathi, and "Modak" refers to the dumpling filled with a sweet coconut-jaggery mixture.`,
-          price: 240,
+          price: 250,
           image: '/images/modakpics/IMG_1.png',
           images: ['/images/modakpics/IMG_1.png',
             '/images/modakpics/IMG_2.png',
@@ -5332,7 +5332,7 @@ export const products: Product[] = [
           size: '6 pieces',
           variants: {
             sizes: [
-              { name: '6 pieces', value: '6 pieces', price: 240 },
+              { name: '6 pieces', value: '6 pieces', price: 250 },
             ]
           },
           ingredients_benefits: {
