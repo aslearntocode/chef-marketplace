@@ -3,8 +3,8 @@ import image from 'next/image';
 
 export const accessories: Product[] = [
   {
-    id: 'Pink Heart Mug',
-    name: 'pink-heart-mug',
+    id: 'pink-heart-mug',
+    name: 'Pink Heart Mug',
     description: `Ceramics are materials made by shaping and then firing a non-metallic mineral, such as clay, at high temperatures. They are typically hard, brittle, heat-resistant, and corrosion-resistant. 
     Ceramics can be both functional and decorative, and they have a wide range of uses, from pottery and tiles to advanced industrial components. 
     Our ceramic serveware here is HANDMADE BY A LOCAL ARTISAN, MICROWAVE SAFE, LEAD FREE & CADMIUM FREE!.`,

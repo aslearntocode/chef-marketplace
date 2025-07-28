@@ -8,7 +8,8 @@ export default function CookingAccessoriesPage() {
     <main className="min-h-screen bg-[#FDBE28] pt-[1cm]">
       <CategoryPage 
         category="Cooking Accessories" 
-        products={accessories} 
+        products={accessories}
+        basePath="/cooking-accessories"
       />
     </main>
   );

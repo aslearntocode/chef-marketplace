@@ -13,6 +13,7 @@ import { FiSearch } from 'react-icons/fi';
 interface CategoryPageProps {
   category: string;
   products: Product[];
+  basePath?: string;
 }
 
 interface VariantState {
@@ -22,7 +23,7 @@ interface VariantState {
 
 type VariantMap = Record<string, VariantState>;
 
-export default function CategoryPage({ category, products }: CategoryPageProps) {
+export default function CategoryPage({ category, products, basePath = '/whole-foods' }: CategoryPageProps) {
   const { user } = useAuth();
   const router = useRouter();
   const { addToCart, updateQuantity, removeFromCart, items } = useCart();
@@ -240,7 +241,7 @@ export default function CategoryPage({ category, products }: CategoryPageProps) 
 
           return (
             <div key={product.id} id={`product-${product.id}`} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col">
-              <Link href={`/whole-foods/${product.id}`} className="block">
+              <Link href={`${basePath}/${product.id}`} className="block">
                 <div className="relative w-full pt-[100%] bg-[#f8f8f8] group">
                   {product.images ? (
                     <>
