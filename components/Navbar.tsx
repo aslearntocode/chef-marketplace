@@ -34,8 +34,8 @@ export default function Navbar() {
       id: 'shop-now',
       label: 'Shop Now',
       dropdown: [
-        { href: '/categories', label: 'Food Categories' },
-        { href: '/cooking-accessories', label: 'Cooking Accessories' },
+        { href: '/categories', label: 'Wholesome Food Products' },
+        { href: '/cooking-accessories', label: 'Healthier Cookware' },
       ]
     },
   ];
