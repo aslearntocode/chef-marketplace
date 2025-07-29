@@ -41,12 +41,12 @@ export default function Navbar() {
   ];
 
   const carouselItems = [
-    { href: '/categories?filter=breakfast', label: 'Protein Rich Veg Breakfast' },
-    { href: '/categories?filter=khakhra', label: 'Protein Rich Khakhra' },
-    { href: '/categories?filter=spices', label: 'Pure Indian Masalas' },
-    { href: '/categories?filter=cookies', label: 'Millet Cookies' },
-    { href: '/categories?filter=nuts', label: 'Cashews' },
-    { href: '/categories?filter=chips', label: 'Healthy Chips' },
+    { href: 'whole-foods/categories/healthy-breakfast', label: 'Protein Rich Veg Breakfast' },
+    { href: 'whole-foods/categories/healthy-bites?q=khakhras', label: 'Protein Rich Khakhra' },
+    { href: 'whole-foods/categories/spice-blends', label: 'Pure Indian Masalas' },
+    { href: 'whole-foods/ukadiche-modak-with-kesar', label: 'Modak' },
+    // { href: '/categories?filter=nuts', label: 'Cashews' },
+    { href: 'whole-foods/categories/healthy-bites?q=chips', label: 'Healthy Chips' },
   ];
 
   useEffect(() => {
