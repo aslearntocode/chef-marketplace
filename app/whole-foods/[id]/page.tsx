@@ -182,7 +182,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <main className="mt-[72px] min-h-screen bg-[#FDBE28]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 md:scale-90 md:origin-top">
         {/* Mobile Back Button */}
         <div className="md:hidden py-4">
           <button

@@ -321,7 +321,7 @@ export default function CategoryPage({ category, products, basePath = '/whole-fo
                             }));
                           }}
                         >
-                          <option value="">Choose a {product.name.toLowerCase().includes('cashew') ? 'variety' : 'size'}</option>
+                          <option value="">Choose a {product.name.toLowerCase().includes('cashew') ? 'variety' : product.name.toLowerCase().includes('tumbler') ? 'design' : 'size'}</option>
                           {product.variants!.sizes!.map((size, idx) => (
                             <option key={size.value} value={idx}>
                               {size.name} - ₹{size.price}

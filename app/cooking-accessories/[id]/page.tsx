@@ -182,7 +182,7 @@ export default function AccessoryProductPage({ params }: ProductPageProps) {
 
   return (
     <main className="mt-[72px] min-h-screen bg-[#FDBE28]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 md:scale-90 md:origin-top">
         {/* Mobile Back Button */}
         <div className="md:hidden py-4">
           <button
@@ -254,7 +254,7 @@ export default function AccessoryProductPage({ params }: ProductPageProps) {
                 </div>
                 {/* Display size information */}
                 <p className="text-sm text-gray-600 mt-2">
-                  {selectedSize ? `Size: ${selectedSize.name}` : (product.size ? `Size: ${product.size}` : '')}
+                  {selectedSize ? `${product.name.toLowerCase().includes('tumbler') ? 'Design' : 'Size'}: ${selectedSize.name}` : (product.size ? `${product.name.toLowerCase().includes('tumbler') ? 'Design' : 'Size'}: ${product.size}` : '')}
                 </p>
               </div>
 
@@ -265,7 +265,7 @@ export default function AccessoryProductPage({ params }: ProductPageProps) {
                   {product.variants.sizes && (
                     <div>
                       <label htmlFor="size-select" className="block text-sm font-medium text-gray-900 mb-2">
-                        Select Size
+                        {product.name.toLowerCase().includes('tumbler') ? 'Select Design' : 'Select Size'}
                       </label>
                       <select
                         id="size-select"
@@ -273,7 +273,7 @@ export default function AccessoryProductPage({ params }: ProductPageProps) {
                         onChange={handleSizeChange}
                         className="w-full border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black"
                       >
-                        <option value="">Choose a size</option>
+                        <option value="">{product.name.toLowerCase().includes('tumbler') ? 'Choose a design' : 'Choose a size'}</option>
                         {product.variants.sizes.map((size) => (
                           <option key={size.name} value={size.name}>
                             {size.name} - ₹{size.price}
