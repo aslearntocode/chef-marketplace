@@ -15,39 +15,39 @@ import { Product } from '@/types/whole-foods';
 // Define categories with their routes and images
 const categories = [
   {
-    id: 'healthy-treats',
-    name: 'Healthy Treats',
-    route: '/whole-foods/categories/healthy-treats',
+    id: 'healthier-treats',
+    name: 'Healthier Treats',
+    route: '/categories/healthier-treats',
     description: 'Delicious and nutritious treats made with natural ingredients'
   },
   {
-    id: 'drinks',
-    name: 'Drinks',
-    route: '/whole-foods/categories/drinks',
+    id: 'healthier-beverages',
+    name: 'Healthier Beverages',
+    route: '/categories/healthier-beverages',
     description: 'Refreshing and healthy beverages for every occasion'
   },
   {
-    id: 'healthy-bites',
-    name: 'Healthy Bites',
-    route: '/whole-foods/categories/healthy-bites',
+    id: 'healthier-bites',
+    name: 'Healthier Bites',
+    route: '/categories/healthier-bites',
     description: 'Wholesome snacks perfect for any time of day'
   },
   {
     id: 'pickles',
     name: 'Pickles & Condiments',
-    route: '/whole-foods/categories/pickles',
+    route: '/categories/pickles',
     description: 'Traditional pickles and chutneys made with authentic recipes'
   },
   {
-    id: 'healthy-breakfast',
-    name: 'Healthy Breakfast',
-    route: '/whole-foods/categories/healthy-breakfast',
+    id: 'healthier-breakfast',
+    name: 'Healthier Breakfast',
+    route: '/categories/healthier-breakfast',
     description: 'Nutritious and convenient breakfast options to start your day right'
   },
   {
     id: 'spice-blends',
     name: 'Spice Blends',
-    route: '/whole-foods/categories/spice-blends',
+    route: '/categories/spice-blends',
     description: 'Artisanal spice blends crafted with premium ingredients for authentic flavors'
   }
 ];

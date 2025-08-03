@@ -5377,8 +5377,72 @@ export const products: Product[] = [
           'Sugar':[],
           }
         },
-          
-        
+        {
+          id: 'dhaniya-panjiri',
+          name: 'Dhaniya Panjiri',
+          description: `A Sacred, Homemade Delight for Krishna Janmashtami!
+          Celebrate the spirit of Janmashtami with our authentic Dhaniya Panjiri, specially prepared as part of the sacred Chappan Bhog offered to Lord Krishna. Made using a traditional recipe, this divine delicacy symbolizes purity, devotion, and wholesome taste. Our homemade Panjiri is lovingly crafted in small batches with clean, high-quality ingredients. There are no shortcuts, only the same care and reverence as found in temple kitchens and festive households. Light, fragrant, and rich in flavour, this tasty offering is perfect not just for prasad, but also as a nourishing, sattvic snack during fasting.`,
+          price: 799,
+          image: '/images/Dhaniya Panjiri.png',
+          images: ['/images/Dhaniya Panjiri.png',
+          ],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'panjiri', 'authenticpanjiri', 'purepanjiri', 'nochemicalchurma', 'homemade', 'maajaisaswaad', 'nopreservativepanjiri', 'betterpanjiri', 'homemadepanjiri', 'traditionalpaniri', 'realpanjiri', 'tastypanjiri', 'indiantraditionalpanjiri', 'maakehaathkipanjiri', 'maakapyaar', 'krishnajanmashtami', 'sacredprasad', 'Chhappanbhog'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 799 },
+              { name: '1kg', value: '1kg', price: 1599 }
+            ]
+          },
+          ingredients_benefits: {
+          'Coriander Powder': [
+          'Improves Digestion- Coriander is known for its carminative properties. Helps prevent bloating,   gas, and indigestion.',
+          'Rich in Antioxidants- Contains compounds like quercetin and tocopherols. These help fight inflammation and protect cells from oxidative stress.',
+          'Supports Postpartum Recovery- Traditionally added to postnatal panjiri for its digestive and hormonal balancing effects. May help in regulating menstrual cycles and promoting lactation.',
+          ],
+          'Desi Ghee': [
+          'Improves Digestion- Stimulates the secretion of digestive enzymes. Aids in better absorption of nutrients. Lubricates the digestive tract and can help ease constipation.',
+          'Boosts Immunity- Rich in butyric acid, which supports gut health and immunity. Contains fat-soluble vitamins like A, D, E, and K, crucial for immune function.',
+          ],
+          'Premium Dry Fruits (Cashews, Almonds, Walnuts, Foxnuts)': [],
+          'Coconut Powder': [],
+          'Sugar': [],
+          }
+        },
+        {
+          id: 'maa-ke-haath-ka-mango-pickle',
+          name: 'Maa ke haath ka Mango Pickle',
+          description: `Homemade Mango Pickle – Bold, Tangy & Bursting with Tradition
+          Bring home the magic of summers gone by with our homemade Mango Pickle, made using a traditional recipe that celebrates the true taste of India. Hand-cut raw mangoes are sun-dried and blended with a secret mix of spices, creating that unmistakable tangy, spicy, and chatpata flavour we all grew up loving. Prepared in small batches with local, genuine, and safe ingredients, this pickle is free from added preservatives and full of that rich taste and strong aroma which is only found in purer homemade pickles. Whether paired with hot parathas, curd rice, or even khichdi, this pickle adds just the right kick to every meal. 
+          A spoonful of nostalgia in every bite.`,
+          price: 399,
+          image: '/images/Mango Pickle.png',
+          images: ['/images/Mango Pickle.png'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'mangopickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'rawmangopickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'maajaisataste', 'indianpickle'],
+          size: '500gms', 
+          variants: {
+            sizes: [
+              { name: '500gms', value: '500gms', price: 399 },
+              { name: '1kg', value: '1kg', price: 799 }
+            ]
+          },
+          ingredients_benefits: {
+          'Raw Mango': [
+          'Aids Digestion- Raw mango naturally stimulates digestive enzymes and bile secretion. Combined with spices like hing, mustard, and fenugreek, it helps reduce gas, bloating, and constipation.',
+          'Boosts Immunity- Raw mango is rich in Vitamin C, which boosts immunity and protects against common infections. Fermentation also supports gut flora.',
+          ],
+          'Mustard Oil': [
+          'Heart Health- Rich in monounsaturated and polyunsaturated fats (MUFA & PUFA): These healthy fats can help reduce bad cholesterol (LDL) and increase good cholesterol (HDL). Contains omega-3 and omega-6 fatty acids: These help lower the risk of cardiovascular diseases when consumed in moderation.',
+          'Anti-inflammatory Properties- Contains compounds like allyl isothiocyanate, which may help reduce inflammation in conditions like arthritis or joint pain.',
+          ],
+          'Yellow Mustard Seeds': [],
+          'Turmeric Powder': [],
+          'Indian Spices (Fennel Seeds, Fenugreek Seeds, Cumin Seeds, Asafoetida)': [],
+          'Iodized Salt': [],
+          }
+        }          
     ];
   
     export default products; 

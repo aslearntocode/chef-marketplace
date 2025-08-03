@@ -29,74 +29,74 @@ const getCategoryImage = (categoryName: string): string => {
 
 const categories: Category[] = [
   {
-    id: 'healthy-treats',
+    id: 'healthier-treats',
     name: 'Healthier Treats',
     description: 'Delicious and nutritious treats for guilt-free indulgence',
-    href: '/whole-foods/categories/healthy-treats',
+    href: '/categories/healthier-treats',
     image: getCategoryImage('Healthy Treats')
   },
   {
     id: 'healthier-beverages',
     name: 'Healthier Beverages',
     description: 'Refreshing drinks made with natural ingredients',
-    href: '/whole-foods/categories/healthier-beverages',
+    href: '/categories/healthier-beverages',
     image: getCategoryImage('Healthier Beverages')
   },
   {
-    id: 'healthy-bites',
+    id: 'healthier-bites',
     name: 'Healthier Bites',
     description: 'Perfect snacks for any time of the day',
-    href: '/whole-foods/categories/healthy-bites',
+    href: '/categories/healthier-bites',
     image: getCategoryImage('Healthy Bites')
   },
   {
     id: 'pickles',
     name: 'Pickles & Condiments',
     description: 'Traditional pickles and flavorful condiments',
-    href: '/whole-foods/categories/pickles',
+    href: '/categories/pickles',
     image: getCategoryImage('Pickles & Condiments')
   },
   {
-    id: 'healthy-breakfast',
+    id: 'healthier-breakfast',
     name: 'Healthier Breakfast',
     description: 'Start your day with nutritious breakfast options',
-    href: '/whole-foods/categories/healthy-breakfast',
+    href: '/categories/healthier-breakfast',
     image: getCategoryImage('Healthier Breakfast')
   },
   {
     id: 'spice-blends',
     name: 'Spice Blends',
     description: 'Pure and authentic Indian spice blends',
-    href: '/whole-foods/categories/spice-blends',
+    href: '/categories/spice-blends',
     image: getCategoryImage('Spice Blends')
   },
   {
     id: 'nuts-and-seeds',
     name: 'Dry Fruits & Seeds',
     description: 'Premium quality nuts, dry fruits and seeds',
-    href: '/whole-foods/categories/nuts-and-seeds',
-    image: getCategoryImage('Dry Fruits & Seeds')
+    href: '/categories/nuts-and-seeds',
+    image: getCategoryImage('Nuts and Seeds')
   },
   {
     id: 'healthier-premixes',
     name: 'Healthier Premixes',
     description: 'Convenient premixes for quick and healthy meals',
-    href: '/whole-foods/categories/healthier-premixes',
+    href: '/categories/healthier-premixes',
     image: getCategoryImage('Healthier Premixes')
   },
   {
-    id: 'healthy-cakes',
+    id: 'healthier-cakes',
     name: 'Healthier Cakes',
     description: 'Delicious cakes made with wholesome ingredients',
-    href: '/whole-foods/categories/healthy-cakes',
-    image: getCategoryImage('Healthier Cakes')
+    href: '/categories/healthier-cakes',
+    image: getCategoryImage('Healthy Cakes')
   },
   {
     id: 'sauces-and-dressings',
     name: 'Sauces & Dressings',
     description: 'Flavorful sauces and dressings for your meals',
-    href: '/whole-foods/categories/sauces-and-dressings',
-    image: getCategoryImage('Sauces & Dressings')
+    href: '/categories/sauces-and-dressings',
+    image: getCategoryImage('Sauces and Dressings')
   }
 ];
 
@@ -135,7 +135,7 @@ export default function CategoriesPage() {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredCategories.map((category) => (
             <Link
               key={category.id}
@@ -143,19 +143,19 @@ export default function CategoriesPage() {
               className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
-                <div className="w-full h-40 relative overflow-hidden">
+                <div className="w-full h-40 md:h-48 relative overflow-hidden">
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
               </div>
-              <div className="p-4">
-                <h3 className="text-sm md:text-base font-bold text-gray-900 mb-1 group-hover:text-[#FDBE28] transition-colors font-itc-souvenir">
+              <div className="p-4 md:p-6">
+                <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-1 group-hover:text-[#FDBE28] transition-colors font-itc-souvenir">
                   {category.name}
                 </h3>
                 <p className="text-xs md:text-sm leading-relaxed font-itc-souvenir mb-2 text-gray-600">

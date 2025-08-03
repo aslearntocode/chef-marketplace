@@ -68,14 +68,14 @@ export default function Home() {
         
         // Map category to route
         const categoryRoutes: { [key: string]: string } = {
-          'drinks': '/whole-foods/categories/drinks',
-          'healthy treats': '/whole-foods/categories/healthy-treats',
-          'pickles & condiments': '/whole-foods/categories/pickles',
-          'healthy bites': '/whole-foods/categories/healthy-bites',
-          'spice blends': '/whole-foods/categories/spice-blends',
-          'nuts and seeds': '/whole-foods/categories/nuts-and-seeds',
-          'healthy breakfast': '/whole-foods/categories/healthy-breakfast',
-          'All Natural Pickles': '/whole-foods/categories/pickles'
+          'drinks': '/categories/drinks',
+          'healthy treats': '/categories/healthier-treats',
+          'pickles & condiments': '/categories/pickles',
+          'healthy bites': '/categories/healthier-bites',
+          'spice blends': '/categories/spice-blends',
+          'nuts and seeds': '/categories/nuts-and-seeds',
+          'healthy breakfast': '/categories/healthier-breakfast',
+          'All Natural Pickles': '/categories/pickles'
         };
 
         // If we have a matching category route, go there with the search query
@@ -93,7 +93,27 @@ export default function Home() {
   };
 
   const handleSuggestionClick = (product: any) => {
-    router.push(`/whole-foods/${product.id}`);
+    // Determine the correct category route based on product category
+    const categoryRoutes: { [key: string]: string } = {
+      'drinks': '/categories/drinks',
+      'healthy treats': '/categories/healthier-treats',
+      'pickles & condiments': '/categories/pickles',
+      'healthy bites': '/categories/healthier-bites',
+      'spice blends': '/categories/spice-blends',
+      'nuts and seeds': '/categories/nuts-and-seeds',
+      'healthy breakfast': '/categories/healthier-breakfast',
+      'All Natural Pickles': '/categories/pickles'
+    };
+    
+    const productCategory = product.category.toLowerCase();
+    const categoryRoute = categoryRoutes[productCategory];
+    
+    if (categoryRoute) {
+      router.push(`${categoryRoute}/${product.id}`);
+    } else {
+      // Fallback to whole-foods if category not found
+      router.push(`/whole-foods/${product.id}`);
+    }
     setShowSuggestions(false);
   };
 
@@ -102,25 +122,25 @@ export default function Home() {
       title: "Discover Refreshing Healthy Drinks",
       description: "Experience the taste of homemade goodness delivered to your doorstep",
       buttonText: "Explore Now",
-      link: "/whole-foods/categories/healthier-beverages"
+      link: "/categories/healthier-beverages"
     },
     {
-      title: "Healthy Bites!",
-      description: "Discover our nutritious range of healthy bites - perfect for guilt-free snacking!",
+      title: "Healthier Bites!",
+      description: "Discover our nutritious range of healthier bites - perfect for guilt-free snacking!",
       buttonText: "Explore Now",
-      link: "/whole-foods/categories/healthy-bites"
+      link: "/categories/healthier-bites"
     },
     {
       title: "New Arrivals!",
       description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
       buttonText: "Explore Now",
-      link: "/whole-foods/categories/pickles"
+      link: "/categories/pickles"
     },
     {
       title: "All Natural Spice Blends",
       description: "Discover our premium collection of handcrafted spice blends - perfect for elevating your culinary creations!",
       buttonText: "Explore Now",
-      link: "/whole-foods/categories/spice-blends"
+      link: "/categories/spice-blends"
     }
   ];
 
@@ -253,61 +273,61 @@ export default function Home() {
                 {/* Category Buttons Grid */}
                 <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
                   <Link
-                    href="/whole-foods/categories/healthy-treats"
+                    href="/categories/healthier-treats"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Healthier Treats
                   </Link>
                   <Link
-                    href="/whole-foods/categories/drinks"
+                    href="/categories/healthier-beverages"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Healthier Beverages
                   </Link>
                   <Link
-                    href="/whole-foods/categories/healthy-bites"
+                    href="/categories/healthier-bites"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
-                    Healthy Bites
+                    Healthier Bites
                   </Link>
                   <Link
-                    href="/whole-foods/categories/pickles"
+                    href="/categories/pickles"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Pickles & Condiments
                   </Link>
                   <Link
-                    href="/whole-foods/categories/healthy-breakfast"
+                    href="/categories/healthier-breakfast"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Healthier Breakfast
                   </Link>
                   <Link
-                    href="/whole-foods/categories/spice-blends"
+                    href="/categories/spice-blends"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Spice Blends
                   </Link>
                   <Link
-                    href="/whole-foods/categories/nuts-and-seeds"
+                    href="/categories/nuts-and-seeds"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Nuts & Seeds
                   </Link>
                   <Link
-                    href="/whole-foods/categories/healthy-cakes"
+                    href="/categories/healthier-cakes"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Healthier Cakes
                   </Link>
                   <Link
-                    href="/whole-foods/categories/healthier-premixes"
+                    href="/categories/healthier-premixes"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Healthier Premixes
                   </Link>
                   <Link
-                    href="/whole-foods/categories/sauces-and-dressings"
+                    href="/categories/sauces-and-dressings"
                     className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
                   >
                     Sauces & Dressings
@@ -500,14 +520,14 @@ export default function Home() {
                 <div className="slider flex">
                   {/* First set of items */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
-                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
-                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/whole-foods/67' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
+                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (
                     <Link 
                       key={`first-${index}`} 
@@ -532,14 +552,14 @@ export default function Home() {
 
                   {/* Second set - duplicate of first set */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
-                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
-                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/whole-foods/67' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
+                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (
                     <Link 
                       key={`second-${index}`} 
@@ -564,14 +584,14 @@ export default function Home() {
 
                   {/* Third set - duplicate of first set for seamless loop */}
                   {[
-                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/whole-foods/8' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/whole-foods/3' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/whole-foods/4' },
-                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/whole-foods/5' },
+                    { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
+                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/whole-foods/35' },
-                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/whole-foods/13' },
-                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/whole-foods/67' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
+                    { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (
                     <Link 
                       key={`third-${index}`} 
