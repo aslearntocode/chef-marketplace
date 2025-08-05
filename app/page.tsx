@@ -388,7 +388,7 @@ export default function Home() {
         {/* Why The Divine Hands Section */}
         <section className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-stretch">
               {/* Left side - Text */}
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
@@ -421,17 +421,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Right side - Image */}
-              <div className="relative h-[400px] rounded-lg overflow-hidden hidden md:block">
-                <Image
-                  src="/images/wholewheatjaggery-gurpaara/NNs_44.jpg"
-                  alt="The Divine Hands Story"
-                  fill
-                  className="object-cover"
-                  priority
-                />
               </div>
             </div>
           </div>
