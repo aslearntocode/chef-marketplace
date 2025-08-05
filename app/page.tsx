@@ -185,7 +185,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between pt-0 bg-[#FDBE28]">
       <div className="w-full font-nunito">
         {/* Search Section */}
-        <section className="bg-[#FDBE28] py-4 px-4 mt-8 md:mt-4 relative z-10">
+        <section className="bg-[#FDBE28] py-4 px-4 mt-8 md:mt-4 relative z-50">
           <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSearch} className="relative flex gap-2 z-20">
               <div className="relative flex-1">
@@ -204,7 +204,7 @@ export default function Home() {
                 
                 {/* Search Suggestions Dropdown */}
                 {showSuggestions && searchQuery && (
-                  <div className="absolute z-50 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto">
+                  <div className="absolute z-[9999] w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-y-auto">
                     {filteredProducts.length > 0 ? (
                       filteredProducts.map((product) => (
                         <div
