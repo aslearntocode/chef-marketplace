@@ -521,11 +521,11 @@ export default function Home() {
                   {/* First set of items */}
                   {[
                     { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    // { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dry-fruits-laddoos' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-bites/millet-cookies-multiple-flavors' },
                     { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
                     { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (
@@ -553,11 +553,11 @@ export default function Home() {
                   {/* Second set - duplicate of first set */}
                   {[
                     { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    // { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dry-fruits-laddoos' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-bites/millet-cookies-multiple-flavors' },
                     { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
                     { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (
@@ -585,11 +585,11 @@ export default function Home() {
                   {/* Third set - duplicate of first set for seamless loop */}
                   {[
                     { src: '/images/dateandnutbites/NNs_80.jpg', name: 'Date and Nut Bites', price: '₹299', path: '/categories/healthier-treats/date-nut-bites' },
-                    { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
-                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dryfruits-ladoo' },
+                    // { src: '/images/SUGAR FREE DATES AND PEANUT LADDOO.jpeg', name: 'Sugar Free Dates and Peanut Ladoo', price: '₹399', path: '/categories/healthier-treats/sugar-free-dates-and-peanut-ladoo' },
+                    { src: '/images/Sugar Free Dryfruits laddoo.jpeg', name: 'Sugar Free Dryfruits Ladoo', price: '₹349', path: '/categories/healthier-treats/sugar-free-dry-fruits-laddoos' },
                     { src: '/images/images-drinks/Paan-e-bahar/amazon-06.jpg', name: 'Paan-e-bahar', price: '₹149', path: '/categories/healthier-beverages/paan-e-bahar' },
                     // { src: '/images/images-drinks/Soothing Sauf/amazon-11.jpg', name: 'Soothing Sauf', price: '₹149', path: '/whole-foods/6' },
-                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-treats/millet-cookies' },
+                    { src: '/images/milletcookies/can/DSC03949.jpg', name: 'Millet Cookies', price: '₹399', path: '/categories/healthier-bites/millet-cookies-multiple-flavors' },
                     { src: '/images/wholewheatajwainmathri/MZ8_0752.jpg', name: 'Whole Wheat Ajwain Mathri', price: '₹156', path: '/categories/healthier-bites/whole-wheat-ajwain-mathri' },
                     { src: '/images/khakhras2/IMG_10.png', name: 'Mint (Pudina) Khakhra', price: '₹156', path: '/categories/healthier-bites/mint-pudina-khakhra' },
                   ].map((item, index) => (

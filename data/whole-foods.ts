@@ -4117,9 +4117,9 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'delicate-thai-jasmine-and-kashmiri-kahwa-tea',
-      name: 'Delicate Thai Jasmine and Kashmiri Kahwa Tea',
-      description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and spices to transport you to the heart of Thailand. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Jasmine and Kashmiri Kahwa. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
+      id: 'delicate-thai-jasmine-tea',
+      name: 'Delicate Thai Jasmine Tea',
+      description: `Ultra-Fresh, All-natural, No artificial additives/chemicals! A small batch- master blended tea! This batch is blended just for your cup for maximum flavour retention. Blended with the most high-quality leaves and spices to transport you to the heart of Thailand. Enjoy a cup after early dinner, evenings, or when you crave some sugary treats- This tea will for sure make you happier. The main tasting notes are that of Jasmine. It's a Great Entry level experimental Tea for Gen Z and Millennial tea enthusiasts!' 
         • HOW TO USE:
         Brewing style :- Hot and cold brews`,
         price: 600,
@@ -5442,7 +5442,251 @@ export const products: Product[] = [
           'Indian Spices (Fennel Seeds, Fenugreek Seeds, Cumin Seeds, Asafoetida)': [],
           'Iodized Salt': [],
           }
-        }          
+        },
+        {
+          id: 'ragi-choco-oats-millet-cookies',
+          name: 'Ragi Choco Oats Millet Cookies',
+          description: `Satisfy your sweet tooth with our Choco Oats Cookies, a delightful fusion of wholesome ingredients and rich chocolatey goodness.`,
+          price: 250,
+          image: '/images/chivda-cookies/Ragi Choco Oats Millet Cookie.png',
+          images: ['/images/chivda-cookies/Ragi Choco Oats Millet Cookie.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiercookies', 'authenticcookies', 'milletcookies', 'nochemicalfood', 'preservativefreecookiesi', 'makeinindia', 'nopreservatives', 'healthiermilletcookies', 'bettercookies', 'Ragioatscookies', 'Ragioatschocolatecookies', 'ragicookies'],
+          size: '170 gms',       
+          ingredients_benefits: {
+          'Millets (Ragi)': [
+          'Rich in Nutrients',
+          'High in Calcium, fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+           ],
+          'Oats': [
+          'Rich in dietary fibre: Helps lower bad cholesterol (LDL), supports heart health, promotes a feeling of fullness (good for weight control), helps regulate blood sugar levels',
+          'Heart healthy: Reduces total and LDL cholesterol, helps lower blood pressure, supports overall cardiovascular function',
+          ],
+          'Chickpea': [],
+          'Cocoa': [],
+          'Ghee': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'moringa-blueberry-millet-cookies',
+          name: 'Moringa Blueberry Millet Cookies',
+          description: `Discover the unique and nutritious delight of our Moringa Blueberry Cookies. These cookies are crafted with a blend of wholesome ingredients to provide a flavorful and healthy treat.`,
+          price: 295,
+          image: '/images/chivda-cookies/Moringa Blueberry Millet Cookie.png',
+          images: ['/images/chivda-cookies/Moringa Blueberry Millet Cookie.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiercookies', 'authenticcookies', 'nochemicalcookies', 'preservativefreecookies', 'makeinindia', 'nopreservatives', 'blueberrycookies', 'moringacookies', 'milletcookies'],
+          size: '170gms',
+          ingredients_benefits: {
+          'Millets (Jowar)': 
+          [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Almond Flour': [
+          'Gluten-Free: Ideal for those with celiac disease or gluten sensitivity, A great substitute for wheat flour in most recipes.',
+          'Low in Carbs, High in Healthy Fats: Suitable for low-carb and keto diets, Promotes stable blood sugar levels by reducing carb intake.',
+          ],
+          'Blueberry': [],
+          'Moringa': [],
+          'Ghee': [],
+          'Jaggery': [],
+          'Salt': [],
+          }
+        },
+        {
+          id: 'coconut-elaichi-millet-cookies',
+          name: 'Coconut Elaichi Millet Cookies',
+          description: `Coconut Elaichi Millet Cookies are a delightful fusion of traditional flavors and modern health-conscious ingredients. These cookies are crafted with a blend of wholesome ingredients to provide a flavorful and healthy treat.`,
+          price: 275, 
+          image: '/images/chivda-cookies/Coconut Elaichi Millet Cookie.png',
+          images: ['/images/chivda-cookies/Coconut Elaichi Millet Cookie.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiercookies', 'authenticcookies', 'coconutelaichimilletcookies', 'milletcookies', 'coconutmilletcookies', 'coconutelaichicookies', 'milletcookies', 'jowarcookies', 'coconutjowarcookies'],
+          size: '170gms',
+          ingredients_benefits: {
+          'Millets (Jowar)':
+          [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Grated Dry Coconut': 
+          [
+          'Rich in Healthy Fats: Contains medium-chain triglycerides (MCTs) like lauric acid, MCTs are easily digestible and quickly used by the body for energy, Supports brain function and metabolism',
+          'High in Dietary Fiber: Aids in digestion, Promotes regular bowel movements, Helps you feel full longer, which supports weight management',
+          ],
+          'Elaichi': [],
+          'Cashews': [],
+          'Ghee': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'jowar-almond-oats-cookies',
+          name: 'Jowar Almond Oats Cookies',
+          description: `Indulge in the wholesome goodness of our Jowar Almond Oats Cookies. These cookies are thoughtfully crafted using nutritious ingredients to offer a delightful and healthy treat.`,
+          price: 310,
+          image: '/images/chivda-cookies/Jowar Almond Oats Cookies.png',
+          images: ['/images/chivda-cookies/Jowar Almond Oats Cookies.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiercookies', 'authenticcookies', 'milletcookies', 'nochemicalcookies', 'preservativefreecookies', 'makeinindia', 'nopreservatives', 'nomaidacookies', 'nonfriedcookies', 'jowarcookies', 'almondoatscookies', 'milletcookiesreal' ],
+          size: '170gms', 
+          ingredients_benefits: {
+          'Millets (Jowar)': [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Oats': [
+          'Rich in dietary fibre: Helps lower bad cholesterol (LDL), supports heart health, promotes a feeling of fullness (good for weight control), helps regulate blood sugar levels',
+          'Heart healthy: Reduces total and LDL cholesterol, helps lower blood pressure, supports overall cardiovascular function',
+          ],
+          'Ghee': [],
+          'Almonds': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'dry-fruits-seeds-cookies',
+          name: 'Dry Fruits & Seeds cookies',
+          description: `Experience the wholesome and nutritious delight of our Dry Fruits & Seeds Cookies, thoughtfully crafted with a blend of nutrient-rich ingredients.`,
+          price: 290,
+          image: '/images/chivda-cookies/Dryfruits & Seeds Millet Cookies.png',
+          images: ['/images/chivda-cookies/Dryfruits & Seeds Millet Cookies.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiercookies', 'authenticcookies', 'milletcookies', 'nochemicalcookies', 'preservativefreecookies', 'makeinindia', 'nopreservatives', 'cookies', 'bettercookies', 'fibrouscookies', 'nomaidacookies', 'dryfruitscookies', 'seedscookies', 'jowarcookies', 'bajracookies', 'oatscookies'],
+          size: '170gms',
+          ingredients_benefits: {
+          'Millets (Bajra & Jowar)': [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Oats': [
+          'Rich in dietary fibre: Helps lower bad cholesterol (LDL), supports heart health, promotes a feeling of fullness (good for weight control), helps regulate blood sugar levels',
+          'Heart healthy: Reduces total and LDL cholesterol, helps lower blood pressure, supports overall cardiovascular function',
+          ],
+          'Almond Flour': [],
+          'Sesame, Flax Seeds & Chia Seeds': [],
+          'Dryfruits': [],
+          'Ghee': [],
+          'Jaggery': [],
+          }
+        },
+        {
+          id: 'roasted-jowar-flakes-chivda',
+          name: 'Roasted Jowar Flakes/Chivda’',
+          description: `Rolled & Roasted Jowar is delightfully crunchy, delicious & nutritious! It's a Gluten free & flavourful Snack. It is made with Groundnut oil with added herbs & spices!`,
+          price: 175,
+          image: '/images/chivda-cookies/Jowar Chivda.png',
+          images: ['/images/chivda-cookies/Jowar Chivda.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiersnacks', 'authenticchivda', 'milletchivda', 'nochemicalchivda', 'roastedchivda', 'makeinindia', 'nopreservatives', 'jowarchivda', 'sorghumchivda', 'roastednamkeen', 'milletnamkeen'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Millets (Jowar)':
+          [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Groundnut Oil': [
+          'Heart-Healthy Fats: Rich in monounsaturated fats (MUFA) and polyunsaturated fats (PUFA), which may help lower bad cholesterol (LDL) and increase good cholesterol (HDL). This supports cardiovascular health and may reduce the risk of heart diseases,',
+          'Rich in Vitamin E: A powerful antioxidant that helps Protect cells from damage, support skin health and reduce inflammation,',
+          ],
+          'Herbs & Spices': [],
+          }
+        },
+        {
+          id: 'roasted-bajra-flakes-chivda',
+          name: 'Roasted Bajra Flakes/Chivda',
+          description: `Rolled & Roasted Bajra is delightfully crunchy, delicious & nutritious! It's a Gluten free & flavourful Snack. It is made with Groundnut oil with added herbs & spices!`,
+          price: 175,
+          image: '/images/chivda-cookies/Bajra Chivda.png',
+          images: ['/images/chivda-cookies/Bajra Chivda.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiersnacks', 'authenticchivda', 'milletchivda', 'nochemicalchivda', 'roastedbajrachivda', 'makeinindia', 'nopreservatives', 'bajrachivda', 'healthierchivda', 'roastednamkeen', 'milletnamkeen', 'bajranamkeen'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Millets (Bajra)':
+          [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Groundnut Oil': [
+          'Heart-Healthy Fats: Rich in monounsaturated fats (MUFA) and polyunsaturated fats (PUFA), which may help lower bad cholesterol (LDL) and increase good cholesterol (HDL). This supports cardiovascular health and may reduce the risk of heart diseases,',
+          'Rich in Vitamin E: A powerful antioxidant that helps Protect cells from damage, support skin health and reduce inflammation,',
+          ],
+          'Mustard': [],
+          'Cumin': [],
+          'Peanuts': [],
+          'Curry Leaves': [],
+          'Spices': [],
+          'Salt': [],
+          'Khand': [],
+          }
+        },
+        {
+          id: 'roasted-ragi-flakes-chivda',
+          name: 'Roasted Ragi Flakes/Chivda',
+          description: `Rolled & Roasted Ragi is delightfully crunchy, delicious & nutritious! It's a Gluten free & flavourful Snack. It is made with Groundnut oil with added herbs & spices!`,
+          price: 195,
+          image: '/images/chivda-cookies/Ragi Chivda.png',
+          images: ['/images/chivda-cookies/Ragi Chivda.png'],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'healthiersnacks', 'authenticchivda', 'milletchivda', 'nochemicalchivda', 'roastedragichivda', 'makeinindia', 'nopreservatives', 'ragichivda', 'healthierchivda', 'roastednamkeen', 'milletnamkeen', 'raginamkeen'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Millets (Ragi)':
+          [
+          'Rich in Nutrients',
+          'High in fiber, protein, vitamins (especially B vitamins), and minerals like iron, magnesium, phosphorus, and potassium.',
+          'Gluten-Free',
+          'Safe for people with celiac disease or gluten intolerance.',
+          'Supports Digestive Health',
+          'High fiber content helps in preventing constipation and promoting a healthy gut microbiome',  
+          ],
+          'Groundnut Oil':
+          [
+          'Heart-Healthy Fats: Rich in monounsaturated fats (MUFA) and polyunsaturated fats (PUFA), which may help lower bad cholesterol (LDL) and increase good cholesterol (HDL). This supports cardiovascular health and may reduce the risk of heart diseases,',
+          'Rich in Vitamin E: A powerful antioxidant that helps Protect cells from damage, support skin health and reduce inflammation,',
+          ],
+          'garlic': [],
+          'mustard': [],
+          'cumin': [],
+          'Peanuts': [],
+          'Curry Leaves': [],
+          'Herbs & Spices': [],
+          'Salt': [],
+          'Khand': [],
+          }
+        }
     ];
   
     export default products; 
