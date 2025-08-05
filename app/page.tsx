@@ -131,10 +131,10 @@ export default function Home() {
       link: "/categories/healthier-bites"
     },
     {
-      title: "New Arrivals!",
-      description: "Check out our newly added spicy, tangy yet healthy pickles and chutneys!",
+      title: "Healthier Cookware!",
+      description: "Discover our premium collection of healthier cookware and serveware - perfect for your healthy lifestyle!",
       buttonText: "Explore Now",
-      link: "/categories/pickles"
+      link: "/cooking-accessories"
     },
     {
       title: "All Natural Spice Blends",
@@ -245,10 +245,21 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="relative w-full min-h-[600px] bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
+          {/* Mobile Background Image */}
+          <div className="md:hidden absolute inset-0 z-0">
+            <Image
+              src="/images/dateandnutbites/NNs_80.jpg"
+              alt="Delicious date and nut bites"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[600px]">
               {/* Left side - Image */}
-              <div className="relative h-[400px] md:h-[600px] order-2 md:order-1">
+              <div className="relative h-[400px] md:h-[600px] order-2 md:order-1 hidden md:block">
                 <Image
                   src="/images/dateandnutbites/NNs_80.jpg"
                   alt="Delicious date and nut bites"
@@ -259,76 +270,76 @@ export default function Home() {
               </div>
               {/* Right side - Text */}
               <div className="text-center md:text-right order-1 md:order-2">
-                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
+                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white md:text-[#8B4513] font-['YWFT_Hannah_Narrow'] mb-8">
                   <span className="md:hidden block pt-8">
-                    CRAVING FOR HEALTHY<br />YET TASTY FOOD?
+                    Craving For Healthy<br />Yet Tasty Food?
                   </span>
                   <span className="hidden md:inline">
-                    CRAVING FOR HEALTHY<br />YET TASTY FOOD?
+                    Craving For Healthy<br />Yet Tasty Food?
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-[#8B4513] mb-8">
+                <p className="text-lg md:text-xl text-white md:text-[#8B4513] mb-8">
                   Our products contain no preservatives, no artificial chemicals and are made of just natural and healthier ingredients
                 </p>
                 {/* Category Buttons Grid */}
                 <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
                   <Link
                     href="/categories/healthier-treats"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Treats
                   </Link>
                   <Link
                     href="/categories/healthier-beverages"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Beverages
                   </Link>
                   <Link
                     href="/categories/healthier-bites"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Bites
                   </Link>
                   <Link
                     href="/categories/pickles"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Pickles & Condiments
                   </Link>
                   <Link
                     href="/categories/healthier-breakfast"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Breakfast
                   </Link>
                   <Link
                     href="/categories/spice-blends"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Spice Blends
                   </Link>
                   <Link
                     href="/categories/nuts-and-seeds"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Nuts & Seeds
                   </Link>
                   <Link
                     href="/categories/healthier-cakes"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Cakes
                   </Link>
                   <Link
                     href="/categories/healthier-premixes"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Healthier Premixes
                   </Link>
                   <Link
                     href="/categories/sauces-and-dressings"
-                    className="bg-[#8B4513] text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-[#6B3410] transition-colors text-center"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Sauces & Dressings
                   </Link>
@@ -338,55 +349,41 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Hero Carousel */}
-        <div className="relative h-[400px] overflow-hidden bg-[#FDBE28]">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute w-full h-full transition-opacity duration-500 ${
-                currentSlide === index ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <div className="relative h-full">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center max-w-4xl px-4 relative pb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['YWFT_Hannah_Narrow'] text-[#8B4513]">{slide.title}</h2>
-                    <p className="text-xl md:text-2xl mb-8 text-[#8B4513]">{slide.description}</p>
-                    <div className="relative z-10">
-                      <a
-                        href={slide.link}
-                        className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg cursor-pointer"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          window.location.href = slide.link;
-                        }}
-                      >
-                        {slide.buttonText}
-                      </a>
-                    </div>
-                    {/* Carousel Navigation Dots */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
-                      {slides.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            setCurrentSlide(idx);
-                          }}
-                          className={`w-4 h-4 rounded-full transition-colors ${
-                            currentSlide === idx ? 'bg-[#8B4513]' : 'bg-[#8B4513]/30'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </div>
+        {/* New Arrivals - Healthier Cookware Section */}
+        <section className="bg-[#FDBE28] py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Left side - Text */}
+              <div className="text-center md:text-left">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['YWFT_Hannah_Narrow'] text-[#8B4513]">
+                  Healthier Cookware!
+                </h2>
+                <p className="text-xl md:text-2xl mb-8 text-[#8B4513]">
+                  Discover our premium collection of healthier cookware and serveware - perfect for your healthy lifestyle!
+                </p>
+                <div className="relative z-10">
+                  <Link
+                    href="/cooking-accessories"
+                    className="bg-[#8B4513] text-white px-10 py-4 rounded-full hover:bg-[#6B3410] transition-colors inline-block text-lg font-medium shadow-lg"
+                  >
+                    Explore Now
+                  </Link>
                 </div>
               </div>
+              
+              {/* Right side - Image */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden hidden md:block">
+                <Image
+                  src="/images/accessories/pinkheartmug/IMG_1.jpeg"
+                  alt="Healthier Cookware Collection"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
         {/* Why The Divine Hands Section */}
         <section className="bg-white py-16">
