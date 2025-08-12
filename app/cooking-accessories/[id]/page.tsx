@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         },
       ],
       locale: 'en_IN',
-      type: 'product',
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
