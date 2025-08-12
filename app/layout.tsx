@@ -55,7 +55,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://thedivinehands.com",
     siteName: "The Divine Hands",
     title: "The Divine Hands - Wholesome Food Products | Mumbai",
     description: "Discover pure, wholesome, chemical-free food products curated by talented artisans across India. Shop healthy treats, drinks, pickles, and more.",
