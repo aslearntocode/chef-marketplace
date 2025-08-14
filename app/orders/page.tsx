@@ -3,18 +3,19 @@
 import { useEffect, useState } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useAuth } from '@/context/AuthContext';
+import ProductRating from '@/components/ProductRating';
 
 interface Order {
   id: string;
   created_at: string;
   items: Array<{
+    id: string;
     name: string;
     price: number;
     quantity: number;
   }>;
   total_amount: number;
   status: string;
-  rating?: number;
   vendor_id?: string;
   vendor_name: string;
   delivery_address: {
@@ -34,65 +35,7 @@ export default function OrdersPage() {
   const supabase = createClientComponentClient();
   const { user } = useAuth();
 
-  const handleRating = async (orderId: string, rating: number) => {
-    try {
-      console.log('Attempting to update rating:', { orderId, rating, userId: user?.uid });
 
-      // First verify we can fetch the order
-      const { data: orderCheck, error: checkError } = await supabase
-        .from('orders')
-        .select('*')
-        .eq('id', orderId)
-        .single();
-
-      if (checkError) {
-        console.error('Error checking order:', checkError);
-        throw checkError;
-      }
-
-      console.log('Found order:', orderCheck);
-
-      // Get the vendor_id from the order items
-      const vendorId = orderCheck.items?.[0]?.chefId || 
-                      orderCheck.items?.[0]?.bakerId || 
-                      orderCheck.items?.[0]?.vendorId;
-
-      // Update with rating and vendor_id
-      const { data, error } = await supabase
-        .from('orders')
-        .update({ 
-          rating,
-          vendor_id: vendorId?.toString()
-        })
-        .eq('id', orderId)
-        .select()
-        .single();
-
-      if (error) {
-        console.error('Supabase update error:', {
-          message: error.message,
-          details: error.details,
-          hint: error.hint,
-          code: error.code
-        });
-        throw error;
-      }
-      
-      console.log('Successfully updated rating:', data);
-
-      if (data) {
-        setOrders(orders.map(order => 
-          order.id === orderId ? { ...order, rating } : order
-        ));
-      }
-    } catch (error) {
-      console.error('Error updating rating:', {
-        message: error instanceof Error ? error.message : 'Unknown error',
-        name: error instanceof Error ? error.name : undefined,
-        stack: error instanceof Error ? error.stack : undefined
-      });
-    }
-  };
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -170,11 +113,21 @@ export default function OrdersPage() {
 
             <div className="border-t pt-4">
               <h3 className="font-semibold mb-2">Items</h3>
-              <div className="space-y-2">
+              <div className="space-y-4">
                 {order.items.map((item, index) => (
-                  <div key={index} className="flex justify-between">
-                    <span>{item.name} × {item.quantity}</span>
-                    <span>₹{item.price * item.quantity}</span>
+                  <div key={index} className="border rounded-lg p-3">
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="font-medium">{item.name} × {item.quantity}</span>
+                      <span className="font-semibold">₹{item.price * item.quantity}</span>
+                    </div>
+                    {/* Product Rating */}
+                    <ProductRating 
+                      productId={item.id} 
+                      orderId={order.id}
+                      showRatingInput={true}
+                      showDetailedBreakdown={false}
+                      className="mt-2"
+                    />
                   </div>
                 ))}
               </div>
@@ -192,29 +145,7 @@ export default function OrdersPage() {
               </p>
             </div>
 
-            <div className="border-t mt-4 pt-4">
-              <h3 className="font-semibold mb-2">Rate Your Order</h3>
-              <div className="flex items-center gap-2">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <button
-                    key={star}
-                    onClick={() => handleRating(order.id, star)}
-                    className={`text-2xl ${
-                      order.rating && star <= order.rating
-                        ? 'text-yellow-400'
-                        : 'text-gray-300'
-                    }`}
-                  >
-                    ★
-                  </button>
-                ))}
-                {order.rating && (
-                  <span className="text-sm text-gray-600 ml-2">
-                    ({order.rating} stars)
-                  </span>
-                )}
-              </div>
-            </div>
+
           </div>
         ))}
       </div>

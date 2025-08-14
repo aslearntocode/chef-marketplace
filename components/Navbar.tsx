@@ -109,7 +109,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed w-full z-50">
+    <header className="fixed w-full" style={{ zIndex: 9999 }}>
       {/* Top Banner */}
       <div className="bg-black py-2 px-4 text-center font-bold">
         <p className="text-[#FDBE28] text-lg">
@@ -157,7 +157,7 @@ export default function Navbar() {
                         </svg>
                       </button>
                       {activeDropdown === link.id && (
-                        <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+                        <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" style={{ zIndex: 10000 }}>
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.href}

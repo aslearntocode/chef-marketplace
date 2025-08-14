@@ -10,6 +10,7 @@ import { Product } from '@/types/whole-foods';
 import { FiChevronDown, FiChevronUp, FiChevronLeft, FiChevronRight, FiX, FiZoomIn, FiArrowLeft } from 'react-icons/fi';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import ProductRating from '@/components/ProductRating';
 
 interface ProductPageClientProps {
   params: Promise<{
@@ -261,6 +262,15 @@ export default function ProductPageClient({ params }: ProductPageClientProps) {
                 <p className="text-sm text-gray-600 mt-2">
                   {selectedSize ? `Size: ${selectedSize.name}` : (product.size ? `Size: ${product.size}` : '')}
                 </p>
+                
+                {/* Product Rating */}
+                <div className="mt-4">
+                  <ProductRating 
+                    productId={product.id}
+                    showRatingInput={false}
+                    showDetailedBreakdown={true}
+                  />
+                </div>
               </div>
 
               {/* Variant Selectors */}

@@ -9,6 +9,7 @@ import { Product } from '@/types/whole-foods';
 import { toast } from 'react-hot-toast';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FiSearch } from 'react-icons/fi';
+import ProductRating from '@/components/ProductRating';
 
 interface CategoryPageProps {
   category: string;
@@ -300,6 +301,16 @@ export default function CategoryPage({ category, products, basePath = '/whole-fo
                 <div className="flex flex-col flex-1">
                   <h3 className="text-base font-semibold text-gray-800 line-clamp-2 min-h-[40px]">{product.name}</h3>
                   <p className="text-gray-600 text-xs line-clamp-2 min-h-[32px] mb-3">{product.description.split('•')[0]}</p>
+                  
+                  {/* Product Rating */}
+                  <div className="mb-2">
+                    <ProductRating 
+                      productId={product.id}
+                      showRatingInput={false}
+                      showDetailedBreakdown={false}
+                    />
+                  </div>
+                  
                   {/* Display size information */}
                   <p className="text-sm text-gray-500 mb-2">
                     {product.size ? `Size: ${product.size}` : ''}

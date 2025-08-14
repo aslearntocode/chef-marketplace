@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { FiSearch } from 'react-icons/fi';
 import { products } from '@/data/whole-foods';
+import ProductRating from '@/components/ProductRating';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -223,6 +224,14 @@ export default function Home() {
                           <div>
                             <div className="font-medium text-gray-900">{product.name}</div>
                             <div className="text-sm text-gray-500">{product.category}</div>
+                            {/* Product Rating */}
+                            <div className="mt-1">
+                              <ProductRating 
+                                productId={product.id}
+                                showRatingInput={false}
+                                showDetailedBreakdown={false}
+                              />
+                            </div>
                           </div>
                         </div>
                       ))
