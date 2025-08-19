@@ -5685,7 +5685,157 @@ export const products: Product[] = [
           'Salt': [],
           'Khand': [],
           }
+        },
+        {
+          id: 'hazelnut-chocolate-spread',
+          name: 'Hazelnut Chocolate Spread',
+          description: `USP: 70% Nuts | Stone Ground l Refined Sugar-Free Couverture (real) Chocolate | Sweetened with Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil, No Emulsifier. 
+          Indulge in the rich, velvety taste of our Hazelnut Chocolate Spread, crafted with a remarkable 70% wholesome nuts for maximum nutty goodness. We use only refined sugar-free couverture chocolate for a smooth, luxurious texture, naturally sweetened with Coconut Sugar.
+          Perfect for breakfast, baking, smoothies, or guilt-free snacking — spread it, drizzle it, or enjoy it straight from the spoon!
+          Real flavour. No shortcuts. Just pure goodness.`,
+          price: 550,
+          image: '/images/hazelnutchocolatespread/IMG_1.jpg',
+          images: ['/images/hazelnutchocolatespread/IMG_1.jpg',
+            '/images/hazelnutchocolatespread/IMG_2.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierspread', 'authenticchocolatespread', 'hazelnutspread', 'nochemicalspread', 'preservativefreecondiment', 'makeinindia', 'nopalmoilspreads', 'nopalmoilproduct', 'bettercondiment', 'betterspreads', 'realingredientscondiment', 'realspread', 'chocolatespread', 'indiantalent', 'betterfoods'],
+          size: '200gms', 
+          ingredients_benefits: {
+          'Almonds': [
+          'Heart Health- Lower bad cholesterol (LDL): Almonds can help reduce LDL cholesterol and increase HDL (good cholesterol).',
+          'Anti-inflammatory & antioxidant properties from vitamin E and healthy fats support cardiovascular health.',
+          'Rich in vitamin E, riboflavin, and L-carnitine, which are linked to cognitive function.,',
+          ],
+          'Hazelnuts': [
+          'Heart Health- Rich in monounsaturated fats, which help lower LDL (bad) cholesterol and increase HDL (good) cholesterol.',
+          'Contain antioxidants like vitamin E and phenolic compounds that reduce inflammation and oxidative stress, supporting heart function.,',
+          ],
+          'Refined Sugarfree Couverture Chocolate': [],
+          'Coconut sugar and Cocoa powder': [],
+          }
+        },
+        {
+          id: 'peanut-butter-sweetened-with-coconut-sugar',
+          name: 'Peanut Butter Sweetened with Coconut Sugar',
+          description: `USP: 80% Peanuts | Stone Ground l No Refined Sugar| Sweetened with Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil, No Emulsifier
+          Our Peanut Butter combines the smoothness of freshly roasted peanuts with the naturally nutty sweetness of Coconut Sugar. The result is a velvety spread that is both irresistibly indulgent and nourishing for your body (no need for any added oils or emulsifiers). 
+          Not just any condiment, this is nutty goodness in a jar.,`,
+          price: 250,
+          image: '/images/peanut butter coconut sugar.jpg',
+          images: ['/images/peanut butter coconut sugar.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Roasted Organic Peanuts': [
+          'Heart Health- High in monounsaturated and polyunsaturated fats, which help, lower bad cholesterol (LDL) and raise good cholesterol (HDL)',
+          'Contain resveratrol, a plant compound also found in red wine, linked to improved heart health.,',
+          ],
+          'Coconut Sugar': [
+          'Lower Glycemic Index (GI)- Glycemic Index of ~35 (vs. 60–65 for regular sugar)- This means it causes a slower rise in blood sugar, making it a better option for people watching their blood sugar levels.',
+          'Less Processed- Made through minimal processing: sap is collected, boiled, and crystallized — no bleaching or chemical refining. No artificial additives or preservatives, especially in organic versions.,',
+          ],
+          'Rock Salt': [],
+          }
+        },
+        {
+          id: 'chocolate-peanut-butter',
+          name: 'Chocolate Peanut Butter',
+          description: `USP: 70% Peanuts | Stone Ground l Refined Sugar-Free Couverture Chocolate | Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil, No Emulsifier.
+          'Satisfy your chocolate cravings without compromising on health. Our Chocolate Peanut Butter is made with 70% organic peanuts, refined sugar-free couverture (real) chocolate, and the natural sweetness of organic coconut sugar.
+          Smooth, rich, and irresistibly indulgent, it’s a sure-hit among chocoholics. 100% gluten-free, vegan, and dairy-free, with no palm oil or preservatives — just pure, clean indulgence in every spoonful.,`,
+          price: 275,
+          image: '/images/chocolate-peanut-butter.jpg',
+          images: ['/images/chocolate-peanut-butter.jpg'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'chocolatepeanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'homemadepickle', 'realingredientsbutter', 'realbutter', 'chocolatebutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Roasted Organic Peanuts': [
+          'Heart Health- High in monounsaturated and polyunsaturated fats, which help, lower bad cholesterol (LDL) and raise good cholesterol (HDL)',
+          'Contain resveratrol, a plant compound also found in red wine, linked to improved heart health.,',
+          ],
+          'Refined Sugar-free Couverture Chocolate': [
+          'No Refined Sugar- Avoids white sugar, which is highly processed and spikes blood sugar.',
+          'Often sweetened with:',
+          'Natural sweeteners (e.g., coconut sugar, jaggery), Plant-based alternatives (e.g., stevia, monk fruit).,',
+          ],
+          'Cocoa Powder': [],
+          'Rock Salt': [],
         }
-    ];
+        },
+        {
+          id: 'chocolate-almond-butter',
+          name: 'Chocolate Almond Butter',
+          description: `USP: 70% Almond | Refined Sugar-Free Couverture Chocolate | Sweetened with Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil, No Emulsifier.
+          Indulge in nutty, chocolatey perfection with our Chocolate Almond Butter, crafted with a generous 70% premium almonds. Sweetened naturally with organic coconut sugar and blended with refined sugar-free couverture chocolate, it delivers a rich, smooth taste with a hint of rock salt for balance.
+          A scrumptious yet healthy choice for breakfast, snacks, or guilt-free desserts — with no palm oil or preservatives.,`,
+          price: 480,
+          image: '/images/Almond Chocolate Butter.jpg',
+          images: ['/images/Almond Chocolate Butter.jpg'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'chocolatealmondbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms', 
+          ingredients_benefits: {
+          'Almonds': [
+          'Heart Health- Rich in monounsaturated fats – help lower bad LDL cholesterol and raise good HDL cholesterol',
+          'Contain vitamin E and antioxidants that reduce inflammation and oxidative stress in blood vessels.,',
+          ],
+          'Organic Coconut Sugar': [
+          'Lower Glycemic Index (GI)- Coconut sugar has a GI of ~35, compared to ~60–65 for refined white sugar. A lower GI means slower absorption, causing smaller spikes in blood sugar and insulin.,',
+          'Minimal processing: the sap is simply boiled and dried, without bleaching or refining.,',
+          ],
+          'Refined Sugar-Free Couverture Chocolate': [],
+          'Rock Salt': [],
+          }
+        },
+        {
+          id: 'almond-butter',
+          name: 'Almond Butter',
+          description: `USP: 80% Almond for rich flavour & nutrition | No Refined Sugar | Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil, No Emulsifier
+          Savor the pure, wholesome goodness of our 3-Ingredient Almond Butter, made with a generous 80% premium almonds, lightly sweetened with organic coconut sugar, and a pinch of rock salt to enhance flavor.
+          Perfect for adding a nutritious boost to your smoothies, breakfast bowls, or snacks — this simple, clean-label spread contains no additives, no preservatives, and no palm oil. Just pure, natural almond bliss.,`,
+          price: 450,
+          image: '/images/almond butter.jpg',
+          images: ['/images/almond butter.jpg'],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms', 
+          ingredients_benefits: {
+          'Almonds': [
+          'Heart Health- Rich in monounsaturated fats – help lower bad LDL cholesterol and raise good HDL cholesterol',
+          'Contain vitamin E and antioxidants that reduce inflammation and oxidative stress in blood vessels.,',
+          ],
+          'Organic Coconut Sugar': [
+          'Lower Glycemic Index (GI)- Coconut sugar has a GI of ~35, compared to ~60–65 for refined white sugar. A lower GI means slower absorption, causing smaller spikes in blood sugar and insulin.,',
+          'Minimal processing: the sap is simply boiled and dried, without bleaching or refining.,',
+          ],
+          'Rock Salt': [],
+          }
+        },
+        {
+          id: 'unsweetened-peanut-butter',
+          name: 'Unsweetened Peanut Butter',
+          description: `USP: 100% Peanuts for rich flavour & nutrition | No Refined Sugar| Sweetened with Low GI Coconut Sugar | No Palm Oil, No Preservatives, No Added Oil.
+          You have to try it to believe it! Our super silky and smooth peanut butter is crafted with just one ingredient — premium, high-quality peanuts. No added oils, sugars, or emulsifiers — simply pure peanut goodness in every creamy spoonful.
+          Perfect for those who love natural, wholesome spreads that deliver rich flavor and nutrition without any compromises.,`,
+          price: 200,
+          image: '/images/unsweetendpeanutbutter/IMG_1.jpg',
+          images: ['/images/unsweetendpeanutbutter/IMG_1.jpg',
+            '/images/unsweetendpeanutbutter/IMG_2.jpg'
+          ],
+          category: 'Pickles & Condiments',
+          tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Peanuts': [
+          'Heart Health- High in monounsaturated and polyunsaturated fats, which help, lower bad cholesterol (LDL) and raise good cholesterol (HDL)',
+          'Contain resveratrol, a plant compound also found in red wine, linked to improved heart health.,',
+          ],
+          }
+        },
+      ];
   
     export default products; 

@@ -24,24 +24,46 @@ export const getBaseProductIdFromCartItem = (cartItemId: string): string => {
   // Split by hyphens and take the first part as the base product ID
   const parts = cartItemId.split('-');
   
-  // Common variant indicators that should be removed
-  const variantIndicators = [
-    'broken', 'split', 'small', 'medium', 'large', 'jumbo',
-    'regular', 'premium', 'organic', 'natural', 'traditional',
-    'mild', 'spicy', 'sweet', 'sour', 'chocolate', 'vanilla',
-    'strawberry', 'mint', 'lemon', 'orange', 'apple'
-  ];
-  
-  // If the last parts match variant indicators, remove them
-  let baseId = parts[0];
-  for (let i = 1; i < parts.length; i++) {
-    if (variantIndicators.includes(parts[i].toLowerCase())) {
-      break;
-    }
-    baseId += '-' + parts[i];
+  // If we have less than 2 parts, it's already a base product ID
+  if (parts.length < 2) {
+    return cartItemId;
   }
   
-  return baseId;
+  // Try to find the base product by checking if the first part exists in our products
+  // This is more reliable than hardcoded variant names
+  try {
+    // Dynamic import to get products data
+    if (!(getBaseProductIdFromCartItem as any).productCache) {
+      import('@/data/whole-foods').then(({ products }) => {
+        (getBaseProductIdFromCartItem as any).productCache = products;
+      });
+    }
+    
+    const products = (getBaseProductIdFromCartItem as any).productCache || [];
+    
+    // Check if the first part is a valid product ID
+    const firstPart = parts[0];
+    const isValidProduct = products.some((p: any) => p.id === firstPart);
+    
+    if (isValidProduct) {
+      return firstPart;
+    }
+    
+    // If first part isn't a valid product, try combining parts until we find a valid product
+    for (let i = 1; i < parts.length; i++) {
+      const potentialBaseId = parts.slice(0, i + 1).join('-');
+      const isValidProduct = products.some((p: any) => p.id === potentialBaseId);
+      
+      if (isValidProduct) {
+        return potentialBaseId;
+      }
+    }
+  } catch (error) {
+    console.warn('Could not validate product ID, using fallback logic:', error);
+  }
+  
+  // Fallback: Use the first part as base ID (original logic)
+  return parts[0];
 };
 
 // Function to get all possible cart item IDs for a base product

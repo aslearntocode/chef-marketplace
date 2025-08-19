@@ -5,33 +5,41 @@
 ALTER TABLE product_ratings DROP CONSTRAINT IF EXISTS product_ratings_product_id_user_id_order_id_key;
 
 -- Step 2: Create a function to extract base product ID from any variant ID
+-- This function uses a more intelligent approach that doesn't rely on hardcoded variant names
 CREATE OR REPLACE FUNCTION extract_base_product_id(variant_id TEXT)
 RETURNS TEXT AS $$
 DECLARE
   parts TEXT[];
   base_id TEXT;
   i INTEGER;
-  variant_indicators TEXT[] := ARRAY[
-    'broken', 'split', 'small', 'medium', 'large', 'jumbo',
-    'regular', 'premium', 'organic', 'natural', 'traditional',
-    'mild', 'spicy', 'sweet', 'sour', 'chocolate', 'vanilla',
-    'strawberry', 'mint', 'lemon', 'orange', 'apple',
-    'extra', 'light', 'dark', 'white', 'black', 'red', 'green',
-    'blue', 'yellow', 'pink', 'purple', 'brown', 'gray'
-  ];
+  potential_base_id TEXT;
+  -- We'll use a more flexible approach that looks for common patterns
+  -- but doesn't fail on unknown variant names
 BEGIN
   -- Split by hyphens
   parts := string_to_array(variant_id, '-');
+  
+  -- If we have less than 2 parts, it's already a base product ID
+  IF array_length(parts, 1) < 2 THEN
+    RETURN variant_id;
+  END IF;
+  
+  -- Start with the first part
   base_id := parts[1];
   
-  -- Check each part to see if it's a variant indicator
+  -- Try to build a valid base product ID by combining parts
+  -- until we can't add more without it looking like a variant
   FOR i IN 2..array_length(parts, 1) LOOP
-    IF parts[i] = ANY(variant_indicators) THEN
-      -- Found a variant indicator, stop here
+    potential_base_id := base_id || '-' || parts[i];
+    
+    -- Check if this looks like a variant (common patterns)
+    -- If it's a single word that could be a variant, stop here
+    IF parts[i] ~ '^[a-zA-Z]+$' AND length(parts[i]) <= 10 THEN
+      -- This could be a variant, stop building the base ID
       EXIT;
     ELSE
-      -- Not a variant indicator, keep building the base ID
-      base_id := base_id || '-' || parts[i];
+      -- This looks like part of the product name, keep it
+      base_id := potential_base_id;
     END IF;
   END LOOP;
   
