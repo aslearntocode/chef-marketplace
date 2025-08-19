@@ -175,10 +175,21 @@ export default function ProductPage({ params }: ProductPageProps) {
   };
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FDBE28]">
+    <main className="mt-4 min-h-screen bg-[#FDBE28]">
       <div className="max-w-7xl mx-auto px-4 md:scale-90 md:origin-top">
         {/* Mobile Back Button */}
         <div className="md:hidden py-4">
+          <button
+            onClick={() => router.back()}
+            className="inline-flex items-center gap-2 text-[#8B4513] hover:text-[#6B3410] bg-white rounded-full px-4 py-2 shadow-sm transition-colors"
+          >
+            <FiArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back</span>
+          </button>
+        </div>
+
+        {/* Desktop Back Button */}
+        <div className="hidden md:block py-4">
           <button
             onClick={() => router.back()}
             className="inline-flex items-center gap-2 text-[#8B4513] hover:text-[#6B3410] bg-white rounded-full px-4 py-2 shadow-sm transition-colors"

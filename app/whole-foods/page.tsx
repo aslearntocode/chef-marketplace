@@ -33,9 +33,9 @@ const categories = [
     description: 'Wholesome snacks perfect for any time of day'
   },
   {
-    id: 'pickles',
-    name: 'Pickles & Condiments',
-    route: '/categories/pickles',
+    id: 'condiments',
+    name: 'Condiments',
+    route: '/categories/condiments',
     description: 'Traditional pickles and chutneys made with authentic recipes'
   },
   {

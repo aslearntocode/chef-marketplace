@@ -201,7 +201,7 @@ export const products: Product[] = [
           '/images/jaggerymangopickle/MZ8_0635.jpg',
           '/images/jaggerymangopickle/MZ8_0640.jpg'
         ],
-        category: 'Pickles & Condiments',
+        category: 'Condiments',
         tags: ['pickle', 'jaggery', 'mango', 'pickle', 'healthy', 'indian pickle', 'indian pickles', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'aamkaachaar', 'mangopickle', 'rawmangopickle', 'chundo', 'chunda', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle'],
         size: '200gms'
     },
@@ -257,7 +257,7 @@ export const products: Product[] = [
           '/images/traditionallemonpickle/DSC_8886.jpg',
           '/images/traditionallemonpickle/DSC_8885-Edit.jpg'
         ],
-        category: 'Pickles & Condiments',
+        category: 'Condiments',
         tags: ['pickle', 'lemon', 'pickle', 'healthy', 'indian pickle', 'indian pickles'],
         size: '200gms'
     },
@@ -349,7 +349,7 @@ export const products: Product[] = [
           '/images/sweetandspicymangochutney/IMG_6.jpg',
           '/images/sweetandspicymangochutney/IMG_7.jpg'
         ],
-        category: 'Pickles & Condiments',
+        category: 'Condiments',
         tags: ['naturalchutney', 'traditionalpickle', 'traditionalrecipe', 'aamchutney', 'mangochutney', 'rawmangopickle', 'chundo', 'chunda', 'oilfreechutney', 'zerooil', 'zerooilpickle', 'golkeri', 'chutney', 'sweetmangopickle'],
         size: '200gms'
     },
@@ -368,7 +368,7 @@ export const products: Product[] = [
           '/images/redchillipickle/IMG_6.jpg',
           '/images/redchillipickle/IMG_7.jpg'
         ],
-        category: 'Pickles & Condiments',
+        category: 'Condiments',
         tags: ['naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'chillipickle', 'redchillipickle', 'stuffedchillipickle', 'banarasipickle'],
         size: '200gms'
     },
@@ -391,7 +391,7 @@ export const products: Product[] = [
           '/images/greenchillipickle/IMG_10.jpg',
           '/images/greenchillipickle/IMG_11.jpg'
         ],
-        category: 'Pickles & Condiments',
+        category: 'Condiments',
         tags: ['chillipickle', 'traditionalpickle', 'traditionalrecipe', 'mirchkaachaar', 'bharwamirch', 'lalmirchkaachaar', 'greenchillipickle', 'harimirchachaar', 'mirchiachaar', 'homemadepickle', 'northindianpickle'],
         size: '200gms'
     },
@@ -401,7 +401,7 @@ export const products: Product[] = [
       description: 'Korean kimchi is a traditional, spicy, fermented vegetable dish that\'s the core of Korean cuisine. It\'s known for its bold flavours — spicy, tangy, salty, and umami-rich — and it\'s usually served as a side dish (called banchan) with almost every Korean meal.',
       price: 400,
       image: '/images/kimchi/Authentic Korean Kimchi.jpeg',
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['fermented', 'kimchi', 'madeinindiakimchi', 'egglesskoreankimchi', 'goodforgut', 'probiotic', 'healthy', 'wholesome', 'nopreservatives', 'nochemicals', 'nocolours'],
       size: '300gms',
         ingredients_benefits: {
@@ -445,7 +445,7 @@ export const products: Product[] = [
       description: 'White kimchi is a non-spicy version of traditional Korean kimchi. It\'s made with Napa cabbage and other veggies, but without the red chili pepper flakes (gochugaru) that give regular kimchi its heat and red color.',
       price: 400,
       image: '/images/kimchi/White Kimchi.jpeg',
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['fermented', 'kimchi', 'madeinindiakimchi', 'egglesskoreankimchi', 'goodforgut', 'probiotic', 'healthy', 'wholesome', 'nopreservatives', 'nochemicals', 'nocolours'],
       size: '300gms',
       ingredients_benefits: {
@@ -489,7 +489,7 @@ export const products: Product[] = [
       description: 'Jalapeno jam is a sweet, spicy, and slightly tangy preserve made from jalapeno peppers, sugar, and sometimes vinegar or fruit (like apples or cranberries). It\'s basically a jam that gives you both a kick of heat and a touch of sweetness, making it a super unique condiment.',
       price: 250,
       image: '/images/kimchi/Jalapeno Jam.jpeg',
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['jalapenopeppers', 'jalapenojam', 'dip', 'madeinindia', 'nopreservatives', 'nochemicals', 'nocolours', 'noadditives'],
       size: '200gms',
       ingredients_benefits: {
@@ -520,7 +520,7 @@ export const products: Product[] = [
       description: 'Pickled cucumbers—commonly just called "pickles"—are cucumbers that have been preserved in a brine (salt water), vinegar, or another acidic solution. The pickling process gives them a tangy, sour, and sometimes sweet or spicy flavor, depending on the ingredients used. You can eat them on their own, slice them into sandwiches or burgers, or even dice them into salads.',
       price: 250,
       image: '/images/kimchi/Pickled Cucumber.jpeg',
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['pickledcucumbers', 'cucumbers', 'condiment', 'madeinindia', 'nopreservatives', 'nochemicals', 'nocolours', 'noadditives'],
       size: '200gms',
       ingredients_benefits: {
@@ -602,7 +602,7 @@ export const products: Product[] = [
         '/images/gajargobhipickles/IMG_4.jpg',
         '/images/gajargobhipickles/IMG_5.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['pickle', 'traditional', 'winter', 'carrot', 'cauliflower', 'homestyle', 'nopreservatives', 'nochemicals', 'natural', 'condiment'],
       size: '200gms',
       ingredients_benefits: {
@@ -642,7 +642,7 @@ export const products: Product[] = [
         '/images/royaldatespicklepics/IMG_4.jpg',
         '/images/royaldatespicklepics/IMG_5.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['dates', 'khajoor', 'naturalpickle', 'traditionalpickle', 'traditionalrecipe', 'oilfreepickle', 'zerooil', 'zerooilpickle', 'datespickle', 'achaar', 'chutney'],
       size: '200gms',
       ingredients_benefits: {
@@ -673,7 +673,7 @@ export const products: Product[] = [
         '/images/traditionalmangopicklepics/NNs_7.jpg',
         '/images/traditionalmangopicklepics/NNs_8.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['mango', 'mangopickle', 'naturalpickle', 'aamkaachaar', 'rawmangopickle', 'traditionalmangopickle', 'punjabimangopickle', 'traditionalmangopicklerecipe'],
       size: '200gms',
       ingredients_benefits: {
@@ -2552,7 +2552,7 @@ export const products: Product[] = [
         '/images/mangopickle/IMG_3.jpg',
         '/images/mangopickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'mangopickle', 'homemadepickles', 'nopalmoil', 'healthier', 'healthierpickle', 'mommadepickles', 'divinepickles', 'nopreservatives', 'mustardoilpickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2591,7 +2591,7 @@ export const products: Product[] = [
         '/images/mixpickle/IMG_3.jpg',
         '/images/mixpickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2631,7 +2631,7 @@ export const products: Product[] = [
         '/images/gingergarlicpickle/IMG_3.jpg',
         '/images/gingergarlicpickle/IMG_4.jpg'
       ],
-      category: 'Pickles & condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'gingergarlic', 'gingergarlicpickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2670,7 +2670,7 @@ export const products: Product[] = [
         '/images/dryamlapickle/IMG_3.jpg',
         '/images/dryamlapickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'amlapickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2708,7 +2708,7 @@ export const products: Product[] = [
         '/images/amlasweetandsour/IMG_3.jpg',
         '/images/amlasweetandsour/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'amlapickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2747,7 +2747,7 @@ export const products: Product[] = [
         '/images/amlamurabba/IMG_3.jpg',
         '/images/amlamurabba/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'amlamurabba', 'homemademurabba', 'nopalmoil', 'healthier', 'healthiermurabba', 'divinemurabba', 'nopreservatives', 'noartificialflavours'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2784,7 +2784,7 @@ export const products: Product[] = [
         '/images/bharwangreenchilli/IMG_3.jpg',
         '/images/bharwangreenchilli/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'greenchillypickles'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2829,7 +2829,7 @@ export const products: Product[] = [
         '/images/bharwanredchilli/IMG_3.jpg',
         '/images/bharwanredchilli/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'gingergarlic', 'redchillipickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2876,7 +2876,7 @@ export const products: Product[] = [
         '/images/karelapickle/IMG_3.jpg',
         '/images/karelapickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'amla', 'karelapickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2916,7 +2916,7 @@ export const products: Product[] = [
         '/images/lemongreenchillipickle/IMG_3.jpg',
         '/images/lemongreenchillipickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'homemadepickle', 'nopalmoil', 'healthier', 'healthierpickle', 'divinepickle', 'nopreservatives', 'noartificialflavours', 'lemonpickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -2962,7 +2962,7 @@ export const products: Product[] = [
         '/images/lemonsweetandsourpickle/IMG_3.jpg',
         '/images/lemonsweetandsourpickle/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'lemonsweetandsourpickles', 'lemonpickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -3002,7 +3002,7 @@ export const products: Product[] = [
         '/images/mangosweetandsour/IMG_3.jpg',
         '/images/mangosweetandsour/IMG_4.jpg'
       ],
-      category: 'Pickles & Condiments',
+      category: 'Condiments',
       tags: ['madeinindia', 'pickles', 'betterpickles', 'nopalmoil', 'healthier', 'healthierpickles', 'tastierpickles', 'homemadepickles', 'mommadepickles', 'nostalgia', 'sweetandsour', 'mangopickle'],
       size: '100, 250, 500, 1000',
       variants: {
@@ -4879,7 +4879,7 @@ export const products: Product[] = [
           price: 425,
           image: '/images/pics16072025/Garlic Pickle.jpeg',
           images: ['/images/pics16072025/Garlic Pickle.jpeg'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'garlicpickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'chatpatapickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'tangypickle', 'indianpickle'],
           size: '500gms', 
           variants: {
@@ -4909,7 +4909,7 @@ export const products: Product[] = [
           price: 299,
           image: '/images/pics16072025/Bharwa Red Chili Pickle.png',
           images: ['/images/pics16072025/Bharwa Red Chili Pickle.png'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'redchillipickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'bharwapickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'chillipickle', 'indianpickle'],
           size: '500gms', 
           variants: {
@@ -5097,7 +5097,7 @@ export const products: Product[] = [
           images: ['/images/acharvedagreenchillipickle/IMG_1.jpg',
             '/images/acharvedagreenchillipickle/IMG_2.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'chillipickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'greenchillipickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'tangypickle', 'indianpickle', 'rajasthangreenchillipickle', 'mustardoilpickle', 'mirchkaachaar', 'mirchkaachar', 'harimirchkaachaar'],
           size: '250gms',
           variants: {
@@ -5130,7 +5130,7 @@ export const products: Product[] = [
           images: ['/images/acharvedagarlicpickle/IMG_1.jpg',
             '/images/acharvedagarlicpickle/IMG_2.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'garlicpickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'garlicgingerpickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'rajasthanigarlicpickle', 'indianpickle', 'lahsunkaachaar', 'lahsunkaachar', 'adrakkaachaar', 'adrakkaachar'],
           size: '250gms',
           variants: {
@@ -5165,7 +5165,7 @@ export const products: Product[] = [
           images: ['/images/acharvedamangopickle/IMG_1.jpg',
             '/images/acharvedamangopickle/IMG_2.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'mangopickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'mangopickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'rajasthanimangopickle', 'indianpickle', 'aamkaachaar', 'aamkaachar'],
           size: '250gms', 
           variants: {
@@ -5418,7 +5418,7 @@ export const products: Product[] = [
           price: 399,
           image: '/images/Mango Pickle.png',
           images: ['/images/Mango Pickle.png'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'mangopickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'rawmangopickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'maajaisataste', 'indianpickle'],
           size: '500gms', 
           variants: {
@@ -5698,7 +5698,7 @@ export const products: Product[] = [
           images: ['/images/hazelnutchocolatespread/IMG_1.jpg',
             '/images/hazelnutchocolatespread/IMG_2.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierspread', 'authenticchocolatespread', 'hazelnutspread', 'nochemicalspread', 'preservativefreecondiment', 'makeinindia', 'nopalmoilspreads', 'nopalmoilproduct', 'bettercondiment', 'betterspreads', 'realingredientscondiment', 'realspread', 'chocolatespread', 'indiantalent', 'betterfoods'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5725,7 +5725,7 @@ export const products: Product[] = [
           image: '/images/peanut butter coconut sugar.jpg',
           images: ['/images/peanut butter coconut sugar.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',        
           ingredients_benefits: {
@@ -5749,7 +5749,7 @@ export const products: Product[] = [
           price: 275,
           image: '/images/chocolate-peanut-butter.jpg',
           images: ['/images/chocolate-peanut-butter.jpg'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'chocolatepeanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'homemadepickle', 'realingredientsbutter', 'realbutter', 'chocolatebutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',        
           ingredients_benefits: {
@@ -5775,7 +5775,7 @@ export const products: Product[] = [
           price: 480,
           image: '/images/Almond Chocolate Butter.jpg',
           images: ['/images/Almond Chocolate Butter.jpg'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'chocolatealmondbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5800,7 +5800,7 @@ export const products: Product[] = [
           price: 450,
           image: '/images/almond butter.jpg',
           images: ['/images/almond butter.jpg'],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5826,7 +5826,7 @@ export const products: Product[] = [
           images: ['/images/unsweetendpeanutbutter/IMG_1.jpg',
             '/images/unsweetendpeanutbutter/IMG_2.jpg'
           ],
-          category: 'Pickles & Condiments',
+          category: 'Condiments',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',
           ingredients_benefits: {

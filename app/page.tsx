@@ -71,12 +71,12 @@ export default function Home() {
         const categoryRoutes: { [key: string]: string } = {
           'drinks': '/categories/drinks',
           'healthy treats': '/categories/healthier-treats',
-          'pickles & condiments': '/categories/pickles',
+          'condiments': '/categories/condiments',
           'healthy bites': '/categories/healthier-bites',
           'spice blends': '/categories/spice-blends',
           'nuts and seeds': '/categories/nuts-and-seeds',
           'healthy breakfast': '/categories/healthier-breakfast',
-          'All Natural Pickles': '/categories/pickles'
+          'All Natural Pickles': '/categories/condiments'
         };
 
         // If we have a matching category route, go there with the search query
@@ -98,12 +98,12 @@ export default function Home() {
     const categoryRoutes: { [key: string]: string } = {
       'drinks': '/categories/drinks',
       'healthy treats': '/categories/healthier-treats',
-      'pickles & condiments': '/categories/pickles',
+      'condiments': '/categories/condiments',
       'healthy bites': '/categories/healthier-bites',
       'spice blends': '/categories/spice-blends',
       'nuts and seeds': '/categories/nuts-and-seeds',
       'healthy breakfast': '/categories/healthier-breakfast',
-      'All Natural Pickles': '/categories/pickles'
+      'All Natural Pickles': '/categories/condiments'
     };
     
     const productCategory = product.category.toLowerCase();
@@ -311,10 +311,10 @@ export default function Home() {
                     Healthier Bites
                   </Link>
                   <Link
-                    href="/categories/pickles"
+                    href="/categories/condiments"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
-                    Pickles & Condiments
+                    Condiments
                   </Link>
                   <Link
                     href="/categories/healthier-breakfast"

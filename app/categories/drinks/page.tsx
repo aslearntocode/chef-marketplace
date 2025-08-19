@@ -9,7 +9,7 @@ export default function DrinksPage() {
   );
 
   return (
-    <main className="mt-[72px] min-h-screen bg-[#FFC107] bg-opacity-10">
+    <main className="mt-4 min-h-screen bg-[#FFC107] bg-opacity-10">
       <CategoryPage 
         category="Drinks" 
         products={categoryProducts} 

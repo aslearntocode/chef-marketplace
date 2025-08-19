@@ -20,7 +20,7 @@ export default function Breadcrumb({ customPaths = {} }: BreadcrumbProps) {
     'healthier-treats': 'Healthier Treats',
     'healthier-beverages': 'Healthier Beverages',
     'healthier-bites': 'Healthier Bites',
-    'pickles': 'Pickles & Condiments',
+    'condiments': 'Condiments',
     'healthier-breakfast': 'Healthier Breakfast',
     'spice-blends': 'Spice Blends',
     'nuts-and-seeds': 'Nuts & Seeds',
