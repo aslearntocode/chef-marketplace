@@ -5836,6 +5836,254 @@ export const products: Product[] = [
           ],
           }
         },
+        {
+          id: 'nuts-and-seeds-granola',
+          name: 'Nuts & Seeds Granola',
+          description: `USP: Vegan & Gluten-Free, Rich in Protein, Fiber & Healthy Fats l No Refined Sugar I No Refined Oil l Packed with the goodness of Nuts and Seeds
+          Product Description
+          Experience the irresistible crunch of this signature granola! Every bite offers a satisfying crunch and a burst of flavours that will leave you craving for more. Start your day with a bowl of our granola and indulge in a wholesome breakfast that energizes and satisfies, setting the perfect tone for a remarkable day ahead.,`,
+          price: 320,
+          image: '/images/granolapics/Nuts & Seeds Granola.jpg',
+          images: ['/images/granolapics/Nuts & Seeds Granola.jpg'
+          ],
+          category: 'Healthy Breakfast',
+          tags: ['madeinindia', 'healthier', 'nutsandseedsgranola', 'healthierbreakfast', 'authenticgranola', 'granola', 'nochemicalgranola', 'preservativefreegranola', 'vegangranola', 'Glutenfreegranola', 'Norefinedsugargranola', 'norefinedsugar', 'bettergranola', 'makeinindia', 'nuttygoodness', 'realingredientsgranola', 'realgranola', 'nopalmoilgranola', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Nuts (Almonds, and Cashews)': [
+          'Heart Health: Regular nut consumption is linked to a lower risk of heart disease. Nuts help improve cholesterol profiles—lowering LDL (bad) cholesterol and raising HDL (good) cholesterol.,',
+          'Brain Function: Nuts are known for supporting cognitive function. Rich in antioxidants and omega-3 fatty acids, which may protect against age-related cognitive decline.,',
+          ],
+          'Seeds (Sunflower seeds, Pumpkin Seeds, Chia Seeds and Flax Seeds)': [
+          'Heart Health: Seeds help lower blood pressure, reduce inflammation, and improve cholesterol levels. Omega-3-rich seeds are especially heart-friendly.,',
+          'Rich in Nutrients: Seeds are packed with: Healthy fats (especially omega-3 and omega-6), Plant-based protein, Fiber, Vitamins (E, B-complex), Minerals (zinc, magnesium, iron, selenium, calcium).,',
+          ],
+          'Dried Fruits (Black Raisin, Raisin and Cranberries)': [],
+          'Cold-pressed Coconut Oil': [],
+          'Coconut Sugar': [],
+          'Coconut Flakes': [],
+          'Coconut Powder': [],
+          'Rock Salt and Organic Cinnamon': [],
+          }
+        },
+        {
+          id: 'hazelnut-chocolate-granola',
+          name: 'Hazelnut Chocolate Granola',
+          description: `USP: Vegan & Gluten-Free, Rich in Protein, Fiber & Healthy Fats I No Refined Sugar I No Refined Oil I Refined Sugarfree Couverture Chocolate
+          Product Description
+          Fuel your day the wholesome way with our Vegan Crunchy Hazelnut Chocolate Granola. Packed with a nutritious blend of nuts, seeds, and dried fruits, this granola provides sustained energy without the sugar rush and crash.
+          Made with no refined sugar, it’s the perfect crunchy snack or breakfast topper that keeps you energized for hours — delicious, guilt-free, and completely plant-based.,`,
+          price: 320,
+          image: '/images/granolapics/Hazelnut chocolate granola.jpg',
+          images: ['/images/granolapics/Hazelnut chocolate granola.jpg'
+          ],
+          category: 'Healthy Breakfast',
+          tags: ['madeinindia', 'healthier', 'hazelnutchocolategranola', 'healthierbreakfast', 'authenticgranola', 'granola', 'nochemicalgranola', 'preservativefreegranola', 'vegangranola', 'Glutenfreegranola', 'Norefinedsugargranola', 'norefinedsugar', 'bettergranola', 'makeinindia', 'nuttygoodness', 'realingredientsgranola', 'realgranola', 'nopalmoilgranola', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Nuts (Almonds, and Cashews)': [
+          'Heart Health: Regular nut consumption is linked to a lower risk of heart disease. Nuts help improve cholesterol profiles—lowering LDL (bad) cholesterol and raising HDL (good) cholesterol.,',
+          'Brain Function: Nuts are known for supporting cognitive function. Rich in antioxidants and omega-3 fatty acids, which may protect against age-related cognitive decline.,',
+          ],
+          'Seeds (Sunflower seeds, Pumpkin Seeds, Chia Seeds and Flax Seeds)': [
+          'Heart Health: Seeds help lower blood pressure, reduce inflammation, and improve cholesterol levels. Omega-3-rich seeds are especially heart-friendly.,',
+          'Rich in Nutrients: Seeds are packed with: Healthy fats (especially omega-3 and omega-6), Plant-based protein, Fiber, Vitamins (E, B-complex), Minerals (zinc, magnesium, iron, selenium, calcium).,',
+          ],
+          'Dried Fruits (Black Raisin, Raisin and Cranberries)': [],
+          'Cold-pressed Coconut Oil': [],
+          'Coconut Sugar': [],
+          'Coconut Flakes': [],
+          'Coconut Powder': [],
+          'Rock Salt and Organic Cinnamon': [],
+          }
+        },
+        {
+          id: 'masala-granola',
+          name: 'Masala Granola',
+          description: `USP: Vegan & Gluten-Free, Rich in Protein, Fiber & Healthy Fats I No Refined Sugar I No Refined Oil l Packed with the goodness of Nuts and Seeds
+          Product Description
+          A bold twist on granola—packed with crunchy peanuts, almonds, cashews, and a powerhouse blend of seeds! Lightly sweetened with low GI coconut sugar and plump raisins, then spiced to perfection with an irresistible masala kick. 
+          100% vegan, free from refined sugar, and loaded with protein, fiber, and healthy fats, this granola fuels your 4PM cravings, travel snacks, or adds a delicious crunch to your yogurt. Snack anytime, anywhere—because clean eating should never be boring!.,`,
+          price: 370,
+          image: '/images/granolapics/Masala Granola.jpg',
+          images: ['/images/granolapics/Masala Granola.jpg'
+          ],
+          category: 'Healthy Breakfast',
+          tags: ['madeinindia', 'healthier', 'masalagranola', 'healthierbreakfast', 'authenticgranola', 'granola', 'nochemicalgranola', 'preservativefreegranola', 'vegangranola', 'Glutenfreegranola', 'Norefinedsugargranola', 'norefinedsugar', 'bettergranola', 'makeinindia', 'nuttygoodness', 'realingredientsgranola', 'realgranola', 'nopalmoilgranola', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Gluten Free Rolled Oats': [
+          'Heart Health- Rich in beta-glucan, a soluble fiber that Lowers LDL (bad) cholesterol, Helps reduce blood pressure, Supports overall cardiovascular health.,',
+          'Weight Management- The fiber and complex carbs in oats provide lasting energy and keep you full longer, reducing the temptation to overeat. Helps regulate appetite and blood sugar levels.,',
+          ],
+          'Seeds (Sunflower seeds, Pumpkin Seeds, Chia Seeds and Flax Seeds)': [
+          'Brain Function: Nuts are known for supporting cognitive function. Rich in antioxidants and omega-3 fatty acids, which may protect against age-related cognitive decline.,',
+          'Heart Health: Seeds help lower blood pressure, reduce inflammation, and improve cholesterol levels. Omega-3-rich seeds are especially heart-friendly.,',
+          'Rich in Nutrients: Seeds are packed with: Healthy fats (especially omega-3 and omega-6), Plant-based protein, Fiber, Vitamins (E, B-complex), Minerals (zinc, magnesium, iron, selenium, calcium).,',
+          ],
+          'Dried Fruits (Black Raisin, Raisin and Cranberries)': [],
+          'Cold-pressed Coconut Oil': [],
+          'Coconut Sugar': [],
+          'Coconut Flakes': [],
+          'Coconut Powder': [],
+          'Rock Salt and Organic Cinnamon': [],
+          }
+        },
+        {
+          id: 'gluten-free-lemon-basil-almond-cookies',
+          name: 'Gluten Free Lemon & Basil Almond Cookies',
+          description: `USP: No Gluten l High Protein l No Refined Sugar l No Refined Oil l No Butter
+          Bursting with the zesty tang of lemon and the aromatic allure of basil, these delightful cookies are a true treat for the senses. With their soft texture and irresistible flavours, these Glutenfree Lemon and Basil Cookies are sure to brighten up any moment. Indulge in these flavourful delights and experience a taste sensation like no other.,`,
+          price: 250,
+          image: '/images/cookiespictures/Gluten free Lemon and Basil Almond Cookies.jpg',
+          images: ['/images/cookiespictures/Gluten free Lemon and Basil Almond Cookies.jpg'
+          ],
+          category: 'Healthy Bites',
+          tags: ['madeinindia', 'healthier', 'cookies', 'healthiercookies', 'authenticcookies', 'almondcookies', 'nochemicalcookies', 'preservativefreecookies', 'glutenfreecookies', 'lemoncookies', 'basilcookies', 'norefinedsugarcookies', 'makeinindia', 'cookiegoodness', 'realingredientscookies', 'realcookies', 'nopalmoilcookies', 'purercookies', 'bettercookies', 'healthiswealth', 'better'],
+          size: 'Pack of 6',
+          ingredients_benefits: {
+          'Almonds': [
+          'Brain Health: Rich in vitamin E, magnesium, and healthy fats which support brain function. May help improve memory and cognitive performance.,',
+          'Heart Health: Contain monounsaturated fats, which can help lower bad cholesterol (LDL). High in antioxidants like vitamin E, which protect against oxidative stress.,',
+          ],
+          'Organic Honey': [
+          'Rich in Antioxidants: Contains flavonoids and phenolic acids that help protect your body from oxidative stress and inflammation.,',
+          'Natural Antibacterial & Antimicrobial: Fights bacteria and promotes healing of wounds, burns, and skin infection. Can support oral health and sore throat relief.,',
+          ],
+          'Organic Maple Syrup': [],
+          'Cold-pressed Coconut Oil': [],
+          'Corn Flour': [],
+          'Rice Flour': [],
+          'Flax Seeds': [],
+          'Rock Salt': [],
+          'Baking Powder': [],
+          'Baking Soda': [],
+          'Xantham Gum': [],
+          }
+        },
+        {
+          id: 'whole-wheat-almond-cookies',
+          name: 'Whole Wheat Almond Cookies',
+          description: `USP: No Refined Sugar l No Refined Oil l No Butter l No Refined Flour l No Palm Oil l Made with Jaggery l Made with Desi Ghee
+          Our Whole Wheat Almond Cookies are baked with love, combining the wholesomeness of whole wheat with the delightful nuttiness of almonds. The inclusion of ghee, khand, and jaggery adds a comforting richness and natural sweetness that enhances the flavour profile of these delectable treats.,`,
+          price: 250,
+          image: '/images/cookiespictures/Wholewheat almond cookies.jpg',
+          images: ['/images/cookiespictures/Wholewheat almond cookies.jpg'
+          ],
+          category: 'Healthy Bites',
+          tags: ['wholewheatcookies', 'madeinindia', 'healthier', 'cookies', 'healthiercookies', 'authenticcookies', 'jaggerycookies', 'nobuttercookies', 'desigheecookies', 'almondcookies', 'nochemicalcookies', 'preservativefreecookies', 'glutenfreecookies', 'norefinedsugarcookies', 'bettercookies', 'makeinindia', 'cookiegoodness', 'nuttygoodness', 'realingredientscookies', 'realcookies', 'nopalmoilcookies', 'purercookies', 'bettercookies', 'healthiswealth', 'better'],
+          size: 'Pack of 6',
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+          ],
+          'Almonds': [
+          'Brain Health: Rich in vitamin E, magnesium, and healthy fats which support brain function. May help improve memory and cognitive performance.,',
+          'Heart Health: Contain monounsaturated fats, which can help lower bad cholesterol (LDL). High in antioxidants like vitamin E, which protect against oxidative stress.,',
+          ],
+          'Organic Desi Ghee': [],
+          'Organic raw unprocessed Sugar (Khandsari)': [],
+          'Organic Jaggery': [],
+          'Natural Vanilla Extract': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [],
+          'Rock Salt': [],
+          }
+        },
+        {
+          id: 'whole-wheat-choco-fill-cookies',
+          name: 'Whole Wheat Choco-fill Cookies',
+          description: `USP: No Refined Sugar l No Refined Oil l No Butter l No Refined Flour l No Palm Oil l Refined Sugar free Couverture Chocolate
+          Product Description
+          Bite in, and let the choco magic ooze out! These decadent cookies hide a molten heart of refined sugar-free vegan dark chocolate. The combination of rich, gooey refined Sugar-free vegan dark chocolate and the wholesome goodness of whole wheat creates a delightful treat that's as indulgent as it is nourishing.
+          Wrapped in the nutty goodness of whole wheat, they’re a perfect blend of indulgence meets nourishment. Soft, rich, and dangerously moreish — every bite is a chocolate lover’s dream come true.’`,
+          price: 280,
+          image: '/images/cookiespictures/Whole Wheat Chocofill cookies.jpg',
+          images: ['/images/cookiespictures/Whole Wheat Chocofill cookies.jpg'
+          ],
+          category: 'Healthy Bites',
+          tags: ['wholewheatcookies', 'madeinindia', 'healthier', 'cookies', 'healthiercookies', 'authenticcookies', 'refinedsugarfreecookies', 'nobuttercookies', 'desigheecookies', 'chococookies', 'doublechocolatecookies', 'nochemicalcookies', 'preservativefreecookies', 'norefinedsugarcookies', 'bettercookies', 'makeinindia', 'cookiegoodness', 'realingredientscookies', 'realcookies', 'nopalmoilcookies', 'purercookies', 'bettercookies', 'healthiswealth', 'better'],
+          size: 'Pack of 6',
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+],
+          'Almonds': [
+          'Brain Health: Rich in vitamin E, magnesium, and healthy fats which support brain function. May help improve memory and cognitive performance.,',
+          'Heart Health: Contain monounsaturated fats, which can help lower bad cholesterol (LDL). High in antioxidants like vitamin E, which protect against oxidative stress.,',
+],    
+          'Organic Desi Ghee': [],
+          'Organic raw unprocessed Sugar (Khandsari)': [],
+          'Organic Jaggery': [],
+          'Natural Vanilla Extract': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [],
+          'Rock Salt': [],
+          }
+        },
+        {
+          id: 'whole-wheat-jeera-ajwain-cookies',
+          name: 'Whole Wheat Jeera & Ajwain Cookies',
+          description: `USP: No Refined Sugar l No Refined Oil l No Butter l No Refined Flour l No Palm Oil l Made with Desi Ghee
+        Product Description
+        A cookie with a story in every bite! Infused with the warm, earthy aroma of cumin (jeera) and the digestive goodness of carom seeds (ajwain), these beauties strike the perfect balance between savoury and subtly sweet.
+        Crisp, wholesome, and made without refined sugar, they’re your ultimate chai-time partner — the kind that makes you reach for “just one more” until the jar mysteriously empties.’`,
+        price: 250,
+        image: '/images/cookiespictures/Whole Wheat jeera ajwain cookies.jpg',
+        images: ['/images/cookiespictures/Whole Wheat jeera ajwain cookies.jpg'
+        ],
+        category: 'Healthy Bites',
+        tags: ['wholewheatcookies', 'madeinindia', 'healthier', 'cookies', 'healthiercookies', 'authenticcookies', 'refinedsugarfreecookies', 'nobuttercookies', 'desigheecookies', 'jeeracookies', 'ajwaincookies', 'nochemicalcookies', 'preservativefreecookies', 'norefinedsugarcookies', 'bettercookies', 'makeinindia', 'cookiegoodness', 'realingredientscookies', 'realcookies', 'nopalmoilcookies', 'purercookies', 'bettercookies', 'healthiswealth', 'better'],
+        size: 'Pack of 6',
+        ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+            'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+            'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+          ],
+          'Organic Desi Ghee': [],
+          'Organic raw unprocessed Sugar (Khandsari)': [],
+          'Jeera': [],
+          'Ajwain': [],
+          'Baking Soda': [],
+          'Baking Powder': [],
+          'Rock Salt': [],
+          'Natural Vanilla Extract': [],
+          }
+        },
+        {
+          id: 'whole-wheat-double-chocolate-cookies',
+         name: ' Whole Wheat Double Chocolate Cookies ',
+         description: `USP: No Refined Sugar l No Refined Oil l No Butter l No Refined Flour l No Palm Oil l Refined Sugarfree Couverture Chocolate
+         Product Description
+         Our decadent Double Chocolate Cookies are every chocoholics' dream. A combination of wholesome goodness of whole wheat flour along with a double dose of our refined Sugar-free chocolatey goodness, makes each bite a heavenly delight for chocolate lovers.’`,
+         price: 250,
+         image: '/images/cookiespictures/Whole Wheat double chocolate cookies.jpg',
+         images: ['/images/cookiespictures/Whole Wheat double chocolate cookies.jpg'
+         ],
+         category: 'Healthy Bites',
+         tags: ['wholewheatcookies', 'madeinindia', 'healthier', 'cookies', 'healthiercookies', 'authenticcookies', 'refinedsugarfreecookies', 'nobuttercookies', 'desigheecookies', 'chococookies', 'doublechocolatecookies', 'nochemicalcookies', 'preservativefreecookies', 'norefinedsugarcookies', 'bettercookies', 'makeinindia', 'cookiegoodness', 'realingredientscookies', 'realcookies', 'nopalmoilcookies', 'purercookies', 'bettercookies', 'healthiswealth', 'better'],
+         size: 'Pack of 6',
+         ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+          ],
+          'Refined Sugar-free vegan dark chocolate': [
+          'No Refined Sugar: Lower glycemic impact because Natural sweeteners (like coconut sugar, maple syrup, or dates) have a lower glycemic index than refined white sugar, leading to more stable blood sugar levels.',
+          'Vegan-Friendly: it includes no dairy, so suitable for those who are lactose intolerant, allergic to dairy, or avoiding animal products for ethical or environmental reasons.',
+          'Fewer allergens: Without milk, it’s often better tolerated by sensitive individuals.',
+          ],
+          'Organic Desi Ghee': [],
+          'Organic raw unprocessed Sugar (Khandsari)': [],
+          'Natural Vanilla Extract': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [],
+          'Rock Salt': [],
+          }
+        },
+
       ];
   
     export default products; 
