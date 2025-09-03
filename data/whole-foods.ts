@@ -5190,192 +5190,192 @@ export const products: Product[] = [
           'Salt': [],
           }
         },
-        {
-          id: 'radhika-vahini-methi-laddoos',
-          name: 'Radhika Vahini Methi Laddoos',
-          description: `Methi Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have a unique slightly bitter-sweet taste, balanced with jaggery(0% sugar) and ghee. 
-          Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
-          price: 130,
-          image: '/images/radhikavahini/Methi Laddoos.png',
-          images: ['/images/radhikavahini/Methi Laddoos.png'],
-          category: 'Healthy Treats',
-          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
-          size: '200gms', 
-          variants: {
-            sizes: [
-              { name: '200gms', value: '200gms', price: 130 },
-              { name: '500gms', value: '500gms', price: 320 },
-              { name: '1kg', value: '1kg', price: 600 }
-            ]
-          },
-          ingredients_benefits: {
-          'Aata (Whole Wheat Flour)': [
-          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
-          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
-          ],
-          'Pure Desi Ghee': [
-          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
-          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
-          ],
-          'Fenugreek/Methi': [],
-          'Halim/ Gardencress Seeds': [],
-          'Edible Gum/Gond/Dink': [],
-          'Jaggery': [],
-          }
-        },
-        {
-          id: 'radhika-vahini-dink-gond-laddoos',
-          name: 'Radhika Vahini Dink/Gond Laddoos',
-          description: `Tasty | Homemade | No Preservatives
-          Gond Laddoos (made with edible gum, whole wheat flour, ghee, nuts, and jaggery  (0%sugar)) are deeply rooted in Indian Ayurvedic nutrition. They’re nutrient-dense and especially popular for boosting strength, immunity, and warmth in cold weather — often given to postpartum women or as a general tonic food.`,
-          price: 170,
-          image: '/images/radhikavahini/Gond Laddoos.png',
-          images: ['/images/radhikavahini/Gond Laddoos.png'],
-          category: 'Healthy Treats',
-          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'gondladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'wholewheatflourladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'dinkladdoos', 'gharjaiseladdoos', 'maakehaathkeladdoo', 'maakapyaar'],
-          size: '200gms', 
-          variants: {
-            sizes: [
-              { name: '200gms', value: '200gms', price: 170 },
-              { name: '500gms', value: '500gms', price: 420 },
-            ]
-          },
-          ingredients_benefits: {
-          'Aata (Whole Wheat Flour)': [
-          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
-          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
-          ],
-          'Desi Ghee': [
-          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
-          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
-          ],
-          'Gond/Edible Gum/Dink': [],
-          'Premium Dry Fruits': [],
-          'Jaggery': [],
-          }
-        },
-        {
-          id: 'radhika-vahini-methi-dry-fruits-laddoos',
-          name: 'Radhika Vahini Methi Dry Fruits Laddoos',
-          description: `Methi Dry Fruits Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have 0% sugar and 0% jaggery! They are sweetened using khajoor powder/Dates powder!
-          Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
-          price: 230,
-          image: '/images/radhikavahini/Methi Dry Fruit Laddoos.png',
-          images: ['/images/radhikavahini/Methi Dry Fruit Laddoos.png'],
-          category: 'Healthy Treats',
-          tags: ['Dryfruitsladdoos', 'madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
-          size: '200gms', 
-          variants: {
-            sizes: [
-              { name: '200gms', value: '200gms', price: 230 },
-              { name: '500gms', value: '500gms', price: 570 },
-              { name: '1kg', value: '1kg', price: 1100 }
-            ]
-          },
-          ingredients_benefits: {
-          'Aata (Whole Wheat Flour)': [
-          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
-          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
-          ],
-          'Pure Desi Ghee': [
-          'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
-          'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
-          ],
-          'Fenugreek/Methi': [],
-          'Halim/ Gardencress Seeds': [],
-          'Edible Gum/Gond/Dink': [],
-          'Mixed Dry Fruits': [],
-          'Khajoor Powder/Dates Powder': []
-          }
-        },
-        {
-          id: 'radhika-vahini-bhajani-chakli',
-          name: 'Radhika Vahini Bhajani Chakli',
-          description: `Bhajani Chakli is a savory, crispy spiral snack made using Bhajani flour, a traditional Maharashtrian spiced multigrain flour. It’s a popular Diwali and tea-time snack — crunchy & flavourful! Our Bhajani Chakli is made up of 3 types of lentil flours.`,
-          price: 80,
-          image: '/images/radhikavahini/Bhajani Chakli.png',
-          images: ['/images/radhikavahini/Bhajani Chakli.png'],
-          category: 'Healthy Bites',
-          tags: ['Chakli', 'Maharashtrianchakli', 'Mumbaichakli', 'flavourfulsnack', 'Bhajanichakli', 'gharjesichakli', 'snacktime', 'snacks', 'traditionalsnacks', 'crispysnacks', 'homemadesnacks', 'proteinsnack', 'bettersnack', 'healthiersnack', 'divinesnack', 'maajaisataste', 'maakehaathkesnacks'],
-          size: '200gms', 
-          variants: {
-            sizes: [
-              { name: '200gms', value: '200gms', price: 80 },
-              { name: '500gms', value: '500gms', price: 180 },
-              { name: '1kg', value: '1kg', price: 360 }
-            ]
-          },
-          ingredients_benefits: {
-          'Mixed Lentils Flour': [
-          'High in plant-based protein, Good for diabetics (low glycemic index), Rich in fiber, iron, and vitamins, easily digestible and gut-friendly.',
-          ],
-          'Sesame Seeds': [
-          'Rich in calcium, magnesium, zinc, and phosphorus — all crucial for bone density. Contain healthy fats (mainly polyunsaturated and monounsaturated). High in Plant Protein- About 5g protein per 3 tablespoons.',
-          ],
-          'Dry Spices': [],
-          'Salt':[],
-          }
-        },
-        {
-          id: 'ukadiche-modak-with-kesar',
-          name: 'Radhika Vahini Ukadiche Modak with Kesar',
-          description: `Ukadiche Modak is a traditional sweet dumpling from Maharashtra, India, especially popular during the Ganesh Chaturthi festival. "Ukadiche" means "steamed" in Marathi, and "Modak" refers to the dumpling filled with a sweet coconut-jaggery mixture.`,
-          price: 250,
-          image: '/images/modakpics/IMG_1.png',
-          images: ['/images/modakpics/IMG_1.png',
-            '/images/modakpics/IMG_2.png',
-            '/images/modakpics/IMG_3.png'
-          ],
-          category: 'Healthy Treats',
-          tags: ['Modak', 'Ukadichemodak', 'sweetdumplings', 'ganeshchaturthispecial', 'authenticmodak', 'realmodak', 'healthiermodak', 'coconutjaggerymodak', 'maharashtrianmodak'],
-          size: '6 pieces',
-          variants: {
-            sizes: [
-              { name: '6 pieces', value: '6 pieces', price: 250 },
-            ]
-          },
-          ingredients_benefits: {
-          'Rice Flour': [
-          'Gluten-Free- Ideal for people with celiac disease or gluten intolerance.',
-          'Easily Digestible- Light on the stomach and easy to digest.',
-          ],
-          'Grated Fresh Coconut': [
-          'Rich in Healthy Fats- Contains medium-chain triglycerides (MCTs), which are quickly used by the body for energy.',
-          'Boosts Immunity- Contains lauric acid, which has antibacterial, antiviral, and antifungal properties.',
-          ],
-          'Grated Jaggery': [],
-          'Kesar/Saffron': [],
-          }
-        },
-        {
-          id: 'radhika-vahini-puran-poli',
-          name: 'Radhika Vahini Puran Poli',
-          description: `Puran Poli is a traditional Indian sweet flatbread filled with a delicious mixture of cooked lentils (usually chana dal) and jaggery, flavored with cardamom and sometimes nutmeg. It’s especially popular in Maharashtra, Gujarat, Karnataka, and Andhra Pradesh, where it is known by different names like Holige, Obbattu, or Bobbatlu.`,
-          price: 85,
-          image: '/images/radhikavahini/Puran Poil.png',
-          images: ['/images/radhikavahini/Puran Poil.png'],
-          category: 'Healthy Treats',
-          tags: ['poli', 'puranoli', 'traditionalpuranpoli', 'ganesh', 'authenticpuranpoli', 'realpuranpoli', 'healthierpuranpoli', 'mopreservativepuranpoli', 'maharashtrianpuranpoli', 'Holige', 'Obbattu', 'Bobbatlu', 'traditionalsweets', 'lovefor traditionalsweets', 'madeinindia', 'indiansweets'],
-          size: '2 pieces',
-          variants: {
-            sizes: [
-              { name: '2 pieces', value: '2 pieces', price: 85 },
-            ]
-          },
-          ingredients_benefits: {
-          'Aata (Whole Wheat Flour)': [
-          'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
-          'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
-          ],
-          'Chana Dal': [
-          'Rich in Protein- Excellent plant-based protein source — especially important for vegetarians and vegans. Helps in muscle repair and growth.',
-          'Controls Blood Sugar- Low glycemic index (GI), which means it doesn’t cause a sudden spike in blood sugar.',
-          ],
-          'Maida': [],
-          'Jaggery': [],
-          'Sugar':[],
-          }
-        },
+        // {
+        //   id: 'radhika-vahini-methi-laddoos',
+        //   name: 'Radhika Vahini Methi Laddoos',
+        //   description: `Methi Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have a unique slightly bitter-sweet taste, balanced with jaggery(0% sugar) and ghee. 
+        //   Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
+        //   price: 130,
+        //   image: '/images/radhikavahini/Methi Laddoos.png',
+        //   images: ['/images/radhikavahini/Methi Laddoos.png'],
+        //   category: 'Healthy Treats',
+        //   tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
+        //   size: '200gms', 
+        //   variants: {
+        //     sizes: [
+        //       { name: '200gms', value: '200gms', price: 130 },
+        //       { name: '500gms', value: '500gms', price: 320 },
+        //       { name: '1kg', value: '1kg', price: 600 }
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Aata (Whole Wheat Flour)': [
+        //   'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+        //   'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+        //   ],
+        //   'Pure Desi Ghee': [
+        //   'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+        //   'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+        //   ],
+        //   'Fenugreek/Methi': [],
+        //   'Halim/ Gardencress Seeds': [],
+        //   'Edible Gum/Gond/Dink': [],
+        //   'Jaggery': [],
+        //   }
+        // },
+        // {
+        //   id: 'radhika-vahini-dink-gond-laddoos',
+        //   name: 'Radhika Vahini Dink/Gond Laddoos',
+        //   description: `Tasty | Homemade | No Preservatives
+        //   Gond Laddoos (made with edible gum, whole wheat flour, ghee, nuts, and jaggery  (0%sugar)) are deeply rooted in Indian Ayurvedic nutrition. They’re nutrient-dense and especially popular for boosting strength, immunity, and warmth in cold weather — often given to postpartum women or as a general tonic food.`,
+        //   price: 170,
+        //   image: '/images/radhikavahini/Gond Laddoos.png',
+        //   images: ['/images/radhikavahini/Gond Laddoos.png'],
+        //   category: 'Healthy Treats',
+        //   tags: ['madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'gondladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'wholewheatflourladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'dinkladdoos', 'gharjaiseladdoos', 'maakehaathkeladdoo', 'maakapyaar'],
+        //   size: '200gms', 
+        //   variants: {
+        //     sizes: [
+        //       { name: '200gms', value: '200gms', price: 170 },
+        //       { name: '500gms', value: '500gms', price: 420 },
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Aata (Whole Wheat Flour)': [
+        //   'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+        //   'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+        //   ],
+        //   'Desi Ghee': [
+        //   'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+        //   'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+        //   ],
+        //   'Gond/Edible Gum/Dink': [],
+        //   'Premium Dry Fruits': [],
+        //   'Jaggery': [],
+        //   }
+        // },
+        // {
+        //   id: 'radhika-vahini-methi-dry-fruits-laddoos',
+        //   name: 'Radhika Vahini Methi Dry Fruits Laddoos',
+        //   description: `Methi Dry Fruits Laddoos are traditional Indian sweets made with fenugreek (methi) seeds, often consumed in winter or post-partum due to their warming and health-boosting properties. They have 0% sugar and 0% jaggery! They are sweetened using khajoor powder/Dates powder!
+        //   Methi Laddoos are excellent for digestion! They have anti-inflammatory properties that help relieve arthritis and joint fitness. Methi Laddoos have been traditionally consumed for post-partum recovery as well.`,
+        //   price: 230,
+        //   image: '/images/radhikavahini/Methi Dry Fruit Laddoos.png',
+        //   images: ['/images/radhikavahini/Methi Dry Fruit Laddoos.png'],
+        //   category: 'Healthy Treats',
+        //   tags: ['Dryfruitsladdoos', 'madeinindia', 'healthier', 'healthierladdoos', 'authenticladdoos', 'methiladdoos', 'nochemicalladdoos', 'preservativefreeladdoos', 'makeinindia', 'nopreservatives', 'gharjaisemethiladdoos', 'betterladdoos', 'homemadeladdoos', 'traditionalladdoos', 'realladdoos', 'tastyladdoos', 'indiantraditionalladdoos', 'methigudladdoos', 'gheeladdoos', 'maakehaathkeladdoos'],
+        //   size: '200gms', 
+        //   variants: {
+        //     sizes: [
+        //       { name: '200gms', value: '200gms', price: 230 },
+        //       { name: '500gms', value: '500gms', price: 570 },
+        //       { name: '1kg', value: '1kg', price: 1100 }
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Aata (Whole Wheat Flour)': [
+        //   'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+        //   'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+        //   ],
+        //   'Pure Desi Ghee': [
+        //   'Rich Source of Healthy Fats- Contains saturated fats that provide sustained energy. Helps absorb fat-soluble vitamins (A, D, E, and K).',
+        //   'Supports Digestion- Stimulates the secretion of stomach acid, aiding digestion. Contains butyric acid, which promotes gut health and supports the intestinal lining.',
+        //   ],
+        //   'Fenugreek/Methi': [],
+        //   'Halim/ Gardencress Seeds': [],
+        //   'Edible Gum/Gond/Dink': [],
+        //   'Mixed Dry Fruits': [],
+        //   'Khajoor Powder/Dates Powder': []
+        //   }
+        // },
+        // {
+        //   id: 'radhika-vahini-bhajani-chakli',
+        //   name: 'Radhika Vahini Bhajani Chakli',
+        //   description: `Bhajani Chakli is a savory, crispy spiral snack made using Bhajani flour, a traditional Maharashtrian spiced multigrain flour. It’s a popular Diwali and tea-time snack — crunchy & flavourful! Our Bhajani Chakli is made up of 3 types of lentil flours.`,
+        //   price: 80,
+        //   image: '/images/radhikavahini/Bhajani Chakli.png',
+        //   images: ['/images/radhikavahini/Bhajani Chakli.png'],
+        //   category: 'Healthy Bites',
+        //   tags: ['Chakli', 'Maharashtrianchakli', 'Mumbaichakli', 'flavourfulsnack', 'Bhajanichakli', 'gharjesichakli', 'snacktime', 'snacks', 'traditionalsnacks', 'crispysnacks', 'homemadesnacks', 'proteinsnack', 'bettersnack', 'healthiersnack', 'divinesnack', 'maajaisataste', 'maakehaathkesnacks'],
+        //   size: '200gms', 
+        //   variants: {
+        //     sizes: [
+        //       { name: '200gms', value: '200gms', price: 80 },
+        //       { name: '500gms', value: '500gms', price: 180 },
+        //       { name: '1kg', value: '1kg', price: 360 }
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Mixed Lentils Flour': [
+        //   'High in plant-based protein, Good for diabetics (low glycemic index), Rich in fiber, iron, and vitamins, easily digestible and gut-friendly.',
+        //   ],
+        //   'Sesame Seeds': [
+        //   'Rich in calcium, magnesium, zinc, and phosphorus — all crucial for bone density. Contain healthy fats (mainly polyunsaturated and monounsaturated). High in Plant Protein- About 5g protein per 3 tablespoons.',
+        //   ],
+        //   'Dry Spices': [],
+        //   'Salt':[],
+        //   }
+        // },
+        // {
+        //   id: 'ukadiche-modak-with-kesar',
+        //   name: 'Radhika Vahini Ukadiche Modak with Kesar',
+        //   description: `Ukadiche Modak is a traditional sweet dumpling from Maharashtra, India, especially popular during the Ganesh Chaturthi festival. "Ukadiche" means "steamed" in Marathi, and "Modak" refers to the dumpling filled with a sweet coconut-jaggery mixture.`,
+        //   price: 250,
+        //   image: '/images/modakpics/IMG_1.png',
+        //   images: ['/images/modakpics/IMG_1.png',
+        //     '/images/modakpics/IMG_2.png',
+        //     '/images/modakpics/IMG_3.png'
+        //   ],
+        //   category: 'Healthy Treats',
+        //   tags: ['Modak', 'Ukadichemodak', 'sweetdumplings', 'ganeshchaturthispecial', 'authenticmodak', 'realmodak', 'healthiermodak', 'coconutjaggerymodak', 'maharashtrianmodak'],
+        //   size: '6 pieces',
+        //   variants: {
+        //     sizes: [
+        //       { name: '6 pieces', value: '6 pieces', price: 250 },
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Rice Flour': [
+        //   'Gluten-Free- Ideal for people with celiac disease or gluten intolerance.',
+        //   'Easily Digestible- Light on the stomach and easy to digest.',
+        //   ],
+        //   'Grated Fresh Coconut': [
+        //   'Rich in Healthy Fats- Contains medium-chain triglycerides (MCTs), which are quickly used by the body for energy.',
+        //   'Boosts Immunity- Contains lauric acid, which has antibacterial, antiviral, and antifungal properties.',
+        //   ],
+        //   'Grated Jaggery': [],
+        //   'Kesar/Saffron': [],
+        //   }
+        // },
+        // {
+        //   id: 'radhika-vahini-puran-poli',
+        //   name: 'Radhika Vahini Puran Poli',
+        //   description: `Puran Poli is a traditional Indian sweet flatbread filled with a delicious mixture of cooked lentils (usually chana dal) and jaggery, flavored with cardamom and sometimes nutmeg. It’s especially popular in Maharashtra, Gujarat, Karnataka, and Andhra Pradesh, where it is known by different names like Holige, Obbattu, or Bobbatlu.`,
+        //   price: 85,
+        //   image: '/images/radhikavahini/Puran Poil.png',
+        //   images: ['/images/radhikavahini/Puran Poil.png'],
+        //   category: 'Healthy Treats',
+        //   tags: ['poli', 'puranoli', 'traditionalpuranpoli', 'ganesh', 'authenticpuranpoli', 'realpuranpoli', 'healthierpuranpoli', 'mopreservativepuranpoli', 'maharashtrianpuranpoli', 'Holige', 'Obbattu', 'Bobbatlu', 'traditionalsweets', 'lovefor traditionalsweets', 'madeinindia', 'indiansweets'],
+        //   size: '2 pieces',
+        //   variants: {
+        //     sizes: [
+        //       { name: '2 pieces', value: '2 pieces', price: 85 },
+        //     ]
+        //   },
+        //   ingredients_benefits: {
+        //   'Aata (Whole Wheat Flour)': [
+        //   'High in Fiber- Helps with digestion, prevents constipation, and supports a healthy gut. Slows sugar absorption, helping to maintain stable blood sugar levels—great for diabetics.',
+        //   'Supports Heart Health- Contains beta-glucans and other fibers that help lower LDL (bad) cholesterol. May reduce the risk of heart disease and stroke when consumed as part of a balanced diet.',
+        //   ],
+        //   'Chana Dal': [
+        //   'Rich in Protein- Excellent plant-based protein source — especially important for vegetarians and vegans. Helps in muscle repair and growth.',
+        //   'Controls Blood Sugar- Low glycemic index (GI), which means it doesn’t cause a sudden spike in blood sugar.',
+        //   ],
+        //   'Maida': [],
+        //   'Jaggery': [],
+        //   'Sugar':[],
+        //   }
+        // },
         {
           id: 'dhaniya-panjiri',
           name: 'Dhaniya Panjiri',
@@ -6083,6 +6083,193 @@ export const products: Product[] = [
           'Rock Salt': [],
           }
         },
+        {
+          id: 'double-chocolate-brownies',
+          name: ' Double Chocolate Brownies',
+          description: `USP: Finest quality refined sugarfree real chocolate l no compound chocolate l fudgy and rich | no maida l no refined sugar | no preservatives
+          Product Description 
+          Two words: Chocolate Overload. These beauties are baked with rich, fudgy refined sugar-free couverture chocolate in the batter, then loaded with extra chunks of premium dark chocolate that melt into pockets of pure bliss.
+          Made with 100% whole wheat flour, no maida, no refined sugar, and zero preservatives, they prove that you can have the ultimate indulgence without the guilt.`,
+          price: 450,
+          image: '/images/brownies_breads/double chocolate brownies.jpg',
+          images: ['/images/brownies_breads/double chocolate brownies.jpg'],
+
+          category: 'Healthy Treats',
+          tags: ['nomaida', 'wholewheatbrownies', 'madeinindia', 'healthier', 'brownies', 'healthierbrownies', 'authenticbrownies', 'refinedsugarfreebrownies', 'nobutterbrownies', 'coldpressedcoconutoilbrownies', 'doublechocolatebrownies', 'chocolatebrownies', 'nochemicalbrownies', 'preservativefreebrownies', 'norefinedsugarbrownies', 'betterbrownies', 'makeinindia', 'jaggerybrownies', 'realingredientsbrownies', 'realbrownies', 'nopalmoilbrownies', 'purerbrownies', 'betterbrownies', 'healthiswealth', 'better'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 450 },
+              { name: '500gms', value: '500gms', price: 850 }
+            ]
+          },
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.',
+          ],
+          'Refined sugar-free couverture chocolate': [
+          'No Refined Sugar: Lower glycemic impact because Natural sweeteners (like coconut sugar, maple syrup, or dates) have a lower glycemic index than refined white sugar, leading to more stable blood sugar levels.',
+          'Couverture chocolate contains a higher cocoa butter and cocoa solids content, which means more: Flavonoids (antioxidants that support heart health), Magnesium, Iron, Fiber. Especially true for dark couverture (70%+ cocoa)',
+          ],
+          'Cold Pressed Coconut Oil': [],
+          'Natural Vanilla Extract':[],
+          'Organic Jaggery': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [], 
+          'Yogurt':[],
+          'Coffee': []
+          }
+        },
+        {
+          id: 'sea-salt-brownies',
+          name: 'Sea Salt Brownies',
+          description: `USP: Finest Quality Refined Sugarfree Real Chocolate l No compound chocolate l Fudgy and Rich | No Maida l No Refined Sugar | No Preservatives
+          Product Description
+          Indulgence just met sophistication. Our Sea Salt Brownies take the rich, fudgy goodness of premium couverture chocolate and elevate it with a sprinkle of flaky sea salt — unlocking deep chocolate notes and creating that perfect sweet-salty magic.
+          Baked with 100% whole wheat flour, refined sugar-free couverture chocolate, and zero preservatives, these brownies are the ultimate guilt-free treat for serious chocolate lovers. One bite, and you’ll know why a little salt makes all the difference.`,
+          price: 450,
+          image: '/images/brownies_breads/sea salt brownies.jpg',
+          images: ['/images/brownies_breads/sea salt brownies.jpg'],
+          category: 'Healthy Treats',
+          tags: ['nomaida', 'wholewheatbrownies', 'madeinindia', 'healthier', 'brownies', 'healthierbrownies', 'authenticbrownies', 'refinedsugarfreebrownies', 'nobutterbrownies', 'coldpressedcoconutoilbrownies', 'seasaltbrownies', 'chocolateseasaltbrownies', 'chocolatebrownies', 'nochemicalbrownies', 'preservativefreebrownies', 'norefinedsugarbrownies', 'betterbrownies', 'makeinindia', 'jaggerybrownies', 'realingredientsbrownies', 'realbrownies', 'nopalmoilbrownies', 'purerbrownies', 'healthiswealth', 'better'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 450 },
+              { name: '500gms', value: '500gms', price: 850 }
+            ]
+          },
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.',
+          ],
+          'Refined sugar-free couverture chocolate': [
+          'No Refined Sugar: Lower glycemic impact because Natural sweeteners (like coconut sugar, maple syrup, or dates) have a lower glycemic index than refined white sugar, leading to more stable blood sugar levels.',
+          'Couverture chocolate contains a higher cocoa butter and cocoa solids content, which means more: Flavonoids (antioxidants that support heart health), Magnesium, Iron, Fiber. Especially true for dark couverture (70%+ cocoa)',
+          ],
+          'Cold Pressed Coconut Oil': [],
+          'Natural Vanilla Extract':[],
+          'Organic Jaggery': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [], 
+          'Yogurt':[],
+          }
+        },
+        {
+          id: 'double-chocolate-nutty-brownies',
+          name: ' Double Chocolate Nutty Brownies',
+          description: `USP: Finest Quality Refined Sugarfree Real Chocolate l No compound chocolate l Fudgy and Rich | No Maida l No Refined Sugar | Loaded with Walnuts l No Preservatives
+          Product Description
+          Meet the brownie that’s got it all — the intense chocolate richness you crave, the fudgy texture you love, and the nutty crunch of perfectly roasted walnuts. Baked with 100% whole wheat flour, refined sugar-free couverture chocolate, and zero preservatives, these brownies are pure indulgence without the guilt.
+          Every bite is a perfect balance of gooey and crunchy, making it impossible to have just one!`,
+          price: 500,
+          image: '/images/brownies_breads/nutty brownies.jpg',
+          images: ['/images/brownies_breads/nutty brownies.jpg'],
+          category: 'Healthy Treats',
+          tags: ['nomaida', 'wholewheatbrownies', 'madeinindia', 'healthier', 'brownies', 'healthierbrownies', 'authenticbrownies', 'refinedsugarfreebrownies', 'nobutterbrownies', 'coldpressedcoconutoilbrownies', 'chocolatebrownies', 'nochemicalbrownies', 'nuttybrownies', 'preservativefreebrownies', 'norefinedsugarbrownies', 'betterbrownies', 'makeinindia', 'jaggerybrownies', 'realingredientsbrownies', 'realbrownies', 'nopalmoilbrownies', 'purerbrownies', 'betterbrownies', 'healthiswealth', 'better'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 500 },
+              { name: '500gms', value: '500gms', price: 950 }
+            ]
+          },
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.',
+          ],
+          'Refined sugar-free chocolate': [
+          'No Refined Sugar = Lower Blood Sugar Spikes: Refined sugar causes sharp rises in blood glucose and insulin levels. Refined sugar-free chocolate uses alternatives like: Stevia, Erythritol, Monk fruit, Jaggery, Coconut sugar. These have lower or zero glycemic index, making them Diabetic-friendly, better for insulin sensitivity & less likely to trigger cravings',
+          ],
+          'Cold Pressed Coconut Oil': [],
+          'Natural Vanilla Extract':[],
+          'Organic Jaggery': [],
+          'Walnuts': [],
+          'Rock Salt': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [], 
+          'Yogurt':[],
+          }
+        },
+        {
+          id: 'classic-banana-bread',
+          name: 'Classic Banana Bread',
+          description: `USP: No Maida l No Refined Oil l No Refined Sugar l No Preservatives l Loaded With chocolate chips l Moist and freshly Baked 
+          Product Description
+          Some bakes feel like a hug — and our Whole Wheat Banana Bread is one of them. Made with the natural sweetness of ripe bananas, this loaf is soft, moist, and oh-so-comforting. Baked with 100% whole wheat flour and no maida, no refined sugar, it’s a treat that loves you back.`,
+          price: 400,
+          image: '/images/brownies_breads/banana bread.jpg',
+          images: ['/images/brownies_breads/banana bread.jpg',
+            '/images/brownies_breads/banana bread 2.jpg'
+          ],
+          category: 'Healthy Treats',
+          tags: ['nomaidabread', 'wholewheatbananabread', 'madeinindia', 'healthier', 'bananabread', 'healthierbread', 'authenticbananabread', 'refinedsugarfreebread', 'nobutterbread', 'coldpressedcoconutoilbread', 'nochemicalbread', 'preservativefreebread', 'norefinedsugarbread', 'betterbread', 'makeinindia', 'jaggerybread', 'realingredientsbread', 'realbread', 'nopalmoilbread', 'purerbread', 'betterbread', 'healthiswealth', 'better'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 400 },
+              { name: '500gms', value: '500gms', price: 750 }
+            ]
+          },
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+          ],
+          'Refined sugar-free chocolate': [
+          'No Refined Sugar = Lower Blood Sugar Spikes: Refined sugar causes sharp rises in blood glucose and insulin levels. Refined sugar-free chocolate uses alternatives like: Stevia, Erythritol, Monk fruit, Jaggery, Coconut sugar. These have lower or zero glycemic index, making them Diabetic-friendly, better for insulin sensitivity & less likely to trigger cravings',
+          ],
+          'Cold Pressed Coconut Oil': [],
+          'Natural Vanilla Extract':[],
+          'Organic Jaggery': [],
+          'Walnuts': [],
+          'Rock Salt': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [], 
+          }
+        },
+        {
+          id: 'classic-carrot-cake',
+          name: 'Classic Carrot Cake',
+          description: `USP: No Maida l No Refined Oil l No Refined Sugar l No Preservatives l Loaded With Walnuts l Moist and freshly Baked 
+          Product Description
+          Our Whole Wheat Carrot Cake is a timeless classic — dense, moist, and bursting with the natural freshness of carrots. Every bite is elevated with the nutty crunch of roasted walnuts, making it the perfect companion for your tea or coffee.
+          Baked with 100% whole wheat flour, free from maida, refined sugar, and preservatives, this cake is indulgence you can enjoy guilt-free.`,
+          price: 450,
+          image: '/images/brownies_breads/carrot cake.jpg',
+          images: ['/images/brownies_breads/carrot cake.jpg'],
+          category: 'Healthy Treats',
+          tags: ['nomaidabread', 'wholewheatbananabread', 'madeinindia', 'healthier', 'bananabread', 'healthierbread', 'authenticbananabread', 'refinedsugarfreebread', 'nobutterbread', 'coldpressedcoconutoilbread', 'nochemicalbread', 'preservativefreebread', 'norefinedsugarbread', 'betterbread', 'makeinindia', 'jaggerybread', 'realingredientsbread', 'realbread', 'nopalmoilbread', 'purerbread', 'betterbread', 'healthiswealth', 'better'],
+          size: '250gms',
+          variants: {
+            sizes: [
+              { name: '250gms', value: '250gms', price: 450 },
+              { name: '500gms', value: '500gms', price: 850 }
+            ]
+          },
+          ingredients_benefits: {
+          'Organic Whole Wheat Flour': [
+          'Higher Nutrient Content: Whole wheat retains all parts of the grain: bran, germ, and endosperm. Rich in- Fiber, B vitamins (especially B1, B3, and B6), Iron, magnesium, zinc, and antioxidants.,',
+          'Supports Weight Management: Fiber and complex carbs help you feel fuller for longer, reducing overeating.,',
+          ],
+          'Fresh Carrots': [
+          'Excellent Source of Vitamin A (Beta-Carotene): Carrots are one of the richest sources of beta-carotene, which your body converts into vitamin A',
+          'Great for Eye Health: The vitamin A in carrots helps prevent- Night blindness, Age-related macular degeneration (AMD), Dry eyes. Also contains lutein and zeaxanthin, antioxidants that protect the eyes from blue light damage.',
+          ],
+          'Cold Pressed Coconut Oil': [],
+          'Natural Vanilla Extract':[],
+          'Organic Jaggery': [],
+          'Yogurt': [],
+          'Cinnamon':[],
+          'Rock Salt': [],
+          'Aluminium Free Baking Powder': [],
+          'Baking Soda': [], 
+          }
+          },
+          
 
       ];
   
