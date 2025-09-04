@@ -6268,9 +6268,36 @@ export const products: Product[] = [
           'Aluminium Free Baking Powder': [],
           'Baking Soda': [], 
           }
-          },
-          
-
+        },
+        {
+          id: 'sund-panjiri',
+          name: 'Sund Panjiri',
+          description: 'A timeless recipe from Jammu & Kashmir, slow-roasted with care in ghee. Packed with dry fruits, seeds, and ancient immunity boosters, our Desi Trail Mix is more than just a snack, it’s a piece of heritage, made for modern health.,',
+          price: 355,
+          image: '/images/Sund Panjiri/IMG_1.jpg',
+          images: ['/images/Sund Panjiri/IMG_1.jpg',
+            '/images/Sund Panjiri/IMG_2.jpg'
+          ],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierpanjiri', 'sundpanjiri', 'kashmirirecipe', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheepanjiri', 'bettertreat', 'healthiertreat', 'sund', 'realpanjiri', 'nuttypanjiri', 'indiantalent', 'purepanjiri'],
+          size: '150gms', 
+          ingredients_benefits: {
+          'Nuts (Almonds, Cashews, Raisins, Dry Dates)': [
+          'Brain Health- Rich in healthy fats, Contain vitamin E and antioxidants that support cognitive function, Linked to reduced risk of age-related mental decline.,',
+          'Heart Health- Help reduce LDL (bad) cholesterol and improve HDL (good) cholesterol, Contain unsaturated fats, fiber, and plant sterols that support heart health, Nuts also help reduce blood pressure.,',
+          ],
+          'Ghee': [
+          'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+          'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+          ],
+          'Coconut Powder': [],
+          'Coconut sugar': [],
+          'Melon Seeds':[],
+          'Edible Gum':[],
+          'Dry Ginger Powder':[],
+          'Cardamom Powder':[]
+          }
+        }
       ];
   
     export default products; 
