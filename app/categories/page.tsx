@@ -97,6 +97,13 @@ const categories: Category[] = [
     description: 'Flavorful sauces and dressings for your meals',
     href: '/categories/sauces-and-dressings',
     image: getCategoryImage('Sauces and Dressings')
+  },
+  {
+    id: 'mouth-freshners',
+    name: 'Mouth Freshners',
+    description: 'Natural mouth fresheners for fresh breath',
+    href: '/categories/mouth-freshners',
+    image: getCategoryImage('Mouth Freshners')
   }
 ];
 

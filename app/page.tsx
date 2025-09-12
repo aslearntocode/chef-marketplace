@@ -76,7 +76,8 @@ export default function Home() {
           'spice blends': '/categories/spice-blends',
           'nuts and seeds': '/categories/nuts-and-seeds',
           'healthy breakfast': '/categories/healthier-breakfast',
-          'All Natural Pickles': '/categories/condiments'
+          'All Natural Pickles': '/categories/condiments',
+          'mouth freshners': '/categories/mouth-freshners'
         };
 
         // If we have a matching category route, go there with the search query
@@ -103,7 +104,8 @@ export default function Home() {
       'spice blends': '/categories/spice-blends',
       'nuts and seeds': '/categories/nuts-and-seeds',
       'healthy breakfast': '/categories/healthier-breakfast',
-      'All Natural Pickles': '/categories/condiments'
+      'All Natural Pickles': '/categories/condiments',
+      'mouth freshners': '/categories/mouth-freshners'
     };
     
     const productCategory = product.category.toLowerCase();
@@ -291,7 +293,7 @@ export default function Home() {
                   Our products contain no preservatives, no artificial chemicals and are made of just natural and healthier ingredients
                 </p>
                 {/* Category Buttons Grid */}
-                <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                   <Link
                     href="/categories/healthier-treats"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
@@ -351,6 +353,12 @@ export default function Home() {
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Sauces & Dressings
+                  </Link>
+                  <Link
+                    href="/categories/mouth-freshners"
+                    className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
+                  >
+                    Mouth Freshners
                   </Link>
                 </div>
               </div>
