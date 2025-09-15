@@ -6297,7 +6297,317 @@ export const products: Product[] = [
           'Dry Ginger Powder':[],
           'Cardamom Powder':[]
           }
-        }
+        },
+        {
+          id: 'nut-crunch',
+          name: 'Nut Crunch',
+          description: 'Our best-loved gourmet mouth-freshener is a handcrafted mix of nuts, dried fruits and fruit extracts roasted to crunchy perfection. Real flavour. No shortcuts. Just pure goodness.',
+          price: 499,
+          image: '/images/mouthfresheners/Nut Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Nut Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'nuttymouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'nuttygoodness', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',
+          ingredients_benefits: {
+          'Almonds': [
+          'Heart Health- Lower bad cholesterol (LDL): Almonds can help reduce LDL cholesterol and increase HDL (good cholesterol). Anti-inflammatory & antioxidant properties from vitamin E and healthy fats support cardiovascular health. Rich in vitamin E, riboflavin, and L-carnitine, which are linked to cognitive function.'
+          ],
+          'Dates': [
+          'Nutrient-Rich: Dates are packed with essential nutrients- Vitamins: B vitamins (like B6), vitamin K; Minerals: Potassium, magnesium, copper, manganese, iron; Fiber: Supports digestive health.'
+          ],
+          'Dried Coconut': [],
+          'Fennel Seeds': [],
+          'Coriander Seeds': [],
+          'Natural Flavours': []
+          }
+        },
+        {
+          id: 'neem-crunch',
+          name: 'Neem Crunch',
+          description: `Our unique blend of curry leaves and dates makes this mix a delicious palate cleanser.`,
+          price: 499,
+          image: '/images/mouthfresheners/Neem Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Neem Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'neemcrunchmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'neemmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Curry Leaves': [
+          'Improves Digestion,Stimulates digestive enzymes,Reduces nausea, bloating, and indigestion,Common in Ayurvedic remedies for an upset stomach.'
+          ],
+          'Dates': [
+          'Rich in Nutrients Dates are a powerhouse of: Vitamins: B6, K, A; Minerals: Potassium, magnesium, copper, manganese, iron; Natural sugars: Glucose, fructose, sucrose (for quick energy); Dietary fiber: Supports digestion and gut health.'
+          ],
+          'Fennel Seeds': [],
+          'White Sesame Seeds' : [],
+          'Coriander Seeds' : [],
+          'Natural Flavours': [],
+          }
+        },
+        {
+          id: 'acacia-crunch',
+          name: 'Acacia Crunch',
+          description: `Our reimagination of a classic gondh laddoo recipe is guaranteed to satisfy your sugar pangs`,
+          price: 499,
+          image: '/images/mouthfresheners/Acacia Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Acacia Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'acaciacrunchmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'gondhmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Gondh': [
+          'Boosts Immunity: Rich in calcium, magnesium, and protein. Helps strengthen the immune system. Often given in winter foods to build strength.',
+          'Helps strengthen the immune system.',
+          'Improves Joint Health: Lubricates joints and strengthens bones. Often used in post-pregnancy diets to support recovery.',
+          ],
+          'Almonds': [
+          'Heart Health- Lower bad cholesterol (LDL): Almonds can help reduce LDL cholesterol and increase HDL (good cholesterol).',
+          'Anti-inflammatory & antioxidant properties from vitamin E and healthy fats support cardiovascular health.',
+          'Rich in vitamin E, riboflavin, and L-carnitine, which are linked to cognitive function.'
+          ],
+          'Fennel Seeds' : [],
+          'Dry Coconut' : [],
+          'Ajwain' : [],
+          'White Sesame Seeds' : [],
+          'Jaggery Powder' : [],
+          'Poppy Seeds' : [],
+          }
+        },
+        {
+          id: 'pistachio-crunch',
+          name: 'Pistachio Crunch',
+          description: `Curry and rose come together to treat your palate while the pistachios entice you to have another spoonful of it.`,
+          price: 499,
+          image: '/images/mouthfresheners/Pistachio Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Pistachio Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'pistachiomouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'rosemouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Pistachio': [
+          'Heart Health',
+          '•	Rich in monounsaturated and polyunsaturated fats that help lower bad cholesterol (LDL).',
+          '•	Contain phytosterols, which further support healthy cholesterol levels.',
+          '•	Support healthy blood vessels and lower blood pressure.,'
+          ],
+          'Fennel Seeds': [
+          'Improves Digestion',
+          '•	Helps reduce bloating, gas, indigestion, and constipation.',
+          '•	Often chewed after meals in India for its digestive and refreshing effect. Acts as a carminative (reduces gas in the intestines). Great for people with IBS (Irritable Bowel Syndrome) or digestive discomfort.',
+          ],
+          'Pumpkin Seeds' : [],
+          'Curry Leaves' : [],
+          'Sesame Seeds' : [],
+          'Rose Petals' : [],
+          'Organic Gulkand' : [],
+          }
+        },
+        {
+          id: 'cashew-crunch',
+          name: 'Cashew Crunch',
+          description: `The cashew stars in this rich and refreshing amalgamation of dried fruits and seeds, that will leave you with a sweet taste and a rich mouthfeel.`,
+          price: 499,
+          image: '/images/mouthfresheners/Cashew Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Cashew Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'cashewmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Cashews': [
+          'Supports Heart Health',
+          '•	Rich in healthy fats (especially monounsaturated fats) that help lower bad cholesterol (LDL) and increase good cholesterol (HDL).',
+          '•	Contains magnesium and potassium, which help regulate blood pressure and support heart function.',
+          'Boosts Brain Function',
+          '•	Cashews contain healthy fats, vitamin E, B vitamins, zinc, and iron — all of which support brain health.',
+          '•	Magnesium helps with nerve signaling and mood regulation.'
+          ],
+          'Dried Dates': [
+          'Natural Energy Booster',
+          '•	High in natural sugars like glucose, fructose, and sucrose.',
+          '•	Great pre- or post-workout snack for quick energy',
+          'Improves Brain Function',
+          ' •	Rich in antioxidants and vitamins (B6, B5) which support memory and concentration.',
+          ' •	Helps reduce oxidative stress in the brain.',
+          ],
+          'Fennel Seeds': [],
+          'Dry Coconut': [],
+          'Natural Added Flavours' : [],
+          }
+        },
+        {
+          id: 'super-seed-crunch',
+          name: 'Super Seed Crunch',
+          description: `Antioxidants-rich Berries blended with a fibre-full mix of seeds that is too delicious to be healthy.`,
+          price: 499,
+          image: '/images/mouthfresheners/Superseed Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Superseed Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'seedsmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Goji Berries': [
+          'Powerful Antioxidant Protection',
+          ' •	Goji berries are loaded with antioxidants, especially zeaxanthin, beta-carotene, and vitamin C.',
+          '•	These protect your body from free radical damage, reduce oxidative stress, and may slow down aging.,',
+          'Supports Eye Health',
+          '•	Extremely high in zeaxanthin – a carotenoid that protects the retina and prevents age-related macular degeneration (AMD) and vision loss.',
+          '•	Helps reduce the risk of cataracts and UV-related eye damage.,',
+          ],
+          'Cranberries': [
+          'Prevents Urinary Tract Infections (UTIs)',
+          ' •	Rich in proanthocyanidins (PACs) that prevent bacteria (especially E. coli) from sticking to the bladder walls.,',
+          'Rich in Antioxidants',
+          ' •	Contain flavonoids, polyphenols, and vitamin C.',
+          ' •	Help reduce oxidative stress, inflammation, and protect cells from damage.',
+          ' •	Ranked high on the ORAC (Oxygen Radical Absorbance Capacity) scale.,',
+          ],
+          'Raisins' : [],
+          'Pumpkin Seeds' : [],
+          'Sunflower Seeds' : [],
+          'Watermelon Seeds' : [],
+          'Muskmelon Seeds' : [],
+          'Chia Seeds' : [],
+          'White Sesame Seeds' : [],
+          'Black Sesame Seeds' : [],
+          'Almonds' : [],
+          }
+        },
+        {
+          id: 'ayurvedic-crunch',
+          name: 'Ayurvedic Crunch',
+          description: `A blend of seeds, herbs and almonds, inspired by our heritage, will give you several health benefits and leaving a wonderful taste to your post-meal palate.`,
+          price: 499,
+          image: '/images/mouthfresheners/Ayurvedic Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Ayurvedic Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'seedsmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Sunflower Seeds': [
+          'Supports Heart Health',
+          '•	Rich in healthy fats (especially polyunsaturated fats) and phytosterols, which help lower bad cholesterol (LDL).',
+          '•	Contains magnesium and potassium that support healthy blood pressure and overall cardiovascular function.,',
+          'Promotes Healthy Skin',
+          ' •	Vitamin E is abundant in sunflower seeds — a powerful antioxidant that protects the skin from oxidative damage, improves elasticity, and supports a natural glow.',
+          ' •	Helps reduce inflammation and dryness.',
+          ],
+          'Fennel Seeds': [
+          'Improves Digestion',
+          ' •	Helps reduce bloating, gas, indigestion, and constipation.',
+          ' •	Often chewed after meals in India for its digestive and refreshing effect. Acts as a carminative (reduces gas in the intestines). Great for people with IBS (Irritable Bowel Syndrome) or digestive discomfort.',
+          ],
+          'Sesame Seeds' : [],
+          'Flax Seeds' : [],
+          'Carom Seeds' : [],
+          'Dill Seeds' : [],
+          'Dried Coconut' : [],
+          'Rock Sugar' : [],
+          'Liquorice' : [],
+          'Ginger' : [],
+          'Cinnamon' : [],
+          'Clove' : []
+          }
+        },
+        {
+          id: 'vedic-crunch',
+          name: 'Vedic Crunch',
+          description: `The Vedic Crunch Mukhwaas is a wholesome and delightful after-meal snack where a medley of seeds enthrals your taste buds, while the earthy sweetness of jaggery and the nutty richness of walnuts create an ensemble for your palate.`,
+          price: 499,
+          image: '/images/mouthfresheners/Vedic Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Vedic Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'seedsmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Sunflower Seeds': [
+          'Supports Heart Health',
+          ' •	Rich in healthy fats (especially polyunsaturated fats) and phytosterols, which help lower bad cholesterol (LDL).',
+          ' •	Contains magnesium and potassium that support healthy blood pressure and overall cardiovascular function.,',
+          'Promotes Healthy Skin',
+          ' •	Vitamin E is abundant in sunflower seeds — a powerful antioxidant that protects the skin from oxidative damage, improves elasticity, and supports a natural glow.',
+          ' •	Helps reduce inflammation and dryness.',
+          ],
+          'Pumpkin Seeds': [
+          'Supports Heart Health',
+          ' •	High in magnesium, potassium, and antioxidants that help reduce blood pressure and improve heart function.',
+          ' •	Rich in healthy fats (omega-6 and monounsaturated fats) that help lower bad cholesterol (LDL).,',
+          'Boosts Brain Function & Mood',
+          ' •	Good source of magnesium, iron, zinc, and tryptophan — nutrients that support cognitive function and help produce serotonin, the “feel-good” hormone.,',
+          ],
+          'Chia Seeds' : [],
+          'Flax Seeds' : [],
+          'Cumin Seeds' : [],
+          'Fennel Seeds' : [],
+          'Jaggery' : [],
+          'Walnuts' : []
+          }
+        },
+        {
+          id: 'turmeric-crunch',
+          name: 'Turmeric Crunch',
+          description: `A harmonious blend of seeds, meticulously roasted with turmeric, creating a tantalizing tanginess that lingers on your palate.`,
+          price: 499,
+          image: '/images/mouthfresheners/Turmeric Crunch 200g.jpg',
+          images: ['/images/mouthfresheners/Turmeric Crunch 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['madeinindia', 'seedsmouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Fennel Seeds': [
+          'Improves Digestion',
+          ' •	Helps reduce bloating, gas, indigestion, and constipation.',
+          '•	Often chewed after meals in India for its digestive and refreshing effect. Acts as a carminative (reduces gas in the intestines). Great for people with IBS (Irritable Bowel Syndrome) or digestive discomfort.,',
+          ],
+          'White Sesame Seeds': [
+          'Strengthens Bones',
+          ' •	Exceptionally rich in calcium — one of the best plant-based sources.',
+          ' •	Also contains magnesium, phosphorus, and zinc, all essential for bone density.',
+          ' •	Regular use may help prevent osteoporosis and maintain strong bones and teeth.,',
+          'Supports Brain Function',
+          ' •	Contains healthy fats (omega-6), B vitamins, and tyrosine (a precursor to dopamine).',
+          ' •	These nutrients enhance memory, focus, and mood regulation.,',
+          ],
+          'Black Sesame Seeds' : [],
+          'Water Melon Seeds' : [],
+          'Sunflower Seeds' : [],
+          'Corriander Seeds' : [],
+          'Cashews' : [],
+          'Turmeric' : []
+          }
+        },
+        {
+          id: 'bijora-bites',
+          name: 'Bijora Bites',
+          description: `This immunity-boosting fruit is renowned for its thick rind and succulent pulp, offering a plethora of health benefits. A burst of flavour in every bite.`,
+          price: 499,
+          image: '/images/mouthfresheners/Bijora Bites 200g.jpg',
+          images: ['/images/mouthfresheners/Bijora Bites 200g.jpg',
+          ],
+          category: 'Mouth Fresheners',
+          tags: ['Bijora', 'madeinindia', 'bijoramouthfreshner', 'healthier', 'healthiermouthfreshener', 'authenticmouthfreshener', 'cleanlabelmouthfreshener', 'nochemicalmouthfreshener', 'preservativefreemouthfreshener', 'makeinindia', 'mouthfreshener', 'bettermouthfreshener', 'realingredientsmouthfreshener', 'noadditives', 'indiantalent', 'betterfoods'],
+          size: '200gms',        
+          ingredients_benefits: {
+          'Bijora (Citron Fruit)': [
+          '•	‘Boosts Immunity',
+          'High in vitamin C, which acts as an antioxidant and helps strengthen the immune system.',
+          '•	Antioxidant / Anti Inflammatory Effects',
+          'Flavonoids and other compounds help reduce oxidative stress and inflammation. These may help protect cells from damage. ',
+          '•	Helps Prevent Kidney Stones',
+          'The fruit may increase citrate levels in urine, which can help lower the risk of kidney stone formation.',
+          '•	Supports Heart Health & Cholesterol Control',
+          'Soluble fiber and flavonoids in Bijora can help lower bad LDL cholesterol and improve good HDL, supporting cardiovascular health.,’ ' 
+          ],
+          }
+        },
       ];
   
     export default products; 

@@ -77,7 +77,7 @@ export default function Home() {
           'nuts and seeds': '/categories/nuts-and-seeds',
           'healthy breakfast': '/categories/healthier-breakfast',
           'All Natural Pickles': '/categories/condiments',
-          'mouth freshners': '/categories/mouth-freshners'
+          'mouth fresheners': '/categories/mouth-freshners'
         };
 
         // If we have a matching category route, go there with the search query
@@ -105,7 +105,7 @@ export default function Home() {
       'nuts and seeds': '/categories/nuts-and-seeds',
       'healthy breakfast': '/categories/healthier-breakfast',
       'All Natural Pickles': '/categories/condiments',
-      'mouth freshners': '/categories/mouth-freshners'
+      'mouth fresheners': '/categories/mouth-freshners'
     };
     
     const productCategory = product.category.toLowerCase();

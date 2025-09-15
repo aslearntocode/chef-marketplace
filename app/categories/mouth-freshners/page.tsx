@@ -5,7 +5,7 @@ import CategoryPage from '../../whole-foods/components/CategoryPage';
 
 export default function MouthFreshnerPage() {
   const categoryProducts = products.filter(product => 
-    product.category.toLowerCase() === 'mouth freshners'
+    product.category.toLowerCase() === 'mouth fresheners'
   );
 
   return (

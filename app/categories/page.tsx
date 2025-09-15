@@ -103,7 +103,7 @@ const categories: Category[] = [
     name: 'Mouth Freshners',
     description: 'Natural mouth fresheners for fresh breath',
     href: '/categories/mouth-freshners',
-    image: getCategoryImage('Mouth Freshners')
+    image: getCategoryImage('Mouth Fresheners')
   }
 ];
 
