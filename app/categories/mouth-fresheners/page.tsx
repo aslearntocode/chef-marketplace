@@ -11,9 +11,9 @@ export default function MouthFreshnerPage() {
   return (
     <main className="min-h-screen bg-[#FDBE28] pt-[1cm]">
       <CategoryPage 
-        category="Mouth Freshners" 
+        category="Mouth Fresheners" 
         products={categoryProducts} 
-        basePath="/categories/mouth-freshners"
+        basePath="/categories/mouth-fresheners"
       />
     </main>
   );

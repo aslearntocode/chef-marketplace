@@ -107,7 +107,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       name: product.name,
       price: selectedSize?.price || product.price,
       quantity: 1,
-      vendor_id: 'mouth-freshners',
+      vendor_id: 'mouth-fresheners',
       description: product.description,
       category: product.category,
       image: images[0]

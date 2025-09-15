@@ -77,7 +77,7 @@ export default function Home() {
           'nuts and seeds': '/categories/nuts-and-seeds',
           'healthy breakfast': '/categories/healthier-breakfast',
           'All Natural Pickles': '/categories/condiments',
-          'mouth fresheners': '/categories/mouth-freshners'
+          'mouth fresheners': '/categories/mouth-fresheners'
         };
 
         // If we have a matching category route, go there with the search query
@@ -105,7 +105,7 @@ export default function Home() {
       'nuts and seeds': '/categories/nuts-and-seeds',
       'healthy breakfast': '/categories/healthier-breakfast',
       'All Natural Pickles': '/categories/condiments',
-      'mouth fresheners': '/categories/mouth-freshners'
+      'mouth fresheners': '/categories/mouth-fresheners'
     };
     
     const productCategory = product.category.toLowerCase();
@@ -355,10 +355,10 @@ export default function Home() {
                     Sauces & Dressings
                   </Link>
                   <Link
-                    href="/categories/mouth-freshners"
+                    href="/categories/mouth-fresheners"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
-                    Mouth Freshners
+                    Mouth Fresheners
                   </Link>
                 </div>
               </div>
