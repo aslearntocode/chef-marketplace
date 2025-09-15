@@ -127,6 +127,9 @@ export default function CheckoutPage() {
 
       console.log('Order created successfully:', orderResult);
 
+      // Get the order ID from the result
+      const orderId = orderResult?.[0]?.id || `order_${Date.now()}_${user.uid}`;
+
       // Format items for email
       const itemsList = items
         .map(item => `${item.name} × ${item.quantity} - ₹${item.price * item.quantity}`)
@@ -140,12 +143,12 @@ export default function CheckoutPage() {
             'Content-Type': 'application/x-www-form-urlencoded',
           },
           body: new URLSearchParams({
-            _subject: `New Order #${data.id}`,
-            name: `Order #${data.id}`,
+            _subject: `New Order #${orderId}`,
+            name: `Order #${orderId}`,
             message: `
               New Order Details:
               
-              Order ID: ${data.id}
+              Order ID: ${orderId}
               Customer Name: ${name}
               Vendor: ${vendorName}
               Date: ${new Date().toLocaleDateString()}
