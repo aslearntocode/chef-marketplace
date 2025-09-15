@@ -12,7 +12,7 @@ export const metadata: Metadata = generateCategoryMetaData(
 
 export default function HealthierBitesPage() {
   const categoryProducts = products.filter(product => 
-    product.category.toLowerCase() === 'healthier bites'
+    product.category.toLowerCase() === 'healthy bites'
   );
 
   return (
