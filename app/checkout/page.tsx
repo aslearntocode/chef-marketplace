@@ -5,11 +5,13 @@ import { useCart } from '@/context/CartContext';
 import { QRCodeCanvas } from 'qrcode.react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 export default function CheckoutPage() {
   const router = useRouter();
   const { items, totalAmount, clearCart } = useCart();
   const { user } = useAuth();
+  const supabase = createClientComponentClient();
   const DELIVERY_FEE = 49;
   const FREE_DELIVERY_THRESHOLD = 499;
   const isDeliveryFree = totalAmount >= FREE_DELIVERY_THRESHOLD;
@@ -104,16 +106,26 @@ export default function CheckoutPage() {
 
       console.log('Creating order with data:', orderData);
 
-      // Create order (using Firebase user ID for order tracking)
-      // Since we're using Firebase auth, we'll create a simple order object
-      const orderId = `order_${Date.now()}_${user.uid}`;
-      const data = { 
-        id: orderId,
-        user_id: user.uid,
-        created_at: new Date().toISOString()
-      };
-      
-      console.log('Order created with ID:', orderId);
+      // Create order in Supabase
+      const { data: orderResult, error: orderError } = await supabase
+        .from('orders')
+        .insert([{
+          user_id: user.uid,
+          items: orderData.items,
+          total_amount: orderData.total_amount,
+          status: orderData.status,
+          delivery_address: orderData.delivery_address,
+          vendor_id: orderData.vendor_id,
+          vendor_name: orderData.vendor_name,
+          created_at: new Date().toISOString()
+        }])
+        .select();
+
+      if (orderError) {
+        throw new Error(`Failed to create order: ${orderError.message}`);
+      }
+
+      console.log('Order created successfully:', orderResult);
 
       // Format items for email
       const itemsList = items
