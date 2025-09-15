@@ -1840,7 +1840,7 @@ export const products: Product[] = [
       id: 'organic-fresh-farm-cashews',
       name: 'Organic Fresh Farm Cashews',
       description: 'Deliciously Nutty Flavour: Enjoy the rich, nutty taste of our whole cashews, known for their firm texture and satisfying crunch. Great Quality: These cashews are organically grown and carefully selected from a family owned farm in Ratnagiri. Freshness Preserved: Packed in food-safe materials, our cashews retain their delightful flavour and crunch. Plus they are hygienically processed in facilities adhering to strict food safety standards. Optimal Storage: To maintain freshness, store cashews in a cool, dry place in an airtight container. For extended shelf life, refrigeration after opening is recommended. Convenient Snack: Whether at home, work, school, or on-the-go, these cashews offer a delicious, quick snack option that fits any occasion. Appealing Flavour: With a flavour that is tasty for both adults and children, these cashews are a great snack for the whole family.',
-      category: 'Nuts and Seeds',
+      category: 'Nuts & Nut Butters',
       tags: ['farmcashews', 'freshcashews', 'nuts', 'bettercashews', 'farmtofork', 'healthier', 'healthiersnack', 'healthiernuts', 'gotosnack'],
       size: '250 gms',
       image: '/images/cashewspics/Cashews.jpg',

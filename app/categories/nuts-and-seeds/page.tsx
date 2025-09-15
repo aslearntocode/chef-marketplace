@@ -12,7 +12,7 @@ export const metadata: Metadata = generateCategoryMetaData(
 
 export default function NutsandSeedsPage() {
   const categoryProducts = products.filter(product => 
-    product.category.toLowerCase() === 'nuts and seeds'
+    product.category.toLowerCase() === 'nuts & nut butters'
   );
 
   return (

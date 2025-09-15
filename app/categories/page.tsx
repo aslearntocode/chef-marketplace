@@ -75,7 +75,7 @@ const categories: Category[] = [
     name: 'Nuts & Nut Butters',
     description: 'Premium quality nuts, dry fruits and nut butters',
     href: '/categories/nuts-and-seeds',
-    image: getCategoryImage('Nuts and Seeds')
+    image: '/images/chocolate-peanut-butter.jpg'
   },
   {
     id: 'healthier-premixes',
