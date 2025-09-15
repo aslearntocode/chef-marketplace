@@ -1,7 +1,14 @@
-'use client';
-
+import { Metadata } from 'next';
 import { products } from '@/data/whole-foods';
 import CategoryPage from '../../whole-foods/components/CategoryPage';
+import { generateCategoryMetaData } from '@/lib/metaUtils';
+
+export const metadata: Metadata = generateCategoryMetaData(
+  'Spice Blends',
+  'spice-blends',
+  'Discover our premium collection of handcrafted spice blends. Pure and authentic Indian spices to elevate your culinary creations.',
+  '/images/placeholder.png'
+);
 
 export default function SpiceBlendsPage() {
   const categoryProducts = products.filter(product => 
@@ -17,4 +24,4 @@ export default function SpiceBlendsPage() {
       />
     </main>
   );
-} 
+}

@@ -5698,7 +5698,7 @@ export const products: Product[] = [
           images: ['/images/hazelnutchocolatespread/IMG_1.jpg',
             '/images/hazelnutchocolatespread/IMG_2.jpg'
           ],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthierspread', 'authenticchocolatespread', 'hazelnutspread', 'nochemicalspread', 'preservativefreecondiment', 'makeinindia', 'nopalmoilspreads', 'nopalmoilproduct', 'bettercondiment', 'betterspreads', 'realingredientscondiment', 'realspread', 'chocolatespread', 'indiantalent', 'betterfoods'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5725,7 +5725,7 @@ export const products: Product[] = [
           image: '/images/peanut butter coconut sugar.jpg',
           images: ['/images/peanut butter coconut sugar.jpg'
           ],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',        
           ingredients_benefits: {
@@ -5749,7 +5749,7 @@ export const products: Product[] = [
           price: 275,
           image: '/images/chocolate-peanut-butter.jpg',
           images: ['/images/chocolate-peanut-butter.jpg'],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'chocolatepeanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'homemadepickle', 'realingredientsbutter', 'realbutter', 'chocolatebutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',        
           ingredients_benefits: {
@@ -5775,7 +5775,7 @@ export const products: Product[] = [
           price: 480,
           image: '/images/Almond Chocolate Butter.jpg',
           images: ['/images/Almond Chocolate Butter.jpg'],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'chocolatealmondbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5800,7 +5800,7 @@ export const products: Product[] = [
           price: 450,
           image: '/images/almond butter.jpg',
           images: ['/images/almond butter.jpg'],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthieralmondbutter', 'authenticalmondbutter', 'almondbutter', 'nochemicalbutter', 'preservativefreealmondbutter', 'nosugaralmondbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilalmondbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms', 
           ingredients_benefits: {
@@ -5826,7 +5826,7 @@ export const products: Product[] = [
           images: ['/images/unsweetendpeanutbutter/IMG_1.jpg',
             '/images/unsweetendpeanutbutter/IMG_2.jpg'
           ],
-          category: 'Condiments',
+          category: 'Nuts & Nut Butters',
           tags: ['madeinindia', 'healthier', 'healthierbutter', 'authenticpeanutbutter', 'peanutbutter', 'nochemicalbutter', 'preservativefreepeanutbutter', 'nosugarpeanutbutter', 'betterbutter', 'makeinindia', 'nuttygoodness', 'realingredientsbutter', 'realbutter', 'nopalmoilpeanutbutter', 'indiantalent', 'betterfoods', 'healthiswealth', 'better'],
           size: '200gms',
           ingredients_benefits: {

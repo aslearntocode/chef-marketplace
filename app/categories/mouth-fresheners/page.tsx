@@ -1,9 +1,16 @@
-'use client';
-
+import { Metadata } from 'next';
 import { products } from '@/data/whole-foods';
 import CategoryPage from '../../whole-foods/components/CategoryPage';
+import { generateCategoryMetaData } from '@/lib/metaUtils';
 
-export default function MouthFreshnerPage() {
+export const metadata: Metadata = generateCategoryMetaData(
+  'Mouth Fresheners',
+  'mouth-fresheners',
+  'Natural mouth fresheners for fresh breath. Traditional Indian mouth fresheners made with natural ingredients.',
+  '/images/placeholder.png'
+);
+
+export default function MouthFreshenersPage() {
   const categoryProducts = products.filter(product => 
     product.category.toLowerCase() === 'mouth fresheners'
   );

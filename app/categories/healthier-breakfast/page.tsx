@@ -1,11 +1,18 @@
-'use client';
-
+import { Metadata } from 'next';
 import { products } from '@/data/whole-foods';
 import CategoryPage from '../../whole-foods/components/CategoryPage';
+import { generateCategoryMetaData } from '@/lib/metaUtils';
 
-export default function HealthyTreatsPage() {
+export const metadata: Metadata = generateCategoryMetaData(
+  'Healthier Breakfast',
+  'healthier-breakfast',
+  'Start your day with our nutritious breakfast options. Healthy, wholesome, and delicious morning meals made with natural ingredients.',
+  '/images/placeholder.png'
+);
+
+export default function HealthierBreakfastPage() {
   const categoryProducts = products.filter(product => 
-    product.category.toLowerCase() === 'healthy breakfast'
+    product.category.toLowerCase() === 'healthier breakfast'
   );
 
   return (
@@ -17,4 +24,4 @@ export default function HealthyTreatsPage() {
       />
     </main>
   );
-} 
+}

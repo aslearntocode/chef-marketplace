@@ -316,7 +316,7 @@ export default function Home() {
                     href="/categories/condiments"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
-                    Condiments
+                    Pickles & Chutneys
                   </Link>
                   <Link
                     href="/categories/healthier-breakfast"
@@ -334,7 +334,7 @@ export default function Home() {
                     href="/categories/nuts-and-seeds"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
-                    Nuts & Seeds
+                    Nuts & Nut Butters
                   </Link>
                   <Link
                     href="/categories/healthier-cakes"
