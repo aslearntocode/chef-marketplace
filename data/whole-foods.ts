@@ -6608,6 +6608,27 @@ export const products: Product[] = [
           ],
           }
         },
+        {
+          id: 'spicy-lemon-pickle',
+          name: 'Spicy Lemon Pickle (लिंबू लोंचे)',
+          description: `A flavourful and aromatic homemade pickle made with lemons (straight from an organic farm in Ratnagiri) and spices. This pickle is perfect for adding a tangy and spicy kick to your meals. Have it with rice, roti, or parathas OR use it as a side dish or condiment OR add it to sandwiches or wraps for that extra kick! Store it in airtight containers to maintain its flavour and shelf life and here you are, with the daily companion of your meals😊.,`,
+          price:180,
+          image: '/images/shalomi/Spicy Lemon Pickle.jpeg',
+          images: ['/images/shalomi/Spicy Lemon Pickle.jpeg',
+          ],
+          category: 'Condiments',
+          tags: ['spicylemonpickle', 'madeinindia', 'healthier', 'healthierpickle', 'authenticpickle', 'lemonpickle', 'nochemicalpickle', 'preservativefreepickle', 'makeinindia', 'nopreservatives', 'spicypickle', 'betterpickle', 'homemadepickle', 'realingredientspickle', 'realpickle', 'tangypickle', 'indianpickle'],
+          size: '100gms',
+          ingredients_benefits: {
+          'Lemons': [
+          'Rich in Vitamin C: Boost the immune system, Help fight colds and infections, Promote skin health and collagen production.,',
+          'Support Digestion: Warm lemon water can help stimulate digestive juices. May relieve symptoms of indigestion like bloating and heartburn.,',
+          ],
+          'Red Chilli Powder': [],
+          'Salt': [],
+          }
+          },
+          
       ];
   
     export default products; 

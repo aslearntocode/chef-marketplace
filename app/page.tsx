@@ -71,12 +71,12 @@ export default function Home() {
         const categoryRoutes: { [key: string]: string } = {
           'drinks': '/categories/drinks',
           'healthy treats': '/categories/healthier-treats',
-          'condiments': '/categories/condiments',
+          'condiments': '/categories/pickles-chutneys',
           'healthy bites': '/categories/healthier-bites',
           'spice blends': '/categories/spice-blends',
           'nuts and seeds': '/categories/nuts-and-seeds',
           'healthy breakfast': '/categories/healthier-breakfast',
-          'All Natural Pickles': '/categories/condiments',
+          'All Natural Pickles': '/categories/pickles-chutneys',
           'mouth fresheners': '/categories/mouth-fresheners'
         };
 
@@ -99,12 +99,12 @@ export default function Home() {
     const categoryRoutes: { [key: string]: string } = {
       'drinks': '/categories/drinks',
       'healthy treats': '/categories/healthier-treats',
-      'condiments': '/categories/condiments',
+      'condiments': '/categories/pickles-chutneys',
       'healthy bites': '/categories/healthier-bites',
       'spice blends': '/categories/spice-blends',
       'nuts and seeds': '/categories/nuts-and-seeds',
       'healthy breakfast': '/categories/healthier-breakfast',
-      'All Natural Pickles': '/categories/condiments',
+      'All Natural Pickles': '/categories/pickles-chutneys',
       'mouth fresheners': '/categories/mouth-fresheners'
     };
     
@@ -313,7 +313,7 @@ export default function Home() {
                     Healthier Bites
                   </Link>
                   <Link
-                    href="/categories/condiments"
+                    href="/categories/pickles-chutneys"
                     className="bg-white md:bg-[#8B4513] text-[#8B4513] md:text-white px-3 py-2 rounded-md text-xs md:text-sm font-medium hover:bg-gray-100 md:hover:bg-[#6B3410] transition-colors text-center shadow-lg md:shadow-none"
                   >
                     Pickles & Chutneys

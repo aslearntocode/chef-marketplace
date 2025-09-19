@@ -5,12 +5,12 @@ import { generateCategoryMetaData } from '@/lib/metaUtils';
 
 export const metadata: Metadata = generateCategoryMetaData(
   'Pickles & Chutneys',
-  'condiments',
+  'pickles-chutneys',
   'Discover our traditional pickles and flavorful condiments. Made with natural ingredients and traditional recipes passed down through generations.',
   '/images/placeholder.png'
 );
 
-export default function CondimentsPage() {
+export default function PicklesChutneysPage() {
   const categoryProducts = products.filter(product => 
     product.category.toLowerCase() === 'condiments'
   );
@@ -20,7 +20,7 @@ export default function CondimentsPage() {
       <CategoryPage 
         category="Pickles & Chutneys" 
         products={categoryProducts} 
-        basePath="/categories/condiments"
+        basePath="/categories/pickles-chutneys"
       />
     </main>
   );

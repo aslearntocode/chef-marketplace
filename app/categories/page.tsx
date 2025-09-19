@@ -50,10 +50,10 @@ const categories: Category[] = [
     image: getCategoryImage('Healthy Bites')
   },
   {
-    id: 'condiments',
+    id: 'pickles-chutneys',
     name: 'Pickles & Chutneys',
     description: 'Traditional pickles and flavorful condiments',
-    href: '/categories/condiments',
+    href: '/categories/pickles-chutneys',
     image: getCategoryImage('Condiments')
   },
   {

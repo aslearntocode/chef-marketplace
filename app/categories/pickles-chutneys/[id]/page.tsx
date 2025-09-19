@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     };
   }
 
-  return generateProductMetaData(product, 'condiments');
+  return generateProductMetaData(product, 'pickles-chutneys');
 }
 
 export default function ProductPage({ params }: ProductPageProps) {

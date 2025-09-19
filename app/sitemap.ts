@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'healthier-treats',
     'healthier-beverages', 
     'healthier-bites',
-    'condiments',
+    'pickles-chutneys',
     'healthier-breakfast',
     'spice-blends',
     'nuts-and-seeds',
