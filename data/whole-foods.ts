@@ -6611,7 +6611,7 @@ export const products: Product[] = [
         {
           id: 'spicy-lemon-pickle',
           name: 'Spicy Lemon Pickle (लिंबू लोंचे)',
-          description: `A flavourful and aromatic homemade pickle made with lemons (straight from an organic farm in Ratnagiri) and spices. This pickle is perfect for adding a tangy and spicy kick to your meals. Have it with rice, roti, or parathas OR use it as a side dish or condiment OR add it to sandwiches or wraps for that extra kick! Store it in airtight containers to maintain its flavour and shelf life and here you are, with the daily companion of your meals😊.,`,
+          description: `A flavourful and aromatic homemade pickle made with lemons (straight from an organic farm in Ratnagiri) and spices. This pickle is perfect for adding a tangy and spicy kick to your meals. Have it with rice, roti, or parathas OR use it as a side dish or condiment OR add it to sandwiches or wraps for that extra kick! Store it in airtight containers to maintain its flavour and shelf life and here you are, with the daily companion of your meals😊.`,
           price:180,
           image: '/images/shalomi/Spicy Lemon Pickle.jpeg',
           images: ['/images/shalomi/Spicy Lemon Pickle.jpeg',
@@ -6627,7 +6627,229 @@ export const products: Product[] = [
           'Red Chilli Powder': [],
           'Salt': [],
           }
+        },
+        {
+          id: 'ragi-laddoos',
+          name: 'Ragi Laddoos',
+          description: `Soft, nutty, and naturally sweet. Made with ragi, jaggery, ghee, sesame seeds, nuts, and a touch of coconut. These laddoos fuel your day with calcium, iron, and fiber. Guilt-free energy for workouts, workdays, or midnight cravings.
+          No refined sugar. Just real goodness!! Perfect as a snack for kids, adults, or anyone looking for a guilt-free treat.`,
+          price: 480,
+          image: '/images/sheelaskitchen/Ragi Laddo.jpg',
+          images: ['/images/sheelaskitchen/Ragi Laddo.jpg'],
+          category: 'Healthy Treats',
+          tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'ragitilladdoos', 'ragigheeladdoos', 'ragijaggeryladdoos', 'indiantalent', 'pureladdoos', 'ragisesameladdoos'],
+          size: '250gms',
+          variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 480 },
+                  { name: '1000g', value: '1000g', price: 1500 }
+              ]
+            },
+          ingredients_benefits: {
+          'Ragi': [
+          'Rich in Calcium: One of the best non-dairy sources of calcium, Excellent for bone health, especially in growing children and aging adults.',
+          'High in Dietary Fiber: Promotes digestive health, Prevents constipation, Helps in weight management by keeping you full for longer.,'],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+          'Jaggery': [],
+          'Nuts': [],
+          'Coconut': [],
+          'Sesame seeds': [],
+          }
+        },
+        {
+          id: 'pinni-gond-laddoos',
+          name: 'Pinni/Gond Laddoos',
+          description: `Pinni/Gond Laddo – Power-Packed Tradition!! Our Pinni laddoos blend whole wheat, gond, jaggery, ghee, nuts, seeds, makhana, and raisins into rich, wholesome bites. Packed with protein, good fats, and natural sweetness, they’re the perfect fuel - whether you’re powering through work, hitting the gym, or just craving comfort.
+          Ancient recipe. Modern energy. Zero refined sugar!!.`,
+          price: 550,
+          image: '/images/sheelaskitchen/Pinni_Gond Laddo.jpg',
+          images: ['/images/sheelaskitchen/Pinni_Gond Laddo.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'gondladdoos', 'aataladdoos', 'gondgudladdoos', 'indiantalent', 'pureladdoos', 'gondandnuts'],
+            size: '250gms',
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 550 },
+                  { name: '1000g', value: '1000g', price: 1850 }
+              ]
+            },
+            ingredients_benefits: {
+            'Whole Wheat': [
+            'Rich in Fiber- Prevents constipation and supports gut health, slows down sugar absorption, reducing spikes, aids in appetite control and weight management.,',
+            'Supports Heart Health- Whole wheat is associated with a lower risk of heart disease, also helps lower cholesterol levels.,',
+            ],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+            'Gond': [],
+            'Jaggery': [],
+            'Nuts': [],
+            'Seeds': [],
+            'Makhana': [],
+            'Raisins':[]
+            }
           },
+          {
+            id: 'churma-laddoos',
+            name: 'Churma Laddoos',
+            description: 'Churma Laddoos – Royal Sweet, Everyday Treat!! Our Churma Laddos are a rich mix of aata, suji, besan, almonds, and coconut—slow-roasted in ghee and sweetened with jaggery. Nutty, crumbly, and full of old-school comfort, they’re a desi dessert you can proudly swap for that random chocolate bar. Authentic recipe. No refined sugar. 100% soulful snacking.,',
+            price: 360,
+            image: '/images/sheelaskitchen/Churma Laddo.jpg',
+            images: ['/images/sheelaskitchen/Churma Laddo.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'churmaladdoos', 'aataladdoos', 'sujiladdoos', 'besanladdoos', 'pureladdoos', 'jaggeryladdoos'],
+            size: '250gms',
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 360 },
+                  { name: '1000g', value: '1000g', price: 1200 }
+              ]
+            },
+            ingredients_benefits: {
+            'Whole Wheat': [
+            'Rich in Fiber- Prevents constipation and supports gut health, slows down sugar absorption, reducing spikes, aids in appetite control and weight management.,',
+            'Supports Heart Health- Whole wheat is associated with a lower risk of heart disease, also helps lower cholesterol levels.,',
+            ],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+            'Suji': [],
+            'Besan': [],
+            'Nuts': [],
+            'Coconut': [],
+            'Jaggery': [],
+            }
+          },
+          {
+            id: 'sattu-laddoos-2',
+            name: 'Sattu Laddoos',
+            description: `Sattu Laddo – Protein-Packed, Desi Style!! Our Sattu Laddoos give you natural protein, good fats, and clean energy—thanks to roasted chana, nuts, seeds, and jaggery bound in pure ghee.
+            Perfect for post-gym bites, late-night munching, or powering through long workdays.
+            Wholesome fuel. Zero junk. 100% desi superfood.`,
+            price: 550,
+            image: '/images/sheelaskitchen/Sattu Laddo.jpg',
+            images: ['/images/sheelaskitchen/Sattu Laddo.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'sattuladdoos', 'pureladdoos', 'jaggeryladdoos'],
+            size: '250gms', 
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 550 },
+                  { name: '1000g', value: '1000g', price: 1700 }
+              ]
+            },
+            ingredients_benefits: {
+            'Roasted Chana': [
+            'High in Protein- Excellent plant-based protein source, Helps build and repair tissues, Great for vegetarians and vegans.,',
+            'Rich in Dietary Fiber- Aids digestion and promotes gut health., Keeps you full longer which can help with weight management, Supports stable blood sugar levels.,',
+            ],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+            'Seeds': [],
+            'Nuts': [],
+            'Jaggery': [],
+            }
+          },
+          {
+            id: 'coffee-flavoured-besan-barfi',
+            name: 'Coffee Flavoured Besan Barfi',
+            description: 'Where tradition meets your coffee cravings. Our Coffee Besan Barfi is made with just three pure ingredients - besan, ghee, and sugar - slow roasted to bring out a nutty richness, then infused with bold coffee notes. It’s smooth, indulgent, and just the right balance of desi mithai and café-style kick. Perfect for gifting, sharing, or keeping all to yourself.,',
+            price: 480,
+            image: '/images/sheelaskitchen/Coffee flavour Besan Barfi.jpg',
+            images: ['/images/sheelaskitchen/Coffee flavour Besan Barfi.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'besanbarfi', 'pureladdoos', 'coffeeladdoos'],
+            size: '250gms',
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 480 },
+                  { name: '1000g', value: '1000g', price: 1450 }
+              ]
+            },
+            ingredients_benefits: {
+            'Besan': [
+            'High in Protein- Great plant-based protein source, Supports muscle repair and growth, Ideal for vegetarians and vegans.,',
+            'Rich in Dietary Fiber- Aids in digestion and prevents constipation, Promotes gut health, Helps manage blood sugar levels by slowing carb absorption.,',
+            ],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+            'Sugar': [],
+            'Seeds': [],
+            'Coffee': []
+            }
+          },
+          {
+            id: 'rajasthani-katt',
+            name: 'Rajasthani Katt',
+            description: `Rajasthani Katt – The OG Power Bar!!
+            Made with a wholesome mix of aata, suji, besan, coconut, almonds, ghee, and jaggery, Katt is chewy, nutty, and loaded with desi goodness. No preservatives, no shortcuts, just an age-old recipe that fuels you the way grandma intended. Perfect for chai breaks, road trips, or those midnight snack attacks.,`,
+            price: 360,
+            image: '/images/sheelaskitchen/Katt Laddo.jpg',
+            images: ['/images/sheelaskitchen/Katt Laddo.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'chewydelight', 'rajasthanidelicacy', 'powerbar', 'energybar'],
+            size: '250gms',
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 360 },
+                  { name: '1000g', value: '1000g', price: 1200 }
+              ]
+            },
+            ingredients_benefits: {
+            'Whole Wheat Flour': [
+            'Rich in Fiber- Prevents constipation and supports gut health, slows down sugar absorption, reducing spikes, aids in appetite control and weight management.,',
+            'Supports Heart Health- Whole wheat is associated with a lower risk of heart disease, also helps lower cholesterol levels.,',
+            ],
+            'Ghee': [
+            'Supports Brain Health- Rich in healthy saturated fats, which are crucial for brain function, Contains butyrate, a short-chain fatty acid that may support cognitive health and reduce inflammation in the brain.,',
+            'Good for Heart Health (in moderation)- High in conjugated linoleic acid (CLA), which may help reduce bad cholesterol and support heart function, Contains omega-3 fatty acids (especially in grass-fed ghee), which are heart-friendly.,',
+            ],
+            'Suji': [],
+            'Besan': [],
+            'Coconut': [],
+            'Almonds': [],
+            'Jaggery': [],
+            }
+          },
+          {
+            id: 'authentic-besan-laddoos',
+            name: 'Authentic Besan Laddoos',
+            description: `Not your regular besan laddoo- Ours are slow-roasted in pure ghee, sweetened with earthy jaggery, and enriched with magaj seeds for that nutty crunch. This recipe has been refined over time, crafted with care, and unlike anything you’ve tasted before. Soft, rich, and melt-in-mouth, these laddoos aren’t just sweets, they’re experiences.
+            No shortcuts. No refined sugar. Just tradition, perfected.`,
+            price: 420,
+            image: '/images/sheelaskitchen/Besan Laddo.jpg',
+            images: ['/images/sheelaskitchen/Besan Laddo.jpg'],
+            category: 'Healthy Treats',
+            tags: ['madeinindia', 'healthier', 'healthierladdoos', 'gheeladdoos', 'traditional', 'traditionalrecipe', 'preservativefreetreats', 'makeinindia', 'madeinindia', 'gheedesserts', 'bettertreats', 'healthiertreats', 'besanladdoos', 'authenticbesanladdoos'],
+            size: '250gms',
+            variants: {
+              sizes: [
+                  { name: '250g', value: '250g', price: 420 },
+                  { name: '1000g', value: '1000g', price: 1350 }
+              ]
+            },
+            ingredients_benefits: {
+            'Besan': [
+            'Rich in Fiber- Prevents constipation and supports gut health, slows down sugar absorption, reducing spikes, aids in appetite control and weight management.,',
+            'Supports Heart Health- Whole wheat is associated with a lower risk of heart disease, also helps lower cholesterol levels.,',
+            ],
+            'Ghee': [
+            'High in Protein- Great plant-based protein source, Supports muscle repair and growth, Ideal for vegetarians and vegans.,',
+            'Rich in Dietary Fiber- Aids in digestion and prevents constipation, Promotes gut health, Helps manage blood sugar levels by slowing carb absorption.,',
+            ],
+            'Jaggery': [],
+            'Magaj Seeds': []
+            }
+          }            
           
       ];
   
